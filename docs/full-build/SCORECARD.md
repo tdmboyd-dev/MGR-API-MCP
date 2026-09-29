@@ -58,3 +58,10 @@ This wave changes the repo from research-only to first executable primitives. It
 | Hosted/HTTP OAuth MCP, durable DB, live providers and production deployment | OPEN | build queue |
 
 The executable shared-edge foundation passed the consolidated GitHub CI batch after CI was changed to explicit batch triggering to preserve Actions budget.
+
+
+## September 29 — continuity documentation recovery
+
+Added the current resume record and boot pointer; preserved the existing queue and research manifests. Corrected the stale research-only HANDOFF statement using the inspected source and the existing September 29 implementation record.
+
+Local documentation integrity: 130 checks, zero failures before this scorecard/receipt append; see evidence/continuity-integrity-2026-09-29.json for exact scope. No assistant runtime, upstream SDK suite, private-original hash restoration, hosted MCP, live provider or production deployment was verified by this batch. Product completion remains unassessed. The original windows' evidence-transfer packets remain pending.

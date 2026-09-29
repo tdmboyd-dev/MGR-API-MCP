@@ -26,3 +26,11 @@ Initial publication commit 6069025706efe924df1595e1ae3b010508c35686 was recovere
 - Added service topology and Brain boundary documents.
 - Changed hosted CI to explicit batch-trigger commits so BEAST waves do not burn Actions minutes on every small commit.
 - Consolidated CI passed after these foundations were added. Live HTTP/OAuth MCP, persistent database, production job workers and provider integrations remain unverified.
+
+
+## September 29, 2026 — cross-window continuity recovery
+
+- Added WORK-STATE.md and AGENTS boot pointer; retained existing queue, scorecard, manifests and project authority.
+- Labeled the September 28 handoff historical and corrected its obsolete research-only implementation status against current source and README.
+- Recovered no private source originals and performed no new runtime/provider/deployment validation.
+- Local repository-integrity evidence for this documentation batch is recorded in evidence/continuity-integrity-2026-09-29.json. This is not assistant verification.

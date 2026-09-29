@@ -1,5 +1,20 @@
 # Resume MGR-API-MCP
 
+## Current resume checkpoint — September 29, 2026
+
+Read [WORK-STATE.md](WORK-STATE.md), AGENTS.md, BUILD-QUEUE.md and the latest dated section of docs/full-build/SCORECARD.md.
+Inspected base: d5fdea390702b7ca7e5a3602ad2e4d149960aea8.
+
+The repository now contains the first executable shared-edge foundation. The README and September 29 scorecard supersede the September 28 research-only implementation status below. Source includes an in-memory task engine, model-independent Brain controller, DecisionEngine, approval/security boundaries, Creation OS client, MCP stdio server and HTTP/OAuth-related modules.
+
+This recovery inspected engine.ts, brain-controller.ts and mcp-server.ts in the preceding read pass and located the HTTP/OAuth modules; it did not execute or fully audit those modules. Existing recorded CI success retains its original scope. Do not claim durable persistence, live provider integration, a hosted ChatGPT MCP session or production deployment from source presence.
+
+The next window must reconcile the build queue with implemented primitives, recover the older window's exact CI/test receipts and private local originals, and preserve the source manifests' unread/unavailable boundaries. No original-source checkpoint was recovered by this continuity update.
+
+## Historical September 28 handoff — preserved evidence
+
+The following text describes that earlier checkpoint. Its research/acquisition provenance remains useful. Its research-only implementation and process-state statements are historical, not present-state assertions.
+
 Updated September 28, 2026. This is the user-designated project home. Read AGENTS.md and the current scorecard before work.
 
 ## Current truth

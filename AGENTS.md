@@ -27,3 +27,7 @@ The remote is public. Keep secrets, account exports, private conversation transc
 ## Continuity
 
 Update the source manifests, same scorecard, audit ledger, queue and handoff. Do not reset progress or silently rewrite historical evidence. Run python scripts/verify_repository.py before committing. Full source originals are in the owner's ignored local checkpoint; a Git clone alone does not contain those originals.
+
+## Cross-window continuity — owner approved 2026-09-29
+
+Read [WORK-STATE.md](WORK-STATE.md) at startup and after a handoff, alongside the mandatory local records above. It points to the current branch, existing queues, evidence and next batch. Follow the [canonical continuity protocol](https://github.com/tdmboyd-dev/mgr-perfect-skill/blob/master/CONTINUITY-PROTOCOL.md). Update the resume record and existing queue/audit after meaningful work; preserve product authority and stricter verification gates. Reconcile fresh HEAD and scoped work claims before edits; never force an overwrite. This is an advisory coordination protocol, not a technical lock or runtime-completion claim.

@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-29",
+  "scope": "Documentation continuity recovery; repository integrity only, not assistant/runtime/provider verification",
+  "base_commit": "d5fdea390702b7ca7e5a3602ad2e4d149960aea8",
+  "command": "python scripts/verify_repository.py",
+  "environment": "Linux scratch snapshot materialized from all 96 GitHub blobs at pinned base; no private .local originals",
+  "result": {
+    "scope": "Research repository integrity only; not assistant/runtime/provider verification",
+    "checks": 130,
+    "failures": 0,
+    "errors": [],
+    "status": "PASS"
+  },
+  "limitations": [
+    "No --local verification: private originals not recovered",
+    "No product runtime tests or live provider/device/deployment checks"
+  ]
+}
