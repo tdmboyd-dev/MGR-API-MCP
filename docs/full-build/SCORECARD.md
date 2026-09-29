@@ -36,3 +36,25 @@ Coverage is 12/12 passed acceptance gates (100%) for this migration/research wav
 Overall product completion: **Unassessed**. No invented percentage. Next batch follows BUILD-QUEUE.md; optional features must use the shared engine and evidence contracts.
 
 Dated transition: initial 10/12; local verification 11/12; remote clone verification 12/12. The portable full-build and time-voice skill copies are also preserved. Full-product work remains open.
+
+
+## September 29 — executable shared-edge foundation
+
+This wave changes the repo from research-only to first executable primitives. It does NOT make the assistant production-ready.
+
+| Acceptance gate | State | Evidence |
+|---|---|---|
+| Typed Task/Job/Decision/Approval/Receipt contracts exist | PASS | src/contracts.ts |
+| Task/job transitions reject invalid terminal resurrection | PASS | src/state.ts + tests |
+| Idempotent job creation rejects conflicting key reuse | PASS | src/engine.ts + test/engine.test.ts |
+| Approval binds to exact action digest | PASS | src/security.ts + tests |
+| DecisionEngine cannot return out-of-allowlist choice | PASS | src/decision.ts + tests |
+| Brain controller is model-independent | PASS | src/brain-controller.ts |
+| Token audience/scopes enforced before tool access | PASS | src/authz.ts + tests |
+| Independent Action Sentinel evaluates side effects | PASS | src/action-sentinel.ts + tests |
+| Privacy Firewall redacts/blocks sensitive text by policy | PASS | src/privacy-firewall.ts + tests |
+| Creation OS client blocks underspecified capability requests | PASS | src/creation-client.ts + tests |
+| Governed MCP v2 stdio server boots with read-only validation tools | PASS | src/mcp-server.ts; consolidated CI success |
+| Hosted/HTTP OAuth MCP, durable DB, live providers and production deployment | OPEN | build queue |
+
+The executable shared-edge foundation passed the consolidated GitHub CI batch after CI was changed to explicit batch triggering to preserve Actions budget.
