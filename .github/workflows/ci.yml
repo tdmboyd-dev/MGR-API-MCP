@@ -2,7 +2,11 @@ name: MGR API MCP CI
 
 on:
   push:
+    branches: [main]
+    paths:
+      - ".github/ci-trigger"
   pull_request:
+    branches: [main]
   workflow_dispatch:
 
 jobs:
