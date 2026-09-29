@@ -4,6 +4,7 @@ import * as z from "zod/v4";
 import { actionDigest } from "./security.js";
 import { DecisionEngine } from "./decision.js";
 import { ValidatingCreationOSClient } from "./creation-client.js";
+import { applyPrivacyPolicy } from "./privacy-firewall.js";
 
 export function createMgrMcpServer(): McpServer {
   const server = new McpServer(
@@ -94,6 +95,32 @@ export function createMgrMcpServer(): McpServer {
           }),
         }],
         isError: !result,
+      };
+    },
+  );
+
+  server.registerTool(
+    "mgr_privacy_check",
+    {
+      description:
+        "Inspect/redact sensitive text before external model use. This tool does not send text to any external provider.",
+      inputSchema: z.object({
+        text: z.string(),
+        externalProviderAllowed: z.boolean().default(true),
+        redact: z.array(z.enum(["PUBLIC","INTERNAL","PII","FINANCIAL","TAX","HEALTH","SECRET"])).default(["PII","FINANCIAL"]),
+        deny: z.array(z.enum(["PUBLIC","INTERNAL","PII","FINANCIAL","TAX","HEALTH","SECRET"])).default(["SECRET"]),
+      }),
+    },
+    async ({ text, externalProviderAllowed, redact, deny }) => {
+      const result = applyPrivacyPolicy(text, { externalProviderAllowed, redact, deny });
+      return {
+        content: [{ type: "text", text: JSON.stringify({
+          decision: result.decision,
+          text: result.text,
+          findingTypes: [...new Set(result.findings.map((f) => f.type))],
+          reason: result.reason ?? null,
+        }) }],
+        isError: result.decision === "DENY",
       };
     },
   );
