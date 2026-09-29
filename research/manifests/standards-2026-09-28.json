@@ -1,0 +1,32 @@
+[
+  {
+    "name": "mcp-security",
+    "url": "https://modelcontextprotocol.io/docs/2025-11-25/tutorials/security/security_best_practices",
+    "local_path": ".local/acquired/2026-09-28/mcp-security.txt",
+    "sha256": "ebbcdc5bfce61693339b67c6fb7e84b55d35d3e91a55ccdac91caf3c5d727cae",
+    "bytes": 31641,
+    "reading": "COMPLETE_EXTRACTED_TEXT; LINKED_DOCUMENTS_AND_DIAGRAMS_NOT_REVIEWED",
+    "retrieved_date": "2026-09-28",
+    "runtime": "NOT_EXECUTED"
+  },
+  {
+    "name": "sqlite-wal",
+    "url": "https://www.sqlite.org/wal.html",
+    "local_path": ".local/acquired/2026-09-28/sqlite-wal.txt",
+    "sha256": "34daccfc15b0800ded126785f96e7b1dd567efb79474d63d6d0908e12f24e077",
+    "bytes": 32478,
+    "reading": "COMPLETE_EXTRACTED_TEXT; LINKED_DOCUMENTS_AND_DIAGRAMS_NOT_REVIEWED",
+    "retrieved_date": "2026-09-28",
+    "runtime": "NOT_EXECUTED"
+  },
+  {
+    "name": "typesafe-index",
+    "url": "https://docs.typesafe.ai/llms.txt",
+    "local_path": ".local/acquired/2026-09-28/typesafe-index.txt",
+    "sha256": "5f400bee146988647222a91fdb4bdb2f2623d7a4afd74f60ff931b11f7b5a716",
+    "bytes": 16134,
+    "reading": "CAPTURED_NOT_FULLY_READ",
+    "retrieved_date": "2026-09-28",
+    "runtime": "NOT_EXECUTED"
+  }
+]

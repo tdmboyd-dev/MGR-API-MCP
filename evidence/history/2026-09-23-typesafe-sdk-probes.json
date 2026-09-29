@@ -1,0 +1,40 @@
+{
+  "scope": "TypeSafe SDK 0.6.0 local source probes. Synthetic injected transport only; no real API calls, credentials or provider verification.",
+  "results": [
+    {
+      "name": "Valid typed response passes through",
+      "status": "PASS",
+      "observed": "Expected payload returned; transport simulated locally."
+    },
+    {
+      "name": "Malformed 200 JSON is not runtime-schema rejected",
+      "status": "PASS",
+      "observed": "Confirmed runtime boundary validation is needed in consuming application."
+    },
+    {
+      "name": "Empty choice criteria reaches injected transport",
+      "status": "PASS",
+      "observed": "Client does not reject empty choice locally; actual API may reject it."
+    },
+    {
+      "name": "Invalid score is rejected before transport",
+      "status": "PASS",
+      "observed": "Local score minimum validation works."
+    },
+    {
+      "name": "Debug logging contains synthetic request body",
+      "status": "PASS",
+      "observed": "Body present, standard authorization secret masked. Do not enable raw debug payload logging for private tasks."
+    },
+    {
+      "name": "429 retries once when explicitly configured",
+      "status": "PASS",
+      "observed": "One synthetic 429 then valid response; two attempts."
+    },
+    {
+      "name": "Pre-cancelled request surfaces cancellation",
+      "status": "PASS",
+      "observed": "Cancellation recognized with cooperative injected fetch."
+    }
+  ]
+}

@@ -1,0 +1,1226 @@
+[
+  {
+    "checkpoint_path": "BUILD-QUEUE.md",
+    "local_path": ".local/checkpoint/BUILD-QUEUE.md",
+    "bytes": 2652,
+    "sha256": "06fd513e4976674628817da7e8c55619c54e7ddaf46c16b86348c2394025c594"
+  },
+  {
+    "checkpoint_path": "bundle-integrity.json",
+    "local_path": ".local/checkpoint/bundle-integrity.json",
+    "bytes": 266,
+    "sha256": "41f081a047ad844c1aa72aed467462152bd1088b67308471e87d3c015ccba878"
+  },
+  {
+    "checkpoint_path": "evidence/collection-integrity.json",
+    "local_path": ".local/checkpoint/evidence/collection-integrity.json",
+    "bytes": 21993,
+    "sha256": "93ef64abe12c6b3d3abc14b98b838a211c2c418b3ffc3414829e4d9fb78e5b55"
+  },
+  {
+    "checkpoint_path": "evidence/community-integrity.json",
+    "local_path": ".local/checkpoint/evidence/community-integrity.json",
+    "bytes": 2291,
+    "sha256": "7b4972327f65063b32f5ceddaf2a5eb79bae943187ceda9260c19d5ec44d9e70"
+  },
+  {
+    "checkpoint_path": "evidence/probe-sdk.mjs",
+    "local_path": ".local/checkpoint/evidence/probe-sdk.mjs",
+    "bytes": 4686,
+    "sha256": "4cf6e81c90ee81bc8d2685eefb829d477b9334a9d0d04b095393adc2f862174c"
+  },
+  {
+    "checkpoint_path": "evidence/task-ledger.json",
+    "local_path": ".local/checkpoint/evidence/task-ledger.json",
+    "bytes": 4980,
+    "sha256": "6afce897db6948525f7f264861b666e466cc80f0777c0ce85612522a6e114e2b"
+  },
+  {
+    "checkpoint_path": "evidence/typesafe-sdk-probes.json",
+    "local_path": ".local/checkpoint/evidence/typesafe-sdk-probes.json",
+    "bytes": 1457,
+    "sha256": "69f7eecdd341126abd761d79e7f6198f0e01c05f237f3e0a30c12b76755d663d"
+  },
+  {
+    "checkpoint_path": "HANDOFF.md",
+    "local_path": ".local/checkpoint/HANDOFF.md",
+    "bytes": 2911,
+    "sha256": "cf66f83fec92481fab9d77488279bc96005c288cde60ba166c50685a9bf6e907"
+  },
+  {
+    "checkpoint_path": "JARVIS-JEV-BEAST-Research-Collection.zip",
+    "local_path": ".local/checkpoint/JARVIS-JEV-BEAST-Research-Collection.zip",
+    "bytes": 37482451,
+    "sha256": "260b09032e69ed4bb81a9507a3d8cf5469b0dfc9b1b80071bc712f8c00471e46"
+  },
+  {
+    "checkpoint_path": "README.md",
+    "local_path": ".local/checkpoint/README.md",
+    "bytes": 6381,
+    "sha256": "a77182e0692fcf93e3c9f0191d378beb39813af417dba6330858d502fdeb7c7f"
+  },
+  {
+    "checkpoint_path": "research/classroom-catalog.json",
+    "local_path": ".local/checkpoint/research/classroom-catalog.json",
+    "bytes": 19297,
+    "sha256": "1252de76bff8951a9927756e09eb647d0eb115136275178197786b829e043668"
+  },
+  {
+    "checkpoint_path": "research/CLASSROOM-CATALOG.md",
+    "local_path": ".local/checkpoint/research/CLASSROOM-CATALOG.md",
+    "bytes": 11204,
+    "sha256": "dbc061521cb4155f34146f9710216d5ea080a35311c23ceff697e32e02736def"
+  },
+  {
+    "checkpoint_path": "research/COMMUNITY-MERGE-REVIEW.md",
+    "local_path": ".local/checkpoint/research/COMMUNITY-MERGE-REVIEW.md",
+    "bytes": 11094,
+    "sha256": "a52ba5056a72bc266af37e3f47b5d280291e7430a221ba34164aa625413c991c"
+  },
+  {
+    "checkpoint_path": "research/prior-conversation.md",
+    "local_path": ".local/checkpoint/research/prior-conversation.md",
+    "bytes": 36724,
+    "sha256": "ed5f8a106243eccc1801e3f4976dce40a40e5bb9133123f2f8e07a3f6d7b1211"
+  },
+  {
+    "checkpoint_path": "research/SOURCE-UNIVERSE.md",
+    "local_path": ".local/checkpoint/research/SOURCE-UNIVERSE.md",
+    "bytes": 3295,
+    "sha256": "eef35216c46e273d49c35d933ac682081cd7af615bb4e464a701808276d3568f"
+  },
+  {
+    "checkpoint_path": "SCORECARD.md",
+    "local_path": ".local/checkpoint/SCORECARD.md",
+    "bytes": 4223,
+    "sha256": "90093bf4cfcdf173ccb61c997bdd9e28547e6c8623a9214463a4ff7a66bc7870"
+  },
+  {
+    "checkpoint_path": "sources/beast/BEAST-Universal-Skill-v2/ACTIVATION-PROMPT.txt",
+    "local_path": ".local/checkpoint/sources/beast/BEAST-Universal-Skill-v2/ACTIVATION-PROMPT.txt",
+    "bytes": 568,
+    "sha256": "eb9626ea38b0fc6e062e4a723bbceb89daa351e01724960d3e5f1e643b951f66"
+  },
+  {
+    "checkpoint_path": "sources/beast/BEAST-Universal-Skill-v2/ARCHITECTURE-COMPLETENESS-CHECKLIST.md",
+    "local_path": ".local/checkpoint/sources/beast/BEAST-Universal-Skill-v2/ARCHITECTURE-COMPLETENESS-CHECKLIST.md",
+    "bytes": 709,
+    "sha256": "a6d34079aa1bfb3c32ee9b79f4b9ee26afccf87c24ce5b9830ccf5b53c674efc"
+  },
+  {
+    "checkpoint_path": "sources/beast/BEAST-Universal-Skill-v2/SCORECARD-TEMPLATE.md",
+    "local_path": ".local/checkpoint/sources/beast/BEAST-Universal-Skill-v2/SCORECARD-TEMPLATE.md",
+    "bytes": 661,
+    "sha256": "55655307de02abeed15ff119052bd96f87a388570221adedd45086f94187150c"
+  },
+  {
+    "checkpoint_path": "sources/beast/BEAST-Universal-Skill-v2/SKILL.md",
+    "local_path": ".local/checkpoint/sources/beast/BEAST-Universal-Skill-v2/SKILL.md",
+    "bytes": 13415,
+    "sha256": "97facfd271fe90ad84041e17c549239ee34b630238be5a4676769af16eda4db6"
+  },
+  {
+    "checkpoint_path": "sources/beast/BEAST-Universal-Skill-v2.zip",
+    "local_path": ".local/checkpoint/sources/beast/BEAST-Universal-Skill-v2.zip",
+    "bytes": 7973,
+    "sha256": "8f7f4a1a4266cdb6cd728dea5c5b261796729297f336a07c48f5bfe6c32ddf6a"
+  },
+  {
+    "checkpoint_path": "sources/beast/MGR-UNIVERSAL-BEAST-v1.0.md",
+    "local_path": ".local/checkpoint/sources/beast/MGR-UNIVERSAL-BEAST-v1.0.md",
+    "bytes": 5992,
+    "sha256": "fc6aeeec039fab17bd4b7e313ee0c8172815761d0c00c34f3fac36892e2911b7"
+  },
+  {
+    "checkpoint_path": "sources/community-manifest.json",
+    "local_path": ".local/checkpoint/sources/community-manifest.json",
+    "bytes": 9181,
+    "sha256": "8bdc9153388b257ea05f0777a7582537463d4484d4e1597e7a20e96d64f11c10"
+  },
+  {
+    "checkpoint_path": "sources/download-manifest.json",
+    "local_path": ".local/checkpoint/sources/download-manifest.json",
+    "bytes": 49880,
+    "sha256": "692147b71a5442f79478c3ab156bef17a8105b5ce5f4e1f4ec5c07e402bd5d06"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/Brand-Voice-Template.pdf",
+    "local_path": ".local/checkpoint/sources/jarvis/Brand-Voice-Template.pdf",
+    "bytes": 195707,
+    "sha256": "a4e1b0c6b156f60677cb375828dccb8fae519b5d12ef7962c4b00d4dd556ef8e"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/Brand-Voice-Template.txt",
+    "local_path": ".local/checkpoint/sources/jarvis/Brand-Voice-Template.txt",
+    "bytes": 4029,
+    "sha256": "a36d6650308e8f389ba9e5b11793ba267827bfbe5368a32b7303dada3bddae48"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/Build-CASE-Free-Prompt-Pack.pdf",
+    "local_path": ".local/checkpoint/sources/jarvis/Build-CASE-Free-Prompt-Pack.pdf",
+    "bytes": 469670,
+    "sha256": "55a5209b5d40d0482f20a2d1ac36490bd1be67cecd3a9a4d760955284cfff487"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/Build-CASE-Free-Prompt-Pack.txt",
+    "local_path": ".local/checkpoint/sources/jarvis/Build-CASE-Free-Prompt-Pack.txt",
+    "bytes": 5473,
+    "sha256": "86ecd6234e5dd0f18bd37c3f258363c67570bf13a6bd311da404f9d571538465"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/HOLO-Prompt-Pack.pdf",
+    "local_path": ".local/checkpoint/sources/jarvis/HOLO-Prompt-Pack.pdf",
+    "bytes": 261074,
+    "sha256": "4d2cb6512f1977414243e5a06a6fac1014dde65958898b8b67dcd0816d050b40"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/HOLO-Prompt-Pack.txt",
+    "local_path": ".local/checkpoint/sources/jarvis/HOLO-Prompt-Pack.txt",
+    "bytes": 10687,
+    "sha256": "8beb9ed609ea8b8a6dc34990622b475f65960c6dfa17556f53b37e287ea2ef09"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/Jarvis-Fable-5.1-Prompt-Pack.pdf",
+    "local_path": ".local/checkpoint/sources/jarvis/Jarvis-Fable-5.1-Prompt-Pack.pdf",
+    "bytes": 310366,
+    "sha256": "0188db3ae1c4030d17c4f48c2d29a131b01a06917ae3392bf74ea0387bff16c2"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/Jarvis-Fable-5.1-Prompt-Pack.txt",
+    "local_path": ".local/checkpoint/sources/jarvis/Jarvis-Fable-5.1-Prompt-Pack.txt",
+    "bytes": 21342,
+    "sha256": "0e7301a4dec910e4394667630aa70814aa971d65cdae0ebd13c8f494c7864fb0"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/Jarvis-GPT-6-Astra-Prompt-Pack.pdf",
+    "local_path": ".local/checkpoint/sources/jarvis/Jarvis-GPT-6-Astra-Prompt-Pack.pdf",
+    "bytes": 372190,
+    "sha256": "11f276025d5c872f5695c071984bf273c6c6e4565bb85962884918b62ad78fde"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/Jarvis-GPT-6-Astra-Prompt-Pack.txt",
+    "local_path": ".local/checkpoint/sources/jarvis/Jarvis-GPT-6-Astra-Prompt-Pack.txt",
+    "bytes": 37810,
+    "sha256": "e3517f98dbac2e5d866ad4cf66f0ac032b7e87ce58ff32ebc90fd010c0f3e46d"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/Jarvis-Jev-Prompt-Pack.pdf",
+    "local_path": ".local/checkpoint/sources/jarvis/Jarvis-Jev-Prompt-Pack.pdf",
+    "bytes": 394933,
+    "sha256": "24c08f98d26e6a9c09aed6cb55f8b6e78ac2ff43ef9839c2bc6ba575e3e70510"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/Jarvis-Jev-Prompt-Pack.txt",
+    "local_path": ".local/checkpoint/sources/jarvis/Jarvis-Jev-Prompt-Pack.txt",
+    "bytes": 39098,
+    "sha256": "3230ef0fc8be9c4993631152cefcd464d50877094c3bf0849a0752110499e9d6"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/Jarvis-Phone-Starter-Pack.pdf",
+    "local_path": ".local/checkpoint/sources/jarvis/Jarvis-Phone-Starter-Pack.pdf",
+    "bytes": 239624,
+    "sha256": "de8e6475e1c90c6ca572881eb101d5a4ac5bc22dd8956aebc5c10f49e1dd3cdf"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/Jarvis-Phone-Starter-Pack.txt",
+    "local_path": ".local/checkpoint/sources/jarvis/Jarvis-Phone-Starter-Pack.txt",
+    "bytes": 17803,
+    "sha256": "7d0fc446a1822b756d04d5f0dc3583be13749af88b2752bd525a082329976e6a"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/JARVIS-Prompt-Pack.pdf",
+    "local_path": ".local/checkpoint/sources/jarvis/JARVIS-Prompt-Pack.pdf",
+    "bytes": 627476,
+    "sha256": "b5f697526b04951165539a4af62a1bf238e59ff3bbcb1995d8e5d9affe2b2313"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/JARVIS-Prompt-Pack.txt",
+    "local_path": ".local/checkpoint/sources/jarvis/JARVIS-Prompt-Pack.txt",
+    "bytes": 9177,
+    "sha256": "ca852fe29361ac52ffa49ff04d81358aef19d93563dfa1eafd6e06f4a70394b7"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/Jarvis-screen-share-prompt-pack.pdf",
+    "local_path": ".local/checkpoint/sources/jarvis/Jarvis-screen-share-prompt-pack.pdf",
+    "bytes": 270865,
+    "sha256": "c9b37cebc42442eb1a2178dca457ef7b83e08b5f5bd63372ef45e1fd09ded454"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/Jarvis-screen-share-prompt-pack.txt",
+    "local_path": ".local/checkpoint/sources/jarvis/Jarvis-screen-share-prompt-pack.txt",
+    "bytes": 8617,
+    "sha256": "663015cbc746a5bef9ec80888204b68a46d1c807e7f0d9ccc4effa449b8874b2"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/Jev-A-New-Kind-of-AI.pdf",
+    "local_path": ".local/checkpoint/sources/jarvis/Jev-A-New-Kind-of-AI.pdf",
+    "bytes": 337000,
+    "sha256": "33e3fe938b7c966fbfa09fbda52650b3bf8930bc7a51eeaa0ee82c0157daf3aa"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/Jev-A-New-Kind-of-AI.txt",
+    "local_path": ".local/checkpoint/sources/jarvis/Jev-A-New-Kind-of-AI.txt",
+    "bytes": 18626,
+    "sha256": "0c30c701331fc10ac7bbdd40201fb25d8d9bc14ce9c1364b788fa71acac03748"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/Social-Autopilot-Prompt-Pack.pdf",
+    "local_path": ".local/checkpoint/sources/jarvis/Social-Autopilot-Prompt-Pack.pdf",
+    "bytes": 357453,
+    "sha256": "f96b546e382bfe8554b942e89f54fd41dd5d99687e660d6255fbc5c24568f3b6"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/Social-Autopilot-Prompt-Pack.txt",
+    "local_path": ".local/checkpoint/sources/jarvis/Social-Autopilot-Prompt-Pack.txt",
+    "bytes": 6211,
+    "sha256": "61016894a2c3aac7207745ded34eddb7af2f4df78ac577e83eec5f446e5b02ec"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/SPARK-Starter-Pack.pdf",
+    "local_path": ".local/checkpoint/sources/jarvis/SPARK-Starter-Pack.pdf",
+    "bytes": 246571,
+    "sha256": "492f365ebef022209a9ef21146ac86d6b12452a456f31ea029402d3077656c1d"
+  },
+  {
+    "checkpoint_path": "sources/jarvis/SPARK-Starter-Pack.txt",
+    "local_path": ".local/checkpoint/sources/jarvis/SPARK-Starter-Pack.txt",
+    "bytes": 10118,
+    "sha256": "0c6d768a41046ba9ebf34f11137999a51acd990abcfaa2d51ce5366474021cf0"
+  },
+  {
+    "checkpoint_path": "sources/openai/build-mcp-server.md",
+    "local_path": ".local/checkpoint/sources/openai/build-mcp-server.md",
+    "bytes": 16124,
+    "sha256": "110cb1d6118edbd2894f26ab009f18d3a398f0a84924982a4ab45efa2dff0b63"
+  },
+  {
+    "checkpoint_path": "sources/openai/connect-chatgpt.md",
+    "local_path": ".local/checkpoint/sources/openai/connect-chatgpt.md",
+    "bytes": 6556,
+    "sha256": "4a4630624253badf7e09f6a232442954f35c13f3490407a4de380b194bfe9d4c"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-ads-claude-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/ai-ads-claude-files.txt",
+    "bytes": 689,
+    "sha256": "d603839a6c43147b3deb98ef965558fa766bd1706bc56621fbede5948854c06a"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-ads-claude.zip",
+    "local_path": ".local/checkpoint/sources/repositories/ai-ads-claude.zip",
+    "bytes": 152751,
+    "sha256": "1303ed8475448d44901eb62538e1bac85b028a2e80876672bb9cb62d2ca35f08"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-agency-claude-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/ai-agency-claude-files.txt",
+    "bytes": 524,
+    "sha256": "d1c546897fca05cc2c6a90399cdb8b09d0ebe090c4637a063b9853b3df4d98c8"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-agency-claude.zip",
+    "local_path": ".local/checkpoint/sources/repositories/ai-agency-claude.zip",
+    "bytes": 90864,
+    "sha256": "7019c5c760a3d02c1c692f1d18cf614e43e023b6380a5232e1fdb5d12cc27a45"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-crypto-claude-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/ai-crypto-claude-files.txt",
+    "bytes": 600,
+    "sha256": "011c625ca892350da3ac1e2db35a72c89f32aea94be630135835eed001b52cbf"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-crypto-claude.zip",
+    "local_path": ".local/checkpoint/sources/repositories/ai-crypto-claude.zip",
+    "bytes": 123912,
+    "sha256": "637f1ac1ad18be689e51f361aa05834a1bf81d7b49dc455e50c07dc036ba006f"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-finance-claude-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/ai-finance-claude-files.txt",
+    "bytes": 604,
+    "sha256": "228136f497de9bb959029f0e79e99f790f2038fafec516140a038d6f570b7ad5"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-finance-claude.zip",
+    "local_path": ".local/checkpoint/sources/repositories/ai-finance-claude.zip",
+    "bytes": 94940,
+    "sha256": "75061f2bffe08baff4b69a35ed4827823ab8310be66e955a6892e8a60f3b11eb"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-legal-claude-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/ai-legal-claude-files.txt",
+    "bytes": 727,
+    "sha256": "739d870064e62dd53e5822edabeb2d4d9db9954cfa8ebbb90ab83e77357e3cb4"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-legal-claude.zip",
+    "local_path": ".local/checkpoint/sources/repositories/ai-legal-claude.zip",
+    "bytes": 132313,
+    "sha256": "dc3c03379d1487570d1c2d0229c4a7547c9315e16c7e95925373bf10e8e494c6"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-marketing-claude-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/ai-marketing-claude-files.txt",
+    "bytes": 972,
+    "sha256": "952a760a1c182b9b2b2d472c1e8a9180b92bad25c0fe2fbc35dbe2f27ae4adc6"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-marketing-claude.zip",
+    "local_path": ".local/checkpoint/sources/repositories/ai-marketing-claude.zip",
+    "bytes": 143790,
+    "sha256": "565961a49cfc6d02aaa14cefcbd57a5017d7edaa21632eb5117c80f75851affd"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-proposal-claude-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/ai-proposal-claude-files.txt",
+    "bytes": 756,
+    "sha256": "b54ea8a5e0ae78fd7d444c794896f11092aae76b40e8d1e68382e57794143c88"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-proposal-claude.zip",
+    "local_path": ".local/checkpoint/sources/repositories/ai-proposal-claude.zip",
+    "bytes": 45690,
+    "sha256": "ce124fce9307e54774647df3bddb3ca4bc2058f78b79bb29f26c247e474522bd"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-realestate-claude-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/ai-realestate-claude-files.txt",
+    "bytes": 806,
+    "sha256": "a2d6261648f3648c1f38e806a9a2c8b3d3053b01754d1c8008bd838e3561ed31"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-realestate-claude.zip",
+    "local_path": ".local/checkpoint/sources/repositories/ai-realestate-claude.zip",
+    "bytes": 133932,
+    "sha256": "6d4e8e2f23762a24cd59032a4e0f6b773c002d7d39cb65fb52a23a7be95deb84"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-recruiter-claude-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/ai-recruiter-claude-files.txt",
+    "bytes": 603,
+    "sha256": "3bbbed0e898aaca5ae27a4792f9f2c2fa4c1c2eeda0922d5ecf3d28bfc020fd3"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-recruiter-claude.zip",
+    "local_path": ".local/checkpoint/sources/repositories/ai-recruiter-claude.zip",
+    "bytes": 87302,
+    "sha256": "4028226a9ffa6cceb89e5aae435ef748d7a5319a431efff4023c8b8dc676dbde"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-reputation-claude-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/ai-reputation-claude-files.txt",
+    "bytes": 777,
+    "sha256": "739a3f8b980fadd9dc705cd0824b123224667f361dbb63642866b02fd116f898"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-reputation-claude.zip",
+    "local_path": ".local/checkpoint/sources/repositories/ai-reputation-claude.zip",
+    "bytes": 133570,
+    "sha256": "eff972018a94d959ef4da1956077ff3e0fb674c34a66b341f51bca6b295a8ccf"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-restaurant-claude-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/ai-restaurant-claude-files.txt",
+    "bytes": 648,
+    "sha256": "d02fdf498d7f4253531ef8c869d731d74634a53b6a03d8959c6e09ce1a0fa95a"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-restaurant-claude.zip",
+    "local_path": ".local/checkpoint/sources/repositories/ai-restaurant-claude.zip",
+    "bytes": 91800,
+    "sha256": "a5835c31d1ebc7b226d5daa94ae3f5da6c8e8ea21a445c6db1f397bc7d0d5a2a"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-sales-team-claude-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/ai-sales-team-claude-files.txt",
+    "bytes": 940,
+    "sha256": "2548c3c28a5462e9fac381883b92104b11ffe7b456b7ded9b7e9f7ee255d6c18"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-sales-team-claude.zip",
+    "local_path": ".local/checkpoint/sources/repositories/ai-sales-team-claude.zip",
+    "bytes": 195789,
+    "sha256": "dd665f09cfadad1119bb7942a62807d216fcb58223bd090fef8779f219d83e13"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-trading-claude-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/ai-trading-claude-files.txt",
+    "bytes": 743,
+    "sha256": "dc51327a4794c9be89fc16d421039ca502cd5d42db30fa7e34c69c61e2ddf619"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-trading-claude.zip",
+    "local_path": ".local/checkpoint/sources/repositories/ai-trading-claude.zip",
+    "bytes": 135371,
+    "sha256": "3ee50b3d3b01d51323fa3f3bb6a9001245fe80c6f08b49f2fcd933e8815a8a12"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-trading-hermes-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/ai-trading-hermes-files.txt",
+    "bytes": 658,
+    "sha256": "0960643523129a748840c43be8e33349e2ffb090f7191106fe5d6a186b080f87"
+  },
+  {
+    "checkpoint_path": "sources/repositories/ai-trading-hermes.zip",
+    "local_path": ".local/checkpoint/sources/repositories/ai-trading-hermes.zip",
+    "bytes": 272949,
+    "sha256": "4f8cb62d8b8c703a932873ae07d93b49cfa2833714b28b160a4a0f6ee3711019"
+  },
+  {
+    "checkpoint_path": "sources/repositories/brain-map-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/brain-map-files.txt",
+    "bytes": 102,
+    "sha256": "f2b68edaf89a7dd3098be832869f2ee0b45622da1cda1cb632976b0e093ba0da"
+  },
+  {
+    "checkpoint_path": "sources/repositories/brain-map.zip",
+    "local_path": ".local/checkpoint/sources/repositories/brain-map.zip",
+    "bytes": 1523704,
+    "sha256": "49313a00dadcdab203827434dbd333203623d9993f80d63d0d8cac31f6cc5286"
+  },
+  {
+    "checkpoint_path": "sources/repositories/dataforseo-claude-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/dataforseo-claude-files.txt",
+    "bytes": 992,
+    "sha256": "f6b3767511199205c95960bc49f36e8da72348c21c3da6a088bc17b1608a193a"
+  },
+  {
+    "checkpoint_path": "sources/repositories/dataforseo-claude.zip",
+    "local_path": ".local/checkpoint/sources/repositories/dataforseo-claude.zip",
+    "bytes": 76078,
+    "sha256": "eab76f9c0680bad4bf32d428cf9307accc43cc914104484e974223e34800c00d"
+  },
+  {
+    "checkpoint_path": "sources/repositories/geo-seo-claude-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/geo-seo-claude-files.txt",
+    "bytes": 1996,
+    "sha256": "a8a87408324610fc633ad8ed7119d37c62c17054470103a4f16cc25ba8622b83"
+  },
+  {
+    "checkpoint_path": "sources/repositories/geo-seo-claude.zip",
+    "local_path": ".local/checkpoint/sources/repositories/geo-seo-claude.zip",
+    "bytes": 259592,
+    "sha256": "7f1f3ebc120da1ab316cccc6487c299e39ca0c9b181c89a454da51e2370b256c"
+  },
+  {
+    "checkpoint_path": "sources/repositories/holo-gestures-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/holo-gestures-files.txt",
+    "bytes": 696,
+    "sha256": "06db17b3aac653efbb13411824afe6d9e2dd8867d7d1c59bac2f8a483fef5917"
+  },
+  {
+    "checkpoint_path": "sources/repositories/holo-gestures.zip",
+    "local_path": ".local/checkpoint/sources/repositories/holo-gestures.zip",
+    "bytes": 29874745,
+    "sha256": "bc666ec00859cbe4c11aee2a46dc7726acd6776a9e6cbaba4e4686fe5967f5ce"
+  },
+  {
+    "checkpoint_path": "sources/repositories/manifest.json",
+    "local_path": ".local/checkpoint/sources/repositories/manifest.json",
+    "bytes": 11230,
+    "sha256": "921309cb97bd253719b4e1de14d8956baf4b12a14cf0274a27e6b31b8b66f122"
+  },
+  {
+    "checkpoint_path": "sources/repositories/scroll-cinematic-claude-files.txt",
+    "local_path": ".local/checkpoint/sources/repositories/scroll-cinematic-claude-files.txt",
+    "bytes": 256,
+    "sha256": "a52c8788d22995a674b824ebdc06e8f0c74ebc8ff88b5f38bf0878e0f924a667"
+  },
+  {
+    "checkpoint_path": "sources/repositories/scroll-cinematic-claude.zip",
+    "local_path": ".local/checkpoint/sources/repositories/scroll-cinematic-claude.zip",
+    "bytes": 89070,
+    "sha256": "034ffded95bc3103e5ef6a91cb4d5aca3e32e18f7574f8c5ff9414418fdf7f16"
+  },
+  {
+    "checkpoint_path": "sources/repositories/typesafe-sdk-js.zip",
+    "local_path": ".local/checkpoint/sources/repositories/typesafe-sdk-js.zip",
+    "bytes": 101280,
+    "sha256": "de01fc2aa092849a14551c8ea77e12c6ccb3b5b81f88a6787ee4171c580e9104"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/llms.txt",
+    "local_path": ".local/checkpoint/sources/typesafe/llms.txt",
+    "bytes": 16019,
+    "sha256": "3bad966207794ce900ebc81759fd48185cd2d1f287df13a08ae4d601e96450fd"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/agent-skill.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/agent-skill.md",
+    "bytes": 5798,
+    "sha256": "5ed8f74a133760523a67674f0feaac6ac88d9f1d242574ce3c9c4965f6e037c4"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/api.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/api.md",
+    "bytes": 11772,
+    "sha256": "7ea1c82d9d16bd06e3d38885a5292548293f91e6d1ade4682c27398ced51a9e5"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/concepts/how-to-build-with-system-one.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/concepts/how-to-build-with-system-one.md",
+    "bytes": 40921,
+    "sha256": "d9f4d34c1349bf5acb55c99d6a1651eacfc481ad8d1f78ccb8776769da729a49"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/concepts/state.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/concepts/state.md",
+    "bytes": 3874,
+    "sha256": "6871d59470c6af330b10be302a7382ab4c175ee8994886ad48df2fe6bb315462"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/concepts/system-one.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/concepts/system-one.md",
+    "bytes": 4061,
+    "sha256": "e072211498bc1b6ed22d14aae2c2716903f4a8112e908cc45c35af65d3b84895"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/concepts/use-case-map.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/concepts/use-case-map.md",
+    "bytes": 11707,
+    "sha256": "9d193b6379d17a3ac2f236eda9f15136e32b360e78a66bef03ce59605edfac2d"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/confidence.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/confidence.md",
+    "bytes": 11396,
+    "sha256": "97dafe98b77979906a2ad456013dd85a70dcecd109d0644b096817d910997ea5"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks/autoformat.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks/autoformat.md",
+    "bytes": 40882,
+    "sha256": "c23355f56ea56518792f8432ed2b4ca11771e01ff430922d8db2c27864ab34ac"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks/autoresearch_feature_discovery.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks/autoresearch_feature_discovery.md",
+    "bytes": 71497,
+    "sha256": "00ee0cfff9cfd670ee87656fe38ce5f3588ac2f56cb0181b156c02a657a7f03b"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks/citation_check.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks/citation_check.md",
+    "bytes": 15254,
+    "sha256": "2497e2c62a4c5fb2d1aca1c4031fb7bd39948d27b13f18e1db07d8c5777cd529"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks/classification_using_confidence.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks/classification_using_confidence.md",
+    "bytes": 30705,
+    "sha256": "20afd8e6c651de25c5a0fbfec2fde98a202f181066b2a5b391f1ffcb7ed5e377"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks/classifying_rag_passages.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks/classifying_rag_passages.md",
+    "bytes": 32392,
+    "sha256": "fbe9208da48e2bdada3c671a02e5dc55954660b2e283a85f0f2df1b596c090e3"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks/consistency_choice_cookbook.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks/consistency_choice_cookbook.md",
+    "bytes": 49891,
+    "sha256": "e0444c2c4e9c9440595692eaa2806157d43080adc525f94fe5c204b2d7bafe36"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks/consistency_noul_cookbook.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks/consistency_noul_cookbook.md",
+    "bytes": 32392,
+    "sha256": "cee9cb98c52cfbf588e0dda5defd0ba0c0d78e1162df7f20ba7bed1ece9935ff"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks/date_extraction_cookbook.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks/date_extraction_cookbook.md",
+    "bytes": 19844,
+    "sha256": "c216cb3d293a07eadb64464b2f9b1d2a8e1670efc309cbfb6acd92724f386300"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks/entity_alignment.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks/entity_alignment.md",
+    "bytes": 16563,
+    "sha256": "efa473b53ff4a2c353a8320ed6b89729b2d72f4fdf860e9c12fe0fb2500c58cc"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks/function_calling.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks/function_calling.md",
+    "bytes": 18860,
+    "sha256": "d6301a7e0e6ed229e2c54deed160c1007a902885232c05fc30f0781fb6d40535"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks/hierarchical_classification.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks/hierarchical_classification.md",
+    "bytes": 36445,
+    "sha256": "5525161d2b5597a29bd315a58aa817fe00e6bc2470cb31ece0530dbb8221dbfe"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks/llm_guardrails.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks/llm_guardrails.md",
+    "bytes": 22500,
+    "sha256": "fb5935988e2c470ee0979b40e648d641b97604802093a1a6bf56d64dedd3e0d0"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks/parallel_questions.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks/parallel_questions.md",
+    "bytes": 48484,
+    "sha256": "53dfe4516fd67b9bfc5abc9a50a6f4db6426b5b2951d41cd91e2fec45aded2fe"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks/pre_parsed_value_extraction_cookbook.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks/pre_parsed_value_extraction_cookbook.md",
+    "bytes": 12542,
+    "sha256": "c9ebb87b822ba958664b28b4e214e322dd62540c0964ea317d54da531a0fa6bd"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks/rerank_typesafe.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks/rerank_typesafe.md",
+    "bytes": 26067,
+    "sha256": "5397e56dcdcff36dcba9f2200c0c494baed957eada0364db96075053af7eaa5c"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks/sde_cascade.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks/sde_cascade.md",
+    "bytes": 32667,
+    "sha256": "03675753d74f2a08c746afe04c4f4283b55e5c6931d58a6ca9c6268b954a1a2f"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks/semantic_find.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks/semantic_find.md",
+    "bytes": 37844,
+    "sha256": "7e30135ddc6758bc00806f3d58784a80466d77655c29a815ce10b396c356de74"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks/skill_suggestion.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks/skill_suggestion.md",
+    "bytes": 39773,
+    "sha256": "97109e23a38ffeeda0a7533cb0abebe3a9a2203c1c63adcfce9b703fd249eb8e"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/cookbooks.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/cookbooks.md",
+    "bytes": 8929,
+    "sha256": "bbf49df970d14d18d6b58d0852c0ae416329c004aa88fc39777b32e5172b5ac3"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/demos/smart-home.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/demos/smart-home.md",
+    "bytes": 3825,
+    "sha256": "155c0af9a4ae31d2e283ee77147bc3a0bbaba45e15568a2382c29cc75f0adde4"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/demos.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/demos.md",
+    "bytes": 588,
+    "sha256": "df111cec8c2653209cb7c44f20bc7359619a3807bb16b60870ab2190fb47359b"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/introduction/coding-agents.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/introduction/coding-agents.md",
+    "bytes": 5150,
+    "sha256": "e61ec46260302e87e21ca65fe2a1d67ae6c2741a4a586645ace5dd7d9f501175"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/introduction/machine-learning-primer.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/introduction/machine-learning-primer.md",
+    "bytes": 6580,
+    "sha256": "45e6a22bc175f2ce1c404271dd26559179a6f6a83bde2dfcdbd963dbc1649551"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/introduction/quickstart.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/introduction/quickstart.md",
+    "bytes": 7053,
+    "sha256": "c30183944985b269c49939140272f9eec885895df346f19d76cf9b04e18073d2"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/introduction.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/introduction.md",
+    "bytes": 4317,
+    "sha256": "73eb533b5397d508e1cf606c88d5111f0e70bb8dd1d4841c45502c50d520e072"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/legal.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/legal.md",
+    "bytes": 1059,
+    "sha256": "4141ec2e7efad5a2965e56273216300ee3ece1e8d85024f0d0692efa08afcf5c"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/model-jaggedness/jev-1.13.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/model-jaggedness/jev-1.13.md",
+    "bytes": 11588,
+    "sha256": "e69329bd32e91ac08f0bd2681ceb4aacc34923b9190e29c15c8f75d8e22950e2"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/models.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/models.md",
+    "bytes": 7245,
+    "sha256": "9d20bb3c90a0147532d0b20ddc4c64579391be7842e965543b27bad684eeb4d6"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/patterns/composite-scoring.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/patterns/composite-scoring.md",
+    "bytes": 13545,
+    "sha256": "538f42d614fbf29cbfa0aa9fee1859651083a0b67c4b31a21d2710f3fe84d9f5"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/patterns/confidence-routing.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/patterns/confidence-routing.md",
+    "bytes": 12168,
+    "sha256": "7a4de8d39a24c5d6b7e74b1b170fbbe101ca69419af39bac6da4e0c1f678b7bf"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/patterns/fan-out.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/patterns/fan-out.md",
+    "bytes": 13967,
+    "sha256": "8d7a251ea6b735cb4994c1e0a95166cc0b3febce7d18189c3aa5e1673f182c91"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/patterns/intent-routing.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/patterns/intent-routing.md",
+    "bytes": 13444,
+    "sha256": "84b670d502b3f41165a901495688dc7bd586ff3082854f5432a7a4962d697cfb"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/patterns.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/patterns.md",
+    "bytes": 2020,
+    "sha256": "3c810e35f9587e0432c0fae4448961e54233ecbe51a4ba091721d55a0e5bc107"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/primitives/advanced.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/primitives/advanced.md",
+    "bytes": 19060,
+    "sha256": "73eeedee0c3ff68e5964c914ba006e4f59522fa8222e43bd960418febd13ea7f"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/primitives/choice.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/primitives/choice.md",
+    "bytes": 26794,
+    "sha256": "4c55085131f8f2d7ae1faefdec52b1c7b379d40657d701cd2c786021cfe9dac9"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/primitives/noul.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/primitives/noul.md",
+    "bytes": 27363,
+    "sha256": "aa7bff0d04bd42614e0e851a9ad4917ccc6287c882bc5dece7689b085ef789e6"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/primitives/score.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/primitives/score.md",
+    "bytes": 43992,
+    "sha256": "5afe0db1d2d108c3bf35f73f5fddbfcd2b9ade2d3c6f553af8a02b2bfd005ae9"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/primitives.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/primitives.md",
+    "bytes": 24810,
+    "sha256": "130d9136a2f01497e72920a6e8d96073056d86d838ca13b8a505e4adb87651f6"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/classes/APIConnectionError.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/classes/APIConnectionError.md",
+    "bytes": 888,
+    "sha256": "a20405bd5c86d947fd7cfea9d04afc79c03a7634382911ba82038b88c43c7ecd"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/classes/APIError.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/classes/APIError.md",
+    "bytes": 2190,
+    "sha256": "99fdf20f20bd67faf0b1fecb915079b2e87dbf9e12fb19c22e4dc0ff8a887b7a"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/classes/APIPromise.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/classes/APIPromise.md",
+    "bytes": 3573,
+    "sha256": "0d00c57977f2777183bc2dcf7019f4293a89dd2e76fe3706b3b3db80a069ceb3"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/classes/APITimeoutError.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/classes/APITimeoutError.md",
+    "bytes": 943,
+    "sha256": "c0bdf6e807b322d559704b16e4fd1d0379c3decc63c98471dbd8374cc5f5468c"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/classes/APIUserAbortError.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/classes/APIUserAbortError.md",
+    "bytes": 780,
+    "sha256": "f7db36a7ca8eab94e01e8a452ef23f183245770f0915ea64dd7ea17484fe5d88"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/classes/AuthenticationError.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/classes/AuthenticationError.md",
+    "bytes": 2398,
+    "sha256": "8420db7d6a927cc0ed598d80b509a04d7e2fcdc78ebb8fe23e4c3113de81fc7d"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/classes/BadRequestError.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/classes/BadRequestError.md",
+    "bytes": 2383,
+    "sha256": "ac95c8e0d1ca8ad1a9e61947374439047fd6fc5595369b8c8b9aa02a9323f979"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/classes/InternalServerError.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/classes/InternalServerError.md",
+    "bytes": 2416,
+    "sha256": "e878d63c8d1970545d9376dd9ce0ab92110af0009dc3a802d235c153d381b986"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/classes/NotFoundError.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/classes/NotFoundError.md",
+    "bytes": 2379,
+    "sha256": "29ee86c3e039c786e07484580663a963a4a5c87418079ee1743899f647174a00"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/classes/PermissionDeniedError.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/classes/PermissionDeniedError.md",
+    "bytes": 2401,
+    "sha256": "1d5c7a29683e93133df42ce6b937d19e8344c5b45a9133a966039a164b5bc3cf"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/classes/RateLimitError.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/classes/RateLimitError.md",
+    "bytes": 2579,
+    "sha256": "4e552a0610a26794cb68ac08e17ab6402534004e825b73e177408ecd854efdf0"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/classes/TypeSafeClient.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/classes/TypeSafeClient.md",
+    "bytes": 3375,
+    "sha256": "3831ede08860c95daa182c33a5c3dc698f92d30990df88f7d6af764d989d2347"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/classes/TypeSafeError.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/classes/TypeSafeError.md",
+    "bytes": 769,
+    "sha256": "a1eb2d99ba005a680324f062842dfeef9a6bf7267508521eee2b87c3cfe12556"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/classes/UnprocessableEntityError.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/classes/UnprocessableEntityError.md",
+    "bytes": 2422,
+    "sha256": "4620ac84c0bef57460dacf4b85b42ac3b3597a9b059bd13ff5cf644db27af366"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/functions/choice.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/functions/choice.md",
+    "bytes": 777,
+    "sha256": "971e2ac7f5ef762fac9afb4aa481350296938872cb886cf198162018b36f30a8"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/functions/noul.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/functions/noul.md",
+    "bytes": 1252,
+    "sha256": "496c8ffa64162d5fdf4aca671f7f363672ffb25de8f666b28753810b7820e1bd"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/functions/score.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/functions/score.md",
+    "bytes": 772,
+    "sha256": "2f7bd6acff7da9a8fa6e88a8f9cc0b9b7040df039f6d5072a3187729ff155783"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/interfaces/ChoiceQuestion.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/interfaces/ChoiceQuestion.md",
+    "bytes": 834,
+    "sha256": "3eeef7d78386649011c5d4f1c792976a546f77e4904ff824d488b2634af567da"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/interfaces/ChoiceResponse.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/interfaces/ChoiceResponse.md",
+    "bytes": 982,
+    "sha256": "4325f9f44b85549c68ea4fff2e79d8c24dbd6a44103589a8752ab40003885d06"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/interfaces/Logger.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/interfaces/Logger.md",
+    "bytes": 1035,
+    "sha256": "9ebf6cdbafffbece6faf32e249747c48eec372785fc14ccf74a1c7ab6ebe32b7"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/interfaces/ModelCard.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/interfaces/ModelCard.md",
+    "bytes": 541,
+    "sha256": "4427f8c944169d2bb3ed64ea08894b6a138d9b5bb7fa0e20db56e142320461bb"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/interfaces/Models.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/interfaces/Models.md",
+    "bytes": 626,
+    "sha256": "335e3d5c1d3fb2c048d81dfc6c4aeaf93365bfa78f8ee281c74224729e9d63e1"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/interfaces/NoulQuestion.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/interfaces/NoulQuestion.md",
+    "bytes": 1055,
+    "sha256": "0968d15de4642b9f18f6a2902081067f2404127c5f2ccacb14ef14d99d46ea96"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/interfaces/NoulResponse.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/interfaces/NoulResponse.md",
+    "bytes": 447,
+    "sha256": "6227fefaed88bd826c07d8183f752990c9af6b5b52468dda49335fc6a99eb1bf"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/interfaces/Questions.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/interfaces/Questions.md",
+    "bytes": 327,
+    "sha256": "35a610a7c3f857d320fdc7db8f53415434b60948ff3013d8d69a331611c4c48a"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/interfaces/RequestOptions.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/interfaces/RequestOptions.md",
+    "bytes": 919,
+    "sha256": "81fae66c86b0b25f88536144d656f3f8ecf20588658a24b488514d22091d67ee"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/interfaces/RetryPolicy.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/interfaces/RetryPolicy.md",
+    "bytes": 2033,
+    "sha256": "ecaf1ae900811fdb14829e188bb398347d1d8b549d01d24953eab1eabef5eddb"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/interfaces/ScoreQuestion.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/interfaces/ScoreQuestion.md",
+    "bytes": 833,
+    "sha256": "cf3a67c335854ba7aea0564f1fc6dcfaa91ea70831bf7c42444c1986eda934db"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/interfaces/ScoreResponse.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/interfaces/ScoreResponse.md",
+    "bytes": 1139,
+    "sha256": "f9f1d1f6da5db8d8a32512e07839973d05a19e5742fa0d943754ec9e1897d3ff"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/interfaces/SystemOneRequest.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/interfaces/SystemOneRequest.md",
+    "bytes": 1043,
+    "sha256": "a9cc654ab780c1b63390cec607ba42fc91625545e70410ae348bfecd2ed447e5"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/interfaces/SystemOneRequestPayload.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/interfaces/SystemOneRequestPayload.md",
+    "bytes": 1292,
+    "sha256": "97088e861eac6197f5c9d0f242191070d65e0d45a0c6e05d70e5df6b982fb74e"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/interfaces/SystemOneResult.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/interfaces/SystemOneResult.md",
+    "bytes": 828,
+    "sha256": "7cb2e4e7a724cd7841310f2e119e55a8ca9b55b9c94191ad36c76713cee08ced"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/interfaces/TypeSafeClientConfig.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/interfaces/TypeSafeClientConfig.md",
+    "bytes": 2201,
+    "sha256": "5780a70b4f0bc12433b1cebc8810e22ad6c5298fcec7fb77163770af483a1f69"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/interfaces/Usage.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/interfaces/Usage.md",
+    "bytes": 516,
+    "sha256": "89166ea2f5f82c1265440869fb7ed753ff5980122ecf6ff847588fb64ec3cb0a"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/interfaces/WithResponse.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/interfaces/WithResponse.md",
+    "bytes": 712,
+    "sha256": "ad47903342ef004b6b29e2f8112e0217ba26439bcb40cfbbc09bb6f65f3bb782"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/type-aliases/ChoiceCriteria.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/type-aliases/ChoiceCriteria.md",
+    "bytes": 399,
+    "sha256": "095bfad4b4840048f5fe7e8e9b65059a7f98c2472f331bd2bc8f2d8f27653d50"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/type-aliases/Description.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/type-aliases/Description.md",
+    "bytes": 322,
+    "sha256": "4891a677386abdb276a91f0be7a9d96c5168798f13daf56eeb4cd256c88dc318"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/type-aliases/EntryType.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/type-aliases/EntryType.md",
+    "bytes": 396,
+    "sha256": "25eddb598adc30e458b2a88df4b28d6ac7833c523e07b9e51fe485a99aa20f0b"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/type-aliases/EnvVar.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/type-aliases/EnvVar.md",
+    "bytes": 268,
+    "sha256": "d10173bb6e14432a2b4c8563c534768aafe3bed9f987433ff0f4804b0aff3916"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/type-aliases/Fetch.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/type-aliases/Fetch.md",
+    "bytes": 434,
+    "sha256": "17e01b94c2f9794a9a4c6b732b0172a9ab9bc7188b9ed306528ddc742c2c8f5d"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/type-aliases/JsonValue.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/type-aliases/JsonValue.md",
+    "bytes": 365,
+    "sha256": "10f9f35278cc9c8059f45e13c9e16581ecdc848db015eaae46e4593975c6e030"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/type-aliases/LogLevel.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/type-aliases/LogLevel.md",
+    "bytes": 327,
+    "sha256": "dba7f4b1a63b6f7f2da62013ffefc152660867c508d2cb580de8c6983b5efe11"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/type-aliases/Question.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/type-aliases/Question.md",
+    "bytes": 342,
+    "sha256": "f58601370daa9df78ea740d7bdd970c79e73d929b0c6c20cf6de0ae2f9ca5f20"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/type-aliases/ResultFor.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/type-aliases/ResultFor.md",
+    "bytes": 568,
+    "sha256": "e5575bb40e49aadc08996e758ba55c1d4399a4c99a0332eee82a6a2a03121573"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/type-aliases/ScoreCriteria.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/type-aliases/ScoreCriteria.md",
+    "bytes": 391,
+    "sha256": "6f01554f2569f2c9d71acbf548dfa7d6e2c439886d13921cdee5584e09eff21e"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/type-aliases/ScoreLegend.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/type-aliases/ScoreLegend.md",
+    "bytes": 445,
+    "sha256": "4ee7b3f292648e093a9eb3946e3a6924ff44e8fba8161faab040c02adfaadaf5"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/type-aliases/ScoreOf.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/type-aliases/ScoreOf.md",
+    "bytes": 522,
+    "sha256": "257c8140349b19766082e0bb91550090660265ea932d9ee2887156af8ef61434"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/variables/ENV.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/variables/ENV.md",
+    "bytes": 1039,
+    "sha256": "52a78017fdd446b976eb37589e3ece060228055cbd78f9a5f0568ed69146781f"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/variables/LOG_LEVELS.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/variables/LOG_LEVELS.md",
+    "bytes": 316,
+    "sha256": "0d5646a6c2fd3ef63b0037f2d43a159ff588841298ff15808adc51d10e5a8fa7"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api/variables/VERSION.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api/variables/VERSION.md",
+    "bytes": 257,
+    "sha256": "de1e098300ddc35807ac8152b31ca2674a9f9f52a17e3595670a2758cd5c2e1b"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/api.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/api.md",
+    "bytes": 3327,
+    "sha256": "e8abd954c9eb20d338d07cb3397bd933f3fe5633237b9ff7bd73c6dd290e51c8"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript/changelog.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript/changelog.md",
+    "bytes": 508,
+    "sha256": "73389d4c01993603a0c943aa04d491ef92670a358e413e74a5aac4891661250d"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/javascript.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/javascript.md",
+    "bytes": 1302,
+    "sha256": "25ba04f5b55819bee85e21d9184b7b8c807a81e95754baef4b05157240a2e1bb"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/python/api/clients/async.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/python/api/clients/async.md",
+    "bytes": 32575,
+    "sha256": "f45f04e87431ce9e21cdb90e074066a23ab962b3c870d316f9092682923d7fa2"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/python/api/clients/sync.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/python/api/clients/sync.md",
+    "bytes": 31967,
+    "sha256": "55a144c0161e9b22dc3cf1b2134f9c64ae28348ead2ef4a269e39fbe4757d8f6"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/python/api/constants.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/python/api/constants.md",
+    "bytes": 1782,
+    "sha256": "dfcd6bfd691412058b2ea06c9a44414f5126e4aea06d7bf7071600f42a9b5003"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/python/api/exceptions.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/python/api/exceptions.md",
+    "bytes": 7059,
+    "sha256": "c1cec8b4f1e4c8d258f18a40acf8736e34be3c6b0bd0915189d2542624447fad"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/python/api/retries.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/python/api/retries.md",
+    "bytes": 15732,
+    "sha256": "bdf94b25ae1d23a0784c9e1affcf0363e80deb56089a0e48d3e3860bb5181cc9"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/python/api/types/common.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/python/api/types/common.md",
+    "bytes": 2942,
+    "sha256": "bda3f01322aa1a0fdff3d5603278330dc3396fc377eabd21eb4336cce365c241"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/python/api/types/questions.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/python/api/types/questions.md",
+    "bytes": 30016,
+    "sha256": "cbad949affff140bc00a090b37748c52f1239ec0e98f308012eceb562fdaaa0a"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/python/api/types/responses.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/python/api/types/responses.md",
+    "bytes": 38625,
+    "sha256": "7b0167d010dc165b6584939a550c8ec35d31c003f0e8095638a46a037b6f6f8a"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/python/api.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/python/api.md",
+    "bytes": 623,
+    "sha256": "fd58d0024e6269c295ed83e0397c0e19477d0f7a8b2b666dde496a1c6524bcaa"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/python/changelog.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/python/changelog.md",
+    "bytes": 1828,
+    "sha256": "47c90969dd76a83271c82650e0f4cfcea86db8ca0d9820ee8334eecc388162c5"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/python/usage.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/python/usage.md",
+    "bytes": 10189,
+    "sha256": "9a7d1d4e52face5ccc889418b1b67c2442d41e64951b8ae480169d6542f222f4"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk/python.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk/python.md",
+    "bytes": 3324,
+    "sha256": "40d5c6a5fb9b6a8f68ec9f14343837bc0ea5a7fe09a3bfb9a07f52418e41f1a3"
+  },
+  {
+    "checkpoint_path": "sources/typesafe/pages/sdk.md",
+    "local_path": ".local/checkpoint/sources/typesafe/pages/sdk.md",
+    "bytes": 823,
+    "sha256": "bbd9d2eaad4c605150fcead2dcb1fdb8415a10f6e5481186e185e7e8d4826a97"
+  },
+  {
+    "checkpoint_path": "sources/workflows/gmail-labeling-agent.json",
+    "local_path": ".local/checkpoint/sources/workflows/gmail-labeling-agent.json",
+    "bytes": 6735,
+    "sha256": "06de40ae478991258e319a776de7cc4b8d229813f8c44f974b5f46cbc9fac828"
+  },
+  {
+    "checkpoint_path": "sources/workflows/Pinecone-agent.json",
+    "local_path": ".local/checkpoint/sources/workflows/Pinecone-agent.json",
+    "bytes": 7761,
+    "sha256": "b352c50821a7f328b0ae1da49851d65a394aab342190ab7f0920269c1b87d9d0"
+  }
+]

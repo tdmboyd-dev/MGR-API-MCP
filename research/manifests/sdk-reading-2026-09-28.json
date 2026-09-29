@@ -1,0 +1,49 @@
+{
+  "commit": "66880ccded6cb642dc1809620c2b108c33730214",
+  "date": "2026-09-28",
+  "files": [
+    {
+      "path": "test/reliability.test.ts",
+      "sha256": "80e59751c23e208366a8e400c4a9a4794777c4a0f6f6203ade2ba19cde3ddfc2",
+      "bytes": 23118,
+      "reading": "COMPLETE_SOURCE"
+    },
+    {
+      "path": "test/release-regressions.test.ts",
+      "sha256": "75dcf55f39bf799c3cedb4fcb195604fc8054998285048f92b7ae162987f84fd",
+      "bytes": 5822,
+      "reading": "COMPLETE_SOURCE"
+    },
+    {
+      "path": "test/native-transport.test.ts",
+      "sha256": "62d81932a91dc79a4e4e50b0a4fb5b03a81d63f8d59c2459bc6be202abad779f",
+      "bytes": 5833,
+      "reading": "COMPLETE_SOURCE"
+    },
+    {
+      "path": "test/helpers.ts",
+      "sha256": "faf18b1c147e1d07beba729c5fea44a086110136704f64067def4f41b6d1f772",
+      "bytes": 897,
+      "reading": "COMPLETE_SOURCE"
+    },
+    {
+      "path": "test/integration/api.integration.ts",
+      "sha256": "8b0558865e3b6cc4ab60c5a3805de987a6fbffceb437bc8eff7b653c38bdd4a0",
+      "bytes": 6019,
+      "reading": "COMPLETE_SOURCE"
+    },
+    {
+      "path": "vitest.config.ts",
+      "sha256": "cf4fbd7ae1c2f63ed74d5f9071df0b801280c1bc4b773806e2acc52f5e50d748",
+      "bytes": 593,
+      "reading": "COMPLETE_SOURCE"
+    },
+    {
+      "path": "vitest.integration.config.ts",
+      "sha256": "6a85b055f3b807d424bd3f16699484345403c83aa01f2b4b85a848f7410c700a",
+      "bytes": 292,
+      "reading": "COMPLETE_SOURCE"
+    }
+  ],
+  "upstream_suite": "NOT_RUN"
+}

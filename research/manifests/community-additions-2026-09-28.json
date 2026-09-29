@@ -1,0 +1,60 @@
+{
+  "files": [
+    {
+      "name": "Jarvis-Opus-5.5-Prompt-Pack.pdf",
+      "source_lesson": "https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=d670bd8f5f2c48cdb086c006335a007e",
+      "local_path": ".local/acquired/2026-09-28/Jarvis-Opus-5.5-Prompt-Pack.pdf",
+      "bytes": 389056,
+      "sha256": "0204d40b752a2c7646e5379179682fdc4714efac0d977c018a124e2d0fb16f75",
+      "pages": 24,
+      "page_text_characters": [
+        409,
+        1699,
+        1914,
+        584,
+        3021,
+        1974,
+        1350,
+        1601,
+        1531,
+        1641,
+        1953,
+        2272,
+        684,
+        1937,
+        2049,
+        1740,
+        1896,
+        1715,
+        1946,
+        1703,
+        2084,
+        1777,
+        2062,
+        1472
+      ],
+      "download": "VERIFIED",
+      "reading": "COMPLETE_EXTRACTED_TEXT",
+      "visual_review": "NOT_DONE",
+      "video_review": "NOT_DONE",
+      "runtime": "NOT_EXECUTED",
+      "retrieved_date": "2026-09-28",
+      "distribution": "REFERENCE_ONLY; ORIGINAL_NOT_PUBLISHED"
+    }
+  ],
+  "new_lessons": [
+    {
+      "title": "JARVIS with Claude Opus 5.5",
+      "id": "d670bd8f5f2c48cdb086c006335a007e",
+      "state": "PDF_TEXT_READ_VIDEO_UNREVIEWED"
+    },
+    {
+      "title": "Claude Opus 5.5 Scroll Animation Websites",
+      "id": "f49e07f6e6e744edaba91e12c029dc21",
+      "state": "DISCOVERED_ONLY"
+    }
+  ],
+  "total_known_lessons": 72,
+  "total_acquired_pdfs": 13,
+  "total_pdf_pages": 139
+}

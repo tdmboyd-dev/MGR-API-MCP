@@ -1,0 +1,11 @@
+README.md
+SKILL.md
+assets/banner.jpg
+scripts/compress-frames.sh
+scripts/ensure-ffmpeg.sh
+scripts/extract-frames.sh
+templates/CinematicReveal.tsx
+templates/Launch Demo.command
+templates/index.html
+templates/scroll-cinematic.js
+templates/styles.css

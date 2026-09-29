@@ -1,0 +1,76 @@
+# AI Workshop Lite — discovered classroom catalog
+
+70 lesson links observed in the expanded YouTube Resources navigation. Discovery does not mean acquisition or complete reading. Videos remain unreviewed.
+
+| Lesson | Local attachment status |
+|---|---|
+| [Build an AI Legal Team with Claude Code](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=f3218c1c32394b73adbfb34f5f5aa830) | Not collected |
+| [Build an AI Sales Team with Claude Code](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=c3388b5d95bc4f73adae5ceb75f0d626) | Not collected |
+| [Build a Marketing Team with Claude Code](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=eeacaad438f04fc2889cbc1d9c81df90) | Not collected |
+| [GEO / SEO Github - Claude Code](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=51238c81f8af43feb1b97076324ce048) | Not collected |
+| [Claude Code - HVAC Voice AI](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=1044ee46442843928e8d1126d484d2b0) | Not collected |
+| [AI Ads Strategy Team with Claude Code](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=fb24308693564a4981090dc919e30bd7) | Not collected |
+| [AI Trade Research Analyst Team with Claude Code](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=761c813ba80f4011b8faca95cef1d196) | Not collected |
+| [Crypto Research Analyst Team](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=0cd190c2fa1c4b23a7b458d93ae4fba1) | Not collected |
+| [Real Estate AI Research Analyst Team](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=4c22d92ec8904e83bcb80606122f33a6) | Not collected |
+| [AI Recruiter Analyst Team](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=1daf72690b264af4aaacbdd27e10bd19) | Not collected |
+| [AI Personal Finance Advisor](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=be84d0526b784a6c9815d53819fed496) | Not collected |
+| [Award-winning websites with Claude Fable 5](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=c03dcb76eeb14041919c95052e0a9d15) | Not collected |
+| [GLM 5.2 Inside Claude Code](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=351febea680f4e3797a4397958ca02aa) | Not collected |
+| [Claude Sonnet 5 vs Opus 4.8](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=cfbc9f2b19974ec28906f4d1447f7cf3) | Not collected |
+| [Claude Fable 5 - 3D Websites](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=a9240b5361a3479abddc462fceda1efd) | Not collected |
+| [JARVIS AI Assistant Prompts](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=66043547c7d54cb2b5ff8510ca84e36a) | sources/jarvis/JARVIS-Prompt-Pack.pdf |
+| [Social Media Automation (Fable 5)](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=4312f05579f64e7b84b787a25fe445d5) | sources/jarvis/Brand-Voice-Template.pdf; sources/jarvis/Social-Autopilot-Prompt-Pack.pdf |
+| [I Found the 5 Craziest Claude Fable 5 Builds](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=aeff491e37004b35ac086af77b2231eb) | Not collected |
+| [TARS - AI Employee](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=c84479da00f7434284e0947b19ce11b6) | sources/jarvis/Build-CASE-Free-Prompt-Pack.pdf |
+| [Higgsfield $100K App Contest](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=0bf5a6434e524f12833a5c96c495058f) | Not collected |
+| [JARVIS versus TAR debate show](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=ec753c004dad4eb28d600a59e0653ea6) | Not collected |
+| [GPT 5.6 Sol - 3D Websites](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=8d797285ff43423ab84799ef9e0bc44e) | Not collected |
+| [Vox-Style Video Animations with Claude](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=4568a0a6c787419d99e44cdde5ea1292) | Not collected |
+| [JARVIS Makes Phone Calls](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=33d81500375b4826b7f614d80a985082) | sources/jarvis/Jarvis-Phone-Starter-Pack.pdf |
+| [Seedance 2.5 for AI Video Creation](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=e3afa04221994ead98841d52fcd3c30b) | Not collected |
+| [Claude + Seedance 2.5 Websites (3D)](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=02cdf14f4ff4445990c4cf622960516a) | Not collected |
+| [Claude + Seedance 2.5 AI UGC Ads](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=6981bf46f89d44e4b0653ce07a800792) | Not collected |
+| [SPARK - Social Media AI Employee](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=0d708aa625db4a09aa319745abf77295) | sources/jarvis/SPARK-Starter-Pack.pdf |
+| [JARVIS Roasts Me](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=9aa96f09c64e406c8589795aba1cecb6) | sources/jarvis/Jarvis-screen-share-prompt-pack.pdf |
+| [JARVIS (H.O.L.O) Interface](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=3d6329b1e52240929db6cb246a9f707d) | sources/jarvis/HOLO-Prompt-Pack.pdf |
+| [Claude Fable 5.1 JARVIS AI Assistant Prompts](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=df656bf479844082b69c3053cbd4a349) | sources/jarvis/Jarvis-Fable-5.1-Prompt-Pack.pdf |
+| [GPT-6 Astra JARVIS Prompts](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=14200543a82442bc87062b1d340a79a8) | sources/jarvis/Jarvis-GPT-6-Astra-Prompt-Pack.pdf |
+| [GPT-6 Astra 3D Scroll Websites](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=e5e22171e84b466782f27d69777455a5) | Not collected |
+| [GPT-6 Astra Runs My Social Media](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=530f9723ad344bd982a4a00d26bb5915) | Not collected |
+| [How to use JEV with GPT-6 & Claude](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=394de72c1953458d82c3e0cd35960544) | sources/jarvis/Jev-A-New-Kind-of-AI.pdf |
+| [JARVIS has reflexes with JEV](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=6d4c3100515e49f3babe254602969538) | sources/jarvis/Jarvis-Jev-Prompt-Pack.pdf |
+| [Gmail Labeling AI Agent](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=36eb6b331f2144d9afece9a8cd18f27c) | sources/workflows/gmail-labeling-agent.json |
+| [Turn YouTube Video into Powerful AI Content!](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=a70ae5ee702642c2bb33a60f3dee6ece) | Not collected |
+| [Build an AI Agent with SerpAPI](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=4541af96609a4bd49cfe2d61303e724d) | Not collected |
+| [AI Agent with a separate n8n workflow as a tool](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=c08350729cc64f8fa698e953cbcc557c) | Not collected |
+| [Pinecone Vector Database Agent](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=d0727de357434c1395b652e9ed5859be) | sources/workflows/Pinecone-agent.json |
+| [Build AI Agents with OpenSource LLMs using Ollama](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=870316d997d14f168e93e3dd01b6fa6d) | Not collected |
+| [Connect to any API with this AI Agent](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=030533a536564067af0e346c03bd75cd) | Not collected |
+| [How to use Perplexity inside n8n](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=1dcfb63370c9430b80f21adb89b55828) | Not collected |
+| [Unlock 278 AI Models with ONE API](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=d3ae9ee382cc4ad9adee48478dceda57) | Not collected |
+| [Use Deepseek V3 with n8n](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=0efb21042ea04fcb8ab0ee100db7cc35) | Not collected |
+| [The CORRECT way to use Deepseek R1 with n8n](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=b4911fd65b254c04ac03b60830854b40) | Not collected |
+| [When NOT to Use AI Agents](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=dfa2b05e8b4f48bd9a8653ba7335eedf) | Not collected |
+| [AI System Creates Voice-Narrated Videos](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=f08d847ed6e847d4af5753642122253b) | Not collected |
+| [Claude n8n workflow builder](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=a0f29fef782842648d4dcd4743fd56bc) | Not collected |
+| [How to Auto-Create VIRAL Videos with Veo3 + n8n](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=26679f8d8e094ac297f7d7add7972e33) | Not collected |
+| [Planet Cutting ASMR](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=bae83226f042480db25dcb842d1adfc9) | Not collected |
+| [RAG AI Agent for Sales Teams](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=04a0a44ed61f4e2ca681210ba0add49e) | Not collected |
+| [Use Google' NanoBanana for FREE with n8n](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=3d78b4e810be4a868709ea6cebf23f2d) | Not collected |
+| [Ad-Image Ready NanoBanana Workflow](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=000ef07d7f534d24bcabf032be0b8d6b) | Not collected |
+| [NutriSnap AI - Food Analyzer App](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=ff26607aed464cf69c4c99d7d3011205) | Not collected |
+| [NanoBanana 2 + n8n](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=436b9d3e8c434ecb8e787be9b6bc4334) | Not collected |
+| [AI UGC ad](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=ef99d75e51664ba99497ab2ba141c13b) | Not collected |
+| [Real Estate Voice AI Agent](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=5fc63b70d5bc4978a91d1935cebfabfa) | Not collected |
+| [Healthcare Check Voice Agent](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=673570617d254e54ba622da18c974929) | Not collected |
+| [Build a Multilingual Voice Agent](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=9586f1436fc84d4e90f0e8e109cb18d1) | Not collected |
+| [11Labs Consultation Voice Agent](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=5ce33501dc72452f99e08a3b378b0482) | Not collected |
+| [Telynx Voice Agent](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=1a2cdd5105e240168c62ddf4d49433ce) | Not collected |
+| [GPT Realtime Upsell Voice Agent - Wellness Spa](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=bb8784f3b54449c4a74ad955ee09abbd) | Not collected |
+| [Build & Sell Voice AI Websites to Businesses](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=4c3703d968c848d482f50e1de0e336e5) | Not collected |
+| [Antigravity Voice AI Website](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=cf78c563765746279bab766efe8a816b) | Not collected |
+| [Build & Sell AI Websites with Dashboards](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=ce9ca7ff16dd4db79dc9f23193e22dfc) | Not collected |
+| [Build ANY App with Google's Antigravity + n8n](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=3913e73a3e6f4700a208ac5f44638d5c) | Not collected |
+| [NVIDIA PersonaPlex on RunPod (Mac Setup Guide)](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=3bcc9716140a4db98acfff929f22a24c) | Not collected |
+| [Higgsfields Image & Video Prompts](https://www.skool.com/aiworkshop-lite/classroom/5b3aa9e5?md=c38e3a8f974d4251b881896040ed95b9) | Not collected |

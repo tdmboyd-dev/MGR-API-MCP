@@ -1,0 +1,671 @@
+{
+  "checked_at": "2026-09-23T11:39:17.215148+00:00",
+  "scope": "File integrity only; not functional correctness or source-reading proof.",
+  "checks": [
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\introduction.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\introduction\\quickstart.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\introduction\\coding-agents.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\concepts\\use-case-map.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\concepts\\system-one.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\concepts\\state.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\primitives.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\primitives\\choice.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\primitives\\score.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\primitives\\noul.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\primitives\\advanced.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\confidence.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\concepts\\how-to-build-with-system-one.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\introduction\\machine-learning-primer.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\patterns.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\patterns\\fan-out.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\patterns\\confidence-routing.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\patterns\\composite-scoring.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\patterns\\intent-routing.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks\\consistency_noul_cookbook.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks\\consistency_choice_cookbook.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks\\parallel_questions.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks\\rerank_typesafe.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks\\semantic_find.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks\\autoformat.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks\\function_calling.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks\\skill_suggestion.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks\\entity_alignment.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks\\classifying_rag_passages.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks\\citation_check.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks\\llm_guardrails.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks\\sde_cascade.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks\\date_extraction_cookbook.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks\\pre_parsed_value_extraction_cookbook.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks\\hierarchical_classification.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks\\autoresearch_feature_discovery.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\cookbooks\\classification_using_confidence.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\demos.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\demos\\smart-home.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\models.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\api.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\agent-skill.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\legal.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\model-jaggedness\\jev-1.13.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\python.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\python\\usage.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\python\\changelog.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\python\\api.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\python\\api\\clients\\async.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\python\\api\\clients\\sync.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\python\\api\\types\\questions.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\python\\api\\types\\responses.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\python\\api\\retries.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\python\\api\\types\\common.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\python\\api\\exceptions.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\python\\api\\constants.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\changelog.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\classes\\APIConnectionError.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\classes\\APIError.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\classes\\APIPromise.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\classes\\APITimeoutError.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\classes\\APIUserAbortError.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\classes\\AuthenticationError.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\classes\\BadRequestError.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\classes\\InternalServerError.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\classes\\NotFoundError.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\classes\\PermissionDeniedError.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\classes\\RateLimitError.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\classes\\TypeSafeClient.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\classes\\TypeSafeError.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\classes\\UnprocessableEntityError.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\interfaces\\ChoiceQuestion.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\interfaces\\ChoiceResponse.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\interfaces\\Logger.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\interfaces\\ModelCard.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\interfaces\\Models.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\interfaces\\NoulQuestion.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\interfaces\\NoulResponse.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\interfaces\\Questions.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\interfaces\\RequestOptions.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\interfaces\\RetryPolicy.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\interfaces\\ScoreQuestion.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\interfaces\\ScoreResponse.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\interfaces\\SystemOneRequest.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\interfaces\\SystemOneRequestPayload.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\interfaces\\SystemOneResult.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\interfaces\\TypeSafeClientConfig.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\interfaces\\Usage.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\interfaces\\WithResponse.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\type-aliases\\ChoiceCriteria.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\type-aliases\\Description.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\type-aliases\\EntryType.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\type-aliases\\EnvVar.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\type-aliases\\Fetch.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\type-aliases\\JsonValue.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\type-aliases\\LogLevel.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\type-aliases\\Question.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\type-aliases\\ResultFor.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\type-aliases\\ScoreCriteria.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\type-aliases\\ScoreLegend.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\type-aliases\\ScoreOf.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\variables\\ENV.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\variables\\LOG_LEVELS.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\variables\\VERSION.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\functions\\choice.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\functions\\noul.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\typesafe\\pages\\sdk\\javascript\\api\\functions\\score.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\openai\\build-mcp-server.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\openai\\connect-chatgpt.md",
+      "check": "sha256/nonempty",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\geo-seo-claude.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\holo-gestures.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\ai-legal-claude.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\ai-marketing-claude.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\ai-sales-team-claude.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\ai-trading-claude.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\ai-realestate-claude.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\ai-ads-claude.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\ai-trading-hermes.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\scroll-cinematic-claude.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\dataforseo-claude.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\brain-map.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\ai-restaurant-claude.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\ai-reputation-claude.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\ai-recruiter-claude.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\ai-proposal-claude.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\ai-finance-claude.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\ai-crypto-claude.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\ai-agency-claude.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    },
+    {
+      "file": "outputs\\sources\\repositories\\typesafe-sdk-js.zip",
+      "check": "sha256/zip-crc/relative-member-paths",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "path": ".local/legacy-tools/classroom-catalog.txt",
+    "bytes": 4779,
+    "sha256": "d0a159bb3a8637f9199005cf6a21247cfaa9e10d5c55543f0cf6f7f03c62321a"
+  },
+  {
+    "path": ".local/legacy-tools/collect_repositories.py",
+    "bytes": 1939,
+    "sha256": "686d428d09d678e3847834caf5d65a7c71e210708179882a3e4a3c36529c8985"
+  },
+  {
+    "path": ".local/legacy-tools/collect_sources.py",
+    "bytes": 2051,
+    "sha256": "3d306a32d801bf1fb6774e958f70dd4655ef92166361bdcf419ef4556fe05622"
+  },
+  {
+    "path": ".local/legacy-tools/download_attachment.py",
+    "bytes": 864,
+    "sha256": "9bc7c9849e2906b21143839359bb32c30b2dcd40843c3c336c5e7394648589cb"
+  },
+  {
+    "path": ".local/legacy-tools/finalize_collection.py",
+    "bytes": 5629,
+    "sha256": "955264c0488353011b8fd1ca8f4cfe837887408ce549171b6a4cf9aeeb43038b"
+  },
+  {
+    "path": ".local/legacy-tools/migrate_home.py",
+    "bytes": 11378,
+    "sha256": "7ca1e1e7ed0e53209ec38075ede17825589bfd52a9bf8479ab86efca3da8275b"
+  },
+  {
+    "path": ".local/legacy-tools/package_current_collection.py",
+    "bytes": 2816,
+    "sha256": "d962b16641998353245a024a7378161a23d2ec0110b27e7c726ef24e30bc69aa"
+  },
+  {
+    "path": ".local/legacy-tools/probe-sdk.mjs",
+    "bytes": 4686,
+    "sha256": "4cf6e81c90ee81bc8d2685eefb829d477b9334a9d0d04b095393adc2f862174c"
+  },
+  {
+    "path": ".local/legacy-tools/record_community_collection.py",
+    "bytes": 4425,
+    "sha256": "68b44e55d7241f2de6182f3484f6b3226de35814ddc295fcbdd34cb2ae81509f"
+  },
+  {
+    "path": ".local/legacy-tools/zubair-repos.json",
+    "bytes": 457491,
+    "sha256": "fc01592d3e3ae014f3588f72b3f7fd72b2d2fc0a612140491af9d6caf16e76d1"
+  }
+]

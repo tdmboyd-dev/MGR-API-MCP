@@ -1,0 +1,7 @@
+{
+  "scope": "Research repository integrity only; not assistant/runtime/provider verification",
+  "checks": 309,
+  "failures": 0,
+  "errors": [],
+  "status": "PASS"
+}

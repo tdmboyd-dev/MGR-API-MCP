@@ -1,0 +1,36 @@
+# Persistent evidence scorecard
+
+## September 28 — repository home and continued research
+
+Before: empty public remote; research only in the prior workspace. After: curated project home, local original-source checkpoint, recovery tooling and additional source review. Historical scope and evidence are retained under docs/history and evidence/history.
+
+| Acceptance gate for this wave | State | Evidence |
+|---|---|---|
+| Inspect designated remote and preserve existing history | PASS | Public empty repository confirmed before clone; no prior commits replaced |
+| Preserve every original checkpoint file | PASS | 204 entries in research/manifests/checkpoint-inventory.json; local hash verification |
+| Carry working method and actual instruction precedence | PASS | AGENTS.md, BEAST-UNIVERSAL.md, skills/beast-universal |
+| Publish findings/inventories without private source originals | PASS | .gitignore, source policy, curated tree verification |
+| Make source restoration reproducible | PASS | Fresh TypeSafe checkout restored at pinned commit |
+| Reproduce existing SDK observations from new home | PASS | evidence/typesafe-sdk-probes-2026-09-28.json: 7/7 synthetic observations |
+| Resume authenticated community collection | PASS | New 24-page pack; community-additions-2026-09-28 manifest |
+| Read new acquired pack completely and record corrections | PASS | research/2026-09-28-REVIEW.md; 24 pages extracted and read |
+| Expand source/test and standards review with exact scope | PASS | Seven SDK test/config files; full MCP security and SQLite WAL extracted texts |
+| Correct stale access and implementation-home records | PASS | SOURCE-UNIVERSE.md, BUILD-QUEUE.md, HANDOFF.md |
+| Validate repository integrity and failure detection | PASS | 309 checks passed in recorded run; five verifier tests passed |
+| Commit, push and verify the published remote tree | PENDING | Remote verification receipt to be recorded |
+
+Coverage is 11/12 passed acceptance gates (91.7%) for this migration/research wave while remote publication is pending. This denominator is not assistant-build completeness or total research completeness.
+
+## Product states
+
+| Scope | Current state | Remaining |
+|---|---|---|
+| Community PDFs | 13 acquired; 139 extracted-text pages fully read | Visual inspection, linked videos, other attachments and restricted packages |
+| Community workflows | Two fully read, not executed | Remaining workflow collection and provider/runtime tests |
+| TypeSafe docs | 111 captured pages; six fully read in original checkpoint | 105 pages unread; unchanged index URL set does not prove unchanged content |
+| SDK | 12 source modules previously read; seven more test/config files now read; synthetic probes reproduced | Remaining tests/scripts/docs; upstream suite and live provider not run |
+| Public repositories | 20 pinned snapshots | Most internals, dependencies and assets unreviewed |
+| Unified assistant | Research and design constraints only | Contracts, application, persistence, interface and integration unbuilt |
+| ChatGPT/MCP and providers | Official source research | No live host/account/provider verification |
+
+Overall product completion: **Unassessed**. No invented percentage. Next batch follows BUILD-QUEUE.md; optional features must use the shared engine and evidence contracts.

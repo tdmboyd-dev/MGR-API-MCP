@@ -1,0 +1,89 @@
+{
+  "checked_at": "2026-09-23T12:18:49.423058+00:00",
+  "checks": [
+    {
+      "file": "sources/jarvis/Brand-Voice-Template.pdf",
+      "sha256": "PASS",
+      "parse": "PASS",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "file": "sources/jarvis/Build-CASE-Free-Prompt-Pack.pdf",
+      "sha256": "PASS",
+      "parse": "PASS",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "file": "sources/jarvis/HOLO-Prompt-Pack.pdf",
+      "sha256": "PASS",
+      "parse": "PASS",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "file": "sources/jarvis/Jarvis-Fable-5.1-Prompt-Pack.pdf",
+      "sha256": "PASS",
+      "parse": "PASS",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "file": "sources/jarvis/Jarvis-GPT-6-Astra-Prompt-Pack.pdf",
+      "sha256": "PASS",
+      "parse": "PASS",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "file": "sources/jarvis/Jarvis-Jev-Prompt-Pack.pdf",
+      "sha256": "PASS",
+      "parse": "PASS",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "file": "sources/jarvis/Jarvis-Phone-Starter-Pack.pdf",
+      "sha256": "PASS",
+      "parse": "PASS",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "file": "sources/jarvis/JARVIS-Prompt-Pack.pdf",
+      "sha256": "PASS",
+      "parse": "PASS",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "file": "sources/jarvis/Jarvis-screen-share-prompt-pack.pdf",
+      "sha256": "PASS",
+      "parse": "PASS",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "file": "sources/jarvis/Jev-A-New-Kind-of-AI.pdf",
+      "sha256": "PASS",
+      "parse": "PASS",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "file": "sources/jarvis/Social-Autopilot-Prompt-Pack.pdf",
+      "sha256": "PASS",
+      "parse": "PASS",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "file": "sources/jarvis/SPARK-Starter-Pack.pdf",
+      "sha256": "PASS",
+      "parse": "PASS",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "file": "sources/workflows/gmail-labeling-agent.json",
+      "sha256": "PASS",
+      "parse": "PASS",
+      "runtime": "NOT_EXECUTED"
+    },
+    {
+      "file": "sources/workflows/Pinecone-agent.json",
+      "sha256": "PASS",
+      "parse": "PASS",
+      "runtime": "NOT_EXECUTED"
+    }
+  ]
+}

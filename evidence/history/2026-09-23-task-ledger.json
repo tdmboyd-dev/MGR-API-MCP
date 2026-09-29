@@ -1,0 +1,155 @@
+[
+  {
+    "task_number": 1,
+    "wave": "source-recovery",
+    "category": "research",
+    "task_name": "Read supplied BEAST files",
+    "status": "PASS",
+    "evidence": "sources/beast",
+    "metric": "5/5 text files read"
+  },
+  {
+    "task_number": 2,
+    "wave": "source-recovery",
+    "category": "research",
+    "task_name": "Recover and read prior conversation",
+    "status": "PASS",
+    "evidence": "research/prior-conversation.md",
+    "metric": "3/3 exchanges read; attachments separately provided"
+  },
+  {
+    "task_number": 3,
+    "wave": "source-recovery",
+    "category": "research",
+    "task_name": "Verify private classroom access",
+    "status": "PASS",
+    "evidence": "HANDOFF.md",
+    "metric": "Built-in-browser membership and classroom access verified; earlier Chrome blocker resolved"
+  },
+  {
+    "task_number": 4,
+    "wave": "source-recovery",
+    "category": "research",
+    "task_name": "Retrieve exact Fable JARVIS pack",
+    "status": "PASS",
+    "evidence": "sources/community-manifest.json",
+    "metric": "Exact Fable 5.1 PDF downloaded and 12 pages read"
+  },
+  {
+    "task_number": 5,
+    "wave": "source-recovery",
+    "category": "research",
+    "task_name": "Download nineteen public project snapshots",
+    "status": "PASS",
+    "evidence": "sources/repositories/manifest.json",
+    "metric": "19 pinned Zubair archives"
+  },
+  {
+    "task_number": 6,
+    "wave": "source-recovery",
+    "category": "research",
+    "task_name": "Download official Jev documentation corpus",
+    "status": "PASS",
+    "evidence": "sources/download-manifest.json",
+    "metric": "111 indexed Markdown pages"
+  },
+  {
+    "task_number": 7,
+    "wave": "source-recovery",
+    "category": "research",
+    "task_name": "Inspect SDK runtime source",
+    "status": "PASS",
+    "evidence": "sources/repositories/typesafe-sdk-js.zip",
+    "metric": "12/12 src modules read; not whole repository"
+  },
+  {
+    "task_number": 8,
+    "wave": "source-recovery",
+    "category": "research",
+    "task_name": "Execute SDK behavioral probes",
+    "status": "PASS",
+    "evidence": "evidence/typesafe-sdk-probes.json",
+    "metric": "7/7 synthetic-transport observations"
+  },
+  {
+    "task_number": 9,
+    "wave": "source-recovery",
+    "category": "research",
+    "task_name": "Read Brain Map text implementation",
+    "status": "PASS",
+    "evidence": "sources/repositories/brain-map.zip",
+    "metric": "6 text files read; no runtime integration"
+  },
+  {
+    "task_number": 10,
+    "wave": "source-recovery",
+    "category": "research",
+    "task_name": "Inspect HOLO backend and integration boundary",
+    "status": "PASS",
+    "evidence": "sources/repositories/holo-gestures.zip",
+    "metric": "README/license/server/config read; frontend remains unread"
+  },
+  {
+    "task_number": 11,
+    "wave": "source-recovery",
+    "category": "research",
+    "task_name": "Capture ChatGPT connection documentation",
+    "status": "PASS",
+    "evidence": "sources/openai",
+    "metric": "2 documents acquired; connection guide fully read"
+  },
+  {
+    "task_number": 12,
+    "wave": "source-recovery",
+    "category": "research",
+    "task_name": "Verify acquired file integrity",
+    "status": "PASS",
+    "evidence": "evidence/collection-integrity.json",
+    "metric": "133 records verified"
+  },
+  {
+    "task_number": 13,
+    "wave": "source-recovery",
+    "category": "research",
+    "task_name": "Preserve source-of-truth checkpoint",
+    "status": "PASS",
+    "evidence": "SCORECARD.md",
+    "metric": "Scope, uncertainty, queue and handoff saved"
+  },
+  {
+    "task_number": 14,
+    "wave": "authenticated-community",
+    "category": "research",
+    "task_name": "Read selected community prompt packs",
+    "status": "PASS",
+    "evidence": "sources/community-manifest.json",
+    "metric": "12 PDFs / 115 pages complete extracted text reading"
+  },
+  {
+    "task_number": 15,
+    "wave": "authenticated-community",
+    "category": "research",
+    "task_name": "Inspect acquired workflow internals",
+    "status": "PASS",
+    "evidence": "research/COMMUNITY-MERGE-REVIEW.md",
+    "metric": "2 JSON workflows read; parse and connection-reference checks passed; runtime unverified"
+  },
+  {
+    "task_number": 16,
+    "wave": "authenticated-community",
+    "category": "research",
+    "task_name": "Inventory accessible YouTube Resources navigation",
+    "status": "PASS",
+    "evidence": "research/CLASSROOM-CATALOG.md",
+    "metric": "70 observed lesson links; discovery only"
+  },
+  {
+    "task_number": 17,
+    "wave": "authenticated-community",
+    "category": "research",
+    "task_name": "Assess merge candidates and corrections",
+    "status": "PASS",
+    "evidence": "research/COMMUNITY-MERGE-REVIEW.md",
+    "metric": "12 concrete correction requirements plus shared task/provider/tool/memory design"
+  }
+]
