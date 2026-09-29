@@ -34,3 +34,7 @@ Initial publication commit 6069025706efe924df1595e1ae3b010508c35686 was recovere
 - Labeled the September 28 handoff historical and corrected its obsolete research-only implementation status against current source and README.
 - Recovered no private source originals and performed no new runtime/provider/deployment validation.
 - Local repository-integrity evidence for this documentation batch is recorded in evidence/continuity-integrity-2026-09-29.json. This is not assistant verification.
+
+## September 29, 2026 — HTTP authorization research
+
+Read HTTP handler/auth/metadata/tool and engine source plus the narrow handler test. Compared them to official MCP authorization/transport and OpenTelemetry context guidance. Found the HTTP handler's auth middleware is explicitly a future requirement; the auth helper exists but is not connected to request dispatch. Documented the precise bridge and denied-path acceptance in research/MCP-HTTP-AUTH-BOUNDARY-2026-09-29.md. This is research/specification, not a hosted authentication repair. The repository integrity verifier was run on the candidate before publication; no hosted CI or provider validation is claimed.

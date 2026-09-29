@@ -25,3 +25,7 @@ Finished paid JARVIS/TARS/SPARK and level-locked materials remain unavailable; t
 16. Keep Creation OS media/identity/rights/factory logic behind capability calls. Do not copy those systems here.
 17. Add API/MCP deployment surface only after local Task/Job contracts and restart/idempotency tests pass.
 18. Use `architecture/SERVICE-TOPOLOGY.md` for deployment/domain decisions; repo count never implies public-domain count.
+
+## Backwards–Forwards HTTP boundary research — 2026-09-29
+19. [R] Reconcile `src/mcp-http.ts`, `src/http-auth.ts`, metadata and tests against the 2025-11-25 MCP authorization/transport requirements in [MCP HTTP research](research/MCP-HTTP-AUTH-BOUNDARY-2026-09-29.md). The existing web handler does not invoke the separate authorization primitive.
+20. [ ] Research an exact authorization server/SDK/host combination and its cost/license; then implement request authentication, actor/tenant binding, forbidden token passthrough, durable idempotency and failing-path HTTP tests before exposing `/mcp` publicly.
