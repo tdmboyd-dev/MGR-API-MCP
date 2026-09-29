@@ -4,7 +4,7 @@ This repository is the user-designated home for the JARVIS/Jev research and unif
 
 ## Work and communication
 
-Read BEAST-UNIVERSAL.md, skills/beast-universal/SKILL.md, HANDOFF.md, BUILD-QUEUE.md and docs/full-build/SCORECARD.md before substantive work. On the owner's computer also apply the configured full-build and time-voice skills when available. This repository remains usable without those local paths.
+Read BEAST-UNIVERSAL.md, skills/beast-universal/SKILL.md, HANDOFF.md, BUILD-QUEUE.md and docs/full-build/SCORECARD.md before substantive work. Apply the portable skills/full-build/SKILL.md and skills/time-voice/SKILL.md copies as well. These capture the owner's current working and communication preferences without requiring machine-specific paths.
 
 Speak plainly and directly. Resolve discoverable questions through inspection. Complete coherent related work and verify it before reporting; do not repeatedly seek permission for already authorized reversible work. Give concise meaningful progress updates. Preserve approved decisions and original files.
 

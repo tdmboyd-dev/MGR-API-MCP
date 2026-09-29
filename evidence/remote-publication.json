@@ -1,0 +1,8 @@
+{
+  "repository": "https://github.com/tdmboyd-dev/MGR-API-MCP",
+  "branch": "main",
+  "verified_commit": "6069025706efe924df1595e1ae3b010508c35686",
+  "verification": "Fresh HTTPS clone matched origin/main; public verifier PASS with 105 checks; no .local files tracked",
+  "date": "2026-09-28",
+  "limitations": "This verifies the research repository, not the assistant. Follow-up documentation/skill commit will be checked with fetch and remote-head comparison."
+}

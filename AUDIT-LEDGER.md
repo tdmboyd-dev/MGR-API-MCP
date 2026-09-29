@@ -10,4 +10,4 @@
 - Read seven SDK test/config files plus complete MCP security and SQLite WAL extracted texts. Captured the current TypeSafe index; all 111 source URLs match the prior set, but page content changes have not been checked.
 - No live model call, email write, phone call, subscription, public tunnel, device activation or assistant deployment occurred.
 
-Verification and remote publication receipt will be appended after execution. Public scanners are targeted checks, not a comprehensive security audit.
+Initial publication commit 6069025706efe924df1595e1ae3b010508c35686 was recovered in a fresh HTTPS clone; its public checks passed (105 checks). Local checkpoint checks and all five verifier tests passed. Portable full-build and time-voice skills were preserved in the follow-up documentation commit. See evidence/remote-publication.json. Public scanners are targeted checks, not a comprehensive security audit.

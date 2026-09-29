@@ -17,9 +17,9 @@ Before: empty public remote; research only in the prior workspace. After: curate
 | Expand source/test and standards review with exact scope | PASS | Seven SDK test/config files; full MCP security and SQLite WAL extracted texts |
 | Correct stale access and implementation-home records | PASS | SOURCE-UNIVERSE.md, BUILD-QUEUE.md, HANDOFF.md |
 | Validate repository integrity and failure detection | PASS | 309 checks passed in recorded run; five verifier tests passed |
-| Commit, push and verify the published remote tree | PENDING | Remote verification receipt to be recorded |
+| Commit, push and verify the published remote tree | PASS | evidence/remote-publication.json; fresh remote clone passed |
 
-Coverage is 11/12 passed acceptance gates (91.7%) for this migration/research wave while remote publication is pending. This denominator is not assistant-build completeness or total research completeness.
+Coverage is 12/12 passed acceptance gates (100%) for this migration/research wave after initial publication and fresh-clone verification. This denominator is not assistant-build completeness or total research completeness.
 
 ## Product states
 
@@ -34,3 +34,5 @@ Coverage is 11/12 passed acceptance gates (91.7%) for this migration/research wa
 | ChatGPT/MCP and providers | Official source research | No live host/account/provider verification |
 
 Overall product completion: **Unassessed**. No invented percentage. Next batch follows BUILD-QUEUE.md; optional features must use the shared engine and evidence contracts.
+
+Dated transition: initial 10/12; local verification 11/12; remote clone verification 12/12. The portable full-build and time-voice skill copies are also preserved. Full-product work remains open.
