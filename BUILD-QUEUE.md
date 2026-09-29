@@ -12,3 +12,16 @@ The unified assistant remains the goal. MGR-API-MCP is now the designated home; 
 8. Run whole journeys, malformed inputs, cancellation, duplicates, concurrent work, restart/backup restore, budget limits and external reconciliation. Label synthetic, local, provider/device and production evidence separately.
 
 Finished paid JARVIS/TARS/SPARK and level-locked materials remain unavailable; they are not required dependencies for independent development. The present wave did not purchase anything, send email, make a call or expose a local service.
+
+
+## Brain / shared-edge migration wave — added 2026-09-29
+9. Define portable Brain controller contracts inside this repo: DecisionRequest/DecisionRecord, RetrievalRequest, ControllerPlan, ToolRecommendation and EvalResult. Brain is model-independent.
+10. Build an adapter from MGR Agents' existing Brain pre-router into these contracts without changing execution authorization.
+11. Move bounded routing toward deterministic policy -> DecisionEngine/Jev -> economical controller -> frontier escalation; preserve tool allowlists at every step.
+12. Add protected evaluation harnesses inspired by BFCL V4, ToolSandbox, tau3-bench and LongMemEval-V2 before any fine-tuned controller is promoted.
+13. Add Action Sentinel/Approval/Receipt integration. Brain may propose actions but may not authorize itself.
+14. Add Secret Broker references so tools receive scoped grants rather than raw long-lived credentials.
+15. Implement OpenTelemetry-compatible Task -> Decision -> ToolCall -> ProviderCall -> Artifact/Receipt traces.
+16. Keep Creation OS media/identity/rights/factory logic behind capability calls. Do not copy those systems here.
+17. Add API/MCP deployment surface only after local Task/Job contracts and restart/idempotency tests pass.
+18. Use `architecture/SERVICE-TOPOLOGY.md` for deployment/domain decisions; repo count never implies public-domain count.
