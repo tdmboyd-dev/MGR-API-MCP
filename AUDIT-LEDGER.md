@@ -11,3 +11,18 @@
 - No live model call, email write, phone call, subscription, public tunnel, device activation or assistant deployment occurred.
 
 Initial publication commit 6069025706efe924df1595e1ae3b010508c35686 was recovered in a fresh HTTPS clone; its public checks passed (105 checks). Local checkpoint checks and all five verifier tests passed. Portable full-build and time-voice skills were preserved in the follow-up documentation commit. See evidence/remote-publication.json. Public scanners are targeted checks, not a comprehensive security audit.
+
+
+## September 29, 2026 — executable foundation
+
+- Added TypeScript package/test harness and GitHub CI.
+- Added Task/Job/Decision/Approval/ExecutionAttempt/Receipt/Budget/Schedule/Reconciliation contracts.
+- Added deterministic lifecycle guards, idempotent job creation and exact-action digest binding.
+- Added model-independent Brain controller, DecisionEngine and retrieval boundary.
+- Added audience/scope authorization and independent Action Sentinel.
+- Added Privacy Firewall redaction/deny policy.
+- Added typed Creation OS capability client; this repo does not duplicate Creation OS media/factory domain logic.
+- Added the first governed MCP v2 stdio server with validation/read-only tools; no side-effecting MCP tool is exposed in this bootstrap.
+- Added service topology and Brain boundary documents.
+- Changed hosted CI to explicit batch-trigger commits so BEAST waves do not burn Actions minutes on every small commit.
+- Consolidated CI passed after these foundations were added. Live HTTP/OAuth MCP, persistent database, production job workers and provider integrations remain unverified.
