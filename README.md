@@ -2,7 +2,7 @@
 
 The research and build home for an owned, portable assistant informed by JARVIS, Jev and the BEAST working method. The intended system brings research, coding, memory, voice, tools and optional content/phone/device workflows into one task engine, with ChatGPT-facing MCP and replaceable model providers.
 
-**Current state: research and repository tooling. The assistant is not built or connected.** No live Jev/OpenAI provider, ChatGPT MCP session, phone, camera or production deployment has been verified.
+**Current state: research plus the first executable shared-edge foundation.** Typed Task/Job/Decision/Approval/Receipt/Budget/Schedule/Reconciliation contracts, lifecycle guards, idempotency, exact-action approval digests, a model-independent Brain controller, audience/scope authorization, Action Sentinel, Privacy Firewall, Creation OS client contract, and a governed MCP v2 stdio server now exist with tests. No live Jev/OpenAI provider, production persistence, ChatGPT-hosted MCP session, phone/camera integration or production deployment has been verified.
 
 ## Start here
 
