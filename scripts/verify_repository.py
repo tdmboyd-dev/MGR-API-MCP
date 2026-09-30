@@ -12,7 +12,7 @@ def verify(root=ROOT, local=False):
     errors=[]
     checked=0
     public=[p for p in root.rglob('*') if p.is_file() and not any(x in {'.git','.local','__pycache__','node_modules'} for x in p.relative_to(root).parts)]
-    for name in ['README.md','AGENTS.md','BEAST-UNIVERSAL.md','HANDOFF.md','BUILD-QUEUE.md','AUDIT-LEDGER.md','research/README.md','docs/full-build/SCORECARD.md']:
+    for name in ['README.md','AGENTS.md','HANDOFF.md','BUILD-QUEUE.md','AUDIT-LEDGER.md','research/README.md','docs/full-build/SCORECARD.md']:
         checked+=1
         if not (root/name).is_file(): errors.append(f'Missing required file: {name}')
     for p in public:

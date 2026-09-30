@@ -10,7 +10,7 @@ class IntegrityChecks(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory()
         self.root=Path(self.tmp.name)
-        for name in ['README.md','AGENTS.md','BEAST-UNIVERSAL.md','HANDOFF.md','BUILD-QUEUE.md','AUDIT-LEDGER.md','research/README.md','docs/full-build/SCORECARD.md']:
+        for name in ['README.md','AGENTS.md','HANDOFF.md','BUILD-QUEUE.md','AUDIT-LEDGER.md','research/README.md','docs/full-build/SCORECARD.md']:
             p=self.root/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text('Fixture\n')
     def tearDown(self): self.tmp.cleanup()
     def test_valid_minimal_home(self): self.assertEqual(verify(self.root)['status'],'PASS')

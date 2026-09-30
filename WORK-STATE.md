@@ -12,7 +12,7 @@ Unified assistant/task/API/MCP home. Brain is a model-independent controller sub
 
 ## Read before continuing
 
-Read AGENTS.md and canonical BEAST, then the [continuity protocol](https://github.com/tdmboyd-dev/mgr-perfect-skill/blob/master/CONTINUITY-PROTOCOL.md). Follow stricter local read orders.
+Read AGENTS.md. Follow stricter local read orders.
 - [HANDOFF.md](HANDOFF.md)
 - [BUILD-QUEUE.md](BUILD-QUEUE.md)
 - [AUDIT-LEDGER.md](AUDIT-LEDGER.md)

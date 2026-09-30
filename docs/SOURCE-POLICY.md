@@ -6,4 +6,4 @@ Per candidate, record exact URL, date, commit/hash, license text reviewed, asset
 
 Do not store tokens, signed attachment URLs, session state or private account identifiers in public evidence. Synthetic probes use explicit dummy values. Download scripts never execute acquired code. Retain original snapshots and separate new versions rather than overwriting evidence.
 
-The owner supplied BEAST operating files for this repository. Their historical examples are preserved with applicability rules in AGENTS.md. No blanket license is assigned to the repository or its contents.
+No blanket license is assigned to the repository or its contents.
