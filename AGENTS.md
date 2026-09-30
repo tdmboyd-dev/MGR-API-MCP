@@ -4,7 +4,7 @@ This repository is the user-designated home for the JARVIS/Jev research and unif
 
 ## Work and communication
 
-Read HANDOFF.md, BUILD-QUEUE.md and docs/full-build/SCORECARD.md before substantive work. Apply the portable skills/time-voice/SKILL.md copy as well. It captures the owner's communication preference without requiring machine-specific paths.
+Read the complete `MGR-Beast-Pack/MGR-BEAST-PACK.md` operating contract first. Read HANDOFF.md, BUILD-QUEUE.md and docs/full-build/SCORECARD.md before substantive work. Apply the portable skills/time-voice/SKILL.md copy as well. It captures the owner's communication preference without requiring machine-specific paths.
 
 Speak plainly and directly. Resolve discoverable questions through inspection. Complete coherent related work and verify it before reporting; do not repeatedly seek permission for already authorized reversible work. Give concise meaningful progress updates. Preserve approved decisions and original files.
 
