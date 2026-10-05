@@ -168,3 +168,60 @@ test("duplicate delivery preserves one business mutation through the same idempo
     assert.equal(second.result.receiptId,"receipt-duplicate");
   }
 });
+
+
+test("edge restart does not duplicate committed Legacy business state",async()=>{
+  let businessMutationCount=0;
+  const committed=new Map<string,{receiptId:string;correlationId:string;result:unknown;replayed:boolean}>();
+  const fetcher:typeof fetch=async(input,init)=>{
+    const request=new Request(input,init);
+    if(request.method!=="POST") return new Response("[]",{status:200});
+    const key=request.headers.get("x-idempotency-key");
+    const correlationId=request.headers.get("x-correlation-id") ?? "";
+    assert.ok(key);
+    const prior=committed.get(key);
+    if(prior) return new Response(JSON.stringify({...prior,replayed:true}),{status:200});
+    businessMutationCount+=1;
+    const result={
+      receiptId:"receipt-restart",
+      correlationId,
+      result:{contactId:"c-restart"},
+      replayed:false
+    };
+    committed.set(key,result);
+    return new Response(JSON.stringify(result),{status:200});
+  };
+
+  const context={
+    tenantId:"tenant-1",
+    actorId:"actor-1",
+    correlationId:"corr-restart",
+    idempotencyKey:"idem-restart"
+  };
+  const request={
+    action:"crm.create_contact",
+    payload:{firstName:"RestartSafe"}
+  };
+
+  const beforeRestart=new LegacyDispatchCoordinator(new LegacyEdgeClient({
+    baseUrl:"https://legacy.example/",
+    fetcher
+  }));
+  const first=await beforeRestart.execute(context,request);
+
+  // New coordinator/client instance simulates an API-MCP process restart. The
+  // authoritative idempotency outcome is retained by the Legacy boundary.
+  const afterRestart=new LegacyDispatchCoordinator(new LegacyEdgeClient({
+    baseUrl:"https://legacy.example/",
+    fetcher
+  }));
+  const second=await afterRestart.execute(context,request);
+
+  assert.equal(first.state,"confirmed");
+  assert.equal(second.state,"confirmed");
+  assert.equal(businessMutationCount,1);
+  if(second.state==="confirmed"){
+    assert.equal(second.result.replayed,true);
+    assert.equal(second.result.receiptId,"receipt-restart");
+  }
+});
