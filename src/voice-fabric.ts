@@ -137,7 +137,7 @@ export class VoiceboxMcpProvider implements VoiceProvider {
     return {
       providerId:this.descriptor.id,
       operation:"tts",
-      artifactRef:typeof result.generation_id==="string"?result.generation_id:undefined,
+      ...(typeof result.generation_id==="string"?{artifactRef:result.generation_id}:{}),
       evidence:{tool:"voicebox_speak",result}
     };
   }
@@ -150,8 +150,8 @@ export class VoiceboxMcpProvider implements VoiceProvider {
     return {
       providerId:this.descriptor.id,
       operation:"stt",
-      text:typeof result.text==="string"?result.text:undefined,
-      durationSeconds:typeof result.duration==="number"?result.duration:undefined,
+      ...(typeof result.text==="string"?{text:result.text}:{}),
+      ...(typeof result.duration==="number"?{durationSeconds:result.duration}:{}),
       evidence:{tool:"voicebox_transcribe",result}
     };
   }
