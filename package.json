@@ -9,12 +9,14 @@
     "verify": "npm run typecheck && npm test",
     "mcp:stdio": "tsx src/mcp-server.ts",
     "start:http": "tsx src/http-server.ts",
-    "verify:remote-boundary": "node scripts/verify-remote-boundary.mjs"
+    "verify:remote-boundary": "node scripts/verify-remote-boundary.mjs",
+    "verify:mcp-client": "node scripts/verify-mcp-client.mjs"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
     "tsx": "^4.20.0",
-    "typescript": "^6.0.0"
+    "typescript": "^6.0.0",
+    "@modelcontextprotocol/client": "2.1.0"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "2.1.0",
