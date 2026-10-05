@@ -38,7 +38,7 @@ const metadata=buildProtectedResourceMetadata({
   resource:resourceAudience,
   authorizationServers:[process.env.MCP_AUTHORIZATION_SERVER ?? issuer],
   scopes:advertisedScopes,
-  documentation:process.env.MCP_RESOURCE_DOCUMENTATION
+  ...(process.env.MCP_RESOURCE_DOCUMENTATION?{documentation:process.env.MCP_RESOURCE_DOCUMENTATION}:{})
 });
 
 const server=createServer(async(req,res)=>{
@@ -60,11 +60,12 @@ const server=createServer(async(req,res)=>{
       if(Array.isArray(value)) value.forEach(item=>headers.append(name,item));
       else if(value!==undefined) headers.set(name,value);
     }
-    const request=new Request(requestUrl,{
+    const init:RequestInit={
       method:req.method ?? "GET",
-      headers,
-      ...(body.length?{body}:{})
-    });
+      headers
+    };
+    if(body.length) init.body=new Uint8Array(body);
+    const request=new Request(requestUrl,init);
     const response=await mcp.fetch(request);
     res.statusCode=response.status;
     response.headers.forEach((value,name)=>res.setHeader(name,value));
