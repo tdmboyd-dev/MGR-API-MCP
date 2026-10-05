@@ -36,6 +36,7 @@ export interface LegacyClientConfig {
   baseUrl:string;
   bearerToken?:string;
   fetcher?:typeof fetch;
+  timeoutMs?:number;
 }
 
 export class LegacyEdgeClient {
@@ -120,7 +121,21 @@ export class LegacyEdgeClient {
       headers
     };
     if(input.body!==undefined) init.body=JSON.stringify(input.body);
-    const response=await this.fetcher(url,init);
+    const timeoutMs=this.config.timeoutMs ?? 15_000;
+    const controller=new AbortController();
+    const timer=setTimeout(()=>controller.abort(),timeoutMs);
+    init.signal=controller.signal;
+    let response:Response;
+    try{
+      response=await this.fetcher(url,init);
+    }catch(error){
+      if(controller.signal.aborted){
+        throw new Error(`Legacy request timed out after ${timeoutMs}ms`);
+      }
+      throw error;
+    }finally{
+      clearTimeout(timer);
+    }
     const text=await response.text();
     const body=text?JSON.parse(text):{};
     if(!response.ok){
