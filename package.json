@@ -10,7 +10,9 @@
     "mcp:stdio": "tsx src/mcp-server.ts",
     "start:http": "tsx src/http-server.ts",
     "verify:remote-boundary": "node scripts/verify-remote-boundary.mjs",
-    "verify:mcp-client": "node scripts/verify-mcp-client.mjs"
+    "verify:mcp-client": "node scripts/verify-mcp-client.mjs",
+    "verify:oauth-provider": "node scripts/verify-oauth-provider.mjs",
+    "verify:openai-mcp": "node scripts/verify-openai-remote-mcp.mjs"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
