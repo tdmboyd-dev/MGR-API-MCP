@@ -111,11 +111,12 @@ export class LegacyEdgeClient {
       headers["x-idempotency-key"]=input.context.idempotencyKey;
     }
 
-    const response=await this.fetcher(url,{
+    const init:RequestInit={
       method:input.method,
-      headers,
-      body:input.body===undefined?undefined:JSON.stringify(input.body)
-    });
+      headers
+    };
+    if(input.body!==undefined) init.body=JSON.stringify(input.body);
+    const response=await this.fetcher(url,init);
     const text=await response.text();
     const body=text?JSON.parse(text):{};
     if(!response.ok){
