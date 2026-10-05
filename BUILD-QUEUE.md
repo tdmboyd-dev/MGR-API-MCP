@@ -46,3 +46,19 @@ Finished paid JARVIS/TARS/SPARK and level-locked materials remain unavailable; t
 31. [x] Reconcile the in-memory Task/Job/Approval/Receipt engine as edge/session orchestration only. The engine now declares `edge_session_only` authority, keeps business Action Receipt authority in Legacy, and namespaces local idempotency by tenant.
 32. [x] Harden remote `/mcp` authentication by wiring `authorizeMcpRequest` into the HTTP handler.
 33. [external] Verify a real hosted ChatGPT MCP session. Repository-owned prerequisites are built: public-host Blueprint, OAuth preflight, direct remote MCP verifier, OpenAI Responses remote-MCP verifier, and one-pass hosted-proof workflow. Completion now requires an actual public deployment plus Auth0/OAuth and OpenAI/ChatGPT account credentials/permissions.
+
+## BEAST cross-system research wave — SmartWiz / OmniRoute / Voicebox / FreeBuf / ServerByt — 2026-10-05
+
+Research packet: research/BEAST-SMARTWIZ-OMNIROUTE-VOICEBOX-FREEBUF-SERVERBYT-2026-10-05.md
+
+34. [x] Research SmartWiz tax automation workflow, security posture, pricing, browser/desktop delivery, intake adapters and preparer review boundaries.
+35. [x] Research OmniRoute canonical gateway architecture, adaptive routing signals, compatibility surfaces, MCP/A2A, health/fallback and cost controls.
+36. [x] Research Voicebox local voice architecture, MCP tools, STT/TTS/cloning options and licensing boundaries.
+37. [x] Research FreeBuf as a secondary AI/cybersecurity intelligence source with primary-source verification requirements.
+38. [x] Research ServerByt shared/cloud hosting and SSH support; separate shared hosting from unverified VPS/backend capability.
+39. [ ] Extend MGR model routing with OmniRoute-inspired health, latency, quota, context-fit, semantic-quality, fallback and route-receipt signals while retaining MGR policy authority.
+40. [ ] Define MGR Voice Fabric provider contract and optional Voicebox adapter with voice-rights provenance.
+41. [ ] Send SmartWiz-derived MGR-native tax capability requirements to MGR Elite Hub/Legacy: Tax Fact Graph, evidence lineage, uncertainty review, preparer gate, browser/desktop adapters and intake normalization.
+42. [ ] Add FreeBuf to the secondary security research catalog; verify security claims against primary sources before adoption.
+43. [external] Obtain ServerByt VPS specifications and AUP details before considering it for MGR backend workloads; shared plans remain website-only by default.
+
