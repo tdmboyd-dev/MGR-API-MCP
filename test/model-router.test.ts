@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { CostAwareModelRouter, routeWithEscalation, type ModelCandidate } from "../src/model-router.js";
+import { CostAwareModelRouter, estimateRequestCost, routeWithEscalation, type ModelCandidate } from "../src/model-router.js";
 
 const candidates:ModelCandidate[]=[
   {id:"cheap",provider:"p1",model:"small",taskClasses:["classification","summarization"],qualityRank:2,costRank:1,latencyRank:1,maxRisk:"low",supportsTools:false,enabled:true},
@@ -43,4 +43,34 @@ test("escalation ladder can search increasing quality policies",()=>{
     qualitySteps:[3,6,9]
   });
   assert.equal(result?.candidate.id,"frontier");
+});
+
+
+test("router excludes unhealthy and circuit-open candidates",()=>{
+  const router=new CostAwareModelRouter(candidates);
+  router.updateSignal({candidateId:"cheap",healthy:false});
+  const result=router.route({taskClass:"summarization",risk:"low",minQualityRank:1});
+  assert.equal(result?.candidate.id,"mid");
+  assert.ok(result?.receipt.rejected.some(item=>item.id==="cheap" && item.reason==="unhealthy"));
+});
+
+test("semantic quality and provider health can justify a stronger route",()=>{
+  const router=new CostAwareModelRouter(candidates);
+  router.updateSignal({candidateId:"cheap",successRate:0.4,semanticQuality:0.2,quotaHeadroom:0.2,latencyMs:400});
+  router.updateSignal({candidateId:"mid",successRate:0.99,semanticQuality:0.95,quotaHeadroom:0.9,latencyMs:200});
+  const result=router.route({taskClass:"summarization",risk:"low",minQualityRank:1});
+  assert.equal(result?.candidate.id,"mid");
+  assert.equal(result?.escalated,true);
+  assert.equal(result?.receipt.policy,"mgr_cost_aware_v2");
+});
+
+test("cache-aware cost estimator accounts for discounted cached input",()=>{
+  const candidate:ModelCandidate={
+    id:"priced",provider:"p",model:"m",taskClasses:["summarization"],qualityRank:5,costRank:2,latencyRank:2,
+    maxRisk:"medium",supportsTools:false,enabled:true,inputCostPerMillion:2,outputCostPerMillion:8,cachedInputCostPerMillion:0.5
+  };
+  const uncached=estimateRequestCost(candidate,{taskClass:"summarization",risk:"low",minQualityRank:1,estimatedInputTokens:1_000_000,estimatedOutputTokens:100_000,expectedCacheHitRate:0});
+  const cached=estimateRequestCost(candidate,{taskClass:"summarization",risk:"low",minQualityRank:1,estimatedInputTokens:1_000_000,estimatedOutputTokens:100_000,expectedCacheHitRate:1});
+  assert.equal(uncached,2.8);
+  assert.equal(cached,1.3);
 });
