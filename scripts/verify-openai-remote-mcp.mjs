@@ -1,7 +1,7 @@
 const apiKey=required("OPENAI_API_KEY");
 const serverUrl=required("MCP_SERVER_URL");
 const authorization=required("MCP_TEST_BEARER_TOKEN");
-const model=process.env.OPENAI_MODEL ?? "gpt-6-astra";
+const model=process.env.OPENAI_MODEL || "gpt-6-astra";
 const allowedTool=process.env.MCP_EXPECTED_TOOL ?? "mgr_truth_summary";
 
 const body={
