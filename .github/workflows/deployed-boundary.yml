@@ -1,0 +1,20 @@
+name: MGR API MCP Deployed Boundary Proof
+
+on:
+  workflow_dispatch:
+
+jobs:
+  remote-boundary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify deployed MCP boundary
+        env:
+          MCP_TEST_BASE_URL: ${{ secrets.MCP_TEST_BASE_URL }}
+          MCP_TEST_BEARER_TOKEN: ${{ secrets.MCP_TEST_BEARER_TOKEN }}
+        run: |
+          test -n "$MCP_TEST_BASE_URL" || (echo "MCP_TEST_BASE_URL secret is required" && exit 1)
+          node scripts/verify-remote-boundary.mjs
