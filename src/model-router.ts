@@ -100,7 +100,7 @@ export class CostAwareModelRouter {
       const estimatedCost=estimateRequestCost(candidate,request);
       let score=0;
       score+=candidate.qualityRank*4;
-      score-=candidate.costRank*3;
+      score-=candidate.costRank*6;
       score-=candidate.latencyRank*(request.preferLatency?3:1);
       if(signal?.successRate!==undefined) score+=clamp01(signal.successRate)*12;
       if(signal?.semanticQuality!==undefined) score+=clamp01(signal.semanticQuality)*14;
