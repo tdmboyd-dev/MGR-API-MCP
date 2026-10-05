@@ -114,7 +114,9 @@ export class CostAwareModelRouter {
     const selected=scored[0];
     if(!selected) return null;
 
-    const cheapest=[...eligible].sort((a,b)=>a.costRank-b.costRank || a.id.localeCompare(b.id))[0];
+    const cheapest=this.candidates
+      .filter(c=>c.enabled && c.taskClasses.includes(request.taskClass) && !excluded.has(c.provider))
+      .sort((a,b)=>a.costRank-b.costRank || a.id.localeCompare(b.id))[0];
     const escalated=Boolean(cheapest && cheapest.id!==selected.candidate.id);
 
     return {
