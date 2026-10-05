@@ -76,3 +76,50 @@ test("authenticated Legacy MCP dispatch denies missing execute scope",async()=>{
   assert.equal(result.state,"DENY");
   assert.equal(called,false);
 });
+
+
+test("authenticated Legacy MCP write reconciles a lost response instead of blind retry",async()=>{
+  let postCount=0;
+  let receiptReads=0;
+  const legacy=new LegacyEdgeClient({
+    baseUrl:"https://legacy.example/",
+    fetcher:async(input,init)=>{
+      const req=new Request(input,init);
+      if(req.method==="POST"){
+        postCount+=1;
+        throw new Error("socket closed after dispatch");
+      }
+      receiptReads+=1;
+      return new Response(JSON.stringify([{
+        receiptId:"receipt-mcp-reconcile",
+        correlationId:"corr-mcp-reconcile",
+        status:"succeeded",
+        outcome:{contactId:"contact-1"}
+      }]),{status:200});
+    }
+  });
+
+  const result=await executeLegacyMcpCommand({
+    auth:{
+      actorId:"actor-auth",
+      tenantId:"tenant-auth",
+      audience:"https://api.mgr.example/mcp",
+      scopes:["tools:execute"],
+      expiresAt:Date.now()+60_000
+    },
+    resourceAudience:"https://api.mgr.example/mcp",
+    legacy
+  },{
+    action:"crm.create_contact",
+    payload:{firstName:"Reconciled"},
+    risk:"low",
+    correlationId:"corr-mcp-reconcile",
+    idempotencyKey:"idem-mcp-reconcile"
+  });
+
+  assert.equal(postCount,1);
+  assert.equal(receiptReads,1);
+  assert.equal(result.accepted,true);
+  assert.equal(result.reconciled,true);
+  assert.equal(result.receiptId,"receipt-mcp-reconcile");
+});
