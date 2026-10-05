@@ -27,8 +27,8 @@ Finished paid JARVIS/TARS/SPARK and level-locked materials remain unavailable; t
 18. Use `architecture/SERVICE-TOPOLOGY.md` for deployment/domain decisions; repo count never implies public-domain count.
 
 ## Backwards–Forwards HTTP boundary research — 2026-09-29
-19. [R] Reconcile `src/mcp-http.ts`, `src/http-auth.ts`, metadata and tests against the 2025-11-25 MCP authorization/transport requirements in [MCP HTTP research](research/MCP-HTTP-AUTH-BOUNDARY-2026-09-29.md). The existing web handler does not invoke the separate authorization primitive.
-20. [ ] Research an exact authorization server/SDK/host combination and its cost/license; then implement request authentication, actor/tenant binding, forbidden token passthrough, durable idempotency and failing-path HTTP tests before exposing `/mcp` publicly.
+19. [x] Reconcile `src/mcp-http.ts`, `src/http-auth.ts`, metadata and tests against the remote MCP authorization/transport boundary. The production handler now invokes authorization before server construction, binds actor/tenant from the verified access token, emits protected-resource metadata/challenges, and is covered by authenticated/failing-path tests plus container boundary proof. The older 2025-11-25 gap description is superseded by the current implementation and 2026 authorization requirements.
+20. [x] Select and document an exact public-host combination: Auth0 OAuth/OIDC + `@modelcontextprotocol/server` 2.1.0 + the existing Node/Docker server on Render. Cost/license/current-source checkpoint and configuration are in `docs/deployment/HOSTED-MCP-PROOF.md`. Provider discovery/JWKS/PKCE preflight, request authentication, actor/tenant binding, scope enforcement, durable Legacy idempotency/reconciliation, failing-path tests, Render blueprint, direct remote verifier, and OpenAI-hosted verifier are all implemented. Real Auth0/Render/OpenAI credentials remain external account inputs, not missing code.
 
 ## Legacy shared-system integration — added 2026-10-05
 
@@ -45,4 +45,4 @@ Finished paid JARVIS/TARS/SPARK and level-locked materials remain unavailable; t
 30a. [x] Add restart/timeout/duplicate-delivery tests across a deployed process boundary. Containerized network proof now passes with a real MCP HTTP process, JWKS auth boundary, separate Legacy HTTP boundary, forced timeout-after-commit reconciliation, duplicate delivery, edge restart, and exactly-once mutation counting. This is deployment-proof CI, not a public production-host claim.
 31. [x] Reconcile the in-memory Task/Job/Approval/Receipt engine as edge/session orchestration only. The engine now declares `edge_session_only` authority, keeps business Action Receipt authority in Legacy, and namespaces local idempotency by tenant.
 32. [x] Harden remote `/mcp` authentication by wiring `authorizeMcpRequest` into the HTTP handler.
-33. [ ] Verify a hosted ChatGPT MCP session only after authenticated Legacy dispatch and durable receipt evidence pass end to end.
+33. [external] Verify a real hosted ChatGPT MCP session. Repository-owned prerequisites are built: public-host Blueprint, OAuth preflight, direct remote MCP verifier, OpenAI Responses remote-MCP verifier, and one-pass hosted-proof workflow. Completion now requires an actual public deployment plus Auth0/OAuth and OpenAI/ChatGPT account credentials/permissions.
