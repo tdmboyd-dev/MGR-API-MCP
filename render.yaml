@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: mgr-api-mcp
+    runtime: docker
+    plan: free
+    repo: https://github.com/tdmboyd-dev/MGR-API-MCP
+    branch: main
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /healthz
+    maxShutdownDelaySeconds: 30
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MCP_PUBLIC_BASE_URL
+        sync: false
+      - key: MCP_AUTH_ISSUER
+        sync: false
+      - key: MCP_JWKS_URL
+        sync: false
+      - key: MCP_AUTHORIZATION_SERVER
+        sync: false
+      - key: MCP_TENANT_CLAIM
+        sync: false
+      - key: MCP_SCOPE_CLAIM
+        value: scope
+      - key: MCP_REQUIRED_SCOPES
+        value: tools:read
+      - key: MCP_ADVERTISED_SCOPES
+        value: tools:read,tools:execute
+      - key: MCP_RESOURCE_DOCUMENTATION
+        sync: false
+      - key: LEGACY_BASE_URL
+        sync: false
+      - key: LEGACY_SERVICE_TOKEN
+        sync: false
+      - key: LEGACY_TIMEOUT_MS
+        value: "15000"
