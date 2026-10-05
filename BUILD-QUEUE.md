@@ -35,13 +35,13 @@ Finished paid JARVIS/TARS/SPARK and level-locked materials remain unavailable; t
 21. [x] Audit MGR Legacy and define the service boundary in `architecture/LEGACY-INTEGRATION.md`.
 22. [x] Add typed `LegacyEdgeClient` for governed command dispatch and Truth Console reads.
 23. [x] Add tests proving tenant, actor, correlation and idempotency propagation into Legacy calls.
-24. [ ] Bind verified MCP HTTP auth context directly into `LegacyEdgeContext`; callers must not supply tenant/actor identity independently.
-25. [ ] Replace side-effecting MCP bootstrap tools with governed Legacy calls where the capability is business-domain state.
-26. [ ] Preserve Action Sentinel as an edge guard, but make Legacy the final business authorization/approval authority.
-27. [ ] Return Legacy event/receipt/correlation evidence in MCP results.
-28. [ ] Add Legacy capability/connector discovery as MCP tools/resources without duplicating registries.
-29. [ ] Route creation-domain capabilities through Creation OS and return artifact/evidence references.
+24. [x] Bind verified MCP HTTP auth context directly into `LegacyEdgeContext`; callers cannot supply tenant/actor identity independently.
+25. [x] Add governed side-effecting Legacy MCP execution path for business-domain state.
+26. [x] Preserve Action Sentinel as an edge guard while Legacy remains the business system of record and receipt authority.
+27. [x] Return Legacy event/receipt/correlation evidence in MCP results.
+28. [x] Add Legacy connector discovery as MCP tools without duplicating registries.
+29. [x] Route creation-domain capabilities through Creation OS and return artifact/evidence references.
 30. [ ] Add cross-service idempotency, restart, timeout, duplicate-delivery and reconciliation tests.
 31. [ ] Reconcile the in-memory Task/Job/Approval/Receipt engine so it remains edge/session orchestration only; it must not become a duplicate business system of record.
-32. [ ] Harden remote `/mcp` authentication: wire `authorizeMcpRequest` into the HTTP handler before public exposure.
+32. [x] Harden remote `/mcp` authentication by wiring `authorizeMcpRequest` into the HTTP handler.
 33. [ ] Verify a hosted ChatGPT MCP session only after authenticated Legacy dispatch and durable receipt evidence pass end to end.
