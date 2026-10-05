@@ -7,6 +7,8 @@ import { JwksAccessTokenVerifier } from "./jwt-verifier.js";
 
 const port=Number(process.env.PORT ?? "8787");
 const baseUrl=requiredUrl("MCP_PUBLIC_BASE_URL");
+const publicOrigin=new URL(baseUrl).origin;
+const publicHost=new URL(baseUrl).host;
 const resourceAudience=new URL("/mcp",baseUrl).toString();
 const resourceMetadataUrl=new URL("/.well-known/oauth-protected-resource",baseUrl).toString();
 const issuer=requiredUrl("MCP_AUTH_ISSUER");
@@ -43,6 +45,15 @@ const metadata=buildProtectedResourceMetadata({
 
 const server=createServer(async(req,res)=>{
   try{
+    const host=req.headers.host;
+    if(host && host!==publicHost){
+      return json(res,421,{error:"host header does not match configured public endpoint"});
+    }
+    const origin=req.headers.origin;
+    if(origin && origin!==publicOrigin){
+      return json(res,403,{error:"origin is not allowed"});
+    }
+
     const requestUrl=new URL(req.url ?? "/",baseUrl);
     if(requestUrl.pathname==="/healthz"){
       return json(res,200,{ok:true,service:"mgr-api-mcp"});
