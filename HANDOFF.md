@@ -7,7 +7,8 @@ MGR-API-MCP is now the shared external edge, switchboard, and Brain transport la
 Verification:
 - Node 22 install: passed
 - `npm run verify`: passed after Legacy client + privacy-firewall fixes
-- verification commit: `efbe9660e1d7fe998901a96d213e49faed38b96c`
+- earlier verification commit: `efbe9660e1d7fe998901a96d213e49faed38b96c`
+- authenticated Legacy/Creation integration verification: `0cf7d95f05ea78bd76943b823d1b0259ef957ac8`
 
 New implementation:
 - `src/legacy-client.ts` typed Legacy edge client
@@ -24,14 +25,10 @@ Critical boundary:
 - Brain/Jev proposes; deterministic authorization and approval remain outside model reasoning.
 
 Still required:
-- bind authenticated MCP HTTP identity directly to Legacy calls
-- convert side-effecting MCP tools into thin Legacy capability calls
-- return Legacy receipt/event evidence in tool responses
-- expose Legacy capability/connector discovery
-- route Creation OS capability calls
-- harden remote MCP auth path
 - add cross-service restart/idempotency/reconciliation tests
-- verify a hosted ChatGPT MCP session
+- verify timeout/duplicate-delivery behavior across the boundary
+- reconcile the in-memory task engine as edge/session-only state
+- verify a hosted ChatGPT MCP session against a deployed authenticated endpoint
 
 Do not claim the remote MCP surface is production-ready until those gates pass.
 
