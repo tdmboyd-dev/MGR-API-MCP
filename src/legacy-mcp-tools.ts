@@ -2,6 +2,7 @@ import { randomUUID } from "node:crypto";
 import type { McpServer } from "@modelcontextprotocol/server";
 import * as z from "zod/v4";
 import type { AuthContext } from "./authz.js";
+import { authorizeTool } from "./authz.js";
 import { ActionSentinel } from "./action-sentinel.js";
 import type { ToolCapability } from "./contracts.js";
 import { LegacyEdgeClient } from "./legacy-client.js";
@@ -94,6 +95,32 @@ export function registerLegacyMcpTools(server:McpServer,options:LegacyMcpToolOpt
       return {
         content:[{type:"text",text:JSON.stringify(result)}],
         isError:result.state==="DENY"
+      };
+    }
+  );
+
+  server.registerTool(
+    "mgr_legacy_connectors",
+    {
+      description:"List persisted MGR Legacy connectors/capabilities available to the authenticated tenant.",
+      inputSchema:z.object({})
+    },
+    async ()=>{
+      try{
+        authorizeTool(options.auth,options.resourceAudience,["tools:read"]);
+      }catch(error){
+        return {
+          content:[{type:"text",text:JSON.stringify({
+            error:error instanceof Error?error.message:String(error)
+          })}],
+          isError:true
+        };
+      }
+      return {
+        content:[{
+          type:"text",
+          text:JSON.stringify(await options.legacy.listConnectors(options.auth.tenantId))
+        }]
       };
     }
   );
