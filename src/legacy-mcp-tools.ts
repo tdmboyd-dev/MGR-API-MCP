@@ -52,16 +52,22 @@ export async function executeLegacyMcpCommand(
   }
 
   const correlation=input.correlationId ?? randomUUID();
+  const command:{
+    action:string;
+    payload:Record<string,unknown>;
+    target?:{entityType:string;entityId:string};
+  }={
+    action:input.action,
+    payload:input.payload
+  };
+  if(input.target) command.target=input.target;
+
   const result=await options.legacy.execute({
     tenantId:options.auth.tenantId,
     actorId:options.auth.actorId,
     correlationId:correlation,
     idempotencyKey:input.idempotencyKey ?? `mcp:${correlation}:${input.action}`
-  },{
-    action:input.action,
-    payload:input.payload,
-    target:input.target
-  });
+  },command);
 
   return {
     ...result,
@@ -89,9 +95,18 @@ export function registerLegacyMcpTools(server:McpServer,options:LegacyMcpToolOpt
       })
     },
     async ({action,payload,target,risk,idempotencyKey,correlationId})=>{
-      const result=await executeLegacyMcpCommand(options,{
-        action,payload,target,risk,idempotencyKey,correlationId
-      });
+      const input:{
+        action:string;
+        payload:Record<string,unknown>;
+        target?:{entityType:string;entityId:string};
+        risk:"low"|"medium"|"high"|"critical";
+        idempotencyKey?:string;
+        correlationId?:string;
+      }={action,payload,risk};
+      if(target) input.target=target;
+      if(idempotencyKey) input.idempotencyKey=idempotencyKey;
+      if(correlationId) input.correlationId=correlationId;
+      const result=await executeLegacyMcpCommand(options,input);
       return {
         content:[{type:"text",text:JSON.stringify(result)}],
         isError:result.state==="DENY"
@@ -137,11 +152,25 @@ export function registerLegacyMcpTools(server:McpServer,options:LegacyMcpToolOpt
         limit:z.number().int().positive().max(500).optional()
       })
     },
-    async filters=>({
-      content:[{
-        type:"text",
-        text:JSON.stringify(await options.legacy.truthSummary(options.auth.tenantId,filters))
-      }]
-    })
+    async filters=>{
+      const normalized:{
+        correlationId?:string;
+        actorId?:string;
+        action?:string;
+        status?:string;
+        limit?:number;
+      }={};
+      if(filters.correlationId) normalized.correlationId=filters.correlationId;
+      if(filters.actorId) normalized.actorId=filters.actorId;
+      if(filters.action) normalized.action=filters.action;
+      if(filters.status) normalized.status=filters.status;
+      if(filters.limit!==undefined) normalized.limit=filters.limit;
+      return {
+        content:[{
+          type:"text",
+          text:JSON.stringify(await options.legacy.truthSummary(options.auth.tenantId,normalized))
+        }]
+      };
+    }
   );
 }
