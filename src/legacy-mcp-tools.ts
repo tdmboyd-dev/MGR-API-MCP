@@ -6,6 +6,7 @@ import { authorizeTool } from "./authz.js";
 import { ActionSentinel } from "./action-sentinel.js";
 import type { ToolCapability } from "./contracts.js";
 import { LegacyEdgeClient } from "./legacy-client.js";
+import { LegacyDispatchCoordinator } from "./legacy-dispatch.js";
 
 export interface LegacyMcpToolOptions {
   auth:AuthContext;
@@ -62,16 +63,29 @@ export async function executeLegacyMcpCommand(
   };
   if(input.target) command.target=input.target;
 
-  const result=await options.legacy.execute({
+  const coordinator=new LegacyDispatchCoordinator(options.legacy);
+  const result=await coordinator.execute({
     tenantId:options.auth.tenantId,
     actorId:options.auth.actorId,
     correlationId:correlation,
     idempotencyKey:input.idempotencyKey ?? `mcp:${correlation}:${input.action}`
   },command);
 
+  if(result.state==="unknown_external_state"){
+    return {
+      accepted:false,
+      state:result.state,
+      correlationId:result.correlationId,
+      idempotencyKey:result.idempotencyKey,
+      error:result.error,
+      actionDigest:decision.actionDigest
+    };
+  }
+
   return {
-    ...result,
-    correlationId:result.correlationId ?? correlation,
+    ...result.result,
+    reconciled:result.reconciled,
+    correlationId:result.result.correlationId ?? correlation,
     actionDigest:decision.actionDigest
   };
 }
