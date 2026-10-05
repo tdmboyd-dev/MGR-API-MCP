@@ -3,7 +3,18 @@ import type { Approval, Job, Receipt, Task } from "./contracts.js";
 import { actionDigest } from "./security.js";
 import { assertJobTransition, assertTaskTransition } from "./state.js";
 
+export const TASK_ENGINE_AUTHORITY = "edge_session_only" as const;
+
+/**
+ * Ephemeral orchestration state for an API/MCP session.
+ *
+ * This engine is deliberately NOT a business system of record. CRM, tax,
+ * workflow, communications and authoritative Action Receipt state belong to
+ * MGR Legacy; creation-domain authority belongs to Creation OS.
+ */
 export class InMemoryTaskEngine {
+  readonly authority = TASK_ENGINE_AUTHORITY;
+
   private readonly tasks = new Map<string, Task>();
   private readonly jobs = new Map<string, Job>();
   private readonly approvals = new Map<string, Approval>();
@@ -40,8 +51,9 @@ export class InMemoryTaskEngine {
   }
 
   createJob(input: Omit<Job, "id" | "state" | "attemptCount"> & { id?: string }): Job {
-    this.requireTask(input.taskId);
-    const existingId = this.idempotency.get(input.idempotencyKey);
+    const task = this.requireTask(input.taskId);
+    const idempotencyNamespace = `${task.tenantId}:${input.idempotencyKey}`;
+    const existingId = this.idempotency.get(idempotencyNamespace);
     if (existingId) {
       const existing = this.jobs.get(existingId);
       if (!existing) throw new Error("Idempotency index is corrupt");
@@ -61,7 +73,7 @@ export class InMemoryTaskEngine {
       ...(input.externalOperationId ? { externalOperationId: input.externalOperationId } : {}),
     };
     this.jobs.set(job.id, job);
-    this.idempotency.set(job.idempotencyKey, job.id);
+    this.idempotency.set(idempotencyNamespace, job.id);
     return structuredClone(job);
   }
 
@@ -108,6 +120,10 @@ export class InMemoryTaskEngine {
     return structuredClone(approved);
   }
 
+  /**
+   * Records only edge/session execution evidence. Authoritative business Action
+   * Receipts are written and queried through MGR Legacy.
+   */
   recordReceipt(input: Omit<Receipt, "id" | "createdAt"> & { id?: string }): Receipt {
     const receipt: Receipt = {
       id: input.id ?? randomUUID(),
