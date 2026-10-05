@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { DecisionEngine } from "../src/decision.js";
-import { InMemoryTaskEngine } from "../src/engine.js";
+import { InMemoryTaskEngine, TASK_ENGINE_AUTHORITY } from "../src/engine.js";
 
 test("idempotent job creation returns the same job and rejects key reuse for a different capability", () => {
   const engine = new InMemoryTaskEngine();
@@ -24,6 +24,31 @@ test("idempotent job creation returns the same job and rejects key reuse for a d
     capability: "publish",
     idempotencyKey: "task-1:research.collect",
   }));
+});
+
+test("idempotency keys are isolated by tenant", () => {
+  const engine = new InMemoryTaskEngine();
+  const firstTask = engine.createTask({ tenantId: "tenant-a", actorId: "actor", objective: "research" });
+  const secondTask = engine.createTask({ tenantId: "tenant-b", actorId: "actor", objective: "research" });
+
+  const first = engine.createJob({
+    taskId: firstTask.id,
+    capability: "research.collect",
+    idempotencyKey: "shared-client-key",
+  });
+  const second = engine.createJob({
+    taskId: secondTask.id,
+    capability: "research.collect",
+    idempotencyKey: "shared-client-key",
+  });
+
+  assert.notEqual(first.id, second.id);
+});
+
+test("task engine declares edge/session-only authority", () => {
+  const engine = new InMemoryTaskEngine();
+  assert.equal(engine.authority, TASK_ENGINE_AUTHORITY);
+  assert.equal(engine.authority, "edge_session_only");
 });
 
 test("approval digest invalidates when the action changes", () => {
