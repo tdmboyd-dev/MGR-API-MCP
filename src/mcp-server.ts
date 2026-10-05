@@ -183,6 +183,6 @@ export function createMgrMcpServer(options:{legacy?:LegacyMcpToolOptions;creatio
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  void serveStdio(createMgrMcpServer);
+  void serveStdio(()=>createMgrMcpServer());
   console.error("MGR API MCP stdio server ready");
 }
