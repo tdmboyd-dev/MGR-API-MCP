@@ -101,7 +101,24 @@ export function registerCreationMcpTools(server:McpServer,options:CreationMcpToo
       })
     },
     async input=>{
-      const result=await executeCreationMcpCommand(options,input);
+      const normalized:{
+        workspaceId:string;
+        capability:string;
+        input:unknown;
+        acceptanceCriteria:string[];
+        risk:"low"|"medium"|"high"|"critical";
+        maxCost?:number;
+        correlationId?:string;
+      }={
+        workspaceId:input.workspaceId,
+        capability:input.capability,
+        input:input.input,
+        acceptanceCriteria:input.acceptanceCriteria,
+        risk:input.risk
+      };
+      if(input.maxCost!==undefined) normalized.maxCost=input.maxCost;
+      if(input.correlationId) normalized.correlationId=input.correlationId;
+      const result=await executeCreationMcpCommand(options,normalized);
       return {
         content:[{type:"text",text:JSON.stringify(result)}],
         isError:result.state==="DENY" || result.accepted===false
