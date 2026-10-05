@@ -1,0 +1,37 @@
+name: MGR Hosted MCP Proof
+
+on:
+  workflow_dispatch:
+
+jobs:
+  hosted-proof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+
+      - name: Verify OAuth/OIDC provider discovery
+        env:
+          MCP_AUTH_ISSUER: ${{ secrets.MCP_AUTH_ISSUER }}
+          MCP_RESOURCE_AUDIENCE: ${{ secrets.MCP_RESOURCE_AUDIENCE }}
+          MCP_OIDC_DISCOVERY_URL: ${{ secrets.MCP_OIDC_DISCOVERY_URL }}
+          MCP_TEST_BEARER_TOKEN: ${{ secrets.MCP_TEST_BEARER_TOKEN }}
+        run: npm run verify:oauth-provider
+
+      - name: Verify remote MCP protocol directly
+        env:
+          MCP_TEST_BASE_URL: ${{ secrets.MCP_TEST_BASE_URL }}
+          MCP_TEST_BEARER_TOKEN: ${{ secrets.MCP_TEST_BEARER_TOKEN }}
+        run: npm run verify:remote-boundary && npm run verify:mcp-client
+
+      - name: Verify OpenAI-hosted remote MCP connection
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+          MCP_SERVER_URL: ${{ secrets.MCP_SERVER_URL }}
+          MCP_TEST_BEARER_TOKEN: ${{ secrets.MCP_TEST_BEARER_TOKEN }}
+          MCP_EXPECTED_TOOL: mgr_truth_summary
+        run: npm run verify:openai-mcp
