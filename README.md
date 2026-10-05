@@ -4,7 +4,7 @@ For the current operating contract, read [MGR Beast Pack](MGR-Beast-Pack/MGR-BEA
 
 The research and build home for an owned, portable assistant informed by JARVIS and Jev. The intended system brings research, coding, memory, voice, tools and optional content/phone/device workflows into one task engine, with ChatGPT-facing MCP and replaceable model providers.
 
-**Current state: research plus the first executable shared-edge foundation.** Typed Task/Job/Decision/Approval/Receipt/Budget/Schedule/Reconciliation contracts, lifecycle guards, idempotency, exact-action approval digests, a model-independent Brain controller, audience/scope authorization, Action Sentinel, Privacy Firewall, Creation OS client contract, and a governed MCP v2 stdio server now exist with tests. No live Jev/OpenAI provider, production persistence, ChatGPT-hosted MCP session, phone/camera integration or production deployment has been verified.
+**Current state: executable authenticated shared edge with deployment-ready hosted MCP surface.** The repo now includes typed task/decision/security contracts, governed stdio + HTTP MCP, JWT/JWKS auth, tenant/scope binding, Legacy-backed side-effect dispatch with authoritative receipts and reconciliation, Creation OS routing, container deployment, Render blueprint, Auth0/OIDC preflight, direct remote MCP verification, OpenAI Responses remote-MCP verification, and green containerized restart/timeout/duplicate-delivery proof. A real public host, real Auth0/OAuth credentials, deployed Legacy endpoint, and final hosted OpenAI/ChatGPT MCP session remain external proof rather than missing repository code.
 
 ## Start here
 
