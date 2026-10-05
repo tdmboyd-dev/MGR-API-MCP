@@ -21,6 +21,54 @@ const executeTool:ToolCapability={
   approvalPolicy:"policy"
 };
 
+export async function executeLegacyMcpCommand(
+  options:LegacyMcpToolOptions,
+  input:{
+    action:string;
+    payload:Record<string,unknown>;
+    target?:{entityType:string;entityId:string};
+    risk:"low"|"medium"|"high"|"critical";
+    idempotencyKey?:string;
+    correlationId?:string;
+  }
+):Promise<Record<string,unknown>>{
+  const sentinel=new ActionSentinel();
+  const decision=sentinel.evaluate(options.auth,{
+    taskId:input.correlationId ?? randomUUID(),
+    tool:executeTool,
+    payload:{action:input.action,payload:input.payload,target:input.target},
+    audience:options.resourceAudience,
+    risk:input.risk
+  });
+
+  if(decision.state!=="ALLOW"){
+    return {
+      accepted:false,
+      state:decision.state,
+      reason:decision.reason,
+      actionDigest:decision.actionDigest
+    };
+  }
+
+  const correlation=input.correlationId ?? randomUUID();
+  const result=await options.legacy.execute({
+    tenantId:options.auth.tenantId,
+    actorId:options.auth.actorId,
+    correlationId:correlation,
+    idempotencyKey:input.idempotencyKey ?? `mcp:${correlation}:${input.action}`
+  },{
+    action:input.action,
+    payload:input.payload,
+    target:input.target
+  });
+
+  return {
+    ...result,
+    correlationId:result.correlationId ?? correlation,
+    actionDigest:decision.actionDigest
+  };
+}
+
 export function registerLegacyMcpTools(server:McpServer,options:LegacyMcpToolOptions):void{
   server.registerTool(
     "mgr_legacy_execute",
@@ -40,45 +88,12 @@ export function registerLegacyMcpTools(server:McpServer,options:LegacyMcpToolOpt
       })
     },
     async ({action,payload,target,risk,idempotencyKey,correlationId})=>{
-      const sentinel=new ActionSentinel();
-      const decision=sentinel.evaluate(options.auth,{
-        taskId:correlationId ?? randomUUID(),
-        tool:executeTool,
-        payload:{action,payload,target},
-        audience:options.resourceAudience,
-        risk
+      const result=await executeLegacyMcpCommand(options,{
+        action,payload,target,risk,idempotencyKey,correlationId
       });
-
-      if(decision.state!=="ALLOW"){
-        return {
-          content:[{type:"text",text:JSON.stringify({
-            accepted:false,
-            state:decision.state,
-            reason:decision.reason,
-            actionDigest:decision.actionDigest
-          })}],
-          isError:decision.state==="DENY"
-        };
-      }
-
-      const correlation=correlationId ?? randomUUID();
-      const result=await options.legacy.execute({
-        tenantId:options.auth.tenantId,
-        actorId:options.auth.actorId,
-        correlationId:correlation,
-        idempotencyKey:idempotencyKey ?? `mcp:${correlation}:${action}`
-      },{
-        action,
-        payload,
-        target
-      });
-
       return {
-        content:[{type:"text",text:JSON.stringify({
-          ...result,
-          correlationId:result.correlationId ?? correlation,
-          actionDigest:decision.actionDigest
-        })}]
+        content:[{type:"text",text:JSON.stringify(result)}],
+        isError:result.state==="DENY"
       };
     }
   );
