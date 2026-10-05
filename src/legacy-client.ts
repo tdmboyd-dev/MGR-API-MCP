@@ -91,6 +91,10 @@ export class LegacyEdgeClient {
     });
   }
 
+  async listConnectors<T=unknown>(tenantId:string):Promise<T[]>{
+    return this.request("/v1/connectors",{method:"GET",tenantId});
+  }
+
   private async request<T>(
     path:string,
     input:{
