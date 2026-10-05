@@ -9,6 +9,7 @@ Verification:
 - `npm run verify`: passed after Legacy client + privacy-firewall fixes
 - earlier verification commit: `efbe9660e1d7fe998901a96d213e49faed38b96c`
 - authenticated Legacy/Creation integration verification: `0cf7d95f05ea78bd76943b823d1b0259ef957ac8`
+- cross-service reconciliation verification: `a0334b3e8f5acefb69999754a70da4baa84439b5`
 
 New implementation:
 - `src/legacy-client.ts` typed Legacy edge client
@@ -25,7 +26,7 @@ Critical boundary:
 - Brain/Jev proposes; deterministic authorization and approval remain outside model reasoning.
 
 Still required:
-- add cross-service restart/idempotency/reconciliation tests
+- lost-response/idempotency reconciliation is tested; deployed restart/timeout/duplicate-delivery tests remain
 - verify timeout/duplicate-delivery behavior across the boundary
 - reconcile the in-memory task engine as edge/session-only state
 - verify a hosted ChatGPT MCP session against a deployed authenticated endpoint
