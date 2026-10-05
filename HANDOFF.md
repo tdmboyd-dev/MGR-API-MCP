@@ -1,5 +1,37 @@
 # Resume MGR-API-MCP
 
+## Current resume checkpoint — October 5, 2026
+
+MGR-API-MCP is now the shared external edge, switchboard, and Brain transport layer. MGR Legacy is the authoritative business data/workflow/action system. Creation OS remains the creation engine. See `architecture/LEGACY-INTEGRATION.md`.
+
+New implementation:
+- `src/legacy-client.ts` typed Legacy edge client
+- `test/legacy-client.test.ts` propagation and Truth Console tests
+- tenant, actor, correlation, and idempotency propagation contract
+- Legacy Truth Console summary/receipt read support
+- permanent Legacy integration queue in `BUILD-QUEUE.md`
+
+Critical boundary:
+- API-MCP must not own a second CRM, workflow database, tax state, communication history, provider-health truth, or business Action Receipt ledger.
+- Its in-memory Task/Job/Approval/Receipt engine is edge/session orchestration only.
+- Side-effecting business actions dispatch through Legacy.
+- Creation-domain actions dispatch through Creation OS.
+- Brain/Jev proposes; deterministic authorization and approval remain outside model reasoning.
+
+Still required:
+- bind authenticated MCP HTTP identity directly to Legacy calls
+- convert side-effecting MCP tools into thin Legacy capability calls
+- return Legacy receipt/event evidence in tool responses
+- expose Legacy capability/connector discovery
+- route Creation OS capability calls
+- harden remote MCP auth path
+- add cross-service restart/idempotency/reconciliation tests
+- verify a hosted ChatGPT MCP session
+
+Do not claim the remote MCP surface is production-ready until those gates pass.
+
+---
+
 ## Current resume checkpoint — September 29, 2026
 
 Read [WORK-STATE.md](WORK-STATE.md), AGENTS.md, BUILD-QUEUE.md and the latest dated section of docs/full-build/SCORECARD.md.
