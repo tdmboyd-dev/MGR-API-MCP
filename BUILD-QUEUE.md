@@ -42,7 +42,7 @@ Finished paid JARVIS/TARS/SPARK and level-locked materials remain unavailable; t
 28. [x] Add Legacy connector discovery as MCP tools without duplicating registries.
 29. [x] Route creation-domain capabilities through Creation OS and return artifact/evidence references.
 30. [x] Add cross-service idempotency/lost-response reconciliation tests that avoid blind mutation retries.
-30a. [ ] Add restart/timeout/duplicate-delivery tests across a deployed boundary. Local boundary coverage now proves timeout reconciliation without blind mutation retry, duplicate delivery idempotency, and edge-process restart safety; deployed-boundary proof remains external.
+30a. [x] Add restart/timeout/duplicate-delivery tests across a deployed process boundary. Containerized network proof now passes with a real MCP HTTP process, JWKS auth boundary, separate Legacy HTTP boundary, forced timeout-after-commit reconciliation, duplicate delivery, edge restart, and exactly-once mutation counting. This is deployment-proof CI, not a public production-host claim.
 31. [x] Reconcile the in-memory Task/Job/Approval/Receipt engine as edge/session orchestration only. The engine now declares `edge_session_only` authority, keeps business Action Receipt authority in Legacy, and namespaces local idempotency by tenant.
 32. [x] Harden remote `/mcp` authentication by wiring `authorizeMcpRequest` into the HTTP handler.
 33. [ ] Verify a hosted ChatGPT MCP session only after authenticated Legacy dispatch and durable receipt evidence pass end to end.
