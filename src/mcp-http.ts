@@ -2,6 +2,7 @@ import { createMcpHandler } from "@modelcontextprotocol/server";
 import { createMgrMcpServer } from "./mcp-server.js";
 import { authorizeMcpRequest, type AccessTokenVerifier, type McpAuthResult } from "./http-auth.js";
 import type { LegacyEdgeClient } from "./legacy-client.js";
+import type { CreationOSClient } from "./creation-client.js";
 
 export interface AuthorizedMgrMcpHttpOptions {
   verifier:AccessTokenVerifier;
@@ -9,6 +10,7 @@ export interface AuthorizedMgrMcpHttpOptions {
   requiredScopes:string[];
   resourceMetadataUrl:string;
   legacy:LegacyEdgeClient;
+  creation?:CreationOSClient;
 }
 
 export async function authorizeAndBindMcpRequest(
@@ -56,13 +58,32 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
         });
       }
 
-      const handler=createMcpHandler(()=>createMgrMcpServer({
+      const serverOptions:{
+        legacy:{
+          auth:typeof authResult.auth;
+          resourceAudience:string;
+          legacy:LegacyEdgeClient;
+        };
+        creation?:{
+          auth:typeof authResult.auth;
+          resourceAudience:string;
+          creation:CreationOSClient;
+        };
+      }={
         legacy:{
           auth:authResult.auth,
           resourceAudience:options.resourceAudience,
           legacy:options.legacy
         }
-      }));
+      };
+      if(options.creation){
+        serverOptions.creation={
+          auth:authResult.auth,
+          resourceAudience:options.resourceAudience,
+          creation:options.creation
+        };
+      }
+      const handler=createMcpHandler(()=>createMgrMcpServer(serverOptions));
       activeHandlers.add(handler);
       try{
         return await handler.fetch(request);
