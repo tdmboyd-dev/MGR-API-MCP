@@ -4,6 +4,11 @@
 
 MGR-API-MCP is now the shared external edge, switchboard, and Brain transport layer. MGR Legacy is the authoritative business data/workflow/action system. Creation OS remains the creation engine. See `architecture/LEGACY-INTEGRATION.md`.
 
+Verification:
+- Node 22 install: passed
+- `npm run verify`: passed after Legacy client + privacy-firewall fixes
+- verification commit: `efbe9660e1d7fe998901a96d213e49faed38b96c`
+
 New implementation:
 - `src/legacy-client.ts` typed Legacy edge client
 - `test/legacy-client.test.ts` propagation and Truth Console tests
