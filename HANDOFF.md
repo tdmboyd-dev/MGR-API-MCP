@@ -10,6 +10,7 @@ Verification:
 - earlier verification commit: `efbe9660e1d7fe998901a96d213e49faed38b96c`
 - authenticated Legacy/Creation integration verification: `0cf7d95f05ea78bd76943b823d1b0259ef957ac8`
 - cross-service reconciliation verification: `a0334b3e8f5acefb69999754a70da4baa84439b5`
+- restart/timeout/duplicate-delivery hardening verification: `44f9b6f167a166c1e1714ca2823c868ee21726f8` (GitHub Actions run 37290188660 passed)
 
 New implementation:
 - `src/legacy-client.ts` typed Legacy edge client
@@ -26,10 +27,15 @@ Critical boundary:
 - Brain/Jev proposes; deterministic authorization and approval remain outside model reasoning.
 
 Still required:
-- lost-response/idempotency reconciliation is tested; deployed restart/timeout/duplicate-delivery tests remain
-- verify timeout/duplicate-delivery behavior across the boundary
-- reconcile the in-memory task engine as edge/session-only state
+- local lost-response, timeout, duplicate-delivery, and edge-restart/idempotency behavior is tested; the same restart/timeout/duplicate-delivery proof against an actually deployed Legacy boundary remains external
 - verify a hosted ChatGPT MCP session against a deployed authenticated endpoint
+
+New hardening now verified:
+- `LegacyEdgeClient` has bounded request timeouts
+- timeout after dispatch reconciles against Legacy Truth receipts instead of blindly retrying the mutation
+- duplicate delivery with the same idempotency key produces one simulated business mutation and a replay result
+- a fresh edge coordinator/client instance can replay safely after an API-MCP process restart because authoritative idempotency remains behind the Legacy boundary
+- `InMemoryTaskEngine` explicitly declares `edge_session_only` authority and tenant-namespaces local idempotency keys
 
 Do not claim the remote MCP surface is production-ready until those gates pass.
 
