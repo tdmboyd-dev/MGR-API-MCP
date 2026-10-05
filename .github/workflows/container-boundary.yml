@@ -1,0 +1,86 @@
+name: MGR API MCP Container Boundary Proof
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/boundary-trigger"
+  workflow_dispatch:
+
+jobs:
+  boundary-proof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build production container
+        run: docker build -t mgr-api-mcp:boundary .
+
+      - name: Start mock authorization and Legacy boundaries
+        run: |
+          rm -f /tmp/mgr-mcp-boundary-token
+          node scripts/mock-boundary-deps.mjs >/tmp/mgr-boundary-mocks.log 2>&1 &
+          echo $! >/tmp/mgr-boundary-mocks.pid
+          for i in $(seq 1 50); do
+            test -s /tmp/mgr-mcp-boundary-token && curl -fsS http://127.0.0.1:9999/jwks.json >/dev/null && exit 0
+            sleep 0.2
+          done
+          cat /tmp/mgr-boundary-mocks.log
+          exit 1
+
+      - name: Start MCP container
+        run: |
+          docker run -d --name mgr-api-mcp --network host             -e PORT=8787             -e MCP_PUBLIC_BASE_URL=https://127.0.0.1:8787             -e MCP_AUTH_ISSUER=http://127.0.0.1:9999/             -e MCP_JWKS_URL=http://127.0.0.1:9999/jwks.json             -e MCP_AUTHORIZATION_SERVER=http://127.0.0.1:9999/             -e MCP_REQUIRED_SCOPES=tools:read             -e MCP_ADVERTISED_SCOPES=tools:read,tools:execute             -e LEGACY_BASE_URL=http://127.0.0.1:9999/             -e LEGACY_TIMEOUT_MS=50             mgr-api-mcp:boundary
+          for i in $(seq 1 50); do
+            curl -fsS http://127.0.0.1:8787/healthz >/dev/null && exit 0
+            sleep 0.2
+          done
+          docker logs mgr-api-mcp
+          exit 1
+
+      - name: Verify auth discovery and MCP tool boundary
+        run: |
+          export MCP_TEST_BASE_URL=http://127.0.0.1:8787
+          export MCP_TEST_BEARER_TOKEN="$(cat /tmp/mgr-mcp-boundary-token)"
+          npm run verify:remote-boundary
+          npm run verify:mcp-client
+
+      - name: Restart MCP edge and verify durable Legacy idempotency
+        run: |
+          docker rm -f mgr-api-mcp
+          docker run -d --name mgr-api-mcp --network host             -e PORT=8787             -e MCP_PUBLIC_BASE_URL=https://127.0.0.1:8787             -e MCP_AUTH_ISSUER=http://127.0.0.1:9999/             -e MCP_JWKS_URL=http://127.0.0.1:9999/jwks.json             -e MCP_AUTHORIZATION_SERVER=http://127.0.0.1:9999/             -e MCP_REQUIRED_SCOPES=tools:read             -e MCP_ADVERTISED_SCOPES=tools:read,tools:execute             -e LEGACY_BASE_URL=http://127.0.0.1:9999/             -e LEGACY_TIMEOUT_MS=50             mgr-api-mcp:boundary
+          for i in $(seq 1 50); do
+            curl -fsS http://127.0.0.1:8787/healthz >/dev/null && break
+            sleep 0.2
+          done
+          export MCP_TEST_BASE_URL=http://127.0.0.1:8787
+          export MCP_TEST_BEARER_TOKEN="$(cat /tmp/mgr-mcp-boundary-token)"
+          export MCP_TEST_MODE=restart-replay
+          npm run verify:mcp-client
+
+      - name: Verify mutation count
+        run: |
+          node -e '
+            const r=await fetch("http://127.0.0.1:9999/metrics");
+            const j=await r.json();
+            if(j.mutationCount!==3) throw new Error("expected exactly 3 business mutations, got "+j.mutationCount);
+            console.log(JSON.stringify(j));
+          '
+
+      - name: Dump logs on failure
+        if: failure()
+        run: |
+          cat /tmp/mgr-boundary-mocks.log || true
+          docker logs mgr-api-mcp || true
+
+      - name: Cleanup
+        if: always()
+        run: |
+          docker rm -f mgr-api-mcp >/dev/null 2>&1 || true
+          if test -f /tmp/mgr-boundary-mocks.pid; then kill "$(cat /tmp/mgr-boundary-mocks.pid)" >/dev/null 2>&1 || true; fi
