@@ -41,7 +41,8 @@ Finished paid JARVIS/TARS/SPARK and level-locked materials remain unavailable; t
 27. [x] Return Legacy event/receipt/correlation evidence in MCP results.
 28. [x] Add Legacy connector discovery as MCP tools without duplicating registries.
 29. [x] Route creation-domain capabilities through Creation OS and return artifact/evidence references.
-30. [ ] Add cross-service idempotency, restart, timeout, duplicate-delivery and reconciliation tests.
+30. [x] Add cross-service idempotency/lost-response reconciliation tests that avoid blind mutation retries.
+30a. [ ] Add restart/timeout/duplicate-delivery tests across a deployed boundary.
 31. [ ] Reconcile the in-memory Task/Job/Approval/Receipt engine so it remains edge/session orchestration only; it must not become a duplicate business system of record.
 32. [x] Harden remote `/mcp` authentication by wiring `authorizeMcpRequest` into the HTTP handler.
 33. [ ] Verify a hosted ChatGPT MCP session only after authenticated Legacy dispatch and durable receipt evidence pass end to end.
