@@ -27,7 +27,7 @@ Critical boundary:
 - Brain/Jev proposes; deterministic authorization and approval remain outside model reasoning.
 
 Still required:
-- local lost-response, timeout, duplicate-delivery, and edge-restart/idempotency behavior is tested; the same restart/timeout/duplicate-delivery proof against an actually deployed Legacy boundary remains external
+- containerized cross-process restart/timeout/duplicate-delivery proof is green and recorded below; public-host production proof is still separate
 - verify a hosted ChatGPT MCP session against a deployed authenticated endpoint
 
 New hardening now verified:
