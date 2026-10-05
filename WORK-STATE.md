@@ -1,9 +1,9 @@
 # Current work and resume record — MGR-API-MCP
 
-Updated: 2026-09-29. Responsible session: continuity-recovery-2026-09-29.
+Updated: 2026-10-05. Responsible session: hosted-mcp-hardening-2026-10-05.
 Repository: `tdmboyd-dev/MGR-API-MCP`
 Working branch: `main`
-Last inspected code/base commit: `d5fdea390702b7ca7e5a3602ad2e4d149960aea8` (before this documentation batch).
+Last inspected code/base commit: current `main`; verify against latest GitHub Actions receipts in HANDOFF.md before making production claims.
 Scope of inspection: entry instructions, tree and the specific records/source stated below; not a complete repository audit.
 
 ## Purpose and boundaries
@@ -26,11 +26,11 @@ These are existing authority/queue/evidence pointers, not assertions that every 
 
 ## Current checkpoint
 
-The old research-only HANDOFF text is superseded for implementation status: source now includes in-memory task engine, Brain controller, decision layer, security boundaries and MCP surfaces. The README and Sep29 scorecard report a first executable foundation. Live providers, durable production storage and a real hosted ChatGPT MCP session remain unverified.
+The old research-only HANDOFF text is superseded for implementation status. Current source includes governed MCP stdio/HTTP surfaces, JWT/JWKS authorization, tenant/scope binding, Legacy command dispatch and reconciliation, Creation OS routing, deployment container/Render blueprint, OAuth provider preflight, direct remote MCP verifier, and OpenAI remote-MCP verifier. Containerized cross-process restart/timeout/duplicate-delivery proof is green. The only remaining hosted-MCP gate is external: provision the real public endpoint and credentials, then execute the final hosted proof workflow.
 
 ## Next batch and missing evidence
 
-Reconcile BUILD-QUEUE items against the new source instead of rebuilding existing primitives. Recover the second window's HTTP/OAuth/CI evidence and any private local originals from the owning window. Continue durable execution and live integration only with explicit acceptance evidence.
+Use BUILD-QUEUE.md and HANDOFF.md as the implementation truth. Repository-owned hosted MCP prerequisites are built. Next work is external proof: provision the public deployment/Auth0/Legacy credentials and execute `.github/workflows/hosted-proof.yml`; record only non-secret receipts in `evidence/`.
 
 The original windows' complete transfer packets are pending. Their private local files, uncommitted work and running-process state cannot be recovered from a shared-chat URL alone. Mark missing items explicitly and reconcile returned packets with fresh HEAD.
 
