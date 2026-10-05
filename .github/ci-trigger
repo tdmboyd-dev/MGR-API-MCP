@@ -1,1 +1,1 @@
-verify timeout/idempotency hardening 2026-10-05
+verify restart/timeout/duplicate-delivery hardening 2026-10-05
