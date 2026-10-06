@@ -56,9 +56,9 @@ Research packet: research/BEAST-SMARTWIZ-OMNIROUTE-VOICEBOX-FREEBUF-SERVERBYT-20
 36. [x] Research Voicebox local voice architecture, MCP tools, STT/TTS/cloning options and licensing boundaries.
 37. [x] Research FreeBuf as a secondary AI/cybersecurity intelligence source with primary-source verification requirements.
 38. [x] Research ServerByt shared/cloud hosting and SSH support; separate shared hosting from unverified VPS/backend capability.
-39. [ ] Extend MGR model routing with OmniRoute-inspired health, latency, quota, context-fit, semantic-quality, fallback and route-receipt signals while retaining MGR policy authority.
-40. [ ] Define MGR Voice Fabric provider contract and optional Voicebox adapter with voice-rights provenance.
-41. [ ] Send SmartWiz-derived MGR-native tax capability requirements to MGR Elite Hub/Legacy: Tax Fact Graph, evidence lineage, uncertainty review, preparer gate, browser/desktop adapters and intake normalization.
-42. [ ] Add FreeBuf to the secondary security research catalog; verify security claims against primary sources before adoption.
+39. [x] Extend MGR model routing with OmniRoute-inspired health, latency, quota, context-fit, semantic-quality, fallback and route-receipt signals while retaining MGR policy authority.
+40. [x] Define MGR Voice Fabric provider contract and optional Voicebox adapter with voice-rights provenance.
+41. [x] Implement SmartWiz-derived MGR-native tax capability requirements in MGR Legacy/Elite Hub: Tax Fact Graph, evidence lineage, uncertainty review, preparer gate and governed browser/desktop adapter contracts.
+42. [x] Add FreeBuf to the secondary security research catalog and enforce primary-source verification before promotion.
 43. [external] Obtain ServerByt VPS specifications and AUP details before considering it for MGR backend workloads; shared plans remain website-only by default.
 
