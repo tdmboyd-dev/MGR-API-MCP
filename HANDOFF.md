@@ -1,6 +1,6 @@
 # Resume MGR-API-MCP
 
-## Current resume checkpoint — October 5, 2026
+## Current resume checkpoint — October 6, 2026
 
 MGR-API-MCP is now the shared external edge, switchboard, and Brain transport layer. MGR Legacy is the authoritative business data/workflow/action system. Creation OS remains the creation engine. See `architecture/LEGACY-INTEGRATION.md`.
 
@@ -13,6 +13,9 @@ Verification:
 - restart/timeout/duplicate-delivery hardening verification: `44f9b6f167a166c1e1714ca2823c868ee21726f8` (GitHub Actions run 37290188660 passed)\n- hosted-surface/unit verification: `7060bcdd53dae64f5bafc79aec23eac7e7890aad` (CI passed)\n- containerized cross-service boundary proof: GitHub Actions run `37291231033` passed
 
 New implementation:
+- CostAwareModelRouter v2: cost/latency/health/quota/context/cache-aware routing with route receipts
+- MGR Voice Fabric: provider-neutral STT/TTS/clone contracts, local/cloud routing, Voicebox MCP adapter, explicit voice-rights gate
+- secondary security research registry: FreeBuf is discovery-only and requires primary-source verification before promotion
 - `chatgpt-plugin/plugin.json` — MGR Control Center Agent Plugin manifest
 - `chatgpt-plugin/skills/mgr-control/SKILL.md` — ChatGPT-facing MGR operating contract
 - `scripts/render-chatgpt-plugin.mjs` — generates portable `mcp.json` only from a real HTTPS `/mcp` endpoint
