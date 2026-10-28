@@ -37,9 +37,9 @@
 test at test\omnidev-client.test.ts:1:13304
 ✖ registered execute denies expiry during held binding before any native POST (16.4733ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   1 !== 0
-  
+
       at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\repos\MGR-API-MCP\test\omnidev-client.test.ts:128:46)
       at async Test.run (node:internal/test_runner/test:1409:7)
       at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
@@ -54,9 +54,9 @@ test at test\omnidev-client.test.ts:1:13304
 test at test\omnidev-client.test.ts:1:13304
 ✖ registered execute denies scope during held binding before any native POST (4.4079ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   1 !== 0
-  
+
       at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\repos\MGR-API-MCP\test\omnidev-client.test.ts:128:46)
       at async Test.run (node:internal/test_runner/test:1409:7)
       at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
@@ -71,9 +71,9 @@ test at test\omnidev-client.test.ts:1:13304
 test at test\omnidev-client.test.ts:1:13304
 ✖ registered execute denies actor during held binding before any native POST (4.0319ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   1 !== 0
-  
+
       at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\repos\MGR-API-MCP\test\omnidev-client.test.ts:128:46)
       at async Test.run (node:internal/test_runner/test:1409:7)
       at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
@@ -88,9 +88,9 @@ test at test\omnidev-client.test.ts:1:13304
 test at test\omnidev-client.test.ts:1:13304
 ✖ registered execute denies tenant during held binding before any native POST (5.2679ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-  
+
   1 !== 0
-  
+
       at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\repos\MGR-API-MCP\test\omnidev-client.test.ts:128:46)
       at async Test.run (node:internal/test_runner/test:1409:7)
       at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
