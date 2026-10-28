@@ -25,13 +25,17 @@ function check(name:string,value:boolean){assert.equal(value,true,name);evidence
 const {createRareServer}=await import(pathToFileURL(resolve(oneRoot,"web/server.mjs")).href);
 const {ReignStore}=await import(pathToFileURL(resolve(oneRoot,"web/durable-store.mjs")).href);
 const {ExecutionCoordinator}=await import(pathToFileURL(resolve(oneRoot,"web/execution-coordinator.mjs")).href);
+const {createConversationRuntime}=await import(pathToFileURL(resolve(oneRoot,"web/conversation-runtime.mjs")).href);
+let modelStep=0,modelCommand:DepartmentCommand;
+const conversationRuntime=createConversationRuntime({enabled:true,contextReads:false,model:"isolated-fixture",apiKey:"isolated-provider-fixture-not-a-live-key",fetcher:async()=>Response.json({id:"fixture-model-response",status:"completed",usage:{input_tokens:1,output_tokens:1,total_tokens:2},output:modelStep++===0?[{type:"function_call",name:"department_preview",call_id:"proposal-call",arguments:JSON.stringify({operation:modelCommand.operation,inputJson:JSON.stringify(modelCommand.input)})}]:[{type:"message",role:"assistant",content:[{type:"output_text",text:"Review the exact department proposal before approval."}]}]})});
 // Every proof receives a new isolated database. Never enroll an existing owner's database.
 const dbPath=resolve(root,"owner-isolated-"+randomUUID()+".sqlite");assert.equal(existsSync(dbPath),false);
 let server:any,base="",dropNext=false;let dispatches=0;
 const boundClient={async callTool(input:any){if(input.name==="mgr_department_execute")dispatches++;const response=await client.callTool(input);if(dropNext&&input.name==="mgr_department_execute"){dropNext=false;throw Error("deliberately discarded committed response");}return response;}};
-async function open(enroll=false){const store=new ReignStore(dbPath);if(enroll){const h=new ExecutionCoordinator(store);h.enrollFreshHost(h.hostContext());}server=createRareServer({ownerToken,store,ecosystemWorkflowConfig:{client:boundClient,tenantId:legacy.tenantId,actorId:legacy.actorId}});await new Promise<void>(r=>server.listen(0,"127.0.0.1",r));base="http://127.0.0.1:"+server.address().port;}
+async function open(enroll=false){const store=new ReignStore(dbPath);if(enroll){const h=new ExecutionCoordinator(store);h.enrollFreshHost(h.hostContext());}server=createRareServer({ownerToken,store,conversationRuntime,ecosystemWorkflowConfig:{client:boundClient,tenantId:legacy.tenantId,actorId:legacy.actorId}});await new Promise<void>(r=>server.listen(0,"127.0.0.1",r));base="http://127.0.0.1:"+server.address().port;}
 async function closeOne(){server.closeAllConnections();await new Promise<void>(r=>server.close(r));}
 async function owner(op:string,body:any,expected=200){const r=await fetch(base+"/api/ecosystem/workflows/"+op,{method:"POST",headers:{authorization:"Bearer "+ownerToken,"content-type":"application/json"},body:JSON.stringify(body)});const out=await r.json();assert.equal(r.status,expected,JSON.stringify(out));return out;}
+async function authority(method:string,body?:any,expected=200){const r=await fetch(base+"/api/ecosystem/delegations",{method,headers:{authorization:"Bearer "+ownerToken,"content-type":"application/json"},body:body===undefined?undefined:JSON.stringify(body)});const out=await r.json();assert.equal(r.status,expected,JSON.stringify(out));return out;}
 try{
  for(const name of ["creation","signme"]){const s=services[name];let ready=false;for(let n=0;n<60;n++){try{ready=(await fetch(s.baseUrl+"/health",{headers:{authorization:`Bearer ${s.token}`}})).ok;}catch{}if(ready)break;await sleep(500);}check(name+" actual service ready",ready);}
  await new Promise<void>(r=>edge.server.listen(17953,"127.0.0.1",r));
@@ -46,7 +50,12 @@ try{
  {operation:"signme.draft.create",requestId:prefix+"-signme",input:{workspaceId:"ecosystem-proof",title:"Tevin owner approved draft",content:"An actual immutable unsigned document, created through ONE's permission gateway."}},
  {operation:"voice.speech",requestId:prefix+"-voice",input:{sessionId:prefix,turnId:"turn-one",text:"Tevin completed an owner approved voice workflow.",profileId:"af_heart",exactText:true}}
  ];
- for(const command of commands){
+ for(let index=0;index<commands.length;index++){
+  let command=commands[index]!;modelCommand=command;modelStep=0;const beforeProposal=dispatches;
+  const proposalResponse=await fetch(base+"/api/command",{method:"POST",headers:{authorization:"Bearer "+ownerToken,"content-type":"application/json"},body:JSON.stringify({requestId:"chat-"+randomUUID(),text:"Prepare an exact "+command.operation+" proposal for my review."})});
+  const proposalBody=await proposalResponse.json();assert.equal(proposalResponse.status,200,JSON.stringify(proposalBody));
+  const proposal=proposalBody.departmentProposals?.[0];check(command.operation+" main chat produces owner review proposal without dispatch",proposal?.command?.operation===command.operation&&dispatches===beforeProposal);
+  assert.deepEqual(proposal.command.input,command.input);command=proposal.command;commands[index]=command;
   const preview=await owner("preview",{command},201);
   await owner("execute",{requestId:command.requestId,digest:preview.digest},409);check(command.operation+" dispatch denied before approval",true);
   await owner("approve",{requestId:command.requestId,digest:"0".repeat(64)},409);check(command.operation+" changed approval denied",true);
@@ -74,5 +83,31 @@ try{
  check("actual queued/running VOICE cancellation reaches cancelled receipt",cancellationStatus.state==="cancelled");
  await owner("artifact",{requestId:cancellation.requestId},409);check("cancelled speech cannot publish a late artifact",true);
  evidence.cancellation={cancelled,cancellationStatus};
- evidence.completedAt=new Date().toISOString();evidence.productionVerified=false;writeFileSync(resolve(evidenceDir,"RESULT.json"),JSON.stringify(evidence,null,2));console.log(JSON.stringify({passed:evidence.checks.length,total:evidence.checks.length,evidenceDir}));
+ // Explicit owner policy is the only authority source. Real department effects
+ // run through the same conversation parser, anchored child grants and MCP edge.
+ const scopes=[{operation:"legacy.contact.create"},{operation:"creation.document.render",workspaceId:"ecosystem-proof"},{operation:"signme.draft.create",workspaceId:"ecosystem-proof"},{operation:"voice.speech",sessionId:prefix}];
+ const grantBody={requestId:"grant-"+randomUUID(),scopes,maximumActions:4,maximumCost:0,expires:Date.now()+3600000};
+ const issued=await authority("POST",grantBody,201);check("owner grants exact four-operation authority",issued.delegation.active===true);
+ const issuedReplay=await authority("POST",grantBody,201);check("owner grant retry reuses exact policy",issuedReplay.delegation.id===issued.delegation.id);
+ await closeOne();await open();check("owner policy survives database reopen",(await authority("GET")).delegations.some((x:any)=>x.id===issued.delegation.id&&x.active));
+ for(const original of commands){
+  modelCommand=original;modelStep=0;const requestId="chat-"+randomUUID(),before=dispatches;
+  const r=await fetch(base+"/api/command",{method:"POST",headers:{authorization:"Bearer "+ownerToken,"content-type":"application/json"},body:JSON.stringify({requestId,text:"Prepare and complete the exact authorized department operation."})});
+  let body=await r.json();assert.equal(r.status,200,JSON.stringify(body));const p=body.departmentProposals?.[0];
+  check(original.operation+" automatically executes under owner delegation",Boolean(p?.workflow?.delegationId===issued.delegation.id&&dispatches===before+1));
+  let workflow=p.workflow;for(let n=0;n<90&&["pending","unknown"].includes(workflow.state);n++){await sleep(1000);workflow=await owner("status",{requestId:p.command.requestId});}
+  check(original.operation+" delegated result has real persisted readback",workflow.state==="succeeded"&&workflow.result?.readbackVerified===true);
+  modelStep=0;const replayResponse=await fetch(base+"/api/command",{method:"POST",headers:{authorization:"Bearer "+ownerToken,"content-type":"application/json"},body:JSON.stringify({requestId,text:"Prepare and complete the exact authorized department operation."})});
+  assert.equal(replayResponse.status,200);check(original.operation+" conversation replay never repeats effect",dispatches===before+1);
+  evidence.workflows.push({mode:"owner-delegated",command:p.command,result:workflow,delegationId:issued.delegation.id});
+ }
+ const exhausted=(await authority("GET")).delegations.find((x:any)=>x.id===issued.delegation.id);check("exact four-action policy exhausts without extra authority",exhausted.usedActions===4&&!exhausted.active);
+ await authority("DELETE",{id:issued.delegation.id});check("owner revocation persists",!(await authority("GET")).delegations.find((x:any)=>x.id===issued.delegation.id).active);
+ const persistent=await authority("POST",{requestId:"persistent-"+randomUUID(),scopes:[scopes[1]],maximumActions:null,maximumCost:0,expires:null},201);
+ check("owner can choose persistent and unlimited count without hidden cap",persistent.delegation.policy.maximumActions===null&&persistent.delegation.policy.expires===null&&persistent.delegation.active);
+ modelCommand=commands.find(x=>x.operation==="signme.draft.create")!;modelStep=0;const beforeDenied=dispatches;
+ const denied=await fetch(base+"/api/command",{method:"POST",headers:{authorization:"Bearer "+ownerToken,"content-type":"application/json"},body:JSON.stringify({requestId:"chat-"+randomUUID(),text:"Prepare SignMe outside the Creation-only authority."})});
+ const deniedBody=await denied.json();check("different department cannot borrow owner authority",denied.status===200&&dispatches===beforeDenied&&!deniedBody.departmentProposals?.[0]?.workflow?.delegationId);
+ await authority("DELETE",{id:persistent.delegation.id});
+ evidence.completedAt=new Date().toISOString();evidence.productionVerified=false;evidence.modelProposalProof="Real ONE conversation parser/tool hook with fixture model Responses; no actual model-provider inference claim. The four domain services and Kokoro inference are real.";writeFileSync(resolve(evidenceDir,"RESULT.json"),JSON.stringify(evidence,null,2));console.log(JSON.stringify({passed:evidence.checks.length,total:evidence.checks.length,evidenceDir}));
 }finally{if(server?.listening)await closeOne();await client.close();await edge.close();for(const child of children)child.kill();}

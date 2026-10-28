@@ -1,7 +1,7 @@
 // Source snapshot catalog; not proof of live integration.
 export const ecosystemCatalogData = {
   "schemaVersion": "mgr.ecosystem.catalog.v1",
-  "catalogRevision": "4f1d00e3f7ed21beb48d0e93f613d656b0e7e8576d72cc651465cb03f5f10997",
+  "catalogRevision": "a5b8e782676d71d5fc3b9e07034bd574a8dc9a065a3dd1ef6a19c2deca7014fb",
   "generatedFrom": "source-snapshot",
   "entries": [
     {
@@ -342,6 +342,26 @@ export const ecosystemCatalogData = {
         "tools": [],
         "blockedReasons": [
           "No live transport or production acceptance inferred from repository source."
+        ]
+      },
+      "runtimeVerified": false
+    },
+    {
+      "repoId": "MGR-OMNIDEV-SWARM",
+      "role": "engineering-department",
+      "description": "Active software intelligence workbench: source snapshots, bounded reviews, candidate patches, durable jobs and worker contracts. Tevin assigns scoped engineering work; current source review does not qualify live Docker, provider accounts or GitHub writes.",
+      "placement": "specialist",
+      "source": {
+        "repository": "https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM",
+        "commit": "26e230d052c45c1f42cb731ff095679497af045a",
+        "defaultBranch": "main"
+      },
+      "integration": {
+        "state": "catalogued",
+        "tools": [],
+        "blockedReasons": [
+          "Active development snapshot; preserve newer main work.",
+          "No qualified Tevin-to-OmniDev execution adapter or live worker acceptance inferred from source."
         ]
       },
       "runtimeVerified": false

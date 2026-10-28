@@ -49,3 +49,14 @@ The existing `start:http` entrypoint retains JWKS/issuer/audience OAuth validati
 ## Evidence limits
 
 The current local proof runs exercise real PostgreSQL, SQLite persistence and cached Kokoro inference, including a deliberately discarded committed response and owner database reopen. This does not prove production hosting, physical microphone/speaker behavior, third-party provider delivery, legal signing, paid entitlement fulfillment, complete natural-language agent routing, or every feature of each repository. All source runtime TypeScript in this API repository was read; research originals and broader ecosystem source have separate per-file reading ledgers.
+
+
+## October 28 continuation: inline review, delegated execution and OmniDev
+
+The current owner-to-real-department harness passed53/53 checks after cold restarting the isolated PostgreSQL, Legacy and VOICE services. It exercises real PostgreSQL contacts, Markdown bytes, immutable unsigned SignMe drafts and offline Kokoro WAV synthesis. The model Responses used to select the four proposal tools are explicit fixtures; this is not a live model-provider qualification. The exact same conversation parser, saved source custody, ONE host coordinator, owner HTTP routes, MCP HTTP SDK and real domain services run in the proof.
+
+The main conversation now brings exact proposals, source/digest, current status, owner controls and verified output directly inline. Owner-issued policies can authorize the four connected zero-cost operations within exact tenant/actor and operation-specific workspace/session scopes. Owners may select count/time limits or no count limit/until revoked. Child authority remains exact, anchored, revocable and checked at dispatch. No unlimited policy was silently activated for the owner. The proof checks policy retry, restart, all four automatic effects, duplicate avoidance, exhaustion, revocation and cross-operation denial.
+
+OmniDev Swarm is added to the actual source-pinned MCP catalog as repository19, engineering department, at26e230d052c45c1f42cb731ff095679497af045a. Its live execution tool list remains empty pending a qualified adapter. The supplied126-page PDF is evidence of capability claims and plans, not runtime authority. Active work on its default branch is preserved.
+
+Full API verification69/69 passed, TypeScript passed, hosted verifier syntax and plugin checks passed. These acceptance denominators describe local scopes. Production hosting/OAuth, actual model-provider routing, physical audio devices, signing and sending, paid external actions, and a real OmniDev Docker host remain separate unverified gates.

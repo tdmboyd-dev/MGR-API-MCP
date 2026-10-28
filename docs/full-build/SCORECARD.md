@@ -84,3 +84,14 @@ Local documentation integrity: 130 checks, zero failures before this scorecard/r
 | Whole product / production | Unassessed | Still unassessed; local checked workflows do not promote unrelated features |
 
 Executed API suite:69/69 applicable tests passed after the gateway/independent review additions; TypeScript passed. Independent adversarial subset5/5 is INCLUDED in that total. Initial real MCP-to-domain proof17/17; initial owner-to-domain proof28/28. Final delivered proof receipts supersede initial counts when cancellation checks are added. These denominators describe those bounded acceptance suites only. Hosted OAuth issuance, natural-language routing, public deployment, physical audio and signing/sending remain unverified.
+
+
+## October 28 continuation: inline review, delegated execution and OmniDev
+
+The current owner-to-real-department harness passed53/53 checks after cold restarting the isolated PostgreSQL, Legacy and VOICE services. It exercises real PostgreSQL contacts, Markdown bytes, immutable unsigned SignMe drafts and offline Kokoro WAV synthesis. The model Responses used to select the four proposal tools are explicit fixtures; this is not a live model-provider qualification. The exact same conversation parser, saved source custody, ONE host coordinator, owner HTTP routes, MCP HTTP SDK and real domain services run in the proof.
+
+The main conversation now brings exact proposals, source/digest, current status, owner controls and verified output directly inline. Owner-issued policies can authorize the four connected zero-cost operations within exact tenant/actor and operation-specific workspace/session scopes. Owners may select count/time limits or no count limit/until revoked. Child authority remains exact, anchored, revocable and checked at dispatch. No unlimited policy was silently activated for the owner. The proof checks policy retry, restart, all four automatic effects, duplicate avoidance, exhaustion, revocation and cross-operation denial.
+
+OmniDev Swarm is added to the actual source-pinned MCP catalog as repository19, engineering department, at26e230d052c45c1f42cb731ff095679497af045a. Its live execution tool list remains empty pending a qualified adapter. The supplied126-page PDF is evidence of capability claims and plans, not runtime authority. Active work on its default branch is preserved.
+
+Full API verification69/69 passed, TypeScript passed, hosted verifier syntax and plugin checks passed. These acceptance denominators describe local scopes. Production hosting/OAuth, actual model-provider routing, physical audio devices, signing and sending, paid external actions, and a real OmniDev Docker host remain separate unverified gates.
