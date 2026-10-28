@@ -1,0 +1,11 @@
+# Live Tevin department lab
+
+The local starter now accepts explicit nonsecret brain configuration and injects MGR-ONE's actual Codex conversation runtime into the existing server. It uses the official installed CLI's existing account sign-in; it never reads account tokens. The prior behavior remains available when no brain config exists. Unknown configured providers fail rather than silently falling back.
+
+The October 28 acceptance run replaced the earlier proposal-model fixture with actual inference. All four department workflows completed against the same real local services: Legacy PostgreSQL contact, Creation OS persisted Markdown, SignMe immutable unsigned draft and Kokoro speech WAV. The live proof passed 24/24 checks, including independent readback, replay and exact artifact hashes. An additional final-adapter proof passed 4/4 checks for finite owner-delegated automatic SignMe execution, then revoked its test policy. No production or physical audio-device qualification is implied.
+
+The private local configuration is `owner-lab/brain-config.json` beneath the runtime directory passed to `scripts/start-tevin-departments-local.ts`. Fields: provider `codex-cli-chatgpt`, enabled true, model, effort, absolute entry path to official `@openai/codex/bin/codex.js`, absolute owned workDir, contextReads false; optional localTextModel selects an existing cached Ollama model for the separate text capability. It contains no account token. Do not publish owner.private.json, service environment files or databases.
+
+The launcher continues to preserve the existing isolated tenant and native service data. Restart only a positively identified owned lab process. An occupied port belonging to an unknown process is an identity failure, not permission to kill it. The integration does not create new owner authority, change remote defaults, start paid services or alter the working VOICE studio.
+
+See MGR-ONE `docs/reign-plan/CODEX-LIVE-BRAIN-2026-10-28.md` for protocol, cancellation, source custody and exact proof boundaries. Parent workspace receipts: `work/ecosystem/wave3/live-brain/`. Downloaded ecosystem package carries sanitized source and evidence; runtime credentials remain local.
