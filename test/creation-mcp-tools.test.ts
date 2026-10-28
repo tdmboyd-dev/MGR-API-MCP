@@ -2,6 +2,21 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { executeCreationMcpCommand } from "../src/creation-mcp-tools.js";
 
+test('caller low-risk label cannot admit paid or unclassified creation capability',async()=>{
+ let calls=0;const options={auth:{actorId:'actor',tenantId:'tenant',audience:'edge',scopes:['creation:execute'],expiresAt:Date.now()+60000},resourceAudience:'edge',creation:{async execute(){calls++;throw Error('must not dispatch');}}};
+ for(const [capability,maxCost] of [['image.generate',0],['unknown.capability',0],['document.markdown',1],['document.markdown',undefined]] as const){
+  const r=await executeCreationMcpCommand(options,{workspaceId:'workspace',capability,input:{},acceptanceCriteria:['real bytes'],...(maxCost===undefined?{}:{maxCost}),risk:'low'});
+  assert.equal(r.accepted,false);assert.equal(r.state,'REQUIRE_APPROVAL');
+ }
+ assert.equal(calls,0);
+});
+
+test('generic Creation result cannot publish after token expiry during effect',async()=>{
+ const auth={actorId:'actor',tenantId:'tenant',audience:'edge',scopes:['creation:execute'],expiresAt:Date.now()+60000};let calls=0;
+ const creation={async execute(request:any){calls++;auth.expiresAt=0;return {requestId:request.requestId,status:'SUCCEEDED' as const,artifactRefs:['private-artifact'],evidenceRefs:[]};}};
+ await assert.rejects(executeCreationMcpCommand({auth,resourceAudience:'edge',creation},{workspaceId:'workspace',capability:'document.markdown',input:{},acceptanceCriteria:['bytes'],maxCost:0,risk:'low'}),/authorization expired/);assert.equal(calls,1);
+});
+
 test("Creation approval digest changes with exact input and authenticated identity",async()=>{
   const invoke=async(prompt:string,actorId="actor-1",tenantId="tenant-1")=>executeCreationMcpCommand({
     auth:{actorId,tenantId,audience:"fixture:mcp",scopes:["creation:execute"],expiresAt:Date.now()+60_000},
@@ -42,10 +57,11 @@ test("Creation MCP dispatch binds authenticated tenant and actor",async()=>{
     }
   },{
     workspaceId:"workspace-1",
-    capability:"image.generate",
+    capability:"document.markdown",
     input:{prompt:"test"},
     acceptanceCriteria:["image exists"],
     risk:"low",
+    maxCost:0,
     correlationId:"corr-1"
   });
 

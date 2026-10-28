@@ -73,3 +73,7 @@ Research packet: research/BEAST-SMARTWIZ-OMNIROUTE-VOICEBOX-FREEBUF-SERVERBYT-20
 44. [x] Implement optional exact-snapshot OmniDev verification transport, bound candidate discovery, canonical report download and adverse-path protocol tests.
 45. [active] Qualify actual ONE/MCP/local engineering SQLite service/approved AppContainer snapshot/durable readback/restart/cancel using the real model-produced candidate.
 46. [waiting-source] Inspect OMNISIGHT/CODE-MONSTER once the other builder publishes source; current repositories are empty.
+
+
+47. [verified bounded local] ONE/MCP/native-worker positive journey plus exact report reopen, finite delegation and negative reconciliation; see evidence/completion-2026-10-28/RESULTS.md. Wider qualification remains open.
+48. [repaired] Pre-dispatch expiry and caller-selected risk classification; generic high-risk approvals remain unavailable rather than bypassed.

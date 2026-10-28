@@ -1,8 +1,32 @@
 import {legacyRequestDigest} from "../src/legacy-client.js";
 import test from "node:test";
 import assert from "node:assert/strict";
-import { executeLegacyMcpCommand } from "../src/legacy-mcp-tools.js";
+import { executeLegacyMcpCommand,registerLegacyMcpTools } from "../src/legacy-mcp-tools.js";
 import { LegacyEdgeClient } from "../src/legacy-client.js";
+
+test('caller low-risk label cannot admit unknown, messaging, deletion or financial actions',async()=>{
+ let calls=0;const legacy=new LegacyEdgeClient({baseUrl:'https://legacy.example/',fetcher:async()=>{calls++;return Response.json({accepted:true});}});
+ const options={auth:{actorId:'actor',tenantId:'tenant',audience:'edge',scopes:['tools:execute'],expiresAt:Date.now()+60000},resourceAudience:'edge',legacy};
+ for(const action of ['communication.send','payments.transfer','crm.delete_contact','unknown.action']){
+  const result=await executeLegacyMcpCommand(options,{action,payload:{},risk:'low'});
+  assert.equal(result.accepted,false);assert.equal(result.state,'REQUIRE_APPROVAL');
+ }
+ assert.equal(calls,0);
+});
+
+for(const name of ['mgr_truth_summary','mgr_legacy_connectors'])test(name+' denies missing scope and expiry while read is pending',async()=>{
+ const handlers=new Map<string,any>(),auth={actorId:'actor',tenantId:'tenant',audience:'edge',scopes:['tools:execute'],expiresAt:Date.now()+60000};let reads=0;
+ const legacy=new LegacyEdgeClient({baseUrl:'https://legacy.example/',fetcher:async()=>{reads++;auth.expiresAt=0;return Response.json({private:'PRIVATE_RECORD'});}});
+ registerLegacyMcpTools({registerTool:(name:string,_:unknown,f:any)=>handlers.set(name,f)} as any,{auth,resourceAudience:'edge',legacy});
+ assert.equal((await handlers.get(name)({})).isError,true);assert.equal(reads,0);
+ auth.scopes=['tools:read'];const result=await handlers.get(name)({});assert.equal(reads,1);assert.equal(result.isError,true);assert.doesNotMatch(JSON.stringify(result),/PRIVATE_RECORD/);
+});
+
+test('generic Legacy result cannot publish after token expiry during effect',async()=>{
+ const auth={actorId:'actor',tenantId:'tenant',audience:'edge',scopes:['tools:execute'],expiresAt:Date.now()+60000};let calls=0;
+ const legacy=new LegacyEdgeClient({baseUrl:'https://legacy.example/',fetcher:async()=>{calls++;auth.expiresAt=0;return Response.json({accepted:true,private:'PRIVATE_RECORD'});}});
+ await assert.rejects(executeLegacyMcpCommand({auth,resourceAudience:'edge',legacy},{action:'crm.create_contact',payload:{firstName:'Test'},risk:'low'}),/authorization expired/);assert.equal(calls,1);
+});
 
 test("authenticated Legacy MCP dispatch binds tenant and actor from auth context",async()=>{
   let capturedBody:any;

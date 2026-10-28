@@ -54,9 +54,12 @@ export class OmniEngineeringClient {
   if(Object.entries(body).some(([k,v])=>value[k]!==v)||value.inputDigest!==omniSha256(canonicalOmniJson({actorId:this.config.actorId,tenantId:this.config.tenantId,...body}))||!['queued','running','succeeded','failed','cancelled','unknown'].includes(value.status)||typeof value.cancelRequested!=='boolean'||!(value.receiptId===null||durableId(value.receiptId)))throw Error('Omni operation receipt mismatch');
   return value;
  }
- async execute(requestId:string,input:OmniInput){
+ async execute(requestId:string,input:OmniInput,preDispatch?:()=>void){
+  preDispatch?.();
   const body=this.body(requestId,input),binding=await this.binding({workspaceId:input.workspaceId,jobId:input.jobId});
   if(!same(omniVerificationInput.parse(Object.fromEntries(Object.keys(omniVerificationInput.shape).map(k=>[k,binding[k as keyof typeof binding]]))),input))throw Error('Omni candidate changed before dispatch');
+  // Binding is asynchronous. Revalidate the caller in the same turn as dispatch.
+  preDispatch?.();
   const value=this.checkReceipt(await this.request('/v1/engineering/verifications',body),requestId,input);
   return value.status==='succeeded'||value.status==='failed'&&value.reportId?this.status(requestId,input):this.publicReceipt(value);
  }

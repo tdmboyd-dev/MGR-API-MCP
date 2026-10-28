@@ -1,0 +1,129 @@
+
+> @mgr/api-mcp@0.1.0 verify
+> npm run typecheck && npm test && npm run verify:hosted-artifacts && npm run plugin:verify
+
+
+> @mgr/api-mcp@0.1.0 typecheck
+> tsc --noEmit
+
+
+> @mgr/api-mcp@0.1.0 test
+> node --import tsx --test test/*.test.ts
+
+✔ sentinel requires approval for high-risk irreversible action (36.6016ms)
+✔ sentinel denies an approval bound to a different payload (0.8157ms)
+✔ sentinel denies missing scopes before approval logic (0.5302ms)
+✔ task lifecycle blocks terminal-state resurrection (2.1584ms)
+✔ job unknown external state must reconcile before final truth (0.4812ms)
+✔ approval is bound to the exact canonical action payload (35.4302ms)
+✔ caller low-risk label cannot admit paid or unclassified creation capability (32.0673ms)
+✔ generic Creation result cannot publish after token expiry during effect (1.4652ms)
+✔ Creation approval digest changes with exact input and authenticated identity (1.1264ms)
+✔ Creation MCP dispatch binds authenticated tenant and actor (0.6445ms)
+✔ Creation MCP dispatch refuses missing scope (0.5133ms)
+✔ department edge binds identity/scopes and rejects unsafe endpoint configuration (49.5198ms)
+✔ creation acceptance independently downloads and hashes actual artifact bytes (153.5161ms)
+✔ artifact rejects oversized stream before trusting provider metadata (4.4865ms)
+✔ official MCP client discovers and calls bounded department schemas; invalid identities never dispatch (965.0124ms)
+✔ self-consistent Creation artifact cannot prove a receipt for different inputs (308.8265ms)
+✔ self-consistent SignMe draft hash cannot prove a different draft or request (4.8961ms)
+✔ VOICE exact-text status and artifact reject self-consistent audio for a different session/text (44.1916ms)
+✔ expired authorization after dispatch cannot publish a department result (1.7486ms)
+✔ SignMe updates bind the actual target and next immutable version (37.0061ms)
+✔ ecosystem catalog keeps nineteen pinned and two explicitly empty repositories without claiming live tools (34.6282ms)
+✔ catalog filtering rejects unknown repositories and cannot mutate later responses (12.9694ms)
+✔ authenticated MCP client discovers source catalog without calling a domain provider (1084.0313ms)
+✔ idempotent job creation returns the same job and rejects key reuse for a different capability (5.3747ms)
+✔ idempotency keys are isolated by tenant (0.5987ms)
+✔ task engine declares edge/session-only authority (0.2477ms)
+✔ approval digest invalidates when the action changes (39.1019ms)
+✔ deterministic decision provider can only choose from allowed choices (0.7902ms)
+✔ MCP request auth fails closed for missing/invalid bearer token (5.275ms)
+✔ MCP request auth binds audience and scopes (0.6602ms)
+✔ JWKS verifier validates issuer, audience, tenant, scopes and expiry (607.1134ms)
+✔ Legacy client propagates tenant actor correlation and idempotency (111.0933ms)
+✔ Legacy client reads Truth Console summary (2.452ms)
+✔ dispatch coordinator reconciles a lost response by correlation receipt (130.9309ms)
+✔ dispatch coordinator preserves unknown external state when reconciliation is unavailable (1.0984ms)
+✔ dispatch timeout reconciles through authoritative Legacy receipt without mutation retry (16.3579ms)
+✔ duplicate delivery preserves one business mutation through the same idempotency key (48.9424ms)
+✔ edge restart does not duplicate committed Legacy business state (16.2015ms)
+✔ caller low-risk label cannot admit unknown, messaging, deletion or financial actions (32.2743ms)
+✔ mgr_truth_summary denies missing scope and expiry while read is pending (152.6248ms)
+✔ mgr_legacy_connectors denies missing scope and expiry while read is pending (2.4491ms)
+✔ generic Legacy result cannot publish after token expiry during effect (2.5862ms)
+✔ authenticated Legacy MCP dispatch binds tenant and actor from auth context (5.9175ms)
+✔ authenticated Legacy MCP dispatch denies missing execute scope (0.5703ms)
+✔ authenticated Legacy MCP write reconciles a lost response instead of blind retry (6.561ms)
+✔ Legacy sends explicit target and trusted identity on command and readback (92.9463ms)
+✔ Legacy deadline includes stalled response body (35.0135ms)
+✔ Legacy bounds response bytes and conceals remote body secrets (20.3881ms)
+✔ receipt reconciliation binds tenant actor action key and exact digest (88.0603ms)
+✔ remote MCP factory exposes a web-standard fetch handler (4.2613ms)
+✔ authorized remote MCP binding derives identity from verified token (59.0299ms)
+✔ authorized remote MCP handler fails closed before protocol dispatch (5.2561ms)
+✔ router chooses cheapest model that satisfies policy (4.7747ms)
+✔ router escalates for quality and risk instead of always using cheapest (0.4952ms)
+✔ router can require tool-capable models (33.8754ms)
+✔ router respects provider exclusions and cost ceilings (88.6313ms)
+✔ escalation ladder can search increasing quality policies (0.7381ms)
+✔ router excludes unhealthy and circuit-open candidates (0.6262ms)
+✔ semantic quality and provider health can justify a stronger route (0.6021ms)
+✔ cache-aware cost estimator accounts for discounted cached input (1.4394ms)
+✔ protected resource metadata requires HTTPS audience and authorization server (3.7889ms)
+✔ WWW-Authenticate advertises resource metadata and insufficient scope (0.5516ms)
+✔ Omni schema bounds exact jobs, rejects model-provided code and malformed hashes (13.0048ms)
+✔ binding strips private source/objective, verifies configured policy and principal (75.6557ms)
+✔ realistic accepted report shape is independently hashed and bound to native assignment and cleanup (7.015ms)
+✔ false success, changed exact report bytes and mismatched native cleanup are rejected (59.1714ms)
+✔ receipt actor/action/input mutation cannot reconcile a different operation (7.0289ms)
+✔ dispatch rechecks current digest before POST and credential headers are host-bound (5.06ms)
+✔ lost POST acknowledgment never auto-repeats native execution; status can independently reconcile (4.9133ms)
+✔ historical valid report survives workspace edits without current verification claim (4.3369ms)
+✔ queued cancel and running cancel request remain distinguishable without invented cleanup success (3.5681ms)
+✔ response actual byte cap and safe HTTP errors reject before publication (1.3701ms)
+✔ whole request deadline bounds hung headers AND hung body even transport ignores abort (57.1102ms)
+✔ binding MCP scope and expiry are checked again after asynchronous provider read (3.3497ms)
+✔ invalid UTF8 and excessive JSON depth are rejected; string braces do not count as structure (2.1258ms)
+✔ aborted body stream is actively cancelled and no late body can become success (30.3001ms)
+✔ terminal receipt IDs and uint32 AppContainer SID components are validated (7.5901ms)
+✔ gateway rejects cross-principal service mappings and policy config cannot drift (6.5199ms)
+✔ accepted failed native tests provide verified canonical report artifact without claiming success (7.3526ms)
+✔ pre-execution failure, unknown and cancelled states cannot fabricate report downloads (3.8332ms)
+✔ succeeded receipt missing native report ID fails status, dispatch and cancel (2.7913ms)
+✔ gateway artifact retains standard sha256/bytes/base64 envelope for exact accepted JSON report (4.5373ms)
+✔ registered execute denies expiry during held binding before any native POST (3.8185ms)
+✔ registered execute denies scope during held binding before any native POST (5.2588ms)
+✔ registered execute denies actor during held binding before any native POST (1.5558ms)
+✔ registered execute denies tenant during held binding before any native POST (1.583ms)
+✔ expiry after accepted POST suppresses publication and never retries the effect (6.9001ms)
+✔ privacy firewall redacts email and phone before external inference (3.6745ms)
+✔ privacy firewall blocks detected secrets (0.559ms)
+✔ privacy firewall can deny all sensitive external routing (0.2921ms)
+✔ malformed authorization and approval expiry cannot become unlimited grants (58.9839ms)
+✔ overlapping privacy detectors redact a combined range without exposing original digits (2.1804ms)
+✔ authorization binds scopes to the intended resource audience (2.4108ms)
+✔ Brain controller retrieves context and escalates only when bounded decision cannot resolve (9.5025ms)
+✔ Creation OS client blocks underspecified requests before transport (0.5695ms)
+✔ FreeBuf is explicitly a secondary source requiring primary verification (2.4224ms)
+✔ secondary security findings cannot be promoted without primary evidence (1.0827ms)
+✔ voice cloning requires an explicit rights grant (2.9165ms)
+✔ voice fabric prefers local provider when requested (1.7899ms)
+✔ Voicebox adapter maps MGR requests to Voicebox MCP tools (1.3595ms)
+ℹ tests 100
+ℹ suites 0
+ℹ pass 100
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7648.9441
+
+> @mgr/api-mcp@0.1.0 verify:hosted-artifacts
+> node --check scripts/verify-oauth-provider.mjs && node --check scripts/verify-openai-remote-mcp.mjs && node --check scripts/verify-mcp-client.mjs
+
+
+> @mgr/api-mcp@0.1.0 plugin:verify
+> node scripts/verify-chatgpt-plugin.mjs
+
+{"ok":true,"mcpConfigured":false,"shortDescriptionLength":24}

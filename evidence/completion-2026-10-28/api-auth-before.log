@@ -1,0 +1,103 @@
+✔ Omni schema bounds exact jobs, rejects model-provided code and malformed hashes (12.5127ms)
+✔ binding strips private source/objective, verifies configured policy and principal (85.3472ms)
+✔ realistic accepted report shape is independently hashed and bound to native assignment and cleanup (10.146ms)
+✔ false success, changed exact report bytes and mismatched native cleanup are rejected (46.0324ms)
+✔ receipt actor/action/input mutation cannot reconcile a different operation (16.8573ms)
+✔ dispatch rechecks current digest before POST and credential headers are host-bound (9.7389ms)
+✔ lost POST acknowledgment never auto-repeats native execution; status can independently reconcile (3.9356ms)
+✔ historical valid report survives workspace edits without current verification claim (4.2201ms)
+✔ queued cancel and running cancel request remain distinguishable without invented cleanup success (11.3749ms)
+✔ response actual byte cap and safe HTTP errors reject before publication (1.5467ms)
+✔ whole request deadline bounds hung headers AND hung body even transport ignores abort (64.6546ms)
+✔ binding MCP scope and expiry are checked again after asynchronous provider read (2.9889ms)
+✔ invalid UTF8 and excessive JSON depth are rejected; string braces do not count as structure (5.027ms)
+✔ aborted body stream is actively cancelled and no late body can become success (22.8079ms)
+✔ terminal receipt IDs and uint32 AppContainer SID components are validated (8.588ms)
+✔ gateway rejects cross-principal service mappings and policy config cannot drift (1.8441ms)
+✔ accepted failed native tests provide verified canonical report artifact without claiming success (7.7744ms)
+✔ pre-execution failure, unknown and cancelled states cannot fabricate report downloads (4.6728ms)
+✔ succeeded receipt missing native report ID fails status, dispatch and cancel (3.4601ms)
+✔ gateway artifact retains standard sha256/bytes/base64 envelope for exact accepted JSON report (3.1744ms)
+✖ registered execute denies expiry during held binding before any native POST (16.4733ms)
+✖ registered execute denies scope during held binding before any native POST (4.4079ms)
+✖ registered execute denies actor during held binding before any native POST (4.0319ms)
+✖ registered execute denies tenant during held binding before any native POST (5.2679ms)
+✔ expiry after accepted POST suppresses publication and never retries the effect (4.9037ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 21
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1710.1418
+
+✖ failing tests:
+
+test at test\omnidev-client.test.ts:1:13304
+✖ registered execute denies expiry during held binding before any native POST (16.4733ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\repos\MGR-API-MCP\test\omnidev-client.test.ts:128:46)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\omnidev-client.test.ts:1:13304
+✖ registered execute denies scope during held binding before any native POST (4.4079ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\repos\MGR-API-MCP\test\omnidev-client.test.ts:128:46)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\omnidev-client.test.ts:1:13304
+✖ registered execute denies actor during held binding before any native POST (4.0319ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\repos\MGR-API-MCP\test\omnidev-client.test.ts:128:46)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\omnidev-client.test.ts:1:13304
+✖ registered execute denies tenant during held binding before any native POST (5.2679ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\repos\MGR-API-MCP\test\omnidev-client.test.ts:128:46)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -51,9 +51,10 @@ export class DepartmentGateway {
     }catch(error){if(controller.signal.aborted)throw Error(`Department ${service} timed out; reconcile request before retry`);throw error;}finally{clearTimeout(timer);}
   }
   async candidateBinding(input:z.infer<typeof omniBindingInput>){if(!this.omni)throw Error("Omni engineering service not configured");return this.omni.binding(input);}
-  async execute(command:DepartmentCommand){
+  async execute(command:DepartmentCommand,preDispatch?:()=>void){
     const c=departmentCommand.parse(command),p=this.config;
-    if(c.operation==="omnidev.job.verify"){if(!this.omni)throw Error("Omni engineering service not configured");return {...await this.omni.execute(c.requestId,c.input),operation:c.operation};}
+    preDispatch?.();
+    if(c.operation==="omnidev.job.verify"){if(!this.omni)throw Error("Omni engineering service not configured");return {...await this.omni.execute(c.requestId,c.input,preDispatch),operation:c.operation};}
     if(c.operation==="legacy.contact.create"){
       const result=await p.legacy.execute({tenantId:p.tenantId,actorId:p.actorId,correlationId:c.requestId,idempotencyKey:c.requestId},{action:"crm.create_contact",payload:{firstName:c.input.displayName,...(c.input.email?{email:c.input.email}:{})}});
       if(!result.accepted||!result.receiptId)throw Error("Legacy did not confirm persisted contact");
@@ -134,7 +135,7 @@ export function registerDepartmentTools(server:McpServer,options:DepartmentToolO
   });
   for(const method of ["execute","status","artifact","cancel"] as const){
     server.registerTool(`mgr_department_${method}`,{description:`${method} a bounded department operation. Identity is credential-bound. No signing, sending, arbitrary code or paid providers.`,inputSchema:departmentCommand},async input=>{
-      try{options.gateway.authorize(options.auth,options.resourceAudience,method==="execute"||method==="cancel");const result=await options.gateway[method](input);options.gateway.authorize(options.auth,options.resourceAudience,method==="execute"||method==="cancel");return {content:[{type:"text",text:JSON.stringify(result)}]};}
+      try{options.gateway.authorize(options.auth,options.resourceAudience,method==="execute"||method==="cancel");const result=method==="execute"?await options.gateway.execute(input,()=>options.gateway.authorize(options.auth,options.resourceAudience,true)):await options.gateway[method](input);options.gateway.authorize(options.auth,options.resourceAudience,method==="execute"||method==="cancel");return {content:[{type:"text",text:JSON.stringify(result)}]};}
       catch(error){return {isError:true,content:[{type:"text",text:JSON.stringify({error:error instanceof Error?error.message:"Department failed",state:"unconfirmed"})}]};}
     });
   }

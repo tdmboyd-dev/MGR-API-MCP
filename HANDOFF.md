@@ -1,12 +1,12 @@
 # Resume MGR-API-MCP
 
-## Current checkpoint — ecosystem department integration, October 28, 2026
+## Current checkpoint â€” ecosystem department integration, October 28, 2026
 
 Read [docs/DEPARTMENT-INTEGRATION.md](docs/DEPARTMENT-INTEGRATION.md) and the dated full-build scorecard before continuing. The four bounded department operations now have actual local domain execution and independently verified readback through official MCP HTTP. ONE owns preview/approval/anchored execution and recovery; this repository owns transport. Real PostgreSQL, SQLite and cached Kokoro CPU inference were exercised. The initial owner proof passed28/28 checks; the final receipt in the delivered wave2 evidence supersedes that count when additional checks are added. Default branches were preserved. Local integration does not establish public deployment, physical device acceptance or every product capability.
 
 New source: department-gateway.ts, local-department-edge.ts, actual local proof scripts and persistent isolated-lab launcher. Production HTTP can inject department endpoints through explicit secure environment configuration while retaining its JWKS validation. Local lab service-token authentication is separately labeled and loopback only. No credentials, private runtime configuration, databases or model weights belong in Git or delivery. A dispatched unknown request is status-reconciled, never blindly repeated.
 
-## Current resume checkpoint — October 6, 2026
+## Current resume checkpoint â€” October 6, 2026
 
 MGR-API-MCP is now the shared external edge, switchboard, and Brain transport layer. MGR Legacy is the authoritative business data/workflow/action system. Creation OS remains the creation engine. See `architecture/LEGACY-INTEGRATION.md`.
 
@@ -22,10 +22,10 @@ New implementation:
 - CostAwareModelRouter v2: cost/latency/health/quota/context/cache-aware routing with route receipts
 - MGR Voice Fabric: provider-neutral STT/TTS/clone contracts, local/cloud routing, Voicebox MCP adapter, explicit voice-rights gate
 - secondary security research registry: FreeBuf is discovery-only and requires primary-source verification before promotion
-- `chatgpt-plugin/plugin.json` — MGR Control Center Agent Plugin manifest
-- `chatgpt-plugin/skills/mgr-control/SKILL.md` — ChatGPT-facing MGR operating contract
-- `scripts/render-chatgpt-plugin.mjs` — generates portable `mcp.json` only from a real HTTPS `/mcp` endpoint
-- `scripts/verify-chatgpt-plugin.mjs` — validates manifest/package invariants in CI
+- `chatgpt-plugin/plugin.json` â€” MGR Control Center Agent Plugin manifest
+- `chatgpt-plugin/skills/mgr-control/SKILL.md` â€” ChatGPT-facing MGR operating contract
+- `scripts/render-chatgpt-plugin.mjs` â€” generates portable `mcp.json` only from a real HTTPS `/mcp` endpoint
+- `scripts/verify-chatgpt-plugin.mjs` â€” validates manifest/package invariants in CI
 - `src/legacy-client.ts` typed Legacy edge client
 - `test/legacy-client.test.ts` propagation and Truth Console tests
 - tenant, actor, correlation, and idempotency propagation contract
@@ -54,7 +54,7 @@ Do not claim the remote MCP surface is production-ready until those gates pass.
 
 ---
 
-## Current resume checkpoint — September 29, 2026
+## Current resume checkpoint â€” September 29, 2026
 
 Read [WORK-STATE.md](WORK-STATE.md), AGENTS.md, BUILD-QUEUE.md and the latest dated section of docs/full-build/SCORECARD.md.
 Inspected base: d5fdea390702b7ca7e5a3602ad2e4d149960aea8.
@@ -65,7 +65,7 @@ This recovery inspected engine.ts, brain-controller.ts and mcp-server.ts in the 
 
 The next window must reconcile the build queue with implemented primitives, recover the older window's exact CI/test receipts and private local originals, and preserve the source manifests' unread/unavailable boundaries. No original-source checkpoint was recovered by this continuity update.
 
-## Historical September 28 handoff — preserved evidence
+## Historical September 28 handoff â€” preserved evidence
 
 The following text describes that earlier checkpoint. Its research/acquisition provenance remains useful. Its research-only implementation and process-state statements are historical, not present-state assertions.
 
@@ -105,7 +105,7 @@ GitHub Actions run `37291231033` passed a containerized process-boundary proof:
 This proves the deployment artifact and cross-process contracts. It does not claim a public production URL or a ChatGPT-hosted session.
 
 
-## Ecosystem review — October 27, 2026
+## Ecosystem review â€” October 27, 2026
 
 Additive source-pinned ecosystem context: [human handoff](docs/ecosystem/HUMAN-HANDOFF.md). This review branch preserves the default-branch baseline and existing work orders. Domain runtime/production acceptance is separate.
 
@@ -136,3 +136,18 @@ Protocol verification:20 focused tests pass, including denial, exact readback, f
 Catalog discovery now includes21 entries:19 source-pinned snapshots and two explicitly empty public repositories, MGR-OMNISIGHT and MGR-CODE-MONSTER. The latter carry no fabricated commit or executable tools; the owner reports active construction by another builder. Their source remains unavailable and runtime unverified.
 
 Wave4 API regression checkpoint:89/89 full tests passed (the20 focused Omni tests are included), TypeScript passed and repository integrity172/172 passed. These denominators do not include the separately pending live ONE/service/OS-worker acceptance.
+
+
+## October 28 completion continuation
+
+Branch: `repair/completion-2026-10-28`, preserving the prior audit branch and unpublished checkpoints. Default branches remain unchanged.
+
+The actual configured Tevin model â†’ authenticated owner HTTP â†’ ONE anchored approval â†’ MCP HTTP â†’ existing local SQLite engineering service â†’ qualified Windows AppContainer snapshot worker journey passed 15/15 bounded acceptance checks. Report assignment `85967de4-b5cf-4cca-91fd-f216bc2dcfaf`, canonical JSON 4,360 bytes, SHA256 `4c35e127e00016c309627b481d20f1e01ad68615b5b493813910b17ffd60a8ff`. After closing/reopening ONE, status refreshed currentness and exact report bytes reopened without another dispatch. A one-action owner delegation exhausted its limit. This is an agent-driven authenticated owner route, not a claim the human clicked approval or accepted the final experience.
+
+The final 22/22 check rerun reused that accepted native assignment; it did not rerun the native process. It additionally read a genuine prior failed report through ONE (still failed, matching its original hash), denied artifact publication for an uncertain canceled job, reconciled unknown without redispatch, canceled before admission and denied a changed candidate digest. Counts overlap; do not add them. Initial fresh execution and final historical reconciliation are distinct.
+
+API repair: authorization is checked synchronously after awaited native binding immediately before POST. Held-binding expiry, scope withdrawal and actor/tenant change each now produce zero POSTs. Expiry after dispatch suppresses publication and does not retry. Generic Legacy/Creation tool admission now uses a server-owned risk floor: only known contact create/update and explicit zero-cost Markdown creation can reach bounded generic dispatch. Unknown/sensitive/paid capabilities require approval and cannot execute through this generic interface (it has no approval-consumption endpoint). Caller labels can increase risk, never lower it. ONE remains owner of exact approvals/delegation. Generic Legacy reads now check authorization before and after awaited data.
+
+ONE defense: canonical report digest must match the standard SHA256 alias and saved receipt; a reproduced conflicting-alias case now fails closed. Dedicated workflow/UI suite 15/15 passed. The fresh final full compiled/web suite passed 1453/1453 after the defense; zero failures, cancellations or skips. API full suite 100/100 passed, typechecking, verifier syntax and plugin checks passed; repository integrity 181/181 passed after final documentation append. These are separate denominators, not product completion.
+
+No native launcher/runtime policy changed. No code applied to an owner project, no publishing/deployment, paid generation, live financial effect, signing, sending or physical microphone acceptance occurred. Whole-product completion remains unassessed. Original 283 child requirements and 28 areas validate; broad obligations remain open. Next: remaining original requirements, hosted auth, business onboarding, physical voice/device proof, then the queued domain journeys. Use current source over stale pre-continuation handoff claims.

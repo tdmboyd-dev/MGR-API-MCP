@@ -1,0 +1,47 @@
+✖ caller low-risk label cannot admit paid or unclassified creation capability (53.2697ms)
+✔ Creation approval digest changes with exact input and authenticated identity (1.4551ms)
+✔ Creation MCP dispatch binds authenticated tenant and actor (0.578ms)
+✔ Creation MCP dispatch refuses missing scope (0.5092ms)
+✖ caller low-risk label cannot admit unknown, messaging, deletion or financial actions (90.3888ms)
+✔ authenticated Legacy MCP dispatch binds tenant and actor from auth context (5.3245ms)
+✔ authenticated Legacy MCP dispatch denies missing execute scope (0.6147ms)
+✔ authenticated Legacy MCP write reconciles a lost response instead of blind retry (3.3043ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 6
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2520.6487
+
+✖ failing tests:
+
+test at test\creation-mcp-tools.test.ts:1:250
+✖ caller low-risk label cannot admit paid or unclassified creation capability (53.2697ms)
+  Error: must not dispatch
+      at Object.execute (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\repos\MGR-API-MCP\test\creation-mcp-tools.test.ts:6:205)
+      at ValidatingCreationOSClient.execute (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\repos\MGR-API-MCP\src\creation-client.ts:38:41)
+      at executeCreationMcpCommand (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\repos\MGR-API-MCP\src\creation-mcp-tools.ts:66:29)
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\repos\MGR-API-MCP\test\creation-mcp-tools.test.ts:8:17)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+
+test at test\legacy-mcp-tools.test.ts:1:357
+✖ caller low-risk label cannot admit unknown, messaging, deletion or financial actions (90.3888ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\repos\MGR-API-MCP\test\legacy-mcp-tools.test.ts:12:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

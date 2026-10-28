@@ -2,6 +2,8 @@ import { randomUUID } from "node:crypto";
 import type { McpServer } from "@modelcontextprotocol/server";
 import * as z from "zod/v4";
 import type { AuthContext } from "./authz.js";
+import { authorizeTool } from "./authz.js";
+import { creationActionPolicy } from "./action-policy.js";
 import { ActionSentinel } from "./action-sentinel.js";
 import type { ToolCapability } from "./contracts.js";
 import {
@@ -38,9 +40,10 @@ export async function executeCreationMcpCommand(
 ):Promise<Record<string,unknown>>{
   const correlationId=input.correlationId ?? randomUUID();
   const sentinel=new ActionSentinel();
+  const policy=creationActionPolicy(input.capability,input.maxCost,input.risk);
   const decision=sentinel.evaluate(options.auth,{
     taskId:correlationId,
-    tool:creationTool,
+    tool:{...creationTool,sideEffect:policy.sideEffect},
     payload:{
       workspaceId:input.workspaceId,
       capability:input.capability,
@@ -49,7 +52,7 @@ export async function executeCreationMcpCommand(
       maxCost:input.maxCost
     },
     audience:options.resourceAudience,
-    risk:input.risk
+    risk:policy.risk
   });
 
   if(decision.state!=="ALLOW"){
@@ -77,6 +80,7 @@ export async function executeCreationMcpCommand(
     ...(input.maxCost===undefined?{}:{maxCost:input.maxCost})
   });
 
+  authorizeTool(options.auth,options.resourceAudience,creationTool.requiredScopes);
   return {
     accepted:result.status==="SUCCEEDED",
     actionDigest:decision.actionDigest,

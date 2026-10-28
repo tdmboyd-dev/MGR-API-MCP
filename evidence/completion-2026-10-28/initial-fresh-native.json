@@ -1,0 +1,446 @@
+{
+  "scope": "Agent-driven authenticated owner HTTP, actual configured CLI model, MCP HTTP, real persisted job, qualified Windows native worker. No human click or whole-product/production acceptance claimed.",
+  "startedAt": "2026-10-28T10:13:20.134Z",
+  "checks": [
+    {
+      "name": "unauthenticated owner route denied",
+      "passed": true
+    },
+    {
+      "name": "manual approval actual model returns exact existing-job proposal",
+      "passed": true
+    },
+    {
+      "name": "proposal does not execute or create authority",
+      "passed": true
+    },
+    {
+      "name": "native dispatch denied before exact owner approval",
+      "passed": true
+    },
+    {
+      "name": "actual native result accepted through ONE and MCP",
+      "passed": true
+    },
+    {
+      "name": "single native dispatch",
+      "passed": true
+    },
+    {
+      "name": "canonical report hash and byte count match",
+      "passed": true
+    },
+    {
+      "name": "conversation reopens with historical currentness unverified",
+      "passed": true
+    },
+    {
+      "name": "reopened status refreshes actual report",
+      "passed": true
+    },
+    {
+      "name": "reopened canonical bytes identical",
+      "passed": true
+    },
+    {
+      "name": "completed replay does not redispatch",
+      "passed": true
+    },
+    {
+      "name": "finite delegation actual model returns exact existing-job proposal",
+      "passed": true
+    },
+    {
+      "name": "finite owner delegation automatically admits exact proposal",
+      "passed": true
+    },
+    {
+      "name": "delegated real report preserves same native assignment",
+      "passed": true
+    },
+    {
+      "name": "finite delegation exhausted after one child",
+      "passed": true
+    }
+  ],
+  "conversations": [
+    {
+      "label": "manual approval",
+      "requestId": "omni-chat-e9d9447d-2f20-49e8-b98c-a9b99bcb0443",
+      "response": {
+        "text": "Time, the verification proposal is prepared at $0, with the hashes supplied by the host. It\u00e2\u20ac\u2122s awaiting review or matching owner delegation; verification hasn\u00e2\u20ac\u2122t run yet. This proposal does not apply code, create a candidate, or publish anything.",
+        "provider": "codex-cli-chatgpt",
+        "model": "gpt-6.1-sol",
+        "requestedModel": "gpt-6.1-sol",
+        "providerReportedModel": null,
+        "responseIds": [
+          "codex:01a18200-0bb3-7461-aeb9-0c4b8114b876",
+          "codex:01a18200-3671-7b53-9ebb-5d3689ab2435"
+        ],
+        "usage": {
+          "inputTokens": 25331,
+          "outputTokens": 299,
+          "totalTokens": 25630
+        },
+        "toolReceipts": [
+          {
+            "name": "department_preview",
+            "callId": "bff4368c-2092-45e1-8e1e-8eadbe2e238b",
+            "receiptId": "de044f84-cc59-4373-8534-73bcecad68c6"
+          }
+        ],
+        "execution": "model-with-local-read-tools",
+        "externalActionsExecuted": false,
+        "message": "Time, the verification proposal is prepared at $0, with the hashes supplied by the host. It\u00e2\u20ac\u2122s awaiting review or matching owner delegation; verification hasn\u00e2\u20ac\u2122t run yet. This proposal does not apply code, create a candidate, or publish anything.",
+        "presentation": "conversation",
+        "context": "presence",
+        "profileVersion": 1,
+        "departmentProposals": [
+          {
+            "command": {
+              "operation": "omnidev.job.verify",
+              "requestId": "chat-7a2178dfcdd00d9cf698dcbbdda6d5932871ecb030144c6bb5a0187ed8b48447",
+              "input": {
+                "workspaceId": "b30fa845-f7fc-40fc-82a5-1206c42d5406",
+                "jobId": "request-d89118cfde6c7df33708de25317d9d1bd2275e48e09d43340584da459bf1f4f4",
+                "sourceDigest": "3ad7f101594e39ef19b7c19c716270fd240655f3298dfad424bae9c71cf985ae",
+                "candidateDigest": "0ace9f05ecb35c0b956624579e8763585c3b1af9f824b5d75f26effdec327dc1",
+                "testManifestDigest": "7fae807344abb9e0372932278b8d50163b958e94dc26260a203c7b05ecfaf35f"
+              }
+            },
+            "digest": "da04b70d8c65ebb623e96686b8c9571a120fea1199c7f2272db3eed614a58cf2",
+            "state": "proposal",
+            "maximumCost": 0,
+            "source": {
+              "conversationRequestId": "omni-chat-e9d9447d-2f20-49e8-b98c-a9b99bcb0443",
+              "index": 0,
+              "current": true
+            },
+            "workflow": null
+          }
+        ],
+        "departmentOperations": [
+          "legacy.contact.create",
+          "creation.document.render",
+          "voice.speech",
+          "signme.draft.create",
+          "omnidev.job.verify"
+        ],
+        "delegations": [],
+        "externalDispatchUncertain": false
+      }
+    },
+    {
+      "label": "finite delegation",
+      "requestId": "omni-chat-28576e32-2fc5-4291-ba4b-d9e6fa0beb7b",
+      "response": {
+        "text": "Current actual results:\nOmniDev candidate verification: tests passed for the admitted snapshot and current workspace; actual report is available.",
+        "provider": "codex-cli-chatgpt",
+        "model": "gpt-6.1-sol",
+        "requestedModel": "gpt-6.1-sol",
+        "providerReportedModel": null,
+        "responseIds": [
+          "codex:01a18200-a0f9-7651-a867-656bab678352",
+          "codex:01a18200-c0ef-7283-af9d-c45cc9cddf80"
+        ],
+        "usage": {
+          "inputTokens": 25687,
+          "outputTokens": 252,
+          "totalTokens": 25939
+        },
+        "toolReceipts": [
+          {
+            "name": "department_preview",
+            "callId": "f45fc73c-fc2b-4389-93ec-fc5f9f933457",
+            "receiptId": "c608e64a-5bf4-48fb-9b3b-49b7884bdb01"
+          }
+        ],
+        "execution": "model-with-local-read-tools",
+        "externalActionsExecuted": true,
+        "message": "Current actual results:\nOmniDev candidate verification: tests passed for the admitted snapshot and current workspace; actual report is available.",
+        "presentation": "conversation",
+        "context": "presence",
+        "profileVersion": 1,
+        "departmentProposals": [
+          {
+            "command": {
+              "operation": "omnidev.job.verify",
+              "requestId": "chat-119437b59f6735c42c59d870afee2dcef0916c4da07472d0045f5125d374d783",
+              "input": {
+                "workspaceId": "b30fa845-f7fc-40fc-82a5-1206c42d5406",
+                "jobId": "request-d89118cfde6c7df33708de25317d9d1bd2275e48e09d43340584da459bf1f4f4",
+                "sourceDigest": "3ad7f101594e39ef19b7c19c716270fd240655f3298dfad424bae9c71cf985ae",
+                "candidateDigest": "0ace9f05ecb35c0b956624579e8763585c3b1af9f824b5d75f26effdec327dc1",
+                "testManifestDigest": "7fae807344abb9e0372932278b8d50163b958e94dc26260a203c7b05ecfaf35f"
+              }
+            },
+            "digest": "69fe4f7695bb05a98258d0709d7cb75e3b868b2d7203a0de40abafac98083ef2",
+            "state": "proposal",
+            "maximumCost": 0,
+            "source": {
+              "conversationRequestId": "omni-chat-28576e32-2fc5-4291-ba4b-d9e6fa0beb7b",
+              "index": 0,
+              "current": true
+            },
+            "workflow": {
+              "command": {
+                "operation": "omnidev.job.verify",
+                "requestId": "chat-119437b59f6735c42c59d870afee2dcef0916c4da07472d0045f5125d374d783",
+                "input": {
+                  "workspaceId": "b30fa845-f7fc-40fc-82a5-1206c42d5406",
+                  "jobId": "request-d89118cfde6c7df33708de25317d9d1bd2275e48e09d43340584da459bf1f4f4",
+                  "sourceDigest": "3ad7f101594e39ef19b7c19c716270fd240655f3298dfad424bae9c71cf985ae",
+                  "candidateDigest": "0ace9f05ecb35c0b956624579e8763585c3b1af9f824b5d75f26effdec327dc1",
+                  "testManifestDigest": "7fae807344abb9e0372932278b8d50163b958e94dc26260a203c7b05ecfaf35f"
+                }
+              },
+              "action": {
+                "provider": "MGR-API-MCP",
+                "account": "6a404652-c77b-4e31-a387-eeeb33216ef9:tevin-proof",
+                "operation": "omnidev.job.verify",
+                "resource": "chat-119437b59f6735c42c59d870afee2dcef0916c4da07472d0045f5125d374d783",
+                "parameters": {
+                  "workspaceId": "b30fa845-f7fc-40fc-82a5-1206c42d5406",
+                  "jobId": "request-d89118cfde6c7df33708de25317d9d1bd2275e48e09d43340584da459bf1f4f4",
+                  "sourceDigest": "3ad7f101594e39ef19b7c19c716270fd240655f3298dfad424bae9c71cf985ae",
+                  "candidateDigest": "0ace9f05ecb35c0b956624579e8763585c3b1af9f824b5d75f26effdec327dc1",
+                  "testManifestDigest": "7fae807344abb9e0372932278b8d50163b958e94dc26260a203c7b05ecfaf35f"
+                }
+              },
+              "digest": "69fe4f7695bb05a98258d0709d7cb75e3b868b2d7203a0de40abafac98083ef2",
+              "tenantId": "6a404652-c77b-4e31-a387-eeeb33216ef9",
+              "actorId": "tevin-proof",
+              "jobId": "30e987b0-7115-48be-9d2e-62410ea64ff7",
+              "goalId": "fbc92451-c024-49a0-8145-efe00ffd339f",
+              "state": "succeeded",
+              "maximumCost": 0,
+              "createdAt": "2026-10-28T10:14:17.320Z",
+              "result": {
+                "requestId": "chat-119437b59f6735c42c59d870afee2dcef0916c4da07472d0045f5125d374d783",
+                "actorId": "tevin-proof",
+                "tenantId": "6a404652-c77b-4e31-a387-eeeb33216ef9",
+                "workspaceId": "b30fa845-f7fc-40fc-82a5-1206c42d5406",
+                "jobId": "request-d89118cfde6c7df33708de25317d9d1bd2275e48e09d43340584da459bf1f4f4",
+                "sourceDigest": "3ad7f101594e39ef19b7c19c716270fd240655f3298dfad424bae9c71cf985ae",
+                "candidateDigest": "0ace9f05ecb35c0b956624579e8763585c3b1af9f824b5d75f26effdec327dc1",
+                "testManifestDigest": "7fae807344abb9e0372932278b8d50163b958e94dc26260a203c7b05ecfaf35f",
+                "inputDigest": "3db62af847752e08ceb74e30f20f07be0b5263105643088ac85439f06d889c21",
+                "status": "succeeded",
+                "cancelRequested": false,
+                "receiptId": "native-report:85967de4-b5cf-4cca-91fd-f216bc2dcfaf",
+                "policyIdentity": {
+                  "hostId": "4907c966-9fb9-4c13-9cae-3ff96dde8335",
+                  "launcherSha256": "4a700cf2fda12b79ae800dd5c88323c4d2b873fe7b099fa31a50cccb99da461b",
+                  "runtimeSha256": "ba4e6d110e8c1592a1ecd390f6b05f3da124b13871a5be62b341a07a853c6c32",
+                  "qualificationDigest": "357bbdf7a601234af6fa3cbd9f28642cd423fd4053362cbbd9bac6c71594c72f"
+                },
+                "readbackVerified": true,
+                "currentBindingVerified": true,
+                "reportId": "native-report:85967de4-b5cf-4cca-91fd-f216bc2dcfaf",
+                "reportSha256": "4c35e127e00016c309627b481d20f1e01ad68615b5b493813910b17ffd60a8ff",
+                "bytes": 4360,
+                "mediaType": "application/json",
+                "assignmentId": "85967de4-b5cf-4cca-91fd-f216bc2dcfaf",
+                "native": {
+                  "cleanup": {
+                    "activeProcessesAfter": 0,
+                    "profileDeletionHResult": 0,
+                    "verifiedAbsent": true,
+                    "workspaceAbsent": true
+                  },
+                  "hostId": "4907c966-9fb9-4c13-9cae-3ff96dde8335",
+                  "launcherSha256": "4a700cf2fda12b79ae800dd5c88323c4d2b873fe7b099fa31a50cccb99da461b",
+                  "native": {
+                    "capabilityCount": 0,
+                    "jobAssignedAtCreation": true,
+                    "packageSid": "S-1-15-2-3927492749-2854291560-1680320542-47129912-1235581859-4246053729-2772041032",
+                    "profileName": "omni-85967de4-b5cf-4cca-91fd-f216bc2dcfaf",
+                    "tokenIsAppContainer": true
+                  },
+                  "qualificationDigest": "357bbdf7a601234af6fa3cbd9f28642cd423fd4053362cbbd9bac6c71594c72f",
+                  "runtimeSha256": "ba4e6d110e8c1592a1ecd390f6b05f3da124b13871a5be62b341a07a853c6c32"
+                },
+                "scope": "Approved MGR snapshot only; supervised disk budget, no hard filesystem quota",
+                "operation": "omnidev.job.verify"
+              },
+              "grant": "ecosystem-child:985dbd2f-b4ec-4316-a78e-765a07f90a9a:chat-119437b59f6735c42c59d870afee2dcef0916c4da07472d0045f5125d374d783",
+              "approval": "ecosystem-delegated-approval:985dbd2f-b4ec-4316-a78e-765a07f90a9a:chat-119437b59f6735c42c59d870afee2dcef0916c4da07472d0045f5125d374d783",
+              "delegationId": "985dbd2f-b4ec-4316-a78e-765a07f90a9a",
+              "dispatchedAt": "2026-10-28T10:14:17.397Z",
+              "error": null
+            }
+          }
+        ],
+        "hostWorkflowSummary": true,
+        "departmentOperations": [
+          "legacy.contact.create",
+          "creation.document.render",
+          "voice.speech",
+          "signme.draft.create",
+          "omnidev.job.verify"
+        ],
+        "delegations": [
+          {
+            "id": "985dbd2f-b4ec-4316-a78e-765a07f90a9a",
+            "digest": "8dde9a8ad85d4ad6950eb08c017e319e22224eb2425d8e8716cd7882c1868e6e",
+            "policy": {
+              "tenantId": "6a404652-c77b-4e31-a387-eeeb33216ef9",
+              "actorId": "tevin-proof",
+              "scopes": [
+                {
+                  "operation": "omnidev.job.verify",
+                  "workspaceId": "b30fa845-f7fc-40fc-82a5-1206c42d5406"
+                }
+              ],
+              "maximumActions": 1,
+              "maximumCost": 0,
+              "expires": 1793186039426
+            },
+            "issuedAt": "2026-10-28T10:13:59.467Z",
+            "active": false,
+            "reason": "action-count-exhausted",
+            "usedActions": 1,
+            "remainingActions": 0,
+            "mode": "inactive"
+          }
+        ],
+        "externalDispatchUncertain": false
+      }
+    }
+  ],
+  "workerPolicy": {
+    "hostId": "4907c966-9fb9-4c13-9cae-3ff96dde8335",
+    "launcherSha256": "4a700cf2fda12b79ae800dd5c88323c4d2b873fe7b099fa31a50cccb99da461b",
+    "runtimeSha256": "ba4e6d110e8c1592a1ecd390f6b05f3da124b13871a5be62b341a07a853c6c32",
+    "qualificationDigest": "357bbdf7a601234af6fa3cbd9f28642cd423fd4053362cbbd9bac6c71594c72f"
+  },
+  "workflow": {
+    "command": {
+      "operation": "omnidev.job.verify",
+      "requestId": "chat-7a2178dfcdd00d9cf698dcbbdda6d5932871ecb030144c6bb5a0187ed8b48447",
+      "input": {
+        "workspaceId": "b30fa845-f7fc-40fc-82a5-1206c42d5406",
+        "jobId": "request-d89118cfde6c7df33708de25317d9d1bd2275e48e09d43340584da459bf1f4f4",
+        "sourceDigest": "3ad7f101594e39ef19b7c19c716270fd240655f3298dfad424bae9c71cf985ae",
+        "candidateDigest": "0ace9f05ecb35c0b956624579e8763585c3b1af9f824b5d75f26effdec327dc1",
+        "testManifestDigest": "7fae807344abb9e0372932278b8d50163b958e94dc26260a203c7b05ecfaf35f"
+      }
+    },
+    "action": {
+      "provider": "MGR-API-MCP",
+      "account": "6a404652-c77b-4e31-a387-eeeb33216ef9:tevin-proof",
+      "operation": "omnidev.job.verify",
+      "resource": "chat-7a2178dfcdd00d9cf698dcbbdda6d5932871ecb030144c6bb5a0187ed8b48447",
+      "parameters": {
+        "workspaceId": "b30fa845-f7fc-40fc-82a5-1206c42d5406",
+        "jobId": "request-d89118cfde6c7df33708de25317d9d1bd2275e48e09d43340584da459bf1f4f4",
+        "sourceDigest": "3ad7f101594e39ef19b7c19c716270fd240655f3298dfad424bae9c71cf985ae",
+        "candidateDigest": "0ace9f05ecb35c0b956624579e8763585c3b1af9f824b5d75f26effdec327dc1",
+        "testManifestDigest": "7fae807344abb9e0372932278b8d50163b958e94dc26260a203c7b05ecfaf35f"
+      }
+    },
+    "digest": "da04b70d8c65ebb623e96686b8c9571a120fea1199c7f2272db3eed614a58cf2",
+    "tenantId": "6a404652-c77b-4e31-a387-eeeb33216ef9",
+    "actorId": "tevin-proof",
+    "jobId": "9cfb03cb-960b-4080-859a-cbeef9d877f9",
+    "goalId": "0ec4a555-db8c-4c14-be81-c05c2880357f",
+    "state": "succeeded",
+    "maximumCost": 0,
+    "createdAt": "2026-10-28T10:13:44.242Z",
+    "result": {
+      "requestId": "chat-7a2178dfcdd00d9cf698dcbbdda6d5932871ecb030144c6bb5a0187ed8b48447",
+      "actorId": "tevin-proof",
+      "tenantId": "6a404652-c77b-4e31-a387-eeeb33216ef9",
+      "workspaceId": "b30fa845-f7fc-40fc-82a5-1206c42d5406",
+      "jobId": "request-d89118cfde6c7df33708de25317d9d1bd2275e48e09d43340584da459bf1f4f4",
+      "sourceDigest": "3ad7f101594e39ef19b7c19c716270fd240655f3298dfad424bae9c71cf985ae",
+      "candidateDigest": "0ace9f05ecb35c0b956624579e8763585c3b1af9f824b5d75f26effdec327dc1",
+      "testManifestDigest": "7fae807344abb9e0372932278b8d50163b958e94dc26260a203c7b05ecfaf35f",
+      "inputDigest": "3e140f8aca4303eae626473051439c876ac03163ed99a0d825f97af132cb0d56",
+      "status": "succeeded",
+      "cancelRequested": false,
+      "receiptId": "native-report:85967de4-b5cf-4cca-91fd-f216bc2dcfaf",
+      "policyIdentity": {
+        "hostId": "4907c966-9fb9-4c13-9cae-3ff96dde8335",
+        "launcherSha256": "4a700cf2fda12b79ae800dd5c88323c4d2b873fe7b099fa31a50cccb99da461b",
+        "runtimeSha256": "ba4e6d110e8c1592a1ecd390f6b05f3da124b13871a5be62b341a07a853c6c32",
+        "qualificationDigest": "357bbdf7a601234af6fa3cbd9f28642cd423fd4053362cbbd9bac6c71594c72f"
+      },
+      "readbackVerified": true,
+      "currentBindingVerified": true,
+      "reportId": "native-report:85967de4-b5cf-4cca-91fd-f216bc2dcfaf",
+      "reportSha256": "4c35e127e00016c309627b481d20f1e01ad68615b5b493813910b17ffd60a8ff",
+      "bytes": 4360,
+      "mediaType": "application/json",
+      "assignmentId": "85967de4-b5cf-4cca-91fd-f216bc2dcfaf",
+      "native": {
+        "cleanup": {
+          "activeProcessesAfter": 0,
+          "profileDeletionHResult": 0,
+          "verifiedAbsent": true,
+          "workspaceAbsent": true
+        },
+        "hostId": "4907c966-9fb9-4c13-9cae-3ff96dde8335",
+        "launcherSha256": "4a700cf2fda12b79ae800dd5c88323c4d2b873fe7b099fa31a50cccb99da461b",
+        "native": {
+          "capabilityCount": 0,
+          "jobAssignedAtCreation": true,
+          "packageSid": "S-1-15-2-3927492749-2854291560-1680320542-47129912-1235581859-4246053729-2772041032",
+          "profileName": "omni-85967de4-b5cf-4cca-91fd-f216bc2dcfaf",
+          "tokenIsAppContainer": true
+        },
+        "qualificationDigest": "357bbdf7a601234af6fa3cbd9f28642cd423fd4053362cbbd9bac6c71594c72f",
+        "runtimeSha256": "ba4e6d110e8c1592a1ecd390f6b05f3da124b13871a5be62b341a07a853c6c32"
+      },
+      "scope": "Approved MGR snapshot only; supervised disk budget, no hard filesystem quota",
+      "operation": "omnidev.job.verify"
+    },
+    "grant": "ecosystem-grant:chat-7a2178dfcdd00d9cf698dcbbdda6d5932871ecb030144c6bb5a0187ed8b48447",
+    "approval": "ecosystem-approval:chat-7a2178dfcdd00d9cf698dcbbdda6d5932871ecb030144c6bb5a0187ed8b48447",
+    "delegationId": null,
+    "dispatchedAt": "2026-10-28T10:13:44.386Z",
+    "error": null
+  },
+  "artifact": {
+    "sha256": "4c35e127e00016c309627b481d20f1e01ad68615b5b493813910b17ffd60a8ff",
+    "bytes": 4360,
+    "reportId": "native-report:85967de4-b5cf-4cca-91fd-f216bc2dcfaf",
+    "assignmentId": "85967de4-b5cf-4cca-91fd-f216bc2dcfaf"
+  },
+  "delegation": {
+    "id": "985dbd2f-b4ec-4316-a78e-765a07f90a9a",
+    "digest": "8dde9a8ad85d4ad6950eb08c017e319e22224eb2425d8e8716cd7882c1868e6e",
+    "policy": {
+      "tenantId": "6a404652-c77b-4e31-a387-eeeb33216ef9",
+      "actorId": "tevin-proof",
+      "scopes": [
+        {
+          "operation": "omnidev.job.verify",
+          "workspaceId": "b30fa845-f7fc-40fc-82a5-1206c42d5406"
+        }
+      ],
+      "maximumActions": 1,
+      "maximumCost": 0,
+      "expires": 1793186039426
+    },
+    "issuedAt": "2026-10-28T10:13:59.467Z",
+    "active": false,
+    "reason": "action-count-exhausted",
+    "usedActions": 1,
+    "remainingActions": 0,
+    "mode": "inactive"
+  },
+  "dispatches": 2,
+  "runtime": {
+    "configured": true,
+    "provider": "codex-cli-chatgpt",
+    "model": "gpt-6.1-sol",
+    "contextReads": false,
+    "scope": "conversation-with-host-controlled-tools",
+    "liveVerified": true,
+    "lastResponseId": "codex:01a18200-c0ef-7283-af9d-c45cc9cddf80",
+    "authentication": "official-installed-CLI-saved-ChatGPT-login",
+    "apiBillingEnabled": false
+  },
+  "finishedAt": "2026-10-28T10:14:17.545Z"
+}

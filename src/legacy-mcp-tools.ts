@@ -7,6 +7,7 @@ import { ActionSentinel } from "./action-sentinel.js";
 import type { ToolCapability } from "./contracts.js";
 import { LegacyEdgeClient } from "./legacy-client.js";
 import { LegacyDispatchCoordinator } from "./legacy-dispatch.js";
+import { legacyActionPolicy } from "./action-policy.js";
 
 export interface LegacyMcpToolOptions {
   auth:AuthContext;
@@ -35,12 +36,13 @@ export async function executeLegacyMcpCommand(
   }
 ):Promise<Record<string,unknown>>{
   const sentinel=new ActionSentinel();
+  const policy=legacyActionPolicy(input.action,input.risk);
   const decision=sentinel.evaluate(options.auth,{
     taskId:input.correlationId ?? randomUUID(),
-    tool:executeTool,
+    tool:{...executeTool,sideEffect:policy.sideEffect},
     payload:{action:input.action,payload:input.payload,target:input.target},
     audience:options.resourceAudience,
-    risk:input.risk
+    risk:policy.risk
   });
 
   if(decision.state!=="ALLOW"){
@@ -71,6 +73,8 @@ export async function executeLegacyMcpCommand(
     idempotencyKey:input.idempotencyKey ?? `mcp:${correlation}:${input.action}`
   },command);
 
+  authorizeTool(options.auth,options.resourceAudience,executeTool.requiredScopes);
+
   if(result.state==="unknown_external_state"){
     return {
       accepted:false,
@@ -91,6 +95,14 @@ export async function executeLegacyMcpCommand(
 }
 
 export function registerLegacyMcpTools(server:McpServer,options:LegacyMcpToolOptions):void{
+  async function readAuthorized(read:()=>Promise<unknown>){
+    try{
+      authorizeTool(options.auth,options.resourceAudience,["tools:read"]);
+      const value=await read();
+      authorizeTool(options.auth,options.resourceAudience,["tools:read"]);
+      return {content:[{type:"text" as const,text:JSON.stringify(value)}]};
+    }catch{return {isError:true,content:[{type:"text" as const,text:JSON.stringify({error:"Legacy read unavailable or unauthorized"})}]};}
+  }
   server.registerTool(
     "mgr_legacy_execute",
     {
@@ -123,7 +135,7 @@ export function registerLegacyMcpTools(server:McpServer,options:LegacyMcpToolOpt
       const result=await executeLegacyMcpCommand(options,input);
       return {
         content:[{type:"text",text:JSON.stringify(result)}],
-        isError:result.state==="DENY"
+        isError:result.state==="DENY" || result.state==="REQUIRE_APPROVAL" || result.accepted===false
       };
     }
   );
@@ -134,24 +146,7 @@ export function registerLegacyMcpTools(server:McpServer,options:LegacyMcpToolOpt
       description:"List persisted MGR Legacy connectors/capabilities available to the authenticated tenant.",
       inputSchema:z.object({})
     },
-    async ()=>{
-      try{
-        authorizeTool(options.auth,options.resourceAudience,["tools:read"]);
-      }catch(error){
-        return {
-          content:[{type:"text",text:JSON.stringify({
-            error:error instanceof Error?error.message:String(error)
-          })}],
-          isError:true
-        };
-      }
-      return {
-        content:[{
-          type:"text",
-          text:JSON.stringify(await options.legacy.listConnectors(options.auth.tenantId))
-        }]
-      };
-    }
+    async ()=>readAuthorized(()=>options.legacy.listConnectors(options.auth.tenantId))
   );
 
   server.registerTool(
@@ -179,12 +174,7 @@ export function registerLegacyMcpTools(server:McpServer,options:LegacyMcpToolOpt
       if(filters.action) normalized.action=filters.action;
       if(filters.status) normalized.status=filters.status;
       if(filters.limit!==undefined) normalized.limit=filters.limit;
-      return {
-        content:[{
-          type:"text",
-          text:JSON.stringify(await options.legacy.truthSummary(options.auth.tenantId,normalized))
-        }]
-      };
+      return readAuthorized(()=>options.legacy.truthSummary(options.auth.tenantId,normalized));
     }
   );
 }

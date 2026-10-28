@@ -102,3 +102,40 @@ test('gateway artifact retains standard sha256/bytes/base64 envelope for exact a
  const gateway=new DepartmentGateway({actorId,tenantId,creation:{baseUrl:'http://127.0.0.1:1',token:'c'.repeat(32)},voice:{baseUrl:'http://127.0.0.1:2',token:'v'.repeat(32)},signme:{baseUrl:'http://127.0.0.1:3',token:'s'.repeat(32)},legacy:{} as any,omnidev:{baseUrl:'http://127.0.0.1:4',token:'o'.repeat(32),actorId,tenantId,expectedPolicy:policy,fetcher:transport()}});
  const artifact=await gateway.artifact({operation:'omnidev.job.verify',requestId,input});assert.equal(artifact.sha256,omniSha256(Buffer.from(artifact.contentBase64,'base64')));assert.equal(artifact.mediaType,'application/json');assert.equal(artifact.bytes,Buffer.from(artifact.contentBase64,'base64').length);
 });
+
+for(const change of ['expiry','scope','actor','tenant'] as const){
+ test(`registered execute denies ${change} during held binding before any native POST`,async()=>{
+  const f=fixture(),handlers=new Map<string,any>();
+  const auth={actorId,tenantId,audience:'edge',scopes:['departments:read','departments:execute'],expiresAt:Date.now()+60000};
+  let release!:()=>void,entered!:()=>void,posts=0;
+  const held=new Promise<void>(r=>release=r),bindingStarted=new Promise<void>(r=>entered=r);
+  const fetcher=(async(url,init)=>{
+   if(new URL(String(url)).pathname.endsWith('/binding')){entered();await held;}
+   if(init?.method==='POST')posts++;
+   return transport(f)(url,init);
+  }) as typeof fetch;
+  const endpoint={baseUrl:'http://127.0.0.1:1',token:'x'.repeat(32)};
+  const gateway=new DepartmentGateway({actorId,tenantId,creation:endpoint,voice:endpoint,signme:endpoint,legacy:{} as any,omnidev:{...endpoint,actorId,tenantId,expectedPolicy:policy,fetcher}});
+  registerDepartmentTools({registerTool:(name:string,_:unknown,handler:any)=>handlers.set(name,handler)} as any,{gateway,auth,resourceAudience:'edge'});
+  const pending=handlers.get('mgr_department_execute')({operation:'omnidev.job.verify',requestId,input});
+  await bindingStarted;
+  if(change==='expiry')auth.expiresAt=0;
+  if(change==='scope')auth.scopes=['departments:read'];
+  if(change==='actor')auth.actorId='another';
+  if(change==='tenant')auth.tenantId='another';
+  release();
+  const response=await pending;
+  assert.equal(response.isError,true);assert.equal(posts,0);
+  assert.doesNotMatch(JSON.stringify(response),/sourceDigest|reportSha256/);
+ });
+}
+
+test('expiry after accepted POST suppresses publication and never retries the effect',async()=>{
+ const f=fixture(),handlers=new Map<string,any>(),auth={actorId,tenantId,audience:'edge',scopes:['departments:execute'],expiresAt:Date.now()+60000};let posts=0;
+ const fetcher=(async(url,init)=>{if(init?.method==='POST'){posts++;auth.expiresAt=0;}return transport(f)(url,init);}) as typeof fetch;
+ const endpoint={baseUrl:'http://127.0.0.1:1',token:'x'.repeat(32)};
+ const gateway=new DepartmentGateway({actorId,tenantId,creation:endpoint,voice:endpoint,signme:endpoint,legacy:{} as any,omnidev:{...endpoint,actorId,tenantId,expectedPolicy:policy,fetcher}});
+ registerDepartmentTools({registerTool:(name:string,_:unknown,handler:any)=>handlers.set(name,handler)} as any,{gateway,auth,resourceAudience:'edge'});
+ const response=await handlers.get('mgr_department_execute')({operation:'omnidev.job.verify',requestId,input});
+ assert.equal(posts,1);assert.equal(response.isError,true);assert.doesNotMatch(JSON.stringify(response),/reportSha256|sourceDigest/);
+});

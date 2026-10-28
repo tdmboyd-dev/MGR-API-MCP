@@ -1,0 +1,125 @@
+{
+  "files": [
+    {
+      "path": "src/department-gateway.ts",
+      "sha256": "a54d7f1e6bb5b5fe6cb26074ad5d755c28b101768b9d0435d9c7cdb1ae2a0cc3",
+      "scope": "full",
+      "note": "Complete relevant file read or authored and reviewed in this continuation"
+    },
+    {
+      "path": "src/omnidev-client.ts",
+      "sha256": "25eb3987bdcd06340d60a46f0dc1fef812bad19b1c82b2bce8dc5bebe8acd198",
+      "scope": "full",
+      "note": "Complete relevant file read or authored and reviewed in this continuation"
+    },
+    {
+      "path": "src/action-policy.ts",
+      "sha256": "052071f57237b716255921ea5838a8de96b3033d9ae8ee0d6f36893d9ba5bce6",
+      "scope": "full",
+      "note": "Complete relevant file read or authored and reviewed in this continuation"
+    },
+    {
+      "path": "src/legacy-mcp-tools.ts",
+      "sha256": "b8e35cd4f2cbce5f3ed941f917d543456d6d4d1e7fb44bb0a7aa13209bf94871",
+      "scope": "full",
+      "note": "Complete relevant file read or authored and reviewed in this continuation"
+    },
+    {
+      "path": "src/creation-mcp-tools.ts",
+      "sha256": "5d2650b1323b5e969da5c92d97e12c90088bda8010754957eb0a27a29c8ce2a8",
+      "scope": "full",
+      "note": "Complete relevant file read or authored and reviewed in this continuation"
+    },
+    {
+      "path": "src/authz.ts",
+      "sha256": "a87809a7b1984a9db3026b2c0f7f6a37effb11d6a92cb68c33d7b0608724880c",
+      "scope": "full",
+      "note": "Complete relevant file read or authored and reviewed in this continuation"
+    },
+    {
+      "path": "src/action-sentinel.ts",
+      "sha256": "a7859a8d1fd55f488e0eb142532878aace4fc3f84c27366c7fe8e80a91ef0b05",
+      "scope": "full",
+      "note": "Complete relevant file read or authored and reviewed in this continuation"
+    },
+    {
+      "path": "src/security.ts",
+      "sha256": "b08e0e6901fa188fc85492b6da8e6072a104937e89124fcd556d464984203245",
+      "scope": "full",
+      "note": "Complete relevant file read or authored and reviewed in this continuation"
+    },
+    {
+      "path": "src/creation-client.ts",
+      "sha256": "f8e72d84b3bce50b4efc8c0d866e3c06385273dc162b9cf123716d7e53f9f869",
+      "scope": "full",
+      "note": "Complete relevant file read or authored and reviewed in this continuation"
+    },
+    {
+      "path": "src/legacy-dispatch.ts",
+      "sha256": "87d4e4da0d60400c9602cf3091cef93bed10a88db0ea0d299834b1c3aa9bec4b",
+      "scope": "full",
+      "note": "Complete relevant file read or authored and reviewed in this continuation"
+    },
+    {
+      "path": "src/local-department-edge.ts",
+      "sha256": "fa5f4748a63995ae789d33e444af9b4ee7d672164230f09ce9600fc0b078c0ac",
+      "scope": "full",
+      "note": "Complete relevant file read or authored and reviewed in this continuation"
+    },
+    {
+      "path": "src/http-auth.ts",
+      "sha256": "2542c037615a32aba99a903e347c77b4cbe6afd7b466a7d433bb02b8f844f39e",
+      "scope": "full",
+      "note": "Complete relevant file read or authored and reviewed in this continuation"
+    },
+    {
+      "path": "test/omnidev-client.test.ts",
+      "sha256": "1236d5be39df910f13bbdb7dd92127985730a21c9d726f06d298e6d6cb7211b9",
+      "scope": "full",
+      "note": "Complete relevant file read or authored and reviewed in this continuation"
+    },
+    {
+      "path": "test/legacy-mcp-tools.test.ts",
+      "sha256": "706a6128d24816610c97be426078a6a0fd35d678c65a63a2d4e9fb79e0bed070",
+      "scope": "full",
+      "note": "Complete relevant file read or authored and reviewed in this continuation"
+    },
+    {
+      "path": "test/creation-mcp-tools.test.ts",
+      "sha256": "ae25f1b93ad44a3e1a84db8679af82e7108ac92ffcee137f59f468373fa3b4fb",
+      "scope": "full",
+      "note": "Complete relevant file read or authored and reviewed in this continuation"
+    },
+    {
+      "path": "scripts/prove-tevin-omnidev-local.ts",
+      "sha256": "61e0b8aa329cd06e7831923aa473bc9c05966294dcc036f423700ef70da13b07",
+      "scope": "full",
+      "note": "Complete relevant file read or authored and reviewed in this continuation"
+    },
+    {
+      "path": "src/legacy-client.ts",
+      "sha256": "83a0f434adf803d01d43cd6a6b8849b2da79f2248cf7005fa481bf24d8b61e46",
+      "scope": "partial",
+      "note": "Read in this continuation; partial includes located/contract-only inspection, not whole-file audit"
+    },
+    {
+      "path": "src/mcp-server.ts",
+      "sha256": "e4f4211ef62627d26d1e9e76a67b23be7f5b6904157f9b7382165dc974fd8c9d",
+      "scope": "partial",
+      "note": "Read in this continuation; partial includes located/contract-only inspection, not whole-file audit"
+    },
+    {
+      "path": "scripts/start-tevin-departments-local.ts",
+      "sha256": "9b2d788dc87289dea923b07de653f08571c49850d6cabe21a5f24d4612f6656c",
+      "scope": "partial",
+      "note": "Read in this continuation; partial includes located/contract-only inspection, not whole-file audit"
+    },
+    {
+      "path": "scripts/verify_repository.py",
+      "sha256": "a7f87cf49e0d35fcb67035e7f630b788f226b5e84a0a146dba9be625c7bd238a",
+      "scope": "partial",
+      "note": "Read in this continuation; partial includes located/contract-only inspection, not whole-file audit"
+    }
+  ],
+  "unread": "All other source, dependency internals, assets and broad research not freshly read in this continuation. Earlier ledgers retain historical scope."
+}

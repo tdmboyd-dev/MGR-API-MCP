@@ -43,3 +43,7 @@ Read HTTP handler/auth/metadata/tool and engine source plus the narrow handler t
 ## October 28 wave4 - OmniDev gateway
 
 Implemented optional exact-snapshot verification transport and metadata-only binding. Focused protocol tests use injected HTTP responses; actual local service/worker/ONE acceptance is separate. No default reset or paid action. See the department integration handoff for the complete scope and current evidence.
+
+
+## October 28 completion continuation
+Reproduced and repaired authorization expiry before native POST, caller-selected risk downgrade, missing/late generic Legacy read checks, and post-effect result expiry. Full API100/100 and repository integrity181/181 passed. Actual configured-model/ONE/MCP/native journey and saved canonical report qualified in a bounded local lab. See evidence/completion-2026-10-28/RESULTS.md and SOURCE-READING.json. No hosted/physical/production acceptance claimed.
