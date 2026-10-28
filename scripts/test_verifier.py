@@ -20,6 +20,17 @@ class IntegrityChecks(unittest.TestCase):
     def test_raw_pdf_rejected(self):
         (self.root/'source.pdf').write_bytes(b'%PDF-fixture')
         self.assertTrue(any('Unexpected public' in e for e in verify(self.root)['errors']))
+    def test_blank_secret_template_allowed_but_real_env_rejected(self):
+        (self.root/'.env.example').write_text('LEGACY_SERVICE_TOKEN=\nMCP_PUBLIC_BASE_URL=https://api.example/mcp\n')
+        self.assertEqual(verify(self.root)['status'],'PASS')
+        (self.root/'.env').write_text('LEGACY_SERVICE_TOKEN=\n')
+        self.assertTrue(any('Unexpected public' in e for e in verify(self.root)['errors']))
+    def test_template_secret_value_is_scanned_without_echo(self):
+        value='fixture-only-unapproved-token-value'
+        (self.root/'.env.example').write_text('LEGACY_SERVICE_TOKEN='+value+'\n')
+        report=verify(self.root)
+        self.assertTrue(any('Non-placeholder credential' in e for e in report['errors']))
+        self.assertNotIn(value,json.dumps(report))
     def test_synthetic_secret_detected_without_echo(self):
         marker='ghp_'+'A'*36
         (self.root/'accidental.txt').write_text(marker)

@@ -44,6 +44,7 @@ export async function executeCreationMcpCommand(
     payload:{
       workspaceId:input.workspaceId,
       capability:input.capability,
+      input:input.input,
       acceptanceCriteria:input.acceptanceCriteria,
       maxCost:input.maxCost
     },

@@ -97,3 +97,8 @@ GitHub Actions run `37291231033` passed a containerized process-boundary proof:
 - the mock Legacy boundary recorded exactly 3 mutations for the 3 unique idempotency keys
 
 This proves the deployment artifact and cross-process contracts. It does not claim a public production URL or a ChatGPT-hosted session.
+
+
+## Ecosystem review — October 27, 2026
+
+Additive source-pinned ecosystem context: [human handoff](docs/ecosystem/HUMAN-HANDOFF.md). This review branch preserves the default-branch baseline and existing work orders. Domain runtime/production acceptance is separate.

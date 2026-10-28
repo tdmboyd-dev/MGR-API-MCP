@@ -7,6 +7,7 @@ import { ValidatingCreationOSClient } from "./creation-client.js";
 import { applyPrivacyPolicy } from "./privacy-firewall.js";
 import { registerLegacyMcpTools, type LegacyMcpToolOptions } from "./legacy-mcp-tools.js";
 import { registerCreationMcpTools, type CreationMcpToolOptions } from "./creation-mcp-tools.js";
+import { registerEcosystemCatalogTool } from "./ecosystem-catalog.js";
 
 export function createMgrMcpServer(options:{legacy?:LegacyMcpToolOptions;creation?:CreationMcpToolOptions}={}): McpServer {
   const server = new McpServer(
@@ -16,6 +17,7 @@ export function createMgrMcpServer(options:{legacy?:LegacyMcpToolOptions;creatio
         "MGR MCP is a governed task edge. Read-only/deterministic tools may answer immediately. Side-effecting capabilities require authenticated scopes, policy and approval before dispatch.",
     },
   );
+  registerEcosystemCatalogTool(server,options.legacy?.auth,options.legacy?.resourceAudience);
 
   server.registerTool(
     "mgr_system_info",
@@ -28,10 +30,11 @@ export function createMgrMcpServer(options:{legacy?:LegacyMcpToolOptions;creatio
         type: "text",
         text: JSON.stringify({
           apiMcp: "assistant/task/API/MCP edge",
-          brain: "model-independent controller subsystem",
+          brain: "MGR-ONE owns Tevin reasoning, memory and authority; this service is its transport/controller edge",
           creationOs: "shared creation/control-plane engine",
           createLoco: "visual/web reconstruction product using Creation OS",
-          sideEffects: "not exposed by this bootstrap server",
+          sideEffects: options.legacy || options.creation ? "governed domain transports injected; availability and successful effects require separate receipts" : "not exposed by this bootstrap server",
+          transportConfiguration: {legacyInjected:Boolean(options.legacy),creationInjected:Boolean(options.creation)},
         }),
       }],
     }),

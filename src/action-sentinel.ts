@@ -32,6 +32,8 @@ export class ActionSentinel {
       version: action.tool.version,
       payload: action.payload,
       audience: action.audience,
+      principal: {actorId:auth.actorId,tenantId:auth.tenantId},
+      risk: action.risk,
     });
 
     try {

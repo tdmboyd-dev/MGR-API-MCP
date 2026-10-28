@@ -17,8 +17,16 @@ def verify(root=ROOT, local=False):
         if not (root/name).is_file(): errors.append(f'Missing required file: {name}')
     for p in public:
         rel=p.relative_to(root).as_posix()
-        if p.suffix in {'.zip','.pdf','.pem','.key','.pfx','.p12'} or p.name.startswith('.env'):
+        if p.suffix in {'.zip','.pdf','.pem','.key','.pfx','.p12'} or (p.name.startswith('.env') and p.name!='.env.example'):
             errors.append(f'Unexpected public binary/secret-config file: {rel}')
+        if p.name=='.env.example':
+            for line in p.read_text(encoding='utf-8').splitlines():
+                if not line.strip() or line.lstrip().startswith('#') or '=' not in line: continue
+                key,value=line.split('=',1)
+                if not re.search(r'TOKEN|SECRET|PASSWORD|PRIVATE_KEY|API_KEY',key,re.I): continue
+                value=value.strip().strip('"\'')
+                if value and not re.fullmatch(r'<[^>]+>|your[-_].+|replace[-_].+|\$\{[A-Z0-9_]+\}',value,re.I):
+                    errors.append(f'Non-placeholder credential in template {rel}: {key.strip()}')
         if p.suffix=='.json':
             checked+=1
             try: json.loads(p.read_text(encoding='utf-8'))
@@ -30,7 +38,7 @@ def verify(root=ROOT, local=False):
                 path=unquote(link.split('#')[0].split(' "')[0])
                 checked+=1
                 if not (p.parent/path).exists(): errors.append(f'Broken local link in {rel}: {link}')
-        if p.suffix in {'.md','.json','.txt','.mjs','.py','.yml','.yaml'}:
+        if p.suffix in {'.md','.json','.txt','.mjs','.py','.yml','.yaml'} or p.name=='.env.example':
             text=p.read_text(encoding='utf-8')
             patterns=[r'gh[pousr]_[A-Za-z0-9]{30,}',r'github_pat_[A-Za-z0-9_]{40,}',r'sk-[A-Za-z0-9_-]{30,}',r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----',r'https://files\.skool\.com/[^\s"<>]*[?&]Signature=']
             checked+=1
