@@ -16,7 +16,7 @@ export function assertAuthorized(
   resource: ProtectedResource,
   now = Date.now(),
 ): void {
-  if (auth.expiresAt <= now) throw new Error("authorization expired");
+  if (!Number.isFinite(auth.expiresAt) || auth.expiresAt <= now) throw new Error("authorization expired");
   if (auth.audience !== resource.audience) throw new Error("token audience does not match protected resource");
   const granted = new Set(auth.scopes);
   const missing = resource.requiredScopes.filter((scope) => !granted.has(scope));

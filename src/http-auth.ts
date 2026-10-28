@@ -40,7 +40,7 @@ export async function authorizeMcpRequest(input: {
   }
 
   const now = input.now ?? Date.now();
-  if (verified.expiresAt <= now) {
+  if (!Number.isFinite(verified.expiresAt) || verified.expiresAt <= now) {
     return challenge(401, "access token expired", input.resourceMetadataUrl, "invalid_token");
   }
 

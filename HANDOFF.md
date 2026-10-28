@@ -1,5 +1,11 @@
 # Resume MGR-API-MCP
 
+## Current checkpoint — ecosystem department integration, October 28, 2026
+
+Read [docs/DEPARTMENT-INTEGRATION.md](docs/DEPARTMENT-INTEGRATION.md) and the dated full-build scorecard before continuing. The four bounded department operations now have actual local domain execution and independently verified readback through official MCP HTTP. ONE owns preview/approval/anchored execution and recovery; this repository owns transport. Real PostgreSQL, SQLite and cached Kokoro CPU inference were exercised. The initial owner proof passed28/28 checks; the final receipt in the delivered wave2 evidence supersedes that count when additional checks are added. Default branches were preserved. Local integration does not establish public deployment, physical device acceptance or every product capability.
+
+New source: department-gateway.ts, local-department-edge.ts, actual local proof scripts and persistent isolated-lab launcher. Production HTTP can inject department endpoints through explicit secure environment configuration while retaining its JWKS validation. Local lab service-token authentication is separately labeled and loopback only. No credentials, private runtime configuration, databases or model weights belong in Git or delivery. A dispatched unknown request is status-reconciled, never blindly repeated.
+
 ## Current resume checkpoint — October 6, 2026
 
 MGR-API-MCP is now the shared external edge, switchboard, and Brain transport layer. MGR Legacy is the authoritative business data/workflow/action system. Creation OS remains the creation engine. See `architecture/LEGACY-INTEGRATION.md`.

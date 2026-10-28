@@ -1,3 +1,4 @@
+import {legacyRequestDigest} from "../src/legacy-client.js";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { LegacyEdgeClient } from "../src/legacy-client.js";
@@ -14,6 +15,7 @@ test("dispatch coordinator reconciles a lost response by correlation receipt",as
     return new Response(JSON.stringify([{
       receiptId:"receipt-1",
       correlationId:"corr-1",
+      tenantId:"tenant-1",scope:{tenantId:"tenant-1"},actor:{actorType:"service",actorId:"actor-1",tenantId:"tenant-1"},action:"crm.create_contact",evidence:{idempotencyKey:"idem-1",requestDigest:legacyRequestDigest({tenantId:"tenant-1",actorId:"actor-1",correlationId:"corr-1",idempotencyKey:"idem-1"},{action:"crm.create_contact",payload:{firstName:"LostResponse"}})},
       status:"succeeded",
       outcome:{contactId:"c1"}
     }]),{status:200});
@@ -88,6 +90,7 @@ test("dispatch timeout reconciles through authoritative Legacy receipt without m
     return new Response(JSON.stringify([{
       receiptId:"receipt-timeout",
       correlationId:"corr-timeout",
+      tenantId:"tenant-1",scope:{tenantId:"tenant-1"},actor:{actorType:"service",actorId:"actor-1",tenantId:"tenant-1"},action:"crm.create_contact",evidence:{idempotencyKey:"idem-timeout",requestDigest:legacyRequestDigest({tenantId:"tenant-1",actorId:"actor-1",correlationId:"corr-timeout",idempotencyKey:"idem-timeout"},{action:"crm.create_contact",payload:{firstName:"TimeoutButCommitted"}})},
       status:"succeeded",
       outcome:{contactId:"c-timeout"}
     }]),{status:200});

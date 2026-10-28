@@ -4,6 +4,7 @@ import { buildProtectedResourceMetadata } from "./oauth-metadata.js";
 import { createAuthorizedMgrMcpHttpHandler } from "./mcp-http.js";
 import { LegacyEdgeClient } from "./legacy-client.js";
 import { JwksAccessTokenVerifier } from "./jwt-verifier.js";
+import { DepartmentGateway } from "./department-gateway.js";
 
 const port=Number(process.env.PORT ?? "8787");
 const baseUrl=requiredUrl("MCP_PUBLIC_BASE_URL");
@@ -26,6 +27,7 @@ const verifier=new JwksAccessTokenVerifier({
 });
 const legacy=new LegacyEdgeClient({
   baseUrl:legacyBaseUrl,
+  ...(process.env.MGR_DEPARTMENT_ACTOR_ID?{actorId:process.env.MGR_DEPARTMENT_ACTOR_ID}:{}),
   ...(process.env.LEGACY_SERVICE_TOKEN?{bearerToken:process.env.LEGACY_SERVICE_TOKEN}:{}),
   timeoutMs:Number(process.env.LEGACY_TIMEOUT_MS ?? "15000")
 });
@@ -34,7 +36,13 @@ const mcp=createAuthorizedMgrMcpHttpHandler({
   resourceAudience,
   requiredScopes,
   resourceMetadataUrl,
-  legacy
+  legacy,
+  ...(process.env.MGR_DEPARTMENTS_ENABLED==="true"?{departments:new DepartmentGateway({
+    actorId:required("MGR_DEPARTMENT_ACTOR_ID"),tenantId:required("MGR_DEPARTMENT_TENANT_ID"),legacy,
+    creation:{baseUrl:requiredUrl("CREATION_BASE_URL"),token:required("CREATION_SERVICE_TOKEN")},
+    voice:{baseUrl:requiredUrl("VOICE_BASE_URL"),token:required("VOICE_SERVICE_TOKEN")},
+    signme:{baseUrl:requiredUrl("SIGNME_BASE_URL"),token:required("SIGNME_SERVICE_TOKEN")}
+  })}:{})
 });
 const metadata=buildProtectedResourceMetadata({
   resource:resourceAudience,
@@ -109,6 +117,7 @@ function requiredUrl(name:string):string{
   if(!value) throw new Error(`${name} is required`);
   return new URL(value).toString();
 }
+function required(name:string):string{const value=process.env[name];if(!value?.trim())throw Error(`${name} is required`);return value;}
 function csv(value:string):string[]{
   return value.split(",").map(item=>item.trim()).filter(Boolean);
 }

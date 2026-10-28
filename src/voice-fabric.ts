@@ -61,7 +61,7 @@ export class VoiceRightsRegistry {
   require(subjectId:string,use:string):VoiceRights{
     const grant=this.grants.get(subjectId);
     if(!grant) throw new Error(`No voice-rights grant for ${subjectId}`);
-    if(grant.expiresAt && Date.parse(grant.expiresAt)<=Date.now()) throw new Error("Voice-rights grant expired");
+    if(grant.expiresAt!==undefined && (!Number.isFinite(Date.parse(grant.expiresAt))||Date.parse(grant.expiresAt)<=Date.now())) throw new Error("Voice-rights grant expired");
     if(!grant.permittedUses.includes(use)) throw new Error(`Voice-rights grant does not allow ${use}`);
     return {...grant,permittedUses:[...grant.permittedUses]};
   }

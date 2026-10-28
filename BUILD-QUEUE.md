@@ -1,5 +1,12 @@
 # Research-to-build queue
 
+## Department integration continuation — October 28, 2026
+
+- Implemented: strict four-operation MCP gateway, credential-bound tenant/actor, exact input/receipt binding, independent artifact/readback verification, expiry before publication and bounded transport.
+- Locally exercised: Legacy contacts, Creation OS Markdown artifacts, VOICE cached CPU speech, SignMe immutable drafts; ONE owner preview/approval and lost-response restart recovery.
+- Continue from docs/DEPARTMENT-INTEGRATION.md. Existing wider research queue below remains historical/remaining scope; the edge must not acquire ONE's brain authority or domain record ownership.
+- Remaining: hosted OAuth/public deployment proof, automatic natural-language tool proposal integration, additional domain capabilities, user business-workspace onboarding, physical audio acceptance and production operations. These are not inferred from the local proof.
+
 The unified assistant remains the goal. MGR-API-MCP is now the designated home; do not ask the user to choose it again.
 
 1. Finish free-community collection: carousel skill, editable brand template, remaining n8n workflows and linked workflow library, voice resources, new lesson attachments and videos. Preserve access/reading boundaries.

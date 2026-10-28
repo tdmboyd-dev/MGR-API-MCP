@@ -77,7 +77,14 @@ export function applyPrivacyPolicy(text: string, policy: PrivacyPolicy): Privacy
     };
   }
 
-  const redactable = findings.filter((f) => policy.redact.includes(f.type));
+  // Merge overlapping detectors before replacement. Otherwise a phone/card match
+  // can alter offsets and leave pieces of the original value in the output.
+  const redactable:PrivacyFinding[]=[];
+  for(const finding of findings.filter(f=>policy.redact.includes(f.type))){
+    const previous=redactable.at(-1);
+    if(previous&&finding.start<previous.end){previous.end=Math.max(previous.end,finding.end);previous.value=text.slice(previous.start,previous.end);}
+    else redactable.push({...finding});
+  }
   if (!redactable.length) {
     return { decision: "ALLOW", text, findings, redactions: [] };
   }

@@ -3,6 +3,7 @@ import { createMgrMcpServer } from "./mcp-server.js";
 import { authorizeMcpRequest, type AccessTokenVerifier, type McpAuthResult } from "./http-auth.js";
 import type { LegacyEdgeClient } from "./legacy-client.js";
 import type { CreationOSClient } from "./creation-client.js";
+import type { DepartmentGateway, DepartmentToolOptions } from "./department-gateway.js";
 
 export interface AuthorizedMgrMcpHttpOptions {
   verifier:AccessTokenVerifier;
@@ -11,6 +12,7 @@ export interface AuthorizedMgrMcpHttpOptions {
   resourceMetadataUrl:string;
   legacy:LegacyEdgeClient;
   creation?:CreationOSClient;
+  departments?:DepartmentGateway;
 }
 
 export async function authorizeAndBindMcpRequest(
@@ -59,6 +61,7 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
       }
 
       const serverOptions:{
+        departments?:DepartmentToolOptions;
         legacy:{
           auth:typeof authResult.auth;
           resourceAudience:string;
@@ -83,6 +86,7 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
           creation:options.creation
         };
       }
+      if(options.departments)serverOptions.departments={auth:authResult.auth,resourceAudience:options.resourceAudience,gateway:options.departments};
       const handler=createMcpHandler(()=>createMgrMcpServer(serverOptions));
       activeHandlers.add(handler);
       try{

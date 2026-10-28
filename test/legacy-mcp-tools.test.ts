@@ -1,3 +1,4 @@
+import {legacyRequestDigest} from "../src/legacy-client.js";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { executeLegacyMcpCommand } from "../src/legacy-mcp-tools.js";
@@ -93,6 +94,7 @@ test("authenticated Legacy MCP write reconciles a lost response instead of blind
       return new Response(JSON.stringify([{
         receiptId:"receipt-mcp-reconcile",
         correlationId:"corr-mcp-reconcile",
+        tenantId:"tenant-auth",scope:{tenantId:"tenant-auth"},actor:{actorType:"service",actorId:"actor-auth",tenantId:"tenant-auth"},action:"crm.create_contact",evidence:{idempotencyKey:"idem-mcp-reconcile",requestDigest:legacyRequestDigest({tenantId:"tenant-auth",actorId:"actor-auth",correlationId:"corr-mcp-reconcile",idempotencyKey:"idem-mcp-reconcile"},{action:"crm.create_contact",payload:{firstName:"Reconciled"}})},
         status:"succeeded",
         outcome:{contactId:"contact-1"}
       }]),{status:200});

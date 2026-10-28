@@ -3,7 +3,7 @@ import type {
   LegacyCommandResult,
   LegacyEdgeContext
 } from "./legacy-client.js";
-import { LegacyEdgeClient } from "./legacy-client.js";
+import { LegacyEdgeClient, legacyRequestDigest } from "./legacy-client.js";
 
 export type ReconciledDispatchResult =
   | {
@@ -31,10 +31,21 @@ export class LegacyDispatchCoordinator {
     }catch(error){
       const receipts=await this.legacy.truthReceipts<any>(context.tenantId,{
         correlationId:context.correlationId,
-        limit:10
-      }).catch(()=>[]);
+        actorId:context.actorId,
+        action:request.action,
+        limit:100
+      },context).catch(()=>[]);
 
       const terminal=receipts.find(receipt=>
+        typeof receipt?.receiptId==="string" && receipt.receiptId.length>0 &&
+        receipt.tenantId===context.tenantId &&
+        receipt.scope?.tenantId===context.tenantId &&
+        receipt.actor?.tenantId===context.tenantId &&
+        receipt.actor?.actorId===context.actorId &&
+        receipt.actor?.actorType==="service" &&
+        receipt.action===request.action &&
+        receipt.evidence?.idempotencyKey===context.idempotencyKey &&
+        receipt.evidence?.requestDigest===legacyRequestDigest(context,request) &&
         receipt?.correlationId===context.correlationId &&
         ["succeeded","failed","blocked","rolled_back"].includes(String(receipt.status))
       );
@@ -47,7 +58,7 @@ export class LegacyDispatchCoordinator {
             accepted:terminal.status==="succeeded",
             receiptId:String(terminal.receiptId),
             correlationId:context.correlationId,
-            result:terminal.outcome
+            result:terminal.outcome?.result ?? terminal.outcome
           }
         };
       }

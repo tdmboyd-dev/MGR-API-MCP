@@ -67,7 +67,7 @@ export class ActionSentinel {
       return { actionDigest: digest, state: "DENY", reason: "approval digest does not match proposed action" };
     }
 
-    if (approval.expiresAt && Date.parse(approval.expiresAt) <= now) {
+    if (approval.expiresAt !== undefined && (!Number.isFinite(Date.parse(approval.expiresAt)) || Date.parse(approval.expiresAt) <= now)) {
       return { actionDigest: digest, state: "DENY", reason: "approval expired" };
     }
 

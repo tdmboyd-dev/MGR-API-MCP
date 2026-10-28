@@ -105,7 +105,7 @@ export class InMemoryTaskEngine {
   approve(approvalId: string, actorId: string, action: unknown): Approval {
     const approval = this.requireApproval(approvalId);
     if (approval.state !== "pending") throw new Error(`Approval is ${approval.state}`);
-    if (approval.expiresAt && Date.parse(approval.expiresAt) <= Date.now()) {
+    if (approval.expiresAt !== undefined && (!Number.isFinite(Date.parse(approval.expiresAt)) || Date.parse(approval.expiresAt) <= Date.now())) {
       const expired: Approval = { ...approval, state: "expired" };
       this.approvals.set(approvalId, expired);
       throw new Error("Approval expired");
