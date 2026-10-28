@@ -1,7 +1,7 @@
-// Source snapshot catalog; not proof of live integration.
+// Source snapshot and explicitly unavailable-source discovery catalog; not proof of live integration.
 export const ecosystemCatalogData = {
   "schemaVersion": "mgr.ecosystem.catalog.v1",
-  "catalogRevision": "a5b8e782676d71d5fc3b9e07034bd574a8dc9a065a3dd1ef6a19c2deca7014fb",
+  "catalogRevision": "c8b91a2273bd40dc381f86bed277cb86777197c9a919b1d011a4f973f344644b",
   "generatedFrom": "source-snapshot",
   "entries": [
     {
@@ -362,6 +362,46 @@ export const ecosystemCatalogData = {
         "blockedReasons": [
           "Active development snapshot; preserve newer main work.",
           "No qualified Tevin-to-OmniDev execution adapter or live worker acceptance inferred from source."
+        ]
+      },
+      "runtimeVerified": false
+    },
+    {
+      "repoId": "MGR-OMNISIGHT",
+      "role": "under-construction",
+      "description": "Owner-reported project under active construction. GitHub repository currently has no source commit; capabilities have not been inspected.",
+      "placement": "held",
+      "source": {
+        "repository": "https://github.com/tdmboyd-dev/MGR-OMNISIGHT",
+        "defaultBranch": "main",
+        "status": "empty-repository"
+      },
+      "integration": {
+        "state": "under-construction/source-unavailable",
+        "tools": [],
+        "blockedReasons": [
+          "GitHub commits endpoint returned HTTP 409: Git Repository is empty (2026-10-28).",
+          "Discovery only; preserve the other builder’s work and inspect source when available."
+        ]
+      },
+      "runtimeVerified": false
+    },
+    {
+      "repoId": "MGR-CODE-MONSTER",
+      "role": "under-construction",
+      "description": "Owner-reported project under active construction. GitHub repository currently has no source commit; capabilities have not been inspected.",
+      "placement": "held",
+      "source": {
+        "repository": "https://github.com/tdmboyd-dev/MGR-CODE-MONSTER",
+        "defaultBranch": "main",
+        "status": "empty-repository"
+      },
+      "integration": {
+        "state": "under-construction/source-unavailable",
+        "tools": [],
+        "blockedReasons": [
+          "GitHub commits endpoint returned HTTP 409: Git Repository is empty (2026-10-28).",
+          "Discovery only; preserve the other builder’s work and inspect source when available."
         ]
       },
       "runtimeVerified": false

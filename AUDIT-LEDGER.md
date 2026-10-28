@@ -38,3 +38,8 @@ Initial publication commit 6069025706efe924df1595e1ae3b010508c35686 was recovere
 ## September 29, 2026 — HTTP authorization research
 
 Read HTTP handler/auth/metadata/tool and engine source plus the narrow handler test. Compared them to official MCP authorization/transport and OpenTelemetry context guidance. Found the HTTP handler's auth middleware is explicitly a future requirement; the auth helper exists but is not connected to request dispatch. Documented the precise bridge and denied-path acceptance in research/MCP-HTTP-AUTH-BOUNDARY-2026-09-29.md. This is research/specification, not a hosted authentication repair. The repository integrity verifier was run on the candidate before publication; no hosted CI or provider validation is claimed.
+
+
+## October 28 wave4 - OmniDev gateway
+
+Implemented optional exact-snapshot verification transport and metadata-only binding. Focused protocol tests use injected HTTP responses; actual local service/worker/ONE acceptance is separate. No default reset or paid action. See the department integration handoff for the complete scope and current evidence.

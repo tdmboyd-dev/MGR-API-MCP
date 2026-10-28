@@ -69,3 +69,7 @@ Research packet: research/BEAST-SMARTWIZ-OMNIROUTE-VOICEBOX-FREEBUF-SERVERBYT-20
 42. [x] Add FreeBuf to the secondary security research catalog and enforce primary-source verification before promotion.
 43. [external] Obtain ServerByt VPS specifications and AUP details before considering it for MGR backend workloads; shared plans remain website-only by default.
 
+
+44. [x] Implement optional exact-snapshot OmniDev verification transport, bound candidate discovery, canonical report download and adverse-path protocol tests.
+45. [active] Qualify actual ONE/MCP/local engineering SQLite service/approved AppContainer snapshot/durable readback/restart/cancel using the real model-produced candidate.
+46. [waiting-source] Inspect OMNISIGHT/CODE-MONSTER once the other builder publishes source; current repositories are empty.

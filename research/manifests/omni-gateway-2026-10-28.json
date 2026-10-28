@@ -1,0 +1,170 @@
+{
+  "scope": "Wave4 bounded OmniDev verification transport; full listed source reading only, not whole research corpus or whole ecosystem audit",
+  "reading": "full",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "d2a3cdd1a2c31904adbffc2a3d71b122a72f03815a799faa2a8c9e866b616f21",
+      "bytes": 2876,
+      "reading": "full"
+    },
+    {
+      "path": "MGR-Beast-Pack/MGR-BEAST-PACK.md",
+      "sha256": "22f8e089ad975cc1c1ba4f5fa43c8e3363fcbeaa429e2027230ba469df23f4f2",
+      "bytes": 45257,
+      "reading": "full"
+    },
+    {
+      "path": "skills/time-voice/SKILL.md",
+      "sha256": "8a5b7dba8afac520e0cc9fa13c1e5f9a298c50ae5ac8e46fc2a5d9f7d96168ed",
+      "bytes": 2169,
+      "reading": "full"
+    },
+    {
+      "path": "src/omnidev-client.ts",
+      "sha256": "e16475091c7aede22fbc1176506d267bf441237c67d54ff2790a2e5d4a095aeb",
+      "bytes": 12030,
+      "reading": "full"
+    },
+    {
+      "path": "src/department-gateway.ts",
+      "sha256": "d6f891591fc77417b0681080fb8724d881867b7b9ce55b8e98b5c3324c2d3cef",
+      "bytes": 16613,
+      "reading": "full"
+    },
+    {
+      "path": "src/ecosystem-catalog.ts",
+      "sha256": "57130c14305e3c8a48266f5110c27fab1b4410671d09bf13ee553165756939b5",
+      "bytes": 1565,
+      "reading": "full"
+    },
+    {
+      "path": "src/ecosystem-catalog-data.ts",
+      "sha256": "18a722f28e0cd829fe437a52eeb5313fb68369de0200e3701722fc44029b0737",
+      "bytes": 14948,
+      "reading": "full"
+    },
+    {
+      "path": "src/http-server.ts",
+      "sha256": "f150e44d6c7777ff853dcf06626e5d88cf84422c429fbc34ea9f8fa151e36972",
+      "bytes": 6048,
+      "reading": "full"
+    },
+    {
+      "path": "src/local-department-edge.ts",
+      "sha256": "046d61c0e56bf35012007a0a38a3f466c793c5d44f0aaba15581cfb87af66af1",
+      "bytes": 3118,
+      "reading": "full"
+    },
+    {
+      "path": "src/authz.ts",
+      "sha256": "a87809a7b1984a9db3026b2c0f7f6a37effb11d6a92cb68c33d7b0608724880c",
+      "bytes": 1023,
+      "reading": "full"
+    },
+    {
+      "path": "src/legacy-client.ts",
+      "sha256": "83a0f434adf803d01d43cd6a6b8849b2da79f2248cf7005fa481bf24d8b61e46",
+      "bytes": 6968,
+      "reading": "full"
+    },
+    {
+      "path": "scripts/start-tevin-departments-local.ts",
+      "sha256": "9b2d788dc87289dea923b07de653f08571c49850d6cabe21a5f24d4612f6656c",
+      "bytes": 6801,
+      "reading": "full"
+    },
+    {
+      "path": "test/omnidev-client.test.ts",
+      "sha256": "4cca6c6f365b80f1faf441072ed6e8cfe21ee06e60c43754e9f97473dad45d38",
+      "bytes": 13851,
+      "reading": "full"
+    },
+    {
+      "path": "test/department-gateway.test.ts",
+      "sha256": "e86e9fbc8c5254ea56ea48f34de7b065358378cfdc1e52eb576e8d69882349ac",
+      "bytes": 5264,
+      "reading": "full"
+    },
+    {
+      "path": "test/department-receipt-binding.test.ts",
+      "sha256": "10602276cfd6130572fe0eb68329e040c8d33bc0ed42a573d78778d9610cf616",
+      "bytes": 6061,
+      "reading": "full"
+    },
+    {
+      "path": "test/ecosystem-catalog.test.ts",
+      "sha256": "3a84aab2806e43f28e7e33aab8ce3a85eeeb76f8cca1d92502e06f1e0d0b49df",
+      "bytes": 1246,
+      "reading": "full"
+    },
+    {
+      "path": "docs/DEPARTMENT-INTEGRATION.md",
+      "sha256": "59eac25942908b0ff92577b8722b02e9a7d6689e60a208064895b29f078794a9",
+      "bytes": 12071,
+      "reading": "full"
+    },
+    {
+      "path": "HANDOFF.md",
+      "sha256": "000ff9c9a0abb69d9da4ed0e1aa45fd123b588f628278b385a7e0d8c166c9e56",
+      "bytes": 15741,
+      "reading": "full"
+    },
+    {
+      "path": "BUILD-QUEUE.md",
+      "sha256": "e9a21db304d4092e896540467d5b9261190a807cdc221f26b05ec4e06a6ea2b0",
+      "bytes": 9845,
+      "reading": "full"
+    },
+    {
+      "path": "docs/full-build/SCORECARD.md",
+      "sha256": "3cb7a484a0dd7cb90c33df248fbcfe2b36661266ae46de04bf3a6e200764b179",
+      "bytes": 13872,
+      "reading": "full"
+    },
+    {
+      "path": "AUDIT-LEDGER.md",
+      "sha256": "e3ff12f918770da0901ee8f0fc033c5707b9a33ca3f168106a1e25920329ffda",
+      "bytes": 4397,
+      "reading": "full"
+    },
+    {
+      "path": "package.json",
+      "sha256": "b0d449577c174ef5e5c51d5a813b7cae990ea4c4dbe115928a195883482b9257",
+      "bytes": 1237,
+      "reading": "full"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "b4a03d898d43753392d8e40fb0b8ba0d8c47673b369d37a8cb8bee28e96b3179",
+      "bytes": 350,
+      "reading": "full"
+    },
+    {
+      "path": "scripts/verify_repository.py",
+      "sha256": "a7f87cf49e0d35fcb67035e7f630b788f226b5e84a0a146dba9be625c7bd238a",
+      "bytes": 4690,
+      "reading": "full"
+    }
+  ],
+  "executionEvidence": {
+    "fullApiTests": {
+      "passed": 89,
+      "total": 89
+    },
+    "omniFocusedIncluded": {
+      "passed": 20,
+      "total": 20
+    },
+    "typecheck": "PASS",
+    "repositoryIntegrity": {
+      "passed": 172,
+      "total": 172
+    }
+  },
+  "limits": [
+    "Injected transport tests are not real OS worker execution proof.",
+    "Actual service/ONE/native integration acceptance is separate.",
+    "Public deployment/OAuth issuance/physical audio/signing remain separate."
+  ]
+}

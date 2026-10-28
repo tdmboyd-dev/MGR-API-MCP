@@ -5,6 +5,7 @@ import { createAuthorizedMgrMcpHttpHandler } from "./mcp-http.js";
 import { LegacyEdgeClient } from "./legacy-client.js";
 import { JwksAccessTokenVerifier } from "./jwt-verifier.js";
 import { DepartmentGateway } from "./department-gateway.js";
+import { omniPolicy } from "./omnidev-client.js";
 
 const port=Number(process.env.PORT ?? "8787");
 const baseUrl=requiredUrl("MCP_PUBLIC_BASE_URL");
@@ -41,7 +42,8 @@ const mcp=createAuthorizedMgrMcpHttpHandler({
     actorId:required("MGR_DEPARTMENT_ACTOR_ID"),tenantId:required("MGR_DEPARTMENT_TENANT_ID"),legacy,
     creation:{baseUrl:requiredUrl("CREATION_BASE_URL"),token:required("CREATION_SERVICE_TOKEN")},
     voice:{baseUrl:requiredUrl("VOICE_BASE_URL"),token:required("VOICE_SERVICE_TOKEN")},
-    signme:{baseUrl:requiredUrl("SIGNME_BASE_URL"),token:required("SIGNME_SERVICE_TOKEN")}
+    signme:{baseUrl:requiredUrl("SIGNME_BASE_URL"),token:required("SIGNME_SERVICE_TOKEN")},
+    ...(process.env.OMNIDEV_ENABLED==="true"?{omnidev:{baseUrl:requiredUrl("OMNIDEV_BASE_URL"),token:required("OMNIDEV_SERVICE_TOKEN"),actorId:required("OMNIDEV_SERVICE_ACTOR_ID"),tenantId:required("OMNIDEV_SERVICE_TENANT_ID"),expectedPolicy:omniPolicy.parse(JSON.parse(required("OMNIDEV_EXPECTED_POLICY_JSON")))}}:{})
   })}:{})
 });
 const metadata=buildProtectedResourceMetadata({
