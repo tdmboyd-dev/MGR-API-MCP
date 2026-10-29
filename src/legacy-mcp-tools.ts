@@ -1,3 +1,4 @@
+import {eventReadInput,readLegacyEvents} from "./legacy-event-read.js";
 import { randomUUID } from "node:crypto";
 import type { McpServer } from "@modelcontextprotocol/server";
 import * as z from "zod/v4";
@@ -95,6 +96,11 @@ export async function executeLegacyMcpCommand(
 }
 
 export function registerLegacyMcpTools(server:McpServer,options:LegacyMcpToolOptions):void{
+  server.registerTool('mgr_legacy_events',{description:'Read one bounded durable Legacy event page under the verified actor/tenant and explicit scoped domain grant. No mutation, poller or approval.',inputSchema:eventReadInput},async input=>{
+    try{return{content:[{type:'text' as const,text:JSON.stringify(await readLegacyEvents(options,input))}]};}
+    catch{return{isError:true,content:[{type:'text' as const,text:JSON.stringify({error:'Legacy event read unavailable or unauthorized'})}]};}
+  });
+
   async function readAuthorized(read:()=>Promise<unknown>){
     try{
       authorizeTool(options.auth,options.resourceAudience,["tools:read"]);

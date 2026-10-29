@@ -113,6 +113,11 @@ export class LegacyEdgeClient {
     return this.request(`/v1/entities/${encodeURIComponent(id)}`,{method:"GET",context});
   }
 
+  async events<T=unknown>(context:LegacyEdgeContext,filters:{scopeType:string;scopeId:string;subjectType:string;subjectId?:string|undefined;cursor?:string|null|undefined;limit?:number|undefined}):Promise<T>{
+    const query=new URLSearchParams();for(const [key,value]of Object.entries(filters))if(value!==undefined&&value!==null)query.set(key,String(value));
+    return this.request('/v1/events?'+query,{method:'GET',context});
+  }
+
   async listConnectors<T=unknown>(tenantId:string):Promise<T[]>{
     return this.request("/v1/connectors",{method:"GET",tenantId});
   }
@@ -163,8 +168,12 @@ export class LegacyEdgeClient {
           try{for(;;){const part=await reader.read();if(part.done) break;size+=part.value.byteLength;if(size>maxBytes) throw new LegacyRequestError("Legacy response exceeds size limit");chunks.push(part.value);}}
           finally{void reader.cancel().catch(()=>{});}
         }
-        const text=Buffer.concat(chunks).toString("utf8");
         if(!response.ok) throw new LegacyRequestError(`Legacy request failed: HTTP ${response.status}`,response.status);
+        // Never silently rewrite malformed wire bytes into accepted event evidence.
+        // Keep BOM bytes visible so the existing JSON rejection remains unchanged.
+        let text:string;
+        try{text=new TextDecoder("utf-8",{fatal:true,ignoreBOM:true}).decode(Buffer.concat(chunks));}
+        catch{throw new LegacyRequestError("Legacy returned invalid UTF-8");}
         try{return (text?JSON.parse(text):{}) as T;}catch{throw new LegacyRequestError("Legacy returned invalid JSON");}
       };
       return await Promise.race([operation(),expired]);

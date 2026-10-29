@@ -1,11 +1,12 @@
 # Research-to-build queue
 
-## Department integration continuation — October 28, 2026
+Read [HANDOFF.md](HANDOFF.md) for the single current checkpoint and exact local proof boundaries. The event packet and normal ONE routes are applied; canonical focused66ONE/73Legacy/113API and27chain checks pass. Full joined qualification/security/publication remain pending; no package closure is inferred. IDs below remain the authoritative wider queue, not a new competing task list. Checked items retain only their stated scope.
 
-- Implemented: strict four-operation MCP gateway, credential-bound tenant/actor, exact input/receipt binding, independent artifact/readback verification, expiry before publication and bounded transport.
-- Locally exercised: Legacy contacts, Creation OS Markdown artifacts, VOICE cached CPU speech, SignMe immutable drafts; ONE owner preview/approval and lost-response restart recovery.
-- Continue from docs/DEPARTMENT-INTEGRATION.md. Existing wider research queue below remains historical/remaining scope; the edge must not acquire ONE's brain authority or domain record ownership.
-- Remaining: hosted OAuth/public deployment proof, automatic natural-language tool proposal integration, additional domain capabilities, user business-workspace onboarding, physical audio acceptance and production operations. These are not inferred from the local proof.
+## Immediate integration continuation
+
+- Finish full joined qualification of the newly wired normal ONE routes, then controlled actual domain/edge host and tenant registration.
+- Complete downstream event authority/freshness, quota/retention, cursor restore/rotation and observability; qualify broader workflows/cutover.
+- Continue onboarding, natural-language proposals and additional domain journeys via existing owners. Real tenant rights/credentials, hosted OAuth/public transport, physical audio, signing/sending and production stay separately gated.
 
 The unified assistant remains the goal. MGR-API-MCP is now the designated home; do not ask the user to choose it again.
 
@@ -18,7 +19,7 @@ The unified assistant remains the goal. MGR-API-MCP is now the designated home; 
 7. Add and verify ChatGPT MCP and independent model-provider paths separately. Credentials use secure configuration; no secrets in chat or repository.
 8. Run whole journeys, malformed inputs, cancellation, duplicates, concurrent work, restart/backup restore, budget limits and external reconciliation. Label synthetic, local, provider/device and production evidence separately.
 
-Finished paid JARVIS/TARS/SPARK and level-locked materials remain unavailable; they are not required dependencies for independent development. The present wave did not purchase anything, send email, make a call or expose a local service.
+Finished paid JARVIS/TARS/SPARK and level-locked materials remain unavailable; they are not required dependencies for independent development. Acquisition evidence does not authorize purchases, sends or calls.
 
 
 ## Brain / shared-edge migration wave — added 2026-09-29
@@ -71,7 +72,7 @@ Research packet: research/BEAST-SMARTWIZ-OMNIROUTE-VOICEBOX-FREEBUF-SERVERBYT-20
 
 
 44. [x] Implement optional exact-snapshot OmniDev verification transport, bound candidate discovery, canonical report download and adverse-path protocol tests.
-45. [active] Qualify actual ONE/MCP/local engineering SQLite service/approved AppContainer snapshot/durable readback/restart/cancel using the real model-produced candidate.
+45. [partial] The bounded actual ONE/MCP/SQLite/AppContainer journey and exact report reopen/reconciliation are proven in item47; continue broader engineering planning/tasks, representative workflows, retention and unresolved-stop reconciliation. Do not repeat the spent native launch solely to refresh a count.
 46. [waiting-source] Inspect OMNISIGHT/CODE-MONSTER once the other builder publishes source; current repositories are empty.
 
 
