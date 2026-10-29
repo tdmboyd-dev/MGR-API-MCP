@@ -1,6 +1,6 @@
 # Research-to-build queue
 
-Read [HANDOFF.md](HANDOFF.md) for the single current checkpoint and exact local proof boundaries. The event packet and normal ONE routes are applied; canonical focused66ONE/73Legacy/113API and27chain checks pass. ONE joined2362/2362 qualification is complete under its declared disjoint scheduling scope; finalONEsecurity/publication remains pending; no package closure is inferred. IDs below remain the authoritative wider queue, not a new competing task list. Checked items retain only their stated scope.
+Read [HANDOFF.md](HANDOFF.md) for the single current checkpoint and exact local proof boundaries. The event packet and normal ONE routes are applied; canonical focused66ONE/73Legacy/113API and27chain checks pass. ONE joined2362/2362 qualification is complete under its declared disjoint scheduling scope; ONEsource4846e45 is committed/remote-verified with unchanged-policy security classification complete; no package closure is inferred. IDs below remain the authoritative wider queue, not a new competing task list. Checked items retain only their stated scope.
 
 ## Immediate integration continuation
 
