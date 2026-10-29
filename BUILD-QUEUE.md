@@ -1,10 +1,10 @@
 # Research-to-build queue
 
-Read [HANDOFF.md](HANDOFF.md) for the single current checkpoint and exact local proof boundaries. The event packet and normal ONE routes are applied; canonical focused66ONE/73Legacy/113API and27chain checks pass. Full joined qualification/security/publication remain pending; no package closure is inferred. IDs below remain the authoritative wider queue, not a new competing task list. Checked items retain only their stated scope.
+Read [HANDOFF.md](HANDOFF.md) for the single current checkpoint and exact local proof boundaries. The event packet and normal ONE routes are applied; canonical focused66ONE/73Legacy/113API and27chain checks pass. ONE joined2362/2362 qualification is complete under its declared disjoint scheduling scope; finalONEsecurity/publication remains pending; no package closure is inferred. IDs below remain the authoritative wider queue, not a new competing task list. Checked items retain only their stated scope.
 
 ## Immediate integration continuation
 
-- Finish full joined qualification of the newly wired normal ONE routes, then controlled actual domain/edge host and tenant registration.
+- Normal ONE routes are locally qualified; finish controlled deployed domain/edge host and actual tenant registration.
 - Complete downstream event authority/freshness, quota/retention, cursor restore/rotation and observability; qualify broader workflows/cutover.
 - Continue onboarding, natural-language proposals and additional domain journeys via existing owners. Real tenant rights/credentials, hosted OAuth/public transport, physical audio, signing/sending and production stay separately gated.
 

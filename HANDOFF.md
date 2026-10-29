@@ -2,7 +2,7 @@
 
 ## Current event-read status — 2026-10-29
 
-The reviewed event-read packet and normal ONE server/WorkTools route wiring are applied to the canonical working checkouts. Current canonical focused receipts pass **66/66 ONE**, **73/73 Legacy** and **113/113 API-MCP** checks. The canonical PostgreSQL16.15 → Legacy loopback HTTP → official authenticated MCP protocol → ONE SQLite chain passes **27/27**. Earlier isolated **21/21** chain and **55/55** ONE receipts retain only their original source scope. These scopes overlap: do not add counts or infer full-product acceptance. Full joined qualification/security and publication of the new candidate remain parent-owned and pending.
+The reviewed event-read packet and normal ONE server/WorkTools route wiring are applied to the canonical working checkouts. Current canonical focused receipts pass **66/66 ONE**, **73/73 Legacy** and **113/113 API-MCP** checks. The canonical PostgreSQL16.15 → Legacy loopback HTTP → official authenticated MCP protocol → ONE SQLite chain passes **27/27**. Earlier isolated **21/21** chain and **55/55** ONE receipts retain only their original source scope. These scopes overlap: do not add counts or infer full-product acceptance. ONE current joined qualification passed2362/2362 tests across429files, with the exact2Chrome ownership files serial and427others at concurrency2. Its two prior failed attempts and unconfirmed native roots remain recorded. Final ONE security/publication remains parent-owned; this repository source is already committed and remote-verified on the repair branch.
 
 The current27-check canonical chain was rerun after the API-MCP malformed-UTF8 decoder correction; the final source-bound receipt is in canonical ONE `evidence/gateway-integration-2026-10-29/legacy-events-owner-http-utf8-final/`. API typecheck and113 tests pass, including four malformed byte sequences denied and exact valid split Unicode preserved. Its actual disposable PostgreSQL stop/status3/pidfile/data-removal receipt is retained. The previous27 run remains dated evidence for the earlier edge source.
 
@@ -24,7 +24,7 @@ The bounded native-worker journey and reopen/reconciliation are recorded in `evi
 
 ## Remaining ordinary event work
 
-1. Qualify the newly wired normal ONE host/server/WorkTools routes in the full joined run and register controlled actual domain/edge hosts and tenant scopes explicitly.
+1. The normal ONE host/server/WorkTools routes are included in the2362-test local qualification. Register controlled deployed domain/edge hosts and actual tenant scopes explicitly.
 2. Implement downstream field-authority/staleness reconciliation, ledger quota/retention and operational error/latency observability.
 3. Define cursor rebase and credential-rotation behavior, then qualify broader workflows, migration parity and recovery. The bounded chain does not cover every domain writer, privileged sequence manipulation or Legacy restore.
 
