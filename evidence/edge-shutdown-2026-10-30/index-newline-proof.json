@@ -1,0 +1,350 @@
+{
+  "qualifiedWorkingInputs": 59,
+  "workingFilesWithGitCRLFtoLF": 49,
+  "newTestIndexBytesExactlyQualified": true,
+  "entries": [
+    {
+      "path": "src/action-sentinel.ts",
+      "workingSha256": "a7859a8d1fd55f488e0eb142532878aace4fc3f84c27366c7fe8e80a91ef0b05",
+      "indexSha256": "9dc7f0cadbed4c36d7f657ff92ca226543d55d741c120de520da0b15b308801d",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/authz.ts",
+      "workingSha256": "a87809a7b1984a9db3026b2c0f7f6a37effb11d6a92cb68c33d7b0608724880c",
+      "indexSha256": "562bad13981f5198d576ef7b9bba7b5596c05896798dfcd523b49c3497242c1e",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/brain-controller.ts",
+      "workingSha256": "15113cdd22eb708213d370ba0eb25aab195a1ab400fb2b2a063ef3adb35b7c5f",
+      "indexSha256": "5cae9c71993f1b278f5b91b4ed457f63bbb3983828bad4ee536f2f423fd3836c",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/contracts.ts",
+      "workingSha256": "7a3f4832e9959fb2c22a60ae01cda6efd873d700514759949044c75cff7165de",
+      "indexSha256": "7a9e2931d7302f2cf3bebca7bc3c0b20bc49e63d56630750c4b89716392efa3a",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/creation-client.ts",
+      "workingSha256": "f8e72d84b3bce50b4efc8c0d866e3c06385273dc162b9cf123716d7e53f9f869",
+      "indexSha256": "273328fe9673ad622b57aa8a4f355b692406b826b512cc718fdd6850e0f9a4f0",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/creation-mcp-tools.ts",
+      "workingSha256": "5d2650b1323b5e969da5c92d97e12c90088bda8010754957eb0a27a29c8ce2a8",
+      "indexSha256": "91171e9f5f24b8cc0951507672ca480e8cc88bd43275ab338ce4cbf7543f39d2",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/decision.ts",
+      "workingSha256": "9c18a1b00a93c668c6febcfb647f1d663a4e86ec76b277899d9a4727b1d4b347",
+      "indexSha256": "0a951022e306e3010d52a254603e292e2cad5471dbe7918f63cfb6c5a19bbaf3",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/department-gateway.ts",
+      "workingSha256": "a54d7f1e6bb5b5fe6cb26074ad5d755c28b101768b9d0435d9c7cdb1ae2a0cc3",
+      "indexSha256": "0031ee31ffa52edf1c544b9b36bfcec90ca43b3ca51ac18e13e5c07c59a14852",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/ecosystem-catalog-data.ts",
+      "workingSha256": "18a722f28e0cd829fe437a52eeb5313fb68369de0200e3701722fc44029b0737",
+      "indexSha256": "c884880221b3fc75151492d481ca7645d4eabaac69da5a59a5482a0f0e26a8d5",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/ecosystem-catalog.ts",
+      "workingSha256": "57130c14305e3c8a48266f5110c27fab1b4410671d09bf13ee553165756939b5",
+      "indexSha256": "8320ebbc458e16e2c9dfaf41b7e562f5b282b0920e9c3ca343c8a9d35eb4540d",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/engine.ts",
+      "workingSha256": "b041419084d4f3e673345444a2af4c6d0473b42b4b62a4b88c8ba4c207bb3653",
+      "indexSha256": "31e800a1872ac61ab07a7f72f447d97c8e1021770a878531ff7c38f5a121eb9c",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/http-auth.ts",
+      "workingSha256": "2542c037615a32aba99a903e347c77b4cbe6afd7b466a7d433bb02b8f844f39e",
+      "indexSha256": "d6e96e2beee3f77f86c3909176c9e435cb336f4ebf99e55f074f503d9b42ecb0",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/http-server.ts",
+      "workingSha256": "f150e44d6c7777ff853dcf06626e5d88cf84422c429fbc34ea9f8fa151e36972",
+      "indexSha256": "94acb85ce0c0f5d90a8b4240b80a0a5c95909320b0a1422f818a8e2e8bcf2812",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/jwt-verifier.ts",
+      "workingSha256": "87d2f60fee5a4afc7642efd28117e8961a4252f833510c785bb9fa01296e96d6",
+      "indexSha256": "8062510c1a0a81a9ef37dc8744695fdfe51319d30e4412ac55f93b686f3bab1b",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/legacy-dispatch.ts",
+      "workingSha256": "87d4e4da0d60400c9602cf3091cef93bed10a88db0ea0d299834b1c3aa9bec4b",
+      "indexSha256": "6d9e5013b24099f28fc8e2dc0f17926325e4de4a3f1f18db2fb680c9b71d4fea",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/local-department-edge.ts",
+      "workingSha256": "fa5f4748a63995ae789d33e444af9b4ee7d672164230f09ce9600fc0b078c0ac",
+      "indexSha256": "046d61c0e56bf35012007a0a38a3f466c793c5d44f0aaba15581cfb87af66af1",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/mcp-http.ts",
+      "workingSha256": "b4f45113514173b4faa5cf7d89299259031cf3a3b7b5f1275706e4b56e177221",
+      "indexSha256": "d1d4d04a08c6577729e066105b6f05e5ddecf21f8853846f7c1d591ef2bca99f",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": false
+    },
+    {
+      "path": "src/mcp-server.ts",
+      "workingSha256": "e4f4211ef62627d26d1e9e76a67b23be7f5b6904157f9b7382165dc974fd8c9d",
+      "indexSha256": "05a3657e906304ea6405b3310ad719495f024a460e5961caf801e840539d1cd9",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/model-router.ts",
+      "workingSha256": "d4c382d5a1741c7f9ebe05ee8552b42eab13c86c2d8c59ed3f67fb53cc206d59",
+      "indexSha256": "0e9fd6aeb12ff90a240e6e7d293798f50af9d9e9fa20a7dfd0438857d1294877",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/oauth-metadata.ts",
+      "workingSha256": "d44e8c346930650ee192ae40a66f70509079ce4d853b93e774b82910e6314d79",
+      "indexSha256": "d0fc9418e54f2ee6c70f9d7e679767c061eed527fac8929a1215bd400629b207",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/omnidev-client.ts",
+      "workingSha256": "25eb3987bdcd06340d60a46f0dc1fef812bad19b1c82b2bce8dc5bebe8acd198",
+      "indexSha256": "011d9ec7bda483ff082ef88e990a75d2554f7fabed53b0ff62a4e35e8c8fb2a0",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/privacy-firewall.ts",
+      "workingSha256": "e3ca281372951b549049952ea03c73d8d3cc6fc69ca1f715f3f8988cfab750d9",
+      "indexSha256": "d60a2c9124d588d6e04bc13cad9e8b1be5acad168da4227d78f4afe9a661e1c6",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/security-research.ts",
+      "workingSha256": "a5e62c53ed3a94ff14c0d12f3c37c7fb3941156f9c674f6793e7fd0c28e615f3",
+      "indexSha256": "6ef61252274a101486b3ff45e04d52b733c82d60670bbb8407d2a720f62b9beb",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/security.ts",
+      "workingSha256": "b08e0e6901fa188fc85492b6da8e6072a104937e89124fcd556d464984203245",
+      "indexSha256": "e3905cd1553f9de7d2b5ca7eebcdd8b6cae353a36ce620a82f87896c21381f88",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/state.ts",
+      "workingSha256": "03889a5e3b783d57a111ecc4c8c4683d1c45f65eacb54e1e401943c710c605aa",
+      "indexSha256": "aa69496076303849e2a4d9e20bc852e6c74f373c074c8503b8fa12141f44405f",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "src/voice-fabric.ts",
+      "workingSha256": "de86d1a8e344782c29f4e827f57a45c5aec31eb44c8b1bf7613b8e4165ea75ec",
+      "indexSha256": "d5bf7600cbf35f98ed50e6db5d2635b0ebb51040e6e365e318ecd64f35aee2b1",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/action-sentinel.test.ts",
+      "workingSha256": "bc330b00390749875f0034cfbe4a0e8503cb66858088b6a9116b562360280ebb",
+      "indexSha256": "d30a19aa1d15fe3fceedfc827821248b850dc939fc4d2ac6c2c8938999710398",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/contracts.test.ts",
+      "workingSha256": "700f6a516ead9b10c62d241772e1003917c6d33ca74902cbed61ecba6142912c",
+      "indexSha256": "cdd6c46566c6d95ca76934bd06308f1875269e5d7ade67ab9640c08fd20c25ab",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/creation-mcp-tools.test.ts",
+      "workingSha256": "ae25f1b93ad44a3e1a84db8679af82e7108ac92ffcee137f59f468373fa3b4fb",
+      "indexSha256": "7e506044a3468dd5eaf847cc4137c37ec4341645b83e9396302d41e4d706929b",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/department-gateway.test.ts",
+      "workingSha256": "21ed10580d8ea61cb9c7582a0c20fee2e81e859f2cc2e5748eec9577dadff7a1",
+      "indexSha256": "e86e9fbc8c5254ea56ea48f34de7b065358378cfdc1e52eb576e8d69882349ac",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/department-receipt-binding.test.ts",
+      "workingSha256": "9e088dd661182a30a762239d946e2c9cbdf24c817de32bc27d6615207b7a184b",
+      "indexSha256": "10602276cfd6130572fe0eb68329e040c8d33bc0ed42a573d78778d9610cf616",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/ecosystem-catalog.test.ts",
+      "workingSha256": "3a84aab2806e43f28e7e33aab8ce3a85eeeb76f8cca1d92502e06f1e0d0b49df",
+      "indexSha256": "3389625dea6be840b5a83b3365bcff5b03d299389d4d4d9b637ab1c4bef5a0af",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/ecosystem-mcp-integration.test.ts",
+      "workingSha256": "40bda6621bc36fe2c7dae533ed51a09079abf8eb878a598542511c825996ae1b",
+      "indexSha256": "65f222ec6eb6d01c0f0b0eb0004d61a4fefedab02e461549985fb2f5864c5b8b",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/engine.test.ts",
+      "workingSha256": "56f12b0e4314501d8870f9e67ea7e2a0f7ad79986775864d4d514451c183944e",
+      "indexSha256": "c397e1ce1478f75cb051795cce3b5bb04a48090e3261313ae3763670dfa13314",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/http-auth.test.ts",
+      "workingSha256": "2529fd11f7a066deaef2af475d0b819ae4438750ba90a9667d7bf7406cf75c13",
+      "indexSha256": "20f074acb495613379232866ccc9ce1aff155149dcdd99540b55476d8dedbe9e",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/jwt-verifier.test.ts",
+      "workingSha256": "61568d3b7901f121fd299d5e42a1d079f77c21210a1f68ece4639ffb28c64b5b",
+      "indexSha256": "923bad6a3953437e0ebc5459e2574271d5ebd83f467333e2eb26d4b3111889e5",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/legacy-client.test.ts",
+      "workingSha256": "e2c9f194460f66a238c3f46ea0ac3f02a56607ef4aa06eb6043a31c75996cd97",
+      "indexSha256": "9468966ab149539b8c7d2f794d9754dc9225e548dabc2ab0b7d3212a09e4485b",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/legacy-dispatch.test.ts",
+      "workingSha256": "4f91db5fdd7e2c4fc578b4b087586086fd5c4c412422cd6c9983a525a66b397b",
+      "indexSha256": "635840f37ad259018be3f971c85a4d57d6b71f2d375722c8f346d2357339c28e",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/legacy-mcp-tools.test.ts",
+      "workingSha256": "706a6128d24816610c97be426078a6a0fd35d678c65a63a2d4e9fb79e0bed070",
+      "indexSha256": "2c5beb185b37d6903635a29cebd9fb45582dbec86a170f032e29156235b14535",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/legacy-transport.test.ts",
+      "workingSha256": "f0bb429044f7a86f23c303c5bed0da98bc72fad7c7dec1f60cf013a737527702",
+      "indexSha256": "bbdbe1e2e6c66ae99cd1c5afeb6b54072a0f15ed6499acdd3878ff791e9062a8",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/mcp-http.test.ts",
+      "workingSha256": "18392ac8359c56f43a73cd23156c9956dd0a6bf6824f5bd0f82607d9ddcd13ad",
+      "indexSha256": "57183d8d5849466912558605dbe04b80035b54e31c0fa8cbd4e8a8a8bdfffbea",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/model-router.test.ts",
+      "workingSha256": "ef34cfeb0c6705950458c748e8aac3af4ba2b153c411ab255007a3f494fe5463",
+      "indexSha256": "e7ae6d7b8b051c1792380d09664d3958cf086b08d06a534e8236f1b9d9820101",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/oauth-metadata.test.ts",
+      "workingSha256": "c00268e3f670be1e0abded0e0574a01e512811ed541c52792ca88d0bbd5bcf0a",
+      "indexSha256": "7aba6344459095ac0a5eaaab1daee497f00330a7922277bd5b97c7d556056460",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/omnidev-client.test.ts",
+      "workingSha256": "1236d5be39df910f13bbdb7dd92127985730a21c9d726f06d298e6d6cb7211b9",
+      "indexSha256": "2a719a8627881f3ac50817713d2245c7e8ecfb29c5ecbc20c87e4c2bd2ad18c9",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/privacy-firewall.test.ts",
+      "workingSha256": "291ae960bbae4092559c87b7e09e6ee3b6b96d3abcbca23db79f431b8b7e2ee5",
+      "indexSha256": "d4e95a0fdbcb43cdf311c979096cbbb19eb4b180d7971e830d1c6b298683ad45",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/security-boundaries.test.ts",
+      "workingSha256": "98eb5f758e220f70debad24ad6559fa10eda0261cb482345574b14697d958f75",
+      "indexSha256": "0b2fbc8edc772c17ace6918e01296218ff2a1c30ed90a50f4dcb4e51856d4091",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/security-controller.test.ts",
+      "workingSha256": "2c29a4a95ec82799ed091de20eaa8c14aef066959d04ce71d8ec58fcf24acda2",
+      "indexSha256": "74508508562ab39f78707cec1946e1ae115e8aac8b2499f0893214afd822dd0b",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/security-research.test.ts",
+      "workingSha256": "91209007c4af3db6602292f1ae8b3f8f22e1bb7d9119d9014927344cf4ed45aa",
+      "indexSha256": "404c58d2b7f233fbbe4bcb8aacd8f1c68f88d4d7387ec5bba37ee000821108eb",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    },
+    {
+      "path": "test/voice-fabric.test.ts",
+      "workingSha256": "a4f673ab4ecc5e8acbeb4752d4e09ab164c74bcf4ba17b8c5211fa0eb956a4a4",
+      "indexSha256": "fc6e3505bccce99934bb5081ed5b4f79b96bad533fcec0f4aa5ff4f2e5bf4a05",
+      "exactCRLFtoLFOnly": true,
+      "unchangedInThisCommit": true
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "tree": "f8fcd134886bca712a5b098e845e08b7a2099423",
+  "changedFiles": 36,
+  "integrity": {
+    "scope": "Research repository integrity only; not assistant/runtime/provider verification",
+    "checks": 270,
+    "failures": 0,
+    "errors": [],
+    "status": "PASS"
+  },
+  "scanExit": 1,
+  "findings": 10,
+  "unknown": 0,
+  "qualifiedInputsStable": 59,
+  "rawWhitespaceRetained": [
+    "evidence/edge-shutdown-2026-10-30/agent-evidence/before-red.txt",
+    "evidence/edge-shutdown-2026-10-30/agent-evidence/final-tests-old-source-red.txt"
+  ]
+}
