@@ -1,0 +1,1209 @@
+{
+  "ONE": {
+    "sourceCommit": "ea51bd23cca449feebd3e3149e108233d646a45f",
+    "remoteReadback": "ea51bd23cca449feebd3e3149e108233d646a45f",
+    "branch": "integrate/department-tools-2026-10-28",
+    "nonForcePush": true,
+    "mainUnchanged": "7132facf9282e37d81748d257b08887e4dc4d5f7",
+    "publishedPaths": [
+      ".gitattributes",
+      "HANDOFF.md",
+      "coordination/work-session/STATE.json",
+      "docs/PROGRESS-SCORECARD.md",
+      "docs/reign-plan/FEATURE-DELIVERY.html",
+      "docs/runtime/ACCOUNT-QUALIFICATION-NEXT.md",
+      "docs/runtime/MODEL-STARTUP.md",
+      "docs/runtime/OWNER-MODEL-LAUNCH.md",
+      "evidence/owner-launch-completion-2026-10-30/REPORT.md",
+      "evidence/owner-launch-completion-2026-10-30/api-verify.txt",
+      "evidence/owner-launch-completion-2026-10-30/diagnostics/environment-historical-5-fail.txt",
+      "evidence/owner-launch-completion-2026-10-30/diagnostics/initial-fixture-cleanup-failure.txt",
+      "evidence/owner-launch-completion-2026-10-30/diagnostics/initial-qualification.json",
+      "evidence/owner-launch-completion-2026-10-30/diagnostics/metadata-reader-final-12.txt",
+      "evidence/owner-launch-completion-2026-10-30/diagnostics/negative-controls.json",
+      "evidence/owner-launch-completion-2026-10-30/diagnostics/one-initial-618-of-619.txt",
+      "evidence/owner-launch-completion-2026-10-30/diagnostics/starter-missing-root-denial.txt",
+      "evidence/owner-launch-completion-2026-10-30/feature-desktop.png",
+      "evidence/owner-launch-completion-2026-10-30/feature-mobile.png",
+      "evidence/owner-launch-completion-2026-10-30/one-tests.txt",
+      "evidence/owner-launch-completion-2026-10-30/source-after.json",
+      "evidence/owner-launch-completion-2026-10-30/source-before.json",
+      "evidence/owner-launch-completion-2026-10-30/test-selection.json",
+      "evidence/owner-launch-completion-2026-10-30/verification.json",
+      "evidence/reign-audit-closure-2026-10-22/README.md",
+      "scripts/qualification/owner-document-journey.test.mjs",
+      "scripts/reign-codex-config-audit.py",
+      "scripts/reign-codex-config-audit.test.mjs",
+      "scripts/reign-feature-delivery.mjs",
+      "web/environment-startup-isolation.test.mjs",
+      "web/server.mjs",
+      "evidence/owner-launch-completion-2026-10-30/security-scan-redacted.json",
+      "evidence/owner-launch-completion-2026-10-30/security-scan.txt",
+      "evidence/owner-launch-completion-2026-10-30/security-classification.json"
+    ],
+    "committedQualifiedSourceBytesVerified": [
+      "scripts/qualification/owner-document-journey.test.mjs",
+      "scripts/reign-codex-config-audit.py",
+      "scripts/reign-codex-config-audit.test.mjs",
+      "scripts/reign-feature-delivery.mjs",
+      "web/environment-startup-isolation.test.mjs",
+      "web/server.mjs"
+    ],
+    "outsideStagedPathsPreserved": [],
+    "scanner": {
+      "scannerExitCode": 1,
+      "scannedFiles": 31,
+      "detections": 90,
+      "unexplained": 0,
+      "classified": [
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 80,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 81,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 164,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 165,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 166,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 167,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 246,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 247,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 292,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 293,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 392,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 393,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 712,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 713,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 734,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 735,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 736,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 737,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 740,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 741,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 944,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 965,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1023,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1024,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1036,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1095,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 80,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 81,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 164,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 165,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 166,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 167,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 246,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 247,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 292,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 293,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 392,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 393,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 712,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 713,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 734,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 735,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 736,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 737,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 740,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 741,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 944,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 965,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1023,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1024,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1036,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1095,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1137,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1138,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1180,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1203,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1253,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1137,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1138,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1180,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1203,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1253,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1420,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1431,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1432,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1434,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1574,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1575,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1617,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1420,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1431,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1432,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1434,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1574,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1575,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1617,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1917,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1923,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1933,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1945,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1962,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1972,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 2032,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1917,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1923,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1933,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1945,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1962,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1972,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 2032,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        }
+      ],
+      "noSuppressionsAdded": true,
+      "scope": "Explicit changed publication packet; not repository history, provider/device or full security acceptance."
+    }
+  },
+  "API": {
+    "sourceCommit": "1690bbe08ae294a29c8122874ed69e9ea24b69d2",
+    "remoteReadback": "1690bbe08ae294a29c8122874ed69e9ea24b69d2",
+    "branch": "repair/completion-2026-10-28",
+    "nonForcePush": true,
+    "mainUnchanged": "95648526c6b7d380bed67e7b6f322ecf8faf428a",
+    "publishedPaths": [
+      ".gitattributes",
+      "HANDOFF.md",
+      "docs/DEPARTMENT-INTEGRATION.md",
+      "docs/full-build/SCORECARD.md",
+      "evidence/owner-launch-completion-2026-10-30/REPORT.md",
+      "evidence/owner-launch-completion-2026-10-30/api-verify.txt",
+      "evidence/owner-launch-completion-2026-10-30/one-tests.txt",
+      "evidence/owner-launch-completion-2026-10-30/security-classification.json",
+      "evidence/owner-launch-completion-2026-10-30/security-scan-redacted.json",
+      "evidence/owner-launch-completion-2026-10-30/security-scan.txt",
+      "evidence/owner-launch-completion-2026-10-30/source-after.json",
+      "evidence/owner-launch-completion-2026-10-30/source-before.json",
+      "evidence/owner-launch-completion-2026-10-30/test-selection.json",
+      "evidence/owner-launch-completion-2026-10-30/verification.json",
+      "scripts/start-tevin-departments-local.ts",
+      "scripts/tevin-owner-startup.ts",
+      "test/tevin-owner-startup.test.ts"
+    ],
+    "committedSourceQualification": [
+      {
+        "path": "scripts/start-tevin-departments-local.ts",
+        "workingSha256": "1284516d60e4d9158910b4f91c004fee5f85584fc4491f799677c51acdb4f4bb",
+        "gitBlobSha256": "696eaa2de57afaa92a5ef4843cc5e43a02e282611ee15d588a2cf8328334639b",
+        "exactBytes": false,
+        "onlyCRLFtoLF": true,
+        "workingCRLFCount": 51
+      },
+      {
+        "path": "scripts/tevin-owner-startup.ts",
+        "workingSha256": "0044684f823133f6c7c98ad97135f7ec4cb01d99e39bf86ccbecce26c4b7e28c",
+        "gitBlobSha256": "0044684f823133f6c7c98ad97135f7ec4cb01d99e39bf86ccbecce26c4b7e28c",
+        "exactBytes": true,
+        "onlyCRLFtoLF": false,
+        "workingCRLFCount": 0
+      },
+      {
+        "path": "test/tevin-owner-startup.test.ts",
+        "workingSha256": "5658cef47b3b93acc556506bb07db082e18d62b6dbc52991ff7193f454e6031c",
+        "gitBlobSha256": "5658cef47b3b93acc556506bb07db082e18d62b6dbc52991ff7193f454e6031c",
+        "exactBytes": true,
+        "onlyCRLFtoLF": false,
+        "workingCRLFCount": 0
+      }
+    ],
+    "outsideStagedPathsPreserved": [],
+    "scanner": {
+      "scannerExitCode": 1,
+      "scannedFiles": 14,
+      "detections": 90,
+      "unexplained": 0,
+      "classified": [
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 80,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 81,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 164,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 165,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 166,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 167,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 246,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 247,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 292,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 293,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 392,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 393,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 712,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 713,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 734,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 735,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 736,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 737,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 740,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 741,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 944,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 965,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1023,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1024,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1036,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1095,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 80,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 81,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 164,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 165,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 166,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 167,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 246,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 247,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 292,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 293,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 392,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 393,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 712,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 713,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 734,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 735,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 736,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 737,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 740,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 741,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 944,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 965,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1023,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1024,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1036,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1095,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1137,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1138,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1180,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1203,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1253,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1137,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1138,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1180,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1203,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1253,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1420,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1431,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1432,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1434,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1574,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1575,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1617,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1420,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1431,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1432,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1434,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1574,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1575,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1617,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1917,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1923,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1933,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1945,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1962,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 1972,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-after.json",
+          "line": 2032,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1917,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1923,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1933,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1945,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1962,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 1972,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        },
+        {
+          "file": "evidence/owner-launch-completion-2026-10-30/source-before.json",
+          "line": 2032,
+          "rule": "generic-api-key",
+          "classification": "public-source-or-evidence-SHA256-metadata"
+        }
+      ],
+      "noSuppressionsAdded": true,
+      "scope": "Explicit changed publication packet; not repository history, provider/device or full security acceptance."
+    },
+    "publicationDiagnostic": "Push/readback succeeded; the initial exact-byte assertion then detected existing Windows Git newline normalization in the starter. Recovered by proving exact CRLF-to-LF equivalence for every changed API source; no other source transformation accepted."
+  },
+  "creationUnchangedSource": "70d86979c6b238690d5ab3ee67545cec1357baa5"
+}

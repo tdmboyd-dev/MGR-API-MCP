@@ -1,0 +1,26 @@
+[
+  {
+    "path": "scripts/start-tevin-departments-local.ts",
+    "workingSha256": "1284516d60e4d9158910b4f91c004fee5f85584fc4491f799677c51acdb4f4bb",
+    "gitBlobSha256": "696eaa2de57afaa92a5ef4843cc5e43a02e282611ee15d588a2cf8328334639b",
+    "exactBytes": false,
+    "onlyCRLFtoLF": true,
+    "workingCRLFCount": 51
+  },
+  {
+    "path": "scripts/tevin-owner-startup.ts",
+    "workingSha256": "0044684f823133f6c7c98ad97135f7ec4cb01d99e39bf86ccbecce26c4b7e28c",
+    "gitBlobSha256": "0044684f823133f6c7c98ad97135f7ec4cb01d99e39bf86ccbecce26c4b7e28c",
+    "exactBytes": true,
+    "onlyCRLFtoLF": false,
+    "workingCRLFCount": 0
+  },
+  {
+    "path": "test/tevin-owner-startup.test.ts",
+    "workingSha256": "5658cef47b3b93acc556506bb07db082e18d62b6dbc52991ff7193f454e6031c",
+    "gitBlobSha256": "5658cef47b3b93acc556506bb07db082e18d62b6dbc52991ff7193f454e6031c",
+    "exactBytes": true,
+    "onlyCRLFtoLF": false,
+    "workingCRLFCount": 0
+  }
+]
