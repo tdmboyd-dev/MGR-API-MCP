@@ -1,0 +1,17 @@
+{
+  "sourceCommit": "de44f79a852312fdeea8bdd7b129fee2c920ed4c",
+  "previousHead": "29e757387506d48bcb7b4f71fd79e130b5cc2703",
+  "branch": "repair/completion-2026-10-28",
+  "remoteReadback": "de44f79a852312fdeea8bdd7b129fee2c920ed4c",
+  "main": "95648526c6b7d380bed67e7b6f322ecf8faf428a",
+  "mainUnchanged": true,
+  "nonForcePush": true,
+  "qualifiedSourceBytesMatchGit": true,
+  "privateOwnerFilesCommitted": false,
+  "ONEChecks": 302,
+  "APIFullChecks": 181,
+  "APIStarterChecks": 6,
+  "guardedInputs": 2157,
+  "wholeCreationStudioVerified": false,
+  "wholeProductVerified": false
+}
