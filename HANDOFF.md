@@ -1,5 +1,9 @@
 # Resume MGR-API-MCP
 
+## Current partial-department gateway delivery — October30,2026
+
+The gateway and authorized MCP composition now support individually configured departments. Missing services deny before network dispatch; Legacy registration requires a configured Legacy client. FullAPI181/181/typecheck/hosted syntax/plugin checks passed, with ONE302/302 frozen and separate real permanent-owner Creation renderer/restart/browser proof. **Creation remains the full studio; a Markdown renderer is one narrow factory function.** ONE owns authority/budget and Creation owns artifact bytes; the shared edge transports. No SignMe/VOICE/Legacy connection or full studio/production claim follows. [Evidence](evidence/partial-department-gateway-2026-10-30/REPORT.md). Canonical location remains Projects/MGR-API-MCP, original48queueIDs unchanged, old detached private recovery checkout preserved.
+
 ## Current department owner integration and canonical location — October 30, 2026
 
 Canonical API checkout: **C:/Users/cool/Documents/Codex/Projects/MGR-API-MCP**, existing branch `repair/completion-2026-10-28`. Delivery source `f77b276cf0b9aee2768305370f9650a063e65c61` is committed, non-force pushed and exactly read back; see `evidence/department-owner-integration-2026-10-30/source-publication.json`. The old workspace checkout at `C:/Users/cool/Documents/Codex/2026-10-28/files-mentioned-by-the-user-mgr/work/repos/MGR-API-MCP` is detached at the same 6f44fecb HEAD and retained as recovery, including its unchanged dependency junction and private .backpack. All 83 checked public source identities stayed unchanged; .backpack remains unread/unstaged. The new checkout uses owned physical dependencies, not that junction.

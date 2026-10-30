@@ -8,7 +8,7 @@ export function createLocalDepartmentEdge(options:DepartmentGatewayConfig&{port:
  if(!Number.isInteger(options.port)||options.port<1024||options.port>65535||options.accessToken.length<32||!Number.isFinite(options.expiresAt)||options.expiresAt<=Date.now())throw Error("Valid local port, strong private token and expiry required");
  const base=`http://127.0.0.1:${options.port}`,audience=base+"/mcp";
  const gateway=new DepartmentGateway(options);
- const handler=createAuthorizedMgrMcpHttpHandler({legacy:options.legacy,departments:gateway,resourceAudience:audience,resourceMetadataUrl:base+"/.well-known/oauth-protected-resource",requiredScopes:["tools:read"],verifier:{async verify(token){
+ const handler=createAuthorizedMgrMcpHttpHandler({...(options.legacy?{legacy:options.legacy}:{}),departments:gateway,resourceAudience:audience,resourceMetadataUrl:base+"/.well-known/oauth-protected-resource",requiredScopes:["tools:read"],verifier:{async verify(token){
   if(Buffer.byteLength(token)!==Buffer.byteLength(options.accessToken)||!timingSafeEqual(Buffer.from(token),Buffer.from(options.accessToken)))return null;
   return {subject:options.actorId,tenantId:options.tenantId,audience,scopes:["tools:read","departments:execute","departments:read"],expiresAt:options.expiresAt};
  }}});

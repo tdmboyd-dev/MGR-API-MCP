@@ -1,0 +1,8 @@
+{
+  "scope": "Explicit changed public source/docs/bundle and sanitized evidence; private owner files excluded",
+  "actualExitCode": 0,
+  "findings": 0,
+  "classifiedNonSecrets": [],
+  "unexplained": 0,
+  "suppressions": 0
+}

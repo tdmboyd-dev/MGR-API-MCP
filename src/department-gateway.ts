@@ -19,7 +19,7 @@ export const departmentCommand=z.discriminatedUnion("operation",[
 ]);
 export type DepartmentCommand=z.infer<typeof departmentCommand>;
 export interface DepartmentEndpoint {baseUrl:string;token:string}
-export interface DepartmentGatewayConfig {tenantId:string;actorId:string;creation:DepartmentEndpoint;voice:DepartmentEndpoint;signme:DepartmentEndpoint;legacy:LegacyEdgeClient;omnidev?:OmniClientConfig;timeoutMs?:number;fetcher?:typeof fetch}
+export interface DepartmentGatewayConfig {tenantId:string;actorId:string;creation?:DepartmentEndpoint;voice?:DepartmentEndpoint;signme?:DepartmentEndpoint;legacy?:LegacyEdgeClient;omnidev?:OmniClientConfig;timeoutMs?:number;fetcher?:typeof fetch}
 const digest=(bytes:Uint8Array)=>createHash("sha256").update(bytes).digest("hex");
 export const canonicalDepartmentJson=(x:any):string=>x!==null&&typeof x==="object"?(Array.isArray(x)?`[${x.map(canonicalDepartmentJson).join(",")}]`:`{${Object.entries(x).filter(([,v])=>v!==undefined).sort(([a],[b])=>a.localeCompare(b)).map(([k,v])=>JSON.stringify(k)+":"+canonicalDepartmentJson(v)).join(",")}}`):JSON.stringify(x);
 const inputDigest=(x:unknown)=>digest(Buffer.from(canonicalDepartmentJson(x)));
@@ -30,6 +30,7 @@ export class DepartmentGateway {
     this.omni=config.omnidev?new OmniEngineeringClient(config.omnidev):undefined;
     if(!config.actorId.trim()||!config.tenantId.trim())throw Error("Department principal required");
     for(const endpoint of [config.creation,config.voice,config.signme]){
+      if(!endpoint)continue;
       const u=new URL(endpoint.baseUrl);
       if(u.username||u.password||u.search||u.hash||u.pathname!=="/"||!(u.protocol==="https:"||(u.protocol==="http:"&&["127.0.0.1","[::1]"].includes(u.hostname))))throw Error("Department endpoint must be HTTPS or explicit loopback, with no URL credentials/path");
       if(endpoint.token.trim().length<24)throw Error("Scoped department credential required");
@@ -40,7 +41,7 @@ export class DepartmentGateway {
     if(auth.actorId!==this.config.actorId||auth.tenantId!==this.config.tenantId)throw Error("Department principal mismatch");
   }
   private async request(service:"creation"|"voice"|"signme",path:string,body?:unknown,raw=false):Promise<any>{
-    const ep=this.config[service],controller=new AbortController();const timer=setTimeout(()=>controller.abort(),this.config.timeoutMs??120000);
+    const ep=this.config[service];if(!ep)throw Error(`Department ${service} not configured`);const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),this.config.timeoutMs??120000);
     try{
       const response=await (this.config.fetcher??fetch)(new URL(path,ep.baseUrl),{method:body===undefined?"GET":"POST",redirect:"error",signal:controller.signal,headers:{authorization:`Bearer ${ep.token}`,"content-type":"application/json","x-tenant-id":this.config.tenantId,"x-actor-id":this.config.actorId},...(body===undefined?{}:{body:JSON.stringify(body)})});
       const limit=raw?8*1024*1024:1024*1024;const chunks:Uint8Array[]=[];let length=0;
@@ -68,6 +69,7 @@ export class DepartmentGateway {
     preDispatch?.();
     if(c.operation==="omnidev.job.verify"){if(!this.omni)throw Error("Omni engineering service not configured");return {...await this.omni.execute(c.requestId,c.input,preDispatch),operation:c.operation};}
     if(c.operation==="legacy.contact.create"){
+      if(!p.legacy)throw Error("Department legacy not configured");
       const result=await p.legacy.execute({tenantId:p.tenantId,actorId:p.actorId,correlationId:c.requestId,idempotencyKey:c.requestId},{action:"crm.create_contact",payload:{firstName:c.input.displayName,...(c.input.email?{email:c.input.email}:{})}});
       if(!result.accepted||!result.receiptId)throw Error("Legacy did not confirm persisted contact");
       return {...await this.status(c),operation:c.operation,accepted:true,replayed:result.replayed??false,receiptId:result.receiptId};
@@ -107,6 +109,7 @@ export class DepartmentGateway {
     if(c.operation==="legacy.contact.create"){
       const context={tenantId:this.config.tenantId,actorId:this.config.actorId,correlationId:c.requestId,idempotencyKey:c.requestId};
       const request={action:"crm.create_contact",payload:{firstName:c.input.displayName,...(c.input.email?{email:c.input.email}:{})}};
+      if(!this.config.legacy)throw Error("Department legacy not configured");
       const receipts=await this.config.legacy.truthReceipts<any>(context.tenantId,{correlationId:c.requestId,actorId:context.actorId,action:request.action,limit:100},context);
       const receipt=receipts.find(r=>r.tenantId===context.tenantId&&r.scope?.tenantId===context.tenantId&&r.actor?.tenantId===context.tenantId&&r.actor?.actorId===context.actorId&&r.actor?.actorType==="service"&&r.action===request.action&&r.correlationId===c.requestId&&r.evidence?.idempotencyKey===c.requestId&&r.evidence?.requestDigest===legacyRequestDigest(context,request)&&r.status==="succeeded"&&typeof r.receiptId==="string");
       if(!receipt)return {requestId:c.requestId,status:"unknown"};

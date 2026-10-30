@@ -7,3 +7,8 @@
 evidence/owner-launch-completion-2026-10-30/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 
 evidence/department-owner-integration-2026-10-30/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+evidence/partial-department-gateway-2026-10-30/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Preserve exact qualified Windows source bytes for this gateway adapter.
+src/local-department-edge.ts -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

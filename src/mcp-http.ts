@@ -10,7 +10,7 @@ export interface AuthorizedMgrMcpHttpOptions {
   resourceAudience:string;
   requiredScopes:string[];
   resourceMetadataUrl:string;
-  legacy:LegacyEdgeClient;
+  legacy?:LegacyEdgeClient;
   creation?:CreationOSClient;
   departments?:DepartmentGateway;
   /** Host may lower the fixed64 outer auth/handler admission budget. */
@@ -85,7 +85,7 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
 
       const serverOptions:{
         departments?:DepartmentToolOptions;
-        legacy:{
+        legacy?:{
           auth:typeof authResult.auth;
           resourceAudience:string;
           legacy:LegacyEdgeClient;
@@ -95,13 +95,8 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
           resourceAudience:string;
           creation:CreationOSClient;
         };
-      }={
-        legacy:{
-          auth:authResult.auth,
-          resourceAudience:options.resourceAudience,
-          legacy:options.legacy
-        }
-      };
+      }={};
+      if(options.legacy)serverOptions.legacy={auth:authResult.auth,resourceAudience:options.resourceAudience,legacy:options.legacy};
       if(options.creation){
         serverOptions.creation={
           auth:authResult.auth,

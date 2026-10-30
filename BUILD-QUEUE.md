@@ -1,5 +1,9 @@
 # Research-to-build queue
 
+## Current partial-department gateway delivery — October30,2026
+
+The gateway and authorized MCP composition now support individually configured departments. Missing services deny before network dispatch; Legacy registration requires a configured Legacy client. FullAPI181/181/typecheck/hosted syntax/plugin checks passed, with ONE302/302 frozen and separate real permanent-owner Creation renderer/restart/browser proof. **Creation remains the full studio; a Markdown renderer is one narrow factory function.** ONE owns authority/budget and Creation owns artifact bytes; the shared edge transports. No SignMe/VOICE/Legacy connection or full studio/production claim follows. [Evidence](evidence/partial-department-gateway-2026-10-30/REPORT.md). Canonical location remains Projects/MGR-API-MCP, original48queueIDs unchanged, old detached private recovery checkout preserved.
+
 Read [HANDOFF.md](HANDOFF.md) for the current source checkpoint and canonical Projects/MGR-API-MCP location. Nine department context/resume/guarded LOCAL-client/dependency changes are applied. Final canonical API181/181 has3,327 stable inputs at ONE workflow0e1322/startupd30531 after the close/yield repair; strict standalone starter noEmit also passed. Parent frozen-delivery54-file/normal-owner qualification passed744/744; current peer overlay remains separately unqualified. Source/index security/publication receipts remain distinct. The earlier181/3,325 receipt remains separate preserved evidence. The prior147/153 and ONE2362/2490 totals remain saved source evidence. IDs1–48 remain the sole wider queue; no whole-product/package closure follows.
 
 ## Immediate integration continuation
