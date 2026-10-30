@@ -1,0 +1,29 @@
+{
+  "state": "source-committed-non-force-pushed-exact-remote-readback",
+  "sourceCommit": "f77b276cf0b9aee2768305370f9650a063e65c61",
+  "branch": "repair/completion-2026-10-28",
+  "remoteReadback": "f77b276cf0b9aee2768305370f9650a063e65c61",
+  "nonForcePush": true,
+  "mainHead": "95648526c6b7d380bed67e7b6f322ecf8faf428a",
+  "mainUnchanged": true,
+  "at": "2026-10-30T13:17:45.698259+00:00",
+  "qualification": "canonical-verification.json",
+  "sourceBoundary": "ONE frozen delivery graph/index qualified; concurrent model/account/server/UI working overlay preserved and excluded. API own physical checkout qualified; no whole-product or production claim.",
+  "indexSecurity": "index-security-review.json",
+  "peerOriginalsPreserved": true,
+  "finalIndexSecurity": {
+    "exitCode": 1,
+    "stagedFiles": 78,
+    "findings": 3,
+    "classified": 3,
+    "unexplained": 0,
+    "suppressionsAdded": false
+  },
+  "finalPublicIndexIntegrity": {
+    "scope": "Research repository integrity only; not assistant/runtime/provider verification",
+    "checks": 429,
+    "failures": 0,
+    "errors": [],
+    "status": "PASS"
+  }
+}

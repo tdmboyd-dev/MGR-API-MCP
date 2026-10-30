@@ -82,3 +82,5 @@ Legacy owns business truth; ONE owns conversation/approval/delegation; Creation 
 Follow [the root handoff](../../HANDOFF.md) and [BUILD-QUEUE.md](../../BUILD-QUEUE.md), preserving all numbered queue entries. The source/history manifests and original receipts under `evidence/`, `evidence/history`, `docs/history` and `research/manifests` retain actual prior research/publication/failure evidence; removed repeated operating summaries do not erase those records. Original private checkpoint remains ignored and is not recoverable from a public clone alone.
 
 No completion percentage is assigned without a defined acceptance denominator. Passing a local suite does not qualify every capability, hosted transport, physical audio, real accounts or production.
+
+Department delivery source `f77b276cf0b9aee2768305370f9650a063e65c61` committed/non-force pushed with exact remote readback; main unchanged. Current publication is recorded under evidence/department-owner-integration-2026-10-30/source-publication.json. The concurrent ONE owner/model/server/UI overlay remains outside this qualified source.
