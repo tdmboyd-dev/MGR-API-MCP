@@ -1,0 +1,19 @@
+{
+  "tree": "ee66782db60094b129c266c8b80d5d02886d990b",
+  "changedFiles": 36,
+  "integrity": {
+    "scope": "Research repository integrity only; not assistant/runtime/provider verification",
+    "checks": 313,
+    "failures": 0,
+    "errors": [],
+    "status": "PASS"
+  },
+  "scanExit": 1,
+  "findings": 10,
+  "unknown": 0,
+  "qualifiedInputsStable": 61,
+  "rawWhitespaceRetained": [
+    "evidence/http-shutdown-2026-10-30/agent-evidence/old-main-characterization-red.txt",
+    "evidence/http-shutdown-2026-10-30/agent-evidence/final-test-old-main-red.txt"
+  ]
+}
