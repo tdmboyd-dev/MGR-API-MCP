@@ -1,0 +1,73 @@
+{
+  "paths": [
+    {
+      "path": "src/department-gateway.ts",
+      "expectedSha256": "6e2acdb700769b7f6173be3a6a70dee979699bdec467ac1c3faaa6cd27dba0fe",
+      "actualSha256": "6e2acdb700769b7f6173be3a6a70dee979699bdec467ac1c3faaa6cd27dba0fe"
+    },
+    {
+      "path": "test/department-context.test.ts",
+      "expectedSha256": "90f1f2675bcdf9520c0050f9c97383c68ae206c914ed5976de295d2d154b22cd",
+      "actualSha256": "90f1f2675bcdf9520c0050f9c97383c68ae206c914ed5976de295d2d154b22cd"
+    },
+    {
+      "path": "test/department-resume.test.ts",
+      "expectedSha256": "15de03a4bd1a9fdfad991927983f4e062ff6b7ea785fd42b2fd5970321d60862",
+      "actualSha256": "15de03a4bd1a9fdfad991927983f4e062ff6b7ea785fd42b2fd5970321d60862"
+    },
+    {
+      "path": "package.json",
+      "expectedSha256": "c5dbf4478974dbf49b1c22f5a3e406affe40f7cb96779d7311cf3ade021b5e89",
+      "actualSha256": "c5dbf4478974dbf49b1c22f5a3e406affe40f7cb96779d7311cf3ade021b5e89"
+    },
+    {
+      "path": "package-lock.json",
+      "expectedSha256": "998b7dc1ef44c99cd877176f9497635245244052a10845066ca9a5464b95fbbb",
+      "actualSha256": "998b7dc1ef44c99cd877176f9497635245244052a10845066ca9a5464b95fbbb"
+    },
+    {
+      "path": "scripts/owner-department-client.ts",
+      "expectedSha256": "d4d634f79323b5ba38bc37032bbf888eba6ffc0a988c3bcaa20bd2d3bac3e7a7",
+      "actualSha256": "d4d634f79323b5ba38bc37032bbf888eba6ffc0a988c3bcaa20bd2d3bac3e7a7"
+    },
+    {
+      "path": "scripts/start-tevin-departments-local.ts",
+      "expectedSha256": "9071d25f84880bcaa5a3ba505d12e6ee12f4839a955cf36d5d99cf04810a750e",
+      "actualSha256": "9071d25f84880bcaa5a3ba505d12e6ee12f4839a955cf36d5d99cf04810a750e"
+    },
+    {
+      "path": "scripts/tevin-owner-startup.ts",
+      "expectedSha256": "c608a8b0c7c5690ba2b6de41cb673ed6d2433d8d6561a96270d1ea8a6a20fa72",
+      "actualSha256": "c608a8b0c7c5690ba2b6de41cb673ed6d2433d8d6561a96270d1ea8a6a20fa72"
+    },
+    {
+      "path": "test/owner-department-client.test.ts",
+      "expectedSha256": "d6d6ff4ae8d84b6b979508244039702876b26e7a843dc786ff561bb0c74a05b1",
+      "actualSha256": "d6d6ff4ae8d84b6b979508244039702876b26e7a843dc786ff561bb0c74a05b1"
+    }
+  ],
+  "postimageMismatches": [],
+  "maps": [
+    {
+      "privatePath": "C:\\Users\\cool\\Documents\\Codex\\Projects\\MGR-API-MCP/.local/department-owner-canonical/inputs-before.json",
+      "bytes": 401389,
+      "sha256": "980dc186c4504a4de89326977d3ef82e86a089832a5b18240493b69d90da0b48",
+      "entries": 3325
+    },
+    {
+      "privatePath": "C:\\Users\\cool\\Documents\\Codex\\Projects\\MGR-API-MCP/.local/department-owner-canonical/inputs-after.json",
+      "bytes": 401389,
+      "sha256": "980dc186c4504a4de89326977d3ef82e86a089832a5b18240493b69d90da0b48",
+      "entries": 3325
+    }
+  ],
+  "exactMapBytesEqual": true,
+  "packageLockSha256": "998b7dc1ef44c99cd877176f9497635245244052a10845066ca9a5464b95fbbb",
+  "nodeModulesPhysical": true,
+  "versions": {
+    "@modelcontextprotocol/client": "2.4.0",
+    "@modelcontextprotocol/server": "2.4.0",
+    "zod": "4.6.7"
+  },
+  "noCommitPushOrStage": true
+}

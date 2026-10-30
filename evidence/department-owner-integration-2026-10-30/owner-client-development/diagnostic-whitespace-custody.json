@@ -1,0 +1,261 @@
+{
+  "files": [
+    {
+      "path": "after-expanded.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\after-expanded.txt",
+      "originalSha256": "54779977fa18a9622573fa8b4cdce2e3e94e5f17ba94c42d1c9166a9b1986edd",
+      "publishedSha256": "54779977fa18a9622573fa8b4cdce2e3e94e5f17ba94c42d1c9166a9b1986edd",
+      "bytes": 1221,
+      "normalization": "none"
+    },
+    {
+      "path": "after-tests.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\after-tests.txt",
+      "originalSha256": "e21e8ec324041758f2cd71d89a346e2858b5e7545551acd4ec9ce130ccacf665",
+      "publishedSha256": "e21e8ec324041758f2cd71d89a346e2858b5e7545551acd4ec9ce130ccacf665",
+      "bytes": 1067,
+      "normalization": "none"
+    },
+    {
+      "path": "BASELINE.json",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\BASELINE.json",
+      "originalSha256": "baba43a48c536e56b6a0ab22bcf4cde9cc65a96ce4f41dcfde751a8a9b880770",
+      "publishedSha256": "baba43a48c536e56b6a0ab22bcf4cde9cc65a96ce4f41dcfde751a8a9b880770",
+      "bytes": 1200,
+      "normalization": "none"
+    },
+    {
+      "path": "body-cleanup-green.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\body-cleanup-green.txt",
+      "originalSha256": "038e394a5e4521da5b889969d85b6450dd5c2ec754380c627cd0afc5a1f26636",
+      "publishedSha256": "038e394a5e4521da5b889969d85b6450dd5c2ec754380c627cd0afc5a1f26636",
+      "bytes": 215,
+      "normalization": "none"
+    },
+    {
+      "path": "body-cleanup-red.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\body-cleanup-red.txt",
+      "originalSha256": "3c70dd2b5179c1e66a752d3b982ec8788abac007483d865b552bbefeda13bc03",
+      "publishedSha256": "c94d447c02c1028387eeb438ffa6278efe4931c4e8eca6da1ada9b62d54b395b",
+      "bytes": 994,
+      "normalization": "whitespace-only diagnostic blank indentation"
+    },
+    {
+      "path": "body-cleanup-valid-red.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\body-cleanup-valid-red.txt",
+      "originalSha256": "9bd3679408114997f165da5286420e716ed7ede799e4201e0d8f13deb58138e6",
+      "publishedSha256": "024efaf1151d61245b2024650c0755692429f5975472de34931367464c6e1a07",
+      "bytes": 993,
+      "normalization": "whitespace-only diagnostic blank indentation"
+    },
+    {
+      "path": "changed-files.json",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\changed-files.json",
+      "originalSha256": "839cb5f16be45cb02ddd213778fc02db2f38b0039735bf8890fc0be2f58a0c6e",
+      "publishedSha256": "839cb5f16be45cb02ddd213778fc02db2f38b0039735bf8890fc0be2f58a0c6e",
+      "bytes": 1441,
+      "normalization": "none"
+    },
+    {
+      "path": "expanded-cleanup.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\expanded-cleanup.txt",
+      "originalSha256": "36e63f59aafe15735bcff6defbc55545290c5ad330b5f394829dd121d4e360c4",
+      "publishedSha256": "36e63f59aafe15735bcff6defbc55545290c5ad330b5f394829dd121d4e360c4",
+      "bytes": 1316,
+      "normalization": "none"
+    },
+    {
+      "path": "final-readback.json",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\final-readback.json",
+      "originalSha256": "93546a4e05e9031850b4fd560e0c00bafd73863028af9428506f35c36911de70",
+      "publishedSha256": "93546a4e05e9031850b4fd560e0c00bafd73863028af9428506f35c36911de70",
+      "bytes": 279,
+      "normalization": "none"
+    },
+    {
+      "path": "first-tests.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\first-tests.txt",
+      "originalSha256": "174e30e2d97979f2e0ae63009e07af6b6d29e33e247b94405ddcc1a4c86c18cb",
+      "publishedSha256": "174e30e2d97979f2e0ae63009e07af6b6d29e33e247b94405ddcc1a4c86c18cb",
+      "bytes": 1957,
+      "normalization": "none"
+    },
+    {
+      "path": "focused-final.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\focused-final.txt",
+      "originalSha256": "1aeedda6c7dec7709c0848198fb37512ca0dab6f4e46e4a21de5dd1d6c6cd12f",
+      "publishedSha256": "1aeedda6c7dec7709c0848198fb37512ca0dab6f4e46e4a21de5dd1d6c6cd12f",
+      "bytes": 2164,
+      "normalization": "none"
+    },
+    {
+      "path": "full-verify.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\full-verify.txt",
+      "originalSha256": "169591ad88a66fb7b210827f31f494b931acd52e21afde9eab5d2e7e5cae1687",
+      "publishedSha256": "169591ad88a66fb7b210827f31f494b931acd52e21afde9eab5d2e7e5cae1687",
+      "bytes": 17451,
+      "normalization": "none"
+    },
+    {
+      "path": "qualify.mjs.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\qualify.mjs",
+      "originalSha256": "e004cc5e451ba066871556bab90c974425b19813a9eec059ddbb82c7634c8eba",
+      "publishedSha256": "e004cc5e451ba066871556bab90c974425b19813a9eec059ddbb82c7634c8eba",
+      "bytes": 2783,
+      "normalization": "none"
+    },
+    {
+      "path": "raw-control-before.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\raw-control-before.txt",
+      "originalSha256": "5e2adc4d7cca9594575a9cad7d981481c9c77b61aea6eb81f4d0bd382b40a1a3",
+      "publishedSha256": "5e2adc4d7cca9594575a9cad7d981481c9c77b61aea6eb81f4d0bd382b40a1a3",
+      "bytes": 1203,
+      "normalization": "none"
+    },
+    {
+      "path": "raw-control-red.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\raw-control-red.txt",
+      "originalSha256": "8e61742dfd2becd5f4ee19d0c00bccc248fee3cd52ffa97d7d4090a7afd1fa32",
+      "publishedSha256": "8e61742dfd2becd5f4ee19d0c00bccc248fee3cd52ffa97d7d4090a7afd1fa32",
+      "bytes": 731,
+      "normalization": "none"
+    },
+    {
+      "path": "raw-sdk-async-red.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\raw-sdk-async-red.txt",
+      "originalSha256": "1694fd5734133d4c1f87ec758bc5e11305baea25fedd27fc88765667083b4af3",
+      "publishedSha256": "ecac703eb509a44a76c05a378701d79d6a5b77e3e315df83f447e3e2b5f506f1",
+      "bytes": 1091,
+      "normalization": "whitespace-only diagnostic blank indentation"
+    },
+    {
+      "path": "REPORT.md",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\REPORT.md",
+      "originalSha256": "3a3581aa84c5a01781c7d2660f5e566ec37e706f8bce85461154bc76d3eeff1c",
+      "publishedSha256": "3a3581aa84c5a01781c7d2660f5e566ec37e706f8bce85461154bc76d3eeff1c",
+      "bytes": 8614,
+      "normalization": "none"
+    },
+    {
+      "path": "scripts__owner-department-client.ts.after",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\scripts__owner-department-client.ts.after",
+      "originalSha256": "d4d634f79323b5ba38bc37032bbf888eba6ffc0a988c3bcaa20bd2d3bac3e7a7",
+      "publishedSha256": "d4d634f79323b5ba38bc37032bbf888eba6ffc0a988c3bcaa20bd2d3bac3e7a7",
+      "bytes": 9242,
+      "normalization": "none"
+    },
+    {
+      "path": "scripts__start-tevin-departments-local.ts.after",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\scripts__start-tevin-departments-local.ts.after",
+      "originalSha256": "9071d25f84880bcaa5a3ba505d12e6ee12f4839a955cf36d5d99cf04810a750e",
+      "publishedSha256": "9071d25f84880bcaa5a3ba505d12e6ee12f4839a955cf36d5d99cf04810a750e",
+      "bytes": 6387,
+      "normalization": "none"
+    },
+    {
+      "path": "scripts__start-tevin-departments-local.ts.before",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\scripts__start-tevin-departments-local.ts.before",
+      "originalSha256": "696eaa2de57afaa92a5ef4843cc5e43a02e282611ee15d588a2cf8328334639b",
+      "publishedSha256": "696eaa2de57afaa92a5ef4843cc5e43a02e282611ee15d588a2cf8328334639b",
+      "bytes": 6343,
+      "normalization": "none"
+    },
+    {
+      "path": "scripts__tevin-owner-startup.ts.after",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\scripts__tevin-owner-startup.ts.after",
+      "originalSha256": "c608a8b0c7c5690ba2b6de41cb673ed6d2433d8d6561a96270d1ea8a6a20fa72",
+      "publishedSha256": "c608a8b0c7c5690ba2b6de41cb673ed6d2433d8d6561a96270d1ea8a6a20fa72",
+      "bytes": 2309,
+      "normalization": "none"
+    },
+    {
+      "path": "scripts__tevin-owner-startup.ts.before",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\scripts__tevin-owner-startup.ts.before",
+      "originalSha256": "0044684f823133f6c7c98ad97135f7ec4cb01d99e39bf86ccbecce26c4b7e28c",
+      "publishedSha256": "0044684f823133f6c7c98ad97135f7ec4cb01d99e39bf86ccbecce26c4b7e28c",
+      "bytes": 2223,
+      "normalization": "none"
+    },
+    {
+      "path": "starter-explicit-typecheck-after.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\starter-explicit-typecheck-after.txt",
+      "originalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "publishedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "normalization": "none"
+    },
+    {
+      "path": "starter-explicit-typecheck.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\starter-explicit-typecheck.txt",
+      "originalSha256": "2aca6e97df20568a3ecdd4c85c18ef3022dd6ad833c64efce5d723ea24846276",
+      "publishedSha256": "2aca6e97df20568a3ecdd4c85c18ef3022dd6ad833c64efce5d723ea24846276",
+      "bytes": 143,
+      "normalization": "none"
+    },
+    {
+      "path": "test__owner-department-client.test.ts.after",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\test__owner-department-client.test.ts.after",
+      "originalSha256": "d6d6ff4ae8d84b6b979508244039702876b26e7a843dc786ff561bb0c74a05b1",
+      "publishedSha256": "d6d6ff4ae8d84b6b979508244039702876b26e7a843dc786ff561bb0c74a05b1",
+      "bytes": 12310,
+      "normalization": "none"
+    },
+    {
+      "path": "typecheck-after.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\typecheck-after.txt",
+      "originalSha256": "2bd85821b6b6aca54e0cde1736210d4d68028f4a06cc66fd5a1cbcb57cd908db",
+      "publishedSha256": "2bd85821b6b6aca54e0cde1736210d4d68028f4a06cc66fd5a1cbcb57cd908db",
+      "bytes": 234,
+      "normalization": "none"
+    },
+    {
+      "path": "typecheck-cleanup.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\typecheck-cleanup.txt",
+      "originalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "publishedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "normalization": "none"
+    },
+    {
+      "path": "typecheck-expanded.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\typecheck-expanded.txt",
+      "originalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "publishedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "normalization": "none"
+    },
+    {
+      "path": "typecheck-final.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\typecheck-final.txt",
+      "originalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "publishedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "normalization": "none"
+    },
+    {
+      "path": "typecheck-first.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\typecheck-first.txt",
+      "originalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "publishedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "normalization": "none"
+    },
+    {
+      "path": "typecheck.txt",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\typecheck.txt",
+      "originalSha256": "e257f94be39d19a4d585a042c131b66ae9a147f27322ccd59a65bfeba465579a",
+      "publishedSha256": "e257f94be39d19a4d585a042c131b66ae9a147f27322ccd59a65bfeba465579a",
+      "bytes": 5653,
+      "normalization": "none"
+    },
+    {
+      "path": "verification.json",
+      "originalPrivatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\verification.json",
+      "originalSha256": "46c7f51f3874f74e705b3d0335ccfd24731ecefca9d8a6b06d1b7fe134066c60",
+      "publishedSha256": "46c7f51f3874f74e705b3d0335ccfd24731ecefca9d8a6b06d1b7fe134066c60",
+      "bytes": 526,
+      "normalization": "none"
+    }
+  ],
+  "normalizationScope": "Only whitespace-only blank indentation in diagnostic .txt files; raw private originals preserved; source/patch bytes never normalized"
+}

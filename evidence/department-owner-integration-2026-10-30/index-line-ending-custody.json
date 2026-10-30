@@ -1,0 +1,20 @@
+[
+  {
+    "path": "scripts/start-tevin-departments-local.ts",
+    "workingSha256": "9071d25f84880bcaa5a3ba505d12e6ee12f4839a955cf36d5d99cf04810a750e",
+    "indexedSha256": "d95b5065104da89dd17912230f77d15f806e214c2b29e3107c8fcc594fe84d23",
+    "cause": "Git CRLF-to-LF only; exact normalized equality verified"
+  },
+  {
+    "path": "scripts/tevin-owner-startup.ts",
+    "workingSha256": "c608a8b0c7c5690ba2b6de41cb673ed6d2433d8d6561a96270d1ea8a6a20fa72",
+    "indexedSha256": "ac1d4540197bfa1c9ccc2d8c6fe130fd6db5c2c13c95d1b66cc031e4a053ad9b",
+    "cause": "Git CRLF-to-LF only; exact normalized equality verified"
+  },
+  {
+    "path": "src/department-gateway.ts",
+    "workingSha256": "6e2acdb700769b7f6173be3a6a70dee979699bdec467ac1c3faaa6cd27dba0fe",
+    "indexedSha256": "fb9dcea5d9b8d553ff2786c501961886fc1008bf452478d956a2c108bfa2cf73",
+    "cause": "Git CRLF-to-LF only; exact normalized equality verified"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "fullExit": 0,
+  "fullSignal": null,
+  "fullError": null,
+  "starterExit": 0,
+  "counts": {
+    "tests": 181,
+    "pass": 181,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "inputs": 3327,
+  "sourceStable": true,
+  "drift": [],
+  "oneRoot": "C:/Users/cool/Documents/Codex/Projects/MGR-ONE",
+  "apiRoot": "C:\\Users\\cool\\Documents\\Codex\\Projects\\MGR-API-MCP",
+  "scope": "Actual canonical API npmverify and explicit strict standalone-starter typecheck; actual canonical ONE dependency; public source/test/package/SDK/dist guards only; no private backpack/config/evidence/status traversal; no starter/provider/service launch"
+}

@@ -1,0 +1,29 @@
+✖ held actual SDK HTTP connection cannot outlive original ONE grant before mutation (204.2791ms)
+✔ fixed local wrapper has zero construction network, exact context, no tool discovery, and one mutation (212.6447ms)
+✔ global startup authority revoked during held HTTP also denies mutation (23.1498ms)
+✔ wrong actual gateway principal is never used for mutation (33.7739ms)
+✔ sticky close denies held and later explicit calls without mutation (14.5503ms)
+✔ unknown tool, getters and async request hooks deny before network (3.1739ms)
+✔ native promise/thenable callback is denied safely without reading then getter (3.6491ms)
+✔ fixed endpoint cannot select public hosts, alternate paths, URL credentials or executable schemes (0.5881ms)
+✔ starter uses the guarded client and preparation exposes the same authority fence (0.8865ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 8
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1497.7981
+
+✖ failing tests:
+
+test at test\owner-department-client.test.ts:1:5577
+✖ held actual SDK HTTP connection cannot outlive original ONE grant before mutation (204.2791ms)
+  Error: invalid-action-profile
+      at executionActionDigest (file:///C:/Users/cool/Documents/Codex/Projects/MGR-ONE/web/execution-coordinator.mjs:56:158)
+      at ExecutionCoordinator.grant (file:///C:/Users/cool/Documents/Codex/Projects/MGR-ONE/web/execution-coordinator.mjs:132:144)
+      at fixture (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\next-owner-department-client\test\owner-department-client.test.ts:13:541)
+      at async TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\next-owner-department-client\test\owner-department-client.test.ts:26:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)

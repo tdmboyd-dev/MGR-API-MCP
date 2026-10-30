@@ -1,0 +1,2 @@
+scripts/owner-department-client.ts(58,305): error TS2322: Type 'unknown' is not assignable to type '{ [x: string]: unknown; } | undefined'.
+test/owner-department-client.test.ts(28,226): error TS18046: 'result' is of type 'unknown'.

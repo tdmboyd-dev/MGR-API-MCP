@@ -1,0 +1,90 @@
+{
+  "oldRoot": "C:/Users/cool/Documents/Codex/2026-10-28/files-mentioned-by-the-user-mgr/work/repos/MGR-API-MCP",
+  "newRoot": "C:\\Users\\cool\\Documents\\Codex\\Projects\\MGR-API-MCP",
+  "head": "6f44fecb7ca5994398eb2cac0fb296d9085e6576",
+  "branch": "repair/completion-2026-10-28",
+  "paths": [
+    {
+      "path": "src/department-gateway.ts",
+      "beforeSha256": "a54d7f1e6bb5b5fe6cb26074ad5d755c28b101768b9d0435d9c7cdb1ae2a0cc3",
+      "afterSha256": "6e2acdb700769b7f6173be3a6a70dee979699bdec467ac1c3faaa6cd27dba0fe",
+      "beforeBasis": "C:\\Users\\cool\\Documents\\Codex\\Projects\\MGR-ONE\\.local\\resume-edge-current\\.local\\department-explicit-resume\\context-source-before.ts",
+      "freshBeforeSha256": "a54d7f1e6bb5b5fe6cb26074ad5d755c28b101768b9d0435d9c7cdb1ae2a0cc3",
+      "newAfterSha256": "6e2acdb700769b7f6173be3a6a70dee979699bdec467ac1c3faaa6cd27dba0fe"
+    },
+    {
+      "path": "test/department-context.test.ts",
+      "beforeSha256": null,
+      "afterSha256": "90f1f2675bcdf9520c0050f9c97383c68ae206c914ed5976de295d2d154b22cd",
+      "beforeBasis": "new task file",
+      "freshBeforeSha256": null,
+      "newAfterSha256": "90f1f2675bcdf9520c0050f9c97383c68ae206c914ed5976de295d2d154b22cd"
+    },
+    {
+      "path": "test/department-resume.test.ts",
+      "beforeSha256": null,
+      "afterSha256": "15de03a4bd1a9fdfad991927983f4e062ff6b7ea785fd42b2fd5970321d60862",
+      "beforeBasis": "new task file",
+      "freshBeforeSha256": null,
+      "newAfterSha256": "15de03a4bd1a9fdfad991927983f4e062ff6b7ea785fd42b2fd5970321d60862"
+    },
+    {
+      "path": "package.json",
+      "beforeSha256": "b0d449577c174ef5e5c51d5a813b7cae990ea4c4dbe115928a195883482b9257",
+      "afterSha256": "c5dbf4478974dbf49b1c22f5a3e406affe40f7cb96779d7311cf3ade021b5e89",
+      "beforeBasis": "C:\\Users\\cool\\Documents\\Codex\\Projects\\MGR-ONE\\.local\\resume-edge-current\\.local\\department-explicit-resume\\package.before.json",
+      "freshBeforeSha256": "b0d449577c174ef5e5c51d5a813b7cae990ea4c4dbe115928a195883482b9257",
+      "newAfterSha256": "c5dbf4478974dbf49b1c22f5a3e406affe40f7cb96779d7311cf3ade021b5e89"
+    },
+    {
+      "path": "package-lock.json",
+      "beforeSha256": "84cc11d8125e526115bddd7e1e13937beff10ddc737ccf26061878d9703ecbbe",
+      "afterSha256": "998b7dc1ef44c99cd877176f9497635245244052a10845066ca9a5464b95fbbb",
+      "beforeBasis": "C:\\Users\\cool\\Documents\\Codex\\Projects\\MGR-ONE\\.local\\resume-edge-current\\.local\\department-explicit-resume\\package-lock.before.json",
+      "freshBeforeSha256": "84cc11d8125e526115bddd7e1e13937beff10ddc737ccf26061878d9703ecbbe",
+      "newAfterSha256": "998b7dc1ef44c99cd877176f9497635245244052a10845066ca9a5464b95fbbb"
+    },
+    {
+      "path": "scripts/owner-department-client.ts",
+      "beforeSha256": null,
+      "afterSha256": "d4d634f79323b5ba38bc37032bbf888eba6ffc0a988c3bcaa20bd2d3bac3e7a7",
+      "canonicalWorkingBeforeSha256": null,
+      "bytes": 9242,
+      "freshBeforeSha256": null,
+      "newAfterSha256": "d4d634f79323b5ba38bc37032bbf888eba6ffc0a988c3bcaa20bd2d3bac3e7a7"
+    },
+    {
+      "path": "scripts/start-tevin-departments-local.ts",
+      "beforeSha256": "696eaa2de57afaa92a5ef4843cc5e43a02e282611ee15d588a2cf8328334639b",
+      "afterSha256": "9071d25f84880bcaa5a3ba505d12e6ee12f4839a955cf36d5d99cf04810a750e",
+      "canonicalWorkingBeforeSha256": "1284516d60e4d9158910b4f91c004fee5f85584fc4491f799677c51acdb4f4bb",
+      "bytes": 6387,
+      "freshBeforeSha256": "1284516d60e4d9158910b4f91c004fee5f85584fc4491f799677c51acdb4f4bb",
+      "newAfterSha256": "9071d25f84880bcaa5a3ba505d12e6ee12f4839a955cf36d5d99cf04810a750e"
+    },
+    {
+      "path": "scripts/tevin-owner-startup.ts",
+      "beforeSha256": "0044684f823133f6c7c98ad97135f7ec4cb01d99e39bf86ccbecce26c4b7e28c",
+      "afterSha256": "c608a8b0c7c5690ba2b6de41cb673ed6d2433d8d6561a96270d1ea8a6a20fa72",
+      "canonicalWorkingBeforeSha256": "0044684f823133f6c7c98ad97135f7ec4cb01d99e39bf86ccbecce26c4b7e28c",
+      "bytes": 2309,
+      "beforeReconciliation": "Parent approved exact46618c86 fresh CRLF-only vs0044684f qualified LF; normalized full contents also equal HEAD Git blob",
+      "freshBeforeSha256": "46618c86be49bd6db6574bfb25f646cddba0c4ac88520ee1ffad705acd653d8f",
+      "newAfterSha256": "c608a8b0c7c5690ba2b6de41cb673ed6d2433d8d6561a96270d1ea8a6a20fa72"
+    },
+    {
+      "path": "test/owner-department-client.test.ts",
+      "beforeSha256": null,
+      "afterSha256": "d6d6ff4ae8d84b6b979508244039702876b26e7a843dc786ff561bb0c74a05b1",
+      "canonicalWorkingBeforeSha256": null,
+      "bytes": 12310,
+      "freshBeforeSha256": null,
+      "newAfterSha256": "d6d6ff4ae8d84b6b979508244039702876b26e7a843dc786ff561bb0c74a05b1"
+    }
+  ],
+  "oldPublicSourceInputs": 83,
+  "oldSourceDrift": [],
+  "oldDependencyJunctionUnchanged": true,
+  "oldPrivateBackpackUnread": true,
+  "newNodeModulesAbsent": true
+}

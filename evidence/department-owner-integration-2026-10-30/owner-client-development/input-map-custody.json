@@ -1,0 +1,21 @@
+{
+  "maps": [
+    {
+      "name": "inputs-before.json",
+      "privatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\inputs-before.json",
+      "sha256": "a3f41ed4adce7dab2abfe1d0def30ec86143802340ce74c77bee62b28bca8c76",
+      "entries": 2271,
+      "exported": false
+    },
+    {
+      "name": "inputs-after.json",
+      "privatePath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\inputs-after.json",
+      "sha256": "a3f41ed4adce7dab2abfe1d0def30ec86143802340ce74c77bee62b28bca8c76",
+      "entries": 2271,
+      "exported": false
+    }
+  ],
+  "sameRawSHA": true,
+  "sourceStable": true,
+  "scope": "181 isolated API checks plus explicit frozen ONE dependency, not later canonical qualification"
+}

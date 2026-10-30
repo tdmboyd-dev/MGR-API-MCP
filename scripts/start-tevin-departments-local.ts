@@ -6,7 +6,7 @@ import {spawn,execFileSync} from "node:child_process";
 import {createLocalDepartmentEdge} from "../src/local-department-edge.js";
 import {omniPolicy} from "../src/omnidev-client.js";
 import {LegacyEdgeClient} from "../src/legacy-client.js";
-import {Client,StreamableHTTPClientTransport} from "@modelcontextprotocol/client";
+import {createOwnerDepartmentClient} from './owner-department-client.js';
 import {prepareTevinOwnerStartup} from './tevin-owner-startup.js';
 
 if(!process.argv[2]||!process.argv[3])throw Error("Supply the private isolated runtime directory and explicit canonical MGR-ONE checkout. See docs/DEPARTMENT-INTEGRATION.md.");
@@ -43,7 +43,7 @@ for(const name of ["creation","signme"]){const s=services[name];let ready=false;
 const accessToken=randomBytes(32).toString("hex");
 const edge=createLocalDepartmentEdge({port:17953,accessToken,expiresAt:Date.now()+8*3600000,tenantId:legacy.tenantId,actorId:legacy.actorId,legacy:new LegacyEdgeClient({baseUrl:`http://127.0.0.1:${legacy.port}`,bearerToken:legacy.apiToken,actorId:legacy.actorId}),creation:services.creation,signme:services.signme,voice,...(omniConfig?{omnidev:omniConfig}:{})});
 await new Promise<void>(r=>edge.server.listen(17953,"127.0.0.1",r));
-const client=new Client({name:"tevin-local-department-owner",version:"1.0.0"});await client.connect(new StreamableHTTPClientTransport(new URL(edge.baseUrl+"/mcp"),{authProvider:{token:async()=>accessToken}}));
+const client=createOwnerDepartmentClient({endpoint:edge.baseUrl+"/mcp",accessToken,tenantId:legacy.tenantId,actorId:legacy.actorId,assertCurrent:preparedStartup.assertCurrent});await client.prepareForDispatch();
 const server=preparedStartup.createServer(client);
 await new Promise<void>(r=>server.listen(17954,"127.0.0.1",r));
 console.log(JSON.stringify({event:"isolated_tevin_departments_ready",url:"http://127.0.0.1:17954/departments",ownerCredentialFile:statePath,scope:"local PostgreSQL/SQLite/Kokoro integration; not production",expiresInHours:8}));

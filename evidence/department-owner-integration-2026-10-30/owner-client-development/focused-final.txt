@@ -1,0 +1,29 @@
+{"rawSDKControl":false,"mutations":0,"toolsLists":0,"actualLoopback":true,"outsideCalls":0}
+✔ held actual SDK HTTP connection cannot outlive original ONE grant before mutation (650.4115ms)
+✔ fixed local wrapper has zero construction network, exact context, no tool discovery, and one mutation (151.9517ms)
+✔ global startup authority revoked during held HTTP also denies mutation (23.4132ms)
+✔ wrong actual gateway principal is never used for mutation (42.8232ms)
+✔ sticky close denies held and later explicit calls without mutation (61.7782ms)
+✔ unknown tool, getters and async request hooks deny before network (5.8038ms)
+{"rawSDKControl":false,"mutations":0,"actualLoopback":true,"outsideCalls":0}
+✔ native promise/thenable callback is denied safely without reading then getter (5.128ms)
+✔ fixed endpoint cannot select public hosts, alternate paths, URL credentials or executable schemes (0.9084ms)
+✔ starter uses the guarded client and preparation exposes the same authority fence (1.7172ms)
+✔ raw SDK asynchronous send cannot outlive original ONE grant (237.6447ms)
+✔ authority withdrawal after response headers cancels the original unread body (2.5772ms)
+✔ pending body cancellation retains exact transport custody until its original promise settles (4.9497ms)
+✔ tiny-chunk response overhead is bounded and its original producer is cancelled (37.5783ms)
+✔ actual shared ONE startup composes idle department services without another authority or model (4933.4374ms)
+✔ existing exact launch registration and department workflows share the real owner factory (352.9922ms)
+✔ revoking the model grant between preparation and server construction denies without connecting services (243.2636ms)
+✔ old/executable-looking brain JSON cannot be selected as the data-only launch manifest (188.9399ms)
+✔ an unenrolled existing store is refused without enrolling or inventing a root (142.9307ms)
+✔ the shared factory refuses a foreign store object before constructing workflows (164.2998ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8499.516

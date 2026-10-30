@@ -51,6 +51,18 @@ export class DepartmentGateway {
     }catch(error){if(controller.signal.aborted)throw Error(`Department ${service} timed out; reconcile request before retry`);throw error;}finally{clearTimeout(timer);}
   }
   async candidateBinding(input:z.infer<typeof omniBindingInput>){if(!this.omni)throw Error("Omni engineering service not configured");return this.omni.binding(input);}
+  async resume(command:DepartmentCommand,preDispatch?:()=>void){
+    const c=departmentCommand.parse(command);
+    if(c.operation!=="creation.document.render")throw Error("Only accepted native Markdown jobs support explicit resume");
+    preDispatch?.();
+    // Read and verify the original immutable request before continuing the SAME
+    // accepted domain job. No new /jobs dispatch and no transport retry.
+    const current=await this.status(c);
+    preDispatch?.();
+    if(current.status!=="QUEUED")return current;
+    const result=await this.request("creation",`/v1/creation/jobs/${encodeURIComponent(c.requestId)}/run`,{});
+    return this.verifyCreation(c,result);
+  }
   async execute(command:DepartmentCommand,preDispatch?:()=>void){
     const c=departmentCommand.parse(command),p=this.config;
     preDispatch?.();
@@ -129,13 +141,24 @@ export class DepartmentGateway {
 }
 export interface DepartmentToolOptions {auth:AuthContext;resourceAudience:string;gateway:DepartmentGateway}
 export function registerDepartmentTools(server:McpServer,options:DepartmentToolOptions){
+  server.registerTool("mgr_department_context",{
+    description:"Read the authenticated department gateway principal. No domain request or mutation; identity comes only from the verified session.",
+    inputSchema:z.object({}).strict()
+  },async()=>{
+    try{
+      options.gateway.authorize(options.auth,options.resourceAudience);
+      const result={schemaVersion:1,tenantId:options.auth.tenantId,actorId:options.auth.actorId};
+      options.gateway.authorize(options.auth,options.resourceAudience);
+      return {content:[{type:"text",text:JSON.stringify(result)}]};
+    }catch{return {isError:true,content:[{type:"text",text:JSON.stringify({error:"Department context unavailable",state:"unconfirmed"})}]};}
+  });
   server.registerTool("mgr_omnidev_candidate_binding",{description:"Read current approved OmniDev snapshot candidate digests. No source, objectives or execution. Does not grant approval.",inputSchema:omniBindingInput},async input=>{
     try{options.gateway.authorize(options.auth,options.resourceAudience);const result=await options.gateway.candidateBinding(input);options.gateway.authorize(options.auth,options.resourceAudience);return {content:[{type:"text",text:JSON.stringify(result)}]};}
     catch(error){return {isError:true,content:[{type:"text",text:JSON.stringify({error:error instanceof Error?error.message:"Omni binding unavailable",state:"unconfirmed"})}]};}
   });
-  for(const method of ["execute","status","artifact","cancel"] as const){
+  for(const method of ["execute","status","artifact","cancel","resume"] as const){
     server.registerTool(`mgr_department_${method}`,{description:`${method} a bounded department operation. Identity is credential-bound. No signing, sending, arbitrary code or paid providers.`,inputSchema:departmentCommand},async input=>{
-      try{options.gateway.authorize(options.auth,options.resourceAudience,method==="execute"||method==="cancel");const result=method==="execute"?await options.gateway.execute(input,()=>options.gateway.authorize(options.auth,options.resourceAudience,true)):await options.gateway[method](input);options.gateway.authorize(options.auth,options.resourceAudience,method==="execute"||method==="cancel");return {content:[{type:"text",text:JSON.stringify(result)}]};}
+      try{const write=method==="execute"||method==="cancel"||method==="resume";options.gateway.authorize(options.auth,options.resourceAudience,write);const result=method==="execute"||method==="resume"?await options.gateway[method](input,()=>options.gateway.authorize(options.auth,options.resourceAudience,true)):await options.gateway[method](input);options.gateway.authorize(options.auth,options.resourceAudience,write);return {content:[{type:"text",text:JSON.stringify(result)}]};}
       catch(error){return {isError:true,content:[{type:"text",text:JSON.stringify({error:error instanceof Error?error.message:"Department failed",state:"unconfirmed"})}]};}
     });
   }

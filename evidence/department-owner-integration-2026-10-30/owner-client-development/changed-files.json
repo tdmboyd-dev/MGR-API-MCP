@@ -1,0 +1,34 @@
+{
+  "baseCommit": "6f44fecb7ca5994398eb2cac0fb296d9085e6576",
+  "files": [
+    {
+      "path": "scripts/owner-department-client.ts",
+      "beforeSha256": null,
+      "afterSha256": "d4d634f79323b5ba38bc37032bbf888eba6ffc0a988c3bcaa20bd2d3bac3e7a7",
+      "canonicalWorkingBeforeSha256": null,
+      "bytes": 9242
+    },
+    {
+      "path": "scripts/start-tevin-departments-local.ts",
+      "beforeSha256": "696eaa2de57afaa92a5ef4843cc5e43a02e282611ee15d588a2cf8328334639b",
+      "afterSha256": "9071d25f84880bcaa5a3ba505d12e6ee12f4839a955cf36d5d99cf04810a750e",
+      "canonicalWorkingBeforeSha256": "1284516d60e4d9158910b4f91c004fee5f85584fc4491f799677c51acdb4f4bb",
+      "bytes": 6387
+    },
+    {
+      "path": "scripts/tevin-owner-startup.ts",
+      "beforeSha256": "0044684f823133f6c7c98ad97135f7ec4cb01d99e39bf86ccbecce26c4b7e28c",
+      "afterSha256": "c608a8b0c7c5690ba2b6de41cb673ed6d2433d8d6561a96270d1ea8a6a20fa72",
+      "canonicalWorkingBeforeSha256": "0044684f823133f6c7c98ad97135f7ec4cb01d99e39bf86ccbecce26c4b7e28c",
+      "bytes": 2309
+    },
+    {
+      "path": "test/owner-department-client.test.ts",
+      "beforeSha256": null,
+      "afterSha256": "d6d6ff4ae8d84b6b979508244039702876b26e7a843dc786ff561bb0c74a05b1",
+      "canonicalWorkingBeforeSha256": null,
+      "bytes": 12310
+    }
+  ],
+  "dependencySeed": "BASELINE.json; five frozen resume/SDK2.4 paths excluded task patch"
+}

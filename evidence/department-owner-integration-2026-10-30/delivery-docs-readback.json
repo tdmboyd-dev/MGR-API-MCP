@@ -1,0 +1,152 @@
+{
+  "before": [
+    {
+      "path": "HANDOFF.md",
+      "sha256": "b8f54a3b8e7d9ea19fe3b9b15d75a92d218a23fddbe7f618289702ee6a6e7ca5"
+    },
+    {
+      "path": "docs/full-build/SCORECARD.md",
+      "sha256": "d672ad803ebc935816758f6a050ad378483bb02e67cfbf59c7698da566ea3507"
+    },
+    {
+      "path": "BUILD-QUEUE.md",
+      "sha256": "b9fedcbf7373b3a89eaaf4417e6f1ac0f6b90a362e69d6f4295d5b566fa4a895"
+    },
+    {
+      "path": "AUDIT-LEDGER.md",
+      "sha256": "93c735027cba844e15cf22d126ed94b388361bc5073e6c1825e2c4635e01111b"
+    }
+  ],
+  "after": [
+    {
+      "path": "HANDOFF.md",
+      "sha256": "b4f4d3218a069615dc085c29124cbc4af016d747be47561366663ea5ae22bb3b"
+    },
+    {
+      "path": "docs/full-build/SCORECARD.md",
+      "sha256": "26328aeb94a780a6c425df6eed3fe5c385b94b0ebeb3ee1ce67eb1cf78c68432"
+    },
+    {
+      "path": "BUILD-QUEUE.md",
+      "sha256": "fd633ca7bc688d3c664a8e5b0e8b6ac957314466428c5252f4c097d7d87e7ed6"
+    },
+    {
+      "path": "AUDIT-LEDGER.md",
+      "sha256": "e8473d211967b76a6401d85482af298566659f9506e8e0ad02d03ed7f81442ed"
+    }
+  ],
+  "scope": "Four existing delivery docs only; historical evidence and original queue IDs retained; prior181 source scope explicit; no runtime edits/staging/commit",
+  "queueIdsBefore": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "30a",
+    "31",
+    "32",
+    "33",
+    "34",
+    "35",
+    "36",
+    "37",
+    "38",
+    "39",
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45",
+    "46",
+    "47",
+    "48"
+  ],
+  "queueIdsAfter": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "30a",
+    "31",
+    "32",
+    "33",
+    "34",
+    "35",
+    "36",
+    "37",
+    "38",
+    "39",
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45",
+    "46",
+    "47",
+    "48"
+  ],
+  "queueIdsUnchanged": true,
+  "runtimePostimageMismatches": [],
+  "finalQualification": {
+    "tests": 181,
+    "inputs": 3327,
+    "oneWorkflowSha256": "0e1322fc8ccd5f61cae5d6f2534b77e5b08334af6fdc8e012ca6a97bf4af7518",
+    "oneDepartmentStartupSha256": "d30531d1cb9af6a232f1ea9a20cac56f7fa91de5eb0172b1ab45e5ac4da9fb08",
+    "sourceStable": true,
+    "priorReceiptsPreserved": true
+  },
+  "currentJoinStatus": "Final API corrected-dependency pass; parent broader54-file/normal-owner/public-index/security/publication receipts separate"
+}

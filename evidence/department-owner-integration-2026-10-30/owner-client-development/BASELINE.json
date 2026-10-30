@@ -1,0 +1,31 @@
+{
+  "canonicalBase": "6f44fecb7ca5994398eb2cac0fb296d9085e6576",
+  "dependencySeed": [
+    {
+      "path": "src/department-gateway.ts",
+      "sha256": "6e2acdb700769b7f6173be3a6a70dee979699bdec467ac1c3faaa6cd27dba0fe",
+      "role": "frozen resume/SDK dependency seed, excluded task patch"
+    },
+    {
+      "path": "test/department-context.test.ts",
+      "sha256": "90f1f2675bcdf9520c0050f9c97383c68ae206c914ed5976de295d2d154b22cd",
+      "role": "frozen resume/SDK dependency seed, excluded task patch"
+    },
+    {
+      "path": "test/department-resume.test.ts",
+      "sha256": "15de03a4bd1a9fdfad991927983f4e062ff6b7ea785fd42b2fd5970321d60862",
+      "role": "frozen resume/SDK dependency seed, excluded task patch"
+    },
+    {
+      "path": "package.json",
+      "sha256": "c5dbf4478974dbf49b1c22f5a3e406affe40f7cb96779d7311cf3ade021b5e89",
+      "role": "frozen resume/SDK dependency seed, excluded task patch"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "998b7dc1ef44c99cd877176f9497635245244052a10845066ca9a5464b95fbbb",
+      "role": "frozen resume/SDK dependency seed, excluded task patch"
+    }
+  ],
+  "privateBackpackRead": false
+}

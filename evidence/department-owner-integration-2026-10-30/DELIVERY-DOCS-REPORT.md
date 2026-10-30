@@ -1,0 +1,13 @@
+# Final API delivery documentation and dependency readback
+
+2026-10-30. Changed existing HANDOFF.md, docs/full-build/SCORECARD.md, BUILD-QUEUE.md and AUDIT-LEDGER.md only. No runtime/test/package edits, staging, commit or push in this documentation task.
+
+Current API location is Projects/MGR-API-MCP on the existing repair branch. The old same-HEAD detached checkout, all nine WIP postimages, original dependency junction and unread/unstaged private .backpack remain preserved. Exact nine reviewed source paths are listed in the handoff. Previous153 starter and147 shutdown blocks are labeled saved evidence; original49 numbered queue entries (IDs1–48 including30a), all unique history and external obligations remain intact. Recorded SDK2.1 hosted selection is distinguished from current locked SDK2.4 local repair.
+
+Final actual canonical API181/181,zero failed/cancelled/skipped, strict standalone starter noEmit0 and3327 stable inputs bind ONE workflow0e1322fc/startupd30531d1 after the final close/yield correction. Exact mapSHA9c23f0c0838257f8759de73f2e11c9b2367742d0fda9dbc246783aa1c4442218,401657bytes equal before/after. Earlier181/3325 and181/3327-at-2ff035 and parent broader failures are preserved separately. The API pass does not imply parent broader54-file, normal-owner, public-index integrity, security scan or publication results. Those remaining receipts belong to the parent integration task; no repeated test is directed without another source change.
+
+ONE's independent authorized real owner calculation/save/restart proof at a6b5ff4/65a8cfd is acknowledged with attribution; this bottom-up API lane did no live actions and does not reopen its authorization. Permanent everyday setup and broader tenant/provider/production acceptance remain unfinished. API advisory audit0 is a dependency report, not app-security certification.
+
+Exact remaining work: parent confirms final broader ONE and normal owner/MCP/Creation journeys, validates scoped public index and security findings, and publishes/readbacks the coherent branch. Original queue remains for field truth/freshness, quota/retention/restore/rotation/operations, broader engineering and uncertain stops, source/license/research backlog, actual hosted/account/tenant/provider/device/signing/sending/paid/production acceptance. No package/283-child closure follows.
+
+Raw four before documents remain ignored under .local/department-owner-delivery-docs-before. delivery-docs-readback.json pins before/after and unchanged queue IDs. Source9postimages0mismatch; scoped whitespace passes. Full maps stay private; canonical-readback.json exposes exact custody only.

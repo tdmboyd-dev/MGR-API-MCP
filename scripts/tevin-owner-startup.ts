@@ -11,10 +11,12 @@ export async function prepareTevinOwnerStartup({oneRoot,store,ownerToken,publicO
  const coordinator=new execution.ExecutionCoordinator(store);coordinator.assertAuthority(coordinator.hostContext());
  const prepared=modelLaunchFile===undefined?null:launch.prepareModelLaunch({store,coordinator,registration:launch.readModelLaunchManifest(modelLaunchFile)});
  prepared?.assertReady();
+ const assertCurrent=()=>{coordinator.assertAuthority(coordinator.hostContext());prepared?.assertReady();};
  return Object.freeze({
   modelRegistrationSelected:prepared!==null,
+  assertCurrent,
   createServer(client:any){
-   coordinator.assertAuthority(coordinator.hostContext());prepared?.assertReady();
+   assertCurrent();
    const ecosystemWorkflows=new workflows.EcosystemWorkflows(store,{client,tenantId,actorId,coordinator,...(omnidevExpectedPolicy===undefined?{}:{omnidevExpectedPolicy})});
    return serverModule.createRegisteredStartupServer({store,ownerToken,publicOrigin,engineeringCoordinator:coordinator,modelStartup:prepared?.modelStartup??null,ecosystemWorkflows,modelEnvironment:{},billingSource:null,billingSyncSecret:null,mailSender:{configured:false},emailChannel:{configured:false},repositoryScanner:{repositories:()=>[]}});
   }

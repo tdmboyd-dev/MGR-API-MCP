@@ -1,0 +1,20 @@
+{"rawSDKControl":false,"mutations":0,"toolsLists":0,"actualLoopback":true,"outsideCalls":0}
+✔ held actual SDK HTTP connection cannot outlive original ONE grant before mutation (287.7201ms)
+✔ fixed local wrapper has zero construction network, exact context, no tool discovery, and one mutation (42.2716ms)
+✔ global startup authority revoked during held HTTP also denies mutation (9.2762ms)
+✔ wrong actual gateway principal is never used for mutation (19.5131ms)
+✔ sticky close denies held and later explicit calls without mutation (7.5685ms)
+✔ unknown tool, getters and async request hooks deny before network (1.4796ms)
+{"rawSDKControl":false,"mutations":0,"actualLoopback":true,"outsideCalls":0}
+✔ native promise/thenable callback is denied safely without reading then getter (2.3685ms)
+✔ fixed endpoint cannot select public hosts, alternate paths, URL credentials or executable schemes (0.4431ms)
+✔ starter uses the guarded client and preparation exposes the same authority fence (0.721ms)
+✔ raw SDK asynchronous send cannot outlive original ONE grant (173.1089ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1264.21

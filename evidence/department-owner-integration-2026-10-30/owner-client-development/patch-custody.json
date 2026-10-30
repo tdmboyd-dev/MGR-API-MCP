@@ -1,0 +1,8 @@
+{
+  "privateOriginalPath": "C:\\Users\\cool\\Documents\\Codex\\2026-10-28\\files-mentioned-by-the-user-mgr\\work\\next-owner-department-client\\.local\\owner-department-client\\task-only.patch",
+  "rawPatchSha256": "2c51be9006bd582168f2225ada836576200c62b539f6c07fd1f18f2ddf24df9f",
+  "rawPatchBytes": 39416,
+  "gzipSha256": "c94d72ca1e0a456467be6a09bc8f652260339ad130a0878f642d6a25ee467465",
+  "decodedEqualsOriginal": true,
+  "sourceSnapshots": "*.before and *.after raw byte-identical, no source normalization"
+}

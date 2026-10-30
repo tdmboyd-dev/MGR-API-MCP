@@ -1,0 +1,18 @@
+✖ held actual SDK HTTP connection cannot outlive original ONE grant before mutation (5272.2566ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5919.8373
+
+✖ failing tests:
+
+test at test\owner-department-client.test.ts:1:5605
+✖ held actual SDK HTTP connection cannot outlive original ONE grant before mutation (5272.2566ms)
+  Error: owned-fixture-deadline
+      at Timeout.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\next-owner-department-client\test\owner-department-client.test.ts:8:160)
+      at listOnTimeout (node:internal/timers:685:17)
+      at process.processTimers (node:internal/timers:618:7)

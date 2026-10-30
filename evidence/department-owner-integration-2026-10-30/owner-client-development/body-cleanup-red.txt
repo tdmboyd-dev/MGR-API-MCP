@@ -1,0 +1,28 @@
+✖ authority withdrawal after response headers cancels the original unread body (34.5574ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1228.8829
+
+✖ failing tests:
+
+test at test\owner-department-client.test.ts:1:9743
+✖ authority withdrawal after response headers cancels the original unread body (34.5574ms)
+  AssertionError [ERR_ASSERTION]: unread body cannot be abandoned when authority is denied
+
+  false !== true
+
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\next-owner-department-client\test\owner-department-client.test.ts:39:609)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,12 @@
+{
+  "manifestFiles": 37,
+  "mismatches": [],
+  "fullInputMapsExported": false,
+  "privateConfigCredentialFilesExported": false,
+  "gzipLossless": true,
+  "blankIndentNormalizedFiles": [
+    "body-cleanup-red.txt",
+    "body-cleanup-valid-red.txt",
+    "raw-sdk-async-red.txt"
+  ]
+}

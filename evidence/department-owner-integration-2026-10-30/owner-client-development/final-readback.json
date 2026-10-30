@@ -1,0 +1,7 @@
+{
+  "fourSourcePaths": 4,
+  "sourceMismatches": [],
+  "noSourceEditsAfterFullVerify": true,
+  "taskPatchSha256": "2c51be9006bd582168f2225ada836576200c62b539f6c07fd1f18f2ddf24df9f",
+  "independentReportSha256": "9997f0298f6129103e30f9622b000de45b085391ab48f13672990f7b043bfd7c"
+}

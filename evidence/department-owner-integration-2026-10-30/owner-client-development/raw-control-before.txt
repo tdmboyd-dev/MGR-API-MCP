@@ -1,0 +1,21 @@
+✖ held actual SDK HTTP connection cannot outlive original ONE grant before mutation (185.1976ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1080.1572
+
+✖ failing tests:
+
+test at test\owner-department-client.test.ts:1:5577
+✖ held actual SDK HTTP connection cannot outlive original ONE grant before mutation (185.1976ms)
+  Error: invalid-action-profile
+      at executionActionDigest (file:///C:/Users/cool/Documents/Codex/Projects/MGR-ONE/web/execution-coordinator.mjs:56:158)
+      at ExecutionCoordinator.grant (file:///C:/Users/cool/Documents/Codex/Projects/MGR-ONE/web/execution-coordinator.mjs:132:144)
+      at fixture (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\next-owner-department-client\test\owner-department-client.test.ts:13:541)
+      at async TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\next-owner-department-client\test\owner-department-client.test.ts:26:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
