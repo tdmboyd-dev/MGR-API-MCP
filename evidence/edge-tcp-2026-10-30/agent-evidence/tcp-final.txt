@@ -1,0 +1,22 @@
+▶ official client exercises the actual authenticated edge over owned TCP with real local JWKS
+  ✔ real TCP rejects missing and invalid audience/expired credentials before domain contact (95.3433ms)
+  ✔ official SDK initializes and lists actual event tool without domain fetch (60.2569ms)
+  ✔ actual LegacyEdgeClient default HTTP preserves actor tenant page cursor and exact Unicode (72.8573ms)
+  ✔ strict tool schema rejects caller identity override without service dispatch (24.3158ms)
+  ✔ additional existing event scope is required before any domain request (65.657ms)
+  ✔ signed alternate principal cannot borrow domain actor tenant grants (90.273ms)
+  ✔ withdrawn fixture domain grant fails closed through actual edge TCP (15.9761ms)
+  ✔ wrong domain stream identity is withheld rather than published (18.6833ms)
+  ✔ actual malformed domain UTF8 is rejected across both HTTP boundaries (21.7278ms)
+{"kind":"owned-edge-tcp-only","edgeRequests":29,"jwksRequests":1,"syntheticDomainRequests":8,"observedHttpFetches":38,"outsideHttpAttempts":0,"publicTLS":false,"realProvider":false,"domainDatabase":false}
+  ✔ token expiry during held downstream HTTP withholds late result (1734.6393ms)
+  ✔ all observed HTTP activity is owned loopback with no injected SDK or domain fetch (1.6918ms)
+✔ official client exercises the actual authenticated edge over owned TCP with real local JWKS (2508.9769ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4594.4691

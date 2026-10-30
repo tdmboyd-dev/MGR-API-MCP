@@ -1,0 +1,44 @@
+▶ official client exercises the actual authenticated edge over owned TCP with real local JWKS
+  ✖ real TCP rejects missing and invalid audience/expired credentials before domain contact (89.9085ms)
+  ✔ official SDK initializes and lists actual event tool without domain fetch (36.2146ms)
+  ✔ actual LegacyEdgeClient default HTTP preserves actor tenant page cursor and exact Unicode (60.5596ms)
+  ✔ strict tool schema rejects caller identity override without service dispatch (20.0302ms)
+  ✔ additional existing event scope is required before any domain request (45.6627ms)
+  ✔ signed alternate principal cannot borrow domain actor tenant grants (93.9078ms)
+  ✔ withdrawn fixture domain grant fails closed through actual edge TCP (17.517ms)
+  ✔ wrong domain stream identity is withheld rather than published (15.7812ms)
+  ✔ actual malformed domain UTF8 is rejected across both HTTP boundaries (17.2639ms)
+{"kind":"owned-edge-tcp-only","edgeRequests":27,"jwksRequests":1,"syntheticDomainRequests":8,"observedHttpFetches":36,"outsideHttpAttempts":0,"publicTLS":false,"realProvider":false,"domainDatabase":false}
+  ✔ token expiry during held downstream HTTP withholds late result (1098.1545ms)
+  ✔ all observed HTTP activity is owned loopback with no injected SDK or domain fetch (0.5956ms)
+✖ official client exercises the actual authenticated edge over owned TCP with real local JWKS (1810.6046ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 10
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8688.9429
+
+✖ failing tests:
+
+test at test\edge-tcp-loopback.test.ts:1:6690
+✖ real TCP rejects missing and invalid audience/expired credentials before domain contact (89.9085ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  503 !== 401
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\next-api-loopback\test\edge-tcp-loopback.test.ts:56:562)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\next-api-loopback\test\edge-tcp-loopback.test.ts:56:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 503,
+    expected: 401,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

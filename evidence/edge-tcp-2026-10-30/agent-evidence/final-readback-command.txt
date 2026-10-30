@@ -1,0 +1,37 @@
+{
+  "head": "f8113d6d002ca11a69e0aab29a2ee2516c833aa3",
+  "expectedHead": "f8113d6d002ca11a69e0aab29a2ee2516c833aa3",
+  "trackedDiff": "",
+  "snapshotFiles": 33,
+  "copiedExistingTests": [
+    {
+      "path": "test/jwt-verifier.test.ts",
+      "sha256": "61568d3b7901f121fd299d5e42a1d079f77c21210a1f68ece4639ffb28c64b5b"
+    },
+    {
+      "path": "test/mcp-http.test.ts",
+      "sha256": "18392ac8359c56f43a73cd23156c9956dd0a6bf6824f5bd0f82607d9ddcd13ad"
+    },
+    {
+      "path": "test/legacy-event-read.test.ts",
+      "sha256": "e5d8f04a0a32dca08e08e09903b2a80c746107e5400e884cca6487ff96b82ef8"
+    }
+  ],
+  "drift": [],
+  "versions": {
+    "@modelcontextprotocol/client": "2.1.0",
+    "@modelcontextprotocol/server": "2.1.0",
+    "jose": "6.2.13",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "zod": "4.6.5"
+  },
+  "proposal": [
+    {
+      "path": "test/edge-tcp-loopback.test.ts",
+      "beforeSha256": null,
+      "afterSha256": "141519cd47e84455e2ae5c7ccf26c2f32ffc65e81e053ed4dfc720a07a208fa5",
+      "bytes": 12637
+    }
+  ]
+}

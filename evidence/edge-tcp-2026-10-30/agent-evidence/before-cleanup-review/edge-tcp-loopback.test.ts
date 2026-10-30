@@ -1,0 +1,71 @@
+// Exact copied edge source + official SDK over real owned loopback TCP.
+// Synthetic JWKS/Legacy fixtures, no owner credentials, domain DB or public host.
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createServer,type Server,type IncomingMessage,type ServerResponse} from 'node:http';
+import {Readable} from 'node:stream';
+import {Client,StreamableHTTPClientTransport} from '@modelcontextprotocol/client';
+import {generateKeyPair,exportJWK,SignJWT} from 'jose';
+import {createAuthorizedMgrMcpHttpHandler} from '../src/mcp-http.js';
+import {JwksAccessTokenVerifier} from '../src/jwt-verifier.js';
+import {LegacyEdgeClient} from '../src/legacy-client.js';
+
+const selection={scopeType:'workspace',scopeId:'owned-records',subjectType:'person'};
+const tenant='owned-tenant',actor='owned-actor',serviceToken='SYNTHETIC_OWNED_LEGACY_SERVICE_TOKEN';
+const json=(response:ServerResponse,status:number,body:unknown)=>{response.writeHead(status,{'content-type':'application/json'});response.end(JSON.stringify(body));};
+async function listen(server:Server){await new Promise<void>((resolve,reject)=>{server.once('error',reject);server.listen(0,'127.0.0.1',resolve);});const address=server.address();assert.ok(address&&typeof address==='object');return `http://127.0.0.1:${address.port}`;}
+async function close(server:Server){server.closeAllConnections();await new Promise<void>(resolve=>server.close(()=>resolve()));}
+async function body(request:IncomingMessage){const parts:Buffer[]=[];let bytes=0;for await(const part of request){const value=Buffer.from(part);bytes+=value.length;if(bytes>1048576)throw Error('owned request cap');parts.push(value);}return Buffer.concat(parts);}
+test('official client exercises the actual authenticated edge over owned TCP with real local JWKS', {timeout:30000},async t=>{
+ const {privateKey,publicKey}=await generateKeyPair('RS256'),jwk=await exportJWK(publicKey);Object.assign(jwk,{kid:'owned-loopback-key',alg:'RS256',use:'sig'});
+ const originalFetch=globalThis.fetch,ownedOrigins=new Set<string>(),trace:{origin:string;path:string}[]=[],outside:string[]=[];
+ // Egress observation/blocking only: all admitted requests still use real TCP.
+ globalThis.fetch=async(input,init)=>{const url=new URL(input instanceof Request?input.url:String(input));trace.push({origin:url.origin,path:url.pathname});if(!ownedOrigins.has(url.origin)){outside.push(url.origin);throw Error('Unowned fixture egress denied');}return originalFetch(input,init);};
+ let jwksCalls=0,domainCalls=0,edgeCalls=0,domainGranted=true,wrongIdentity=false,malformed=false;
+ let held:(()=>Promise<void>)|null=null;
+ const observed:{actor:string|undefined;tenant:string|undefined;method:string|undefined;path:string}[]=[];
+ const jwks=createServer((request,response)=>{jwksCalls++;if(request.url!=='/jwks.json')return json(response,404,{});json(response,200,{keys:[jwk]});});
+ const jwksBase=await listen(jwks);ownedOrigins.add(jwksBase);
+ const domain=createServer(async(request,response)=>{
+  domainCalls++;const url=new URL(request.url??'/',domainBase);observed.push({actor:request.headers['x-actor-id'] as string|undefined,tenant:request.headers['x-tenant-id'] as string|undefined,method:request.method,path:url.pathname});
+  if(request.method!=='GET'||url.pathname!=='/v1/events')return json(response,405,{error:'fixture read only'});
+  if(request.headers.authorization!==`Bearer ${serviceToken}`||request.headers['x-tenant-id']!==tenant||request.headers['x-actor-id']!==actor||!domainGranted||url.searchParams.get('scopeId')!==selection.scopeId)return json(response,403,{error:'fixture grant denied'});
+  if(held)await held();
+  const cursor=url.searchParams.get('cursor'),page={protocol:'mgr-legacy-events-v1',tenantId:wrongIdentity?'other-tenant':tenant,actorId:actor,...selection,subjectId:null,eventTypes:['crm.create_contact.completed'],cursor,nextCursor:cursor?null:'owned-opaque-next-cursor',events:cursor?[]:[{eventId:'owned-event-1',eventType:'crm.create_contact.completed',eventVersion:1,occurredAt:'2026-10-30T00:00:00Z',actor:{actorType:'service',actorId:actor,tenantId:tenant},scope:{tenantId:tenant,scopeType:'workspace',scopeId:selection.scopeId},subject:{entityType:'person',entityId:'owned-row'},source:'owned-http-fixture',correlationId:'owned-correlation',idempotencyKey:'owned-idempotency',data:{note:'exact Unicode 你好 🌍'},evidence:{fixtureOnly:true}}]};
+  if(malformed){response.writeHead(200,{'content-type':'application/json'});response.end(Buffer.concat([Buffer.from('{"note":"'),Buffer.from([255]),Buffer.from('"}')]));return;}
+  json(response,200,page);
+ });
+ const domainBase=await listen(domain);ownedOrigins.add(domainBase);
+ let handler:ReturnType<typeof createAuthorizedMgrMcpHttpHandler>;
+ const edge=createServer(async(request,response)=>{edgeCalls++;try{
+  if(request.headers.host!==new URL(edgeBase).host)return json(response,421,{error:'fixture host denied'});
+  if(request.headers.origin)return json(response,403,{error:'fixture origin denied'});
+  const url=new URL(request.url??'/',edgeBase);if(url.pathname!=='/mcp')return json(response,404,{error:'fixture path'});
+  const bytes=await body(request),headers=new Headers();for(const [name,value]of Object.entries(request.headers))if(value!==undefined)headers.set(name,Array.isArray(value)?value.join(','):value);
+  const result=await handler.fetch(new Request(url,{method:request.method??'GET',headers,...(bytes.length?{body:new Uint8Array(bytes)}:{})}));response.writeHead(result.status,Object.fromEntries(result.headers));if(result.body)Readable.fromWeb(result.body as any).pipe(response);else response.end();
+ }catch{if(!response.headersSent)json(response,503,{error:'owned fixture failure'});else response.destroy();}});
+ edge.requestTimeout=10000;edge.headersTimeout=5000;
+ const edgeBase=await listen(edge);ownedOrigins.add(edgeBase);const audience=edgeBase+'/mcp',issuer=jwksBase+'/';
+ // Existing challenge builder requires HTTPS metadata. This advertised fixture
+ // URL is never fetched; actual owned transport/audience/JWKS remain loopback.
+ handler=createAuthorizedMgrMcpHttpHandler({verifier:new JwksAccessTokenVerifier({jwksUrl:jwksBase+'/jwks.json',issuer,audience}),resourceAudience:audience,requiredScopes:['tools:read'],resourceMetadataUrl:'https://owned-edge.fixture.invalid/.well-known/oauth-protected-resource',legacy:new LegacyEdgeClient({baseUrl:domainBase,bearerToken:serviceToken,timeoutMs:5000})});
+ const clients:Client[]=[];
+ async function token({scopes='tools:read legacy:events:read',subject=actor,tenantId=tenant,aud=audience,exp=Math.floor(Date.now()/1000)+300}={}){return new SignJWT({tenant_id:tenantId,scope:scopes}).setProtectedHeader({alg:'RS256',kid:'owned-loopback-key'}).setSubject(subject).setIssuer(issuer).setAudience(aud).setExpirationTime(exp).sign(privateKey);}
+ async function connect(accessToken:string){const client=new Client({name:'owned-edge-tcp-client',version:'1.0.0'});clients.push(client);await client.connect(new StreamableHTTPClientTransport(new URL(audience),{authProvider:{token:async()=>accessToken}}));return client;}
+ const contents=(result:any)=>{const value=result.content.find((item:any)=>item.type==='text');assert.ok(value);return JSON.parse(value.text);};
+ const call=(client:Client,extra={})=>client.callTool({name:'mgr_legacy_events',arguments:{...selection,limit:1,...extra}});
+ try{
+  await t.test('real TCP rejects missing and invalid audience/expired credentials before domain contact',async()=>{for(const authorization of [undefined,await token({aud:edgeBase+'/wrong'}),await token({exp:Math.floor(Date.now()/1000)-1})]){const response=await fetch(audience,{method:'POST',headers:{'content-type':'application/json',...(authorization?{authorization:'Bearer '+authorization}:{})},body:JSON.stringify({jsonrpc:'2.0',id:1,method:'initialize',params:{protocolVersion:'2025-11-25',capabilities:{},clientInfo:{name:'owned',version:'1'}}})});assert.equal(response.status,401);assert.match(response.headers.get('www-authenticate')??'',/resource_metadata/);}assert.equal(domainCalls,0);assert.ok(jwksCalls>0);});
+  const client=await connect(await token());
+  await t.test('official SDK initializes and lists actual event tool without domain fetch',async()=>{const list=await client.listTools();assert.ok(list.tools.some(tool=>tool.name==='mgr_legacy_events'));assert.equal(domainCalls,0);assert.ok(edgeCalls>=2);});
+  await t.test('actual LegacyEdgeClient default HTTP preserves actor tenant page cursor and exact Unicode',async()=>{const result=await call(client);assert.notEqual(result.isError,true);const page=contents(result);assert.equal(page.events[0].data.note,'exact Unicode 你好 🌍');assert.equal(page.tenantId,tenant);assert.equal(page.actorId,actor);assert.equal(page.cursor,null);assert.equal(page.nextCursor,'owned-opaque-next-cursor');assert.equal(domainCalls,1);const next=contents(await call(client,{cursor:page.nextCursor}));assert.equal(next.cursor,page.nextCursor);assert.equal(next.events.length,0);assert.deepEqual(observed.map(row=>[row.actor,row.tenant,row.method,row.path]),Array(2).fill([actor,tenant,'GET','/v1/events']));});
+  await t.test('strict tool schema rejects caller identity override without service dispatch',async()=>{const before=domainCalls;let denied=false;try{const result=await call(client,{actorId:'forged',tenantId:'forged'});denied=result.isError===true;}catch{denied=true;}assert.equal(denied,true);assert.equal(domainCalls,before);});
+  await t.test('additional existing event scope is required before any domain request',async()=>{const limited=await connect(await token({scopes:'tools:read'})),before=domainCalls;const result=await call(limited);assert.equal(result.isError,true);assert.equal(domainCalls,before);});
+  await t.test('signed alternate principal cannot borrow domain actor tenant grants',async()=>{for(const change of [{subject:'other-actor'},{tenantId:'other-tenant'}]){const alternate=await connect(await token(change)),result=await call(alternate);assert.equal(result.isError,true);}assert.equal(observed.at(-2)?.actor,'other-actor');assert.equal(observed.at(-1)?.tenant,'other-tenant');});
+  await t.test('withdrawn fixture domain grant fails closed through actual edge TCP',async()=>{domainGranted=false;try{assert.equal((await call(client)).isError,true);}finally{domainGranted=true;}});
+  await t.test('wrong domain stream identity is withheld rather than published',async()=>{wrongIdentity=true;try{const result=await call(client);assert.equal(result.isError,true);assert.doesNotMatch(JSON.stringify(result),/owned-event-1|exact Unicode/);}finally{wrongIdentity=false;}});
+  await t.test('actual malformed domain UTF8 is rejected across both HTTP boundaries',async()=>{malformed=true;try{assert.equal((await call(client)).isError,true);}finally{malformed=false;}});
+  await t.test('token expiry during held downstream HTTP withholds late result',async()=>{const expires=Math.floor(Date.now()/1000)+2,short=await connect(await token({exp:expires}));let release!:()=>void,entered!:()=>void;const ready=new Promise<void>(resolve=>entered=resolve),gate=new Promise<void>(resolve=>release=resolve);held=()=>{entered();return gate;};const pending=call(short);try{await ready;await new Promise(resolve=>setTimeout(resolve,Math.max(0,expires*1000-Date.now()+30)));release();const result=await pending;assert.equal(result.isError,true);assert.doesNotMatch(JSON.stringify(result),/owned-event-1|exact Unicode/);}finally{held=null;release();await pending.catch(()=>{});}});
+  await t.test('all observed HTTP activity is owned loopback with no injected SDK or domain fetch',()=>{assert.deepEqual(outside,[]);assert.ok(trace.some(row=>row.origin===jwksBase));assert.ok(trace.some(row=>row.origin===edgeBase));assert.ok(trace.some(row=>row.origin===domainBase));assert.ok(jwksCalls>0&&domainCalls>0&&edgeCalls>0);console.log(JSON.stringify({kind:'owned-edge-tcp-only',edgeRequests:edgeCalls,jwksRequests:jwksCalls,syntheticDomainRequests:domainCalls,observedHttpFetches:trace.length,outsideHttpAttempts:outside.length,publicTLS:false,realProvider:false,domainDatabase:false}));});
+ }finally{for(const client of clients)await client.close().catch(()=>{});await handler.close();await close(edge);await close(domain);await close(jwks);globalThis.fetch=originalFetch;assert.equal(edge.listening||domain.listening||jwks.listening,false);assert.equal(globalThis.fetch,originalFetch);console.log(JSON.stringify({kind:'owned-loopback-cleanup',edgeClosed:!edge.listening,domainClosed:!domain.listening,jwksClosed:!jwks.listening,globalFetchRestored:globalThis.fetch===originalFetch}));}
+});

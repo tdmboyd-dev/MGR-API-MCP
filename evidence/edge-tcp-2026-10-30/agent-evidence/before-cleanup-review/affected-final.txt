@@ -1,0 +1,40 @@
+▶ official client exercises the actual authenticated edge over owned TCP with real local JWKS
+  ✔ real TCP rejects missing and invalid audience/expired credentials before domain contact (108.7873ms)
+  ✔ official SDK initializes and lists actual event tool without domain fetch (46.68ms)
+  ✔ actual LegacyEdgeClient default HTTP preserves actor tenant page cursor and exact Unicode (119.9895ms)
+  ✔ strict tool schema rejects caller identity override without service dispatch (15.3585ms)
+  ✔ additional existing event scope is required before any domain request (62.9467ms)
+  ✔ signed alternate principal cannot borrow domain actor tenant grants (98.4402ms)
+  ✔ withdrawn fixture domain grant fails closed through actual edge TCP (16.3388ms)
+  ✔ wrong domain stream identity is withheld rather than published (13.1637ms)
+  ✔ actual malformed domain UTF8 is rejected across both HTTP boundaries (20.3057ms)
+{"kind":"owned-edge-tcp-only","edgeRequests":29,"jwksRequests":1,"syntheticDomainRequests":8,"observedHttpFetches":38,"outsideHttpAttempts":0,"publicTLS":false,"realProvider":false,"domainDatabase":false}
+  ✔ token expiry during held downstream HTTP withholds late result (1062.6665ms)
+{"kind":"owned-loopback-cleanup","edgeClosed":true,"domainClosed":true,"jwksClosed":true,"globalFetchRestored":true}
+  ✔ all observed HTTP activity is owned loopback with no injected SDK or domain fetch (0.9875ms)
+✔ official client exercises the actual authenticated edge over owned TCP with real local JWKS (1838.0517ms)
+✔ JWKS verifier validates issuer, audience, tenant, scopes and expiry (307.4423ms)
+✔ event read binds verified principal and strict scoped input to domain route (86.3361ms)
+✔ event read withholds private result after expiry (2.2921ms)
+✔ event read withholds private result after scope (1.2095ms)
+✔ event read withholds private result after actor (1.1051ms)
+✔ event read withholds private result after tenant (2.7252ms)
+✔ wrong domain row/stream binding fails rather than reaching consumer (4.664ms)
+✔ event read requires additional explicit scope before contacting service (0.5152ms)
+✔ event transport refuses malformed UTF8 isolated-byte before accepting rewritten private evidence (18.2366ms)
+✔ event transport refuses malformed UTF8 truncated-sequence before accepting rewritten private evidence (6.2571ms)
+✔ event transport refuses malformed UTF8 overlong-sequence before accepting rewritten private evidence (4.9023ms)
+✔ event transport refuses malformed UTF8 surrogate-sequence before accepting rewritten private evidence (5.8075ms)
+✔ event transport preserves valid Unicode split across byte chunks exactly (11.2527ms)
+✔ event transport retains existing JSON BOM rejection rather than silently stripping bytes (2.4868ms)
+✔ remote MCP factory exposes a web-standard fetch handler (2.2454ms)
+✔ authorized remote MCP binding derives identity from verified token (58.2512ms)
+✔ authorized remote MCP handler fails closed before protocol dispatch (5.9694ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3989.2093

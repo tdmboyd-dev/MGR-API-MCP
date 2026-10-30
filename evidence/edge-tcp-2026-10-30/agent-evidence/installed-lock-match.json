@@ -1,0 +1,32 @@
+[
+  {
+    "name": "@modelcontextprotocol/client",
+    "installed": "2.1.0",
+    "locked": "2.1.0"
+  },
+  {
+    "name": "@modelcontextprotocol/server",
+    "installed": "2.1.0",
+    "locked": "2.1.0"
+  },
+  {
+    "name": "jose",
+    "installed": "6.2.13",
+    "locked": "6.2.13"
+  },
+  {
+    "name": "tsx",
+    "installed": "4.23.15",
+    "locked": "4.23.15"
+  },
+  {
+    "name": "typescript",
+    "installed": "6.0.3",
+    "locked": "6.0.3"
+  },
+  {
+    "name": "zod",
+    "installed": "4.6.5",
+    "locked": "4.6.5"
+  }
+]

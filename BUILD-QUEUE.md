@@ -1,10 +1,11 @@
 # Research-to-build queue
 
-Read [HANDOFF.md](HANDOFF.md) for the single current checkpoint and exact local proof boundaries. The event packet and normal ONE routes are applied; canonical focused66ONE/73Legacy/113API and27chain checks pass. ONE joined2362/2362 qualification is complete under its declared disjoint scheduling scope; ONEsource4846e45 is committed/remote-verified with unchanged-policy security classification complete; no package closure is inferred. IDs below remain the authoritative wider queue, not a new competing task list. Checked items retain only their stated scope.
+Read [HANDOFF.md](HANDOFF.md) for the current source checkpoint. The actual owned edge TCP/JWKS/official-client harness is integrated; canonical full npm verify passed128/128 with stable58inputs. The separate real PostgreSQL/domain/ONE27-chain keeps its own source boundary. Earlier ONE2362/2490 and API113 totals are historical. IDs1–48 remain the sole wider queue; no whole-product/package closure follows.
 
 ## Immediate integration continuation
 
-- Normal ONE routes are locally qualified; finish controlled deployed domain/edge host and actual tenant registration.
+- Normal ONE routes and actual owned edge TCP are locally qualified within their receipts; finish controlled deployed domain/edge host and actual tenant registration.
+- Reproduce/repair authenticated-handler close/admission races using existing ownership and finite lifecycle contracts; do not infer remote stop or discard uncertain close handles.
 - Complete downstream event authority/freshness, quota/retention, cursor restore/rotation and observability; qualify broader workflows/cutover.
 - Continue onboarding, natural-language proposals and additional domain journeys via existing owners. Real tenant rights/credentials, hosted OAuth/public transport, physical audio, signing/sending and production stay separately gated.
 

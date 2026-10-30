@@ -1,0 +1,26 @@
+▶ official client exercises the actual authenticated edge over owned TCP with real local JWKS
+  ✔ real TCP rejects missing and invalid audience/expired credentials before domain contact (345.9779ms)
+  ✔ official SDK initializes and lists actual event tool without domain fetch (244.9411ms)
+  ✔ actual LegacyEdgeClient default HTTP preserves actor tenant page cursor and exact Unicode (135.1255ms)
+  ✔ strict tool schema rejects caller identity override without service dispatch (88.2307ms)
+  ✔ additional existing event scope is required before any domain request (165.304ms)
+  ✔ signed alternate principal cannot borrow domain actor tenant grants (212.5744ms)
+  ✔ withdrawn fixture domain grant fails closed through actual edge TCP (33.1541ms)
+  ✔ wrong domain stream identity is withheld rather than published (24.2004ms)
+  ✔ actual malformed domain UTF8 is rejected across both HTTP boundaries (30.7542ms)
+{"kind":"owned-edge-tcp-only","edgeRequests":29,"jwksRequests":1,"syntheticDomainRequests":8,"observedHttpFetches":38,"outsideHttpAttempts":0,"publicTLS":false,"realProvider":false,"domainDatabase":false}
+{"kind":"owned-loopback-cleanup","allListenersClosed":true,"globalFetchRestored":true,"outsideHttpAttemptsAfterCleanup":0,"observedHttpFetchesAfterCleanup":38}
+  ✔ token expiry during held downstream HTTP withholds late result (1428.4458ms)
+  ✔ all observed HTTP activity is owned loopback with no injected SDK or domain fetch (0.6693ms)
+✔ official client exercises the actual authenticated edge over owned TCP with real local JWKS (3234.6016ms)
+✔ partial setup listen failure still closes every allocated listener and restores fetch (4.3416ms)
+✔ throwing handler and client closes preserve both errors without skipping listeners or fetch restore (12.6475ms)
+✔ final egress observation occurs after all cleanup callbacks and preserves a late denial (3.6132ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12363.2634

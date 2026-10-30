@@ -1,0 +1,10 @@
+{
+  "scope": "exact public Git index export; unrelated untracked .backpack not traversed",
+  "publicFiles": 214,
+  "changedFiles": 34,
+  "changedBytes": 146326,
+  "integrityExit": 0,
+  "secretScanExit": 1,
+  "findings": 10,
+  "suppressionsAdded": false
+}

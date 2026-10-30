@@ -1,0 +1,16 @@
+{
+  "commandExitCode": 0,
+  "counts": {
+    "tests": 128,
+    "pass": 128,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "sourceStable": true,
+  "inputFiles": 58,
+  "sourceDigest": "2a77b4a0427a856648910fca540a2a4fba3637e6d407cc874229b4824a578eac",
+  "elapsedSeconds": 23.34,
+  "scope": "Canonical full npm verify (noEmit typecheck, all local API tests, hosted-script syntax and plugin metadata verification). New harness uses actual owned edge/JWKS HTTP and synthetic LegacyHTTP; no publicTLS/realtenant/PG/provider/production acceptance.",
+  "backpackContentsRead": false
+}

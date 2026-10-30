@@ -1,0 +1,8 @@
+[
+  {
+    "path": "test/edge-tcp-loopback.test.ts",
+    "beforeSha256": null,
+    "afterSha256": "141519cd47e84455e2ae5c7ccf26c2f32ffc65e81e053ed4dfc720a07a208fa5",
+    "bytes": 12637
+  }
+]
