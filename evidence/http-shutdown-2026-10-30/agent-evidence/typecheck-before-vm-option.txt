@@ -1,0 +1,1 @@
+test/http-shutdown.test.ts(54,536): error TS2353: Object literal may only specify known properties, and 'codeGeneration' does not exist in type 'RunningCodeInNewContextOptions'.

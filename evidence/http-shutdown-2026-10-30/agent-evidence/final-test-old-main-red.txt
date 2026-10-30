@@ -1,0 +1,28 @@
+✖ actual normal HTTP entrypoint uses the controller and gates health/body after Host/Origin (142.7155ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1399.4323
+
+✖ failing tests:
+
+test at evidence\old-main-control\test\http-shutdown.test.ts:1:7188
+✖ actual normal HTTP entrypoint uses the controller and gates health/body after Host/Origin (142.7155ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 503
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\next-api-http-shutdown\evidence\old-main-control\test\http-shutdown.test.ts:56:160)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 503,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

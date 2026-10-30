@@ -1,0 +1,16 @@
+{
+  "commandExitCode": 0,
+  "counts": {
+    "tests": 147,
+    "pass": 147,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "sourceStable": true,
+  "inputFiles": 61,
+  "sourceDigest": "be5716513182b3109f60195ec41d784fd901fece7d0bb4c28ecc327797a45fe3",
+  "elapsedSeconds": 31.967,
+  "scope": "Canonical full npm verify (noEmit typecheck, all local API tests, hosted-script syntax and plugin metadata verification). New HTTP shutdown fixtures use controlled server/timer/exit failure injection and actual main source VM composition without listener/process/provider actions. Existing owned TCP/JWKS regression remains; no publicTLS/realtenant/PG/provider/production acceptance.",
+  "backpackContentsRead": false
+}

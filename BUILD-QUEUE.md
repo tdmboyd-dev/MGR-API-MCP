@@ -1,11 +1,11 @@
 # Research-to-build queue
 
-Read [HANDOFF.md](HANDOFF.md) for the current source checkpoint. The actual owned edge TCP/JWKS/official-client harness is integrated; canonical full npm verify now passes136/136 with stable59inputs including terminal admission and fixed64 outer ownership. The separate real PostgreSQL/domain/ONE27-chain keeps its own source boundary. Earlier ONE2362/2490 and API113 totals are historical. IDs1–48 remain the sole wider queue; no whole-product/package closure follows.
+Read [HANDOFF.md](HANDOFF.md) for the current source checkpoint. The actual owned edge TCP/JWKS/official-client harness is integrated; canonical full npm verify now passes147/147 with stable61inputs including actual normal HTTP shutdown, terminal admission and fixed64 outer ownership. The separate real PostgreSQL/domain/ONE27-chain keeps its own source boundary. Earlier ONE2362/2490 and API113 totals are historical. IDs1–48 remain the sole wider queue; no whole-product/package closure follows.
 
 ## Immediate integration continuation
 
 - Normal ONE routes and actual owned edge TCP are locally qualified within their receipts; finish controlled deployed domain/edge host and actual tenant registration.
-- Authenticated-handler close/admission races are repaired with sticky closure and fixed64 ownership. Next repair normal HTTP host shutdown ordering/fallback timer; do not infer remote stop or discard uncertain close handles.
+- Authenticated-handler close/admission races are repaired with sticky closure and fixed64 ownership. Normal HTTP host shutdown ordering/deadline is also repaired. Preserve actual tenant/provider/hosted acceptance and uncertain domain outcomes; do not infer remote stop or discard uncertain close handles.
 - Complete downstream event authority/freshness, quota/retention, cursor restore/rotation and observability; qualify broader workflows/cutover.
 - Continue onboarding, natural-language proposals and additional domain journeys via existing owners. Real tenant rights/credentials, hosted OAuth/public transport, physical audio, signing/sending and production stay separately gated.
 

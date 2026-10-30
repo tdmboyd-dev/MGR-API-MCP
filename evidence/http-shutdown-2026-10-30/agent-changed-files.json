@@ -1,0 +1,20 @@
+[
+  {
+    "path": "src/http-shutdown.ts",
+    "beforeSha256": null,
+    "afterSha256": "44dfbe4670391f189b9932883a5c50f8025c06d553aad4eebc79ea0aff88f55a",
+    "bytes": 4520
+  },
+  {
+    "path": "src/http-server.ts",
+    "beforeSha256": "f150e44d6c7777ff853dcf06626e5d88cf84422c429fbc34ea9f8fa151e36972",
+    "afterSha256": "5a02d0a1889ebe0d45e103fd12786da758553c6e9035a0b888c7b0f2d6f91ac3",
+    "bytes": 6106
+  },
+  {
+    "path": "test/http-shutdown.test.ts",
+    "beforeSha256": null,
+    "afterSha256": "9bf650641d98b0ef9f47bcac31004d7ceb7b2f35e36923cde8cf89fe3bf24fcc",
+    "bytes": 10713
+  }
+]

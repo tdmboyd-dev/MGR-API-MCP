@@ -6,6 +6,7 @@ import { LegacyEdgeClient } from "./legacy-client.js";
 import { JwksAccessTokenVerifier } from "./jwt-verifier.js";
 import { DepartmentGateway } from "./department-gateway.js";
 import { omniPolicy } from "./omnidev-client.js";
+import {createHttpShutdownController} from './http-shutdown.js';
 
 const port=Number(process.env.PORT ?? "8787");
 const baseUrl=requiredUrl("MCP_PUBLIC_BASE_URL");
@@ -63,6 +64,7 @@ const server=createServer(async(req,res)=>{
     if(origin && origin!==publicOrigin){
       return json(res,403,{error:"origin is not allowed"});
     }
+    if(shutdown.isClosing())return json(res,503,{error:'MCP service unavailable'});
 
     const requestUrl=new URL(req.url ?? "/",baseUrl);
     if(requestUrl.pathname==="/healthz"){
@@ -101,18 +103,14 @@ const server=createServer(async(req,res)=>{
   }
 });
 
+const shutdown=createHttpShutdownController({server,handler:mcp,report:record=>console.log(JSON.stringify(record))});
+
 server.listen(port,"0.0.0.0",()=>{
   console.log(JSON.stringify({event:"mgr_api_mcp_listening",port,resourceAudience}));
 });
 
-async function shutdown(signal:string){
-  console.log(JSON.stringify({event:"mgr_api_mcp_shutdown",signal}));
-  await mcp.close();
-  server.close(()=>process.exit(0));
-  setTimeout(()=>process.exit(1),10_000).unref();
-}
-process.on("SIGTERM",()=>void shutdown("SIGTERM"));
-process.on("SIGINT",()=>void shutdown("SIGINT"));
+process.on("SIGTERM",()=>void shutdown.begin("SIGTERM"));
+process.on("SIGINT",()=>void shutdown.begin("SIGINT"));
 
 function requiredUrl(name:string):string{
   const value=process.env[name];

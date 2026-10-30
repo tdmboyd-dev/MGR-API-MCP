@@ -57,3 +57,8 @@ Added one automatically discovered test using the existing authenticated handler
 ## October 30 — authenticated handler terminal admission and finite ownership
 
 Actual final-test old-source2RED200vs503 → corrected2GREEN; full canonical136/136,59inputs stable. Sticky before/after-auth closure, fixed64 pending budget, exact local cleanup ownership, independent source review. Remaining ordinary normal HTTP-server shutdown ordering/fallback defect retained; pending auth/domain work is not claimed stopped. Evidence: evidence/edge-shutdown-2026-10-30/verification.json. Public integrity validation passed260 checks/0failures on the exact248-file public index export; private .backpack was excluded by index selection and remained unread. Default-policy Gitleaks8.30 scanned30changed indexed files and returned actual exit1/10detections. All10 are independently matched current-file SHA256 entries in the two59-input maps; all118 map entries were checked,0unknown/no suppressions. Exact public-index metadata and redacted raw results are retained in this evidence directory. Raw old-source failure whitespace is retained; source/docs whitespace is clean.
+
+
+## October30 — normal HTTP host shutdown integration
+
+Existing actual main composes tested sticky controller; referenced deadline starts before listener/handler cleanup. Canonical147/147,61inputs stable. Exact final mainVM old1RED→corrected1GREEN; controlled failure fixtures, no actual signals/process/provider action. Samequeue/authority/domain outcomes retained; physical termination/production remain unverified. Evidence: evidence/http-shutdown-2026-10-30/verification.json. Publication/integrity/security review follows.
