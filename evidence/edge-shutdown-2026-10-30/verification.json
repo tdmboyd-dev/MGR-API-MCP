@@ -1,0 +1,16 @@
+{
+  "commandExitCode": 0,
+  "counts": {
+    "tests": 136,
+    "pass": 136,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "sourceStable": true,
+  "inputFiles": 59,
+  "sourceDigest": "8b2dbfa9dcf8c0e59c8f9720bdd25af97b13fb230394292e016f2a3c02e34130",
+  "elapsedSeconds": 17.738,
+  "scope": "Canonical full npm verify (noEmit typecheck, all local API tests, hosted-script syntax and plugin metadata verification). New shutdown/admission fixtures use actual SDK Request handling and held synthetic principals/domain callbacks. Existing owned TCP/JWKS regression remains; no publicTLS/realtenant/PG/provider/production acceptance.",
+  "backpackContentsRead": false
+}

@@ -1,0 +1,51 @@
+✔ closed authenticated edge refuses a fresh request before verifier or SDK server construction (69.1715ms)
+✔ authentication released after completed close cannot construct or dispatch a new MCP server (2.7831ms)
+✔ fixed64 outer budget counts pending authentication before SDK construction and drains originals (419.2874ms)
+✔ trusted lower budget denial and invalid authentication release exactly their own admission slots (4.5377ms)
+✔ outer slot remains held through actual SDK tool dispatch and final handler cleanup (24.8264ms)
+✔ closing is sticky and idempotent while an independent wrapper remains usable (4.1353ms)
+✔ host cannot disable or enlarge the fixed pending request ceiling (1.0821ms)
+✔ an actual verifier exception releases only its reservation without dispatch retry (4.9785ms)
+▶ official client exercises the actual authenticated edge over owned TCP with real local JWKS
+  ✔ real TCP rejects missing and invalid audience/expired credentials before domain contact (60.2937ms)
+  ✔ official SDK initializes and lists actual event tool without domain fetch (17.937ms)
+  ✔ actual LegacyEdgeClient default HTTP preserves actor tenant page cursor and exact Unicode (39.7567ms)
+  ✔ strict tool schema rejects caller identity override without service dispatch (8.5699ms)
+  ✔ additional existing event scope is required before any domain request (21.2218ms)
+  ✔ signed alternate principal cannot borrow domain actor tenant grants (45.4264ms)
+  ✔ withdrawn fixture domain grant fails closed through actual edge TCP (8.7178ms)
+  ✔ wrong domain stream identity is withheld rather than published (6.9557ms)
+  ✔ actual malformed domain UTF8 is rejected across both HTTP boundaries (8.7151ms)
+{"kind":"owned-edge-tcp-only","edgeRequests":29,"jwksRequests":1,"syntheticDomainRequests":8,"observedHttpFetches":38,"outsideHttpAttempts":0,"publicTLS":false,"realProvider":false,"domainDatabase":false}
+{"kind":"owned-loopback-cleanup","allListenersClosed":true,"globalFetchRestored":true,"outsideHttpAttemptsAfterCleanup":0,"observedHttpFetchesAfterCleanup":38}
+  ✔ token expiry during held downstream HTTP withholds late result (1540.4653ms)
+  ✔ all observed HTTP activity is owned loopback with no injected SDK or domain fetch (0.3396ms)
+✔ official client exercises the actual authenticated edge over owned TCP with real local JWKS (1998.8336ms)
+✔ partial setup listen failure still closes every allocated listener and restores fetch (2.0078ms)
+✔ throwing handler and client closes preserve both errors without skipping listeners or fetch restore (3.6838ms)
+✔ final egress observation occurs after all cleanup callbacks and preserves a late denial (1.6263ms)
+✔ JWKS verifier validates issuer, audience, tenant, scopes and expiry (313.4851ms)
+✔ event read binds verified principal and strict scoped input to domain route (64.2263ms)
+✔ event read withholds private result after expiry (1.6105ms)
+✔ event read withholds private result after scope (1.1744ms)
+✔ event read withholds private result after actor (1.1521ms)
+✔ event read withholds private result after tenant (1.8521ms)
+✔ wrong domain row/stream binding fails rather than reaching consumer (1.7241ms)
+✔ event read requires additional explicit scope before contacting service (0.5796ms)
+✔ event transport refuses malformed UTF8 isolated-byte before accepting rewritten private evidence (10.9333ms)
+✔ event transport refuses malformed UTF8 truncated-sequence before accepting rewritten private evidence (4.9885ms)
+✔ event transport refuses malformed UTF8 overlong-sequence before accepting rewritten private evidence (5.4781ms)
+✔ event transport refuses malformed UTF8 surrogate-sequence before accepting rewritten private evidence (4.8617ms)
+✔ event transport preserves valid Unicode split across byte chunks exactly (9.7525ms)
+✔ event transport retains existing JSON BOM rejection rather than silently stripping bytes (1.064ms)
+✔ remote MCP factory exposes a web-standard fetch handler (2.269ms)
+✔ authorized remote MCP binding derives identity from verified token (57.2301ms)
+✔ authorized remote MCP handler fails closed before protocol dispatch (5.8992ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3510.7881

@@ -1,0 +1,46 @@
+✖ closed authenticated edge refuses a fresh request before verifier or SDK server construction (186.6497ms)
+✖ authentication released after completed close cannot construct or dispatch a new MCP server (20.6541ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2853.9266
+
+✖ failing tests:
+
+test at evidence\old-source-control\test\edge-shutdown.test.ts:1:1681
+✖ closed authenticated edge refuses a fresh request before verifier or SDK server construction (186.6497ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 503
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\next-api-shutdown\evidence\old-source-control\test\edge-shutdown.test.ts:15:85)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 503,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at evidence\old-source-control\test\edge-shutdown.test.ts:1:2374
+✖ authentication released after completed close cannot construct or dispatch a new MCP server (20.6541ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 503
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-28\files-mentioned-by-the-user-mgr\work\next-api-shutdown\evidence\old-source-control\test\edge-shutdown.test.ts:20:129)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 503,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

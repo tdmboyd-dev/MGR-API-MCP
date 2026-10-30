@@ -1,0 +1,14 @@
+[
+  {
+    "path": "src/mcp-http.ts",
+    "beforeSha256": "b2dc9e8edf820bf7e287807111f460599ad1c2291970b01c4546e979d1fe79ce",
+    "afterSha256": "b4f45113514173b4faa5cf7d89299259031cf3a3b7b5f1275706e4b56e177221",
+    "bytes": 5331
+  },
+  {
+    "path": "test/edge-shutdown.test.ts",
+    "beforeSha256": null,
+    "afterSha256": "847b3e06326deca4ae364d0e7a889f5464bfbea36188d8ee6a7bbfdfac0a4155",
+    "bytes": 8033
+  }
+]

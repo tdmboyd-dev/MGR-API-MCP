@@ -1,0 +1,15 @@
+✔ closed authenticated edge refuses a fresh request before verifier or SDK server construction (51.861ms)
+✔ authentication released after completed close cannot construct or dispatch a new MCP server (2.2497ms)
+✔ fixed64 outer budget counts pending authentication before SDK construction and drains originals (255.5288ms)
+✔ trusted lower budget denial and invalid authentication release exactly their own admission slots (4.1907ms)
+✔ outer slot remains held through actual SDK tool dispatch and final handler cleanup (26.6926ms)
+✔ closing is sticky and idempotent while an independent wrapper remains usable (4.6513ms)
+✔ host cannot disable or enlarge the fixed pending request ceiling (1.7901ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1371.6098

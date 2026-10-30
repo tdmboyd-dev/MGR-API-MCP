@@ -1,0 +1,168 @@
+
+> @mgr/api-mcp@0.1.0 verify
+> npm run typecheck && npm test && npm run verify:hosted-artifacts && npm run plugin:verify
+
+
+> @mgr/api-mcp@0.1.0 typecheck
+> tsc --noEmit
+
+
+> @mgr/api-mcp@0.1.0 test
+> node --import tsx --test test/*.test.ts
+
+✔ sentinel requires approval for high-risk irreversible action (25.3092ms)
+✔ sentinel denies an approval bound to a different payload (0.5058ms)
+✔ sentinel denies missing scopes before approval logic (0.3578ms)
+✔ task lifecycle blocks terminal-state resurrection (2.2193ms)
+✔ job unknown external state must reconcile before final truth (0.4117ms)
+✔ approval is bound to the exact canonical action payload (39.8742ms)
+✔ caller low-risk label cannot admit paid or unclassified creation capability (30.2359ms)
+✔ generic Creation result cannot publish after token expiry during effect (1.6506ms)
+✔ Creation approval digest changes with exact input and authenticated identity (1.5063ms)
+✔ Creation MCP dispatch binds authenticated tenant and actor (0.7124ms)
+✔ Creation MCP dispatch refuses missing scope (0.5352ms)
+✔ department edge binds identity/scopes and rejects unsafe endpoint configuration (13.4836ms)
+✔ creation acceptance independently downloads and hashes actual artifact bytes (90.6207ms)
+✔ artifact rejects oversized stream before trusting provider metadata (3.2094ms)
+✔ official MCP client discovers and calls bounded department schemas; invalid identities never dispatch (306.1719ms)
+✔ self-consistent Creation artifact cannot prove a receipt for different inputs (152.7182ms)
+✔ self-consistent SignMe draft hash cannot prove a different draft or request (8.0663ms)
+✔ VOICE exact-text status and artifact reject self-consistent audio for a different session/text (13.6865ms)
+✔ expired authorization after dispatch cannot publish a department result (5.8668ms)
+✔ SignMe updates bind the actual target and next immutable version (7.951ms)
+✔ ecosystem catalog keeps nineteen pinned and two explicitly empty repositories without claiming live tools (4.7947ms)
+✔ catalog filtering rejects unknown repositories and cannot mutate later responses (1.2407ms)
+✔ authenticated MCP client discovers source catalog without calling a domain provider (408.3343ms)
+✔ closed authenticated edge refuses a fresh request before verifier or SDK server construction (95.6979ms)
+✔ authentication released after completed close cannot construct or dispatch a new MCP server (2.802ms)
+✔ fixed64 outer budget counts pending authentication before SDK construction and drains originals (662.2219ms)
+✔ trusted lower budget denial and invalid authentication release exactly their own admission slots (9.9221ms)
+✔ outer slot remains held through actual SDK tool dispatch and final handler cleanup (54.8793ms)
+✔ closing is sticky and idempotent while an independent wrapper remains usable (10.2505ms)
+✔ host cannot disable or enlarge the fixed pending request ceiling (1.3728ms)
+✔ an actual verifier exception releases only its reservation without dispatch retry (7.6805ms)
+▶ official client exercises the actual authenticated edge over owned TCP with real local JWKS
+  ✔ real TCP rejects missing and invalid audience/expired credentials before domain contact (165.1113ms)
+  ✔ official SDK initializes and lists actual event tool without domain fetch (64.9817ms)
+  ✔ actual LegacyEdgeClient default HTTP preserves actor tenant page cursor and exact Unicode (89.6589ms)
+  ✔ strict tool schema rejects caller identity override without service dispatch (41.3087ms)
+  ✔ additional existing event scope is required before any domain request (51.9861ms)
+  ✔ signed alternate principal cannot borrow domain actor tenant grants (187.7488ms)
+  ✔ withdrawn fixture domain grant fails closed through actual edge TCP (16.0283ms)
+  ✔ wrong domain stream identity is withheld rather than published (16.6206ms)
+  ✔ actual malformed domain UTF8 is rejected across both HTTP boundaries (31.6228ms)
+{"kind":"owned-edge-tcp-only","edgeRequests":29,"jwksRequests":1,"syntheticDomainRequests":8,"observedHttpFetches":38,"outsideHttpAttempts":0,"publicTLS":false,"realProvider":false,"domainDatabase":false}
+{"kind":"owned-loopback-cleanup","allListenersClosed":true,"globalFetchRestored":true,"outsideHttpAttemptsAfterCleanup":0,"observedHttpFetchesAfterCleanup":38}
+  ✔ token expiry during held downstream HTTP withholds late result (1631.4559ms)
+  ✔ all observed HTTP activity is owned loopback with no injected SDK or domain fetch (0.5691ms)
+✔ official client exercises the actual authenticated edge over owned TCP with real local JWKS (2831.9456ms)
+✔ partial setup listen failure still closes every allocated listener and restores fetch (2.2667ms)
+✔ throwing handler and client closes preserve both errors without skipping listeners or fetch restore (4.9283ms)
+✔ final egress observation occurs after all cleanup callbacks and preserves a late denial (3.6735ms)
+✔ idempotent job creation returns the same job and rejects key reuse for a different capability (5.0926ms)
+✔ idempotency keys are isolated by tenant (0.6232ms)
+✔ task engine declares edge/session-only authority (0.2665ms)
+✔ approval digest invalidates when the action changes (46.3082ms)
+✔ deterministic decision provider can only choose from allowed choices (0.8883ms)
+✔ MCP request auth fails closed for missing/invalid bearer token (2.3168ms)
+✔ MCP request auth binds audience and scopes (0.6568ms)
+✔ JWKS verifier validates issuer, audience, tenant, scopes and expiry (235.6145ms)
+✔ Legacy client propagates tenant actor correlation and idempotency (71.959ms)
+✔ Legacy client reads Truth Console summary (1.9294ms)
+✔ dispatch coordinator reconciles a lost response by correlation receipt (102.3791ms)
+✔ dispatch coordinator preserves unknown external state when reconciliation is unavailable (1.172ms)
+✔ dispatch timeout reconciles through authoritative Legacy receipt without mutation retry (14.1712ms)
+✔ duplicate delivery preserves one business mutation through the same idempotency key (3.1982ms)
+✔ edge restart does not duplicate committed Legacy business state (2.4814ms)
+✔ event read binds verified principal and strict scoped input to domain route (102.2041ms)
+✔ event read withholds private result after expiry (1.5935ms)
+✔ event read withholds private result after scope (1.1072ms)
+✔ event read withholds private result after actor (1.0311ms)
+✔ event read withholds private result after tenant (1.1722ms)
+✔ wrong domain row/stream binding fails rather than reaching consumer (2.7259ms)
+✔ event read requires additional explicit scope before contacting service (1.5487ms)
+✔ event transport refuses malformed UTF8 isolated-byte before accepting rewritten private evidence (31.3284ms)
+✔ event transport refuses malformed UTF8 truncated-sequence before accepting rewritten private evidence (10.1468ms)
+✔ event transport refuses malformed UTF8 overlong-sequence before accepting rewritten private evidence (15.9658ms)
+✔ event transport refuses malformed UTF8 surrogate-sequence before accepting rewritten private evidence (7.3207ms)
+✔ event transport preserves valid Unicode split across byte chunks exactly (15.7582ms)
+✔ event transport retains existing JSON BOM rejection rather than silently stripping bytes (1.0568ms)
+✔ caller low-risk label cannot admit unknown, messaging, deletion or financial actions (36.1058ms)
+✔ mgr_truth_summary denies missing scope and expiry while read is pending (71.4082ms)
+✔ mgr_legacy_connectors denies missing scope and expiry while read is pending (2.812ms)
+✔ generic Legacy result cannot publish after token expiry during effect (3.2128ms)
+✔ authenticated Legacy MCP dispatch binds tenant and actor from auth context (5.9029ms)
+✔ authenticated Legacy MCP dispatch denies missing execute scope (0.6193ms)
+✔ authenticated Legacy MCP write reconciles a lost response instead of blind retry (4.0711ms)
+✔ Legacy sends explicit target and trusted identity on command and readback (113.0134ms)
+✔ Legacy deadline includes stalled response body (28.7742ms)
+✔ Legacy bounds response bytes and conceals remote body secrets (3.4697ms)
+✔ receipt reconciliation binds tenant actor action key and exact digest (73.2618ms)
+✔ remote MCP factory exposes a web-standard fetch handler (1.8639ms)
+✔ authorized remote MCP binding derives identity from verified token (56.2873ms)
+✔ authorized remote MCP handler fails closed before protocol dispatch (5.5076ms)
+✔ router chooses cheapest model that satisfies policy (2.8947ms)
+✔ router escalates for quality and risk instead of always using cheapest (0.4278ms)
+✔ router can require tool-capable models (0.4121ms)
+✔ router respects provider exclusions and cost ceilings (0.4889ms)
+✔ escalation ladder can search increasing quality policies (0.4731ms)
+✔ router excludes unhealthy and circuit-open candidates (0.6568ms)
+✔ semantic quality and provider health can justify a stronger route (0.4956ms)
+✔ cache-aware cost estimator accounts for discounted cached input (0.3612ms)
+✔ protected resource metadata requires HTTPS audience and authorization server (5.3776ms)
+✔ WWW-Authenticate advertises resource metadata and insufficient scope (0.5587ms)
+✔ Omni schema bounds exact jobs, rejects model-provided code and malformed hashes (23.3609ms)
+✔ binding strips private source/objective, verifies configured policy and principal (85.1587ms)
+✔ realistic accepted report shape is independently hashed and bound to native assignment and cleanup (7.1787ms)
+✔ false success, changed exact report bytes and mismatched native cleanup are rejected (27.8465ms)
+✔ receipt actor/action/input mutation cannot reconcile a different operation (6.0052ms)
+✔ dispatch rechecks current digest before POST and credential headers are host-bound (16.171ms)
+✔ lost POST acknowledgment never auto-repeats native execution; status can independently reconcile (9.3088ms)
+✔ historical valid report survives workspace edits without current verification claim (2.1576ms)
+✔ queued cancel and running cancel request remain distinguishable without invented cleanup success (3.0806ms)
+✔ response actual byte cap and safe HTTP errors reject before publication (1.2086ms)
+✔ whole request deadline bounds hung headers AND hung body even transport ignores abort (56.8139ms)
+✔ binding MCP scope and expiry are checked again after asynchronous provider read (2.642ms)
+✔ invalid UTF8 and excessive JSON depth are rejected; string braces do not count as structure (2.1158ms)
+✔ aborted body stream is actively cancelled and no late body can become success (26.7291ms)
+✔ terminal receipt IDs and uint32 AppContainer SID components are validated (5.2366ms)
+✔ gateway rejects cross-principal service mappings and policy config cannot drift (0.8919ms)
+✔ accepted failed native tests provide verified canonical report artifact without claiming success (3.9007ms)
+✔ pre-execution failure, unknown and cancelled states cannot fabricate report downloads (3.395ms)
+✔ succeeded receipt missing native report ID fails status, dispatch and cancel (3.0897ms)
+✔ gateway artifact retains standard sha256/bytes/base64 envelope for exact accepted JSON report (3.6084ms)
+✔ registered execute denies expiry during held binding before any native POST (1.4159ms)
+✔ registered execute denies scope during held binding before any native POST (0.977ms)
+✔ registered execute denies actor during held binding before any native POST (0.9138ms)
+✔ registered execute denies tenant during held binding before any native POST (0.7898ms)
+✔ expiry after accepted POST suppresses publication and never retries the effect (1.9498ms)
+✔ privacy firewall redacts email and phone before external inference (3.5645ms)
+✔ privacy firewall blocks detected secrets (0.5611ms)
+✔ privacy firewall can deny all sensitive external routing (0.3498ms)
+✔ malformed authorization and approval expiry cannot become unlimited grants (38.7457ms)
+✔ overlapping privacy detectors redact a combined range without exposing original digits (2.2475ms)
+✔ authorization binds scopes to the intended resource audience (2.7116ms)
+✔ Brain controller retrieves context and escalates only when bounded decision cannot resolve (5.4729ms)
+✔ Creation OS client blocks underspecified requests before transport (0.5466ms)
+✔ FreeBuf is explicitly a secondary source requiring primary verification (1.6997ms)
+✔ secondary security findings cannot be promoted without primary evidence (1.1068ms)
+✔ voice cloning requires an explicit rights grant (3.5757ms)
+✔ voice fabric prefers local provider when requested (2.1068ms)
+✔ Voicebox adapter maps MGR requests to Voicebox MCP tools (1.0288ms)
+ℹ tests 136
+ℹ suites 0
+ℹ pass 136
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5826.754
+
+> @mgr/api-mcp@0.1.0 verify:hosted-artifacts
+> node --check scripts/verify-oauth-provider.mjs && node --check scripts/verify-openai-remote-mcp.mjs && node --check scripts/verify-mcp-client.mjs
+
+
+> @mgr/api-mcp@0.1.0 plugin:verify
+> node scripts/verify-chatgpt-plugin.mjs
+
+{"ok":true,"mcpConfigured":false,"shortDescriptionLength":24}

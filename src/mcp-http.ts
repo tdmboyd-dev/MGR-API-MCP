@@ -13,6 +13,8 @@ export interface AuthorizedMgrMcpHttpOptions {
   legacy:LegacyEdgeClient;
   creation?:CreationOSClient;
   departments?:DepartmentGateway;
+  /** Host may lower the fixed64 outer auth/handler admission budget. */
+  maximumPendingRequests?:number;
 }
 
 export async function authorizeAndBindMcpRequest(
@@ -46,10 +48,31 @@ export function createMgrMcpHttpHandler() {
  */
 export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOptions){
   const activeHandlers=new Set<ReturnType<typeof createMcpHandler>>();
+  const closingHandlers=new WeakMap<ReturnType<typeof createMcpHandler>,Promise<void>>();
+  const maximumPendingRequests=options.maximumPendingRequests===undefined?64:options.maximumPendingRequests;
+  if(!Number.isSafeInteger(maximumPendingRequests)||maximumPendingRequests<1||maximumPendingRequests>64)throw new Error('invalid MCP pending request limit');
+  let closed=false,pendingRequests=0;
+  const unavailable=()=>new Response(JSON.stringify({error:'MCP service unavailable'}),{status:503,headers:{'content-type':'application/json','cache-control':'no-store'}});
+  function closeHandler(handler:ReturnType<typeof createMcpHandler>):Promise<void>{
+    const existing=closingHandlers.get(handler);if(existing)return existing;
+    const closing=Promise.resolve().then(()=>handler.close()).then(()=>{
+      if(activeHandlers.delete(handler))pendingRequests--;
+    }).catch(error=>{
+      // Keep failed/unconfirmed ownership and its admission slot for explicit
+      // cleanup retry. Never retry a tool/domain operation to clean a handle.
+      closingHandlers.delete(handler);throw error;
+    });
+    closingHandlers.set(handler,closing);return closing;
+  }
 
   return {
     async fetch(request:Request):Promise<Response>{
+      if(closed||pendingRequests>=maximumPendingRequests)return unavailable();
+      pendingRequests++;
+      let handlerOwnsSlot=false;
+      try{
       const authResult=await authorizeAndBindMcpRequest(request,options);
+      if(closed)return unavailable();
       if(!authResult.ok){
         return new Response(JSON.stringify({error:authResult.error}),{
           status:authResult.status,
@@ -87,19 +110,21 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
         };
       }
       if(options.departments)serverOptions.departments={auth:authResult.auth,resourceAudience:options.resourceAudience,gateway:options.departments};
+      if(closed)return unavailable();
       const handler=createMcpHandler(()=>createMgrMcpServer(serverOptions));
       activeHandlers.add(handler);
+      handlerOwnsSlot=true;
       try{
         return await handler.fetch(request);
       }finally{
-        await handler.close();
-        activeHandlers.delete(handler);
+        await closeHandler(handler);
       }
+      }finally{if(!handlerOwnsSlot)pendingRequests--;}
     },
 
     async close():Promise<void>{
-      await Promise.all([...activeHandlers].map(handler=>handler.close()));
-      activeHandlers.clear();
+      closed=true; // Sticky and synchronous, before any shutdown await.
+      await Promise.all([...activeHandlers].map(handler=>closeHandler(handler)));
     }
   };
 }

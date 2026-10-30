@@ -1,0 +1,10 @@
+✔ closed authenticated edge refuses a fresh request before verifier or SDK server construction (62.767ms)
+✔ authentication released after completed close cannot construct or dispatch a new MCP server (2.8507ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1158.9342
