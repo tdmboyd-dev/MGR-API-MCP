@@ -1,0 +1,2 @@
+6:48AM INF scanned ~632057 bytes (632.06 KB) in 211ms
+6:48AM WRN leaks found: 90

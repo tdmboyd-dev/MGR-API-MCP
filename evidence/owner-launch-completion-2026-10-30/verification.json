@@ -1,0 +1,46 @@
+{
+  "ONEExitCode": 0,
+  "APIExitCode": 0,
+  "sourceStable": true,
+  "guardedInputs": 2132,
+  "ONEInputs": 1901,
+  "APIInputs": 78,
+  "ONESelectedFiles": 46,
+  "elapsedSeconds": 201.4,
+  "added": [],
+  "removed": [],
+  "changed": [],
+  "realOwnerConfigurationRead": false,
+  "realCodexLaunched": false,
+  "liveInference": false,
+  "compiledOutputRebuilt": false,
+  "ONE": {
+    "tests": 628,
+    "pass": 628,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "API": {
+    "tests": 153,
+    "pass": 153,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0
+  },
+  "ONETypeScriptNoEmit": "passed",
+  "APITypecheckHostedSyntaxPlugin": "passed-in-npm-verify",
+  "featureBrowser": {
+    "cards": 18,
+    "originalIdSearch": true,
+    "expand": true,
+    "mobilePageOverflow": false,
+    "pageErrors": []
+  },
+  "originalTracker": "283 children / 28 areas unchanged and valid",
+  "newOriginalPackageClosures": 0,
+  "realAccountOrModelQualification": false,
+  "productionAccepted": false,
+  "temporaryInitialFixtureCleanup": "Additional removal rejected by automatic approval review: blocked by policy; retained, no bypass",
+  "creationSourceCommit": "70d86979c6b238690d5ab3ee67545cec1357baa5"
+}

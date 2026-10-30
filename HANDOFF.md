@@ -1,5 +1,11 @@
 # Resume MGR-API-MCP
 
+## Current ONE owner starter integration — October30,2026
+
+The persistent local launcher now uses the canonical ONE registered factory and one shared coordinator for model admission and department workflows. The obsolete direct brain-config runtime path is removed; its private file is preserved and cannot activate a model. Canonical ONE path is explicit. Qualified model manifest preflight occurs before service startup and is rechecked before server construction. No helper enrollment or new model authority is invented.
+
+Full npm verify passed153/153 with zero failures/cancellations/skips, including6cross-repository ONE factory checks with MGR_ONE_TEST_ROOT explicitly set. Typecheck, hosted syntax and plugin checks passed. The related current ONE scope passed628/628/46files. All2,132listed inputs across ONE/API/Creation stayed identical. Actual private services/model/config were not accessed; synthetic account/model, actual owned HTTP/SQLite/document readback/restart remain distinct. [Current evidence](evidence/owner-launch-completion-2026-10-30/REPORT.md). .backpack stays unread and unstaged. Real owner account/tenant/hosted/provider acceptance remains open.
+
 ## Current normal HTTP shutdown integration — October 30, 2026
 
 The actual HTTP entrypoint now uses one owned shutdown controller. It marks closure before new body/work/health success, keeps existing Host/Origin denials, installs a referenced10-second deadline BEFORE cleanup, and starts listener and authenticated-handler close in the same turn. Success requires BOTH confirmations. Sync/rejected cleanup, timer/log/forceclose errors and deadline uncertainty retain failure state; repeated signals share one operation and late completion cannot turn timeout into success. Accepted domain actions retain their original outcome/reconciliation authority.

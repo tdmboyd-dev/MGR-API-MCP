@@ -19,7 +19,7 @@ Native department services have bearer credentials bound to a specific actor and
 
 ## ONE owner workflow
 
-Configure `createRareServer({store,ownerToken,publicOrigin,ecosystemWorkflowConfig:{client,tenantId,actorId}})` with an authenticated MCP client. A durable store and previously enrolled host authority are required. Existing databases are never automatically enrolled. The owner page is `/departments`.
+The persistent local launcher now uses `prepareTevinOwnerStartup` → the existing `createRegisteredStartupServer` with privately bound workflows and the SAME coordinator as model dispatch. Department-only programmatic compatibility remains; raw workflows cannot be combined with registered model authority. A durable store and previously enrolled host authority are required. Existing databases are never automatically enrolled. The owner page is `/departments`.
 
 1. Preview a strict department command. ONE saves it in existing requests/goals/jobs and computes the existing host execution digest.
 2. Owner approves that exact digest. The existing anchored ExecutionCoordinator issues a zero-cost grant/approval.
@@ -77,3 +77,15 @@ Protocol verification:20 focused tests pass, including denial, exact readback, f
 Catalog discovery now includes21 entries:19 source-pinned snapshots and two explicitly empty public repositories, MGR-OMNISIGHT and MGR-CODE-MONSTER. The latter carry no fabricated commit or executable tools; the owner reports active construction by another builder. Their source remains unavailable and runtime unverified.
 
 Wave4 API regression checkpoint:89/89 full tests passed (the20 focused Omni tests are included), TypeScript passed and repository integrity172/172 passed. These denominators do not include the separately pending live ONE/service/OS-worker acceptance.
+
+## Current registered owner starter — October30
+
+The persistent launcher requires BOTH the private isolated runtime directory and explicit canonical ONE checkout. It no longer defaults to a stale sibling checkout. Optional fourth argument remains the existing OmniDev config; optional fifth argument selects an existing qualified ONE model launch manifest. To omit OmniDev while selecting a model, pass an empty fourth argument. Example shape:
+
+```powershell
+node --import tsx scripts/start-tevin-departments-local.ts <private-runtime> <canonical-MGR-ONE> "" <existing-qualified-model-launch.json>
+```
+
+The old owner-lab/brain-config.json is preserved but not loaded as an active brain. With no explicit replacement, its presence causes a fixed migration error. The selected launch manifest must match the existing ONE store/root/owner/account/grant, current implementation/launcher pins and fresh independently qualified account evidence. The helper creates no model permission, entitlement, no-charge declaration or host enrollment. Missing/expired/revoked evidence fails before service startup; permission is rechecked before constructing the server. With no model selected, department-only operation remains model-off. Ambient model/billing/mail/repository settings cannot supply another unselected local brain or service identity.
+
+Current qualification:153/153full API verification, including6actual ONE factory integration controls with MGR_ONE_TEST_ROOT explicitly set. The related ONE scope is628/628, including the current8-check owner document journey. See evidence/owner-launch-completion-2026-10-30/. These scopes overlap and are not added. The actual private lab services and real model were NOT started by this cycle; account/device/production acceptance stays separate. CI without an explicitly supplied ONE checkout reports the6cross-repository controls as skipped rather than implying they ran.

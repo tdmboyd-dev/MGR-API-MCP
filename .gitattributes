@@ -3,3 +3,5 @@
 *.py text eol=lf
 *.json text eol=lf
 *.mjs text eol=lf
+
+evidence/owner-launch-completion-2026-10-30/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
