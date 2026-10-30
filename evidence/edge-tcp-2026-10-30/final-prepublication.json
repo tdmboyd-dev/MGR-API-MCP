@@ -1,0 +1,16 @@
+{
+  "tree": "c2f240af98c1f0cef7b700bfb1d2ede17d938e9f",
+  "changedFiles": 40,
+  "integrity": {
+    "scope": "Research repository integrity only; not assistant/runtime/provider verification",
+    "checks": 226,
+    "failures": 0,
+    "errors": [],
+    "status": "PASS"
+  },
+  "scanExit": 1,
+  "findings": 10,
+  "unknown": 0,
+  "qualifiedInputsStable": 58,
+  "rawWhitespaceRetained": "evidence/edge-tcp-2026-10-30/agent-evidence/first-run.txt"
+}

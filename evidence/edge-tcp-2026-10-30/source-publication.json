@@ -1,0 +1,23 @@
+{
+  "sourceCommit": "3728df92c694329a7615b0fdab63523611689130",
+  "sourceTree": "c2f240af98c1f0cef7b700bfb1d2ede17d938e9f",
+  "branch": "repair/completion-2026-10-28",
+  "remoteSourceExact": true,
+  "mainUnchanged": "95648526c6b7d380bed67e7b6f322ecf8faf428a",
+  "verification": "128/128 canonical npm run verify; 58 working inputs unchanged",
+  "indexBoundary": "49 existing unchanged checkout files differ from indexed source only by exact CRLF-to-LF; new test bytes exactly match qualification; per-file byte witnesses retained",
+  "finalPublicIntegrity": {
+    "checks": 226,
+    "failures": 0
+  },
+  "finalChangedIndexScan": {
+    "files": 40,
+    "exitCode": 1,
+    "detections": 10,
+    "unknown": 0,
+    "classification": "all10 exact source-map checksum entries; all116 entries verified; no suppression"
+  },
+  "rawFailedEvidenceWhitespaceRetained": true,
+  "untrackedBackpack": "preserved, contents unread and unstaged",
+  "productionAccepted": false
+}
