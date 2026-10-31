@@ -1,5 +1,13 @@
 # Resume MGR-API-MCP
 
+## Forge master-program continuity reference — 2026-10-31
+
+The canonical Forge handoff is MGR-3D-FORGE/docs/HANDOFF.md, and its complete master plan is https://github.com/tdmboyd-dev/MGR-3D-FORGE/blob/main/docs/MASTER-FORGE-PROGRAM-2026-10-31.md . The 184-target, 177-distinct-name REA source research register is https://github.com/tdmboyd-dev/MGR-3D-FORGE/blob/main/research/external-provenance/BEAST-3D-RESEARCH-UNIVERSE-2026-10-31.json . Those are planned candidates, not completed scans or licensed/installed models.
+
+This repo owns existing source client src/forge-catalog-client.ts, MCP tools src/forge-mcp-tools.ts, tenant/audience, tools:read/tools:execute and approved artifact transport. A Forge Creator plugin belongs under planned integrations/forge-creator-plugin/ and must call the SAME Forge job/asset/receipt service used by Tevin and direct Studio users, not duplicate Forge geometry/vault/approval logic. REA X-Ray is optional and already local-tested, not a required creation hop. Hosted ChatGPT/iOS 3D creation and full Tevin consumer journey remain UNVERIFIED.
+
+
+
 ## Current REA X-Ray checkpoint — 2026-10-31 (supersedes older test totals below)
 
 **Canonical current handoff is this file.** The upstream REA repo is NOT a second MGR system: it is an optional evidence inspector used by the existing Beast Pack X-Ray workflow and Forge's own Vault + creation engine. Ordinary Tevin→MGR API/MCP→Forge world jobs continue directly without REA or Creation OS as mandatory hops.
