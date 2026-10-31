@@ -1,5 +1,17 @@
 # Persistent evidence scorecard
 
+## October 30, 2026 — Forge read-only discovery through the shared MCP edge
+
+| Acceptance gate | State | Evidence |
+|---|---|---|
+| Actual local Forge Studio HTTP boot and read | PASS | `scripts/verify-forge-studio.py` starts the sibling Studio in a subprocess and invokes the Node client |
+| Bound MCP actor/tenant/scope and tool dispatch | PASS | `test/forge-catalog.test.ts`, `src/forge-mcp-tools.ts`; wrong-tenant/scope/audience denied |
+| Cross-process read adapter only; no duplicate execution | PASS | `src/forge-catalog-client.ts`, shared `src/mcp-server.ts`, `src/mcp-http.ts`, `src/http-server.ts` |
+| All current API regression, typing, package/plugin tests | PASS | `npm run verify`: 55 passing tests, no failures; TS typecheck PASS |
+| Real hosted Tevin → MCP → Creation OS → Forge artifact accepted in Blender/engine | **OPEN** | No published Tevin client/hosted worker or accepted-art receipt; queue items 47–48 |
+
+**4/5 of this bounded read-discovery integration wave passed (80%). This is not overall product completion.** No GPU/model spend or cloud provisioning claimed. Historic scorecard entries below retain their original denominators and scope. The living resume checkpoint is `HANDOFF.md`.
+
 ## September 28 — repository home and continued research
 
 Before: empty public remote; research only in the prior workspace. After: curated project home, local original-source checkpoint, recovery tooling and additional source review. Historical scope and evidence are retained under docs/history and evidence/history.

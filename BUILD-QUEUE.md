@@ -1,5 +1,15 @@
 # Research-to-build queue
 
+## MGR Forge × Tevin source integration — 2026-10-30
+
+44. [x] Audit existing Forge Studio/auth/asset vault and this repo's production MCP/Creation OS ownership. Do not create a second brain or transport router.
+45. [x] Expose optional read-only `mgr_forge_asset_discover` under verified existing MCP authorization, scoped tenant and `tools:read`; use Forge Studio's token-guarded search with strictly bounded response. No auto-install, cloud upload, paid 3D call or raw-asset publication.
+46. [x] Verify local actual Forge Studio HTTP → API client/MCP read with wrong-tenant denial and full 55-test API suite; no Actions minutes used for this wave.
+47. [ ] Join Tevin/MGR-ONE's actual MCP caller, Creation OS's approved creation-domain execution and the Forge durable 3D worker with owner job receipts; verify a generated/edited artifact against Blender and target engine. **Hosted Tevin/Creation OS integration not demonstrated.**
+48. [ ] Real hosted MCP and safe service-to-service token provisioning, restart/failure reconciliation and independent rights/asset acceptance; require actual deployed proof before promotion.
+
+The one current handoff is `HANDOFF.md`; the sibling Forge handoff is `MGR-3D-FORGE/docs/HANDOFF.md`. This queue does not change the historical research/Legacy tasks below.
+
 The unified assistant remains the goal. MGR-API-MCP is now the designated home; do not ask the user to choose it again.
 
 1. Finish free-community collection: carousel skill, editable brand template, remaining n8n workflows and linked workflow library, voice resources, new lesson attachments and videos. Preserve access/reading boundaries.

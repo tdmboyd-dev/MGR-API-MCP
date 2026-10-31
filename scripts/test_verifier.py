@@ -20,6 +20,14 @@ class IntegrityChecks(unittest.TestCase):
     def test_raw_pdf_rejected(self):
         (self.root/'source.pdf').write_bytes(b'%PDF-fixture')
         self.assertTrue(any('Unexpected public' in e for e in verify(self.root)['errors']))
+    def test_public_env_example_is_allowed_but_real_token_and_env_are_not(self):
+        (self.root/'.env.example').write_text('SERVICE_TOKEN=\nPORT=8787\n')
+        self.assertEqual(verify(self.root)['status'],'PASS')
+        (self.root/'.env.example').write_text('SERVICE_TOKEN=real-credential\n')
+        self.assertTrue(any('Nonempty sensitive' in e for e in verify(self.root)['errors']))
+        (self.root/'.env.example').write_text('SERVICE_TOKEN=\n')
+        (self.root/'.env').write_text('SERVICE_TOKEN=real-credential\n')
+        self.assertTrue(any('Unexpected public' in e for e in verify(self.root)['errors']))
     def test_synthetic_secret_detected_without_echo(self):
         marker='ghp_'+'A'*36
         (self.root/'accidental.txt').write_text(marker)

@@ -1,5 +1,19 @@
 # Resume MGR-API-MCP
 
+## Current living checkpoint — MGR Forge source bridge, 2026-10-30
+
+**This is the one canonical resume handoff for this repo.** The older dated sections below are preserved for provenance; the current results here and the source/test receipts supersede stale descriptions.
+
+- **Inspected base:** `95648526c6b7d380bed67e7b6f322ecf8faf428a` on `main`; updated publication commit is recorded in Git history.
+- **Actual newly tested behavior:** conditional, read-only MCP tool `mgr_forge_asset_discover` uses `src/forge-mcp-tools.ts` → `src/forge-catalog-client.ts` → token-authenticated sibling MGR-3D-FORGE Studio `/api/asset-sources` or `/api/asset-search`. Only configured when Forge endpoint, shared Studio token and allowed tenant are supplied; enforced existing `tools:read` scope and token-bound tenant/audience. No raw download or creative mutation in this tool.
+- **MCP ownership:** Existing MGR-API-MCP transport/security remains authoritative; MGR-3D-FORGE owns asset catalog/geometry/vault; Creation OS is owner of creation-domain orchestration; MGR-ONE/Tevin is the calling client. This is an additional capability behind the shared bridge, **not** an independent MCP router or duplicate creation worker.
+- **Verified:** `npm run verify` passed **55 tests, 0 failed**, TypeScript typecheck, artifact/package/plugin checks. `python3 scripts/verify-forge-studio.py` launched real Forge Studio HTTP on loopback and exercised the Node API adapter plus MCP read/tenant-denial logic. A wrong tenant was refused. No live hosted MCP protocol/Tevin session has been shown; this is local process-boundary proof, not production.
+- **Forge source proof:** sibling `MGR-3D-FORGE/evidence/asset-atlas/2026-10-30-proof.json` and single Forge handoff at `MGR-3D-FORGE/docs/HANDOFF.md`: 17 source candidates, two live metadata adapters, one rights-and-quality-quarantined dragon GLB (not a distributed licensed asset).
+- **Run:** configure the three optional `MGR_FORGE_STUDIO_URL`, `MGR_FORGE_STUDIO_TOKEN`, `MGR_FORGE_TENANT_ID` settings per `.env.example`; do not commit the token. Run `npm run verify` and `python3 scripts/verify-forge-studio.py` when the sibling checkout is present. No new mandatory dependency or user-facing public endpoint.
+- **Open / next owner outcomes:** real Tevin/MGR-ONE MCP caller; Creation OS-approved creation execution contract and durable Forge worker; hosted auth and private token provisioning; negative tests for hosted origin, service restart, tenant, partial failures; source-to-Blender accepted art and rights proof; end-to-end receipt. **Do not mark read-only discovery as completed creative 3D execution.**
+
+**Progress gates for this Forge bridge (explicit 5-item denominator):** local HTTP process PASS; authorized API read PASS; denied wrong-tenant PASS; full API regression PASS; hosted Tevin/Creation OS asset-generation journey **OPEN**. Current 4/5 narrowly scoped gates = 80% for this bridge slice, **not** 80% of Forge or MCP production readiness.
+
 ## Current resume checkpoint — October 6, 2026
 
 MGR-API-MCP is now the shared external edge, switchboard, and Brain transport layer. MGR Legacy is the authoritative business data/workflow/action system. Creation OS remains the creation engine. See `architecture/LEGACY-INTEGRATION.md`.

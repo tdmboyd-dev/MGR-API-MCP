@@ -1,5 +1,13 @@
 # Audit ledger
 
+## October 30, 2026 — MGR Forge source bridge implementation and proof
+
+- Inspected current Forge + API GitHub main, guarded MCP registration, Creation OS service dispatch and Forge Studio token-protected HTTP endpoints. Used the existing shared auth/transport, avoiding a second router.
+- Implemented conditional `mgr_forge_asset_discover` plus bounds, allowed tenant, read-scope requirement, upstream HTTPS/loopback transport constraints, response-budget and timeout guards; no secrets in repository.
+- Verified current 55-test API suite/typecheck/plugin checker and actual loopback Forge Studio process ↔ Node adapter/authorized MCP read. Captured refusal for wrong tenant. Hosted Tevin session, external OAuth/service creds and Creation OS creative execution remain unverified.
+- Sibling Forge Source Atlas/rights source ledger and machine receipt are referenced in `HANDOFF.md`; MGR API/MCP does not own the raw GLB vault or licenses.
+- Open: canonical rights-accepted asset, independently opened in Blender/engine, full Tevin user journey, production endpoint and restart/cancel/duplicate tolerance for actual 3D jobs.
+
 ## September 28, 2026
 
 - The user designated this remote as the home. Its initial empty/public state was verified, then cloned without replacing prior work.

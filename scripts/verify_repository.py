@@ -17,8 +17,19 @@ def verify(root=ROOT, local=False):
         if not (root/name).is_file(): errors.append(f'Missing required file: {name}')
     for p in public:
         rel=p.relative_to(root).as_posix()
-        if p.suffix in {'.zip','.pdf','.pem','.key','.pfx','.p12'} or p.name.startswith('.env'):
+        if p.suffix in {'.zip','.pdf','.pem','.key','.pfx','.p12'} or (p.name.startswith('.env') and p.name!='.env.example'):
             errors.append(f'Unexpected public binary/secret-config file: {rel}')
+        if p.name=='.env.example':
+            # The tracked public template predates this verifier. It is okay to
+            # publish EMPTY credentials and non-secret examples, never values.
+            for line in p.read_text(encoding='utf-8').splitlines():
+                if not line.strip() or line.lstrip().startswith('#'): continue
+                match=re.fullmatch(r'([A-Z][A-Z0-9_]*)=(.*)',line)
+                if not match:
+                    errors.append(f'Invalid environment-template syntax: {rel}'); break
+                key,value=match.groups()
+                if re.search(r'(?:TOKEN|PASSWORD|API_KEY|CLIENT_SECRET|PRIVATE_KEY)',key) and value.strip():
+                    errors.append(f'Nonempty sensitive environment-template value: {rel}'); break
         if p.suffix=='.json':
             checked+=1
             try: json.loads(p.read_text(encoding='utf-8'))

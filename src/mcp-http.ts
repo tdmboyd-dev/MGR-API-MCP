@@ -3,6 +3,7 @@ import { createMgrMcpServer } from "./mcp-server.js";
 import { authorizeMcpRequest, type AccessTokenVerifier, type McpAuthResult } from "./http-auth.js";
 import type { LegacyEdgeClient } from "./legacy-client.js";
 import type { CreationOSClient } from "./creation-client.js";
+import type { ForgeCatalogClient } from "./forge-catalog-client.js";
 
 export interface AuthorizedMgrMcpHttpOptions {
   verifier:AccessTokenVerifier;
@@ -11,6 +12,8 @@ export interface AuthorizedMgrMcpHttpOptions {
   resourceMetadataUrl:string;
   legacy:LegacyEdgeClient;
   creation?:CreationOSClient;
+  forge?:ForgeCatalogClient;
+  forgeAllowedTenantId?:string;
 }
 
 export async function authorizeAndBindMcpRequest(
@@ -69,6 +72,12 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
           resourceAudience:string;
           creation:CreationOSClient;
         };
+        forge?:{
+          auth:typeof authResult.auth;
+          resourceAudience:string;
+          forge:ForgeCatalogClient;
+          allowedTenantId:string;
+        };
       }={
         legacy:{
           auth:authResult.auth,
@@ -81,6 +90,14 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
           auth:authResult.auth,
           resourceAudience:options.resourceAudience,
           creation:options.creation
+        };
+      }
+      if(options.forge && options.forgeAllowedTenantId){
+        serverOptions.forge={
+          auth:authResult.auth,
+          resourceAudience:options.resourceAudience,
+          forge:options.forge,
+          allowedTenantId:options.forgeAllowedTenantId
         };
       }
       const handler=createMcpHandler(()=>createMgrMcpServer(serverOptions));

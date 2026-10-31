@@ -1,5 +1,7 @@
 # Current work and resume record — MGR-API-MCP
 
+**Latest checkpoint 2026-10-30:** Forge read-only MCP asset discovery wave locally coded and fully regression-tested (55/55 API tests; cross-process Forge Studio HTTP + Node authorized client PASS, wrong tenant denied). Five scoped integration gates: 4 PASS, 1 OPEN (actual hosted Tevin/Creation OS 3D generation). Owner is the current session until Git commit/push; no background agent or lock is implied. **`HANDOFF.md` is the single current resume authority** and queue items 44–48 hold the next actions. The dated October 5 material below is historical.
+
 Updated: 2026-10-05. Responsible session: hosted-mcp-hardening-2026-10-05.
 Repository: `tdmboyd-dev/MGR-API-MCP`
 Working branch: `main`

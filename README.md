@@ -6,6 +6,8 @@ The research and build home for an owned, portable assistant informed by JARVIS 
 
 **Current state: executable authenticated shared edge with deployment-ready hosted MCP surface.** The repo now includes typed task/decision/security contracts, governed stdio + HTTP MCP, JWT/JWKS auth, tenant/scope binding, Legacy-backed side-effect dispatch with authoritative receipts and reconciliation, Creation OS routing, container deployment, Render blueprint, Auth0/OIDC preflight, direct remote MCP verification, OpenAI Responses remote-MCP verification, and green containerized restart/timeout/duplicate-delivery proof. A real public host, real Auth0/OAuth credentials, deployed Legacy endpoint, and final hosted OpenAI/ChatGPT MCP session remain external proof rather than missing repository code.
 
+**2026-10-30 MGR Forge bridge:** This shared MCP edge now optionally registers `mgr_forge_asset_discover` for **read-only** queries against the sibling MGR-3D-FORGE Source Atlas. Supply only the three `MGR_FORGE_*` settings in `.env.example`; the tool is absent if configuration is incomplete. Existing MCP scope, audience and tenant authorization apply, with actual local Forge Studio HTTP process proof and **55 passing API tests**. This is source discovery, **not** a Tevin-hosted 3D generation worker or production account proof. Run `python3 scripts/verify-forge-studio.py` locally with the sibling checkout to reproduce the cross-process proof; see one canonical `HANDOFF.md`.
+
 ## Start here
 
 - [Working agreement](AGENTS.md)

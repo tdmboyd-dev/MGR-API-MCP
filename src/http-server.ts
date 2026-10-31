@@ -4,6 +4,7 @@ import { buildProtectedResourceMetadata } from "./oauth-metadata.js";
 import { createAuthorizedMgrMcpHttpHandler } from "./mcp-http.js";
 import { LegacyEdgeClient } from "./legacy-client.js";
 import { JwksAccessTokenVerifier } from "./jwt-verifier.js";
+import { ForgeStudioCatalogClient } from "./forge-catalog-client.js";
 
 const port=Number(process.env.PORT ?? "8787");
 const baseUrl=requiredUrl("MCP_PUBLIC_BASE_URL");
@@ -29,12 +30,22 @@ const legacy=new LegacyEdgeClient({
   ...(process.env.LEGACY_SERVICE_TOKEN?{bearerToken:process.env.LEGACY_SERVICE_TOKEN}:{}),
   timeoutMs:Number(process.env.LEGACY_TIMEOUT_MS ?? "15000")
 });
+const forgeConfigured=[process.env.MGR_FORGE_STUDIO_URL,process.env.MGR_FORGE_STUDIO_TOKEN,
+                       process.env.MGR_FORGE_TENANT_ID].filter(Boolean).length;
+if(forgeConfigured!==0 && forgeConfigured!==3){
+  throw new Error("Forge discovery requires URL, local Studio token and permitted tenant together");
+}
+const forge=forgeConfigured===3?new ForgeStudioCatalogClient({
+  baseUrl:process.env.MGR_FORGE_STUDIO_URL!,
+  token:process.env.MGR_FORGE_STUDIO_TOKEN!
+}):undefined;
 const mcp=createAuthorizedMgrMcpHttpHandler({
   verifier,
   resourceAudience,
   requiredScopes,
   resourceMetadataUrl,
-  legacy
+  legacy,
+  ...(forge?{forge,forgeAllowedTenantId:process.env.MGR_FORGE_TENANT_ID!}:{})
 });
 const metadata=buildProtectedResourceMetadata({
   resource:resourceAudience,
