@@ -1,19 +1,23 @@
-/** Read-only catalog adapter for the MGR Forge local Studio; no 3D execution. */
-
+/** Bounded authenticated adapter to Forge Studio's catalog and durable world jobs. */
 export interface ForgeCatalogSearch {
   mode:"sources"|"models";
   query:string;
   category?:string;
   live?:boolean;
   limit?:number;
-  provider?:"3dassets"|"polyhaven";
+  provider?:"3dassets"|"polyhaven"|"ambientcg";
   kind?:"models"|"textures"|"hdris";
 }
-
+export interface ForgeWorldEdits {
+  schema:"mgr.forge.world-edit.v1";
+  asset_sha256:string;
+  buildings:Array<{id:string;center:number[];size:number[];material:string}>;
+}
 export interface ForgeCatalogClient {
   search(input:ForgeCatalogSearch):Promise<Record<string,unknown>>;
+  createWorld?(input:{requestId:string;edits:ForgeWorldEdits}):Promise<Record<string,unknown>>;
+  worldStatus?(requestId:string):Promise<Record<string,unknown>>;
 }
-
 export interface ForgeStudioCatalogOptions {
   baseUrl:string;
   token:string;
@@ -38,38 +42,60 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
     this.token=options.token;
     this.timeoutMs=options.timeoutMs ?? 10_000;
     if(!Number.isFinite(this.timeoutMs) || this.timeoutMs<=0 || this.timeoutMs>30_000){
-      throw new Error("Forge catalog timeout out of bounds");
+      throw new Error("Forge Studio timeout out of bounds");
     }
     this.transport=options.transport ?? fetch;
   }
 
   async search(input:ForgeCatalogSearch):Promise<Record<string,unknown>>{
     if(input.query.length>120 || (input.mode==="models" && input.live && !input.query.trim())){
-      throw new Error("Forge asset search must be bounded and nonempty for live lookup");
+      throw new Error("Forge source query must be bounded and nonempty for live lookup");
     }
     const route=input.mode==="sources"?"/api/asset-sources":"/api/asset-search";
     const request:Record<string,unknown>={query:input.query};
     if(input.category) request.category=input.category;
     if(input.mode==="models"){
       request.live=input.live ?? false;
-      request.limit=input.limit ?? (input.provider==="polyhaven"?6:20);
+      request.limit=input.limit ?? (input.provider==="3dassets"?20:6);
       request.provider=input.provider ?? "3dassets";
       request.kind=input.kind ?? "models";
     }
+    return this.post(route,request);
+  }
+
+  async createWorld(input:{requestId:string;edits:ForgeWorldEdits}):Promise<Record<string,unknown>>{
+    if(!/^[A-Za-z0-9_-]{12,100}$/.test(input.requestId)){
+      throw new Error("Forge world request requires stable 12..100 character id");
+    }
+    if(!input.edits || input.edits.schema!=="mgr.forge.world-edit.v1" ||
+       !/^[a-f0-9]{64}$/.test(input.edits.asset_sha256) || !Array.isArray(input.edits.buildings)){
+      throw new Error("Forge world edits contract invalid");
+    }
+    return this.post("/api/world-job",{request_id:input.requestId,edits:input.edits});
+  }
+
+  async worldStatus(requestId:string):Promise<Record<string,unknown>>{
+    if(!/^[A-Za-z0-9_-]{12,100}$/.test(requestId)){
+      throw new Error("Forge world request id invalid");
+    }
+    return this.post("/api/world-job-status",{request_id:requestId});
+  }
+
+  private async post(route:string,request:Record<string,unknown>):Promise<Record<string,unknown>>{
+    const body=JSON.stringify(request);
+    if(Buffer.byteLength(body)>1_200_000) throw new Error("Forge request exceeds byte budget");
     const response=await this.transport(new URL(route,this.baseUrl),{
       method:"POST",
       headers:{"Content-Type":"application/json","X-MGR-Forge-Token":this.token},
-      body:JSON.stringify(request),
-      signal:AbortSignal.timeout(this.timeoutMs),
-      redirect:"error"
+      body, signal:AbortSignal.timeout(this.timeoutMs), redirect:"error"
     });
-    if(!response.ok) throw new Error(`Forge source directory returned HTTP ${response.status}`);
+    if(!response.ok) throw new Error(`Forge Studio returned HTTP ${response.status}`);
     const declared=Number(response.headers.get("content-length") ?? "0");
     if(!Number.isFinite(declared) || declared>300_000){
-      throw new Error("Forge catalog response outside byte budget");
+      throw new Error("Forge response outside byte budget");
     }
     const reader=response.body?.getReader();
-    if(!reader) throw new Error("Forge catalog response has no body");
+    if(!reader) throw new Error("Forge response has no body");
     const chunks:Uint8Array[]=[];
     let size=0;
     try{
@@ -77,7 +103,7 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
         const {value,done}=await reader.read();
         if(done) break;
         size+=value.byteLength;
-        if(size>300_000) throw new Error("Forge catalog response outside byte budget");
+        if(size>300_000) throw new Error("Forge response outside byte budget");
         chunks.push(value);
       }
     }finally{
@@ -85,7 +111,7 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
     }
     const parsed:unknown=JSON.parse(new TextDecoder().decode(Buffer.concat(chunks)));
     if(!parsed || typeof parsed!=="object" || Array.isArray(parsed)){
-      throw new Error("Forge catalog returned invalid JSON envelope");
+      throw new Error("Forge returned invalid JSON envelope");
     }
     return parsed as Record<string,unknown>;
   }

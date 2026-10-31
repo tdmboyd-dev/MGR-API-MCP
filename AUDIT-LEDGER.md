@@ -1,3 +1,12 @@
+## 2026-10-31 — Forge direct creation, scope repair and real process proof
+
+- Used existing API/MCP actor/audience/tenant and `tools:execute` scope after detecting proposed `tools:write` mismatch. No second router, database, token manager or Creation OS middleman.
+- Added Studio catalog client createWorld/worldStatus and permissioned MCP `mgr_forge_world_create` and `mgr_forge_world_status`; source discovery includes official ambientCG metadata. Unknown/partial result cannot silently report success. Read-only and creation actions are distinct tools.
+- Actual local process integration initially returned HTTP 400 due to unsupported `mcp-created-` building ID; changed test to Forge's real `mgr-created-0001` contract. Re-run PASS: generated 13,964-byte GLB SHA `89144125aa7e9ac42d755a10eabdd283d6271cb2fb5f2af948d84e45fb0198ac`, duplicate same hash, wrong tenant and missing execute scope denied.
+- `npm run verify`: TypeScript typecheck, **60/60** tests, hosted-artifacts syntax and plugin manifest checks PASS. This is local Python Studio HTTP + Node function execution, not real remote hosted Tevin/MCP protocol or file engine QA.
+- Full Forge native imagination/morph engine is a separate F121–F123 creation path in `MGR-3D-FORGE`; API-MCP does not yet provide those generation tools.
+
+
 # Audit ledger
 
 ## October 30, 2026 — MGR Forge source bridge implementation and proof

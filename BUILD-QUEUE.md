@@ -1,3 +1,11 @@
+## 2026-10-31 — Direct standalone Forge creation; optional Creation OS
+
+47. [x] Forge Studio now owns durable world create/status endpoints, and this existing API/MCP exposes `mgr_forge_world_create` / `mgr_forge_world_status` under existing `tools:execute` (write) / `tools:read`, bound actor/tenant/audience and stable request ID. Actual local Python Forge Studio HTTP to Node policy client produced a hashed 13,964-byte GLB; safe duplicate replay, wrong tenant and missing scope denied. 60 API-MCP tests pass. The first harness building ID error was corrected to `mgr-created-0001`.
+48. [ ] Hosted public MCP + Tevin/MGR-ONE (or other client) real creation, secure relay, OAuth scopes, file reopening in Blender/Godot and provider approvals. Direct 3D path **does NOT require Creation OS**.
+49. [ ] Creation OS as an *optional* separate multi-factory orchestrator (video/music/campaign + Forge) using real artifact hashes and job receipts. The Creation OS default MediaFactory now blocks fabricated success for all media until backed by a true output provider. No production integration claimed.
+50. [ ] Extend owner-bound MCP to generated creature imagination/morph once native art, license, rig and target-engine acceptance is demonstrated. Current Forge CLI generation is not a hosted MCP creation tool.
+
+
 # Research-to-build queue
 
 ## MGR Forge × Tevin source integration — 2026-10-30

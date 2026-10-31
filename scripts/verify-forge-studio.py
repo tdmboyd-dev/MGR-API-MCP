@@ -5,6 +5,8 @@ MGR_FORGE_SOURCE_DIR. No external services, paid model or GitHub Actions.
 """
 
 import os
+import hashlib
+import json
 from pathlib import Path
 import subprocess
 import sys
@@ -29,7 +31,15 @@ with TemporaryDirectory(prefix="mgr-forge-bridge-") as directory:
     server, studio = start_server(scratch / "world", scratch / "workstation")
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
+    world_manifest=json.loads((scratch / "world" / "manifest.json").read_text(encoding="utf-8"))
+    world_digest=hashlib.sha256((scratch / "world" / "world.glb").read_bytes()).hexdigest()
+    edits={"schema":"mgr.forge.world-edit.v1","asset_sha256":world_digest,
+           "buildings":[{k:obj[k] for k in ("id","center","size","material")}
+                        for obj in world_manifest["buildings"]]}
+    edits["buildings"].append({"id":"mgr-created-0001","center":[0,0,0],
+                               "size":[6,11,7],"material":"building-gold"})
     environment = dict(os.environ)
+    environment["MGR_FORGE_WORLD_EDITS_JSON"]=json.dumps(edits,separators=(",",":"))
     environment["MGR_FORGE_STUDIO_URL"] = f"http://127.0.0.1:{server.server_port}"
     environment["MGR_FORGE_STUDIO_TOKEN"] = studio.token
     try:
