@@ -8,6 +8,17 @@
 
 # Research-to-build queue
 
+## Optional REA X-Ray ↔ Forge source bridge — 2026-10-31
+
+49. [x] Inspect official REA source/license, npm `rea-agents@6.8.0` integrity and Node engine, install pinned portable runtime outside all MGR app dependencies, validate real `inspect-artifact` output.
+50. [x] Save private ChatGPT `MGR REA X-Ray` plugin and persist its source/runtime pins in `integrations/rea-xray-plugin/`. Actual downloaded release exercised via local stdio MCP, including permitted ZIP and denied outside-workspace path; API suite 62/62 passed.
+51. [x] Join REA complete ZIP Evidence to the existing Forge Vault admission contract; independently reconcile original KayKit archive 302/302 file hashes without granting redistribution or duplicating Vault.
+52. [ ] Ship an owner-facing Forge Studio inspection/creation journey and optional authorized desktop plugin connection; hosted Tevin runtime, tenant guards and explicit-permission surface still unverified.
+53. [ ] Use REA findings to specify independently authored morph/rig/world generation, then prove new features through Blender/Godot/owner acceptance; don't copy restricted source, model weights or raw pack assets.
+
+This is a bounded source/evidence slice, not full product acceptance. `HANDOFF.md` remains the single current resume authority.
+
+
 ## MGR Forge × Tevin source integration — 2026-10-30
 
 44. [x] Audit existing Forge Studio/auth/asset vault and this repo's production MCP/Creation OS ownership. Do not create a second brain or transport router.

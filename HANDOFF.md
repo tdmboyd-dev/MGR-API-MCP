@@ -1,5 +1,16 @@
 # Resume MGR-API-MCP
 
+## Current REA X-Ray checkpoint — 2026-10-31 (supersedes older test totals below)
+
+**Canonical current handoff is this file.** The upstream REA repo is NOT a second MGR system: it is an optional evidence inspector used by the existing Beast Pack X-Ray workflow and Forge's own Vault + creation engine. Ordinary Tevin→MGR API/MCP→Forge world jobs continue directly without REA or Creation OS as mandatory hops.
+
+- **Private plugin saved:** [MGR REA X-Ray](https://chatgpt.com/plugins/plugins_6ae674d617d881919da938edf6e018d4), version 0.1.0, account-private release. Source `integrations/rea-xray-plugin/` includes `plugin.json`, portable `mcp.json`, a focused skill, a one-tool static artifact MCP wrapper and `rea-dependency-pin.json`. The wrapper does **not** expose REA's unrestricted active MCP tools, shell commands, browser controls, or a cloud-wide file reader. Approved workspace is `~/.mgr-tools/rea/workspace`.
+- **Real runtime:** official REA 6.8.0 npm package with matching published integrity and official portable Node 24.22.1 installed separately on owner Windows; local REA `--version --json` passed, global Node not replaced. Exact plugin archive downloaded back from ChatGPT and **real local stdio MCP initialized, listed one inspection tool, denied a system-file path outside scope, and inspected the pinned KayKit ZIP through REA**. REA full evidence retained locally, not uploaded in Git. Saving to ChatGPT does not make local MCP run on iOS or cloud without a supported local execution connection.
+- **Forge consumption:** sibling `MGR-3D-FORGE/forge/xray_kit.py` + `rea-kit-audit` CLI validates the REA complete ZIP evidence against existing pinned Forge Vault receipt. Real **302/302 ZIP child SHA/size matches**, quarantined and rights uncleared. Cross-repo evidence `MGR-3D-FORGE/evidence/asset-atlas/2026-10-31-rea-official-kaykit-proof.json`. No duplicate router, vault, blob mirror or generalized X-Ray job database.
+- **Verification:** `npm run verify` **62 tests passed** with TypeScript, artifact and plugin checks; local plugin startup and outsider-path refusal included. Forge full suite **589 run / 3 skips**, no failures. No remote hosted Tevin→plugin→Forge trace, no hosted local-files bridge, no general owner UI and no legal rights grant claimed.
+- **Open:** implement a safe Forge Studio browse/preview/use flow, authorized plugin connection via supported desktop/workstation, real remote Tevin caller with tenant/actor guard and stable receipts, original creation improvements and independent Blender/Godot acceptances. Never expose direct REA arbitrary filesystem or executable analysis to a public API; remote capability must be separately reviewed.
+
+
 ## Current living checkpoint — 2026-10-31 direct Forge creation (supersedes dated October 30 search-only claims below)
 
 **This is the one current handoff for MGR-API-MCP.** The 2026-10-30 checkpoint below is preserved as dated history, not today's capability limit. Inspected base was GitHub `main` commit `1d69ef9c1c2f16d28c0c10410ba773bf6d2d6ba0`. Clean independent source checkout avoided another worker's modified branch; published revision lives in Git history after push.

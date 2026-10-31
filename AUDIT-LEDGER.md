@@ -9,6 +9,14 @@
 
 # Audit ledger
 
+## October 31, 2026 — REA 6.8.0 local X-Ray plugin and Forge receipt bridge
+
+- Verified official `morluto/rea` source, MIT plus third-party notices, isolated npm 6.8.0 release and SHA-256-verified portable Node runtime (avoided global Node drift). REA static ZIP `inspect-artifact` command actually ran with full Evidence required; no untrusted package executable was launched.
+- Account-private `MGR REA X-Ray` plugin v0.1.0 created, saved release downloaded back, local MCP protocol/tool/denial/read verified. Source/identity pins kept under `integrations/rea-xray-plugin`, no REA source copied into MGR code.
+- Connected Forge `rea-kit-audit` against REA bundle and existing rights/asset Vault; 302/302 real ZIP file SHA/size matches, preserves source scope as NOT RIGHTS CLEARED. No API/MCP duplicate rights database, no mandatory Creation OS hop.
+- `npm run verify` passed 62/62 tests and TypeScript/artifact/plugin checks. Hosted plugin connection and Tevin user journey remain unverified.
+
+
 ## October 30, 2026 — MGR Forge source bridge implementation and proof
 
 - Inspected current Forge + API GitHub main, guarded MCP registration, Creation OS service dispatch and Forge Studio token-protected HTTP endpoints. Used the existing shared auth/transport, avoiding a second router.

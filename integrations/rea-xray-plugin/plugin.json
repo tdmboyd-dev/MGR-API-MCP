@@ -1,0 +1,37 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "author": {
+    "email": "tdm.boyd@gmail.com",
+    "name": "Time"
+  },
+  "description": "Safely inspect authorized software and asset packages with pinned REA evidence, then translate findings into original MGR-native build specifications and tests.",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "capabilities": [],
+        "category": "Productivity",
+        "defaultPrompt": [
+          "Inspect this legally accessible kit, show what it contains and what we can build MGR-native.",
+          "Compare the package to our Forge components and find missing implementation and tests.",
+          "Audit source permissions before suggesting a production import."
+        ],
+        "developerName": "Time",
+        "displayName": "MGR REA X-Ray",
+        "longDescription": "Read-only inspection of user-authorized local asset and software packages with pinned REA 6.8.0. Preserves source evidence and helps author independent MGR-native implementation and verification plans. Local REA runtime required for tools.",
+        "shortDescription": "Inspect kits with proof"
+      }
+    }
+  },
+  "homepage": "https://github.com/tdmboyd-dev/MGR-API-MCP",
+  "keywords": [
+    "REA",
+    "MGR",
+    "reverse-engineering",
+    "3d-assets",
+    "audit",
+    "verification"
+  ],
+  "license": "MIT",
+  "name": "mgr-rea-xray",
+  "version": "0.1.0"
+}

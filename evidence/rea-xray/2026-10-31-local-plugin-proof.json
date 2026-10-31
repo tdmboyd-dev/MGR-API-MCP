@@ -1,0 +1,28 @@
+{
+  "actual_tevin_client_verified": false,
+  "all_file_hashes_and_lengths_matched": true,
+  "date": "2026-10-31",
+  "forge_rights_reviewed": false,
+  "forge_verified_child_files": 302,
+  "hosted_chatgpt_ios_local_file_access_verified": false,
+  "local_stdio_mcp_actual_zip_inspection": true,
+  "local_stdio_mcp_initialize": true,
+  "local_stdio_mcp_outside_workspace_denied": true,
+  "local_stdio_mcp_tools_list": true,
+  "notes": [
+    "REA static inspection only",
+    "Full Evidence retained privately outside source Git",
+    "Account plugin save does not activate a Windows MCP process on mobile"
+  ],
+  "official_rea_runtime": "portable publisher-SHA-verified Node v24.22.1",
+  "official_rea_version": "6.8.0",
+  "plugin_release_downloaded_back": true,
+  "plugin_version": "0.1.0",
+  "private_plugin_id": "plugins_6ae674d617d881919da938edf6e018d4",
+  "provider_cost_usd": 0,
+  "rea_zip_container_coverage": "complete",
+  "rea_zip_occurrences_including_root_and_directories": 310,
+  "safe_to_redistribute": false,
+  "schema": "mgr.api.rea-xray-plugin-local-proof.v1",
+  "source_archive_sha256": "17985aed180fe2f658c526e92dc300f2fde72db09494433153c7e808c6137afe"
+}
