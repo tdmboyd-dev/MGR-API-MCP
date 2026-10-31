@@ -1,0 +1,26 @@
+{
+  "schema": "mgr.api.forge-creator-plugin-release.v1",
+  "saved_at": "2026-10-31",
+  "plugin_id": "plugins_6ae67e8cb4c481919d905592722c2a7d",
+  "plugin_name": "mgr-forge-creator",
+  "plugin_version": "0.1.0",
+  "current_release_id": "pluginrel_6ae67e8d49108191b5e7677d03eea77e",
+  "scope": "USER",
+  "discoverability": "PRIVATE",
+  "plugin_url": "https://chatgpt.com/plugins/plugins_6ae67e8cb4c481919d905592722c2a7d",
+  "source_repository": "tdmboyd-dev/MGR-API-MCP",
+  "source_path": "integrations/forge-creator-plugin/",
+  "source_git_commit": "80aab850a123a2bc762e4e1e0bdb7d7678557a1c",
+  "source_git_blobs": {
+    "plugin.json": "8412aef01678b31c3939f43916915c7235b8b7c9",
+    "skills/mgr-forge-create/SKILL.md": "720177b1d9d05baa918ae58a5eba1bdb5270852b",
+    "README.md": "50bacdb69f15e56125e29f6b756a78ce40ff1665"
+  },
+  "private_plugin_files_retrieved_back": true,
+  "plugin_skill_present": true,
+  "plugin_standalone_mcp_server_present": false,
+  "hosted_forge_creation_tools_connected": false,
+  "chatgpt_mobile_3d_delivery_verified": false,
+  "existing_local_api_mcp_original_creature_bridge_proven": true,
+  "next": "Deploy/gate shared MGR-API-MCP existing remote HTTPS OAuth and private artifacts, then bind this SAME plugin. No duplicated 3D execution backend."
+}
