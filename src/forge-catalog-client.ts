@@ -13,10 +13,19 @@ export interface ForgeWorldEdits {
   asset_sha256:string;
   buildings:Array<{id:string;center:number[];size:number[];material:string}>;
 }
+export interface ForgeCreatureInput {
+  requestId:string;
+  prompt:string;
+  seed:number;
+  variants:number;
+  morph?:{length?:number|undefined;height?:number|undefined;width?:number|undefined;twist_degrees?:number|undefined};
+}
 export interface ForgeCatalogClient {
   search(input:ForgeCatalogSearch):Promise<Record<string,unknown>>;
   createWorld?(input:{requestId:string;edits:ForgeWorldEdits}):Promise<Record<string,unknown>>;
   worldStatus?(requestId:string):Promise<Record<string,unknown>>;
+  createCreature?(input:ForgeCreatureInput):Promise<Record<string,unknown>>;
+  creatureStatus?(requestId:string):Promise<Record<string,unknown>>;
 }
 export interface ForgeStudioCatalogOptions {
   baseUrl:string;
@@ -79,6 +88,29 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
       throw new Error("Forge world request id invalid");
     }
     return this.post("/api/world-job-status",{request_id:requestId});
+  }
+
+  async createCreature(input:ForgeCreatureInput):Promise<Record<string,unknown>>{
+    if(!/^[A-Za-z0-9_-]{12,100}$/.test(input.requestId) ||
+       typeof input.prompt!=="string" || input.prompt.trim().length<8 ||
+       input.prompt.length>500 || !Number.isInteger(input.seed) || input.seed<0 ||
+       input.seed>=4294967296 || !Number.isInteger(input.variants) || input.variants<1 || input.variants>12){
+      throw new Error("Forge creature input violates bounded request contract");
+    }
+    const morph=input.morph ?? {};
+    if(Object.keys(morph).some(k=>!["length","height","width","twist_degrees"].includes(k))){
+      throw new Error("Unsupported creature morph field");
+    }
+    return this.post("/api/creature-create",{
+      request_id:input.requestId,prompt:input.prompt,seed:input.seed,
+      variants:input.variants,morph
+    });
+  }
+
+  async creatureStatus(requestId:string):Promise<Record<string,unknown>>{
+    if(!/^[A-Za-z0-9_-]{12,100}$/.test(requestId))
+      throw new Error("Forge creature request ID invalid");
+    return this.post("/api/creature-status",{request_id:requestId});
   }
 
   private async post(route:string,request:Record<string,unknown>):Promise<Record<string,unknown>>{

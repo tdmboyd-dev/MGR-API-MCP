@@ -2,7 +2,7 @@
 import type {McpServer} from "@modelcontextprotocol/server";
 import * as z from "zod/v4";
 import {authorizeTool, type AuthContext} from "./authz.js";
-import type {ForgeCatalogClient,ForgeCatalogSearch,ForgeWorldEdits} from "./forge-catalog-client.js";
+import type {ForgeCatalogClient,ForgeCatalogSearch,ForgeWorldEdits,ForgeCreatureInput} from "./forge-catalog-client.js";
 
 export interface ForgeMcpToolOptions {
   auth:AuthContext;
@@ -95,6 +95,55 @@ export async function statusForgeWorldMcp(
   }
 }
 
+export async function createForgeCreatureMcp(options:ForgeMcpToolOptions,input:ForgeCreatureInput):Promise<Record<string,unknown>>{
+  const reason=denied(options,"tools:execute");
+  if(reason) return {accepted:false,state:"DENY",reason};
+  if(!options.forge.createCreature) return {accepted:false,state:"EXECUTOR_UNAVAILABLE"};
+  try{
+    const result=await options.forge.createCreature(input);
+    if(result.status==="NEEDS_RECONCILIATION"){
+      return {accepted:false,state:"RECONCILIATION_REQUIRED",requestId:input.requestId,
+              reason:"Previous creator job may have executed; do not blindly dispatch twice"};
+    }
+    if(result.status!=="MATERIALIZED" || typeof result.creature_sha256!=="string" ||
+       !/^[a-f0-9]{64}$/.test(result.creature_sha256) ||
+       typeof result.job_id!=="string" || !/^[a-f0-9]{24}$/.test(result.job_id) ||
+       typeof result.creature_bytes!=="number" || !Number.isSafeInteger(result.creature_bytes) ||
+       result.creature_bytes<100 || result.model_inference_used!==false ||
+       result.owner_art_accepted!==false){
+      return {accepted:false,state:"UNVERIFIED_ARTIFACT",
+              reason:"Forge has not returned complete trustworthy native creature GLB metadata"};
+    }
+    return {accepted:true,status:"ORIGINAL_CREATURE_MATERIALIZED_LOCAL",
+            requestId:input.requestId,jobId:result.job_id,
+            artifactSha256:result.creature_sha256,artifactBytes:result.creature_bytes,
+            triangles:result.triangles,localArtifactUrl:result.glb_url,
+            localManifestUrl:result.manifest_url,replayed:result.replayed===true,
+            ownerArtAccepted:false,neuralInference:false,hostedChatgptVerified:false,
+            disclaimer:"Original CPU mesh, not neural photorealism, owner-approved creature or hosted public download"};
+  }catch(error){
+    return {accepted:false,state:"FORGE_UNAVAILABLE_OR_UNKNOWN",
+            reconciliationRequired:true,requestId:input.requestId,
+            reason:error instanceof Error?error.message:"Forge creature worker unavailable"};
+  }
+}
+
+export async function statusForgeCreatureMcp(options:ForgeMcpToolOptions,requestId:string):Promise<Record<string,unknown>>{
+  const reason=denied(options,"tools:read");
+  if(reason) return {accepted:false,state:"DENY",reason};
+  if(!options.forge.creatureStatus) return {accepted:false,state:"EXECUTOR_UNAVAILABLE"};
+  try{
+    const result=await options.forge.creatureStatus(requestId);
+    return {accepted:result.status==="MATERIALIZED",status:result.status,requestId,
+            jobId:result.job_id,artifactSha256:result.creature_sha256,
+            reconciliationRequired:result.status==="NEEDS_RECONCILIATION",
+            hostedChatgptVerified:false};
+  }catch(error){
+    return {accepted:false,state:"FORGE_UNAVAILABLE_OR_UNKNOWN",reconciliationRequired:true,
+            reason:error instanceof Error?error.message:"Forge creature status unavailable"};
+  }
+}
+
 const coordinates=z.tuple([z.number().finite(),z.number().finite(),z.number().finite()]);
 const worldEdits=z.object({
   schema:z.literal("mgr.forge.world-edit.v1"),
@@ -126,6 +175,36 @@ export function registerForgeMcpTools(server:McpServer,options:ForgeMcpToolOptio
     const result=await searchForgeMcp(options,search);
     return {content:[{type:"text",text:JSON.stringify(result)}],isError:result.accepted!==true};
   });
+  if(options.forge.createCreature){
+    server.registerTool("mgr_forge_creature_create",{
+      description:"Generate an original CPU procedural creature GLB through authenticated Forge. Requires tools:execute, stable request ID; returns hashed local artifact. No paid model/API or public hosted download.",
+      inputSchema:z.object({
+        requestId:z.string().regex(/^[A-Za-z0-9_-]{12,100}$/),
+        prompt:z.string().min(8).max(500),
+        seed:z.number().int().min(0).max(4294967295).default(42),
+        variants:z.number().int().min(1).max(12).default(4),
+        morph:z.object({
+          length:z.number().finite().min(0.5).max(2.2).optional(),
+          height:z.number().finite().min(0.5).max(2.2).optional(),
+          width:z.number().finite().min(0.5).max(2.2).optional(),
+          twist_degrees:z.number().finite().min(-45).max(45).optional()
+        }).strict().optional()
+      }).strict()
+    },async input=>{
+      const creatureInput:ForgeCreatureInput={requestId:input.requestId,prompt:input.prompt,seed:input.seed,variants:input.variants,...(input.morph===undefined?{}:{morph:input.morph})};
+      const result=await createForgeCreatureMcp(options,creatureInput);
+      return {content:[{type:"text",text:JSON.stringify(result)}],isError:result.accepted!==true};
+    });
+  }
+  if(options.forge.creatureStatus){
+    server.registerTool("mgr_forge_creature_status",{
+      description:"Read exact native creature job ID and hash through existing Forge Studio; tenant-bound and tools:read.",
+      inputSchema:z.object({requestId:z.string().regex(/^[A-Za-z0-9_-]{12,100}$/)})
+    },async input=>{
+      const result=await statusForgeCreatureMcp(options,input.requestId);
+      return {content:[{type:"text",text:JSON.stringify(result)}],isError:result.accepted!==true};
+    });
+  }
   if(options.forge.createWorld){
     server.registerTool("mgr_forge_world_create",{
       description:"With tools:execute permission, materialize one idempotent local Forge world edit and return the actual GLB SHA-256; Creation OS not required.",

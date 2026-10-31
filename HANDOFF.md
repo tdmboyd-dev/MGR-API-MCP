@@ -1,4 +1,18 @@
 # Resume MGR-API-MCP
+## Current native 3D Forge Creator connection — 2026-10-31
+
+**Only current API/MCP handoff remains HANDOFF.md**; sibling Forge authority is MGR-3D-FORGE/docs/HANDOFF.md and the published full spec is MGR-3D-FORGE/docs/MASTER-FORGE-PROGRAM-2026-10-31.md. The previous dated REA and world-creation sections below are historical proof, not a claim that hosted ChatGPT execution now exists.
+
+**Real newly implemented:** src/forge-catalog-client.ts ForgeStudioCatalogClient.createCreature/creatureStatus and src/forge-mcp-tools.ts gated mgr_forge_creature_create/mgr_forge_creature_status, conditional on existing Forge configured, using the CURRENT resource audience, tools:execute for creation, tools:read for status and EXACT permitted tenant. No new domain brain, transport server or asset storage introduced. Forge handles actual CPU original mesh generation in sibling MGR-3D-FORGE/forge/creature_jobs.py and existing Studio API /api/creature-create /api/creature-status. Stable IDs and restart/replay recovery are Forge-owned.
+
+**Actual integration proof:** scripts/verify-forge-studio.py started REAL Forge Python HTTP process and called node test policy helpers with authenticated local Studio token: source search, same hashed world edit, **original 114,192-byte/1,748 triangle GLB** SHA b019e6617175a3d4ec3d30a9f72bc372fc6578c5beaf97565c80efc00b6a1b1c, replay same SHA, live GET of GLB hash verified; tokenless GET, wrong owner tenant and missing execute scope denied. Machine-safe receipt evidence/forge-creator/2026-10-31-native-creature-local-bridge.json. No GPU, hosted service, external model API or paid job. Actual GLB owner art/Blender rig for THIS sample remains unverified.
+
+**Tests:** npm run verify 68/68 passed with TS typecheck, existing plugin check and new test/forge-creature.test.ts, test/forge-creator-plugin.test.ts. A strict TypeScript exactOptionalPropertyTypes morph disagreement was found and repaired in existing ForgeCreatureInput rather than weakening global project settings.
+
+**ChatGPT Forge Creator plugin source:** integrations/forge-creator-plugin/{plugin.json,skills/mgr-forge-create/SKILL.md,README.md}. This first release is intentionally SKILLS ONLY: it guides ChatGPT to use existing authorized Forge connector or desktop workflow, but DOES NOT supply a remote MCP endpoint, OAuth secret, hosted GLB downloads, or a new backend. Saving a private plugin won't magically make owner's local Windows Forge reachable from iOS. This must be a follow-on deploy/verification step; do not publish fake localhost/mcp URL. Existing REA X-Ray remains optional for source audits, not a mandatory creation hop.
+
+**Studio front end:** sibling Forge viewer/template.html and viewer/runtime.js now contain Creator prompt/seed/variants, local job/status and hash-checked in-memory GLB download under existing Studio; actual Chrome click-through/render acceptance OPEN. Creation OS remains optional cross-factory coordinator; Tevin/ChatGPT/Forge Studio must share this same job lane. Next: protected hosted MGR API/MCP with OAuth/tenant scope + private artifact storage and signed/short-lived URLs; real ChatGPT plugin remote connection, real mobile user journey and preview/Blender/Godot acceptance.
+
 
 ## Forge master-program continuity reference — 2026-10-31
 

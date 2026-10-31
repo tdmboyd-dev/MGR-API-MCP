@@ -1,3 +1,12 @@
+## Latest 2026-10-31 Forge Creator work — one API/MCP router
+
+CREATOR-01 [VERIFIED LOCAL] Conditional mgr_forge_creature_create/status added to the current API/MCP server and existing ForgeStudioCatalogClient; stable job IDs, tenant/audience and tools:execute/tools:read. Real Python Studio → Node client → hashed 114192-byte original GLB, token-only GET hash proof, duplicates reuse result. Tests 68/68 API and 600/3-skipped Forge.
+CREATOR-02 [SOURCE IMPLEMENTED, ACCOUNT PLUGIN/REMOTE CONNECTION OPEN] Private Forge Creator skills-only plugin source in integrations/forge-creator-plugin/, no invented hosted MCP endpoint. Account save and actual hosted OAuth mobile run remain separate acceptance.
+CREATOR-03 [PARTIAL, UI QA OPEN] Current Forge Creation Chat panel code includes original creature request/status/verified download, but actual Chrome UI click/render was not independently proven in this environment.
+CREATOR-04 [OPEN] Extend same tools to preview/revisions/rigging/fully accepted 3D model and private authenticated artifact delivery. No separately invented backend, REA, vault or mandatory Creation OS.
+
+Legacy queue numbers under dated sections are historical; this prefix avoids confusion with duplicate historic 47–53 assignments. HANDOFF.md is the only current resume authority.
+
 ## 2026-10-31 — Direct standalone Forge creation; optional Creation OS
 
 47. [x] Forge Studio now owns durable world create/status endpoints, and this existing API/MCP exposes `mgr_forge_world_create` / `mgr_forge_world_status` under existing `tools:execute` (write) / `tools:read`, bound actor/tenant/audience and stable request ID. Actual local Python Forge Studio HTTP to Node policy client produced a hashed 13,964-byte GLB; safe duplicate replay, wrong tenant and missing scope denied. 60 API-MCP tests pass. The first harness building ID error was corrected to `mgr-created-0001`.

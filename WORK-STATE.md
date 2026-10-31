@@ -1,3 +1,5 @@
+**Latest current 2026-10-31:** MGR API/MCP original creature creation + local direct Forge Studio HTTP proof now passes 68/68 tests; original GLB 114192 bytes SHA b019e661..., replay and tenant/scope/token controls verified. Forge Creator plugin source is skills-only; hosted ChatGPT/mobile remains OPEN. The ONLY canonical API resume authority is HANDOFF.md; lower dated facts are historical.
+
 **Latest 2026-10-31 REA X-Ray checkpoint:** private plugin v0.1.0 saved; local REA MCP static ZIP inspection on Windows PASS; sibling Forge independently matched 302/302 child files, not redistribution rights. Current API/MCP regression 62/62 PASS. **HANDOFF.md is the sole resume authority**; October 30 results below are historical.
 
 **Current authority 2026-10-31:** `HANDOFF.md`. This document keeps prior recovery chronology; do not use its 2026-10-05 current-state claims as today's truth.

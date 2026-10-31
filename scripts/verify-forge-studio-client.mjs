@@ -1,7 +1,8 @@
 // Real local process boundary: Node MCP policy helpers call Python Forge Studio HTTP.
 import assert from "node:assert/strict";
+import {createHash} from "node:crypto";
 import {ForgeStudioCatalogClient} from "../src/forge-catalog-client.ts";
-import {searchForgeMcp,createForgeWorldMcp,statusForgeWorldMcp} from "../src/forge-mcp-tools.ts";
+import {searchForgeMcp,createForgeWorldMcp,statusForgeWorldMcp,createForgeCreatureMcp,statusForgeCreatureMcp} from "../src/forge-mcp-tools.ts";
 
 const baseUrl=process.env.MGR_FORGE_STUDIO_URL;
 const token=process.env.MGR_FORGE_STUDIO_TOKEN;
@@ -40,9 +41,46 @@ const denied=await createForgeWorldMcp({...options,allowedTenantId:"wrong-tenant
 assert.equal(denied.state,"DENY");
 const missingWrite=await createForgeWorldMcp({...options,auth:{...options.auth,scopes:["tools:read"]}},input);
 assert.equal(missingWrite.state,"DENY");
+// Real new creation bridge: input -> hashed GLB on Forge disk -> same SHA on token-gated byte read.
+const creatureInput={requestId:"mcp-owner-creature-smoke-0001",
+  prompt:"Invent an armored winged fantasy creature with a long tail",
+  seed:41,variants:3,morph:{height:1.12,width:1.1}};
+const creature=await createForgeCreatureMcp(options,creatureInput);
+assert.equal(creature.accepted,true,JSON.stringify(creature));
+assert.equal(creature.status,"ORIGINAL_CREATURE_MATERIALIZED_LOCAL");
+assert.equal(creature.replayed,false);
+assert.equal(creature.neuralInference,false);
+assert.equal(creature.ownerArtAccepted,false);
+assert.ok(Number(creature.artifactBytes)>5000);
+const creatureAgain=await createForgeCreatureMcp(options,creatureInput);
+assert.equal(creatureAgain.accepted,true);
+assert.equal(creatureAgain.replayed,true);
+assert.equal(creatureAgain.artifactSha256,creature.artifactSha256);
+const creatureStatus=await statusForgeCreatureMcp(options,creatureInput.requestId);
+assert.equal(creatureStatus.accepted,true);
+assert.equal(creatureStatus.artifactSha256,creature.artifactSha256);
+const denyCreature=await createForgeCreatureMcp({...options,allowedTenantId:"wrong-tenant"},creatureInput);
+assert.equal(denyCreature.state,"DENY");
+const denyCreatureWrite=await createForgeCreatureMcp({...options,auth:{...options.auth,scopes:["tools:read"]}},creatureInput);
+assert.equal(denyCreatureWrite.state,"DENY");
+const glbPath=new URL(String(creature.localArtifactUrl),baseUrl);
+const tokenless=await fetch(glbPath,{redirect:"error"});
+assert.equal(tokenless.status,403);
+const secured=await fetch(glbPath,{
+  headers:{"X-MGR-Forge-Token":token},redirect:"error"});
+assert.equal(secured.status,200);
+const glb=Buffer.from(await secured.arrayBuffer());
+assert.equal(glb.toString("ascii",0,4),"glTF");
+assert.equal(glb.length,creature.artifactBytes);
+assert.equal(createHash("sha256").update(glb).digest("hex"),creature.artifactSha256);
 console.log(JSON.stringify({status:"PASS",scope:"actual Forge Studio process HTTP + authorized API/MCP policies",
   source_results:sources.count,model_cache_items:models.listings.length,
   real_world_sha256:first.artifactSha256,world_bytes:first.artifactBytes,
   duplicate_replay_same_digest:true,unauthorized_tenant_denied:true,
-  missing_write_scope_denied:true,hosted_tevin_verified:false,
+  missing_write_scope_denied:true,original_creature_sha256:creature.artifactSha256,
+  original_creature_bytes:creature.artifactBytes,original_creature_triangles:creature.triangles,
+  creature_replay_identical:true,creature_artifact_digest_retrieved_and_verified:true,
+  creature_tokenless_download_denied:true,creature_wrong_tenant_denied:true,
+  creature_missing_execute_scope_denied:true,hosted_chatgpt_verified:false,
+  hosted_tevin_verified:false,
   remote_mcp_protocol_verified:false}));

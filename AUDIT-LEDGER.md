@@ -9,6 +9,15 @@
 
 # Audit ledger
 
+## October 31, 2026 — Real original 3D Creator direct MCP
+
+- Verified existing ForgeStudioCatalogClient and registerForgeMcpTools already own authorization/transport; added bounded optional createCreature/status and tools under existing scopes tools:execute/read, no new router or independent geometry backend.
+- Reproduced and fixed TypeScript exactOptionalPropertyTypes morph optional-field mismatch with correct field typing. No global compiler safety downgrade.
+- Actual same-local-process integration: src client → Python Forge Studio HTTP → native CPU model GLB; independently token-authenticated GET hash compared with receipt. 114192 bytes, 1748 triangles, SHA b019e661..., replay identical. Cross-tenant, absent execute scope and tokenless download refused. Full evidence evidence/forge-creator/2026-10-31-native-creature-local-bridge.json.
+- API npm run verify 68/68 PASS including five new creature authorization/receipt checks and skills-only Forge Creator package source tests. No hosted remote ChatGPT/Tevin, no quality acceptance, no model spend; full browser click open.
+- Reuse MGR API/MCP for future ChatGPT Forge Creator plugin; its 0.1.0 SKILL-only source in integrations/forge-creator-plugin is not a connected remote tool. Missing hosted OAuth/expiring file URLs/generation request authorizations remain queue items CREATOR-02..04.
+
+
 ## October 31, 2026 — REA 6.8.0 local X-Ray plugin and Forge receipt bridge
 
 - Verified official `morluto/rea` source, MIT plus third-party notices, isolated npm 6.8.0 release and SHA-256-verified portable Node runtime (avoided global Node drift). REA static ZIP `inspect-artifact` command actually ran with full Evidence required; no untrusted package executable was launched.
