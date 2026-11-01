@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "permanentOwner": true,
+  "normalLauncherRestarts": 2,
+  "consistentBackups": 3,
+  "oldArtifactsPreserved": 11,
+  "oldEffectsPreserved": 38,
+  "nativeArtifacts": 3,
+  "originalApprovalsAndEffects": 3,
+  "newSignmeImmutableVersions": 2,
+  "newCreationArtifacts": 1,
+  "literalDotAndDoubleDotRequests": true,
+  "colonUnderscoreRequest": true,
+  "replayRedispatches": 0,
+  "duplicateNativeVersions": 0,
+  "newInferenceCalls": 0,
+  "selectedDefaultModelChoicesAndPrivateConfigurationPreserved": true,
+  "customerLoginCreated": false,
+  "signingSendingPaymentsOrProviderCalls": false,
+  "browserAccepted": false,
+  "productionAccepted": false,
+  "privateValuesPrinted": false
+}

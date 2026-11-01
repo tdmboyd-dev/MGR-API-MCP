@@ -1,0 +1,61 @@
+{
+  "repositories": [
+    {
+      "repository": "MGR-ONE",
+      "gitCommit": "95673daaf2950669f6363820255c69c311217105"
+    },
+    {
+      "repository": "MGR-API-MCP",
+      "gitCommit": "d95fca4248bf4335c3f75f122626463e10ce2917"
+    },
+    {
+      "repository": "MGR-CREATE-Os",
+      "gitCommit": "cffda67c3bc7c516cf5065d469c8829f45dc07aa"
+    },
+    {
+      "repository": "MGR-SIGN-ME",
+      "gitCommit": "c347d99c38a388b4c6c5d1e22f18b7f8ed70fa14"
+    }
+  ],
+  "qualifiedGitBlobs": [
+    {
+      "repository": "MGR-ONE",
+      "path": "scripts/qualification/owner-signme-http.test.mjs",
+      "gitBlob": "aa787028d53c9a3e214264c43c05817dbd76d49f"
+    },
+    {
+      "repository": "MGR-API-MCP",
+      "path": "src/department-gateway.ts",
+      "gitBlob": "7525317dd8addadd914dda361665b997f20c8f19"
+    },
+    {
+      "repository": "MGR-API-MCP",
+      "path": "test/native-identifier-recovery.test.ts",
+      "gitBlob": "031296c28d038653c548afce26e82dded174f88e"
+    },
+    {
+      "repository": "MGR-CREATE-Os",
+      "path": "src/api/local-service.ts",
+      "gitBlob": "8f0465d8016c9d8e5ee7f4f6b0dc7ee67632613e"
+    },
+    {
+      "repository": "MGR-CREATE-Os",
+      "path": "test/native-service-identifiers.test.ts",
+      "gitBlob": "ea583d33d8a449a5e31be6f8be8e70212813340d"
+    },
+    {
+      "repository": "MGR-SIGN-ME",
+      "path": "scripts/domain-service.mjs",
+      "gitBlob": "0a699cc3ce43b91ef6e972ef60b0d12439782a3d"
+    },
+    {
+      "repository": "MGR-SIGN-ME",
+      "path": "test/service-identifiers.test.mjs",
+      "gitBlob": "9d1c5d0651fc1362a754a9a86c483a303e296fce"
+    }
+  ],
+  "canonicalInputBlobsMatchPublishedSource": true,
+  "lineEndingNote": "Original qualified working-byte SHA256 values are separate from Git-normalized blobs; canonical checkout may use CRLF.",
+  "nonForcePushFetchedAndMatched": true,
+  "mainPromoted": false
+}

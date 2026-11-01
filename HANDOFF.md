@@ -1,10 +1,17 @@
 ## Durable Creation runtime and native adapter — November1,2026
 
+## Permanent owner acceptance — November1,2026
+
+Exact published repair sources are active through the normal owner launcher. Three consistent SQLite backups passed quick_check. Actual protected owner API completed SignMe request `.`, Creation request `..`, and the colon/underscore SignMe revision: three original approvals/effects and exact native artifacts, two new immutable SignMe versions and one Creation artifact. All eleven previous artifacts and thirty-eight previous execution records remained intact. Two normal stop/start cycles verified the old process identity, its actual exit and a different live owner process; reopen/replay preserved exact hashes and produced zero additional native effect/version/job. Model choices, selected/default model and private configuration were preserved. No new inference, signing, sending, customer login or paid provider call occurred.
+
+See permanent-owner-result.json, normal-process-reopen.json and runtime-source-publication.json. Private rows/configuration/backups remain ignored. This supersedes pending permanent activation for this bounded identifier repair. Browser/Prisma/UI, full source/quality/cost, provider/device/signature/delivery/hosted/production and backup-restoration acceptance remain separate and unfinished. The thirteen-repository goal remains active; original IDs/counts unchanged.
+
+
 ## Native identifier compatibility repair — November1,2026
 
 Accepted native IDs containing colon/underscore/dot now reconcile exactly; literal dot segments use authenticated body lookup/control rather than normalized URL paths. Legacy SignMe document IDs remain readable/revisable; unsafe encodings/versions and foreign owners are denied. Existing shared edge probes native compatibility before affected writes and rechecks current owner authority after the probe. Original ledgers/IDs/approvals are retained. Creation repeated cancellation no longer appends a duplicate cancellation event.
 
-Executed scopes: native SignMe35/35, Creation265/265, shared edge324/324, affected ONE27/27; zero skips. Seven changed source/test hashes unchanged. See [exact report](evidence/native-identifier-recovery-2026-11-01/REPORT.md). This resolves the prior pending valid-ID reproduction instruction. Exact-source permanent activation remains pending, separate from fixture acceptance. Full original product/UI/provider/signing/production/source/cost scope remains active/Unassessed.
+Executed scopes: native SignMe35/35, Creation265/265, shared edge324/324, affected ONE27/27; zero skips. Seven changed source/test hashes unchanged. See [exact report](evidence/native-identifier-recovery-2026-11-01/REPORT.md). This resolves the prior pending valid-ID reproduction instruction. Exact-source permanent owner activation/save/restart/replay passed; see the acceptance immediately below. Full original product/UI/provider/signing/production/source/cost scope remains active/Unassessed.
 
 
 ## Permanent SignMe owner acceptance — November1,2026
