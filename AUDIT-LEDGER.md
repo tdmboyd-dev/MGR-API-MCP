@@ -1,3 +1,7 @@
+## 2026-10-31 Original shared Forge MCP add-on wave
+
+- Actual src/mcp-server.ts tools:write description mismatch fixed to existing tools:execute. Added biomorphic world/Human Forge jobs and SHA-checked exact real GLB delivery through the existing MCP adapter, no second storage or control plane. Actual local official MCP SDK created/replayed two 3D sources and retrieved bytes, wrong tenant and digest failed closed; source/test/evidence in this repo. Human Blender MCP acceptance and deployed endpoint separately tracked. No licensed CUDA neural weights, cost or hosted iOS verified.
+
 ## October 31, 2026 — Repo audit reference repair
 
 - Found one broken archive-local link in docs/history/FORGE-SOURCE-CHECKPOINT-2026-10-30.md: WORK-STATE.md resolves two directories above, not inside docs/history. Repaired to ../../WORK-STATE.md and reran python scripts/verify_repository.py: 184 checks PASS, 0 errors. Evidence evidence/audits/2026-10-31-reference-link-repair.json. Historical content otherwise preserved.

@@ -1,5 +1,18 @@
 # Resume MGR-API-MCP
 
+## CURRENT DIRECT MGR FORGE CREATION + VERIFIED GLB MCP EDGE — 2026-10-31
+
+**One original shared API/MCP repo, not a new local project.** It owns the real HTTP, OAuth/JWKS, verified audience and scope binding. Forge owns geometry, Blender jobs, model assets and job state. The local SDK tests use a FIXTURE token verifier to test the real existing handler and do NOT prove a deployed hosted session.
+
+**Source paths built in this wave:** src/mcp-server.ts fixed misleading old tools:write status to actual tools:execute. src/forge-catalog-client.ts gained six-field MorphRig contract, createBiome/biomeStatus, startHumanLipSync/humanLipSyncStatus and readArtifact. src/forge-mcp-tools.ts registers governed mgr_forge_biome_create/status, mgr_forge_human_lipsync_start/status and mgr_forge_artifact_read with job ID + exact SHA and optional real GLB resource (800KB maximum). tools:read for read-only, tools:execute for side effects, no public file URL, no new backend or duplicate Forge Vault. Negative proof includes wrong tenant, missing execute scope, forged receipt/wrong digest.
+
+**Actual source/test/evidence:** test/forge-biome.test.ts, test/forge-human-lipsync.test.ts, test/forge-artifact-transfer.test.ts; official SDK scripts/verify-forge-native-mcp-protocol.mjs and scripts/verify-forge-creator-mcp.py; evidence/forge-creator/2026-10-31-native-mcp-protocol-artifact-transfer.json and evidence/forge-creator/2026-10-31-native-mcp-protocol-human.json (real Human MCP Blender + GLB receipt PASSED, SHA verified). Real Python Forge Studio generated distinct creature+biome GLBs with SHA-verified embedded binary through MCP. Run npm run verify, python scripts/verify-forge-creator-mcp.py from sibling checkout, and actual hosted OAuth test only after real configured deployment exists.
+
+**OPEN / blockers:** Real hosted OAuth/JWKS protected URL + connected Forge worker, secure artifact/object storage with expiring download URLs and owner-controlled secrets, actual Tevin and ChatGPT remote consumer/phone acceptance, 14–24GB CUDA inference/cloud model with clear license and cost. Current private ChatGPT Forge Creator plugin remains skills-only source and cannot automatically read owner Windows model files. The Render blueprint in this repo is a deployment plan, NOT live acceptance. Every new model requires code/weight/dataset rights and Blender/Godot materialization proof.
+
+**Resume:** THIS HANDOFF.md, docs/API-MCP-ENGINEERING-HANDBOOK.md, AUDIT-LEDGER.md, BUILD-QUEUE.md, source/test/evidence, sibling MGR-3D-FORGE/docs/HANDOFF.md. All new work must update the ONE source of truth and push/test same-commit.
+
+
 ## CURRENT FULL SOURCE-BASED API/MCP HANDBOOK — 2026-10-31
 
 **Additional integrity fix:** docs/history/FORGE-SOURCE-CHECKPOINT-2026-10-30.md had a broken relative WORK-STATE.md link; corrected to ../../WORK-STATE.md and preserved the dated record. python scripts/verify_repository.py now **184 checks PASS, 0 failures**. Safe proof: evidence/audits/2026-10-31-reference-link-repair.json. This is repository integrity, not hosted service certification.

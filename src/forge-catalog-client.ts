@@ -1,4 +1,5 @@
-/** Bounded authenticated adapter to Forge Studio's catalog and durable world jobs. */
+/** Bounded authenticated adapter to Forge Studio catalog, durable creation and files. */
+import {createHash} from "node:crypto";
 export interface ForgeCatalogSearch {
   mode:"sources"|"models";
   query:string;
@@ -18,7 +19,35 @@ export interface ForgeCreatureInput {
   prompt:string;
   seed:number;
   variants:number;
-  morph?:{length?:number|undefined;height?:number|undefined;width?:number|undefined;twist_degrees?:number|undefined};
+  morph?:{length?:number|undefined;height?:number|undefined;width?:number|undefined;twist_degrees?:number|undefined;bend_degrees?:number|undefined;taper?:number|undefined};
+}
+export interface ForgeBiomeInput {
+  requestId:string;
+  biome:"forest"|"desert"|"tundra"|"volcanic"|"alien";
+  seed:number;
+  resolution:number;
+}
+export interface ForgeArtifactRequest {
+  jobId:string;
+  kind:"creature"|"biome"|"world"|"human";
+  expectedSha256:string;
+}
+export interface ForgeArtifactProof {
+  blobBase64:string;
+  sha256:string;
+  bytes:number;
+  mimeType:"model/gltf-binary";
+}
+export interface ForgeHumanLipSyncInput{
+ requestId:string;
+ fps:number;
+ timings:{
+  schema:"mgr.forge.phoneme-timeline.v1";
+  actor_id:string;
+  language:"en-US";
+  duration_ms:number;
+  phonemes:Array<{phoneme:string;start_ms:number;end_ms:number}>;
+ };
 }
 export interface ForgeCatalogClient {
   search(input:ForgeCatalogSearch):Promise<Record<string,unknown>>;
@@ -26,6 +55,11 @@ export interface ForgeCatalogClient {
   worldStatus?(requestId:string):Promise<Record<string,unknown>>;
   createCreature?(input:ForgeCreatureInput):Promise<Record<string,unknown>>;
   creatureStatus?(requestId:string):Promise<Record<string,unknown>>;
+  createBiome?(input:ForgeBiomeInput):Promise<Record<string,unknown>>;
+  biomeStatus?(requestId:string):Promise<Record<string,unknown>>;
+  readArtifact?(input:ForgeArtifactRequest):Promise<ForgeArtifactProof>;
+  startHumanLipSync?(input:ForgeHumanLipSyncInput):Promise<Record<string,unknown>>;
+  humanLipSyncStatus?(requestId:string):Promise<Record<string,unknown>>;
 }
 export interface ForgeStudioCatalogOptions {
   baseUrl:string;
@@ -98,7 +132,7 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
       throw new Error("Forge creature input violates bounded request contract");
     }
     const morph=input.morph ?? {};
-    if(Object.keys(morph).some(k=>!["length","height","width","twist_degrees"].includes(k))){
+    if(Object.keys(morph).some(k=>!["length","height","width","twist_degrees","bend_degrees","taper"].includes(k))){
       throw new Error("Unsupported creature morph field");
     }
     return this.post("/api/creature-create",{
@@ -111,6 +145,87 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
     if(!/^[A-Za-z0-9_-]{12,100}$/.test(requestId))
       throw new Error("Forge creature request ID invalid");
     return this.post("/api/creature-status",{request_id:requestId});
+  }
+
+  async createBiome(input:ForgeBiomeInput):Promise<Record<string,unknown>>{
+    if(!/^[A-Za-z0-9_-]{12,100}$/.test(input.requestId) ||
+       !["forest","desert","tundra","volcanic","alien"].includes(input.biome) ||
+       !Number.isInteger(input.seed) || input.seed<0 || input.seed>4294967295 ||
+       !Number.isInteger(input.resolution) || input.resolution<10 || input.resolution>64)
+      throw new Error("Forge biome parameters invalid");
+    return this.post("/api/biome-create",{request_id:input.requestId,
+                      biome:input.biome,seed:input.seed,resolution:input.resolution});
+  }
+
+  async biomeStatus(requestId:string):Promise<Record<string,unknown>>{
+    if(!/^[A-Za-z0-9_-]{12,100}$/.test(requestId))throw new Error("Forge biome ID invalid");
+    return this.post("/api/biome-status",{request_id:requestId});
+  }
+
+  async startHumanLipSync(input:ForgeHumanLipSyncInput):Promise<Record<string,unknown>>{
+    if(!/^[A-Za-z0-9_-]{12,100}$/.test(input.requestId) ||
+       !Number.isInteger(input.fps) || input.fps<12 || input.fps>60 ||
+       !input.timings || input.timings.schema!=="mgr.forge.phoneme-timeline.v1" ||
+       input.timings.language!=="en-US" || typeof input.timings.actor_id!=="string" ||
+       !Number.isInteger(input.timings.duration_ms) ||
+       input.timings.duration_ms<100 || input.timings.duration_ms>120000 ||
+       !Array.isArray(input.timings.phonemes) || input.timings.phonemes.length<1 ||
+       input.timings.phonemes.length>1000)throw new Error("Invalid Human Forge timing or actor");
+    return this.post("/api/human-lipsync-start",{
+      request_id:input.requestId,timings:input.timings,fps:input.fps
+    });
+  }
+
+  async humanLipSyncStatus(requestId:string):Promise<Record<string,unknown>>{
+    if(!/^[A-Za-z0-9_-]{12,100}$/.test(requestId))
+      throw new Error("Invalid Human Forge request ID");
+    return this.post("/api/human-lipsync-status",{request_id:requestId});
+  }
+
+  async readArtifact(input:ForgeArtifactRequest):Promise<ForgeArtifactProof>{
+    if(!/^[a-f0-9]{24}$/.test(input.jobId) ||
+       !/^[a-f0-9]{64}$/.test(input.expectedSha256) ||
+       !["creature","biome","world","human"].includes(input.kind)){
+      throw new Error("Invalid Forge artifact identity or expected digest");
+    }
+    const route={
+      creature:"creature/creature.glb",
+      biome:"biome/biome.glb",
+      world:"edited/world.glb",
+      human:"human/facial-animation/human-lipsync.glb"
+    }[input.kind];
+    const path=new URL("/files/"+input.jobId+"/"+route,this.baseUrl);
+    const response=await this.transport(path,{
+      method:"GET",headers:{"X-MGR-Forge-Token":this.token},
+      signal:AbortSignal.timeout(this.timeoutMs),redirect:"error"
+    });
+    if(!response.ok)throw new Error("Forge artifact read returned HTTP "+response.status);
+    const claimed=response.headers.get("content-length");
+    if(claimed!==null && (!/^\d+$/.test(claimed) || Number(claimed)>800_000))
+      throw new Error("Forge artifact exceeds bounded MCP transfer size");
+    if(!response.body)throw new Error("Forge artifact response body unavailable");
+    const chunks:Uint8Array[]=[];
+    const reader=response.body.getReader();
+    let size=0;
+    try{
+      for(;;){
+        const {value,done}=await reader.read();
+        if(done)break;
+        size+=value.byteLength;
+        if(size>800_000)throw new Error("Forge artifact exceeds bounded MCP transfer size");
+        chunks.push(value);
+      }
+    }finally{
+      reader.releaseLock();
+    }
+    if(size<28)throw new Error("Empty or corrupt Forge artifact");
+    const binary=Buffer.concat(chunks.map(c=>Buffer.from(c)));
+    if(binary.toString("ascii",0,4)!=="glTF")throw new Error("Forge artifact is not real GLB");
+    const sha=createHash("sha256").update(binary).digest("hex");
+    if(sha!==input.expectedSha256)
+      throw new Error("Forge artifact SHA-256 changed from job receipt; reconciliation required");
+    return {blobBase64:binary.toString("base64"),sha256:sha,bytes:size,
+            mimeType:"model/gltf-binary"};
   }
 
   private async post(route:string,request:Record<string,unknown>):Promise<Record<string,unknown>>{

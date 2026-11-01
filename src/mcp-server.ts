@@ -32,7 +32,7 @@ export function createMgrMcpServer(options:{legacy?:LegacyMcpToolOptions;creatio
           brain: "model-independent controller subsystem",
           creationOs: "shared creation/control-plane engine",
           createLoco: "visual/web reconstruction product using Creation OS",
-          sideEffects: "optional Forge world creation requires tools:write and tenant binding; no unrestricted side effects",
+          sideEffects: "Forge world/creature execution uses existing tools:execute with tenant binding; tools:read is discovery/status only",
         }),
       }],
     }),

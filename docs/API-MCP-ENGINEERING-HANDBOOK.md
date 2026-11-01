@@ -51,3 +51,7 @@ Read `src/http-server.ts`, `src/mcp-http.ts`, `src/jwt-verifier.ts`, `.env.examp
 When changing an app connector: inspect its existing app contract and request ID, reuse current auth/approval/tenant data and service adapter; add deny/success/replay/timeout tests; prove real remote business/creative side effects; update this repo's HANDOFF.md, BUILD-QUEUE.md and AUDIT-LEDGER.md in the same commit. Do not claim local tests equal remote adoption. No duplication of Forge Vault binaries or REA brain in the API/MCP repo.
 
 Independent archive/route audit baseline: `evidence/audits/2026-10-31-baseline-static-inventory.json`. Forge-specific how-to: sibling `MGR-3D-FORGE/docs/HOW-TO-INTEGRATION-VERIFY-RECOVER.md`. Creation OS's boundary: sibling `MGR-CREATE-Os/HANDOFF.md`.
+
+## New shared Forge model and artifact read tools
+
+The original MGR-API-MCP Forge adapter now registers mgr_forge_biome_create/status, mgr_forge_human_lipsync_start/status and mgr_forge_artifact_read under existing tools:execute or tools:read, tenant/audience scopes. The last tool reads an allowlisted GLB path (max 800KB), independently matches a job-receipt SHA and can return it as an embedded MCP model/gltf-binary resource. src/mcp-server.ts erroneous tools:write label fixed. Repro: scripts/verify-forge-native-mcp-protocol.mjs, python scripts/verify-forge-creator-mcp.py. This is a local client/handler fixture proof; no hosted OAuth/provider or private Windows-to-cloud tunnel has been accepted.

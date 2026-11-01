@@ -1,0 +1,28 @@
+{
+  "actual_transport": "localhost Node HTTP -> authorized MGR MCP handler -> Python Forge Studio",
+  "biome_bytes": 32860,
+  "biome_sha256": "1b0b1f6b09155e07d8cd9a25ac62a5c316e85d5ac3c252870024458a37e8110e",
+  "creature_bytes": 112764,
+  "creature_sha256": "aa584234dc1fed5453e47c68c7154b0b86ebbc333023cb197097cf3db503f948",
+  "cross_tenant_execution_denied": true,
+  "hosted_chatgpt_verified": false,
+  "hosted_tevin_verified": false,
+  "no_neural_model": true,
+  "no_paid_gpu": true,
+  "protocol_client": "official @modelcontextprotocol/client StreamableHTTPClientTransport",
+  "read_only_execution_denied": true,
+  "remote_worker_reachable_over_internet": false,
+  "schema": "mgr.mcp.forge.protocol-acceptance.v1",
+  "stable_replay": true,
+  "status": "MGR_FULL_LOCAL_MCP_PROTOCOL_VERIFIED",
+  "token_verifier": "fixture; not deployed OIDC/JWKS",
+  "tools_available": [
+    "mgr_forge_asset_discover",
+    "mgr_forge_creature_create",
+    "mgr_forge_creature_status",
+    "mgr_forge_biome_create",
+    "mgr_forge_biome_status",
+    "mgr_forge_world_create",
+    "mgr_forge_world_status"
+  ]
+}

@@ -1,3 +1,11 @@
+## 2026-10-31 Native Forge Creator MCP follow-on
+
+CREATOR-05 [LOCAL VERIFIED]: original Forge 3D biome, Human Blender job and authorized model binary read reuse src/forge-catalog-client.ts and src/forge-mcp-tools.ts. No duplicate backend; scoped real client test passes.
+
+CREATOR-06 [OPEN HOSTED]: deployed HTTPS OAuth/JWKS MGR API/MCP + trusted remotely reachable Forge worker + tenant-scoped private artifact delivery; actual ChatGPT/Tevin mobile test required.
+
+CREATOR-07 [OPEN NEURAL]: CUDA serverless runner, legally inspected checkpoints, actual high-detail mesh/rig and realistic timed speech output, dollar/latency budget and independent GLB/Blender acceptance.
+
 ## Latest 2026-10-31 Forge Creator work — one API/MCP router
 
 CREATOR-01 [VERIFIED LOCAL] Conditional mgr_forge_creature_create/status added to the current API/MCP server and existing ForgeStudioCatalogClient; stable job IDs, tenant/audience and tools:execute/tools:read. Real Python Studio → Node client → hashed 114192-byte original GLB, token-only GET hash proof, duplicates reuse result. Tests 68/68 API and 600/3-skipped Forge.

@@ -2,7 +2,8 @@
 import type {McpServer} from "@modelcontextprotocol/server";
 import * as z from "zod/v4";
 import {authorizeTool, type AuthContext} from "./authz.js";
-import type {ForgeCatalogClient,ForgeCatalogSearch,ForgeWorldEdits,ForgeCreatureInput} from "./forge-catalog-client.js";
+import type {ForgeCatalogClient,ForgeCatalogSearch,ForgeWorldEdits,ForgeCreatureInput,ForgeBiomeInput,ForgeArtifactRequest,ForgeHumanLipSyncInput} from "./forge-catalog-client.js";
+import {createHash} from "node:crypto";
 
 export interface ForgeMcpToolOptions {
   auth:AuthContext;
@@ -144,6 +145,140 @@ export async function statusForgeCreatureMcp(options:ForgeMcpToolOptions,request
   }
 }
 
+export async function createForgeBiomeMcp(options:ForgeMcpToolOptions,input:ForgeBiomeInput):Promise<Record<string,unknown>>{
+  const reason=denied(options,"tools:execute");
+  if(reason)return {accepted:false,state:"DENY",reason};
+  if(!options.forge.createBiome)return {accepted:false,state:"EXECUTOR_UNAVAILABLE"};
+  try{
+    const result=await options.forge.createBiome(input);
+    if(result.status==="NEEDS_RECONCILIATION")
+      return {accepted:false,state:"RECONCILIATION_REQUIRED",requestId:input.requestId};
+    if(result.status!=="MATERIALIZED" ||
+       typeof result.biome_sha256!=="string" || !/^[a-f0-9]{64}$/.test(result.biome_sha256) ||
+       typeof result.job_id!=="string" || !/^[a-f0-9]{24}$/.test(result.job_id) ||
+       typeof result.biome_bytes!=="number" || !Number.isSafeInteger(result.biome_bytes) ||
+       result.biome_bytes<100 || result.external_model_used!==false ||
+       result.editor_world_unchanged!==true || result.added_as_layer!==true)
+      return {accepted:false,state:"UNVERIFIED_BIOME_RECEIPT"};
+    return {accepted:true,status:"ORIGINAL_BIOME_LAYER_MATERIALIZED_LOCAL",
+            jobId:result.job_id,requestId:input.requestId,
+            artifactSha256:result.biome_sha256,artifactBytes:result.biome_bytes,
+            sourceWorldSha256:result.source_world_sha256,
+            glbPath:result.glb_url,manifestPath:result.manifest_url,
+            triangles:result.triangles,biome:result.biome,
+            replayed:result.replayed===true,standaloneWorldMerged:false,
+            externalModelsUsed:false,hostedConsumerVerified:false,
+            disclaimer:"Original optional terrain GLB ring; not merged realtime terrain, Blender or Godot accepted"};
+  }catch(error){
+    return {accepted:false,state:"FORGE_UNAVAILABLE_OR_UNKNOWN",requestId:input.requestId,
+            reconciliationRequired:true,
+            reason:error instanceof Error?error.message:"Forge biome job failed"};
+  }
+}
+
+export async function statusForgeBiomeMcp(options:ForgeMcpToolOptions,requestId:string):Promise<Record<string,unknown>>{
+  const reason=denied(options,"tools:read");
+  if(reason)return {accepted:false,state:"DENY",reason};
+  if(!options.forge.biomeStatus)return {accepted:false,state:"EXECUTOR_UNAVAILABLE"};
+  try{
+    const result=await options.forge.biomeStatus(requestId);
+    return {accepted:result.status==="MATERIALIZED",status:result.status,
+            requestId,jobId:result.job_id,artifactSha256:result.biome_sha256,
+            reconciliationRequired:result.status==="NEEDS_RECONCILIATION"};
+  }catch(error){
+    return {accepted:false,state:"FORGE_UNAVAILABLE_OR_UNKNOWN",requestId,
+            reconciliationRequired:true,reason:error instanceof Error?error.message:"Forge biome status failed"};
+  }
+}
+
+export async function readForgeArtifactMcp(options:ForgeMcpToolOptions,input:ForgeArtifactRequest):Promise<Record<string,unknown>>{
+  const reason=denied(options,"tools:read");
+  if(reason)return {accepted:false,state:"DENY",reason};
+  if(!options.forge.readArtifact)return {accepted:false,state:"EXECUTOR_UNAVAILABLE"};
+  if(!/^[a-f0-9]{24}$/.test(input.jobId) ||
+     !/^[a-f0-9]{64}$/.test(input.expectedSha256) ||
+     !["creature","biome","world","human"].includes(input.kind))
+    return {accepted:false,state:"INVALID_ARTIFACT_IDENTITY"};
+  try{
+    const result=await options.forge.readArtifact(input);
+    if(result.sha256!==input.expectedSha256 ||
+       result.mimeType!=="model/gltf-binary" || typeof result.blobBase64!=="string" ||
+       result.blobBase64.length>1_100_000 || typeof result.bytes!=="number" ||
+       result.bytes<28 || result.bytes>800_000)throw new Error("invalid Forge delivery proof");
+    const data=Buffer.from(result.blobBase64,"base64");
+    if(data.length!==result.bytes || data.toString("ascii",0,4)!=="glTF" ||
+       createHash("sha256").update(data).digest("hex")!==input.expectedSha256){
+      throw new Error("artifact content not independently authentic to receipt");
+    }
+    return {accepted:true,status:"VERIFIED_PRIVATE_GLTF_BLOB",
+            jobId:input.jobId,kind:input.kind,
+            sha256:result.sha256,bytes:result.bytes,
+            mimeType:result.mimeType,blobBase64:result.blobBase64,
+            remotePublicDownloadUrl:null,privateArtifactRightsGranted:false,
+            disclaimer:"Tenant-checked file bytes; no public URL, not owner-art accepted"};
+  }catch(error){
+    return {accepted:false,state:"ARTIFACT_UNAVAILABLE_OR_CHANGED",
+            reason:error instanceof Error?error.message:"Forge artifact read failed"};
+  }
+}
+
+export async function startForgeHumanLipSyncMcp(options:ForgeMcpToolOptions,input:ForgeHumanLipSyncInput):Promise<Record<string,unknown>>{
+  const reason=denied(options,"tools:execute");
+  if(reason)return {accepted:false,state:"DENY",reason};
+  if(!options.forge.startHumanLipSync)return {accepted:false,state:"EXECUTOR_UNAVAILABLE"};
+  try{
+    const result=await options.forge.startHumanLipSync(input);
+    if(result.status==="RUNNING" &&
+       typeof result.job_id==="string" && /^[a-f0-9]{24}$/.test(result.job_id)){
+      return {accepted:true,status:"BLENDER_HUMAN_JOB_RUNNING",jobId:result.job_id,
+              requestId:input.requestId,artifactReady:false,
+              neuralAudioAlignment:false,remotelyHosted:false};
+    }
+    if(result.status==="MATERIALIZED" && typeof result.job_id==="string" &&
+       /^[a-f0-9]{24}$/.test(result.job_id) &&
+       typeof result.human_sha256==="string" && /^[a-f0-9]{64}$/.test(result.human_sha256) &&
+       result.real_blender_verified===true && result.audio_alignment_performed===false){
+      return {accepted:true,status:"BLENDER_HUMAN_FACIAL_ARTIFACT_VERIFIED",
+              requestId:input.requestId,jobId:result.job_id,
+              sha256:result.human_sha256,bytes:result.human_bytes,
+              morphTargets:result.morph_targets,
+              artifactReady:true,ownerVisualApproved:false,
+              neuralAudioAlignment:false,remotelyHosted:false};
+    }
+    return {accepted:false,state:result.status==="NEEDS_RECONCILIATION"?
+            "RECONCILIATION_REQUIRED":"HUMAN_JOB_UNVERIFIED",
+            requestId:input.requestId,jobId:result.job_id};
+  }catch(error){
+    return {accepted:false,state:"FORGE_UNAVAILABLE_OR_UNKNOWN",
+            reconciliationRequired:true,requestId:input.requestId,
+            reason:error instanceof Error?error.message:"Human Forge start unavailable"};
+  }
+}
+
+export async function statusForgeHumanLipSyncMcp(options:ForgeMcpToolOptions,requestId:string):Promise<Record<string,unknown>>{
+  const reason=denied(options,"tools:read");
+  if(reason)return {accepted:false,state:"DENY",reason};
+  if(!options.forge.humanLipSyncStatus)return {accepted:false,state:"EXECUTOR_UNAVAILABLE"};
+  try{
+    const result=await options.forge.humanLipSyncStatus(requestId);
+    if(result.status==="RUNNING")
+      return {accepted:true,status:"BLENDER_HUMAN_JOB_RUNNING",requestId,jobId:result.job_id,artifactReady:false};
+    if(result.status==="MATERIALIZED" && typeof result.human_sha256==="string" &&
+       /^[a-f0-9]{64}$/.test(result.human_sha256) && result.real_blender_verified===true &&
+       result.audio_alignment_performed===false){
+      return {accepted:true,status:"BLENDER_HUMAN_FACIAL_ARTIFACT_VERIFIED",requestId,
+              jobId:result.job_id,sha256:result.human_sha256,bytes:result.human_bytes,
+              morphTargets:result.morph_targets,artifactReady:true,ownerVisualApproved:false,
+              audioAlignment:false};
+    }
+    return {accepted:false,state:result.status||"UNKNOWN",requestId,
+            reconciliationRequired:result.status==="NEEDS_RECONCILIATION"};
+  }catch(error){
+    return {accepted:false,state:"FORGE_UNAVAILABLE_OR_UNKNOWN",requestId,reconciliationRequired:true,
+            reason:error instanceof Error?error.message:"Human job status unavailable"};
+  }
+}
+
 const coordinates=z.tuple([z.number().finite(),z.number().finite(),z.number().finite()]);
 const worldEdits=z.object({
   schema:z.literal("mgr.forge.world-edit.v1"),
@@ -187,7 +322,9 @@ export function registerForgeMcpTools(server:McpServer,options:ForgeMcpToolOptio
           length:z.number().finite().min(0.5).max(2.2).optional(),
           height:z.number().finite().min(0.5).max(2.2).optional(),
           width:z.number().finite().min(0.5).max(2.2).optional(),
-          twist_degrees:z.number().finite().min(-45).max(45).optional()
+          twist_degrees:z.number().finite().min(-45).max(45).optional(),
+          bend_degrees:z.number().finite().min(-30).max(30).optional(),
+          taper:z.number().finite().min(0.65).max(1.45).optional()
         }).strict().optional()
       }).strict()
     },async input=>{
@@ -202,6 +339,87 @@ export function registerForgeMcpTools(server:McpServer,options:ForgeMcpToolOptio
       inputSchema:z.object({requestId:z.string().regex(/^[A-Za-z0-9_-]{12,100}$/)})
     },async input=>{
       const result=await statusForgeCreatureMcp(options,input.requestId);
+      return {content:[{type:"text",text:JSON.stringify(result)}],isError:result.accepted!==true};
+    });
+  }
+  if(options.forge.createBiome){
+    server.registerTool("mgr_forge_biome_create",{
+      description:"Build original city-preserving terrain as an optional Forge GLB layer; requires tools:execute, no rented neural GPU",
+      inputSchema:z.object({
+        requestId:z.string().regex(/^[A-Za-z0-9_-]{12,100}$/),
+        biome:z.enum(["forest","desert","tundra","volcanic","alien"]),
+        seed:z.number().int().min(0).max(4294967295).default(42),
+        resolution:z.number().int().min(10).max(64).default(28)
+      }).strict()
+    },async input=>{
+      const result=await createForgeBiomeMcp(options,input);
+      return {content:[{type:"text",text:JSON.stringify(result)}],isError:result.accepted!==true};
+    });
+  }
+  if(options.forge.biomeStatus){
+    server.registerTool("mgr_forge_biome_status",{
+      description:"Read an existing original Forge biome layer receipt through a tenant-bound source state",
+      inputSchema:z.object({requestId:z.string().regex(/^[A-Za-z0-9_-]{12,100}$/)})
+    },async input=>{
+      const result=await statusForgeBiomeMcp(options,input.requestId);
+      return {content:[{type:"text",text:JSON.stringify(result)}],isError:result.accepted!==true};
+    });
+  }
+  if(options.forge.readArtifact){
+    server.registerTool("mgr_forge_artifact_read",{
+      description:"Read exact tenant-authorized Forge GLB bytes by immutable job ID and SHA-256 via the existing MCP edge; optional embedded binary resource, not a public URL.",
+      inputSchema:z.object({
+        jobId:z.string().regex(/^[a-f0-9]{24}$/),
+        kind:z.enum(["creature","biome","world","human"]),
+        expectedSha256:z.string().regex(/^[a-f0-9]{64}$/),
+        includeData:z.boolean().default(false)
+      }).strict()
+    },async input=>{
+      const report=await readForgeArtifactMcp(options,{
+        jobId:input.jobId,kind:input.kind,expectedSha256:input.expectedSha256
+      });
+      if(report.accepted!==true){
+        return {content:[{type:"text" as const,text:JSON.stringify(report)}],isError:true};
+      }
+      const blob=String(report.blobBase64);
+      const summary={...report,blobBase64:undefined};
+      const content:Array<any>=[{type:"text",text:JSON.stringify(summary)}];
+      if(input.includeData)content.push({type:"resource",resource:{
+        uri:"mgr-forge://artifact/"+input.jobId+"/"+input.kind,
+        mimeType:"model/gltf-binary",blob
+      }});
+      return {content,isError:false};
+    });
+  }
+  if(options.forge.startHumanLipSync){
+    server.registerTool("mgr_forge_human_lipsync_start",{
+      description:"Start existing Human Forge Blender facial animation from user-supplied timed phonemes; creates generic model, no inferred raw audio or human likeness, requires tools:execute.",
+      inputSchema:z.object({
+        requestId:z.string().regex(/^[A-Za-z0-9_-]{12,100}$/),
+        fps:z.number().int().min(12).max(60).default(24),
+        timings:z.object({
+          schema:z.literal("mgr.forge.phoneme-timeline.v1"),
+          actor_id:z.string().min(1).max(80).regex(/^[A-Za-z0-9_-]+$/),
+          language:z.literal("en-US"),
+          duration_ms:z.number().int().min(100).max(120000),
+          phonemes:z.array(z.object({
+            phoneme:z.string().min(1).max(8),
+            start_ms:z.number().int().min(0),
+            end_ms:z.number().int().min(1)
+          }).strict()).min(1).max(1000)
+        }).strict()
+      }).strict()
+    },async input=>{
+      const result=await startForgeHumanLipSyncMcp(options,input);
+      return {content:[{type:"text",text:JSON.stringify(result)}],isError:result.accepted!==true};
+    });
+  }
+  if(options.forge.humanLipSyncStatus){
+    server.registerTool("mgr_forge_human_lipsync_status",{
+      description:"Read a protected Human Forge lip-sync Blender job status and its real GLB morph SHA without running another job.",
+      inputSchema:z.object({requestId:z.string().regex(/^[A-Za-z0-9_-]{12,100}$/)})
+    },async input=>{
+      const result=await statusForgeHumanLipSyncMcp(options,input.requestId);
       return {content:[{type:"text",text:JSON.stringify(result)}],isError:result.accepted!==true};
     });
   }

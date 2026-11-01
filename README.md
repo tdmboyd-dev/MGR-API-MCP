@@ -1,5 +1,10 @@
 # MGR-API-MCP
 
+## CURRENT FORGE SHARED MCP EXPANSION — 2026-10-31
+
+Real existing governed shared MCP server handles Forge original creature/world/biome/Human actions and exact SHA-verified GLB binary resources with current scopes tools:read or tools:execute. Local official MCP client and Python Forge verified; no duplicate API/MCP/Forge Vault. Read one HANDOFF.md for actual source/receipts and remaining real hosted OAuth/remote worker/Tevin. Previous 2026-10-30 read-only status below is historical.
+
+
 For the current operating contract, read [MGR Beast Pack](MGR-Beast-Pack/MGR-BEAST-PACK.md). The supplied pack is preserved unchanged; existing work queues and evidence remain the project source of truth.
 
 The research and build home for an owned, portable assistant informed by JARVIS and Jev. The intended system brings research, coding, memory, voice, tools and optional content/phone/device workflows into one task engine, with ChatGPT-facing MCP and replaceable model providers.
