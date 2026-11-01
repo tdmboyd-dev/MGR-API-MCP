@@ -1,0 +1,11 @@
+{
+  "findings": 1,
+  "recomputedPublicGitCommitFalsePositives": 1,
+  "unresolved": 0,
+  "rule": "generic-api-key",
+  "line": 7451,
+  "objectType": "commit",
+  "objectId": "a873526da9d63e21edf2ab5b26e59de22512ef36",
+  "publicationFileSha256": "a52b62f7cf0d2c82560df9b7d93538d3673e0f10fd152eb3921a8952503accea",
+  "verification": "Recomputed the source Git object ID with rev-parse and confirmed commit object type; this field is a public source revision, not a credential."
+}

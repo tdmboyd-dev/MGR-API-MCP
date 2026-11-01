@@ -1,0 +1,7455 @@
+{
+  "repositories": [
+    {
+      "repo": "ONE",
+      "head": "db50ff6928f0eb1729b81b4decb7878225c364f9",
+      "ref": "origin/integrate/department-tools-2026-10-28",
+      "files": [
+        {
+          "file": ".gitattributes",
+          "match": "byte-exact",
+          "remoteSha256": "48938dd11020833a5cd9cfaab00be1cc12f9f087f4aaac97aa6790ce6dca1a86"
+        },
+        {
+          "file": "HANDOFF.md",
+          "match": "byte-exact",
+          "remoteSha256": "17b201f70016ca060a6586fae2598a2b92f99f7d19ee5f12671877bc00f2ef38"
+        },
+        {
+          "file": "coordination/ECOSYSTEM-PRODUCTION-AUDIT.md",
+          "match": "byte-exact",
+          "remoteSha256": "b750bf8598c8853f15e1b66e4735e770256aace5a3b61f16e97e0128ace84ab9"
+        },
+        {
+          "file": "coordination/ECOSYSTEM-REUSE-AND-MERGE-PLAN.md",
+          "match": "byte-exact",
+          "remoteSha256": "567811d30545fb9bc8db0d6f2f3964d3d26ebf60a89e18027127d3c0b083e7a7"
+        },
+        {
+          "file": "docs/PROGRESS-SCORECARD.md",
+          "match": "byte-exact",
+          "remoteSha256": "69cf2b7fcb9bba06680772b3484f2f3ff4ce69b2c3c6bab2a52d3632aab63141"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/EVIDENCE-LOCATION.txt",
+          "match": "byte-exact",
+          "remoteSha256": "36467dc8b079b4dc8b6275a239114123387fe888dc1f4a8e40d7db2cc32d9503"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/REPORT.md",
+          "match": "byte-exact",
+          "remoteSha256": "8e95a631f7139efa2735041dc0c52c7a80ca4df45b46a66ead125f655d619804"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/api-source-publication.json",
+          "match": "byte-exact",
+          "remoteSha256": "d24404b5de3a496bee0ea1a94ce06ba382cb060d5f682c05be5665ecad39fdbb"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/log-custody.json",
+          "match": "byte-exact",
+          "remoteSha256": "24f22b631abbfa85de3e8659fd60a86a4fcc31f965c9d2ce775376959258eb07"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/native-workflow.json",
+          "match": "byte-exact",
+          "remoteSha256": "e05f064b8ea13541a0bb3deee003701620fa8dd18a3d52c0e055d23ba4252d18"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/secret-scan-classification.json",
+          "match": "byte-exact",
+          "remoteSha256": "5baab445660a1e3112f46d96d69c1996b3bd5c0ffde4bcafb73e2ff7e4608f4c"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/verification.json",
+          "match": "byte-exact",
+          "remoteSha256": "2a47e6c9f26783055d6e49495effb9818355ce8fcd5d29ad1e7742995434daea"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/log-custody.json",
+          "match": "byte-exact",
+          "remoteSha256": "1d7a921075692c71fd857124f361bec617be99dae641a0afee99ad1e9ccf1aa8"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/native-workflow.json",
+          "match": "byte-exact",
+          "remoteSha256": "70f0b6acc4efbb4da261145443d7aed535448dcf3c68bed6894ff1374749d399"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/secret-scan-classification.json",
+          "match": "byte-exact",
+          "remoteSha256": "f44e5018b2cdb2880950c6726c7db860adb0133c6ce1998c89a59633310e0c1a"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/verification.json",
+          "match": "byte-exact",
+          "remoteSha256": "adfee83f8d23a50f0c5fec6f3b14cdae0df14ecab9b53c8b5aa8256aab598bb4"
+        },
+        {
+          "file": "scripts/verify-forge-owner.mjs",
+          "match": "byte-exact",
+          "remoteSha256": "302246a791939821ee9bcf30cf8caa5447342d3e2284907e0120ca9da16f9bb2"
+        },
+        {
+          "file": "scripts/verify-forge-owner.py",
+          "match": "byte-exact",
+          "remoteSha256": "33d61af13866a3202fd3eccb51951f7285c83fe712fb50d2555b88d6f6b60b8d"
+        },
+        {
+          "file": "web/department-capabilities.mjs",
+          "match": "byte-exact",
+          "remoteSha256": "00c0c03a95289f933e3d3792db0b22ee1019025dcb88d4623a52e8f3c5274916"
+        },
+        {
+          "file": "web/department-delegation.mjs",
+          "match": "byte-exact",
+          "remoteSha256": "5e57146f91513a391f648be8afe6aa74add71e0d75e19ed5f5351313d5288f47"
+        },
+        {
+          "file": "web/ecosystem-workflows.mjs",
+          "match": "byte-exact",
+          "remoteSha256": "bdb35b924f1cb702c7a61965f92bbcfa1041042c6135a6ee6b4b1371d5326b30"
+        },
+        {
+          "file": "web/execution-coordinator.mjs",
+          "match": "byte-exact",
+          "remoteSha256": "fb49401e44076e0dbb4d1c0670fed0282fb060ab9752364308a4e9ff51d58d08"
+        },
+        {
+          "file": "web/forge-workflows.mjs",
+          "match": "byte-exact",
+          "remoteSha256": "87139dadbe1eb5e4137a94b107004770b4023a7bd3d43bad8baccc449e53f541"
+        },
+        {
+          "file": "web/forge-workflows.test.mjs",
+          "match": "byte-exact",
+          "remoteSha256": "fb6b39f040a2922c500bacb4943b40b42d426ef3a96aef1c0262f5d2a3618580"
+        },
+        {
+          "file": "web/registered-department-startup.mjs",
+          "match": "byte-exact",
+          "remoteSha256": "c7a96388cd1bc642ecd056fb134e48c8832e09b4203c35567f6911adc3168b93"
+        },
+        {
+          "file": "web/server.mjs",
+          "match": "byte-exact",
+          "remoteSha256": "f331da4c6bf4777733040c268fbacf2a8348ea5bddff851b927e3746fb790c13"
+        }
+      ],
+      "allMatched": true
+    },
+    {
+      "repo": "API",
+      "head": "fab9b47583e1c330d9600db887578a644839ca9c",
+      "ref": "origin/repair/completion-2026-10-28",
+      "files": [
+        {
+          "file": ".gitattributes",
+          "match": "CRLF/LF-only",
+          "remoteSha256": "fa1d084e19f18bd1fb7517967cc40ac4a31d28ba1efd9e70e6822f9c71547ca2"
+        },
+        {
+          "file": "AUDIT-LEDGER.md",
+          "match": "CRLF/LF-only",
+          "remoteSha256": "e344a0f78e07e0e41945ef87c8f58a3fa0b1edb33ba8f27fd317781098e943cb"
+        },
+        {
+          "file": "BUILD-QUEUE.md",
+          "match": "CRLF/LF-only",
+          "remoteSha256": "4941ece829d3eb15ad28d6614ab3f2b147d8c3e1b7fa1b746ef42e47879609e1"
+        },
+        {
+          "file": "HANDOFF.md",
+          "match": "byte-exact",
+          "remoteSha256": "7330bb2ce49f2f4e212379a81010d36dc8952e80131a2e79bde1a4603d6cd223"
+        },
+        {
+          "file": "docs/full-build/SCORECARD.md",
+          "match": "byte-exact",
+          "remoteSha256": "5c172d5b801b1fbf31e527f2d7bdd1d2084f3ef96e481958ee2e4bb4e417e6fc"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/REPORT.md",
+          "match": "byte-exact",
+          "remoteSha256": "8e95a631f7139efa2735041dc0c52c7a80ca4df45b46a66ead125f655d619804"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/api-verify.txt",
+          "match": "byte-exact",
+          "remoteSha256": "8dfa6dc5462784a860c3483b374ef9677ec442b1291641b18fa22858f1667644"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/historical/REPORT-at-a873526.md",
+          "match": "byte-exact",
+          "remoteSha256": "08194d929e92363a9fd3b8f6240476a9e411ccbf026250bab7cd4c7bd814eafe"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/historical/forge-owner-boundary-focused.txt",
+          "match": "byte-exact",
+          "remoteSha256": "34782f78361fa5ca12cb512362d9c4b59610216aade23a4ce3a6b8ce01c6c876"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/historical/forge-owner-model-focused.txt",
+          "match": "byte-exact",
+          "remoteSha256": "faa5a360549e277ae0ed50c39cbca70c9f68b433c38dd9ddef1f7f3b937fa80d"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/historical/forge-owner-qualification-fixed/api-verify.txt",
+          "match": "byte-exact",
+          "remoteSha256": "3ff6da7c8fcb15780b2bfc9b4ca6e8dc1d95166ea23c253b6ab42233deaaec67"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/historical/forge-owner-qualification-fixed/primary.txt",
+          "match": "byte-exact",
+          "remoteSha256": "fe91fd09d7f71012c6314c925e1997292de05996e8c5a5527991fd638f04f7a3"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/historical/forge-owner-qualification-fixed/source-after.json",
+          "match": "byte-exact",
+          "remoteSha256": "b9a483c0c12a2b9102c681fba618fc6b5721d906fb4b09f5a05094cb8b01562f"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/historical/forge-owner-qualification-fixed/source-before.json",
+          "match": "byte-exact",
+          "remoteSha256": "ac373bd85eac255541f96413f9acc15fd32fec23698c510fcf90452f3b59f30d"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/historical/forge-owner-qualification-fixed/timed.txt",
+          "match": "byte-exact",
+          "remoteSha256": "86e52b310d0c5227acfe6c07a46b5dd91dd0dfdb102ab292400211eec5c42324"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/historical/forge-owner-qualification-fixed/verification.json",
+          "match": "byte-exact",
+          "remoteSha256": "b73c6a12816ad3774cb95115d90612185eeadf72637d4bc2c4ac39af93728658"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/historical/forge-owner-qualification/api-verify.txt",
+          "match": "byte-exact",
+          "remoteSha256": "545f34797d07b223dc965bd4a1da871607732b6929200b63d4539c12feb8a4f6"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/historical/forge-owner-qualification/primary.txt",
+          "match": "byte-exact",
+          "remoteSha256": "040db6da0bcae24d3e009913a886a757bb6c9dd1de9a14d6a74a6e2d7ac94d42"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/historical/forge-owner-qualification/source-after.json",
+          "match": "byte-exact",
+          "remoteSha256": "2f5a016dc1b088c0d9b1c3a41e645c2d08829d6c844583e7ce1a2ab098473098"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/historical/forge-owner-qualification/source-before.json",
+          "match": "byte-exact",
+          "remoteSha256": "2f5a016dc1b088c0d9b1c3a41e645c2d08829d6c844583e7ce1a2ab098473098"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/historical/forge-owner-qualification/timed.txt",
+          "match": "byte-exact",
+          "remoteSha256": "4af2c15b659887ad8b1178ec2585bc21049fff32f9b10ac36db6b460bbcd6dd7"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/historical/forge-owner-qualification/verification.json",
+          "match": "byte-exact",
+          "remoteSha256": "bc7de31757a42790e0df1dd903de53232a5f4d7f88fe2ab0613020e7db25ff88"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/historical/forge-owner-workflows-kind-focused.txt",
+          "match": "byte-exact",
+          "remoteSha256": "8cfc0084b6fd3006f428404332b10498781f276fffe72aadb45ed75c5863d5b1"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/historical/log-custody-at-a873526.json",
+          "match": "byte-exact",
+          "remoteSha256": "0d258ef84858f61c5e52b87e5bae843d55e9695877ec4b2dd10fb094e280a061"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/api-source-publication.json",
+          "match": "byte-exact",
+          "remoteSha256": "d24404b5de3a496bee0ea1a94ce06ba382cb060d5f682c05be5665ecad39fdbb"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/api-verify.txt",
+          "match": "byte-exact",
+          "remoteSha256": "e46f421c185dca432900c64925750768e8e0acadb19fd3573e78139ab052a9c1"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/initial-counts-with-log-collision.json",
+          "match": "byte-exact",
+          "remoteSha256": "00fff06b9b883adf8c2da2385292144673fd7fd79288dd3b41a14fe96bf25e39"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/log-custody.json",
+          "match": "byte-exact",
+          "remoteSha256": "24f22b631abbfa85de3e8659fd60a86a4fcc31f965c9d2ce775376959258eb07"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/native-workflow.json",
+          "match": "byte-exact",
+          "remoteSha256": "e05f064b8ea13541a0bb3deee003701620fa8dd18a3d52c0e055d23ba4252d18"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/primary.txt",
+          "match": "byte-exact",
+          "remoteSha256": "0426d7441933e5051efbba5c0aab5fb14639bbd77dc94b6e9fc48bac65b4eabf"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/qualify_forge_owner_joined.py",
+          "match": "byte-exact",
+          "remoteSha256": "7b9cd764b150c59109d831710f91d7bbbd58b128bc957cafa7efa072b4a99a7a"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/retain_joined_serial.py",
+          "match": "byte-exact",
+          "remoteSha256": "ae374cd0a47459e7bdca69850cfb08e3bc960ad2a47b72ba46d895b828ef1f95"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/secret-scan-classification.json",
+          "match": "byte-exact",
+          "remoteSha256": "5baab445660a1e3112f46d96d69c1996b3bd5c0ffde4bcafb73e2ff7e4608f4c"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/serial-0.txt",
+          "match": "byte-exact",
+          "remoteSha256": "22840a90b5337726dc25b573010d3067a1741a82fff9e6651d1d0cb241477e44"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/serial-1.txt",
+          "match": "byte-exact",
+          "remoteSha256": "b5f62de6faf58a6636b6f7ab686213f938d21334845ab785e298e241b56f4e48"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/source-after.json",
+          "match": "byte-exact",
+          "remoteSha256": "3d9462ab5fe906e7ee6c7a95271fc61cef9e6ce3f3ffae863add381f217faed1"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/source-before.json",
+          "match": "byte-exact",
+          "remoteSha256": "3d9462ab5fe906e7ee6c7a95271fc61cef9e6ce3f3ffae863add381f217faed1"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/verification.json",
+          "match": "byte-exact",
+          "remoteSha256": "2a47e6c9f26783055d6e49495effb9818355ce8fcd5d29ad1e7742995434daea"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/log-custody.json",
+          "match": "byte-exact",
+          "remoteSha256": "1d7a921075692c71fd857124f361bec617be99dae641a0afee99ad1e9ccf1aa8"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/native-workflow.json",
+          "match": "byte-exact",
+          "remoteSha256": "70f0b6acc4efbb4da261145443d7aed535448dcf3c68bed6894ff1374749d399"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/primary.txt",
+          "match": "byte-exact",
+          "remoteSha256": "252180481bedcc8a3a8338b4c3e2807c8c2186e107ce9224cc202a1be4707160"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/qualification-driver.py",
+          "match": "byte-exact",
+          "remoteSha256": "4c4a81f9e8098e3b5cc46cfc2c1bca622c5d87447fcf457b11417def5f5e1909"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/secret-scan-classification.json",
+          "match": "byte-exact",
+          "remoteSha256": "f44e5018b2cdb2880950c6726c7db860adb0133c6ce1998c89a59633310e0c1a"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/source-after.json",
+          "match": "byte-exact",
+          "remoteSha256": "e1349bf3c49ea850249e6dfe8277d6c067b4de09b1b9fc6cd554445bd698452a"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/source-before.json",
+          "match": "byte-exact",
+          "remoteSha256": "e1349bf3c49ea850249e6dfe8277d6c067b4de09b1b9fc6cd554445bd698452a"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/timed.txt",
+          "match": "byte-exact",
+          "remoteSha256": "c54fd73a1b9d3a1b08bf54308eefc2ea28d084bc5bc7f679279dc5402600b194"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/verification.json",
+          "match": "byte-exact",
+          "remoteSha256": "adfee83f8d23a50f0c5fec6f3b14cdae0df14ecab9b53c8b5aa8256aab598bb4"
+        },
+        {
+          "file": "src/department-gateway.ts",
+          "match": "byte-exact",
+          "remoteSha256": "56e828f5b61353406c578385d6eab5bf5d1517e8a582d692a5b11ae9f808b7ff"
+        },
+        {
+          "file": "src/forge-department.ts",
+          "match": "byte-exact",
+          "remoteSha256": "ee7c71e4a28c3f56012f7a724e6a2d9c9190344e8662fb65b330ac22274aa642"
+        },
+        {
+          "file": "src/local-department-edge.ts",
+          "match": "byte-exact",
+          "remoteSha256": "fe78d4648fa53eae5361bcf8b5d720139aa33aa1dee2c6941c46a5449b76315d"
+        },
+        {
+          "file": "test/forge-department.test.ts",
+          "match": "byte-exact",
+          "remoteSha256": "31fa11f8b780f50bf165c0c640ffe6a320d71682739d298fef25916a58c687c7"
+        }
+      ],
+      "allMatched": true
+    },
+    {
+      "repo": "FORGE",
+      "head": "f104996f50b6049adb1172b3ab3ac3b7c6d18522",
+      "ref": "origin/main",
+      "files": [
+        {
+          "file": "docs/BUILD-REGISTER.md",
+          "match": "byte-exact",
+          "remoteSha256": "d14b1408d68374a0d57bbf422faff3d80bde09f7dac6772c1e891597eb13aaa5"
+        },
+        {
+          "file": "docs/HANDOFF.md",
+          "match": "byte-exact",
+          "remoteSha256": "9465967d31bfdc22c7def0253a8df0717c2750896d19dff319b244ab6e48c79e"
+        },
+        {
+          "file": "docs/PROGRESS-LOG.md",
+          "match": "byte-exact",
+          "remoteSha256": "7e307f156781a2a37fefc9e3ecb427683f082dca93358df6fcbbbfb078cbdbc6"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/EVIDENCE-LOCATION.txt",
+          "match": "byte-exact",
+          "remoteSha256": "36467dc8b079b4dc8b6275a239114123387fe888dc1f4a8e40d7db2cc32d9503"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/REPORT.md",
+          "match": "byte-exact",
+          "remoteSha256": "8e95a631f7139efa2735041dc0c52c7a80ca4df45b46a66ead125f655d619804"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/api-source-publication.json",
+          "match": "CRLF/LF-only",
+          "remoteSha256": "6acf951bfd440a9ee84644c53b1fb53a307007efbd811f66d87885ddaa476c2b"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/log-custody.json",
+          "match": "CRLF/LF-only",
+          "remoteSha256": "d9e7391c9f97e68f0c67b4aaf074522cc108b426bcd0f56742e1910a0f4c7f53"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/native-workflow.json",
+          "match": "CRLF/LF-only",
+          "remoteSha256": "8ead4b0791884bc8358c997b815afcf42a6aedf7d92655eae594a67d6b0ee863"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/joined/verification.json",
+          "match": "CRLF/LF-only",
+          "remoteSha256": "6e7b09a430f019808a67da7bb8122c3a8e0c8cf6fbe372d02810ef8a6faeef43"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/log-custody.json",
+          "match": "byte-exact",
+          "remoteSha256": "1d7a921075692c71fd857124f361bec617be99dae641a0afee99ad1e9ccf1aa8"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/native-receiving-full.txt",
+          "match": "CRLF/LF-only",
+          "remoteSha256": "469da3966c243e2f143e12591371922e9a10ca92f5ce59cbb7b40b5b4fcdbace"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/native-workflow.json",
+          "match": "CRLF/LF-only",
+          "remoteSha256": "5935d7ed1ac6f8a22b194dadb1f77e702d6dfea7ed043919839181b67fe55d33"
+        },
+        {
+          "file": "evidence/forge-owner-workflows-2026-11-01/verification.json",
+          "match": "CRLF/LF-only",
+          "remoteSha256": "609cf2bd9521c70cdea76796faba86a585a9374cef7ff0f7d41345b937d6d971"
+        }
+      ],
+      "allMatched": true
+    }
+  ],
+  "canonicalOneInputsMatchedWithExplicitEolNormalization": 1742,
+  "canonicalSourceMatches": [
+    {
+      "path": "ONE/dist/src/agent/budget.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/budget.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/context-thermostat.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/context-thermostat.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/execution-boundary.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/execution-boundary.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/file-task-store.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/file-task-store.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/local-specialist-handler.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/local-specialist-handler.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/model-adapter.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/model-adapter.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/ollama-adapter.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/ollama-adapter.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/openai-compatible.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/openai-compatible.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/portfolio.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/portfolio.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/provider-health.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/provider-health.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/provider-router.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/provider-router.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/queue.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/queue.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/specialist-cell.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/specialist-cell.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/sql-agent-leases.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/sql-agent-leases.js",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/dist/src/agent/sql-agent-recovery-host.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/sql-agent-recovery-host.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/sql-agent-recovery.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/sql-agent-recovery.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/sql-leased-worker.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/sql-leased-worker.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/sql-task-store.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/sql-task-store.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/task-runtime.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/task-runtime.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/tool-map.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/tool-map.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/trace.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/trace.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/worker.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agent/worker.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agents/a2a.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/agents/a2a.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/artifacts/registry.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/artifacts/registry.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/autonomy/graduation.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/autonomy/graduation.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/autonomy/policy-compiler.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/autonomy/policy-compiler.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/autonomy/recovery.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/autonomy/recovery.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/autonomy/red-team.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/autonomy/red-team.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/autonomy/security-suite.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/autonomy/security-suite.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/autonomy/shadow.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/autonomy/shadow.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/autonomy/tevv.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/autonomy/tevv.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/audio-devices.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/audio-devices.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/audit.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/audit.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/browser-governor.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/browser-governor.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/capabilities.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/capabilities.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/clipboard-governor.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/clipboard-governor.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/execution-cell.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/execution-cell.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/hardware-telemetry.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/hardware-telemetry.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/kill-switch.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/kill-switch.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/local-auth.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/local-auth.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/local-transport.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/local-transport.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/protocol.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/protocol.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/runtime.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/runtime.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/wake-boundary.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/bridge/wake-boundary.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/briefing.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/briefing.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/legacy-command.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/legacy-command.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/legacy-contract.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/legacy-contract.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/legacy-event-ingestion.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/legacy-event-ingestion.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/legacy-events.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/legacy-events.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/legacy-http.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/legacy-http.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/legacy-readonly.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/legacy-readonly.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/legacy-shadow.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/legacy-shadow.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/legacy.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/legacy.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/opportunity-collider.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/opportunity-collider.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/revenue-autopsy.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/business/revenue-autopsy.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/capabilities/availability.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/capabilities/availability.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/capabilities/discovery.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/capabilities/discovery.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/capabilities/genome.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/capabilities/genome.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/capabilities/harvester.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/capabilities/harvester.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/capabilities/resolver.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/capabilities/resolver.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/capabilities/skill-distiller.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/capabilities/skill-distiller.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/capabilities/tool-disclosure.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/capabilities/tool-disclosure.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/capabilities/truth-pulse.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/capabilities/truth-pulse.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/cloud/autosleep.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/cloud/autosleep.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/cloud/cell.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/cloud/cell.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/cloud/checkpoint.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/cloud/checkpoint.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/cloud/goal-runner.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/cloud/goal-runner.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/cloud/router.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/cloud/router.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/coco/calibration.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/coco/calibration.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/coco/challenger.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/coco/challenger.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/coco/engine.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/coco/engine.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/coco/eval-dataset.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/coco/eval-dataset.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/coco/governor.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/coco/governor.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/coco/types.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/coco/types.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/code-galaxy/extraction.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/code-galaxy/extraction.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/code-galaxy/galaxy.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/code-galaxy/galaxy.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/commerce/transaction-firewall.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/commerce/transaction-firewall.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/authorize.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/authorize.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/broker.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/broker.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/health.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/health.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/issuer-flow.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/issuer-flow.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/oauth-state.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/oauth-state.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/oidc-id-token.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/oidc-id-token.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/openai-siwc.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/openai-siwc.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/pkce.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/pkce.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/router.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/router.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/types.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/connections/types.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/core/action-receipt.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/core/action-receipt.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/core/event.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/core/event.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/core/evidence-record.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/core/evidence-record.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/core/evidence.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/core/evidence.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/core/file-store.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/core/file-store.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/core/policy.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/core/policy.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/core/receipts.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/core/receipts.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/core/value-custody.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/core/value-custody.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/asset-truth.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/asset-truth.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/continuity.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/continuity.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/fallback.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/fallback.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/http-provider.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/http-provider.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/provider-benchmark.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/provider-benchmark.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/provider-contract.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/provider-contract.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/provider-registry.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/provider-registry.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/quality.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/quality.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/rights.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/rights.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/router.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/router.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/verification.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/creation/verification.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/demo/rare-showcase.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/demo/rare-showcase.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/design/design-dna.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/design/design-dna.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/design/screen-spec.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/design/screen-spec.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/design/variant-arena.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/design/variant-arena.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/devices/ble-driver.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/devices/ble-driver.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/devices/bridge.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/devices/bridge.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/devices/genome.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/devices/genome.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/devices/lab.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/devices/lab.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/devices/verification.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/devices/verification.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/documents/admission.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/documents/admission.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/documents/extraction.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/documents/extraction.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/documents/worker.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/documents/worker.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/benchmark.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/benchmark.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/candidate-transactions.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/candidate-transactions.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/data-calculation.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/data-calculation.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/department.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/department.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/local-file-access.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/local-file-access.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/merge-gate.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/merge-gate.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/mutation-adapter.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/mutation-adapter.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/patch-plan.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/patch-plan.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/repair-loop.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/repair-loop.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/repair-workshop.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/repair-workshop.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/safety.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/safety.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/worktree.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/engineering/worktree.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/competitor-catalog.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/competitor-catalog.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/competitor-genome.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/competitor-genome.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/diff.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/diff.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/engine.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/engine.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/moat-lab.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/moat-lab.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/monitor.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/monitor.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/portfolio.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/portfolio.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/promotion.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/promotion.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/proposal-gate.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/proposal-gate.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/proposal.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/proposal.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/significance.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/significance.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/source-delta.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/source-delta.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/types.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/types.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/watch.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/evolution/watch.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/guardian/bounded-response.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/guardian/bounded-response.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/guardian/credential-vault.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/guardian/credential-vault.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/guardian/network-gate.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/guardian/network-gate.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/guardian/plane.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/guardian/plane.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/guardian/transport-boundary.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/guardian/transport-boundary.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/index.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/index.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/model-governor/cost.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/model-governor/cost.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/model-governor/health-ladder.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/model-governor/health-ladder.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/one-core.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/one-core.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/presence/bus.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/presence/bus.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/privacy/half-life.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/privacy/half-life.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/production/acceptance.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/production/acceptance.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/production/checkpoint.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/production/checkpoint.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/production/cost-plan.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/production/cost-plan.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/production/evidence-feedback.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/production/evidence-feedback.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/production/executor.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/production/executor.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/production/replanner.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/production/replanner.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/production/research-gate.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/production/research-gate.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/production/risk-scheduler.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/production/risk-scheduler.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/production/spec.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/production/spec.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/products/catalog.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/products/catalog.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/products/ecosystem-discovery.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/products/ecosystem-discovery.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/products/fabric.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/products/fabric.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/products/router.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/products/router.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/products/signing.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/products/signing.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/acknowledgement.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/acknowledgement.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/app-state.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/app-state.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/approval-authority.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/approval-authority.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/approval.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/approval.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/briefing.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/briefing.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/command.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/command.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/connections-surface.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/connections-surface.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/conversation-fabric.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/conversation-fabric.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/device-control.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/device-control.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/generative-ui.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/generative-ui.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/goal-pulse.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/goal-pulse.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/incident.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/incident.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/intent-compiler.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/intent-compiler.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/media-surface.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/media-surface.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/memory-index.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/memory-index.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/memory.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/memory.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/multimodal.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/multimodal.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/orchestrator.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/orchestrator.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/proactive-governor.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/proactive-governor.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/remote-session.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/remote-session.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/runtime-truth.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/runtime-truth.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/self-gap.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/self-gap.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/session.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/session.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/sovereign-handoff.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/sovereign-handoff.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/surface-renderer.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/surface-renderer.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/truth.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/rare/truth.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/api-graph.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/api-graph.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/call-resolver.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/call-resolver.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/compiler-binding.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/compiler-binding.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/db-graph.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/db-graph.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/findings.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/findings.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/framework.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/framework.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/git.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/git.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/graph.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/graph.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/indexer.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/indexer.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/parser.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/parser.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/persistent.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/persistent.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/project-snapshot.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/project-snapshot.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/quality.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/quality.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/semantic.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/semantic.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/source-input.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/source-input.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/trusted-typescript-libs.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/repo-intelligence/trusted-typescript-libs.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/backend-custody.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/backend-custody.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/cache.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/cache.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/channel-registry.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/channel-registry.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/evidence-fusion.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/evidence-fusion.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/fabric.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/fabric.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/fanout.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/fanout.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/injection.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/injection.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/planner.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/planner.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/query-router.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/query-router.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/receipt.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/receipt.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/review-ledger.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/research/review-ledger.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/simulation/world-action.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/simulation/world-action.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/training/data-foundry.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/training/data-foundry.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/training/economics.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/training/economics.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/training/engine-contract.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/training/engine-contract.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/training/eval-gate.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/training/eval-gate.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/training/hardware.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/training/hardware.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/training/learning-router.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/training/learning-router.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/training/portfolio.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/training/portfolio.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/training/types.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/training/types.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/verification/finding-reconciliation.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/verification/finding-reconciliation.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/verification/release-gate.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/verification/release-gate.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/verification/wave-gates.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/verification/wave-gates.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/voice/session.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/voice/session.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/voice/voicebox-adapter.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/voice/voicebox-adapter.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/compensation.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/compensation.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/dead-letter.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/dead-letter.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/dispatcher.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/dispatcher.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/durable.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/durable.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/file-run-store.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/file-run-store.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/heartbeat.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/heartbeat.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/idempotency.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/idempotency.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/recovery.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/recovery.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/reversible-graph.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/reversible-graph.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/sql-run-store.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/sql-run-store.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/webhook.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/src/workflow/webhook.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/a02-routing-health.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/a02-routing-health.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/a02-source-failover.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/a02-source-failover.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/a17-legacy-command-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/a17-legacy-command-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/acceptance-metadata-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/acceptance-metadata-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/agent-execution-boundary.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/agent-execution-boundary.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/agent-finalize.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/agent-finalize.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/agent-recovery-lifecycle.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/agent-recovery-lifecycle.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/agent-runtime-budget-beast.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/agent-runtime-budget-beast.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/agent-runtime-custody-qualification.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/agent-runtime-custody-qualification.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/agent-skill-identity.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/agent-skill-identity.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/agent-terminal-integrity.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/agent-terminal-integrity.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/approval-admission-recovery.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/approval-admission-recovery.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/approval-consumption-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/approval-consumption-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/area26-filesystem.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/area26-filesystem.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/area26-finding-reconciliation.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/area26-finding-reconciliation.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/audio-device-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/audio-device-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/audit-repair.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/audit-repair.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/authority-policy-beast.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/authority-policy-beast.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/autonomy-deep.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/autonomy-deep.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/autonomy-task-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/autonomy-task-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/backward-research-memory.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/backward-research-memory.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/beast-fix-first.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/beast-fix-first.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/beast-lane-boundaries.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/beast-lane-boundaries.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/beast-wave100.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/beast-wave100.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/ble-command-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/ble-command-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/brain-forge.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/brain-forge.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/bridge-device-deep.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/bridge-device-deep.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/bridge-permission-boundaries.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/bridge-permission-boundaries.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/business-deep.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/business-deep.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/business-event-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/business-event-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/business-rare.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/business-rare.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/capability-admission-recovery.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/capability-admission-recovery.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/capability-availability.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/capability-availability.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/capability-cost-truth.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/capability-cost-truth.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/capability-disclosure-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/capability-disclosure-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/capability-discovery.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/capability-discovery.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/capability-genome.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/capability-genome.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/chat-recovery.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/chat-recovery.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/checkpoint-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/checkpoint-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/cloud-cells.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/cloud-cells.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/cloud-checkpoint-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/cloud-checkpoint-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/coco-continuation-invariants.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/coco-continuation-invariants.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/coco-evidence-boundaries.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/coco-evidence-boundaries.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/coco-governor-health-continuation.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/coco-governor-health-continuation.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/coco-heldout-evidence.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/coco-heldout-evidence.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/coco-sparse-evidence.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/coco-sparse-evidence.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/coco-value-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/coco-value-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/coco.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/coco.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/compiler-binding-beast.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/compiler-binding-beast.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/compiler-coverage-beast.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/compiler-coverage-beast.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/compiler-declaration-edges-beast.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/compiler-declaration-edges-beast.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/compiler-index-integration.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/compiler-index-integration.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/compiler-reference-forms-beast.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/compiler-reference-forms-beast.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/configured-import-edges.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/configured-import-edges.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/connected-cloud-rare.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/connected-cloud-rare.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/connection-custody-clock.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/connection-custody-clock.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/connection-permissions.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/connection-permissions.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/connections.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/connections.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/control-preflight-validation-beast.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/control-preflight-validation-beast.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/conversation-thread-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/conversation-thread-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/core-hardening.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/core-hardening.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/cost-qualification.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/cost-qualification.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/creation-autonomy.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/creation-autonomy.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/creation-deep.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/creation-deep.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/creation-provider.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/creation-provider.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/creative-ledger-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/creative-ledger-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/creative-qualification-recovery.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/creative-qualification-recovery.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/creative-receipt-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/creative-receipt-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/creative-routing.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/creative-routing.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/data-calculation.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/data-calculation.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/design-intelligence.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/design-intelligence.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/device-control-admission.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/device-control-admission.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/device-readback-evidence.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/device-readback-evidence.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/document-admission.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/document-admission.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/document-cancellation.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/document-cancellation.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/document-revision-receipt.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/document-revision-receipt.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/document-utf8.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/document-utf8.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/document-worker.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/document-worker.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/durable-clock-admission.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/durable-clock-admission.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/durable-context-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/durable-context-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/ecosystem-discovery.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/ecosystem-discovery.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/engineering-boundaries-beast.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/engineering-boundaries-beast.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/engineering-evidence-binding.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/engineering-evidence-binding.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/engineering-mutation.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/engineering-mutation.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/engineering-repair-deadline.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/engineering-repair-deadline.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/engineering-task-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/engineering-task-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/engineering-wave.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/engineering-wave.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evidence-bus-admission.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evidence-bus-admission.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evidence-record-admission.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evidence-record-admission.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evolution-authority-recovery.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evolution-authority-recovery.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evolution-benchmark-admission.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evolution-benchmark-admission.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evolution-engine.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evolution-engine.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evolution-extensions.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evolution-extensions.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evolution-monitor-checkpoint.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evolution-monitor-checkpoint.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evolution-monitor.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evolution-monitor.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evolution-simulation.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evolution-simulation.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evolution-watch-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/evolution-watch-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/file-store-consumers.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/file-store-consumers.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/file-store-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/file-store-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/goal-pulse-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/goal-pulse-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/governor.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/governor.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/graph-accuracy-beast.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/graph-accuracy-beast.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/guardian-interop.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/guardian-interop.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/held-out-owner-evaluation.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/held-out-owner-evaluation.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/import-extension-beast.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/import-extension-beast.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/import-syntax-continuation.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/import-syntax-continuation.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/issuer-flow.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/issuer-flow.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/lane16-20-boundaries.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/lane16-20-boundaries.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/lease-token-release.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/lease-token-release.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/legacy-core-boundaries.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/legacy-core-boundaries.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/legacy-live-contract.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/legacy-live-contract.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/legacy-read-route-admission.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/legacy-read-route-admission.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/legacy-tenant-binding.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/legacy-tenant-binding.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/local-bridge.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/local-bridge.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/local-model-specialist.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/local-model-specialist.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/local-retrieval-ranking.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/local-retrieval-ranking.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/model-adapter.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/model-adapter.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/muse-extraction.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/muse-extraction.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/mutation-transaction.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/mutation-transaction.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/oauth-boundary.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/oauth-boundary.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/oauth-flow.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/oauth-flow.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/office-extraction.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/office-extraction.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/oidc-id-token.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/oidc-id-token.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/oidc-subject-beast.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/oidc-subject-beast.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/one-core.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/one-core.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/outcome-observation-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/outcome-observation-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/parser-support-occurrences-beast.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/parser-support-occurrences-beast.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/persistence-device-control.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/persistence-device-control.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/persistence-hardening.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/persistence-hardening.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/planning-dependency-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/planning-dependency-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/planning-dependency-executor-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/planning-dependency-executor-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/planning-guard-integrity.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/planning-guard-integrity.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/policy-intent-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/policy-intent-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/policy.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/policy.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/product-fabric-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/product-fabric-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/product-fabric.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/product-fabric.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/production-finalize.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/production-finalize.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/production-hardening.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/production-hardening.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/production-result-accounting.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/production-result-accounting.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/project-references-beast.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/project-references-beast.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/project-snapshot-beast.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/project-snapshot-beast.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/promotion-routing-admission.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/promotion-routing-admission.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/provider-cost-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/provider-cost-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/provider-health-identity.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/provider-health-identity.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/rare-command-routing.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/rare-command-routing.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/rare-hardening.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/rare-hardening.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/rare-intelligence.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/rare-intelligence.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/rare-session.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/rare-session.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/rare-showcase.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/rare-showcase.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/readiness-evidence-beast.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/readiness-evidence-beast.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/reign-four-areas-hardening.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/reign-four-areas-hardening.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/reign-local-intelligence.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/reign-local-intelligence.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/reign-runtime-extensions.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/reign-runtime-extensions.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repair-workshop.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repair-workshop.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-cache-integrity.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-cache-integrity.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-convergence.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-convergence.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-enumeration-beast.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-enumeration-beast.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-health-admission.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-health-admission.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-index-persistence-beast.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-index-persistence-beast.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-index-session.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-index-session.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-intake-resource-boundary.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-intake-resource-boundary.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-mri-finalize.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-mri-finalize.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-private-inventory-finding-identity.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-private-inventory-finding-identity.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-production-deep.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/repo-production-deep.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-admission.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-admission.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-backend-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-backend-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-deadlines.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-deadlines.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-dependency-authority.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-dependency-authority.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-device.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-device.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-evidence-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-evidence-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-evidence.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-evidence.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-fabric-deep.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-fabric-deep.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-gate-clock.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-gate-clock.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-lane-compensation.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-lane-compensation.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-receipt-admission.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-receipt-admission.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-truth-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/research-truth-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/runtime-business-deep.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/runtime-business-deep.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/runtime-effect-review.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/runtime-effect-review.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/runtime-hardening.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/runtime-hardening.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/runtime-model-truth.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/runtime-model-truth.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/shared-context-identity-admission.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/shared-context-identity-admission.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/shared-memory-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/shared-memory-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/shared-record-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/shared-record-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/source-library-admission-beast.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/source-library-admission-beast.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/source-review-admission.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/source-review-admission.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/sql-agent-cas.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/sql-agent-cas.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/sql-agent-leases.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/sql-agent-leases.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/sql-agent-recovery-host.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/sql-agent-recovery-host.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/sql-agent-recovery.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/sql-agent-recovery.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/sql-leased-worker.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/sql-leased-worker.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/sql-run-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/sql-run-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/support/creative-ephemeral-fixture.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/support/creative-ephemeral-fixture.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/task-cancellation-depth.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/task-cancellation-depth.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/task-parent-boundaries.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/task-parent-boundaries.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/training-input-integrity.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/training-input-integrity.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/transport-admission.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/transport-admission.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/verification-gates.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/verification-gates.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/voicebox-adapter.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/voicebox-adapter.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/wave6-8.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/wave6-8.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/worker-attempt-fence.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/worker-attempt-fence.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/worker-budget-authority.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/worker-budget-authority.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/workflow-effect-unknown.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/workflow-effect-unknown.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/workflow-finalize.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/workflow-finalize.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/workflow-recovery-admission.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/workflow-recovery-admission.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/workflow-run-shared-custody.test.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/dist/tests/workflow-run-shared-custody.test.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/package-lock.json",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/package.json",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/assemble-tevin-master-scene.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/audit-upload-workflows.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/billing-outbox-cli.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/billing-outbox.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/build-crown-companion.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/build-crown-rig-lab.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/build-desktop-companions.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/build-scan-companion.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/build-tevin-anatomical-head.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/build-tevin-approval-alignment.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/build-tevin-reference-head-study.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/build-tevin-reference-wardrobe.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/build-tevin-world.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/companion-platforms.json",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/companion-python-tool.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/companion-python-tool.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/extract-tevin-tattoo-reference.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/finish-tevin-master-previews.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/import-tevin-detail-references.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/import-tevin-owner-mesh.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/import-tevin-owner-storyboards.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/import-tevin-topology.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/inspect-tevin-owner-mesh.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/launch-crown-companion.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/launch-local-reign-mic.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/package-rare-static.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/prepare-companion-release.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/prepare-tevin-mesh-rig-handoff.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/qualification/codex-owner-configuration.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/qualification/codex-owner-session.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/qualification/codex-owner-session.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/qualification/department-retention-native.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/qualification/normal-department-creation.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/qualification/normal-department-resume.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/qualification/owner-document-journey.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/qualification/owner-live-journey.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/qualification/owner-registered-live-journey.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/rebuild-linux-from-verified-bundle.py",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/refine-tevin-aligned-silhouette.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/refine-tevin-production-character.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-a28-handoff.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-agent-recovery-service.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-audit-package-status.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-audit-package-status.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-audit-proof-path.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-chatgpt-auth-cache.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/reign-chatgpt-codex-local.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-chatgpt-codex-local.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-chatgpt-conversation.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-chatgpt-conversation.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-chatgpt-local-client.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-chatgpt-local.css",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-chatgpt-local.html",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-clean-build.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/reign-codex-approved-snapshot.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/reign-codex-approved-snapshot.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-codex-cancellation.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-codex-config-audit.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-codex-config-audit.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-codex-progress.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-codex-progress.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-codex-runtime.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-codex-runtime.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-companion-archive.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-companion-archive.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-art-manifest.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-auth-ui.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-blender-motion-preview.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-blender-readonly.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-blueprint-checkpoint.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-blueprint.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-blueprint.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-business-ui.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-calculator-ui.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-character-diagnostics.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-character-production.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-companion.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-export-world.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-import-blender.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-inspect-blender.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-palace-production.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-presentation-review.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-presentation-ui.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-preview.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-preview.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-rig-browser.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-rig-foundation.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-source.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-ui-handoff.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-crown-voice.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-database-backup.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-document-native.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/reign-document-preflight.py",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/reign-engineering-proof.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/reign-feature-delivery.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-feature-handoff.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-native-media-check.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-office-extraction.py",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/reign-packet-ledger.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/reign-plan-finalize.py",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/reign-plan-restructure.py",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/reign-preserve-historical-orders.py",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/reign-quick-verify.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/reign-recovery-proof.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/reign-repo-inventory.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/reign-requirement-navigation.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-runtime-proof.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/reign-security-link.py",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/reign-security-metadata-review.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-security-metadata-review.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-source-truth.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/reign-status.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-tevin-approval-alignment.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-tevin-master-pack.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-tevin-owner-assets.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-tevin-world-ui.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-worker.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-workspace-agent.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-workspace-agent.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/reign-workspace-jobs.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/render-tevin-character-review.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/render-tevin-deformation-review.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/repair-tevin-facial-controls.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/run-tevin-master-pipeline.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/scan-secrets.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/seed-ovh-subscription.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/send-billing-snapshot.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/stage-tevin-world-assets.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/test-account-review-interface.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/test-billing-interface.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/test-companion-connection.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/test-companion-recovery.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/test-model-interface.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/test-native-scanner.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/test-scanner-coverage.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/test-secret-scanner-allowlists.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/test-secret-scanner.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/test-security-interface.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/test-setup-interface.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/test-static-package.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/test-subscription-interface.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/test_reign_status.py",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/tevin-department-check.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/tevin-model-launch-check.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/tevin-owner.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/verify-bridge-boundaries.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/verify-desktop-packages.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/verify-desktop-packages.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/verify-desktop-packages.test.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/verify-forge-owner.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/verify-forge-owner.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/verify-local-specialist.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/verify-tevin-approval-alignment.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/verify-tevin-character-interchange.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/verify-tevin-master-batch.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/verify-tevin-persona-presence.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/verify-tevin-reference-wardrobe.py",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/scripts/work-session-mri-benchmark.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/work-session-repair-proof.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/scripts/work-session-sql-proof.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/agent/budget.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/agent/context-thermostat.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/agent/execution-boundary.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/agent/file-task-store.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/agent/local-specialist-handler.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/agent/model-adapter.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/agent/ollama-adapter.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/agent/openai-compatible.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/agent/portfolio.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/agent/provider-health.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/agent/provider-router.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/agent/queue.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/agent/specialist-cell.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/agent/sql-agent-leases.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/agent/sql-agent-recovery-host.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/agent/sql-agent-recovery.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/agent/sql-leased-worker.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/agent/sql-task-store.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/agent/task-runtime.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/agent/tool-map.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/agent/trace.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/agent/worker.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/agents/a2a.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/artifacts/registry.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/autonomy/graduation.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/autonomy/policy-compiler.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/autonomy/recovery.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/autonomy/red-team.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/autonomy/security-suite.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/autonomy/shadow.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/autonomy/tevv.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/bridge/audio-devices.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/bridge/audit.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/bridge/browser-governor.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/bridge/capabilities.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/bridge/clipboard-governor.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/bridge/execution-cell.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/bridge/hardware-telemetry.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/bridge/kill-switch.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/bridge/local-auth.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/bridge/local-transport.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/bridge/protocol.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/bridge/runtime.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/bridge/wake-boundary.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/business/briefing.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/business/legacy-command.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/business/legacy-contract.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/business/legacy-event-ingestion.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/business/legacy-events.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/business/legacy-http.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/business/legacy-readonly.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/business/legacy-shadow.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/business/legacy.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/business/opportunity-collider.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/business/revenue-autopsy.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/capabilities/availability.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/capabilities/discovery.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/capabilities/genome.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/capabilities/harvester.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/capabilities/resolver.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/capabilities/skill-distiller.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/capabilities/tool-disclosure.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/capabilities/truth-pulse.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/cloud/autosleep.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/cloud/cell.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/cloud/checkpoint.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/cloud/goal-runner.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/cloud/router.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/coco/calibration.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/coco/challenger.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/coco/engine.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/coco/eval-dataset.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/coco/governor.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/coco/types.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/code-galaxy/extraction.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/code-galaxy/galaxy.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/commerce/transaction-firewall.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/connections/authorize.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/connections/broker.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/connections/health.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/connections/issuer-flow.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/connections/oauth-state.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/connections/oidc-id-token.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/connections/openai-siwc.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/connections/pkce.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/connections/router.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/connections/types.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/core/action-receipt.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/core/event.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/core/evidence-record.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/core/evidence.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/core/file-store.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/core/policy.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/core/receipts.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/core/value-custody.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/creation/asset-truth.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/creation/continuity.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/creation/fallback.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/creation/http-provider.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/creation/provider-benchmark.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/creation/provider-contract.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/creation/provider-registry.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/creation/quality.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/creation/rights.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/creation/router.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/creation/verification.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/demo/rare-showcase.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/design/design-dna.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/design/screen-spec.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/design/variant-arena.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/devices/ble-driver.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/devices/bridge.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/devices/genome.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/devices/lab.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/devices/verification.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/documents/admission.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/documents/extraction.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/documents/runtime-shims.d.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/documents/worker.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/engineering/benchmark.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/engineering/candidate-runtime.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/engineering/candidate-transactions.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/engineering/data-calculation.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/engineering/department.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/engineering/local-file-access.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/engineering/merge-gate.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/engineering/mutation-adapter.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/engineering/patch-plan.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/engineering/repair-loop.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/engineering/repair-workshop.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/engineering/safety.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/engineering/worktree.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/evolution/competitor-catalog.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/evolution/competitor-genome.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/evolution/diff.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/evolution/engine.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/evolution/moat-lab.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/evolution/monitor.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/evolution/portfolio.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/evolution/promotion.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/evolution/proposal-gate.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/evolution/proposal.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/evolution/significance.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/evolution/source-delta.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/evolution/types.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/evolution/watch.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/guardian/bounded-response.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/guardian/credential-vault.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/guardian/network-gate.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/guardian/plane.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/guardian/transport-boundary.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/index.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/model-governor/cost.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/model-governor/health-ladder.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/one-core.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/presence/bus.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/privacy/half-life.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/production/acceptance.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/production/checkpoint.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/production/cost-plan.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/production/evidence-feedback.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/production/executor.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/production/replanner.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/production/research-gate.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/production/risk-scheduler.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/production/spec.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/products/catalog.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/products/ecosystem-discovery.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/products/fabric.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/products/router.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/products/signing.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/acknowledgement.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/app-state.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/approval-authority.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/approval.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/briefing.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/command.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/connections-surface.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/conversation-fabric.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/device-control.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/rare/generative-ui.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/goal-pulse.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/rare/incident.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/intent-compiler.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/media-surface.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/memory-index.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/memory.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/multimodal.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/orchestrator.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/proactive-governor.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/remote-session.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/runtime-truth.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/rare/self-gap.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/session.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/sovereign-handoff.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/rare/surface-renderer.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/rare/truth.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/repo-intelligence/api-graph.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/repo-intelligence/call-resolver.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/repo-intelligence/compiler-binding.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/repo-intelligence/db-graph.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/repo-intelligence/findings.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/repo-intelligence/framework.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/repo-intelligence/git.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/repo-intelligence/graph.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/repo-intelligence/indexer.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/repo-intelligence/parser.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/repo-intelligence/persistent.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/repo-intelligence/project-snapshot.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/repo-intelligence/quality.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/repo-intelligence/semantic.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/repo-intelligence/source-input.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/repo-intelligence/trusted-typescript-libs.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/research/backend-custody.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/research/cache.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/research/channel-registry.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/research/evidence-fusion.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/research/fabric.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/research/fanout.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/research/injection.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/research/planner.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/research/query-router.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/research/receipt.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/research/review-ledger.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/shims.d.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/simulation/world-action.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/training/data-foundry.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/training/economics.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/training/engine-contract.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/training/eval-gate.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/training/hardware.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/training/learning-router.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/training/portfolio.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/training/types.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/verification/finding-reconciliation.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/verification/release-gate.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/verification/wave-gates.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/voice/session.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/voice/voicebox-adapter.ts",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/src/workflow/compensation.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/workflow/dead-letter.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/workflow/dispatcher.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/workflow/durable.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/workflow/file-run-store.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/workflow/heartbeat.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/workflow/idempotency.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/workflow/recovery.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/workflow/reversible-graph.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/workflow/sql-run-store.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/src/workflow/webhook.ts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/tsconfig.json",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/a06-source-stream-currentness.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/a15-research-authority.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/a22-billing-body-clock.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/a22-billing-event-custody.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/a22-protected-response-currentness.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/a22-session-currentness.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/account-change-custody.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/account-clock-custody.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/account-review.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/account-review.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/ai-guidance.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/app.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/app.world.bundle.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/area-acceptance.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/area-acceptance.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/area-evidence-map.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/artifact-decimal.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/artifact-exact-decimal-boundary.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/artifact-input-consumers.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/artifact-intent.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/artifact-intent.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/backward-memory-search.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/backward-research.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/billing-clock-beast.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/billing-operations.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/billing-outbox-clock.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/billing-outbox.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/billing-sender.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/billing-sync.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/billing-sync.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/bounded-status-history.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/bounded-status-history.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/brain-choices.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/brain-choices.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/browser-dictation.js",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/browser-dictation.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/browser-observation-contract.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/browser-observation-host.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/browser-observation-host.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/browser-speech.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/browser-speech.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/business-context-publication.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/business-context.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/business-context.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/business-memory-isolation.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/business-workspace-replay.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/cancellation.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/candidate-transactions.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/canonical-promotion.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/canonical-promotion.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/chat-recovery.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/chatgpt-access.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/chatgpt-access.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/codex-account-observer.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/codex-account-observer.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/codex-admission-boundary.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/codex-conversation-runtime.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/codex-conversation-runtime.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/codex-model-adapter.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/codex-model-adapter.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/codex-stop-uncertainty.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/codex-strict-configuration.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/combined-closure.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/companion-accounts.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/companion-accounts.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/companion-ack-custody.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/companion-journal-privacy.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/companion-package-acl.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/companion-package-fixture.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/companion-pairing.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/companion-queue.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/companion-queue.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/companion-readiness.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/companion-recovery.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/companion-retirement.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/companion-setup.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/companion-startup.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/companion-updates.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/companion-version-policy.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/connected-workflows-model-only.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/connected-workflows.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/containment-admission.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/context-scope.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/conversation-cancellation.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/conversation-evidence-boundaries.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/conversation-identities-beast.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/conversation-runtime.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/conversation-runtime.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/conversation-stream-client.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/conversation-stream-client.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/creative-custody.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/creative-runtime-surface.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/crown-artifact-input.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/crown-artifact-input.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/crown-calculation-api.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/crown-presentation.css",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/crown-rift-motion.css",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/crown-rift-scenes.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/crown-rift-shell.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/crown-rift-state.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/crown-rift-state.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/crown-rift.css",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/crown-rift.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/crown-rig-lab.bundle.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/crown-rig-lab.css",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/crown-rig-lab.html",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/crown-rig-lab.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/crown-tools.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/crown-tools.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/database-admission-recovery.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/database-backup.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/database-schema-recovery.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/deletion-authority.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/deletion-journal.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/department-business-scope.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/department-cancellation-custody.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/department-capabilities.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/department-conversation-ui.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/department-conversation-ui.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/department-conversation.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/department-delegation.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/department-delegation.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/department-retired-conversation.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/department-storage-http.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/department-storage.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/deployment-imports.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/deployment-verification.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/document-citations.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/document-native-security.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/document-quote-formats.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/document-quote.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/durable-repair-plans.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/durable-repair-plans.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/durable-schedules.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/durable-schedules.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/durable-store.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/ecosystem-catalog.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/ecosystem-result-limits.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/ecosystem-resume.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/ecosystem-workflow-admission.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/ecosystem-workflows-review.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/ecosystem-workflows-ui.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/ecosystem-workflows.css",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/ecosystem-workflows.html",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/ecosystem-workflows.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/ecosystem-workflows.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/engineering-plan-admission-retirement.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/engineering-plan-admission.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/engineering-plan-host.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/engineering-plan-host.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/engineering-plan-maintenance.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/engineering-plan-retirement.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/environment-startup-isolation.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/execution-admission-boundary.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/execution-anchor-crash.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/execution-async-fence-process.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/execution-coordinator.d.mts",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/execution-coordinator.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/execution-coordinator.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/finding-reconciliation-store.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/finding-reconciliation-store.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/fixture-waits.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/fixtures/department-reservation-exit.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/fixtures/department-retirement-worker.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/fixtures/native-folder-ready-crash.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/fixtures/reserved-lease-recovery-worker.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/fixtures/source-review-worker.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/fixtures/workspace-retirement-worker.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/forge-workflows.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/forge-workflows.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/goal-presentation.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/governed-conversation-calculation.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/governed-creative-runner.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/governed-creative-runner.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/governed-specialist-host.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/governed-specialist-host.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/held-out-memory-evaluation.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/http-errors-beast.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/index.html",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/job-goal-recovery.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/language-profile-custody.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/language-profile.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/legacy-event-ingestion.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/legacy-event-read-budget.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/legacy-response-custody.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/live/animation.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/live/animator.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/live/app.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/live/engine.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/live/live.css",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/live/live.html",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/live/math.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/live/overlay.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/live/preview-server.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/live/tevin-character.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/live/world.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/local-mic-serving.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/local-model-runtime.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/local-model-runtime.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/main-model-admission.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/memory-derivation.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/memory-direct-authority.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/memory-heldout-lifecycle.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/memory-intent.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/memory-intent.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/memory-midturn-quarantine.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/memory-read-fence.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/memory-recall.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/memory-register-boundary.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/memory-replay-policy.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/memory-revision.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/memory-search.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/memory-stream-review.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/memory-transitive-invalidation.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/model-bootstrap-startup.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/model-bootstrap.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/model-bootstrap.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/model-dispatch-contract.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/model-dispatch-host.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/model-dispatch-host.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/model-evidence-boundaries.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/model-history-scope.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/model-launch-registration.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/model-launch-registration.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/model-runtime-scope.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/model-runtime.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/model-runtime.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-artifacts-ui.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-artifacts.html",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/native-artifacts.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-artifacts.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/native-browser-job-recovery.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-browser-job-recovery.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-browser-job.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-browser-job.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-document-budget.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-document-locations.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-document-runtime.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-document-runtime.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-document-specialist.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-document-specialist.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-folder-journal.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-folder-journal.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-image-document.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-media-provider.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-media-provider.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-media-render.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-process-identity.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/native-process-identity.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/network-json-fidelity.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/omnidev-workflows.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/operational-subscriptions.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/operational-subscriptions.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/owned-browser-identity.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/owned-browser-identity.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/owned-browser-worker-identity.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/owned-browser-worker-identity.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/owner-account-channel.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/owner-account-channel.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/owner-account-ui.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/owner-departments.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/owner-departments.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/owner-memory-storage.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/owner-memory-storage.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/owner-model-connection.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/owner-model-connection.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/owner-repository-connection.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/owner-repository-connection.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/owner-repository-services.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/owner-tool-catalog.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/parent-companion-retirement-review.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/parent-engineering-retirement-review.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/parent-research-maintenance-review.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/parent-watch-maintenance-http.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/preflight.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/private-acl-native.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/private-config-security.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/private-config.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/private-maintenance-receipts.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/process-death.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/provider-health.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/public-model-projection.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/public-private-projection.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/rea-browser-egress.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/rea-browser-transport.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/rea-evidence-source.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/rea-evidence-source.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/rea-owned-cdp.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/realm-state.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/realms.css",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/realms.html",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/realms.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/realms.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/registered-department-startup.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/registered-department-startup.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/registered-engineering-startup.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/registered-engineering-startup.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/registered-legacy-event-fences.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/registered-legacy-events-http.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/registered-legacy-events-owner-fences.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/registered-legacy-events.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/registered-legacy-events.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/registered-model-startup.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/registered-model-startup.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/registered-research-host.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/registered-research-host.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/registered-research-startup.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/registered-research-startup.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/registered-source-registry.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/registered-source-registry.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/reign-a28-handoff.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/reign-clean-build.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/reign-email.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/reign-email.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/reign-handoff-current.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/reign-packet-ledger.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/reign-security-classification.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/reign-source-truth.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/repair-replay-capsule.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/repair-replay-capsule.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/repair-replay-integration.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/replay-owned-process-recovery.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/repository-manuals.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/repository-manuals.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/repository-product-scope.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/repository-read-contract.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/repository-scanner.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/repository-scanner.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/requirement-navigation.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/requirement-navigation.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/research-answer.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/research-answer.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/research-authority-process.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/research-heldout-entailment.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/research-history-http.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/research-history.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/research-history.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/research-maintenance.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/research-watch-abandonment.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/research-watch-abandonment.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/research-watch-discovery.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/research-watch-history.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/research-watch-history.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/research-watch-maintenance.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/research-watch-maintenance.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/research-watch-prefix-archive.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/research-watch-prefix.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/responses-events.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/responses-events.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/restore-identity.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/routing-checkpoint.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/routing-checkpoint.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/routing-financial-custody.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/runtime-local-work-truth.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/runtime-model-truth.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/scan-record.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/scanner-process.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/scanner-process.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/scanner-stop-custody.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/scoped-history-cleanup.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/server.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/server.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/source-aware-records.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/source-aware-records.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/source-memory-lifecycle.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/source-review-admission.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/source-review-restore.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/source-review-store.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/source-review-store.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/source-unavailable-isolation.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/specialist-job-contract.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/specialist-opportunity.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/specialist-opportunity.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/specialist-planner.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/specialist-planner.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/sql-agent-recovery-cli.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/static-browser-transport.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/style.css",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/subscription-briefing.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/subscription-briefing.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/subscription-clock-beast.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/subscription-clock.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/subscription-deadline-custody.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/subscription-dispatch-currentness.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/subscription-duplicate-risk.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/subscription-mailer.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/subscription-mailer.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/subscription-notification-outbox.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/subscription-price-context.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/subscription-price-custody.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/subscription-price-presentation.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/subscription-prices.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/subscription-prices.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/subscription-recovery.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/surface-navigation.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/test-audit-closure-runtime.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/test-process-death.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/tevin-activity.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/tevin-activity.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/tevin-blender-assets.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/tevin-character-candidate.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/tevin-motion-controller.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/tevin-motion-controller.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/tevin-persona.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/tevin-persona.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/tevin-receipt.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/tevin-sigil.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/tevin-world-assets.json",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/tevin-world.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/transport-loopback.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/typed-work-kind-boundary.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/ui-core.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/verified-work-recovery.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/verified-work-ui.js",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/verified-work.html",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/verified-work.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/verified-work.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/voice-preferences.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/voice-preferences.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/voice-turn-policy.js",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/voice-turn-policy.test.mjs",
+      "match": "CRLF/LF-only"
+    },
+    {
+      "path": "ONE/web/work-tool-services.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/work-tool-services.test.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/workspace-storage.mjs",
+      "match": "byte-exact"
+    },
+    {
+      "path": "ONE/web/workspace-storage.test.mjs",
+      "match": "byte-exact"
+    }
+  ],
+  "nativeRuntimeUnchangedFrom": "e9056a207d720656114549cce2dacf9343e0660d",
+  "oneJoinedRuntimeSource": "fd234a670a98e80bcbe9a1aaababf3ccc2a4b086",
+  "apiRuntimeSource": "a873526da9d63e21edf2ab5b26e59de22512ef36",
+  "modelCalls": 0,
+  "permanentOwnerInstallation": false,
+  "productionAccepted": false
+}
