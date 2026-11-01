@@ -38,3 +38,7 @@ evidence/forge-owner-worker-2026-11-01/** -text whitespace=-blank-at-eol,-blank-
 
 /evidence/owned-omnidev-connection-2026-11-01/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /evidence/owned-omnidev-connection-2026-11-01/*.log -diff
+
+/evidence/native-policy-enrollment-2026-11-01/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/evidence/native-policy-enrollment-2026-11-01/**/*.log -diff
+/evidence/native-policy-enrollment-2026-11-01/*.log -diff

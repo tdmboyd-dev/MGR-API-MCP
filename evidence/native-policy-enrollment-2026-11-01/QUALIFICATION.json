@@ -1,0 +1,60 @@
+{
+  "recordedAt": "2026-11-01T23:35:24.101116+00:00",
+  "ownerProductSource": "33cd46463b299d15b94fd3f10700368771ddd10b",
+  "ownerFixtureCorrection": "61f26c6ddc670aff7f7756de4c2b275c9b2addf8",
+  "owningSnapshotNormalizerSource": "941107c2ed7df456bdc3a8a2ab4dd1ceec522d21",
+  "owningServiceAdmissionSource": "90ba1350e61a46f01096ac64962ac6406b244330",
+  "finalNativeTrial": {
+    "passedChecks": 14,
+    "totalChecks": 14,
+    "nativeWindowsExecutions": 2,
+    "inferenceProviderCalls": 0,
+    "permanentOwnerDatabaseTouched": false,
+    "rawInputObjectKeysReversed": true,
+    "historicalReportBytesRetainedAndCurrentnessFalse": true
+  },
+  "retainedEarlierTrials": [
+    {
+      "checks": 13,
+      "executions": 2
+    },
+    {
+      "checks": 14,
+      "executions": 2
+    }
+  ],
+  "otherVerification": {
+    "oneJoinedDiagnostic": {
+      "passed": 47,
+      "failed": 1,
+      "total": 48,
+      "failure": "test fixture explicit owning-root path used noncanonical separators; production direct-path check retained"
+    },
+    "correctedPolicyAndActualWriterCrashTests": {
+      "passed": 19,
+      "failed": 0,
+      "total": 19
+    },
+    "owningSharedImportProfiles": {
+      "source": "941107c2ed7df456bdc3a8a2ab4dd1ceec522d21",
+      "passed": 10,
+      "failed": 0,
+      "total": 10
+    },
+    "owningCurrentAdmissionProfiles": {
+      "source": "90ba1350e61a46f01096ac64962ac6406b244330",
+      "passed": 2,
+      "failed": 0,
+      "total": 2
+    },
+    "actualPolicyWriterProcessInterruptions": 2,
+    "initialImportDiagnostic": "7/8 commands; new successful import fixture left seven rows before original zero-write checks. Isolated only that fixture; original rejection assertions unchanged."
+  },
+  "counting": "Scopes overlap. Do not add these into one unique-test total or relabel predecessor/native reports as later whole-source runs.",
+  "permanentEngineeringEnabled": false,
+  "productionVerified": false,
+  "newOriginalParentClosures": 0,
+  "fullThirteenRepositorySourceProductProductionScope": "Unassessed",
+  "inputs": [],
+  "companionPerFileSourceManifestsWithheld": true
+}

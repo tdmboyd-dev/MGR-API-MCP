@@ -1,0 +1,14 @@
+{
+  "NATIVE-RESULT.json": {
+    "bytes": 3484,
+    "sha256": "a6c0b1fcb224d906ed50613e4b1ed56cf0ee8b218602e2949723d5b75798b181"
+  },
+  "QUALIFICATION.json": {
+    "bytes": 2161,
+    "sha256": "0253943c2de0164c2aeffbed716dc33ebe5c31816dcbd116f3b73ed7a0ced2cb"
+  },
+  "REPORT.md": {
+    "bytes": 6233,
+    "sha256": "b01552365f3b65f11e97c438252d48000627a1494f6364da8e14e4f1b5656f86"
+  }
+}
