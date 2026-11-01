@@ -12,3 +12,4 @@ evidence/owner-launch-completion-2026-10-30/** -text whitespace=blank-at-eol,bla
 
 /evidence/no-restart-navigation-20261101/** -text
 /evidence/no-restart-navigation-20261101/*.txt -diff
+/evidence/no-restart-navigation-20261101/** whitespace=trailing-space,space-before-tab,cr-at-eol

@@ -1,3 +1,11 @@
+# Current compiled eight-tool composition with Backpack0.6.2 — November 1, 2026
+
+Rebuilt current normal HTTP source and executed26/26 real local TCP/JWKS/signed-JWT/SQLite/Git/compiler checks with Backpack0.6.2 and eight-tool Code Monster. The qualifier now checks nonempty source hierarchy/automation, withheld command bodies and current revocation of all four navigation/structure reads. Its fixture now commits a package declaration so automation success cannot be mistaken for an empty map. Existing principal/project scopes and all product authority stay unchanged. Raw final proof: evidence/no-restart-navigation-20261101/compiled-backpack-062-eight-tools.json. Initial stale compiled/catalog and empty-fixture harness failures remain in private owning Backpack evidence; they are not passing runs.
+
+The other AI's normal adapter expansion/full165 and enrolled owner297/Tevin injected-model flow remain separate source-scoped evidence, recorded below. This current26-check run does not prove hosted TLS/OAuth, actual Docker or permanent Tevin activation. No Windows restart; owner defers it.
+
+---
+
 ## Completed native hierarchy/automation source qualification â€” November 1, 2026
 
 Serena real LSP5/5 and original65+32tests; Claude Map original isolated HTTP4/4 with completed cleanup; supported REA and ambiguity limits retained. Original native hierarchy/name paths/labeled ranges and value-withholding committed automation map are built through existing owners. Code Monster final263results:257pass/0fail/6explicit Windows skips; enrolled API297/297; ONE35/35+build; normal API165/165 and distinct actual source/compiled HTTP qualification. The original deadline, normal-adapter registration and loaded CLI failures remain preserved. [Completed work, repaired integration and boundaries](evidence/serena-claudemap-2026-11-01/REPORT.md). Canonical adoption/current runtime and final source receipts are recorded next; no permanent live-model/production acceptance is claimed.
