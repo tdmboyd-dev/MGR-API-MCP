@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-01T21:25:02.270Z",
+  "passed": 6,
+  "checks": [
+    "native apply refused before accepted worker proof",
+    "actual localhost native queue executes approved oracle inside AppContainer",
+    "actual authenticated report persists boundary and cleanup proof",
+    "stored accepted receipt reconciles without executing again",
+    "accepted passing receipt permits existing owner snapshot apply",
+    "existing rollback restores laboratory snapshot"
+  ],
+  "qualificationDigest": "fa75feedb57c79c9860089545e75820ecea5a7d7879ed7390cf09aeea7d612e4",
+  "scope": "Actual Windows AppContainer and existing job/SQLite/HTTP/report/owner paths on owned fixture source. No model, external repo, production signer, Docker or broad application-worker qualification."
+}

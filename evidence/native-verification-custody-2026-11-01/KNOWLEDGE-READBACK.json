@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "permanentOwner": true,
+  "sharedApi": true,
+  "sourceCommit": "c5293a59b8bb6da7fc3df0f504eda8595f0299ce",
+  "document": "HANDOFF.md",
+  "indexPages": 11,
+  "documentPagesRead": 1,
+  "pageTextSha256": "b5874d9f15cf8a07e599192fdeb7941e75320f38ed32eb84c2d50061effa9d7f",
+  "exactCommittedFirstPageMatched": true,
+  "currentQualifiedRuntimeAnd87ProfileEvidenceVisible": true,
+  "oldPinnedCommitRefused": true,
+  "receiptId": "acc25d1c-eca6-4ae3-9a88-2796d2bee7b1",
+  "executionEffectsUnchanged": true,
+  "privateConfigurationUnchanged": true,
+  "newInferenceCalls": 0,
+  "engineeringExecutionEnrolled": false,
+  "fullHandbookRead": false,
+  "actualBrowserUnlockVerified": false,
+  "privateValuesPrinted": false
+}

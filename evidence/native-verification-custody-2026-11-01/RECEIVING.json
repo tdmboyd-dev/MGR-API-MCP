@@ -1,0 +1,30 @@
+{
+  "repository": "MGR-OMNIDEV-SWARM",
+  "qualifiedRuntime": "ee24e165f8c90c07efbbb8c1abb38986c741588a",
+  "publishedSourceAndEvidence": "650ef7e5458a629c49a62ec1dabf1f34b2957754",
+  "fullLocalVerificationProfiles": {
+    "passed": 87,
+    "total": 87,
+    "failed": 0,
+    "blocked": 0
+  },
+  "newNativeCustodyCases": {
+    "passed": 13,
+    "total": 13
+  },
+  "actualWindowsFixtureWorkflow": {
+    "passed": 6,
+    "total": 6
+  },
+  "currentPermanentTevinEngineeringEnrolled": false,
+  "signedTrilogyWindowsWorkerQualified": false,
+  "productionAccepted": false,
+  "newModelCalls": 0,
+  "originalParentPromotions": 0,
+  "sourceReadCoverage": "selected traced path only; whole source audit Unassessed",
+  "canonicalAdoptedHead": "c5293a59b8bb6da7fc3df0f504eda8595f0299ce",
+  "canonicalQualifiedGitBlobsMatched": 6,
+  "progressViewContractsPassed": 16,
+  "actualPermanentKnowledgeReadbackPassed": true,
+  "fullHandoffRead": false
+}
