@@ -1,0 +1,63 @@
+{
+  "after": {
+    "failed": 0,
+    "finalFullLogSha256": "72c9b960f6c424ac037bd9ce2b4ff89d560666ab02e6c3cb63fa29732ffb6536",
+    "focusedTestsPassed": 44,
+    "fullLogSha256": "f28e7c88f80e77a179ae8f2bc699278b9c130ffcf545a0352e068e1b9673ad0a",
+    "fullTestsRun": 642,
+    "passed": 639,
+    "skipReason": "Optional SAM backend unavailable",
+    "skipped": 3
+  },
+  "baseCommit": "c7d7b6d8e31f67bcd382e6d7097f50d1a9e5037c",
+  "before": {
+    "logSha256": "c41e014018e9532fe693474957d0970a93d38855c4b8d2b680f3f2d5d136cffc",
+    "newRegressionTestsFailed": 4
+  },
+  "chrome": {
+    "creatureWorld": "browser-creature.json",
+    "desktopViewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        1440,
+        950
+      ]
+    ],
+    "human": "browser-human.json",
+    "mobileVerified": false,
+    "screenshotsInspected": true
+  },
+  "defect": "Unauthenticated Studio HTML embedded its bearer and private world; file/POST token checks could therefore be defeated by another local HTTP client.",
+  "firstBrowserAttempts": "Missing optional playwright-core installation, fragment-only navigation response and canceled test-route lifecycle errors retained in private logs; corrected test harness, not relaxed product assertions.",
+  "ownerArtAccepted": false,
+  "permanentTevinExecutionVerified": false,
+  "productionVerified": false,
+  "remaining": [
+    "Permanent Tevin Forge write/approval/job/artifact/reopen integration",
+    "Native worker restart/orphan liability and cancellation qualification",
+    "Hosted OAuth/private-worker/production acceptance",
+    "Mobile unlock/browser acceptance",
+    "Whole Forge source/feature audit and professional art acceptance"
+  ],
+  "scope": "Local Studio credential exposure repair; targeted source review, HTTP regression and actual Chrome/Blender consumer qualification. Not whole-product acceptance.",
+  "security": "Anonymous bootstrap is constant; private editor requires exactly one matching ASCII header; no query/cookie auth; owner link fragment removed before authenticated fetch; tab-scoped session survives reload; no bearer in public receipts.",
+  "sharedAPI": {
+    "actualProtocol": "shared-api-protocol.json",
+    "allTwelveOperationsAvailable": true,
+    "fixtureIdentityNotPermanentTevin": true,
+    "realBlenderCompositionAndHumanReimport": true,
+    "sourceCommit": "6e70b8ce1b7f93ff201812788a6625d481bce75b"
+  },
+  "sourceSha256": {
+    "forge/cli.py": "d983827e5a4d6b1b12e6fcbb8929eda457f254bf7787d5704c2147ac6e2958dd",
+    "forge/studio_server.py": "30496a856d19cb22750d9368c98c296bc6ab90e571c87b80795d66c7ecc7d40d",
+    "scripts/browser-qa/creature.mjs": "e23149b0c88a9b194a19ebcce4a3f26286cc6012731570f62eaeaa016e403f7f",
+    "scripts/browser-qa/human.mjs": "eb414de8766efd70fc5b01ddb93aed9cb1503163165b43467440fa1988b53755",
+    "scripts/browser-qa/package-lock.json": "b8e8ad84a0267f9631c45660c49d2dc3fc95c2a34b710e5f7f32579fce32c572",
+    "scripts/verify_browser_ui.py": "b9a0e791cc1d12e02e7f1b546d7cff00458ac267b6d9eeef6d67c989f8aa6077",
+    "tests/test_studio_server.py": "2a76ce89dae0b23705528a52fa28f3bbe741be278dc5355969439a54a0a8fcd7"
+  }
+}

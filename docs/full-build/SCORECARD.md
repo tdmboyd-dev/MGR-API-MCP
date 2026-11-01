@@ -110,3 +110,7 @@ No completion percentage is assigned without a defined acceptance denominator. P
 Department delivery source `f77b276cf0b9aee2768305370f9650a063e65c61` committed/non-force pushed with exact remote readback; main unchanged. Current publication is recorded under evidence/department-owner-integration-2026-10-30/source-publication.json. The concurrent ONE owner/model/server/UI overlay remains outside this qualified source.
 
 November1 receiving-lane publication: source `6b23dfeb6faaf962197ab9d28dd2315bb54a270a`, exact remote readback confirmed. Selected ONE regression309/309 (100% of that explicit309-check denominator;0failed), API starter6/6, fullAPI190/190 separately. Whole-product completion remains Unassessed. Personal jobs/worker/live-job consumer remain open; same original tracker and owning-lane source edits preserved.
+
+## Forge Studio receiving checkpoint — November 1, 2026
+
+Existing Forge/shared edge and revision-aware knowledge gain the secured native entry repair and current consumer proof. See `../../evidence/forge-studio-access-2026-11-01/REPORT.md`. Full Forge642/639pass/3SAMskips, real Chrome and SDK/Blender pass in their explicit scopes. Whole products remain Unassessed; no parent requirement closed. Personal Tevin write/approval/job/artifact/reopen/cancel remains unfinished engineering.
