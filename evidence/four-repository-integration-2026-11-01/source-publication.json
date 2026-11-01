@@ -1,0 +1,29 @@
+{
+  "publishedAt": "2026-11-01T05:37:56.146047+00:00",
+  "repositories": {
+    "API": {
+      "repository": "https://github.com/tdmboyd-dev/MGR-API-MCP.git",
+      "branch": "repair/completion-2026-10-28",
+      "parent": "d5535f0d6ca163a9f4128696f2a00da0dacab565",
+      "sourceCommit": "6b23dfeb6faaf962197ab9d28dd2315bb54a270a",
+      "remoteReadback": "6b23dfeb6faaf962197ab9d28dd2315bb54a270a",
+      "mainBefore": "7ce84d7e3aea892645b16e6aeec5fb5f150f68ac",
+      "mainAfter": "7ce84d7e3aea892645b16e6aeec5fb5f150f68ac",
+      "mainUnchanged": true,
+      "workingTreeClean": true,
+      "nonForcePush": true
+    },
+    "ONE": {
+      "repository": "https://github.com/tdmboyd-dev/MGR-ONE.git",
+      "branch": "integrate/department-tools-2026-10-28",
+      "parent": "d4d0a5d5fe2392ae8c1e21c975eabf8973c8a6a3",
+      "sourceCommit": "d3e706618d271bcd2cebba14cdb3c83caf832e4c",
+      "remoteReadback": "d3e706618d271bcd2cebba14cdb3c83caf832e4c",
+      "mainBefore": "fea59993781d7f22d7330e1b23365fca75ee1089",
+      "mainAfter": "fea59993781d7f22d7330e1b23365fca75ee1089",
+      "mainUnchanged": true,
+      "workingTreeClean": true,
+      "nonForcePush": true
+    }
+  }
+}
