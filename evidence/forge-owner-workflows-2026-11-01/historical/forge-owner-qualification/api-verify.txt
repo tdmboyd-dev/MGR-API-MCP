@@ -1,0 +1,10 @@
+
+> @mgr/api-mcp@0.1.0 verify
+> npm run typecheck && npm test && npm run verify:hosted-artifacts && npm run plugin:verify
+
+
+> @mgr/api-mcp@0.1.0 typecheck
+> tsc --noEmit
+
+test/forge-department.test.ts(41,105): error TS2339: Property 'isError' does not exist on type '{ [x: string]: unknown; content: ({ type: "text"; text: string; annotations?: { audience?: ("user" | "assistant")[] | undefined; priority?: number | undefined; lastModified?: string | undefined; } | undefined; _meta?: { ...; } | undefined; } | { ...; } | { ...; } | { ...; } | { ...; })[]; _meta?: { ...; } | undefine...'.
+  Property 'isError' does not exist on type '{ ready: boolean; }'.

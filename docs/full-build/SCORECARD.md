@@ -122,3 +122,7 @@ The same original Forge/shared-edge work gains bounded structural GLB validation
 ## Exact native request identity — November 1, 2026
 
 Existing Forge/job/shared-consumer work gains native original-request verification and bounded denied-body transport repair; API278/278,Forge654/651pass/3SAMskips and actual SDK/Blender all-five input proof passed. Same existing ledgers/permissions; old twelve schemas unchanged. See root-relative evidence/forge-request-binding-2026-11-01/verification.json. Permanent Tevin action/save/reopen and broader whole-product/hosted acceptance remain open; no original parent ID closed.
+
+## Approved Forge workflow engine checkpoint — November1
+
+API292/292 and isolated ONE1027/1027 passed; actual all5native operations/6jobs/ownerSQLreopen/lost-response-no-retry pass. Implemented through existing permission, job and storage owners. Permanent installation, before-admission preparation, joined peer source and full conversation/launcher/worker recovery remain open. No original package closure; whole-product Unassessed. Evidence: root-relative evidence/forge-owner-workflows-2026-11-01/REPORT.md.

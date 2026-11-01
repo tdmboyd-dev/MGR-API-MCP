@@ -1,0 +1,22 @@
+✔ exact preview anchored approval completion replay and generic worker separation (200.5635ms)
+✔ unknown network outcome survives restart and pending Voice only reconciles (188.1968ms)
+✔ unenrolled missing anchor cancelled preview and unknown command deny effects (260.9857ms)
+✔ expired grant cannot dispatch (105.6383ms)
+✔ reserved crash gap recovers once; settled gap reconciles without redispatch; artifact corruption denied (171.5722ms)
+✔ unverified success never settles; concurrent late pending cannot overwrite terminal state (120.5783ms)
+✔ fractional/signed input binds to exact approval without changing financial integer rules (190.7662ms)
+✔ changed coordinate invalidates approval and storage tampering before dispatch (134.0892ms)
+✔ native input, principal and result byte identity are required before settlement (705.7268ms)
+✔ lost reply survives reopen and reconciles without another create (128.138ms)
+✔ pending and failed jobs retain their actual lifecycle and artifact refusal (211.1831ms)
+✔ delegation stays in exact enrolled workspace and preserves action-count limits (143.1172ms)
+✔ mismatched returned artifact cannot replace the approved saved job (128.6986ms)
+✔ typed defaults normalize absent fields, never explicit null or unsupported side effects (0.7573ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1944.5886

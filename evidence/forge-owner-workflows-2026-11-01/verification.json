@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "sourceStable": true,
+  "guardedInputs": 2170,
+  "changed": [],
+  "added": [],
+  "removed": [],
+  "runs": [
+    {
+      "log": "api-verify.txt",
+      "exitCode": 0,
+      "counts": {
+        "tests": 292,
+        "pass": 292,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "log": "primary.txt",
+      "exitCode": 0,
+      "counts": {
+        "tests": 751,
+        "pass": 751,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "log": "timed.txt",
+      "exitCode": 0,
+      "counts": {
+        "tests": 276,
+        "pass": 276,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      }
+    }
+  ],
+  "OneTestFiles": 96,
+  "sourceBaseONE": "493e9d701110afafad4d0555283f8de308557b6f",
+  "elapsedSeconds": 329.12,
+  "modelCalls": 0,
+  "permanentForgeInstallationVerified": false,
+  "productionVerified": false
+}

@@ -1,5 +1,15 @@
 # Resume MGR-API-MCP
 
+## Approved Forge workflow engine — November 1, 2026
+
+Five native Forge operations are integrated with the existing ONE approval/delegation/workflow/SQLite/artifact engine and shared DepartmentGateway: world edits, creature/morph, biome, timed-phoneme human animation and Blender composition. Original command/principal/workspace/native-input/job/GLB bytes are verified before settlement. Fractional/signed geometry uses an exact command digest; financial integer rules remain unchanged. No second ledger or provider was added.
+
+API292/292 plus typecheck/hosted-artifact/plugin checks; isolated ONE1027/1027 across96files, source-stable guarded qualification. Actual temporary owner approval/SQLite -> official SDK/loopback edge -> real secured Forge/Blender passed all5operations,6jobs including a genuinely lost response, exact artifact readback and owner SQL reopen with no duplicate create. Predispatch cancellation creates no job. Earlier failed runs remain historical; fixture identity is not permanent account/model acceptance. See evidence/forge-owner-workflows-2026-11-01/REPORT.md (root-relative).
+
+This supersedes the instruction to implement the workflow-engine adapter from scratch. Permanent owner startup still enables only Creation rendering; Forge worker enrollment/start/stop/recovery, before-admission native preparation, large-input custody, full model conversation/normal-launcher replay and postdispatch native cancellation remain unfinished. Join/qualify the peer's c447085/f7320dc memory/history/recovery source before adopting this feature lane; this isolated proof does not certify that later tree. No account/model call, owner restart, production promotion, whole-product percentage or original parent closure follows from this checkpoint. Same283IDs/21closed15open36/selected-ten5of10.
+
+Cross-repo reuse/integration/cost comparison is a required ongoing outcome, including actual provider/consumer map, integration matrix, internal alternatives, maintenance cost, migration/rollback and owning handoffs. Existing code is not presumed best. Creation's older native-service checkout and canonical main are divergent; the exact finding and next reconciliation are in ONE coordination/ECOSYSTEM-REUSE-AND-MERGE-PLAN.md. Savings remain unmeasured.
+
 ## Native exact-request verification and denial transport repair — November 1, 2026
 
 World, creature, biome, human and composition creators already rejected same-ID changed inputs, but their ID-only status reads did not prove the instructions behind an old job. The existing Forge controller now adds authenticated read-only `/api/request-verify`: the SAME creation validators/fingerprint helpers, applicable current world/biome sources, saved original request bytes and original job status must agree. It allocates no job or grant and never retries. ID-only status remains available for observation; accepting an approved action must use the exact-input proof as well.

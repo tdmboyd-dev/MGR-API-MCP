@@ -1,0 +1,63 @@
+{
+  "actualDepartmentExecutePosts": 6,
+  "allFiveOperationsVerified": true,
+  "cancelBeforeDispatchCreatesNoJob": true,
+  "creates": 6,
+  "modelCalls": 0,
+  "ownerSQLReopenVerified": true,
+  "passed": true,
+  "permanentOwnerInstallation": false,
+  "productionAccepted": false,
+  "results": [
+    {
+      "bytes": 11512,
+      "inputFingerprint": "a311341348906b8c83dc4676fdd0c269739ace07b2e0ada43961cbbe66bf8384",
+      "jobId": "4165369ac2686994446140ff",
+      "operation": "forge.world.create",
+      "requestId": "owner-native-world-001",
+      "sha256": "34c050c2502ce19e14856659ef92069e573cb9c06d070e47b39a27d34f70a036"
+    },
+    {
+      "bytes": 109124,
+      "inputFingerprint": "d3bc0baa54a39eb5f3f7c66834bbf473af3430cba27f802d5d30e6de22086896",
+      "jobId": "e9658adc658fcf97cba2e9ee",
+      "operation": "forge.creature.create",
+      "requestId": "owner-native-creature-001",
+      "sha256": "2e76271dabe5c24abc4c95e71f37ddc992d328ff4a298aa2508a7ef8608e07bb"
+    },
+    {
+      "bytes": 32860,
+      "inputFingerprint": "695a85d7f472a75557daac2b9b914e57c0e2f6a19faca0b05875f8a8fba8e75f",
+      "jobId": "8def423f1a9b5e481c773c4f",
+      "operation": "forge.biome.create",
+      "requestId": "owner-native-biome-001",
+      "sha256": "86fa4e1d4f2a55230ae2da029c52014b94d9961f74aef5f5b7cd469963b00e8c"
+    },
+    {
+      "bytes": 43208,
+      "inputFingerprint": "4029f172418772c6ecaf7512f8b9ef2065dff61fddf7b2a04132addb1819c54c",
+      "jobId": "8bfda6b543396e0847d165c6",
+      "operation": "forge.world.compose",
+      "requestId": "owner-native-compose-001",
+      "sha256": "3c964435664ae0585c3571bc3fd0e729153b5ed44b97b8dab8dd76d7154fab19"
+    },
+    {
+      "bytes": 230120,
+      "inputFingerprint": "3c37f19b8f41dab5af79c88ba2987caf41b9eef1ec0dd4d9098288deaf0d0780",
+      "jobId": "6a8a93bd794bb70bd1338a25",
+      "operation": "forge.human.lipsync",
+      "requestId": "owner-native-human-001",
+      "sha256": "18931186d767c6d9ea1ee224712299bec1d639f8d99bc671d53412ce6e198440"
+    },
+    {
+      "bytes": 105684,
+      "inputFingerprint": "3016f5208c109bf7af5ecc90a0620fc071f83df13d7b16a627e56871893cfb0e",
+      "jobId": "4387893a85512237fb4b9769",
+      "operation": "forge.creature.create",
+      "requestId": "owner-lost-native-reply",
+      "sha256": "31a60f6d045d28af5a9b849529ad0f3fbc6c6a938bd55d592def72daff0e1ec6"
+    }
+  ],
+  "scope": "Actual temporary owner SQLite/anchored approval -> official SDK/loopback shared department edge -> native Forge/Blender, exact input/readback, owner-store reopen/replay and lost-response reconciliation. Not permanent account/model or native process-crash acceptance.",
+  "unknownReplyReconciledWithoutRetry": true
+}

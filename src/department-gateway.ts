@@ -6,11 +6,13 @@ import type { McpServer } from "@modelcontextprotocol/server";
 import { legacyRequestDigest, type LegacyEdgeClient } from "./legacy-client.js";
 
 import { OmniEngineeringClient, omniBindingInput, omniVerificationInput, type OmniClientConfig } from "./omnidev-client.js";
+import {forgeDepartmentCommands,isForgeDepartmentCommand,ForgeDepartmentAdapter,type ForgeDepartmentConfig} from './forge-department.js';
 
 const id=z.string().regex(/^[a-zA-Z0-9_.:-]{1,128}$/);
 const content=z.string().min(1).max(10000);
 const voiceId=z.string().regex(/^[a-zA-Z0-9_-]{1,80}$/);
 export const departmentCommand=z.discriminatedUnion("operation",[
+  ...forgeDepartmentCommands,
   z.object({operation:z.literal("legacy.contact.create"),requestId:id,input:z.object({displayName:z.string().min(1).max(200),email:z.email().optional()}).strict()}).strict(),
   z.object({operation:z.literal("creation.document.render"),requestId:id,input:z.object({workspaceId:id,title:z.string().min(1).max(500),sections:z.array(z.object({heading:z.string().min(1).max(500),body:content}).strict()).min(1).max(10),rightsRefs:z.array(id).min(1).max(10)}).strict()}).strict(),
   z.object({operation:z.literal("voice.speech"),requestId:voiceId,input:z.object({sessionId:voiceId,turnId:voiceId,text:z.string().min(1).max(1500).refine(v=>v.trim().length>0),profileId:z.literal("af_heart"),exactText:z.literal(true)}).strict()}).strict(),
@@ -19,13 +21,15 @@ export const departmentCommand=z.discriminatedUnion("operation",[
 ]);
 export type DepartmentCommand=z.infer<typeof departmentCommand>;
 export interface DepartmentEndpoint {baseUrl:string;token:string}
-export interface DepartmentGatewayConfig {tenantId:string;actorId:string;creation?:DepartmentEndpoint;voice?:DepartmentEndpoint;signme?:DepartmentEndpoint;legacy?:LegacyEdgeClient;omnidev?:OmniClientConfig;timeoutMs?:number;fetcher?:typeof fetch}
+export interface DepartmentGatewayConfig {tenantId:string;actorId:string;creation?:DepartmentEndpoint;voice?:DepartmentEndpoint;signme?:DepartmentEndpoint;legacy?:LegacyEdgeClient;omnidev?:OmniClientConfig;forge?:ForgeDepartmentConfig;timeoutMs?:number;fetcher?:typeof fetch}
 const digest=(bytes:Uint8Array)=>createHash("sha256").update(bytes).digest("hex");
 export const canonicalDepartmentJson=(x:any):string=>x!==null&&typeof x==="object"?(Array.isArray(x)?`[${x.map(canonicalDepartmentJson).join(",")}]`:`{${Object.entries(x).filter(([,v])=>v!==undefined).sort(([a],[b])=>a.localeCompare(b)).map(([k,v])=>JSON.stringify(k)+":"+canonicalDepartmentJson(v)).join(",")}}`):JSON.stringify(x);
 const inputDigest=(x:unknown)=>digest(Buffer.from(canonicalDepartmentJson(x)));
 export class DepartmentGateway {
   private readonly omni:OmniEngineeringClient|undefined;
+  private readonly forge:ForgeDepartmentAdapter|undefined;
   constructor(readonly config:DepartmentGatewayConfig){
+    this.forge=config.forge?new ForgeDepartmentAdapter(config.forge,config.tenantId,config.actorId):undefined;
     if(config.omnidev&&(config.omnidev.actorId!==config.actorId||config.omnidev.tenantId!==config.tenantId))throw Error("Omni service principal must match gateway principal");
     this.omni=config.omnidev?new OmniEngineeringClient(config.omnidev):undefined;
     if(!config.actorId.trim()||!config.tenantId.trim())throw Error("Department principal required");
@@ -66,6 +70,7 @@ export class DepartmentGateway {
   }
   async execute(command:DepartmentCommand,preDispatch?:()=>void){
     const c=departmentCommand.parse(command),p=this.config;
+    if(isForgeDepartmentCommand(c)){if(!this.forge)throw Error('Forge department not configured');return this.forge.execute(c,preDispatch);}
     preDispatch?.();
     if(c.operation==="omnidev.job.verify"){if(!this.omni)throw Error("Omni engineering service not configured");return {...await this.omni.execute(c.requestId,c.input,preDispatch),operation:c.operation};}
     if(c.operation==="legacy.contact.create"){
@@ -105,6 +110,7 @@ export class DepartmentGateway {
   }
   async status(command:DepartmentCommand){
     const c=departmentCommand.parse(command);
+    if(isForgeDepartmentCommand(c)){if(!this.forge)throw Error('Forge department not configured');return this.forge.status(c);}
     if(c.operation==="omnidev.job.verify"){if(!this.omni)throw Error("Omni engineering service not configured");return {...await this.omni.status(c.requestId,c.input),operation:c.operation};}
     if(c.operation==="legacy.contact.create"){
       const context={tenantId:this.config.tenantId,actorId:this.config.actorId,correlationId:c.requestId,idempotencyKey:c.requestId};
@@ -130,7 +136,9 @@ export class DepartmentGateway {
     return this.verifySignMe(c,result);
   }
   async artifact(command:DepartmentCommand){
-    const c=departmentCommand.parse(command);if(c.operation==="omnidev.job.verify"){if(!this.omni)throw Error("Omni engineering service not configured");return this.omni.artifact(c.requestId,c.input);}let fetched:any,expected:any;
+    const c=departmentCommand.parse(command);
+    if(isForgeDepartmentCommand(c)){if(!this.forge)throw Error('Forge department not configured');return this.forge.artifact(c);}
+    if(c.operation==="omnidev.job.verify"){if(!this.omni)throw Error("Omni engineering service not configured");return this.omni.artifact(c.requestId,c.input);}let fetched:any,expected:any;
     if(c.operation==="creation.document.render"){
       const r=await this.verifyCreation(c,await this.request("creation",`/v1/creation/jobs/${encodeURIComponent(c.requestId)}`));expected=r.artifacts?.[0];if(!expected)throw Error("Artifact unavailable");id.parse(expected.id);fetched=await this.request("creation",`/v1/creation/artifacts/${encodeURIComponent(expected.id)}`,undefined,true);
     }else if(c.operation==="voice.speech"){
@@ -143,6 +151,13 @@ export class DepartmentGateway {
   async cancel(command:DepartmentCommand){const c=departmentCommand.parse(command);if(c.operation==="omnidev.job.verify"){if(!this.omni)throw Error("Omni engineering service not configured");return {...await this.omni.cancel(c.requestId,c.input),operation:c.operation};}if(c.operation!=="voice.speech")throw Error("Only pending speech supports cancellation at this edge");return this.verifyVoice(c,await this.request("voice",`/v1/reign/speech/${encodeURIComponent(c.requestId)}/cancel`,{sessionId:c.input.sessionId,turnId:c.input.turnId}));}
 }
 export interface DepartmentToolOptions {auth:AuthContext;resourceAudience:string;gateway:DepartmentGateway}
+class DepartmentAuthorityExpired extends Error {}
+function departmentPublicationFence(options:DepartmentToolOptions,write=false){
+  const auth=options.auth,gateway=options.gateway,config=gateway.config,expires=auth.expiresAt;
+  const identity=()=>JSON.stringify([options.auth.actorId,options.auth.tenantId,options.auth.audience,options.resourceAudience,options.gateway.config.actorId,options.gateway.config.tenantId]);
+  const original=identity();
+  return ()=>{if(!Number.isFinite(auth.expiresAt)||auth.expiresAt<=Date.now())throw new DepartmentAuthorityExpired('Department authorization expired');if(options.auth!==auth||options.gateway!==gateway||gateway.config!==config||auth.expiresAt!==expires||identity()!==original)throw Error('Department original authority changed');gateway.authorize(auth,options.resourceAudience,write);};
+}
 export function registerDepartmentTools(server:McpServer,options:DepartmentToolOptions){
   server.registerTool("mgr_department_context",{
     description:"Read the authenticated department gateway principal. No domain request or mutation; identity comes only from the verified session.",
@@ -161,8 +176,8 @@ export function registerDepartmentTools(server:McpServer,options:DepartmentToolO
   });
   for(const method of ["execute","status","artifact","cancel","resume"] as const){
     server.registerTool(`mgr_department_${method}`,{description:`${method} a bounded department operation. Identity is credential-bound. No signing, sending, arbitrary code or paid providers.`,inputSchema:departmentCommand},async input=>{
-      try{const write=method==="execute"||method==="cancel"||method==="resume";options.gateway.authorize(options.auth,options.resourceAudience,write);const result=method==="execute"||method==="resume"?await options.gateway[method](input,()=>options.gateway.authorize(options.auth,options.resourceAudience,true)):await options.gateway[method](input);options.gateway.authorize(options.auth,options.resourceAudience,write);return {content:[{type:"text",text:JSON.stringify(result)}]};}
-      catch(error){return {isError:true,content:[{type:"text",text:JSON.stringify({error:error instanceof Error?error.message:"Department failed",state:"unconfirmed"})}]};}
+      try{const write=method==="execute"||method==="cancel"||method==="resume",current=departmentPublicationFence(options,write);current();const result=method==="execute"||method==="resume"?await options.gateway[method](input,current):await options.gateway[method](input);current();const text=JSON.stringify(result);current();return {content:[{type:"text",text}]};}
+      catch(error){return {isError:true,content:[{type:"text",text:JSON.stringify({error:error instanceof DepartmentAuthorityExpired?'Department authorization expired; reconcile the original request':'Department outcome unconfirmed; reconcile the original request',state:"unconfirmed"})}]};}
     });
   }
 }

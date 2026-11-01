@@ -3,6 +3,7 @@ import {createServer} from "node:http";
 import {timingSafeEqual} from "node:crypto";
 import {createAuthorizedMgrMcpHttpHandler} from "./mcp-http.js";
 import {DepartmentGateway,type DepartmentGatewayConfig} from "./department-gateway.js";
+export const OWNER_DEPARTMENT_REQUEST_BYTES=1_200_000;
 
 /** Explicit loopback service-token deployment. It is not a hosted OAuth issuer. */
 export function createLocalDepartmentEdge(options:DepartmentGatewayConfig&{port:number;accessToken:string;expiresAt:number;repositories?:RepositoryReadGateway}){
@@ -22,7 +23,9 @@ export function createLocalDepartmentEdge(options:DepartmentGatewayConfig&{port:
    const bearer=req.headers.authorization?.match(/^Bearer (.+)$/)?.[1]??"";
    if(Buffer.byteLength(bearer)!==Buffer.byteLength(options.accessToken)||!timingSafeEqual(Buffer.from(bearer),Buffer.from(options.accessToken))||options.expiresAt<=Date.now())return send(401,{error:"invalid or expired local service token"});
    if(req.url!=="/mcp")return send(404,{error:"not found"});
-   const chunks:Buffer[]=[];let size=0;for await(const chunk of req){const b=Buffer.from(chunk);size+=b.length;if(size>32768)return send(413,{error:"request exceeds limit"});chunks.push(b);}
+   const declared=req.headers['content-length'];
+   if(declared!==undefined&&(!/^\d+$/.test(declared)||!Number.isSafeInteger(Number(declared))||Number(declared)>OWNER_DEPARTMENT_REQUEST_BYTES))return send(413,{error:'request exceeds limit'});
+   const chunks:Buffer[]=[];let size=0;for await(const chunk of req){const b=Buffer.from(chunk);size+=b.length;if(size>OWNER_DEPARTMENT_REQUEST_BYTES)return send(413,{error:"request exceeds limit"});chunks.push(b);}
    const headers=new Headers();for(const [k,v] of Object.entries(req.headers))if(v!==undefined)headers.set(k,Array.isArray(v)?v.join(","):v);
    const body=Buffer.concat(chunks);const response=await handler.fetch(new Request(base+"/mcp",{method:req.method??"GET",headers,signal:cancellation.signal,...(body.length?{body:new Uint8Array(body)}:{})}));
    res.writeHead(response.status,Object.fromEntries(response.headers));res.end(Buffer.from(await response.arrayBuffer()));
