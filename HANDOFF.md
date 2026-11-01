@@ -1,3 +1,7 @@
+## Canonical Creation history and actual owner migration — November 1, 2026
+
+Creation's divergent canonical/native sources are joined and published at05c812f on repair/completion-2026-10-28; canonical Projects source now supplies Tevin's default launcher. Existing permanent document and Forge workflows survived consistent private backup, normal stop/start and exact replay with unchanged native rows/account configuration and zero new inference/creates. Six native defects repaired. Creation137/137, separate history migration1/1, normal consumer5/5, injected-conversation8/8 and APIaffected41/41 passed; do not sum scopes. [Evidence, source anchors, recovery and remaining work](evidence/creation-history-2026-11-01/CONSUMER-MIGRATION.md). Main branches are not promoted; full studio/ecosystem/production readiness remains Unassessed. Old checkout/history is retained for recovery and superseded only as the active default source.
+
 ## Completed RepoMind / ArchitectPlaybook native dependency review — November 1, 2026
 
 Built original compiler-derived moduleReview data into the existing Code Monster profile, which Tevin consumes through repository_read. It reports bounded structural dependency groups with pinned edge citations and explicit unresolved/omitted coverage. Type-only imports may be included; this is not runtime-cycle or defect proof. No extra tool, memory database, brain, grant engine or service was added.

@@ -1,0 +1,20 @@
+▶ full registered owner proposal -> exact approval -> real Creation -> all-store restart and replay
+  ✔ all four components share registered authority with no boot observations or domain writes (1041.1273ms)
+  ✔ actual owner command makes only a department proposal; model cannot approve or execute (309.2464ms)
+  ✔ preview alone cannot execute, explicit exact owner approval creates real durable artifact (310.5638ms)
+  ✔ close/reopen ALL owned hosts and SQLite stores; same owner request replays with ZERO new model or execute (225.3668ms)
+OWNED_DIAGNOSTIC {"requestId":"owned-wrong-business-001","status":200,"body":{"speaker":"Reign","intent":"unknown","surface":{"id":"answer","goal":"answer command","blocks":[{"type":"text","title":"Reign","data":{"status":"unavailable","reason":"Live business adapter is not configured.","businessLabel":"Owned independent business"}}]},"message":"I need a little more context before I choose a capability. This is a routing decision; no live product action was executed.","specialistRecommendation":{"id":"815784bc-86e1-4caf-97f9-6052cad63afe","roles":["Adaptive Mission Specialist","Independent Verification Specialist"],"status":"prepared-specialists","reason":"This job has multiple useful skills. Tevin can prepare a specialist team inside the existing protected workspace without asking you to approve routine planning.","requiresReview":false,"reused":false,"liveWorkersStarted":0},"presentation":"conversation","context":"approvals","receipt":{"id":"03a09d84-1e6f-4149-8c2b-cd29fc6f6067","at":"2026-11-01T15:39:46.726Z","kind":"decision","summary":"I need a little more context before I choose a capability.","businessId":"944dcc39-74b5-4dd2-9947-c7d8839e8725","evidence":["existing-command-classifier","existing-product-fabric"],"execution":"routing-only","liveProductVerified":false},"presenceEvents":[{"id":"2d9017c1-3344-42af-ac5e-af6efceac986","state":"interpreting","at":1793547586717,"summary":"Interpreting the protected routing request.","source":"protected-routing-runtime"},{"id":"bce9bbc4-ad1b-4b37-97df-8d67f1b4ed88","state":"working","at":1793547586718,"summary":"Selecting the authoritative MGR product; no product execution.","source":"protected-routing-runtime"},{"id":"c1dc7a73-00bc-4f9c-848b-aa315d0f8b69","state":"verified","at":1793547586727,"summary":"Routing receipt recorded; live product execution remains unavailable.","source":"protected-routing-runtime","receiptId":"03a09d84-1e6f-4149-8c2b-cd29fc6f6067"}],"execution":"routing-only","requiresLiveAdapter":true},"modelCalls":2,"executeCalls":1,"domainPosts":1}
+  ✔ wrong selected business denies personal proposal/action and all registered operation grants stay scoped (43.2503ms)
+OWNED_DIAGNOSTIC {"requestId":"owned-revoked-model-001","status":409,"body":{"error":"conversation-unconfirmed-no-automatic-retry"},"modelCalls":2,"executeCalls":1,"domainPosts":1}
+  ✔ revoked exact model permission denies a NEW owner request without model transport (30.9668ms)
+OWNED_JOURNEY_CLEANUP {"root":"C:\\Users\\cool\\AppData\\Local\\Temp\\owned-full-journey-EzSOCZ","existsAfter":false,"ownedServersAndStoresClosed":true,"modelCalls":2,"executeCalls":1,"domainPosts":1,"artifactReads":6}
+  ✔ revoked exact department approval denies NEW draft without SDK/domain execution (76.2797ms)
+✔ full registered owner proposal -> exact approval -> real Creation -> all-store restart and replay (2961.9448ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7969.4943

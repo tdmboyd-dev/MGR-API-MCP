@@ -177,3 +177,10 @@ November1 joined consumer receipt: ONEfd234a6 integrates peer owner-memory/recov
 ## Native preparation gate resolved — November1
 
 Six bounded local outcomes6/6 in root-relative evidence/forge-preparation-2026-11-01/REPORT.md: typed read-only preparation; exact receipt/authority binding; before-admission unconsumed-approval custody; cancellation/withdrawal during reads; native editor validation before allocation; actual five-operation/six-job/three-denial/save-reopen/lost-response proof. API295/ONE1068/native656run653pass3SAMskips/2255stable inputs. Original native14case/7failure receipt retained. Reused original validator and ledgers; no new model/account call, owner restart, paid service or measured monetary savings. Permanent worker/workspace/recovery/conversation/launcher and full original production scope remain open. No original parent closure or whole-product percentage.
+
+
+## Canonical Creation history and actual owner migration — November 1, 2026
+
+Creation's divergent canonical/native sources are joined and published at05c812f on repair/completion-2026-10-28; canonical Projects source now supplies Tevin's default launcher. Existing permanent document and Forge workflows survived consistent private backup, normal stop/start and exact replay with unchanged native rows/account configuration and zero new inference/creates. Six native defects repaired. Creation137/137, separate history migration1/1, normal consumer5/5, injected-conversation8/8 and APIaffected41/41 passed; do not sum scopes. [Evidence, source anchors, recovery and remaining work](../../evidence/creation-history-2026-11-01/CONSUMER-MIGRATION.md). Main branches are not promoted; full studio/ecosystem/production readiness remains Unassessed. Old checkout/history is retained for recovery and superseded only as the active default source.
+
+Bounded canonical consumer migration: 4/4 acceptance checks (100% this four-check scope): two-source compatibility, canonical registered consumer, actual permanent cold replay, exact source publication. Full ecosystem and monetary savings: Unassessed.

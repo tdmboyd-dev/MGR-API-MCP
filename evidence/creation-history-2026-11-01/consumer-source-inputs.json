@@ -1,0 +1,28 @@
+{
+  "observedHeads": {
+    "MGR-ONE": "0ef76b1ae621a4cd7ebc3a0612605532c8933b14",
+    "MGR-API-MCP": "0409caf026bed819bd2398621eb0c331c0132f01",
+    "MGR-CREATE-Os": "05c812f59b95a882d18fcc940f3b133356b3eb2f"
+  },
+  "note": "ONE launcher source change qualified before its commit; exact working bytes below. These six anchors are not whole transitive-source audit coverage.",
+  "anchors": {
+    "MGR-ONE/web/owner-departments.mjs": "edca1608c8e791173709d53e4dfb96032fdaa732aaef0e68395f2f759ada745e",
+    "MGR-ONE/scripts/tevin-owner.mjs": "d4362a2d10125f74084755407a114329c448c44508b2f811197ef3c884ede22f",
+    "MGR-API-MCP/src/department-gateway.ts": "3370a249725b58a1409e08783e06fa5614aa451326289b6473ceeec15bcfcb1f",
+    "MGR-API-MCP/scripts/owner-department-client.ts": "d0e8df50075efc579f14de12136269c2870b4dffd016dbd2f2da693b3eea821d",
+    "MGR-CREATE-Os/src/api/local-service.ts": "37ff898d2ad30d497e36fad2fbf36f8c85bde7e616dda5dd1a7a52d5de8ef70d",
+    "MGR-CREATE-Os/package-lock.json": "3bc9192c48e72ec62035268efcd59b0d9ec4737df7c43a81f5136bc456e61fc0"
+  },
+  "scopes": {
+    "creationUnit": 137,
+    "twoSourceMigration": 1,
+    "normalCreation": 5,
+    "conversationFixture": 8,
+    "apiAffected": 41
+  },
+  "permanentOwnerRestartReplay": true,
+  "newPermanentInferenceCalls": 0,
+  "newPermanentNativeCreates": 0,
+  "productionAccepted": false,
+  "lineEndingNote": "Anchor hashes reflect LF-normalized edited metadata/launcher; semantic source unchanged. canonical-source-custody records all182 Creation Git/working identities."
+}

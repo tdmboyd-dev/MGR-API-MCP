@@ -1,0 +1,15 @@
+▶ normal environment startup -> owner approval -> real MCP/Creation artifact -> all-host restart -> no duplicate write
+  ✔ preview is local and exact owner approval remains mandatory (157.1975ms)
+  ✔ normal registered MCP connection creates the actual persisted artifact (5321.4475ms)
+  ✔ all hosts and stores reopen; exact replay produces no additional domain POST (6441.0189ms)
+  ✔ registration withdrawal denies fresh dispatch before any remote action (187.1366ms)
+{"root":"C:\\Users\\cool\\AppData\\Local\\Temp\\owned-normal-creation-RSVqfR","existsAfter":false,"edgeCalls":8,"domainPosts":1,"artifactReads":6,"verifications":8,"realModelCalls":0}
+✔ normal environment startup -> owner approval -> real MCP/Creation artifact -> all-host restart -> no duplicate write (12643.1692ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 18923.3905

@@ -1,0 +1,51 @@
+✔ caller low-risk label cannot admit paid or unclassified creation capability (36.0963ms)
+✔ generic Creation result cannot publish after token expiry during effect (1.7889ms)
+✔ Creation approval digest changes with exact input and authenticated identity (1.9001ms)
+✔ Creation MCP dispatch binds authenticated tenant and actor (0.9384ms)
+✔ Creation MCP dispatch refuses missing scope (0.5667ms)
+✔ department edge binds identity/scopes and rejects unsafe endpoint configuration (13.251ms)
+✔ creation acceptance independently downloads and hashes actual artifact bytes (79.9168ms)
+✔ artifact rejects oversized stream before trusting provider metadata (3.4984ms)
+✔ official MCP client discovers and calls bounded department schemas; invalid identities never dispatch (305.1598ms)
+✔ self-consistent Creation artifact cannot prove a receipt for different inputs (158.103ms)
+✔ self-consistent SignMe draft hash cannot prove a different draft or request (9.276ms)
+✔ VOICE exact-text status and artifact reject self-consistent audio for a different session/text (7.3781ms)
+✔ expired authorization after dispatch cannot publish a department result (2.6114ms)
+✔ SignMe updates bind the actual target and next immutable version (5.4183ms)
+✔ explicit queued resume reads exact accepted job then one existing run POST and verified artifact (86.0117ms)
+✔ already succeeded resume verifies saved bytes and performs no POST (3.8121ms)
+✔ resume reconciles RUNNING without a new mutation (2.1289ms)
+✔ resume reconciles FAILED without a new mutation (2.7292ms)
+✔ resume reconciles CANCELLED without a new mutation (0.9842ms)
+✔ resume reconciles BLOCKED without a new mutation (7.5152ms)
+✔ resume reconciles UNKNOWN without a new mutation (2.0136ms)
+✔ wrong immutable input digest denies before resume POST (2.0346ms)
+✔ current authority withdrawn during queued read denies before POST (1.3143ms)
+✔ lost run acknowledgment is never retried inside the gateway (1.6611ms)
+✔ other department operation cannot enter native Markdown resume (3.3446ms)
+✔ source read receives the caller abort signal and retains custody through confirmed close (341.9815ms)
+✔ a pre-aborted source request cannot start transport and caller timeout overrides remain forbidden (63.4731ms)
+✔ source-only read budget survives15seconds and aborts at60seconds; original transport custody persists until close (53.5131ms)
+{"rawSDKControl":false,"mutations":0,"toolsLists":0,"actualLoopback":true,"outsideCalls":0}
+✔ held actual SDK HTTP connection cannot outlive original ONE grant before mutation (420.4535ms)
+✔ fixed local wrapper has zero construction network, exact context, no tool discovery, and one mutation (38.1933ms)
+✔ global startup authority revoked during held HTTP also denies mutation (19.4417ms)
+✔ wrong actual gateway principal is never used for mutation (53.2181ms)
+✔ sticky close denies held and later explicit calls without mutation (20.1582ms)
+✔ unknown tool, getters and async request hooks deny before network (7.4762ms)
+{"rawSDKControl":false,"mutations":0,"actualLoopback":true,"outsideCalls":0}
+✔ native promise/thenable callback is denied safely without reading then getter (6.2054ms)
+✔ fixed endpoint cannot select public hosts, alternate paths, URL credentials or executable schemes (0.9552ms)
+✔ starter uses the guarded client and preparation exposes the same authority fence (3.9704ms)
+✔ raw SDK asynchronous send cannot outlive original ONE grant (266.8143ms)
+✔ authority withdrawal after response headers cancels the original unread body (3.9374ms)
+✔ pending body cancellation retains exact transport custody until its original promise settles (24.7947ms)
+✔ tiny-chunk response overhead is bounded and its original producer is cancelled (64.2422ms)
+ℹ tests 41
+ℹ suites 0
+ℹ pass 41
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3649.553
