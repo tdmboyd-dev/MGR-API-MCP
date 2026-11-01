@@ -1,0 +1,234 @@
+✖ accepted native creation ID is read exactly: r:a_b.c-1 (203.5031ms)
+✖ accepted native creation ID is read exactly: . (73.4875ms)
+✖ accepted native creation ID is read exactly: .. (55.1038ms)
+✖ accepted native creation ID is read exactly: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:z (54.1612ms)
+✖ original queued native request resumes once without ID normalization: . (102.4196ms)
+✖ original queued native request resumes once without ID normalization: deferred:run (48.6174ms)
+✖ queued native cancellation preserves exact ID and replay adds no audit event: .. (49.0642ms)
+✖ queued native cancellation preserves exact ID and replay adds no audit event: deferred:cancel (45.3228ms)
+✖ legacy path cancellation also replays without another native event (72.7557ms)
+✖ body lookups/control retain credential ownership and reject caller identity (53.8134ms)
+✔ malformed path encodings never resolve to another native job (46.2266ms)
+✖ unknown body actions or IDs allocate no native job (36.4243ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 1
+ℹ fail 11
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1871.924
+
+✖ failing tests:
+
+test at test\native-service-identifiers.test.ts:1:2093
+✖ accepted native creation ID is read exactly: r:a_b.c-1 (203.5031ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  404 !== 200
+
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\creation-identifier-recovery\test\native-service-identifiers.test.ts:4:433)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\native-service-identifiers.test.ts:1:2093
+✖ accepted native creation ID is read exactly: . (73.4875ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  404 !== 200
+
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\creation-identifier-recovery\test\native-service-identifiers.test.ts:4:433)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\native-service-identifiers.test.ts:1:2093
+✖ accepted native creation ID is read exactly: .. (55.1038ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  404 !== 200
+
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\creation-identifier-recovery\test\native-service-identifiers.test.ts:4:433)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\native-service-identifiers.test.ts:1:2093
+✖ accepted native creation ID is read exactly: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:z (54.1612ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  404 !== 200
+
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\creation-identifier-recovery\test\native-service-identifiers.test.ts:4:433)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\native-service-identifiers.test.ts:1:2684
+✖ original queued native request resumes once without ID normalization: . (102.4196ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + undefined
+  - 'SUCCEEDED'
+
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\creation-identifier-recovery\test\native-service-identifiers.test.ts:5:399)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'SUCCEEDED',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\native-service-identifiers.test.ts:1:2684
+✖ original queued native request resumes once without ID normalization: deferred:run (48.6174ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + undefined
+  - 'SUCCEEDED'
+
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\creation-identifier-recovery\test\native-service-identifiers.test.ts:5:399)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'SUCCEEDED',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\native-service-identifiers.test.ts:1:3257
+✖ queued native cancellation preserves exact ID and replay adds no audit event: .. (49.0642ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + undefined
+  - 'CANCELLED'
+
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\creation-identifier-recovery\test\native-service-identifiers.test.ts:6:323)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'CANCELLED',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\native-service-identifiers.test.ts:1:3257
+✖ queued native cancellation preserves exact ID and replay adds no audit event: deferred:cancel (45.3228ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + undefined
+  - 'CANCELLED'
+
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\creation-identifier-recovery\test\native-service-identifiers.test.ts:6:323)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'CANCELLED',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\native-service-identifiers.test.ts:1:3844
+✖ legacy path cancellation also replays without another native event (72.7557ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+    [Object: null prototype] {
+      artifacts: 0,
+  +   events: 3,
+  -   events: 2,
+      jobs: 1
+    }
+
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\creation-identifier-recovery\test\native-service-identifiers.test.ts:7:318)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { jobs: 1, artifacts: 0, events: 3 },
+    expected: { jobs: 1, artifacts: 0, events: 2 },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at test\native-service-identifiers.test.ts:1:4192
+✖ body lookups/control retain credential ownership and reject caller identity (53.8134ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  404 !== 400
+
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\creation-identifier-recovery\test\native-service-identifiers.test.ts:8:359)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\native-service-identifiers.test.ts:1:4953
+✖ unknown body actions or IDs allocate no native job (36.4243ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  404 !== 400
+
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\creation-identifier-recovery\test\native-service-identifiers.test.ts:10:247)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

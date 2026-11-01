@@ -1,0 +1,220 @@
+✖ accepted exact request ID can be reconciled without changing identity: r:a_b.c-1 (151.7739ms)
+✖ accepted exact request ID can be reconciled without changing identity: . (54.7859ms)
+✖ accepted exact request ID can be reconciled without changing identity: .. (42.9401ms)
+✖ accepted exact request ID can be reconciled without changing identity: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:z (38.0563ms)
+✖ legacy admitted document identity supports snapshot/history/revision: document:a_b.c (57.2301ms)
+✖ legacy admitted document identity supports snapshot/history/revision: . (50.2901ms)
+✖ legacy admitted document identity supports snapshot/history/revision: .. (45.5111ms)
+✔ malformed/double-encoded/separator identifiers cannot be interpreted as another resource (41.7153ms)
+✖ body reads retain authenticated actor ownership and reject supplied identity fields (55.0061ms)
+✖ snapshot versions are exact positive safe integers (39.6075ms)
+✖ version-history lookup rejects ambiguous snapshot fields and unknown options (39.7034ms)
+✖ oversized or zero path versions are rejected as invalid inputs (43.6845ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 1
+ℹ fail 11
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 830.751
+
+✖ failing tests:
+
+test at test\service-identifiers.test.mjs:4:68
+✖ accepted exact request ID can be reconciled without changing identity: r:a_b.c-1 (151.7739ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  404 !== 200
+
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/signme-identifier-recovery/test/service-identifiers.test.mjs:4:477)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\service-identifiers.test.mjs:4:68
+✖ accepted exact request ID can be reconciled without changing identity: . (54.7859ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  404 !== 200
+
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/signme-identifier-recovery/test/service-identifiers.test.mjs:4:477)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\service-identifiers.test.mjs:4:68
+✖ accepted exact request ID can be reconciled without changing identity: .. (42.9401ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  404 !== 200
+
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/signme-identifier-recovery/test/service-identifiers.test.mjs:4:477)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\service-identifiers.test.mjs:4:68
+✖ accepted exact request ID can be reconciled without changing identity: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:z (38.0563ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  404 !== 200
+
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/signme-identifier-recovery/test/service-identifiers.test.mjs:4:477)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\service-identifiers.test.mjs:5:53
+✖ legacy admitted document identity supports snapshot/history/revision: document:a_b.c (57.2301ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  404 !== 200
+
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/signme-identifier-recovery/test/service-identifiers.test.mjs:5:410)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\service-identifiers.test.mjs:5:53
+✖ legacy admitted document identity supports snapshot/history/revision: . (50.2901ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  404 !== 200
+
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/signme-identifier-recovery/test/service-identifiers.test.mjs:5:410)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\service-identifiers.test.mjs:5:53
+✖ legacy admitted document identity supports snapshot/history/revision: .. (45.5111ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  404 !== 200
+
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/signme-identifier-recovery/test/service-identifiers.test.mjs:5:410)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\service-identifiers.test.mjs:7:1
+✖ body reads retain authenticated actor ownership and reject supplied identity fields (55.0061ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  404 !== 400
+
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/signme-identifier-recovery/test/service-identifiers.test.mjs:7:406)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\service-identifiers.test.mjs:8:1
+✖ snapshot versions are exact positive safe integers (39.6075ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  404 !== 400
+
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/signme-identifier-recovery/test/service-identifiers.test.mjs:8:189)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\service-identifiers.test.mjs:9:1
+✖ version-history lookup rejects ambiguous snapshot fields and unknown options (39.7034ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  404 !== 400
+
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/signme-identifier-recovery/test/service-identifiers.test.mjs:9:222)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\service-identifiers.test.mjs:10:1
+✖ oversized or zero path versions are rejected as invalid inputs (43.6845ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  404 !== 400
+
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/2026-10-30/so-i-have-a-question-and/work/signme-identifier-recovery/test/service-identifiers.test.mjs:10:180)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 404,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

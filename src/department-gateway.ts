@@ -25,6 +25,7 @@ export interface DepartmentGatewayConfig {tenantId:string;actorId:string;creatio
 const digest=(bytes:Uint8Array)=>createHash("sha256").update(bytes).digest("hex");
 export const canonicalDepartmentJson=(x:any):string=>x!==null&&typeof x==="object"?(Array.isArray(x)?`[${x.map(canonicalDepartmentJson).join(",")}]`:`{${Object.entries(x).filter(([,v])=>v!==undefined).sort(([a],[b])=>a.localeCompare(b)).map(([k,v])=>JSON.stringify(k)+":"+canonicalDepartmentJson(v)).join(",")}}`):JSON.stringify(x);
 const inputDigest=(x:unknown)=>digest(Buffer.from(canonicalDepartmentJson(x)));
+const dotSegment=(value:string)=>value==='.'||value==='..';
 export class DepartmentGateway {
   private readonly omni:OmniEngineeringClient|undefined;
   private readonly forge:ForgeDepartmentAdapter|undefined;
@@ -55,6 +56,9 @@ export class DepartmentGateway {
       try{return JSON.parse(new TextDecoder('utf-8',{fatal:true,ignoreBOM:true}).decode(bytes));}catch{throw Error(`Department ${service} returned invalid JSON`);}
     }catch(error){if(controller.signal.aborted)throw Error(`Department ${service} timed out; reconcile request before retry`);throw error;}finally{clearTimeout(timer);}
   }
+  private async identifierLookupCapability(service:'creation'|'signme'){const health=await this.request(service,'/health');if(health.identifierLookupVersion!==1||health.tenantId!==this.config.tenantId||health.actorId!==this.config.actorId)throw Error('Native exact-identifier lookup capability is unavailable');}
+  private signMeOperation(requestId:string){return dotSegment(requestId)?this.request('signme','/v1/documents/operations/read',{requestId}):this.request('signme',`/v1/documents/operations/${encodeURIComponent(requestId)}`);}
+  private creationJob(requestId:string){return dotSegment(requestId)?this.request('creation','/v1/creation/jobs/read',{requestId}):this.request('creation',`/v1/creation/jobs/${encodeURIComponent(requestId)}`);}
   async candidateBinding(input:z.infer<typeof omniBindingInput>){if(!this.omni)throw Error("Omni engineering service not configured");return this.omni.binding(input);}
   async resume(command:DepartmentCommand,preDispatch?:()=>void){
     const c=departmentCommand.parse(command);
@@ -65,7 +69,7 @@ export class DepartmentGateway {
     const current=await this.status(c);
     preDispatch?.();
     if(current.status!=="QUEUED")return current;
-    const result=await this.request("creation",`/v1/creation/jobs/${encodeURIComponent(c.requestId)}/run`,{});
+    const result=dotSegment(c.requestId)?await this.request('creation','/v1/creation/jobs/control',{requestId:c.requestId,action:'run'}):await this.request("creation",`/v1/creation/jobs/${encodeURIComponent(c.requestId)}/run`,{});
     return this.verifyCreation(c,result);
   }
   async forgeWorldContext(workspaceId:string){if(!this.forge)throw Error('Native Forge context not configured');return this.forge.worldContext(workspaceId);}
@@ -82,10 +86,12 @@ export class DepartmentGateway {
       return {...await this.status(c),operation:c.operation,accepted:true,replayed:result.replayed??false,receiptId:result.receiptId};
     }
     if(c.operation==="creation.document.render"){
+      if(dotSegment(c.requestId)){await this.identifierLookupCapability("creation");preDispatch?.();}
       const result=await this.request("creation","/v1/creation/jobs",this.creationRequest(c));
       return this.verifyCreation(c,result);
     }
     if(c.operation==="voice.speech")return this.verifyVoice(c,await this.request("voice","/v1/reign/speech",{requestId:c.requestId,...c.input}));
+    if(dotSegment(c.requestId)||c.input.documentId!==undefined&&dotSegment(c.input.documentId)){await this.identifierLookupCapability("signme");preDispatch?.();}
     const result=await this.request("signme","/v1/documents/drafts",{requestId:c.requestId,...c.input});
     return this.verifySignMe(c,result);
   }
@@ -93,7 +99,7 @@ export class DepartmentGateway {
   private async readSignMeVersion(c:Extract<DepartmentCommand,{operation:"signme.draft.create"}>,result:any){
     if(result.requestId!==c.requestId||result.status!=="draft"||result.inputDigest!==inputDigest({actorId:this.config.actorId,tenantId:this.config.tenantId,requestId:c.requestId,...c.input})||!id.safeParse(result.documentId).success||!Number.isSafeInteger(result.version)||result.version<1||!id.safeParse(result.receiptId).success)throw Error("SignMe operation mismatch");
     if((c.input.documentId!==undefined&&result.documentId!==c.input.documentId)||result.version!==(c.input.expectedVersion===undefined?1:c.input.expectedVersion+1))throw Error("SignMe target or version mismatch");
-    const document=await this.request("signme",`/v1/documents/${encodeURIComponent(result.documentId)}/versions/${result.version}`);
+    const document=dotSegment(result.documentId)?await this.request('signme','/v1/documents/read',{documentId:result.documentId,view:'snapshot',version:result.version}):await this.request("signme",`/v1/documents/${encodeURIComponent(result.documentId)}/versions/${result.version}`);
     if(document.tenantId!==this.config.tenantId||document.workspaceId!==c.input.workspaceId||document.documentId!==result.documentId||document.version!==result.version||document.title!==c.input.title||document.content!==c.input.content||digest(Buffer.from(document.content))!==result.sha256||Buffer.byteLength(document.content)!==result.bytes)throw Error("SignMe document readback mismatch");
     return document;
   }
@@ -128,26 +134,26 @@ export class DepartmentGateway {
       if(entity.id!==entityId||entity.attributes?.firstName!==c.input.displayName||(c.input.email&&entity.attributes?.email!==c.input.email))throw Error("Legacy entity readback mismatch");
       return {requestId:c.requestId,status:"SUCCEEDED",receipt,entity,readbackVerified:true};
     }
-    if(c.operation==="creation.document.render")return this.verifyCreation(c,await this.request("creation",`/v1/creation/jobs/${encodeURIComponent(c.requestId)}`));
+    if(c.operation==="creation.document.render")return this.verifyCreation(c,await this.creationJob(c.requestId));
     if(c.operation==="voice.speech"){
       const q=new URLSearchParams({sessionId:c.input.sessionId,turnId:c.input.turnId});
       const result=this.verifyVoice(c,await this.request("voice",`/v1/reign/speech/${encodeURIComponent(c.requestId)}?${q}`));
       if(result.status==="succeeded"){const a=await this.artifact(c);return {...result,readbackVerified:true,audio:{...result.audio,sha256:a.sha256,bytes:a.bytes}};}
       return result;
     }
-    const result=await this.request("signme",`/v1/documents/operations/${encodeURIComponent(c.requestId)}`);
+    const result=await this.signMeOperation(c.requestId);
     return this.verifySignMe(c,result);
   }
   async artifact(command:DepartmentCommand){
     const c=departmentCommand.parse(command);
     if(isForgeDepartmentCommand(c)){if(!this.forge)throw Error('Forge department not configured');return this.forge.artifact(c);}
     if(c.operation==="signme.draft.create"){
-      const result=await this.request("signme",`/v1/documents/operations/${encodeURIComponent(c.requestId)}`),document=await this.readSignMeVersion(c,result),bytes=Buffer.from(document.content,'utf8');
+      const result=await this.signMeOperation(c.requestId),document=await this.readSignMeVersion(c,result),bytes=Buffer.from(document.content,'utf8');
       return {requestId:c.requestId,documentId:document.documentId,version:document.version,sha256:digest(bytes),bytes:bytes.length,mediaType:'text/plain; charset=utf-8',contentBase64:bytes.toString('base64'),readbackVerified:true};
     }
     if(c.operation==="omnidev.job.verify"){if(!this.omni)throw Error("Omni engineering service not configured");return this.omni.artifact(c.requestId,c.input);}let fetched:any,expected:any;
     if(c.operation==="creation.document.render"){
-      const r=await this.verifyCreation(c,await this.request("creation",`/v1/creation/jobs/${encodeURIComponent(c.requestId)}`));expected=r.artifacts?.[0];if(!expected)throw Error("Artifact unavailable");id.parse(expected.id);fetched=await this.request("creation",`/v1/creation/artifacts/${encodeURIComponent(expected.id)}`,undefined,true);
+      const r=await this.verifyCreation(c,await this.creationJob(c.requestId));expected=r.artifacts?.[0];if(!expected)throw Error("Artifact unavailable");id.parse(expected.id);fetched=await this.request("creation",`/v1/creation/artifacts/${encodeURIComponent(expected.id)}`,undefined,true);
     }else if(c.operation==="voice.speech"){
       const q=new URLSearchParams({sessionId:c.input.sessionId,turnId:c.input.turnId});const r=this.verifyVoice(c,await this.request("voice",`/v1/reign/speech/${encodeURIComponent(c.requestId)}?${q}`));if(r.status!=="succeeded"||!r.audio)throw Error("Audio unavailable");expected=r.audio;fetched=await this.request("voice",`/v1/reign/speech/${encodeURIComponent(c.requestId)}/audio?${q}`,undefined,true);
       if(fetched.bytes.toString("ascii",0,4)!=="RIFF"||fetched.bytes.toString("ascii",8,12)!=="WAVE")throw Error("Invalid WAV artifact");

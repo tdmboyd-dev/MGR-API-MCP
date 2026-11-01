@@ -1,0 +1,9 @@
+{
+  "signme/scripts/domain-service.mjs": "bd0c9d3f9eab65957c43fc228dfc631f9decd1bdfb486bc82421d592425b1141",
+  "signme/test/service-identifiers.test.mjs": "2e86223ffb338a67e7e7affecd08a42604b4e699ac3da068a0498a7eefa6310b",
+  "creation/src/api/local-service.ts": "5dfadbbc59f8e6c3cbd8773fbf2587a52d40b9130a86376ff200edcd6d988eac",
+  "creation/test/native-service-identifiers.test.ts": "0f10cce4596f43654ccb8c83b7898cd6442643d69b9544ac07eaed2033a6fc7b",
+  "edge/src/department-gateway.ts": "555bc90ed378064125383f2adf8aa779fd4843283f7fe02d064321823cbed26f",
+  "edge/test/native-identifier-recovery.test.ts": "25593a345faf782c240b465521090a4eb3859f3ca3efc5620e769197225acfde",
+  "one/scripts/qualification/owner-signme-http.test.mjs": "9f98809684af44cabdf17fc2816306226b8f0f4261aa8f128da0152e62350f5a"
+}

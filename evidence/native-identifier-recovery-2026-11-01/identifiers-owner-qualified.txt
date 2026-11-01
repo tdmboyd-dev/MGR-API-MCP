@@ -1,0 +1,38 @@
+{"actualOwnerSignMe":true,"nativeVersions":2,"originalEffects":2,"allHostRestart":true,"redispatches":0,"inferenceCalls":0}
+✔ actual owner HTTP -> original SignMe draft/revision/artifact -> all-host cold recovery (5399.3309ms)
+✔ lost original reply reconciles the same native receipt after host reopen without another draft (5245.54ms)
+✔ invalid draft text is denied before native allocation and altered artifact version is refused (2199.1615ms)
+✔ an unavailable optional SignMe source is reported while native Creation stays usable (2734.1322ms)
+{"actualSignMeProject":true,"acceptedArtifactReference":true,"signmeOperations":1,"originalEffects":2,"allHostRestart":true,"redispatches":0,"inferenceCalls":0}
+✔ durable project uses SignMe independently then Creation notes reference its accepted native artifact (11114.8598ms)
+✔ unavailable native SignMe project records a known block without a workflow or native effect (3116.9284ms)
+{"actualOwnerExactIdentifiers":[".","owner:encoded_request-1",".."],"originalEffects":3,"coldReopen":true,"redispatches":0,"inferenceCalls":0}
+✔ actual owner and shared API preserve colon/dot native request identities across cold recovery (5125.005ms)
+✔ owner feature-first handoff is accepted with explicit current date and original evidence boundaries (19.9189ms)
+✔ existing canonical header and foundation routing stay compatible (0.889ms)
+✔ new owner presentation still rejects stale impossible dates and unknown routing (0.6546ms)
+✔ owner presentation cannot promote product completion or remove preserved requirements (0.3416ms)
+✔ actual current root handoff and shared state pass the existing verifier (23.3538ms)
+✔ concurrent delivery notes preserve the first canonical main heading and all original date checks (0.7856ms)
+✔ code fences cannot supply or supersede the actual main handoff heading (0.4766ms)
+✔ personal department registration, proposals and approval cannot cross into a newly selected business (822.2911ms)
+✔ an away-and-back business change during dispatch cannot publish the old response, while authoritative effect reconciliation is retained (415.4085ms)
+✔ saved signme.draft.create command cannot change beneath its exact approved action (358.1765ms)
+✔ saved creation.document.render command cannot change beneath its exact approved action (323.18ms)
+✔ saved voice.speech command cannot change beneath its exact approved action (298.532ms)
+✔ saved legacy.contact.create command cannot change beneath its exact approved action (454.3031ms)
+✔ normal registered owner HTTP previews approves retires recovers capacity and reopens without redispatch (967.749ms)
+✔ exact preview anchored approval completion replay and generic worker separation (471.4158ms)
+✔ unknown network outcome survives restart and pending Voice only reconciles (411.5681ms)
+✔ unenrolled missing anchor cancelled preview and unknown command deny effects (678.0205ms)
+✔ expired grant cannot dispatch (279.6398ms)
+✔ reserved crash gap recovers once; settled gap reconciles without redispatch; artifact corruption denied (408.1981ms)
+✔ unverified success never settles; concurrent late pending cannot overwrite terminal state (334.8421ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 38829.3018

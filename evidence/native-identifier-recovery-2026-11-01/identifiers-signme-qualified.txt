@@ -1,0 +1,43 @@
+✔ registration ignores paid entitlement escalation and never exposes session token in JSON (652.5509ms)
+✔ authentication queries require server expiry and deny cross-site cookie mutations (57.791ms)
+✔ unconfigured AI and billing paths do not fabricate results or mutate entitlements (78.2573ms)
+✔ SignMe real process/SQLite: owned immutable drafts, receipts, replay, conflict and restart (1621.8983ms)
+✔ fresh SignMe SQL migrations include session token and immutable version bridge (24.1854ms)
+✔ signature fields deny foreign document read and write without storage effects (678.4575ms)
+✔ owned field write rejects recipient from another document and invalid geometry (53.3264ms)
+✔ saved signature cannot attach to a recipient owned by someone else (22.5761ms)
+✔ actual CLI reports occupied port, exits failed and releases owned storage (943.9218ms)
+✔ actor provisioning requires an explicit boolean before opening storage (12.2139ms)
+✔ missing configured actor rolls back all initial schema changes (54.4567ms)
+✔ malformed existing native schema is refused and partial upgrades roll back (68.0619ms)
+✔ unstarted and repeated close releases storage and prevents later listen (52.898ms)
+✔ unpaired surrogate title is refused without an operation (499.9383ms)
+✔ unpaired surrogate content is refused without an operation (137.7058ms)
+✔ invalid wire UTF8 is refused before allocating a draft (70.04ms)
+✔ valid supplementary Unicode preserves exact content hash and bytes (122.1046ms)
+✔ close during pending listen waits for the owned listener and releases it (53.0391ms)
+✔ close drains an accepted HTTP body and saved operation before releasing storage (4090.305ms)
+✔ accepted exact request ID can be reconciled without changing identity: r:a_b.c-1 (251.4423ms)
+✔ accepted exact request ID can be reconciled without changing identity: . (90.2426ms)
+✔ accepted exact request ID can be reconciled without changing identity: .. (80.0992ms)
+✔ accepted exact request ID can be reconciled without changing identity: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:z (226.3381ms)
+✔ legacy admitted document identity supports snapshot/history/revision: document:a_b.c (111.9493ms)
+✔ legacy admitted document identity supports snapshot/history/revision: . (103.1581ms)
+✔ legacy admitted document identity supports snapshot/history/revision: .. (91.11ms)
+✔ malformed/double-encoded/separator identifiers cannot be interpreted as another resource (73.5164ms)
+✔ body reads retain authenticated actor ownership and reject supplied identity fields (95.3818ms)
+✔ snapshot versions are exact positive safe integers (83.2617ms)
+✔ version-history lookup rejects ambiguous snapshot fields and unknown options (69.1663ms)
+✔ oversized or zero path versions are rejected as invalid inputs (68.062ms)
+✔ caller mutation cannot replace a captured service credential or its tenant/actor (412.7376ms)
+✔ caller array mutation cannot enroll an additional service principal (110.1591ms)
+✔ duplicate bearer credentials are rejected before database creation (5.6851ms)
+✔ malformed credential encoding is rejected before database creation (5.2107ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5714.3768
