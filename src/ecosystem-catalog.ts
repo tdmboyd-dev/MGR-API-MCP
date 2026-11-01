@@ -12,7 +12,7 @@ export function readEcosystemCatalog(repoId?:string){
 
 export function registerEcosystemCatalogTool(server:McpServer,auth?:AuthContext,audience?:string):void{
   server.registerTool("mgr_ecosystem_catalog",{
-    description:"Read source-pinned MGR repository roles and explicitly unavailable-source discovery entries and integration limits. Catalogued does not mean connected or executable. No repository code or external provider is executed.",
+    description:"Read source-pinned full MGR product roles, enrolled knowledge interfaces and integration limits. Catalogued does not mean connected or executable. Use mgr_repository_manual only with current owner enrollment to inspect operating documents. No repository code or external provider is executed.",
     inputSchema:z.object({repoId:z.string().min(1).optional()}).strict()
   },async({repoId})=>{
     try{

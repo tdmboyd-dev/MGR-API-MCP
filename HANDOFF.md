@@ -1,5 +1,11 @@
 # Resume MGR-API-MCP
 
+## Shared operating knowledge - November 1, 2026
+
+The existing API owns the reusable revision-pinned committed-document reader. Optional authenticated host enrollment exposes `mgr_repository_manual`; ONE consumes it for eleven confirmed tools. Original catalog entries are retained, Backpack is added as entry22, and obsolete empty-source Code Monster/OmniSight claims are corrected. Full API qualification passed192/192 with zero skips plus typecheck, hosted syntax and plugin checks. Actual permanent ONE all-index retrieval, full Forge handbook reconstruction and real model/manual/restart proof are recorded in ONE's ecosystem-knowledge evidence. No global execution enrollment, complete handbook coverage, remote background learning or production acceptance is inferred. [Integration contract](docs/REPOSITORY-KNOWLEDGE.md).
+
+ONE's coordinated production audit and reuse/merge plan own the expanded cross-repository comparison. Domain authority remains with its owner; this edge does not duplicate jobs, business state or grants. Older dated status sections below are historical where this section supplies newer receiving evidence.
+
 ## Current registered repository reads - November 1, 2026
 
 The optional repository gateway now exposes bounded registered Backpack card/map/context and existing Code Monster profile/symbol methods under the verified shared principal. Frozen roots, actor/tenant, current ONE authorization, a shared source-analysis admission slot and end-to-end cancellation are enforced. Source-only SDK requests receive 60 seconds; ordinary methods retain 15 seconds. Full API verify passed190/190, typecheck/hosted syntax/plugin checks passed. Actual ONE saved-account conversations and SDK/TCP tool receipts passed separately; ONE evidence/four-repository-integration-2026-11-01 records the exact scope and publication. Personal job creation/worker dispatch/live OmniSight job consumer are not enabled here. Earlier claims below that Code Monster/OmniSight source is unavailable are historical and superseded for these pinned four sources. No domain authority or business database moves into the edge.

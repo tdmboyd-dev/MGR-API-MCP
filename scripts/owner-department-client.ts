@@ -31,6 +31,7 @@ const schemas=new Map<string,z.ZodType>([
  ['mgr_backpack_capability_map',z.object({}).strict()],
  ['mgr_backpack_capability_card',z.object({project:z.string().regex(/^[a-z0-9][a-z0-9-]{0,63}$/)}).strict()],
  ['mgr_backpack_context',z.object({project:z.string().regex(/^[a-z0-9][a-z0-9-]{0,63}$/)}).strict()],
+ ['mgr_repository_manual',z.object({project:z.string().regex(/^[a-z0-9][a-z0-9-]{0,63}$/),document:z.string().regex(/^(index|doc-[a-f0-9]{16})$/),startLine:z.number().int().min(1).max(999999),expectedCommit:z.string().regex(/^[a-f0-9]{40}$/).optional()}).strict()],
  ['code_monster_profile',z.object({project:z.string().regex(/^[a-z0-9][a-z0-9-]{0,63}$/),prefixes:z.array(z.string().min(1).max(250)).max(32),revision:z.literal('HEAD')}).strict()],
  ['code_monster_symbols',z.object({project:z.string().regex(/^[a-z0-9][a-z0-9-]{0,63}$/),prefixes:z.array(z.string().min(1).max(250)).max(32),revision:z.literal('HEAD'),symbol:z.string().max(256),limit:z.number().int().min(1).max(5)}).strict()],
  ['mgr_department_context',z.object({}).strict()],['mgr_omnidev_candidate_binding',omniBindingInput],

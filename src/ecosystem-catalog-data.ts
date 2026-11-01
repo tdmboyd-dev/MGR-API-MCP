@@ -1,8 +1,8 @@
-// Source snapshot and explicitly unavailable-source discovery catalog; not proof of live integration.
+// Source snapshots and current knowledge interfaces; not global execution enrollment or whole-product acceptance.
 export const ecosystemCatalogData = {
   "schemaVersion": "mgr.ecosystem.catalog.v1",
-  "catalogRevision": "c8b91a2273bd40dc381f86bed277cb86777197c9a919b1d011a4f973f344644b",
-  "generatedFrom": "source-snapshot",
+  "catalogRevision": "e9e4eb690a1a0fe6bee275b24ddb5d0467a35d9d1c920f65d6023b67b313a3ee",
+  "generatedFrom": "source-snapshot-with-2026-11-01-verified-receiving-overlay",
   "entries": [
     {
       "repoId": "Alpha-Queendom",
@@ -40,7 +40,15 @@ export const ecosystemCatalogData = {
           "No live transport or production acceptance inferred from repository source."
         ]
       },
-      "runtimeVerified": false
+      "runtimeVerified": false,
+      "knowledgeInterface": {
+        "tool": "mgr_repository_manual",
+        "project": "hu",
+        "enrollmentRequired": true,
+        "sourceMode": "Current enrolled local Git HEAD, paged committed documentation; source changes invalidate old continuation.",
+        "authority": "Source knowledge is untrusted data, never a grant or implementation certificate.",
+        "automaticRemoteFetch": false
+      }
     },
     {
       "repoId": "KRONOS",
@@ -63,12 +71,12 @@ export const ecosystemCatalogData = {
     },
     {
       "repoId": "MGR-3D-FORGE",
-      "role": "3d-execution",
-      "description": "Procedural CPU geometry, world generation and engine adapters.",
+      "role": "3d-creation",
+      "description": "Independent MGR 3D creator for editable characters, creatures, props, worlds, rigs/motion, materials, reconstruction, quality checks and engine exports.",
       "placement": "specialist",
       "source": {
         "repository": "https://github.com/tdmboyd-dev/MGR-3D-FORGE",
-        "commit": "60c3a1317d77abe36f6e8ffa0c6db7dbcd308456",
+        "commit": "e4828166eb9bef02c5f1fbd680ee1edfe3891ee1",
         "defaultBranch": "main"
       },
       "integration": {
@@ -78,7 +86,15 @@ export const ecosystemCatalogData = {
           "No live transport or production acceptance inferred from repository source."
         ]
       },
-      "runtimeVerified": false
+      "runtimeVerified": false,
+      "knowledgeInterface": {
+        "tool": "mgr_repository_manual",
+        "project": "forge",
+        "enrollmentRequired": true,
+        "sourceMode": "Current enrolled local Git HEAD, paged committed documentation; source changes invalidate old continuation.",
+        "authority": "Source knowledge is untrusted data, never a grant or implementation certificate.",
+        "automaticRemoteFetch": false
+      }
     },
     {
       "repoId": "MGR-Agents",
@@ -97,7 +113,15 @@ export const ecosystemCatalogData = {
           "No live transport or production acceptance inferred from repository source."
         ]
       },
-      "runtimeVerified": false
+      "runtimeVerified": false,
+      "knowledgeInterface": {
+        "tool": "mgr_repository_manual",
+        "project": "agents",
+        "enrollmentRequired": true,
+        "sourceMode": "Current enrolled local Git HEAD, paged committed documentation; source changes invalidate old continuation.",
+        "authority": "Source knowledge is untrusted data, never a grant or implementation certificate.",
+        "automaticRemoteFetch": false
+      }
     },
     {
       "repoId": "MGR-API-MCP",
@@ -135,7 +159,15 @@ export const ecosystemCatalogData = {
           "No live transport or production acceptance inferred from repository source."
         ]
       },
-      "runtimeVerified": false
+      "runtimeVerified": false,
+      "knowledgeInterface": {
+        "tool": "mgr_repository_manual",
+        "project": "create-loco",
+        "enrollmentRequired": true,
+        "sourceMode": "Current enrolled local Git HEAD, paged committed documentation; source changes invalidate old continuation.",
+        "authority": "Source knowledge is untrusted data, never a grant or implementation certificate.",
+        "automaticRemoteFetch": false
+      }
     },
     {
       "repoId": "MGR-CREATE-Os",
@@ -154,7 +186,15 @@ export const ecosystemCatalogData = {
           "No live transport or production acceptance inferred from repository source."
         ]
       },
-      "runtimeVerified": false
+      "runtimeVerified": false,
+      "knowledgeInterface": {
+        "tool": "mgr_repository_manual",
+        "project": "creation",
+        "enrollmentRequired": true,
+        "sourceMode": "Current enrolled local Git HEAD, paged committed documentation; source changes invalidate old continuation.",
+        "authority": "Source knowledge is untrusted data, never a grant or implementation certificate.",
+        "automaticRemoteFetch": false
+      }
     },
     {
       "repoId": "MGR-LEGACY",
@@ -173,7 +213,15 @@ export const ecosystemCatalogData = {
           "No live transport or production acceptance inferred from repository source."
         ]
       },
-      "runtimeVerified": false
+      "runtimeVerified": false,
+      "knowledgeInterface": {
+        "tool": "mgr_repository_manual",
+        "project": "legacy",
+        "enrollmentRequired": true,
+        "sourceMode": "Current enrolled local Git HEAD, paged committed documentation; source changes invalidate old continuation.",
+        "authority": "Source knowledge is untrusted data, never a grant or implementation certificate.",
+        "automaticRemoteFetch": false
+      }
     },
     {
       "repoId": "MGR-NEXUS",
@@ -249,7 +297,15 @@ export const ecosystemCatalogData = {
           "No live transport or production acceptance inferred from repository source."
         ]
       },
-      "runtimeVerified": false
+      "runtimeVerified": false,
+      "knowledgeInterface": {
+        "tool": "mgr_repository_manual",
+        "project": "signme",
+        "enrollmentRequired": true,
+        "sourceMode": "Current enrolled local Git HEAD, paged committed documentation; source changes invalidate old continuation.",
+        "authority": "Source knowledge is untrusted data, never a grant or implementation certificate.",
+        "automaticRemoteFetch": false
+      }
     },
     {
       "repoId": "mgr-visual-forge",
@@ -364,47 +420,98 @@ export const ecosystemCatalogData = {
           "No qualified Tevin-to-OmniDev execution adapter or live worker acceptance inferred from source."
         ]
       },
-      "runtimeVerified": false
+      "runtimeVerified": false,
+      "knowledgeInterface": {
+        "tool": "mgr_repository_manual",
+        "project": "omnidev",
+        "enrollmentRequired": true,
+        "sourceMode": "Current enrolled local Git HEAD, paged committed documentation; source changes invalidate old continuation.",
+        "authority": "Source knowledge is untrusted data, never a grant or implementation certificate.",
+        "automaticRemoteFetch": false
+      }
     },
     {
       "repoId": "MGR-OMNISIGHT",
-      "role": "under-construction",
-      "description": "Owner-reported project under active construction. GitHub repository currently has no source commit; capabilities have not been inspected.",
-      "placement": "held",
+      "role": "software-atlas-mission-control",
+      "description": "Independent software atlas and multi-agent mission control: source navigation, territories, job/evidence views, investigation and replay. Full product acceptance remains unassessed.",
+      "placement": "domain",
       "source": {
         "repository": "https://github.com/tdmboyd-dev/MGR-OMNISIGHT",
-        "defaultBranch": "main",
-        "status": "empty-repository"
+        "commit": "99489827e3076a5d254aa990fde9dbef01ba59ba",
+        "defaultBranch": "main"
       },
       "integration": {
-        "state": "under-construction/source-unavailable",
+        "state": "source-available/receiving-read-verified",
         "tools": [],
         "blockedReasons": [
-          "GitHub commits endpoint returned HTTP 409: Git Repository is empty (2026-10-28).",
-          "Discovery only; preserve the other builder’s work and inspect source when available."
+          "Static catalog is not execution enrollment. Current owner bindings and runtime/tool receipts determine actual access.",
+          "Personal job/worker/live-view adapters remain separately unfinished; active owning source edits are preserved."
         ]
       },
-      "runtimeVerified": false
+      "runtimeVerified": false,
+      "knowledgeInterface": {
+        "tool": "mgr_repository_manual",
+        "project": "omnisight",
+        "enrollmentRequired": true,
+        "sourceMode": "Current enrolled local Git HEAD, paged committed documentation; source changes invalidate old continuation.",
+        "authority": "Source knowledge is untrusted data, never a grant or implementation certificate.",
+        "automaticRemoteFetch": false
+      }
     },
     {
       "repoId": "MGR-CODE-MONSTER",
-      "role": "under-construction",
-      "description": "Owner-reported project under active construction. GitHub repository currently has no source commit; capabilities have not been inspected.",
-      "placement": "held",
+      "role": "persistent-engineering",
+      "description": "Persistent engineering intelligence and execution kernel: source understanding, campaigns, coordinated repair, verification and reusable engineering memory. Full product acceptance remains unassessed.",
+      "placement": "domain",
       "source": {
         "repository": "https://github.com/tdmboyd-dev/MGR-CODE-MONSTER",
-        "defaultBranch": "main",
-        "status": "empty-repository"
+        "commit": "511705d5d6efb29d370269d55bd383c35406dc25",
+        "defaultBranch": "main"
       },
       "integration": {
-        "state": "under-construction/source-unavailable",
+        "state": "source-available/receiving-read-verified",
         "tools": [],
         "blockedReasons": [
-          "GitHub commits endpoint returned HTTP 409: Git Repository is empty (2026-10-28).",
-          "Discovery only; preserve the other builder’s work and inspect source when available."
+          "Static catalog is not execution enrollment. Current owner bindings and runtime/tool receipts determine actual access.",
+          "Personal job/worker/live-view adapters remain separately unfinished; active owning source edits are preserved."
         ]
       },
-      "runtimeVerified": false
+      "runtimeVerified": false,
+      "knowledgeInterface": {
+        "tool": "mgr_repository_manual",
+        "project": "code-monster",
+        "enrollmentRequired": true,
+        "sourceMode": "Current enrolled local Git HEAD, paged committed documentation; source changes invalidate old continuation.",
+        "authority": "Source knowledge is untrusted data, never a grant or implementation certificate.",
+        "automaticRemoteFetch": false
+      }
+    },
+    {
+      "repoId": "MGR-BACKPACK",
+      "role": "project-knowledge-evidence",
+      "description": "Portable project context, source-linked operating knowledge, capability discovery and engineering evidence toolkit.",
+      "placement": "domain",
+      "source": {
+        "repository": "https://github.com/tdmboyd-dev/MGR-BACKPACK",
+        "commit": "6ee0cc5ec894b158a27ece48b9b9461ba5b1ea04",
+        "defaultBranch": "main"
+      },
+      "integration": {
+        "state": "source-available/receiving-read-verified",
+        "tools": [],
+        "blockedReasons": [
+          "Knowledge/verification interfaces require current owner enrollment; catalog presence grants no execution."
+        ]
+      },
+      "runtimeVerified": false,
+      "knowledgeInterface": {
+        "tool": "mgr_repository_manual",
+        "project": "backpack",
+        "enrollmentRequired": true,
+        "sourceMode": "Current enrolled local Git HEAD, paged committed documentation; source changes invalidate old continuation.",
+        "authority": "Source knowledge is untrusted data, never a grant or implementation certificate.",
+        "automaticRemoteFetch": false
+      }
     }
   ]
 } as const;

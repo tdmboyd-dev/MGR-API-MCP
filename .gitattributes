@@ -21,3 +21,5 @@ src/repository-read-tools.ts -text whitespace=blank-at-eol,blank-at-eof,space-be
 test/owner-department-client.test.ts -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 test/repository-read-cancellation.test.ts -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 test/repository-read-tools.test.ts -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+evidence/ecosystem-knowledge-2026-11-01/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

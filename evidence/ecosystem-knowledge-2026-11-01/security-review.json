@@ -1,0 +1,44 @@
+{
+  "scope": "Exact changed/untracked publication files only, copied into a fresh scan directory. No private runtime configurations, manuals or transcripts. Automated scan and structured finding review are not universal secret detection.",
+  "scannedFiles": 15,
+  "findingsReviewed": 6,
+  "unresolvedFindings": 0,
+  "classifications": [
+    {
+      "path": "evidence/ecosystem-knowledge-2026-11-01/qualified-inputs.json",
+      "line": 19,
+      "rule": "generic-api-key",
+      "classification": "SHA256 source-input fingerprint, not a credential"
+    },
+    {
+      "path": "evidence/ecosystem-knowledge-2026-11-01/qualified-inputs.json",
+      "line": 25,
+      "rule": "generic-api-key",
+      "classification": "SHA256 source-input fingerprint, not a credential"
+    },
+    {
+      "path": "evidence/ecosystem-knowledge-2026-11-01/qualified-inputs.json",
+      "line": 35,
+      "rule": "generic-api-key",
+      "classification": "SHA256 source-input fingerprint, not a credential"
+    },
+    {
+      "path": "evidence/ecosystem-knowledge-2026-11-01/qualified-inputs.json",
+      "line": 47,
+      "rule": "generic-api-key",
+      "classification": "SHA256 source-input fingerprint, not a credential"
+    },
+    {
+      "path": "evidence/ecosystem-knowledge-2026-11-01/qualified-inputs.json",
+      "line": 69,
+      "rule": "generic-api-key",
+      "classification": "SHA256 source-input fingerprint, not a credential"
+    },
+    {
+      "path": "evidence/ecosystem-knowledge-2026-11-01/qualified-inputs.json",
+      "line": 79,
+      "rule": "generic-api-key",
+      "classification": "SHA256 source-input fingerprint, not a credential"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Shared repository operating knowledge - November 1, 2026
+
+The existing shared gateway now owns the bounded revision-aware committed-manual reader and optional authenticated `mgr_repository_manual` enrollment. ONE is a consumer; future authorized projects can use the same implementation and contract described in docs/REPOSITORY-KNOWLEDGE.md. No brain, grant system, domain job state or business database is duplicated here.
+
+The original21 catalog entries remain, Backpack is entry22, and obsolete empty-source descriptions of Code Monster/OmniSight are repaired. Source availability and knowledge-interface enrollment are separate from runtime execution acceptance. Per-tool full product scope remains broader than the current adapter.
+
+Full API verify:192/192 passed, zero failures/cancellations/skips, plus TypeScript, hosted syntax and plugin checks. Repository integrity verifier passed457 checks before this evidence folder was added; it must pass again before commit. Actual permanent ONE/SDK/TCP retrieval reached all eleven tool indexes, reconstructed the complete current Forge handbook and supported a real Sol/manual conversation saved across normal restart. Detailed live receipt IDs/hashes and earlier uncertain outcomes remain in ONE evidence/ecosystem-knowledge-2026-11-01; private manuals/configuration/transcripts are excluded here.
+
+Local committed-source detection and stale-continuation refusal are implemented. Remote auto-fetch/background learning, complete semantic operation inventory, personal engineering job/worker/live-view paths, creative/business execution adapters and autonomous repair remain unfinished. ONE's expanded audit includes per-repo handoffs, source-to-operation coverage and evidence-backed reuse/integration/consolidation/cost/migration/rollback decisions. No whole-product or production percentage is inferred.
