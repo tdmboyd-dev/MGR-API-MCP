@@ -1,0 +1,59 @@
+{
+  "contract": "mgr.selected-source-verification.v1",
+  "observedAt": "2026-11-01T14:27:21.952Z",
+  "owner": "api",
+  "sourceSnapshotBeforeReceipt": "c06291e2fec9f4b229ae5b19211433db79c1b95f",
+  "branch": "repair/completion-2026-10-28",
+  "tests": {
+    "codeMonster": {
+      "results": 263,
+      "passed": 257,
+      "failed": 0,
+      "skipped": 6,
+      "log": "code-monster-final-serial.log"
+    },
+    "enrolledApi": {
+      "passed": 297,
+      "log": "api-full-bounded.log"
+    },
+    "one": {
+      "passed": 35,
+      "build": true,
+      "log": "one-final-affected.log"
+    },
+    "normalApi": {
+      "passed": 165,
+      "log": "normal-api-full.log"
+    },
+    "canonicalOwnerChain": {
+      "passed": 19,
+      "log": "canonical-owner-integration.log",
+      "model": "injected local responses"
+    },
+    "normalSourceHttp": {
+      "passed": 16,
+      "log": "canonical-normal-source-qualified.log"
+    },
+    "normalCompiledHttp": {
+      "passed": 16,
+      "log": "canonical-normal-compiled-qualified.log"
+    },
+    "originalSerena": {
+      "matching": 65,
+      "timeoutPolicy": 32,
+      "realLsp": 5
+    },
+    "originalClaudeMap": {
+      "ownedHttpBehaviors": 4
+    }
+  },
+  "scope": "Original independently implemented source outline and committed automation inventory; local receiving only. Full-product and all-candidate coverage unassessed.",
+  "limits": [
+    "Six explicit Windows skips remain.",
+    "No live model, provider, permanent owner restart, hosted TLS/OAuth, device or production acceptance.",
+    "No remote publication.",
+    "Other concurrent committed and working changes are not certified by these suite counts."
+  ],
+  "evidenceDirectory": "Task outputs/evidence/serena-claudemap",
+  "transfer": "Raw byte-preserving Git delta patches and incremental bundles require their exact listed base commits. Reconstructed content trees and exact bundle identities are separately verified by the task delivery receipt."
+}

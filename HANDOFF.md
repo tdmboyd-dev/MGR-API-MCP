@@ -1,3 +1,15 @@
+## Completed Serena / Claude Map native source and receiving verification — November 1, 2026
+
+Original native hierarchy/qualified-name reads and committed automation declarations are integrated through the existing Code Monster, shared edge and Tevin repository_read route. All eight source tools retain host-owned scope and shared admission; private values and local settings are withheld. No copied Serena GPL application code, duplicate brain, permission engine, terminal or write grant was added.
+
+Executed final checks: Code Monster 257 passed, 0 failed, 6 explicit Windows skips (263 results); enrolled API 297/297; ONE affected 35/35 and build; normal API 165/165, compile/typecheck and artifact gates. Canonical Tevin HTTP/SDK/Git/SQLite receiving passed 19/19 with injected model responses. The separate normal HTTP source and compiled entrypoints each passed 16/16, including actual product hierarchy/configuration reads. Identity/JWKS are owned fixtures; HTTPS metadata was mapped to owned loopback HTTP by the qualifier, so this is local integration acceptance, not live model, hosted OAuth/TLS, permanent-owner or production acceptance.
+
+Original pinned Serena matching 65/65, timeout policy 32/32 and real TypeScript LSP 5/5 passed. Original Claude Map owned HTTP probes reproduced four boundary/value issues. Selected REA scope and unsupported Python semantic limits are recorded in SOURCE-REA-MANIFEST.json. Earlier failed or timed-out trials remain in task evidence; final success does not erase them. See the adjacent VERIFICATION.json and REPORT.md. Concurrent source/Forge/Backpack work is preserved; this receipt certifies the stated source slice and executed trials, not every later or uncommitted change.
+
+Continuation: RepoMind and ArchitectPlaybook selected-source behavior testing is active in the owning research task. Other named candidates and broader language/editor/mutation abilities remain unassessed or open.
+
+---
+
 ## Completed native hierarchy/automation source qualification — November 1, 2026
 
 ## Owned Forge connection and permanent owner proof — November1, 2026
