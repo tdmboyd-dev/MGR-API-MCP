@@ -1,0 +1,22 @@
+{
+  "api-full-verify.log": {
+    "bytes": 31612,
+    "sha256": "b0822dc656d44a6728d150210a98214bcc194bd74d6adfc0a1b040d288990b43"
+  },
+  "identity-baseline.log": {
+    "bytes": 2301,
+    "sha256": "66b54201461658ae0538e7ab00b1829fe85c52ff0b0f5ef2205ae37fa7e40c9a"
+  },
+  "identity-final.log": {
+    "bytes": 3054,
+    "sha256": "55d41975357cb171cf923c24bfbd578d47b5fb9a3f30ca2bcc5f7f21d1f8c31f"
+  },
+  "NATIVE-RESULT.json": {
+    "bytes": 2033,
+    "sha256": "74c645f369b3cfeed484ab607853f6d074f290ab73f13a5a459c35b78c6600cd"
+  },
+  "REPORT.md": {
+    "bytes": 5131,
+    "sha256": "413ffde0ba292334d6ac52fd98a00f19c4592aaa7ead49a8362ae400b41a5946"
+  }
+}

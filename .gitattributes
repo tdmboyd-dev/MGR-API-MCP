@@ -35,3 +35,6 @@ evidence/forge-owner-workflows-2026-11-01/** -text whitespace=-blank-at-eol,-bla
 evidence/forge-preparation-2026-11-01/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
 
 evidence/forge-owner-worker-2026-11-01/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+
+/evidence/owned-omnidev-connection-2026-11-01/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
+/evidence/owned-omnidev-connection-2026-11-01/*.log -diff

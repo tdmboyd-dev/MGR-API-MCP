@@ -1,0 +1,52 @@
+{
+  "scope": "Actual disposable owner HTTP -> original SDK/MCP -> protected OmniDev SQLite/service -> exact-qualified Windows AppContainer -> original report/ONE save -> fresh-process restart/replay. Injected model only; no provider, permanent owner database, production signer or signed Trilogy worker.",
+  "checks": [
+    {
+      "name": "protected original OmniDev service is enrolled in the actual owner department composition",
+      "passed": true
+    },
+    {
+      "name": "original source import and native account candidate create one exact approved job without model calls",
+      "passed": true
+    },
+    {
+      "name": "injected conversation proposes only workspace/job and trusted binding supplies all exact hashes",
+      "passed": true
+    },
+    {
+      "name": "owner approval is required and denied execution does not admit a native verification",
+      "passed": true
+    },
+    {
+      "name": "actual native boundary result is accepted and exact report bytes reach ONE",
+      "passed": true
+    },
+    {
+      "name": "graceful stop observes original service child exit and clear native journal custody",
+      "passed": true
+    },
+    {
+      "name": "fresh service process and SQLite reopen preserve the saved conversation and verified report",
+      "passed": true
+    },
+    {
+      "name": "completed replay creates no additional native job assignment or verification",
+      "passed": true
+    }
+  ],
+  "newInferenceCalls": 0,
+  "actualPrivateWindowsPermissions": true,
+  "permanentOwnerDatabaseTouched": false,
+  "workflowRequestId": "chat-f43ca204cb2e1934f27f19923e5747e8117e35c854df1b9ed1fa8af34674f7ef",
+  "workflowState": "succeeded",
+  "artifact": {
+    "sha256": "34e294430fad42e64d8a371282215bbb1fb60281215f96c0f13553d4149694b5",
+    "bytes": 5195,
+    "assignmentId": "5e71f677-6416-4bb2-8499-8ec89cd9d021"
+  },
+  "passed": true,
+  "actualNativeExecutions": 1,
+  "providerCalls": 0,
+  "policyScope": "Exact fixture source/candidate/command only",
+  "finishedAt": "2026-11-01T22:30:45.281Z"
+}

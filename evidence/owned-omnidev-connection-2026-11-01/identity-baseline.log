@@ -1,0 +1,37 @@
+✖ native exact request identity survives status report and cancel: . (11.5381ms)
+✖ native exact request identity survives status report and cancel: .. (2.3843ms)
+✔ native exact request identity survives status report and cancel: owner:trial_revision (61.2356ms)
+✔ native exact request identity survives status report and cancel: _draft (12.3399ms)
+✔ native exact request identity survives status report and cancel: -draft (14.2578ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 3
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2168.934
+
+✖ failing tests:
+
+test at test\omnidev-client.test.ts:1:15815
+✖ native exact request identity survives status report and cancel: . (11.5381ms)
+  Error: Omni transport unavailable; reconcile request before retry
+      at OmniEngineeringClient.request (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-owned-omnidev\src\omnidev-client.ts:42:126)
+      at async OmniEngineeringClient.readStatus (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-owned-omnidev\src\omnidev-client.ts:70:60)
+      at async TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-owned-omnidev\test\omnidev-client.test.ts:158:40)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    status: undefined
+  }
+
+test at test\omnidev-client.test.ts:1:15815
+✖ native exact request identity survives status report and cancel: .. (2.3843ms)
+  Error: Omni transport unavailable; reconcile request before retry
+      at OmniEngineeringClient.request (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-owned-omnidev\src\omnidev-client.ts:42:126)
+      at async OmniEngineeringClient.readStatus (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-owned-omnidev\src\omnidev-client.ts:70:60)
+      at async TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-owned-omnidev\test\omnidev-client.test.ts:158:40)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: undefined
+  }

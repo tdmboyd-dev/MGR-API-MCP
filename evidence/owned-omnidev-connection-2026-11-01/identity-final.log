@@ -1,0 +1,38 @@
+✔ Omni schema bounds exact jobs, rejects model-provided code and malformed hashes (12.4519ms)
+✔ binding strips private source/objective, verifies configured policy and principal (75.8019ms)
+✔ realistic accepted report shape is independently hashed and bound to native assignment and cleanup (10.0163ms)
+✔ false success, changed exact report bytes and mismatched native cleanup are rejected (29.9196ms)
+✔ receipt actor/action/input mutation cannot reconcile a different operation (5.4012ms)
+✔ dispatch rechecks current digest before POST and credential headers are host-bound (4.7886ms)
+✔ lost POST acknowledgment never auto-repeats native execution; status can independently reconcile (3.5776ms)
+✔ historical valid report survives workspace edits without current verification claim (2.6204ms)
+✔ queued cancel and running cancel request remain distinguishable without invented cleanup success (3.1643ms)
+✔ response actual byte cap and safe HTTP errors reject before publication (1.2935ms)
+✔ whole request deadline bounds hung headers AND hung body even transport ignores abort (45.0681ms)
+✔ binding MCP scope and expiry are checked again after asynchronous provider read (2.7072ms)
+✔ invalid UTF8 and excessive JSON depth are rejected; string braces do not count as structure (2.0372ms)
+✔ aborted body stream is actively cancelled and no late body can become success (20.492ms)
+✔ terminal receipt IDs and uint32 AppContainer SID components are validated (9.6872ms)
+✔ gateway rejects cross-principal service mappings and policy config cannot drift (0.9024ms)
+✔ accepted failed native tests provide verified canonical report artifact without claiming success (5.0736ms)
+✔ pre-execution failure, unknown and cancelled states cannot fabricate report downloads (4.8207ms)
+✔ succeeded receipt missing native report ID fails status, dispatch and cancel (4.2047ms)
+✔ gateway artifact retains standard sha256/bytes/base64 envelope for exact accepted JSON report (12.6396ms)
+✔ registered execute denies expiry during held binding before any native POST (4.1483ms)
+✔ registered execute denies scope during held binding before any native POST (1.7044ms)
+✔ registered execute denies actor during held binding before any native POST (1.4727ms)
+✔ registered execute denies tenant during held binding before any native POST (1.3594ms)
+✔ expiry after accepted POST suppresses publication and never retries the effect (7.5427ms)
+✔ native exact request identity survives status report and cancel: . (9.5359ms)
+✔ native exact request identity survives status report and cancel: .. (12.453ms)
+✔ native exact request identity survives status report and cancel: owner:trial_revision (4.8757ms)
+✔ native exact request identity survives status report and cancel: _draft (5.2824ms)
+✔ native exact request identity survives status report and cancel: -draft (4.7446ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1737.8214
