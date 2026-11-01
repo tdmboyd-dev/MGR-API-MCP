@@ -11,12 +11,24 @@
     "bytes": 3054,
     "sha256": "55d41975357cb171cf923c24bfbd578d47b5fb9a3f30ca2bcc5f7f21d1f8c31f"
   },
+  "KNOWLEDGE-READBACK.json": {
+    "bytes": 728,
+    "sha256": "c155cd47e1586ea81248bf0c7e48663a69b53c1ba56dae0436fda06a0ae41a06"
+  },
   "NATIVE-RESULT.json": {
     "bytes": 2033,
     "sha256": "74c645f369b3cfeed484ab607853f6d074f290ab73f13a5a459c35b78c6600cd"
   },
+  "PRODUCER-QUALIFICATION.json": {
+    "bytes": 1235,
+    "sha256": "e6ea1704328ad248eb48da2697af7d2aad8bde774fdbf30a6b11d2b02118fd31"
+  },
   "REPORT.md": {
-    "bytes": 5131,
-    "sha256": "413ffde0ba292334d6ac52fd98a00f19c4592aaa7ead49a8362ae400b41a5946"
+    "bytes": 6409,
+    "sha256": "44a0b067429d1063d42c3a1bff65e368c0544852f1a680836e9db38c29ad7ed0"
+  },
+  "RUNTIME-EQUIVALENCE.json": {
+    "bytes": 690,
+    "sha256": "3936b8b3884f1b19af48c507af9105b3423a9c3b11fa028304ff2fe5c0c90f52"
   }
 }

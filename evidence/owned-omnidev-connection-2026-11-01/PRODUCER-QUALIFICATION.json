@@ -1,0 +1,38 @@
+{
+  "producerRuntime": "7068e8111ad52a5ab3b582864437d524c47906d7",
+  "producerPublishedHead": "65b04faa0fed1fed8becfa3759c8775fe71f03c9",
+  "producerPublishedTree": "4b4b738b250746a84fd9d701ab2c5b123ee3624a",
+  "originalFullRun": {
+    "failed": 1,
+    "blocked": 0,
+    "failure": "typecheck: new binding key list index types",
+    "total": 91,
+    "passed": 90,
+    "source": "8dfc9943f3efc9fb2c798f29e3449ca4287a03db"
+  },
+  "correctedAffectedRun": {
+    "failed": 0,
+    "total": 8,
+    "source": "7068e8111ad52a5ab3b582864437d524c47906d7",
+    "blocked": 0,
+    "passed": 8
+  },
+  "all37PreparedRuntimeModulesByteIdentical": true,
+  "outputFilesRehashed": 99,
+  "nativeJourney": {
+    "permanentOwnerDatabaseTouched": false,
+    "inference": 0,
+    "executions": 1,
+    "total": 8,
+    "passed": 8
+  },
+  "boardContracts": {
+    "reproducibilityCheckPassed": true,
+    "total": 12,
+    "passed": 12
+  },
+  "mainUnchanged": true,
+  "permanentEngineeringEnabled": false,
+  "wholeProductAcceptance": "Unassessed",
+  "producerReport": "https://github.com/tdmboyd-dev/MGR-OMNIDEV-SWARM/blob/65b04faa0fed1fed8becfa3759c8775fe71f03c9/UNFINISHED-WORK/evidence/owned-engineering-20261101/REPORT.md"
+}

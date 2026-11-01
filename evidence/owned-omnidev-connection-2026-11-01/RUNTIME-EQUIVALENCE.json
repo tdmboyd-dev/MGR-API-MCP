@@ -1,0 +1,11 @@
+{
+  "qualification": "Type-only source correction with byte-identical original emitted runtime; separate source-bound reports retained",
+  "originalSourceCommit": "8dfc9943f3efc9fb2c798f29e3449ca4287a03db",
+  "correctedSourceCommit": "7068e8111ad52a5ab3b582864437d524c47906d7",
+  "preparedModuleCount": 37,
+  "preparedManifestSha256": "32138eb8e5013edabf8d853d45e15ad8c8f55b23b627257ac621aceb7d8eb189",
+  "allPreparedExecutableBytesIdentical": true,
+  "originalReport": "UNFINISHED-WORK/evidence/owned-engineering-20261101/full-run/report.json",
+  "correctedReport": "UNFINISHED-WORK/evidence/owned-engineering-20261101/type-fix-run/report.json",
+  "noFullRunRelabelled": true
+}
