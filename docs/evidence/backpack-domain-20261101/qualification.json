@@ -1,0 +1,67 @@
+{
+  "at": "2026-11-01T06:07:07.414Z",
+  "scope": "Actual local TCP HTTP entrypoint/JWKS/JWT/SQLite; synthetic identity, no deployment/provider/Tevin acceptance",
+  "http": {
+    "passed": 11,
+    "checks": [
+      "unauthenticated-refused",
+      "real-protected-resource-metadata",
+      "normal-startup-nine-read-tools-no-legacy-transport",
+      "signed-jwt-actual-project-context",
+      "refused-actor",
+      "refused-tenant",
+      "refused-scope",
+      "binding-revocation-takes-effect-without-restart",
+      "explicit-binding-restored",
+      "expired-signed-token-refused",
+      "source-unchanged"
+    ]
+  },
+  "fullLocalTests": {
+    "total": 161,
+    "passed": 161,
+    "failed": 0,
+    "skipped": 0
+  },
+  "ownerContractSource": "ea51bd23cca449feebd3e3149e108233d646a45f",
+  "ownerContractBoundary": "Pinned built source, synthetic credentials, no provider; not current changing Tevin source acceptance",
+  "knownDependencyAdvisories": 0,
+  "source": [
+    {
+      "path": "src/mcp-http.ts",
+      "sha256": "254e54e7e6235b7f8416dc08db28b4d4475be25b726640750a8af67fa77b783b"
+    },
+    {
+      "path": "src/http-server.ts",
+      "sha256": "97978d17f35ac2bd7a9042fd83f466c29179b4506c0511472ae110cab704c1ef"
+    },
+    {
+      "path": "src/backpack-domain.ts",
+      "sha256": "6b780cc1e9ca7286f1644533819ae80bb6f9ed9b9ea0fa7924f4c4efa4c6ce7a"
+    },
+    {
+      "path": "scripts/verify-backpack-domain.ts",
+      "sha256": "9ab672d52d3688bea79e7fe82914a6701a978d4be6ec2ea5030ccd7cdebb7c4f"
+    },
+    {
+      "path": "test/read-only-domain-composition.test.ts",
+      "sha256": "b7fd89fa8c146cfc17678e672539ced527b9392ce5486cc9d98e1d37aa60b2ef"
+    },
+    {
+      "path": "test/backpack-domain.test.ts",
+      "sha256": "e2b0f5a00ef0977bc18bd91a9a480bb2e22711c788f7b7bbe8ba1358f49ae5c3"
+    },
+    {
+      "path": "test/http-shutdown.test.ts",
+      "sha256": "536dfc0891a923e0921fcf18139c4ef30574b63e47d352cd5d10d4d535212e69"
+    },
+    {
+      "path": "package.json",
+      "sha256": "c5dbf4478974dbf49b1c22f5a3e406affe40f7cb96779d7311cf3ade021b5e89"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "998b7dc1ef44c99cd877176f9497635245244052a10845066ca9a5464b95fbbb"
+    }
+  ]
+}

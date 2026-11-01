@@ -7,6 +7,7 @@ import { JwksAccessTokenVerifier } from "./jwt-verifier.js";
 import { DepartmentGateway } from "./department-gateway.js";
 import { omniPolicy } from "./omnidev-client.js";
 import {createHttpShutdownController} from './http-shutdown.js';
+import {loadBackpackDomain} from './backpack-domain.js';
 
 const port=Number(process.env.PORT ?? "8787");
 const baseUrl=requiredUrl("MCP_PUBLIC_BASE_URL");
@@ -14,9 +15,12 @@ const publicOrigin=new URL(baseUrl).origin;
 const publicHost=new URL(baseUrl).host;
 const resourceAudience=new URL("/mcp",baseUrl).toString();
 const resourceMetadataUrl=new URL("/.well-known/oauth-protected-resource",baseUrl).toString();
-const issuer=requiredUrl("MCP_AUTH_ISSUER");
+// JWT issuer comparison is exact. URL serialization must not append a slash to
+// the issuer advertised by the authorization server.
+const issuer=required("MCP_AUTH_ISSUER");
+new URL(issuer);
 const jwksUrl=requiredUrl("MCP_JWKS_URL");
-const legacyBaseUrl=requiredUrl("LEGACY_BASE_URL");
+const legacyBaseUrl=process.env.LEGACY_BASE_URL?requiredUrl("LEGACY_BASE_URL"):undefined;
 const requiredScopes=csv(process.env.MCP_REQUIRED_SCOPES ?? "tools:read");
 const advertisedScopes=csv(process.env.MCP_ADVERTISED_SCOPES ?? "tools:read,tools:execute");
 
@@ -27,20 +31,23 @@ const verifier=new JwksAccessTokenVerifier({
   tenantClaim:process.env.MCP_TENANT_CLAIM ?? "tenant_id",
   scopeClaim:process.env.MCP_SCOPE_CLAIM ?? "scope"
 });
-const legacy=new LegacyEdgeClient({
+const legacy=legacyBaseUrl?new LegacyEdgeClient({
   baseUrl:legacyBaseUrl,
   ...(process.env.MGR_DEPARTMENT_ACTOR_ID?{actorId:process.env.MGR_DEPARTMENT_ACTOR_ID}:{}),
   ...(process.env.LEGACY_SERVICE_TOKEN?{bearerToken:process.env.LEGACY_SERVICE_TOKEN}:{}),
   timeoutMs:Number(process.env.LEGACY_TIMEOUT_MS ?? "15000")
-});
+}):undefined;
+const backpack=loadBackpackDomain();
+if(process.env.MGR_DEPARTMENTS_ENABLED==="true"&&!legacy)throw Error('LEGACY_BASE_URL is required for enabled departments');
 const mcp=createAuthorizedMgrMcpHttpHandler({
   verifier,
   resourceAudience,
   requiredScopes,
   resourceMetadataUrl,
-  legacy,
+  ...(legacy?{legacy}:{}),
+  ...(backpack?{registerReadOnlyDomainTools:backpack.register}:{}),
   ...(process.env.MGR_DEPARTMENTS_ENABLED==="true"?{departments:new DepartmentGateway({
-    actorId:required("MGR_DEPARTMENT_ACTOR_ID"),tenantId:required("MGR_DEPARTMENT_TENANT_ID"),legacy,
+    actorId:required("MGR_DEPARTMENT_ACTOR_ID"),tenantId:required("MGR_DEPARTMENT_TENANT_ID"),legacy:legacy!,
     creation:{baseUrl:requiredUrl("CREATION_BASE_URL"),token:required("CREATION_SERVICE_TOKEN")},
     voice:{baseUrl:requiredUrl("VOICE_BASE_URL"),token:required("VOICE_SERVICE_TOKEN")},
     signme:{baseUrl:requiredUrl("SIGNME_BASE_URL"),token:required("SIGNME_SERVICE_TOKEN")},
@@ -103,7 +110,7 @@ const server=createServer(async(req,res)=>{
   }
 });
 
-const shutdown=createHttpShutdownController({server,handler:mcp,report:record=>console.log(JSON.stringify(record))});
+const shutdown=createHttpShutdownController({server,handler:{async close(){await mcp.close();backpack?.close();}},report:record=>console.log(JSON.stringify(record))});
 
 server.listen(port,"0.0.0.0",()=>{
   console.log(JSON.stringify({event:"mgr_api_mcp_listening",port,resourceAudience}));

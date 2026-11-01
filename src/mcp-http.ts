@@ -4,17 +4,31 @@ import { authorizeMcpRequest, type AccessTokenVerifier, type McpAuthResult } fro
 import type { LegacyEdgeClient } from "./legacy-client.js";
 import type { CreationOSClient } from "./creation-client.js";
 import type { DepartmentGateway, DepartmentToolOptions } from "./department-gateway.js";
+import type {McpServer} from '@modelcontextprotocol/server';
+import type {AuthContext} from './authz.js';
+
+export interface ReadOnlyDomainContext {
+  readonly auth:AuthContext;
+  readonly resourceAudience:string;
+  /** Reverify the original request credential through the existing verifier.
+   * Revoked/expired/changed principals and closed hosts refuse. No caller token,
+   * actor, tenant or project parameter can replace this identity. */
+  revalidateAuth():Promise<AuthContext>;
+}
 
 export interface AuthorizedMgrMcpHttpOptions {
   verifier:AccessTokenVerifier;
   resourceAudience:string;
   requiredScopes:string[];
   resourceMetadataUrl:string;
-  legacy:LegacyEdgeClient;
+  legacy?:LegacyEdgeClient;
   creation?:CreationOSClient;
   departments?:DepartmentGateway;
   /** Host may lower the fixed64 outer auth/handler admission budget. */
   maximumPendingRequests?:number;
+  /** Trusted backend composition only; not a request/body registration surface.
+   * Domain implementations retain their own project bindings and read limits. */
+  registerReadOnlyDomainTools?:(server:McpServer,context:ReadOnlyDomainContext)=>void;
 }
 
 export async function authorizeAndBindMcpRequest(
@@ -85,7 +99,7 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
 
       const serverOptions:{
         departments?:DepartmentToolOptions;
-        legacy:{
+        legacy?:{
           auth:typeof authResult.auth;
           resourceAudience:string;
           legacy:LegacyEdgeClient;
@@ -95,12 +109,11 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
           resourceAudience:string;
           creation:CreationOSClient;
         };
-      }={
-        legacy:{
+      }={};
+      if(options.legacy)serverOptions.legacy={
           auth:authResult.auth,
           resourceAudience:options.resourceAudience,
           legacy:options.legacy
-        }
       };
       if(options.creation){
         serverOptions.creation={
@@ -111,7 +124,18 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
       }
       if(options.departments)serverOptions.departments={auth:authResult.auth,resourceAudience:options.resourceAudience,gateway:options.departments};
       if(closed)return unavailable();
-      const handler=createMcpHandler(()=>createMgrMcpServer(serverOptions));
+      const boundIdentity=JSON.stringify([authResult.auth.actorId,authResult.auth.tenantId,authResult.auth.audience]);
+      const revalidateAuth=async():Promise<AuthContext>=>{
+        if(closed)throw new Error('MCP service unavailable');
+        const latest=await authorizeAndBindMcpRequest(request,options);
+        if(closed||!latest.ok||JSON.stringify([latest.auth.actorId,latest.auth.tenantId,latest.auth.audience])!==boundIdentity)throw new Error('Domain authorization unavailable or changed');
+        return {...latest.auth,scopes:[...latest.auth.scopes]};
+      };
+      const handler=createMcpHandler(()=>{
+        const server=createMgrMcpServer(serverOptions);
+        options.registerReadOnlyDomainTools?.(server,{auth:{...authResult.auth,scopes:[...authResult.auth.scopes]},resourceAudience:options.resourceAudience,revalidateAuth});
+        return server;
+      });
       activeHandlers.add(handler);
       handlerOwnsSlot=true;
       try{

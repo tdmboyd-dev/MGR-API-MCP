@@ -34,3 +34,7 @@ node scripts/probe-sdk.mjs
 The local flag checks the preserved checkpoint bytes. The Node probe requires Node 22.13+ with TypeScript stripping and uses synthetic transport only. Its seven observations include SDK weaknesses; seven passing observations are not a production certification.
 
 No project-wide redistribution license has been selected. Third-party sources retain their own terms. See [source policy](docs/SOURCE-POLICY.md).
+
+### Backpack read-only domain
+
+The normal authenticated HTTP service can optionally expose Backpack context, evidence and capability cards without requiring Legacy. See [setup, operation and verification](docs/BACKPACK-DOMAIN.md). This is source/local runtime integration; a live HTTPS/OAuth account connection is required before browser availability can be claimed.

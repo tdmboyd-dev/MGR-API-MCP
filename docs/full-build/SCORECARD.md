@@ -1,3 +1,15 @@
+# Four-repo Backpack connection — November 1, 2026
+
+Isolated branch `integrate/four-repo-tools-20261101` adds Backpack to the existing normal authenticated HTTP entrypoint. Other agents' canonical API-MCP/ONE working trees were not edited. API-MCP remains the shared edge; ONE owns reasoning/permissions.
+
+Backpack0.5.1 supplies nine read-only tools through a trusted startup registrar. Exact host paths, explicit actor/tenant/project bindings, revalidation of the original credential, scopes, expiry, root and response bounds are enforced. Binding removal takes effect without restart. Legacy transport is optional for Backpack-only reads; enabled departments still require it. JWT issuer spelling is now preserved exactly rather than silently adding a slash. Shutdown confirms MCP cleanup before closing Backpack.
+
+The full local verification passed161/161, zero failures/skips, typecheck, hosted-artifact syntax and plugin package validation. It used a separately built pinned ONE source at ea51bd23cca449feebd3e3149e108233d646a45f for six owner-startup contract tests; the other agent's changing newer checkout no longer exposes the old launch module and is not qualified by this result. Dependencies server/client2.4.0 and Zod4.6.7 have zero known advisories in the recorded audit.
+
+Actual normal HTTP process + local TCP + JWKS + signed synthetic JWT + Backpack SQLite passed11 checks. Separate lifecycle tests confirm Backpack closure waits for MCP closure. Public HTTPS/TLS/OAuth account, actual ChatGPT browser/mobile connection, current Tevin consumption and original product scope remain unverified. No placeholder endpoint or new permission authority was created. See `docs/BACKPACK-DOMAIN.md` for setup/use/verification.
+
+---
+
 # Persistent evidence scorecard
 
 ## Current ONE owner starter integration — October30,2026
