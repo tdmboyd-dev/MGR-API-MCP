@@ -1,0 +1,343 @@
+{
+  "scope": "Fetched source publication and current qualified runtime/test input comparison, not permanent owner installation or production acceptance.",
+  "repositories": [
+    {
+      "repo": "MGR-ONE",
+      "revision": "5e91441ad6371a135bcc22d4bffb7809eb902cf9",
+      "ref": "origin/integrate/department-tools-2026-10-28",
+      "files": [
+        {
+          "file": ".gitattributes",
+          "match": "byte-exact",
+          "remoteSha256": "2bd44e0823a0f0fc5376f350628a99e5d294977989f744c831dcd8f36cfe3246"
+        },
+        {
+          "file": "HANDOFF.md",
+          "match": "byte-exact",
+          "remoteSha256": "c2b0865915b54c7e17f89405304afd330024822465e0264276ab3d8248316c79"
+        },
+        {
+          "file": "coordination/ECOSYSTEM-PRODUCTION-AUDIT.md",
+          "match": "byte-exact",
+          "remoteSha256": "07d7ac6df44bfca4d8d1739d8b6e4ce268e833c293b7f972bb06f72b49b53b4e"
+        },
+        {
+          "file": "coordination/ECOSYSTEM-REUSE-AND-MERGE-PLAN.md",
+          "match": "byte-exact",
+          "remoteSha256": "c5569b02528f6af7dee9079fcdb6fcefb1b78131723a7f6d8ed5449e2334e79f"
+        },
+        {
+          "file": "docs/PROGRESS-SCORECARD.md",
+          "match": "byte-exact",
+          "remoteSha256": "2a85112907bac5065ab9d3a79829c2690401e05d604610c138864864559569e0"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/EVIDENCE-LOCATION.txt",
+          "match": "byte-exact",
+          "remoteSha256": "70368a4b5f0bdbfdfbe0736500ab70a65bab8ced71e8ea28d661424c0d611b11"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/REPORT.md",
+          "match": "byte-exact",
+          "remoteSha256": "49517dd20a76d8033ceb0894e3a79733d5575f872c77b9d868e76b7e9801c187"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/forge-native-preparation-final.json",
+          "match": "byte-exact",
+          "remoteSha256": "18649ed5232f22424c6a647c02c719aa3d3f2f9293b6fe1ee27b9f7bb05e667f"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/log-custody.json",
+          "match": "byte-exact",
+          "remoteSha256": "6da0c988560c64aa3b4ba178b5dce121fca4eee47e12c83dc3d67ce696545026"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/post-documentation.json",
+          "match": "byte-exact",
+          "remoteSha256": "4eb6bc675ea1ee50ab8815a672b49381d1176454b390d36c00a4548405907ef5"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/secret-scan-classification.json",
+          "match": "byte-exact",
+          "remoteSha256": "792e9e4fe229c94fbcf4363762dd67808e2c40597fafeaadf7673f251fe84f12"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/verification.json",
+          "match": "byte-exact",
+          "remoteSha256": "e6d6b0585ea6389168b1abd8a39e121fe2ca030636dcf953aaf558f3e9966aa6"
+        },
+        {
+          "file": "scripts/verify-forge-owner.mjs",
+          "match": "byte-exact",
+          "remoteSha256": "abc9c6f02ce1c9618192860d0a8e2bf919ac2cfebe7603497c728202aea74540"
+        },
+        {
+          "file": "web/department-capabilities.mjs",
+          "match": "byte-exact",
+          "remoteSha256": "98c2b5df7d3251430a349d0730670e135b992c8301249e1014f149c28320007b"
+        },
+        {
+          "file": "web/ecosystem-workflows.mjs",
+          "match": "byte-exact",
+          "remoteSha256": "69b0c073e41836ccacda6bd8fa182465a357d37225b95bbd5556e9a759809502"
+        },
+        {
+          "file": "web/forge-workflows.mjs",
+          "match": "byte-exact",
+          "remoteSha256": "2bcf8db1a7cb10ac47207ee7fcdb19f1d522f007f4d315102f125dacd0871844"
+        },
+        {
+          "file": "web/forge-workflows.test.mjs",
+          "match": "byte-exact",
+          "remoteSha256": "9902db912ae6db6ea7a7ce39fdaaf4842dca66e1991a4dbd794649ba36e7268c"
+        },
+        {
+          "file": "web/registered-department-startup.mjs",
+          "match": "byte-exact",
+          "remoteSha256": "93f607bc2b20d0ebefa72b038f29032d11842078cdb7091f04edf3b692b1cae9"
+        }
+      ],
+      "allMatched": true
+    },
+    {
+      "repo": "MGR-API-MCP",
+      "revision": "89f34a652cd0cec85616a9b2afd9081253d23050",
+      "ref": "origin/repair/completion-2026-10-28",
+      "files": [
+        {
+          "file": ".gitattributes",
+          "match": "byte-exact",
+          "remoteSha256": "332ff679125d86c12340d748f72f7332f1a20c1c93087cee67857b2a8ccace44"
+        },
+        {
+          "file": "AUDIT-LEDGER.md",
+          "match": "byte-exact",
+          "remoteSha256": "94dce6a2c0f195178297b7151774c964d900b7111c6d7cc8f0d46b39f3368433"
+        },
+        {
+          "file": "BUILD-QUEUE.md",
+          "match": "byte-exact",
+          "remoteSha256": "a9779989a6cd4c1ce487c66cae51b314ec2157121e660af8abb605023d588d8c"
+        },
+        {
+          "file": "HANDOFF.md",
+          "match": "byte-exact",
+          "remoteSha256": "2e9054f4dfe9e3fc49775568a42afdee70606971488aab11a4567f656c34f5fc"
+        },
+        {
+          "file": "docs/API-MCP-ENGINEERING-HANDBOOK.md",
+          "match": "byte-exact",
+          "remoteSha256": "ec4c82b7060ab422b212ec2d6e6c8379413d49ea62c3d5ed8f079fd7fb84d88f"
+        },
+        {
+          "file": "docs/full-build/SCORECARD.md",
+          "match": "byte-exact",
+          "remoteSha256": "1746d01ff9d77d3adbd68eb9d032de32bc0b9737380ec2502e45f027cbbb8da1"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/REPORT.md",
+          "match": "byte-exact",
+          "remoteSha256": "49517dd20a76d8033ceb0894e3a79733d5575f872c77b9d868e76b7e9801c187"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/api-verify.txt",
+          "match": "byte-exact",
+          "remoteSha256": "2c9447c77746ff418b22b3b80dd2f7a0fbb23d40667d3686b3d7f8c1da077ddc"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/forge-full.txt",
+          "match": "byte-exact",
+          "remoteSha256": "2306f21fab4a8ba6a625bce7f954e9e55453102b2d74be67cda7db35226251a2"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/forge-native-preparation-final.json",
+          "match": "byte-exact",
+          "remoteSha256": "18649ed5232f22424c6a647c02c719aa3d3f2f9293b6fe1ee27b9f7bb05e667f"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/forge-native-preparation-final.txt",
+          "match": "byte-exact",
+          "remoteSha256": "7bcd7203a7af82867cc8a31e2c86c9dcc7bbc243af5ce1abe0945536dd4bff89"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/forge-world-preparation-after.txt",
+          "match": "byte-exact",
+          "remoteSha256": "c42c06d23ea80d7c75c18d73a40331f210b197971bcb047abe7d33331f5578f7"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/forge-world-preparation-before.txt",
+          "match": "byte-exact",
+          "remoteSha256": "8ce1088fb345224beb92fb1ba892e5eb718fb9558f7a8681a471b024bd4feb1f"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/log-custody.json",
+          "match": "byte-exact",
+          "remoteSha256": "6da0c988560c64aa3b4ba178b5dce121fca4eee47e12c83dc3d67ce696545026"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/native-postdocs.txt",
+          "match": "byte-exact",
+          "remoteSha256": "372cfe0f924bef31d630394f112888b1bfa2e022faedd5ca90e3e70f0ffa824c"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/phase-0.txt",
+          "match": "byte-exact",
+          "remoteSha256": "ff99e3f87cf840ca81d3439a82dfad1912ed3dd551d974d8377b573e89b041fa"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/phase-1.txt",
+          "match": "byte-exact",
+          "remoteSha256": "5301b7bb9a967ec7a60c03520173db7189a4bdf13d703e4bea13231a6f42857b"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/phase-2.txt",
+          "match": "byte-exact",
+          "remoteSha256": "750624a2bf2800f5da14296451d3cc5c4aedf7ce2df973bf02faf3f5fdf2fa3e"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/post-documentation.json",
+          "match": "byte-exact",
+          "remoteSha256": "4eb6bc675ea1ee50ab8815a672b49381d1176454b390d36c00a4548405907ef5"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/qualification-driver.py",
+          "match": "byte-exact",
+          "remoteSha256": "a97cf94c0d87d795b92f2815587cff56c928454bd11913630ea79e0fcb0d1d05"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/secret-scan-classification.json",
+          "match": "byte-exact",
+          "remoteSha256": "792e9e4fe229c94fbcf4363762dd67808e2c40597fafeaadf7673f251fe84f12"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/source-after.json",
+          "match": "byte-exact",
+          "remoteSha256": "37d63753d8250c3f5af44d119d31ed433c6e37fd04655fbe43c66d2a4bb62ef7"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/source-before.json",
+          "match": "byte-exact",
+          "remoteSha256": "37d63753d8250c3f5af44d119d31ed433c6e37fd04655fbe43c66d2a4bb62ef7"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/verification.json",
+          "match": "byte-exact",
+          "remoteSha256": "e6d6b0585ea6389168b1abd8a39e121fe2ca030636dcf953aaf558f3e9966aa6"
+        },
+        {
+          "file": "scripts/owner-department-client.ts",
+          "match": "byte-exact",
+          "remoteSha256": "c985d937c3bc3843e211f1e8fb72e349fcd077a5b84e6232be2a4089eb34dc81"
+        },
+        {
+          "file": "src/department-gateway.ts",
+          "match": "byte-exact",
+          "remoteSha256": "fa7636d3e3dfa0c663fa64b728fba27a6282dc027f7c7017fc824bfbf33fcb53"
+        },
+        {
+          "file": "src/forge-department.ts",
+          "match": "byte-exact",
+          "remoteSha256": "badbf57dc9527e7f42ce9253e2b17836cc56334285e07fdb77fb1fa7bf1d3771"
+        },
+        {
+          "file": "test/forge-department.test.ts",
+          "match": "byte-exact",
+          "remoteSha256": "6a845adf64fdcf519c14f4833e7072516811934760bf5e331ab65ed1d74dd10b"
+        }
+      ],
+      "allMatched": true
+    },
+    {
+      "repo": "MGR-3D-FORGE",
+      "revision": "f427dbb27ef35b9a714cf60f41ae06506d05b6e9",
+      "ref": "origin/main",
+      "files": [
+        {
+          "file": ".gitattributes",
+          "match": "byte-exact",
+          "remoteSha256": "f082e8afa55f06d05469cd9fb2d52f548ae3370ae30bc1d47080bb1493019709"
+        },
+        {
+          "file": "docs/BUILD-REGISTER.md",
+          "match": "byte-exact",
+          "remoteSha256": "724f825ca7e9bafe767c49bac78212ddd4d65d5fa5ddc4854838eea543e0c9b8"
+        },
+        {
+          "file": "docs/FORGE-ENGINEERING-HANDBOOK.md",
+          "match": "byte-exact",
+          "remoteSha256": "758732a4061aa370ac6885e35ceb313b2e6213adb4361717527ec7962b2e0a6c"
+        },
+        {
+          "file": "docs/HANDOFF.md",
+          "match": "byte-exact",
+          "remoteSha256": "c0acec75bdb0cd2d7d16be29eb2ab6cadffe5b796832b8827a6085bef5907219"
+        },
+        {
+          "file": "docs/PROGRESS-LOG.md",
+          "match": "byte-exact",
+          "remoteSha256": "f31891316cd62f6fb2faa1e3514cb81881e75ea339119f9a1121d30c89195938"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/EVIDENCE-LOCATION.txt",
+          "match": "byte-exact",
+          "remoteSha256": "70368a4b5f0bdbfdfbe0736500ab70a65bab8ced71e8ea28d661424c0d611b11"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/REPORT.md",
+          "match": "byte-exact",
+          "remoteSha256": "49517dd20a76d8033ceb0894e3a79733d5575f872c77b9d868e76b7e9801c187"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/forge-native-preparation-final.json",
+          "match": "byte-exact",
+          "remoteSha256": "18649ed5232f22424c6a647c02c719aa3d3f2f9293b6fe1ee27b9f7bb05e667f"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/log-custody.json",
+          "match": "byte-exact",
+          "remoteSha256": "6da0c988560c64aa3b4ba178b5dce121fca4eee47e12c83dc3d67ce696545026"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/post-documentation.json",
+          "match": "byte-exact",
+          "remoteSha256": "4eb6bc675ea1ee50ab8815a672b49381d1176454b390d36c00a4548405907ef5"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/secret-scan-classification.json",
+          "match": "byte-exact",
+          "remoteSha256": "792e9e4fe229c94fbcf4363762dd67808e2c40597fafeaadf7673f251fe84f12"
+        },
+        {
+          "file": "evidence/forge-preparation-2026-11-01/verification.json",
+          "match": "byte-exact",
+          "remoteSha256": "e6d6b0585ea6389168b1abd8a39e121fe2ca030636dcf953aaf558f3e9966aa6"
+        },
+        {
+          "file": "forge/world_editor.py",
+          "match": "CRLF/LF-only",
+          "remoteSha256": "ccae5bb5ed1889f58f449cc642a3713d73d9f0bebf3e5bcd4bb2c5a04480be91"
+        },
+        {
+          "file": "forge/world_jobs.py",
+          "match": "CRLF/LF-only",
+          "remoteSha256": "671f04a1a389c39945a331269e29ae00306ebc3e5b91dda19cae8a4669373647"
+        },
+        {
+          "file": "tests/test_request_binding.py",
+          "match": "byte-exact",
+          "remoteSha256": "387abc937a939c4a90f6a11ba3a3148c34402bc8131ad0bd00b90afd239e003d"
+        },
+        {
+          "file": "tests/test_world_jobs.py",
+          "match": "CRLF/LF-only",
+          "remoteSha256": "690218ef4e81ec2fc574e1d552c34991b55eb236e8c5ec746f699d4289f183b0"
+        }
+      ],
+      "allMatched": true
+    }
+  ],
+  "qualifiedInputsRechecked": 2255,
+  "modelCalls": 0,
+  "permanentOwnerInstallation": false,
+  "productionAccepted": false
+}
