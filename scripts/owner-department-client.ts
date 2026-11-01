@@ -27,7 +27,7 @@ function data(value:unknown,depth=0,budget={bytes:0,nodes:0}):any{
 }
 function freeze<T>(value:T):T{if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const schemas=new Map<string,z.ZodType>([
- ...['execute','status','artifact','cancel','resume'].map(name=>['mgr_department_'+name,departmentCommand] as [string,z.ZodType]),
+ ...['prepare','execute','status','artifact','cancel','resume'].map(name=>['mgr_department_'+name,departmentCommand] as [string,z.ZodType]),
  ['mgr_backpack_capability_map',z.object({}).strict()],
  ['mgr_backpack_capability_card',z.object({project:z.string().regex(/^[a-z0-9][a-z0-9-]{0,63}$/)}).strict()],
  ['mgr_backpack_context',z.object({project:z.string().regex(/^[a-z0-9][a-z0-9-]{0,63}$/)}).strict()],

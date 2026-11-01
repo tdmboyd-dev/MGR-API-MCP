@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "sourceStable": true,
+  "guardedInputs": 2255,
+  "changed": [],
+  "added": [],
+  "removed": [],
+  "runs": [
+    {
+      "log": "api-verify.txt",
+      "exitCode": 0,
+      "counts": {
+        "tests": 295,
+        "pass": 295,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "log": "phase-0.txt",
+      "exitCode": 0,
+      "counts": {
+        "tests": 787,
+        "pass": 787,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "log": "phase-1.txt",
+      "exitCode": 0,
+      "counts": {
+        "tests": 276,
+        "pass": 276,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "log": "phase-2.txt",
+      "exitCode": 0,
+      "counts": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "log": "forge-full.txt",
+      "exitCode": 0,
+      "counts": {}
+    }
+  ],
+  "OneTestFiles": 101,
+  "sourceBaseONE": "4077fe759b11ca0d66898d16d51220755d948090",
+  "elapsedSeconds": 427.67,
+  "modelCalls": 0,
+  "permanentForgeInstallationVerified": false,
+  "productionVerified": false
+}

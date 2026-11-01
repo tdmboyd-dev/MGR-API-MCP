@@ -31,3 +31,5 @@ evidence/forge-glb-2026-11-01/** -text whitespace=-blank-at-eol,-blank-at-eof,-s
 evidence/forge-request-binding-2026-11-01/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
 
 evidence/forge-owner-workflows-2026-11-01/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+
+evidence/forge-preparation-2026-11-01/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol

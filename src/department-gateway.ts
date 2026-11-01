@@ -68,6 +68,7 @@ export class DepartmentGateway {
     const result=await this.request("creation",`/v1/creation/jobs/${encodeURIComponent(c.requestId)}/run`,{});
     return this.verifyCreation(c,result);
   }
+  async prepare(command:DepartmentCommand){const c=departmentCommand.parse(command);if(!isForgeDepartmentCommand(c)||!this.forge)throw Error('Native Forge preparation not configured');return this.forge.prepare(c);}
   async execute(command:DepartmentCommand,preDispatch?:()=>void){
     const c=departmentCommand.parse(command),p=this.config;
     if(isForgeDepartmentCommand(c)){if(!this.forge)throw Error('Forge department not configured');return this.forge.execute(c,preDispatch);}
@@ -174,7 +175,7 @@ export function registerDepartmentTools(server:McpServer,options:DepartmentToolO
     try{options.gateway.authorize(options.auth,options.resourceAudience);const result=await options.gateway.candidateBinding(input);options.gateway.authorize(options.auth,options.resourceAudience);return {content:[{type:"text",text:JSON.stringify(result)}]};}
     catch(error){return {isError:true,content:[{type:"text",text:JSON.stringify({error:error instanceof Error?error.message:"Omni binding unavailable",state:"unconfirmed"})}]};}
   });
-  for(const method of ["execute","status","artifact","cancel","resume"] as const){
+  for(const method of ["prepare","execute","status","artifact","cancel","resume"] as const){
     server.registerTool(`mgr_department_${method}`,{description:`${method} a bounded department operation. Identity is credential-bound. No signing, sending, arbitrary code or paid providers.`,inputSchema:departmentCommand},async input=>{
       try{const write=method==="execute"||method==="cancel"||method==="resume",current=departmentPublicationFence(options,write);current();const result=method==="execute"||method==="resume"?await options.gateway[method](input,current):await options.gateway[method](input);current();const text=JSON.stringify(result);current();return {content:[{type:"text",text}]};}
       catch(error){return {isError:true,content:[{type:"text",text:JSON.stringify({error:error instanceof DepartmentAuthorityExpired?'Department authorization expired; reconcile the original request':'Department outcome unconfirmed; reconcile the original request',state:"unconfirmed"})}]};}

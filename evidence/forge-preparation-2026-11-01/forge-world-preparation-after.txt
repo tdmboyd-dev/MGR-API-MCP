@@ -1,0 +1,19 @@
+test_all_five_original_inputs_verified_without_new_jobs_or_false_async_success (tests.test_request_binding.RequestBindingTests.test_all_five_original_inputs_verified_without_new_jobs_or_false_async_success) ... ok
+test_changed_instruction_under_same_id_is_never_accepted_as_old_job (tests.test_request_binding.RequestBindingTests.test_changed_instruction_under_same_id_is_never_accepted_as_old_job) ... ok
+test_changed_world_refuses_previous_world_and_biome_acceptance (tests.test_request_binding.RequestBindingTests.test_changed_world_refuses_previous_world_and_biome_acceptance) ... ok
+test_missing_request_is_read_only_not_a_creation (tests.test_request_binding.RequestBindingTests.test_missing_request_is_read_only_not_a_creation) ... ok
+test_native_normalization_remains_owned_by_original_creature_validator (tests.test_request_binding.RequestBindingTests.test_native_normalization_remains_owned_by_original_creature_validator) ... ok
+test_new_world_request_runs_editor_source_and_geometry_validation_without_allocation (tests.test_request_binding.RequestBindingTests.test_new_world_request_runs_editor_source_and_geometry_validation_without_allocation) ... ok
+test_reopen_reads_exact_original_and_async_interruption_stays_unknown (tests.test_request_binding.RequestBindingTests.test_reopen_reads_exact_original_and_async_interruption_stays_unknown) ... ok
+test_saved_original_request_tampering_cannot_be_hidden_by_unchanged_output (tests.test_request_binding.RequestBindingTests.test_saved_original_request_tampering_cannot_be_hidden_by_unchanged_output) ... ok
+test_bad_edits_do_not_create_job (tests.test_world_jobs.DurableWorldJobs.test_bad_edits_do_not_create_job) ... ok
+test_create_replay_after_restart_and_status (tests.test_world_jobs.DurableWorldJobs.test_create_replay_after_restart_and_status) ... ok
+test_incomplete_request_is_not_built_again (tests.test_world_jobs.DurableWorldJobs.test_incomplete_request_is_not_built_again) ... ok
+test_invalid_source_does_not_allocate_or_burn_an_original_world_request (tests.test_world_jobs.DurableWorldJobs.test_invalid_source_does_not_allocate_or_burn_an_original_world_request) ... ok
+test_tampered_world_cannot_replay (tests.test_world_jobs.DurableWorldJobs.test_tampered_world_cannot_replay) ... ok
+test_wrong_payload_id_cannot_reuse_existing_job (tests.test_world_jobs.DurableWorldJobs.test_wrong_payload_id_cannot_reuse_existing_job) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 4.654s
+
+OK

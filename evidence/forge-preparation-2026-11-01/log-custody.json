@@ -1,0 +1,90 @@
+{
+  "scope": "Current API raw source/log evidence packet; ONE and Forge retain receiving metadata only.",
+  "files": [
+    {
+      "path": "api-verify.txt",
+      "bytes": 28395,
+      "sha256": "2c9447c77746ff418b22b3b80dd2f7a0fbb23d40667d3686b3d7f8c1da077ddc"
+    },
+    {
+      "path": "forge-full.txt",
+      "bytes": 92847,
+      "sha256": "2306f21fab4a8ba6a625bce7f954e9e55453102b2d74be67cda7db35226251a2"
+    },
+    {
+      "path": "forge-native-preparation-final.json",
+      "bytes": 2937,
+      "sha256": "18649ed5232f22424c6a647c02c719aa3d3f2f9293b6fe1ee27b9f7bb05e667f"
+    },
+    {
+      "path": "forge-native-preparation-final.txt",
+      "bytes": 164,
+      "sha256": "7bcd7203a7af82867cc8a31e2c86c9dcc7bbc243af5ce1abe0945536dd4bff89"
+    },
+    {
+      "path": "forge-world-preparation-after.txt",
+      "bytes": 2522,
+      "sha256": "c42c06d23ea80d7c75c18d73a40331f210b197971bcb047abe7d33331f5578f7"
+    },
+    {
+      "path": "forge-world-preparation-before.txt",
+      "bytes": 14226,
+      "sha256": "8ce1088fb345224beb92fb1ba892e5eb718fb9558f7a8681a471b024bd4feb1f"
+    },
+    {
+      "path": "native-postdocs.txt",
+      "bytes": 92847,
+      "sha256": "372cfe0f924bef31d630394f112888b1bfa2e022faedd5ca90e3e70f0ffa824c"
+    },
+    {
+      "path": "phase-0.txt",
+      "bytes": 85151,
+      "sha256": "ff99e3f87cf840ca81d3439a82dfad1912ed3dd551d974d8377b573e89b041fa"
+    },
+    {
+      "path": "phase-1.txt",
+      "bytes": 27483,
+      "sha256": "5301b7bb9a967ec7a60c03520173db7189a4bdf13d703e4bea13231a6f42857b"
+    },
+    {
+      "path": "phase-2.txt",
+      "bytes": 1335,
+      "sha256": "750624a2bf2800f5da14296451d3cc5c4aedf7ce2df973bf02faf3f5fdf2fa3e"
+    },
+    {
+      "path": "post-documentation.json",
+      "bytes": 220,
+      "sha256": "4eb6bc675ea1ee50ab8815a672b49381d1176454b390d36c00a4548405907ef5"
+    },
+    {
+      "path": "qualification-driver.py",
+      "bytes": 3492,
+      "sha256": "a97cf94c0d87d795b92f2815587cff56c928454bd11913630ea79e0fcb0d1d05"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 6896,
+      "sha256": "49517dd20a76d8033ceb0894e3a79733d5575f872c77b9d868e76b7e9801c187"
+    },
+    {
+      "path": "secret-scan-classification.json",
+      "bytes": 31040,
+      "sha256": "792e9e4fe229c94fbcf4363762dd67808e2c40597fafeaadf7673f251fe84f12"
+    },
+    {
+      "path": "source-after.json",
+      "bytes": 252753,
+      "sha256": "37d63753d8250c3f5af44d119d31ed433c6e37fd04655fbe43c66d2a4bb62ef7"
+    },
+    {
+      "path": "source-before.json",
+      "bytes": 252753,
+      "sha256": "37d63753d8250c3f5af44d119d31ed433c6e37fd04655fbe43c66d2a4bb62ef7"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 1274,
+      "sha256": "e6d6b0585ea6389168b1abd8a39e121fe2ca030636dcf953aaf558f3e9966aa6"
+    }
+  ]
+}

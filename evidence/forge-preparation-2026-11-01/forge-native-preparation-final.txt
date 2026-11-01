@@ -1,0 +1,1 @@
+{"passed": true, "nativeJobs": 6, "receipt": "C:\\Users\\cool\\Documents\\Codex\\2026-10-30\\so-i-have-a-question-and\\work\\forge-native-preparation-final.json"}

@@ -39,6 +39,14 @@ export class ForgeDepartmentAdapter{
   return this.inspect(c,false);
  }
  async status(raw:ForgeDepartmentCommand){return this.inspect(raw,false);}
+ async prepare(raw:ForgeDepartmentCommand){
+  const {command:c,request:r}=this.original(raw),native=await this.#client.verifyRequest!(r);
+  const base={requestId:c.requestId,operation:c.operation,workspaceId:this.#workspace,tenantId:this.#tenant,actorId:this.#actor,commandSha256:forgeDepartmentDigest(c,this.#tenant,this.#actor),nativeKind:r.kind};
+  if(native.request_id!==c.requestId||native.request_kind!==r.kind)throw Error('Forge preparation identity mismatch');
+  if(native.status==='NOT_FOUND'&&native.input_verified===false&&native.job_id===undefined&&native.input_fingerprint===undefined)return {...base,prepared:true,sideEffects:false,requestExists:false,nativeState:'NOT_FOUND',nativeInputVerified:false};
+  if(!['MATERIALIZED','RUNNING','FAILED','NEEDS_RECONCILIATION'].includes(String(native.status))||native.input_verified!==true||typeof native.input_fingerprint!=='string'||!/^[a-f0-9]{64}$/.test(native.input_fingerprint)||typeof native.job_id!=='string'||!/^[a-f0-9]{24}$/.test(native.job_id))throw Error('Forge preparation original input unverified');
+  return {...base,prepared:true,sideEffects:false,requestExists:true,nativeState:native.status,nativeInputVerified:true,inputFingerprint:native.input_fingerprint,nativeJobId:native.job_id};
+ }
  async artifact(raw:ForgeDepartmentCommand){return this.inspect(raw,true);}
  private async inspect(raw:ForgeDepartmentCommand,includeData:boolean):Promise<any>{
   const {command:c,request:r}=this.original(raw);
