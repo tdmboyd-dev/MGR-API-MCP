@@ -1,0 +1,13 @@
+✔ existing private host pointer supplies original store and roots independently of plugin cache version (88.3263ms)
+✔ withdrawn host connection revokes reads on the original open engine (60.8696ms)
+✔ retargeting the host pointer does not silently preserve authority (63.9875ms)
+✔ missing registered root refuses before engine allocation and never enrolls a replacement (57.4942ms)
+✔ missing private pointer refuses without plugin-version fallback (54.512ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 996.0424

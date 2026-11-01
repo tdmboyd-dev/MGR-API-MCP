@@ -1,0 +1,1 @@
+{"registrationPrepared":true,"projects":["backpack","code-monster","omnidev","omnisight"],"manualProjects":["backpack","code-monster","omnidev","omnisight","forge","creation","create-loco","hu","legacy","signme","agents"],"privateValuesPrinted":false}

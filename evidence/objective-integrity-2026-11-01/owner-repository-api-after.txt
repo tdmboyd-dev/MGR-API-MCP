@@ -1,0 +1,21 @@
+✔ malformed UTF8 cannot be silently replaced and published with a misleading content hash (1160.1021ms)
+✔ valid Unicode/BOM/CRLF documents preserve the committed byte hash and readable text (1158.027ms)
+✔ a replacement directory at the same enrolled path cannot inherit old repository knowledge enrollment (1657.8768ms)
+✔ an oversized source document and a line beyond the page budget are refused explicitly (3015.5511ms)
+✔ manual-only Forge binding reads knowledge without exposing a Backpack registration or execution method (4.6463ms)
+✔ tenant actor expiry scope and mid-read revocation/rebinding withhold manuals (3.2881ms)
+✔ caller abort crosses actual local SDK/HTTP edge into the source handler and frees shared admission (150.9493ms)
+✔ all six source reads share one analysis admission across request servers (4.7083ms)
+✔ actual gateway registrations return draft card/context and only principal-bound map entries (2.347ms)
+✔ wrong tenant actor scope audience expiry or project denies before a backend read (1.7454ms)
+✔ mid-read revocation root rebound expiry and changed principal withhold the result (1.2787ms)
+✔ foreign result identity and oversized data cannot be relabeled as this project (0.6398ms)
+✔ independent per-request MCP servers share exactly one source-analysis slot and release it after completion (0.7947ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7219.7605

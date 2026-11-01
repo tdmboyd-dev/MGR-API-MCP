@@ -1,0 +1,20 @@
+✔ read-only owner connection validates actual catalog and saves a receipt without creating engineering jobs (196.1219ms)
+✔ unknown projects malformed requests and foreign response identity deny without a success receipt (183.6972ms)
+✔ abort or owner authority withdrawal during a read prevents receipt publication (204.476ms)
+✔ catalog and symbol request contract keeps root/path/commands out of model input (0.4202ms)
+✔ reference and impact operations use only the fixed existing shared source route (198.8735ms)
+✔ structural and automation reads keep the existing strict model contract and never create jobs (238.7838ms)
+✔ manual reads preserve the exact project/source continuation without enabling unrelated source or execution methods (187.6911ms)
+✔ eleven full products fit the existing model receipt budget through an explicitly compact discovery projection (183.5806ms)
+✔ product ambition remains visible without granting unconnected execution or mutating future status (180.5033ms)
+✔ all public committed operating documents and every line remain reachable through bounded source-pinned pages (3413.8342ms)
+✔ working/private instructions, arbitrary document paths, alternate roots and ambient Git overrides cannot substitute content (2476.1699ms)
+✔ newly committed instructions are discovered automatically and old-page continuation cannot combine versions (1939.5496ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7978.6897

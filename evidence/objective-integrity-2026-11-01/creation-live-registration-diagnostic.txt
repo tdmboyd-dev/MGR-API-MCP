@@ -1,0 +1,1 @@
+{"registrationPrepared":false,"errorCode":"ENOENT","message":"ENOENT: no such file or directory, open 'C:\\Users\\cool\\.codex\\plugins\\cache\\mgr-backpack-local\\mgr-backpack\\0.4.0\\.mcp.json'"}

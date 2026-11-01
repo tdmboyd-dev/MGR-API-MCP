@@ -1,0 +1,32 @@
+{
+  "creationPublishedSource": "46cccc98cb5b1e40ad8f29d6aed362d9aff09616",
+  "oneBase": "7e8ecd9ae8660ba4a08c3a95c6c77ab6213d14d6",
+  "apiHead": "fc730610ac1c285ae27c183f346cba8d4190a035",
+  "anchors": {
+    "MGR-ONE/web/owner-repository-services.mjs": {
+      "workingSha256": "35253a07460ab94de23834d6a00317f456a21e3851d5995c296fd911d0184bed",
+      "normalizedTextSha256": "35253a07460ab94de23834d6a00317f456a21e3851d5995c296fd911d0184bed"
+    },
+    "MGR-ONE/scripts/qualification/owner-backpack-host.test.mjs": {
+      "workingSha256": "1ea9ab9d8ea92f7ed644c9b0753ddb6c47a90bc51a7ca0506fe8022004557e6a",
+      "normalizedTextSha256": "1ea9ab9d8ea92f7ed644c9b0753ddb6c47a90bc51a7ca0506fe8022004557e6a"
+    },
+    "MGR-CREATE-Os/src/api/service.ts": {
+      "workingSha256": "e21215ebb8a05e36c2dd0cbd307b17bd53af100cf0e1e10744907a4fe7ecdda7",
+      "normalizedTextSha256": "cf9bd5a319a46f2d5ac1eeb82e5b1ebe4ef3811f82e19727d1c50363853dce43"
+    },
+    "MGR-CREATE-Os/src/objectives/orchestrator.ts": {
+      "workingSha256": "b01bd89c50d7ca0e286da638b7e6827f230ef0e47f97b51d9ece72149fd7b735",
+      "normalizedTextSha256": "4b4d0f880767ef2a8df681cb0647af48932d183c5e33c64ea13b81ff6930e7eb"
+    },
+    "MGR-CREATE-Os/src/governance/rights.ts": {
+      "workingSha256": "1e434ee0fd3380b1c674b70199c792ab474418d162e583c137629057c68150e0",
+      "normalizedTextSha256": "774c9fbc8eabf502e1b7356db5919dc8ebb805acedd9af9d316f23bc2f580638"
+    }
+  },
+  "notWholeSourceCoverage": true,
+  "permanentOwnerReadPassed": true,
+  "configurationChanges": 0,
+  "newInferenceCalls": 0,
+  "productionAccepted": false
+}
