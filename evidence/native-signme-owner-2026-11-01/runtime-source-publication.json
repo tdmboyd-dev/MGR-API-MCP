@@ -1,0 +1,23 @@
+{
+  "repositories": [
+    {
+      "repository": "MGR-ONE",
+      "gitCommit": "8be0b9ffa44da13f2059df48da58facb7aeb04d3"
+    },
+    {
+      "repository": "MGR-API-MCP",
+      "gitCommit": "b07a1e6c6f55cec487045922330e8209869a2058"
+    },
+    {
+      "repository": "MGR-CREATE-Os",
+      "gitCommit": "0af2d43790e0d6607c33550bd2b707a8a09a3bae"
+    },
+    {
+      "repository": "MGR-SIGN-ME",
+      "gitCommit": "14b1cb04398b7a82fb0a197f1a09b574433229be"
+    }
+  ],
+  "nonForcePushFetchedAndMatched": true,
+  "runtimeSourceMatchesPublishedQualification": true,
+  "mainPromoted": false
+}

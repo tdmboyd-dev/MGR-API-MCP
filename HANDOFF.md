@@ -1,5 +1,16 @@
 ## Durable Creation runtime and native adapter — November1,2026
 
+## Permanent SignMe owner acceptance — November1,2026
+
+Published/fetched/adopted sources ONE8be0b9f, shared edge revision b07a1e6; Creation revision 0af2d43; SignMe revision 14b1cb0 are active through the normal owner launcher. Two consistent SQLite backups passed quick_check; SignMe's dedicated domain file was absent before enrollment. Startup preserved all34old execution effects, prior native Creation/Forge state, all7old artifacts and private configuration. Native SignMe starts with a local no-password service actor, not a browser/customer account, and reopening does not provision actors.
+
+Actual protected owner API saved an original SignMe draft and its next immutable revision, then completed a SignMe/Creation project whose notes contain the accepted artifact reference. Four exact original-owner approvals/effects;3immutable SignMe versions/2documents and1Creation note;4native artifacts. Parent retirement denied for both project children. No model inference, signing, sending or payment was performed.
+
+Second normal shutdown verified the original process identity and its actual exit; normal startup verified a different live owner process. All4original artifacts and completed project reopened with exact hashes, no additional effect/operation/version/note/Forge job, and all7older artifacts preserved. Selected/default account models and private configuration stayed unchanged. Public result and process observation are in permanent-owner-result.json and normal-process-reopen.json. Private row/config/backup snapshots stay ignored; no customer database was migrated. This is local permanent backend acceptance, not browser, live model comprehension, signature/legal/delivery, full UI, hosted/provider/device/production or backup-restoration acceptance.
+
+This supersedes predecessor pending-native-SignMe/permanent-project adapter directions in this bounded scope. Full13repo source/production/quality/cost scope remains ACTIVE/Unassessed. Next: remaining full tool audits/connections, terminal-result witness/lifetime/storage and Prisma/UI compatibility, exact generated-content provenance, original signing/delivery requirements and measured owned/external comparisons. Original requirements/counts and independent tool use remain. No measured dollar savings or additional brain/grant engine; document authority remains in SignMe's dedicated native database.
+
+
 ## Native SignMe and approved-command custody — November1,2026
 
 Original SignMe startup/schema/text/lifecycle repaired; native23/23. Existing edge returns exact immutable version bytes; TypeScript/fullAPI312/312, zero skips. Creation DOCUMENT factory supports direct SignMe; full253/253. Final owner99/99 covers actual drafts/revisions/download/lost reply/restarts, mixed project/ref/retention and old-tool regressions. Four saved-input substitution probes reproduced missing core approval binding; all nonretired commands now bind saved/reconstructed action and recheck before dispatch. Source16hashes unchanged. [Evidence and continuation](evidence/native-signme-owner-2026-11-01/REPORT.md).
@@ -359,3 +370,5 @@ Current department delivery source `f77b276cf0b9aee2768305370f9650a063e65c61` is
 Current repair source `de44f79a852312fdeea8bdd7b129fee2c920ed4c` is committed, non-force pushed and exactly read back. [Publication](evidence/partial-department-gateway-2026-10-30/source-publication.json). Main unchanged.
 
 Current four-repository receiving source `6b23dfeb6faaf962197ab9d28dd2315bb54a270a` is committed/non-force pushed with exact remote readback. Main was unchanged by this publication. [Both source pins](evidence/four-repository-integration-2026-11-01/source-publication.json). ONE309/309, API starter6/6, all2164listed inputs stable; fullAPI190/190 separately. Other AI edits in Backpack/Code Monster are excluded, not overwritten or certified.
+
+Follow-up source inspection: audit native identifier/path normalization before claiming the entire admitted ID alphabet. Native validId admits colon/dot/underscore, while status/document routes currently match URL pathname text and the shared edge percent-encodes IDs. Reproduce encoded valid-ID reconciliation and legacy document-ID cases in an isolated fixture, then repair matching/validation and preserve exact request identity. Current permanent trial used generated/hyphen IDs; this edge was not executed or accepted in that proof. Keep this in the existing SignMe hardening/compatibility lane, not another backlog.
