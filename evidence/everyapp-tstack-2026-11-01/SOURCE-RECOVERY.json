@@ -1,0 +1,43 @@
+{
+  "observedAt": "2026-11-01T16:55:13.152Z",
+  "passed": 4,
+  "records": [
+    {
+      "id": "code-monster",
+      "base": "0b425dd62317bbac7cc68edf64baa91c2751115c",
+      "commit": "ac3255aea982cbf4647f8adcf9ec4af61144edc8",
+      "tree": "c8f0d33a75e2a8848e98f2850097b52fe1a9ac8a",
+      "patchTreeReconstructed": true,
+      "bundleVerified": true,
+      "exactCommitRestored": true
+    },
+    {
+      "id": "one",
+      "base": "7e8ecd9ae8660ba4a08c3a95c6c77ab6213d14d6",
+      "commit": "46861075a90d286a39a83c529645655088b8b5fa",
+      "tree": "521d096cc0661cfe826f26d20009f0c3daf0bd53",
+      "patchTreeReconstructed": true,
+      "bundleVerified": true,
+      "exactCommitRestored": true
+    },
+    {
+      "id": "api",
+      "base": "b0c9150c974084f9a0faec5ecf28d35d41038248",
+      "commit": "098ae6bf734e97a3a81d4f1ba44533e8e39cbc9a",
+      "tree": "183d4cd18eea95ef38275b12181aed0f9ed98fba",
+      "patchTreeReconstructed": true,
+      "bundleVerified": true,
+      "exactCommitRestored": true
+    },
+    {
+      "id": "normal-api",
+      "base": "89ee4f524beaf73228a413a49abb283b7bb26a53",
+      "commit": "98df4b76393f5da85a6d497060b8e9c6c1fcf0ca",
+      "tree": "5333a654ccab55a0ee379577bd118f3292d25426",
+      "patchTreeReconstructed": true,
+      "bundleVerified": true,
+      "exactCommitRestored": true
+    }
+  ],
+  "scope": "Four patches actually applied in owned temporary worktrees at exact bases and matched delivery trees. Incremental bundles verified in repository context and restored original exact commits. Listed prerequisite base commits remain required. Owned reconstruction worktrees removed."
+}
