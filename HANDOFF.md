@@ -1,5 +1,9 @@
 # Resume MGR-API-MCP
 
+## Current registered repository reads - November 1, 2026
+
+The optional repository gateway now exposes bounded registered Backpack card/map/context and existing Code Monster profile/symbol methods under the verified shared principal. Frozen roots, actor/tenant, current ONE authorization, a shared source-analysis admission slot and end-to-end cancellation are enforced. Source-only SDK requests receive 60 seconds; ordinary methods retain 15 seconds. Full API verify passed190/190, typecheck/hosted syntax/plugin checks passed. Actual ONE saved-account conversations and SDK/TCP tool receipts passed separately; ONE evidence/four-repository-integration-2026-11-01 records the exact scope and publication. Personal job creation/worker dispatch/live OmniSight job consumer are not enabled here. Earlier claims below that Code Monster/OmniSight source is unavailable are historical and superseded for these pinned four sources. No domain authority or business database moves into the edge.
+
 ## Current partial-department gateway delivery — October30,2026
 
 The gateway and authorized MCP composition now support individually configured departments. Missing services deny before network dispatch; Legacy registration requires a configured Legacy client. FullAPI181/181/typecheck/hosted syntax/plugin checks passed, with ONE302/302 frozen and separate real permanent-owner Creation renderer/restart/browser proof. **Creation remains the full studio; a Markdown renderer is one narrow factory function.** ONE owns authority/budget and Creation owns artifact bytes; the shared edge transports. No SignMe/VOICE/Legacy connection or full studio/production claim follows. [Evidence](evidence/partial-department-gateway-2026-10-30/REPORT.md). Canonical location remains Projects/MGR-API-MCP, original48queueIDs unchanged, old detached private recovery checkout preserved.

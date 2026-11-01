@@ -1,3 +1,4 @@
+import type {RepositoryReadGateway} from './repository-read-tools.js';
 import { createMcpHandler } from "@modelcontextprotocol/server";
 import { createMgrMcpServer } from "./mcp-server.js";
 import { authorizeMcpRequest, type AccessTokenVerifier, type McpAuthResult } from "./http-auth.js";
@@ -13,6 +14,7 @@ export interface AuthorizedMgrMcpHttpOptions {
   legacy?:LegacyEdgeClient;
   creation?:CreationOSClient;
   departments?:DepartmentGateway;
+  repositories?:RepositoryReadGateway;
   /** Host may lower the fixed64 outer auth/handler admission budget. */
   maximumPendingRequests?:number;
 }
@@ -85,6 +87,7 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
 
       const serverOptions:{
         departments?:DepartmentToolOptions;
+        repositories?:{gateway:RepositoryReadGateway;auth:typeof authResult.auth;resourceAudience:string};
         legacy?:{
           auth:typeof authResult.auth;
           resourceAudience:string;
@@ -104,6 +107,7 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
           creation:options.creation
         };
       }
+      if(options.repositories)serverOptions.repositories={gateway:options.repositories,auth:authResult.auth,resourceAudience:options.resourceAudience};
       if(options.departments)serverOptions.departments={auth:authResult.auth,resourceAudience:options.resourceAudience,gateway:options.departments};
       if(closed)return unavailable();
       const handler=createMcpHandler(()=>createMgrMcpServer(serverOptions));

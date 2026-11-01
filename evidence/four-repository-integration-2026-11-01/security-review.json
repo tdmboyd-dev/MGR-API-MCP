@@ -1,0 +1,7 @@
+{
+  "scope": "Exact changed/untracked publication files copied to isolated scan directory, no private runtime/config/transcripts. Known-format scan plus structured review, not universal secret detection.",
+  "gitleaksRawExit": 0,
+  "findingsReviewed": 0,
+  "unresolvedFindings": 0,
+  "classifications": []
+}

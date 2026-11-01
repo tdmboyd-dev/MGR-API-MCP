@@ -22,6 +22,24 @@ async function fixture(t:any,{raw=false,sql=false,principal='owned-actor',fetche
 }
 const invoke=(f:any)=>{f.current();return typeof f.client.callToolWithContext==='function'?f.client.callToolWithContext(command,{assertCurrent:f.current}):f.client.callTool(command);};
 
+test('source read receives the caller abort signal and retains custody through confirmed close',async t=>{
+ let entered!:()=>void,aborted=false;const ready=new Promise<void>(r=>entered=r);
+ const f=await fixture(t,{fetcher:async(input,options={})=>{const message=options.body?JSON.parse(String(options.body)):null;if(message?.method==='tools/call'&&message.params?.name==='code_monster_profile'){entered();return new Promise<Response>((_resolve,reject)=>{const fail=()=>{aborted=true;reject(Error('owned-source-abort'));};options.signal?.addEventListener('abort',fail,{once:true});if(options.signal?.aborted)fail();});}return fetch(input,options);}});
+ await f.client.prepareForDispatch();const controller=new AbortController(),pending=f.client.callToolWithContext({name:'code_monster_profile',arguments:{project:'source',revision:'HEAD',prefixes:[]}},{assertCurrent:f.current,signal:controller.signal});void pending.catch(()=>{});await deadline(ready);controller.abort();await assert.rejects(deadline(pending),/unconfirmed/);assert.equal(aborted,true);await deadline(f.client.close());assert.equal(f.client.status().pendingTransports,0);assert.equal(f.mutations,0);
+});
+
+test('a pre-aborted source request cannot start transport and caller timeout overrides remain forbidden',async t=>{
+ const f=await fixture(t);await f.client.prepareForDispatch();const before=f.network,controller=new AbortController();controller.abort();await assert.rejects(f.client.callToolWithContext({name:'code_monster_profile',arguments:{project:'source',revision:'HEAD',prefixes:[]}},{signal:controller.signal}),/unconfirmed/);assert.equal(f.network,before);await assert.rejects(f.client.callToolWithContext(command,{sourceRead:true}),/context-required/);assert.equal(f.mutations,0);
+});
+
+test('source-only read budget survives15seconds and aborts at60seconds; original transport custody persists until close',async t=>{
+ let entered!:()=>void;const ready=new Promise<void>(r=>entered=r);
+ const f=await fixture(t,{fetcher:async(input,options={})=>{const message=options.body?JSON.parse(String(options.body)):null;if(message?.method==='tools/call'&&message.params?.name==='code_monster_profile'){entered();return new Promise<Response>((_resolve,reject)=>{const fail=()=>reject(Error('owned-read-aborted'));options.signal?.addEventListener('abort',fail,{once:true});if(options.signal?.aborted)fail();});}return fetch(input,options);}});
+ await f.client.prepareForDispatch();t.mock.timers.enable({apis:['setTimeout']});let settled=false;
+ const pending=f.client.callTool({name:'code_monster_profile',arguments:{project:'source',revision:'HEAD',prefixes:[]}});void pending.finally(()=>{settled=true;}).catch(()=>{});
+ try{await ready;t.mock.timers.tick(15001);await new Promise(r=>setImmediate(r));assert.equal(settled,false);assert.equal(f.client.status().pendingTransports,1);t.mock.timers.tick(45000);await assert.rejects(pending,/unconfirmed/);assert.ok(f.client.status().pendingTransports>0,'caller timeout must not fake original transport cleanup');t.mock.timers.reset();await deadline(f.client.close());assert.equal(f.client.status().pendingTransports,0);assert.equal(f.client.status().busy,false);assert.equal(f.mutations,0);}finally{t.mock.timers.reset();}
+});
+
 test('held actual SDK HTTP connection cannot outlive original ONE grant before mutation',{skip:!oneRoot},async t=>{
  const f=await fixture(t,{sql:true});f.arm();const pending=invoke(f);pending.catch(()=>{});await deadline(f.ready);f.withdraw();f.release();await deadline(pending.catch(()=>{}));console.log(JSON.stringify({rawSDKControl:process.env.MGR_TEST_RAW_CLIENT_CONTROL==='1',mutations:f.mutations,toolsLists:f.lists,actualLoopback:true,outsideCalls:0}));assert.equal(f.mutations,0);
 });

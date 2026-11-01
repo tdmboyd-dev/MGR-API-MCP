@@ -12,3 +12,12 @@ evidence/partial-department-gateway-2026-10-30/** -text whitespace=blank-at-eol,
 
 # Preserve exact qualified Windows source bytes for this gateway adapter.
 src/local-department-edge.ts -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+evidence/four-repository-integration-2026-11-01/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+scripts/owner-department-client.ts -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+src/mcp-http.ts -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+src/mcp-server.ts -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+src/repository-read-tools.ts -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+test/owner-department-client.test.ts -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+test/repository-read-cancellation.test.ts -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+test/repository-read-tools.test.ts -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

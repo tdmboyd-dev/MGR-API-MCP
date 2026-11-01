@@ -1,18 +1,20 @@
+import type {RepositoryReadGateway} from './repository-read-tools.js';
 import {createServer} from "node:http";
 import {timingSafeEqual} from "node:crypto";
 import {createAuthorizedMgrMcpHttpHandler} from "./mcp-http.js";
 import {DepartmentGateway,type DepartmentGatewayConfig} from "./department-gateway.js";
 
 /** Explicit loopback service-token deployment. It is not a hosted OAuth issuer. */
-export function createLocalDepartmentEdge(options:DepartmentGatewayConfig&{port:number;accessToken:string;expiresAt:number}){
+export function createLocalDepartmentEdge(options:DepartmentGatewayConfig&{port:number;accessToken:string;expiresAt:number;repositories?:RepositoryReadGateway}){
  if(!Number.isInteger(options.port)||options.port<1024||options.port>65535||options.accessToken.length<32||!Number.isFinite(options.expiresAt)||options.expiresAt<=Date.now())throw Error("Valid local port, strong private token and expiry required");
  const base=`http://127.0.0.1:${options.port}`,audience=base+"/mcp";
  const gateway=new DepartmentGateway(options);
- const handler=createAuthorizedMgrMcpHttpHandler({...(options.legacy?{legacy:options.legacy}:{}),departments:gateway,resourceAudience:audience,resourceMetadataUrl:base+"/.well-known/oauth-protected-resource",requiredScopes:["tools:read"],verifier:{async verify(token){
+ const handler=createAuthorizedMgrMcpHttpHandler({...(options.legacy?{legacy:options.legacy}:{}),departments:gateway,...(options.repositories?{repositories:options.repositories}:{}),resourceAudience:audience,resourceMetadataUrl:base+"/.well-known/oauth-protected-resource",requiredScopes:["tools:read"],verifier:{async verify(token){
   if(Buffer.byteLength(token)!==Buffer.byteLength(options.accessToken)||!timingSafeEqual(Buffer.from(token),Buffer.from(options.accessToken)))return null;
-  return {subject:options.actorId,tenantId:options.tenantId,audience,scopes:["tools:read","departments:execute","departments:read"],expiresAt:options.expiresAt};
+  return {subject:options.actorId,tenantId:options.tenantId,audience,scopes:["tools:read","departments:execute","departments:read",...(options.repositories?["repositories:read"]:[])],expiresAt:options.expiresAt};
  }}});
  const server=createServer(async(req,res)=>{
+  const cancellation=new AbortController();req.once("aborted",()=>cancellation.abort());res.once("close",()=>{if(!res.writableEnded)cancellation.abort();});
   const send=(status:number,body:unknown)=>{res.writeHead(status,{"content-type":"application/json","cache-control":"no-store"});res.end(JSON.stringify(body));};
   try{
    if(req.headers.host!==`127.0.0.1:${options.port}`)return send(421,{error:"host denied"});
@@ -22,7 +24,7 @@ export function createLocalDepartmentEdge(options:DepartmentGatewayConfig&{port:
    if(req.url!=="/mcp")return send(404,{error:"not found"});
    const chunks:Buffer[]=[];let size=0;for await(const chunk of req){const b=Buffer.from(chunk);size+=b.length;if(size>32768)return send(413,{error:"request exceeds limit"});chunks.push(b);}
    const headers=new Headers();for(const [k,v] of Object.entries(req.headers))if(v!==undefined)headers.set(k,Array.isArray(v)?v.join(","):v);
-   const body=Buffer.concat(chunks);const response=await handler.fetch(new Request(base+"/mcp",{method:req.method??"GET",headers,...(body.length?{body:new Uint8Array(body)}:{})}));
+   const body=Buffer.concat(chunks);const response=await handler.fetch(new Request(base+"/mcp",{method:req.method??"GET",headers,signal:cancellation.signal,...(body.length?{body:new Uint8Array(body)}:{})}));
    res.writeHead(response.status,Object.fromEntries(response.headers));res.end(Buffer.from(await response.arrayBuffer()));
   }catch{if(!res.headersSent)send(503,{error:"local department edge unavailable"});else res.destroy();}
  });

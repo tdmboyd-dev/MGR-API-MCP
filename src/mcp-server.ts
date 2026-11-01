@@ -1,3 +1,5 @@
+import type {RepositoryReadGateway} from './repository-read-tools.js';
+import type {AuthContext} from './authz.js';
 import { McpServer } from "@modelcontextprotocol/server";
 import { serveStdio } from "@modelcontextprotocol/server/stdio";
 import * as z from "zod/v4";
@@ -10,7 +12,7 @@ import { registerCreationMcpTools, type CreationMcpToolOptions } from "./creatio
 import { registerEcosystemCatalogTool } from "./ecosystem-catalog.js";
 import { registerDepartmentTools, type DepartmentToolOptions } from "./department-gateway.js";
 
-export function createMgrMcpServer(options:{legacy?:LegacyMcpToolOptions;creation?:CreationMcpToolOptions;departments?:DepartmentToolOptions}={}): McpServer {
+export function createMgrMcpServer(options:{legacy?:LegacyMcpToolOptions;creation?:CreationMcpToolOptions;departments?:DepartmentToolOptions;repositories?:{gateway:RepositoryReadGateway;auth:AuthContext;resourceAudience:string}}={}): McpServer {
   const server = new McpServer(
     { name: "mgr-api-mcp", version: "0.1.0" },
     {
@@ -19,6 +21,7 @@ export function createMgrMcpServer(options:{legacy?:LegacyMcpToolOptions;creatio
     },
   );
   registerEcosystemCatalogTool(server,options.legacy?.auth,options.legacy?.resourceAudience);
+  if(options.repositories)options.repositories.gateway.register(server,options.repositories.auth,options.repositories.resourceAudience);
 
   server.registerTool(
     "mgr_system_info",
