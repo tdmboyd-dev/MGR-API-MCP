@@ -1,0 +1,35 @@
+## Completed RepoMind / ArchitectPlaybook native dependency review — November 1, 2026
+
+Built original compiler-derived moduleReview data into the existing Code Monster profile, which Tevin consumes through repository_read. It reports bounded structural dependency groups with pinned edge citations and explicit unresolved/omitted coverage. Type-only imports may be included; this is not runtime-cycle or defect proof. No extra tool, memory database, brain, grant engine or service was added.
+
+Executed this cycle: Code Monster full suite 267 results / 261 passed / 0 failed / 6 explicit Windows skips; focused worker/stdio and new graph checks 9/9; repository gates and demo passed. RepoMind original selected tests 59/59; Architect collector 41/41 and selected score cases 5/5. Original controlled probes, exact source selection and REA limits are in the adjacent REPORT.md and SOURCE-REA-MANIFEST.json. The first full Architect discovery and first installed-checkout REA attempt were cancelled without completion evidence; they are not reported as passing. The initial owner fixture failure was repaired without changing product guards.
+
+Canonical owner HTTP/SQLite/SDK/Git chain passed 21/21 with 10 injected model responses and 22 real source calls. Normal HTTP source and compiled entrypoints each passed 17/17 with owned JWKS/signed JWT and official SDK. Synthetic HTTPS mapping targets owned loopback HTTP; actual hosted TLS/OAuth, live model comprehension, permanent owner activation, provider/device and production acceptance remain unverified. API qualifier typecheck and repository gates passed; prior full API/ONE suite receipts remain historical source-specific evidence rather than a new whole-suite claim.
+
+RepoMind contributes useful source-bound handoff ideas but does not replace ONE/Backpack authority. Its original Git inspector accepted ambient root/object overrides and executed a configured converter during diff capture; original database preflight accepted an owned hardlink. MGR retains its existing sanitized Git, committed source reads and separately tested CM private-state hardlink refusal. Architect lexical collection missed a valid escaped import that the native compiler graph resolves. Broader handoff automation and all unassessed candidate/product requirements remain open.
+
+Next: continue the remaining research list from the task catalog, including the audit engagement flow and security audit candidates. Exact source/receipt roots and recoverable incremental transfer are recorded in task outputs/REPOMIND-ARCHITECT-SOURCE-DELIVERY.json. This closes the bounded dependency-review slice only.
+
+---
+
+# RepoMind and ArchitectPlaybook: original behavior and native implementation
+
+RepoMind identity studied: Nei-Xin/repomind at 1d6987937da700f580eea4290587caa79be3b84d (MIT). Other projects sharing the RepoMind name are separate unresolved candidates. ArchitectPlaybook: BenSheridanEdwards/ArchitectPlaybook at 6d6ff6e9cc1a685d65ed9c646b64d233ef03556b (MIT). No competitor implementation is copied into MGR.
+
+| Subject | Executed evidence | Decision and limits |
+|---|---|---|
+| RepoMind handoff and Git collection | Original TypeScript build; 59 selected original tests passed, including actual SQLite structured-handoff persistence | Keep its useful distinction between source-bound paragraphs and unverified semantic completeness. Do not install a second memory authority alongside ONE/Backpack. Broader memory retrieval and provider extraction remain unassessed. |
+| RepoMind Git authority | Original inspector returned an owned sibling HEAD when ambient GIT_DIR was supplied | MGR already removes ambient Git variables; preserve existing host-selected scope. This needs inherited local environment control; no remote attack claim. |
+| RepoMind read-side execution | Original captureDiff executed the owned configured text converter twice | MGR committed-blob source reads avoid that mechanism. Do not import a working-tree diff reader that can execute repository configuration. |
+| RepoMind database path | Original preflight accepted an owned hardlink | Path preflight result only; no victim database opened. Existing CM private-state hardlink refusal has its own regression tests; this is not a universal audit of every MGR database. |
+| Architect collector | 41 original collector tests passed, plus ordinary-cycle, type-only and 3,000-node-ring probes | Useful audit behavior. Original collector correctly avoids reporting explicit type-only cycles as runtime cycles. |
+| Architect lexical resolution | A valid escaped module specifier hides one edge and its cycle from the original collector | MGR compiler resolves the same syntax. Native graph review is derived from existing resolved compiler edges. |
+| Architect scorekeeping | Five selected original score cases passed: missing evidence, stale commit, duplicate JSON, applicability and canonical weighted result | Preserve evidence denominators and unknown states. No replacement product quality score or whole-product percentage is introduced. |
+
+The new original Code Monster source-profile.moduleReview reports bounded strongly connected dependency groups, source citations, unresolved imports, graph budget, omitted coverage and bounded examples. It uses an iterative graph algorithm, handles self-loops, and does not export source bodies/literal values. Its graph includes declaration imports and re-exports, including type-only edges; these are structural review hints, not proof of runtime cycles or defects. Dynamic imports, CommonJS calls, unparsed files and external dependencies remain outside this graph. A zero result does not certify the whole repository.
+
+The existing profile operation carries this result through the same worker, MCP, shared edge, owner SDK and Tevin conversation route. No extra tool, service, permission, database or brain is added. Focused native tests passed 9/9 (including real worker and original stdio tests). Isolated actual owner HTTP/SQLite/SDK chain passed 21/21 using 10 injected model responses and 22 real source calls. Normal source and compiled HTTP each passed 17/17 using real local JWKS/signed JWT and official SDK. The qualifier maps advertised HTTPS to owned loopback HTTP; actual TLS/hosted OAuth is not verified. Live model comprehension, permanent-owner activation and production remain unverified.
+
+REA analyzed exactly three selected original RepoMind TypeScript sources in an exact-byte snapshot. The cwd influence trace was partial with no seed matches; it does not establish the runtime findings. Pinned REA has no Python application semantic analyzer: two original Architect sources were compiled without execution and their Python 3.12 bytecode headers/marshal metadata inspected. Original runtime tests are separate evidence. Raw external graphs and original source remain local research files, excluded from public owning repository documents and delivery packet.
+
+Full native suite, canonical source adoption, final owning handoffs and source transfer are pending until appended final qualification. All wider candidates and whole-product completion remain open.

@@ -1,0 +1,86 @@
+{
+  "reaVersion": "6.8.0",
+  "scope": "Selected original sources and controlled original behavior, not whole-repository or all-language audit. Source reading covered the documented Git/path/handoff and collector/score functions; unselected modules and full app integrations remain unassessed.",
+  "sources": [
+    {
+      "repo": "repomind",
+      "path": "src/git/git-inspector.ts",
+      "workingSha256": "d4dee605b3d1f74bc48bc74d12c75584a20ae94df1a0511d6d6b75736334939e",
+      "committedBlobSha256": "d4dee605b3d1f74bc48bc74d12c75584a20ae94df1a0511d6d6b75736334939e",
+      "selectedSnapshotExactBytes": true
+    },
+    {
+      "repo": "repomind",
+      "path": "src/config/paths.ts",
+      "workingSha256": "0ca2ed227bc014bf1e5167e3c561fbe4a356fec7012cabb7a187ff34fcadc078",
+      "committedBlobSha256": "0ca2ed227bc014bf1e5167e3c561fbe4a356fec7012cabb7a187ff34fcadc078",
+      "selectedSnapshotExactBytes": true
+    },
+    {
+      "repo": "repomind",
+      "path": "src/extraction/structured-handoff.ts",
+      "workingSha256": "076cabeaa7ac59faaf3a546c35a910801263945098d5ba5cc4822d867aa3a57d",
+      "committedBlobSha256": "076cabeaa7ac59faaf3a546c35a910801263945098d5ba5cc4822d867aa3a57d",
+      "selectedSnapshotExactBytes": true
+    },
+    {
+      "repo": "architect",
+      "path": "architecture-audit/scripts/collect.py",
+      "workingSha256": "490a1ce03f15bba5aa9ec602b627ca8ab80970b5028eaaa26f45ba21a08455d0",
+      "committedBlobSha256": "4f3cb154c48546f4c13a9d05273bcaf19bd8c8a5dc2c0b3a744fbc272c8643f3"
+    },
+    {
+      "repo": "architect",
+      "path": "repository-quality-score/scripts/calculate_repository_quality_score.py",
+      "workingSha256": "0ea6a00e880c7c7c57c7f40840ff920a806a1dc1f12ba9dd1781a9c196330dee",
+      "committedBlobSha256": "1a6743fdc2c3a0a2c58da15558cc788107d9fd1a3179a4c16ff511ad60ab611e"
+    }
+  ],
+  "rea": [
+    {
+      "subject": "repomind",
+      "operation": "analyze_javascript_application",
+      "bundleSha256": "bd8b6a61a0d8831bfbeba392851aab4d696eaafcdd03bd8b3c1e6a810db28a2c",
+      "evidenceId": "ev_cbcb40bb7004c124947acf32e2421fd6f8975f9ae224385bf5c3dbfe4314624a",
+      "limits": "Selected TypeScript syntax/semantic graph, dependencies unresolved."
+    },
+    {
+      "subject": "architect-collector",
+      "operation": "inspect_python_pyc",
+      "bundleSha256": "910fa1803dd5391b548336ce0b5364a1ba42b0bb4eddf340fbb0f74aa6c70f96",
+      "evidenceId": "ev_356afcfa75e262acfa80b062cdfeee6c2f01c24fdb65b255fdef34bc80c574e2",
+      "limits": "CPython 3.12 compilation of original source; header/marshal metadata inspection only, no Python semantic analysis or decompilation."
+    },
+    {
+      "subject": "architect-score",
+      "operation": "inspect_python_pyc",
+      "bundleSha256": "c7e0b098c830739f57990a3d6182baa595a4a7585ed944fd9b749612458ba720",
+      "evidenceId": "ev_7621a2e7474fd5cc2de87abc9630e80ef76d09ebfe5b6d76583041dc611af588",
+      "limits": "CPython 3.12 compilation of original source; header/marshal metadata inspection only, no Python semantic analysis or decompilation."
+    },
+    {
+      "operation": "trace_javascript_semantics",
+      "evidenceId": "ev_10ffed9aff2421db618efb92176708f7efd4fc6417520bfc7c9da978b34192c5",
+      "status": "partial",
+      "seedMatches": 0,
+      "limits": "cwd property trace found no seed. Partial static result proves no absence or runtime path; executed original probes establish observed behavior."
+    }
+  ],
+  "interruptedTrials": [
+    {
+      "trial": "Full ArchitectPlaybook discovery on Python 3.14",
+      "state": "cancelled without result",
+      "reason": "No completion receipt after prolonged execution; only exact owned test process stopped. Separate unchanged collector and selected score cases passed on CPython 3.12."
+    },
+    {
+      "trial": "REA against installed RepoMind checkout",
+      "state": "cancelled without result",
+      "reason": "No completion receipt; switched to a selected-source snapshot whose bytes are checked against original. No invented static finding from interrupted run."
+    },
+    {
+      "trial": "First expanded owner profile flow",
+      "state": "failed",
+      "reason": "Qualifier cleared function selector for profile then reused it for impact. Restored original selector; unchanged product guards and assertions pass in corrected trial."
+    }
+  ]
+}

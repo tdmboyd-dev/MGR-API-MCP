@@ -1,0 +1,30 @@
+{
+  "contract": "mgr.selected-source-verification.v1",
+  "owner": "normal-api",
+  "sourceBeforeReceipt": "ae23b1fd9f74e7e74569fc38bc13d91e2c09bb59",
+  "nativeRuntimeCommit": "83c8982",
+  "nativeSuite": {
+    "results": 267,
+    "passed": 261,
+    "failed": 0,
+    "skipped": 6
+  },
+  "originalTests": {
+    "repomind": 59,
+    "architectCollector": 41,
+    "architectScoreSelected": 5
+  },
+  "localReceiving": {
+    "ownerChecks": 21,
+    "normalSourceChecks": 17,
+    "normalCompiledChecks": 17
+  },
+  "scope": "Existing source profile adds structural compiler dependency review; actual canonical local receiving. Other concurrent source and all-product scope unassessed.",
+  "limits": [
+    "Type-only declarations included; no runtime-cycle verdict.",
+    "Selected REA graph with dependencies/unknowns; Python bytecode metadata only.",
+    "No live-model, hosted TLS/OAuth, permanent service restart or production claim.",
+    "No new full API/ONE suite claim; qualifier and current local integration executed."
+  ],
+  "transfer": "Incremental byte-preserving source patch and bundle; exact prerequisite and reconstruction proofs recorded by task delivery."
+}
