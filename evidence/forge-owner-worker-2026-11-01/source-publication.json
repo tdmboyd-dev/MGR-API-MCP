@@ -1,0 +1,930 @@
+{
+  "published": [
+    {
+      "repository": "MGR-3D-FORGE",
+      "branch": "main",
+      "sourceCommit": "ceee177f5f2eb78d16406b0f25dd4bfe5b5dedc3",
+      "fetchedRemoteHead": "ceee177f5f2eb78d16406b0f25dd4bfe5b5dedc3",
+      "changedFilesReadBack": 25,
+      "fileChecks": [
+        {
+          "path": ".gitattributes",
+          "remoteBlob": "5681934f1ac0c6f98c0826ddf10fc86341d577ba",
+          "workingSha256": "5aa8c215b52fedc5d604c82850cc9ec92d1819f7a93cd4591d3f94445056097f",
+          "remoteSha256": "5aa8c215b52fedc5d604c82850cc9ec92d1819f7a93cd4591d3f94445056097f",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "docs/ACTUAL-FORGE-MODULE-MAP-2026-10-31.md",
+          "remoteBlob": "3004d5b79c216b9b1f8f587c0b630001d3d9d57b",
+          "workingSha256": "458c7569b11b1f87e21bb6b5a34078bf9761080e6ae42f86ad25ab52b8692975",
+          "remoteSha256": "ddc2231d9fb3d019ad64c0d086a4795d2d129d9d5a47880144319cf04cc72404",
+          "comparison": "CRLF/LF-only"
+        },
+        {
+          "path": "docs/BUILD-REGISTER.md",
+          "remoteBlob": "1795557b1be107588b13087baa7ca798e18b2d81",
+          "workingSha256": "14e813337d27a213b98f67d2fd9fe9ded8a756b024c43cba3b1e7b2bd4f19be8",
+          "remoteSha256": "ebbf8cd8c3a7c473a0cd0264d60d15c1f44805c6ab09cc4b344df9ddca228615",
+          "comparison": "CRLF/LF-only"
+        },
+        {
+          "path": "docs/FORGE-ENGINEERING-HANDBOOK.md",
+          "remoteBlob": "1eb161827d2ed18398cf5be039d01c7e01a15420",
+          "workingSha256": "9b3aef95d071e7389cdc571ab9815b20f9a0dadfdbc5070a654993de610cd95d",
+          "remoteSha256": "669c07d8f18ac18cf69376ae297de0759cc3e96f42313840f07c0b9fd0adf3d6",
+          "comparison": "CRLF/LF-only"
+        },
+        {
+          "path": "docs/HANDOFF.md",
+          "remoteBlob": "262cdc1b25918f34df3a659a77d9a47cec989c34",
+          "workingSha256": "b1985f76db68f68b32e71511a782cc2a4a87b4f2d0bb79b3e51048c69d9fb673",
+          "remoteSha256": "b1985f76db68f68b32e71511a782cc2a4a87b4f2d0bb79b3e51048c69d9fb673",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "docs/HOW-TO-INTEGRATION-VERIFY-RECOVER.md",
+          "remoteBlob": "293eaefafe9b817545fd6aae5a23b57d4f1fcdcd",
+          "workingSha256": "572459366a6e6d5058e260f4d677104291d67c7a547ad7ab9f418a3be83cb859",
+          "remoteSha256": "1d616c92863f39e60b49f75016760e28d4994cbaf9ce16a53dfc205301464275",
+          "comparison": "CRLF/LF-only"
+        },
+        {
+          "path": "docs/IMPLEMENTATION-EVIDENCE.md",
+          "remoteBlob": "db0fd1f4565e64f2ac46ff77f870e0581592d8a1",
+          "workingSha256": "6e3b4a5e2a0a5621a699ab7f362bf3f647fc7ac54a68a251db0b807ce1a36f7c",
+          "remoteSha256": "b4ca512b030ef79183e955f2973899ab57a9af1065c73e62ec2d8f6f4b1ab16c",
+          "comparison": "CRLF/LF-only"
+        },
+        {
+          "path": "docs/PROGRESS-LOG.md",
+          "remoteBlob": "d90ac3e92f8d4cc2d8e3aa0b689fad7ce3d49c68",
+          "workingSha256": "b268c90b77471101ca34b09cc398a4ff814f77c9bd4ff5b1686243f16e349844",
+          "remoteSha256": "c821258df4a03fa0bb4e5dfe3afa904e8f7ffb630dee1d5b5fb0286c23cb80e5",
+          "comparison": "CRLF/LF-only"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/EVIDENCE-LOCATION.txt",
+          "remoteBlob": "7d1c1862939a24e32db5d0b2fcdc3c3fb955abf0",
+          "workingSha256": "0ed08efc9566a960f1fed64b44c6272bb6402a10b639c39e92344d279828a665",
+          "remoteSha256": "0ed08efc9566a960f1fed64b44c6272bb6402a10b639c39e92344d279828a665",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/REPORT.md",
+          "remoteBlob": "f461b0bbaf408f91a8d14987f35bc518f3466de8",
+          "workingSha256": "29fbe10b157ace36a1a82af29eb8978147b0c4e534ad3c7519c0c1fa339b270d",
+          "remoteSha256": "29fbe10b157ace36a1a82af29eb8978147b0c4e534ad3c7519c0c1fa339b270d",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/forge-browser-screen-verification.json",
+          "remoteBlob": "89fee23a82e58fd019e272f961c4a29a62c39106",
+          "workingSha256": "86dc17ec3554114d0c8d2d417bf595651de24a02f41e72d39a12bfccced47d24",
+          "remoteSha256": "86dc17ec3554114d0c8d2d417bf595651de24a02f41e72d39a12bfccced47d24",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/forge-worker-failed-fixture-cleanup.json",
+          "remoteBlob": "f856956cbd214a480b9e32b145016167a614a9ce",
+          "workingSha256": "70903e553c8e50d17af198b4c609ecae1ff8cd7c98fca764a02d8e109d2e70fd",
+          "remoteSha256": "70903e553c8e50d17af198b4c609ecae1ff8cd7c98fca764a02d8e109d2e70fd",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/live-verification.json",
+          "remoteBlob": "63ae6ee80bdd897995c260e22a89f3d7171b92ac",
+          "workingSha256": "b22c05a1a82de4bea7cf0a867c46f371dd48cd6bce64fe38dc1eecaa260f2928",
+          "remoteSha256": "b22c05a1a82de4bea7cf0a867c46f371dd48cd6bce64fe38dc1eecaa260f2928",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/postjoin-verification.json",
+          "remoteBlob": "7f9eb9297e22370a4bb3370e9594f1424cff9ab1",
+          "workingSha256": "e3f17f7cf6a6419633b78dd2e9ac3d223b47cdcd5400862a299ed3949d26cd66",
+          "remoteSha256": "e3f17f7cf6a6419633b78dd2e9ac3d223b47cdcd5400862a299ed3949d26cd66",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/secret-scan-classification.json",
+          "remoteBlob": "4945e2be8cadc8b93ca6a7ff0f10cfb44be551aa",
+          "workingSha256": "1fdeea1c5fdfbc6882b83b1e1a2aca8dd072e4b1f19b51547b9ca2b71c360072",
+          "remoteSha256": "1fdeea1c5fdfbc6882b83b1e1a2aca8dd072e4b1f19b51547b9ca2b71c360072",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/text-normalization.json",
+          "remoteBlob": "53ec77170fba0312670c749dbb49730472c6ef7b",
+          "workingSha256": "ac8bd30083dfbc63d8c87c59600d449d95c5e00c0d2096bda283ec9aa6fec1c8",
+          "remoteSha256": "ac8bd30083dfbc63d8c87c59600d449d95c5e00c0d2096bda283ec9aa6fec1c8",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/verification.json",
+          "remoteBlob": "86eb272c76d1f0b352344a81887ce5c50c726eac",
+          "workingSha256": "b7450b985f924cfe9bc096be55ae6c3dcd21694ff33717139d5cf71e3628ab70",
+          "remoteSha256": "b7450b985f924cfe9bc096be55ae6c3dcd21694ff33717139d5cf71e3628ab70",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "forge/human_lipsync.py",
+          "remoteBlob": "64fbbc0f3dcef4525e328b163ea51faa432d2eb8",
+          "workingSha256": "2ca79bbd353c78ec94247c42d509123d95cbaac637452ef4af9c40ea189d781f",
+          "remoteSha256": "8bd79b00b3b57cd62f1896ff1e338795b232b47d978031695469355042fad30f",
+          "comparison": "CRLF/LF-only"
+        },
+        {
+          "path": "forge/owner_worker.py",
+          "remoteBlob": "8b897eaa1330cebbc9a7d4366e0c98082974d2ee",
+          "workingSha256": "4d03740aa1e1e946e5b428ebd889513514cc1390627bd9f57444ad41d5d96aaf",
+          "remoteSha256": "4d03740aa1e1e946e5b428ebd889513514cc1390627bd9f57444ad41d5d96aaf",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "forge/studio_server.py",
+          "remoteBlob": "d0df85a5198be298e3835363d38afe717005482c",
+          "workingSha256": "475c4e863e8f584a81e6f9104402dc9ed1e471a811fe5879788410b731373df1",
+          "remoteSha256": "475c4e863e8f584a81e6f9104402dc9ed1e471a811fe5879788410b731373df1",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "forge/world_composition.py",
+          "remoteBlob": "4bb16b6668fe55ebca0f2742a129c59c06fcff8a",
+          "workingSha256": "6ca0876422eae7debb8ca6e53937a7f0bdb5e3b35045670f89f8e64033bf13f2",
+          "remoteSha256": "a038b4759c3144871ee427956c6ee319b411ff8cedeb8973c6c73fc427ac97a8",
+          "comparison": "CRLF/LF-only"
+        },
+        {
+          "path": "forge/world_editor.py",
+          "remoteBlob": "da8832309ea013bba8ac68a6ad40daa559fc3b48",
+          "workingSha256": "35d578da6012eb31f10edeb4edc6eda39fd6d4eb1e477d8417b4d54bcad64c3c",
+          "remoteSha256": "9c970983dc8827a3e47186278e78927a52468ae9a138238c480a1145daf995e5",
+          "comparison": "CRLF/LF-only"
+        },
+        {
+          "path": "scripts/owner-worker.py",
+          "remoteBlob": "dcc9e2fd7e8104df696cc9f91723554a0c26983e",
+          "workingSha256": "658cedfa5b1c0d4422826f46ff3e0e29afcf0972059ace68e37343b6463fc233",
+          "remoteSha256": "658cedfa5b1c0d4422826f46ff3e0e29afcf0972059ace68e37343b6463fc233",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "tests/test_owner_worker.py",
+          "remoteBlob": "2b60a9b2b58698b4eaa90d81344ef06be41290b5",
+          "workingSha256": "a9bc468bb40157ddfe7303ad5c0ba78b79500a0b8ddf0d3d59a1fac993852740",
+          "remoteSha256": "a9bc468bb40157ddfe7303ad5c0ba78b79500a0b8ddf0d3d59a1fac993852740",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "tests/test_request_binding.py",
+          "remoteBlob": "496f159c23151dcfc8be629d55abff3d3bb97517",
+          "workingSha256": "ae81dc1c94962e320ffdd429cf413745a9ddfa304e6876aa41b856d13d8448f3",
+          "remoteSha256": "ae81dc1c94962e320ffdd429cf413745a9ddfa304e6876aa41b856d13d8448f3",
+          "comparison": "byte-exact"
+        }
+      ],
+      "nonForcePush": true,
+      "cleanAfterSourceCommit": true
+    },
+    {
+      "repository": "MGR-API-MCP",
+      "branch": "repair/completion-2026-10-28",
+      "sourceCommit": "adf556215900ba918be217281667ffd818d83867",
+      "fetchedRemoteHead": "adf556215900ba918be217281667ffd818d83867",
+      "changedFilesReadBack": 66,
+      "fileChecks": [
+        {
+          "path": ".gitattributes",
+          "remoteBlob": "e9d91958176a1c0db2c6b1cd35249a152d14f297",
+          "workingSha256": "745b4c57abc78f8321e05a9afd6af80db4bf8df54d8c78ae70c3a94b486a4c7e",
+          "remoteSha256": "745b4c57abc78f8321e05a9afd6af80db4bf8df54d8c78ae70c3a94b486a4c7e",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "AUDIT-LEDGER.md",
+          "remoteBlob": "ae008782119702eaf473320c45d60c0433a9e282",
+          "workingSha256": "3975380b5860c3797896a26d1b82b29b372f16d8af5725075e095e95bb52bc1a",
+          "remoteSha256": "3975380b5860c3797896a26d1b82b29b372f16d8af5725075e095e95bb52bc1a",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "BUILD-QUEUE.md",
+          "remoteBlob": "97266825119a53fed63209eb5e88dd16e4f97763",
+          "workingSha256": "8a5ddab262e52a1546f312aab465fa835aaa950ec3731e965e2ba1f7a50bf62d",
+          "remoteSha256": "8a5ddab262e52a1546f312aab465fa835aaa950ec3731e965e2ba1f7a50bf62d",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "HANDOFF.md",
+          "remoteBlob": "468c1498db0622951bc490742a95f33dde9b51be",
+          "workingSha256": "681c2f757bc0a76deeb7865680947b496351856f3ceb726bfffc9eccff5dc436",
+          "remoteSha256": "681c2f757bc0a76deeb7865680947b496351856f3ceb726bfffc9eccff5dc436",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "docs/FORGE-CONNECTION-AND-RECOVERY.md",
+          "remoteBlob": "0d0a64a7200f138cc71b5f7e17a837199aa43669",
+          "workingSha256": "3653cb0dd2e26b533b1e4db2fec814f45592bcef70ec0298f13ce64b77917edd",
+          "remoteSha256": "46bbabcadaea1d4cba90b635297a7a335bf4bc4b668c7f24fc0fcf7dc3e0a9ff",
+          "comparison": "CRLF/LF-only"
+        },
+        {
+          "path": "docs/full-build/SCORECARD.md",
+          "remoteBlob": "c7168272df6b64525f182ca4a372f836ffc120e2",
+          "workingSha256": "dc2b4968621252e2dba9f33c0892ba7ca9c78f77bf5312a4468516b9ea7060b1",
+          "remoteSha256": "dc2b4968621252e2dba9f33c0892ba7ca9c78f77bf5312a4468516b9ea7060b1",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/REPORT.md",
+          "remoteBlob": "f461b0bbaf408f91a8d14987f35bc518f3466de8",
+          "workingSha256": "29fbe10b157ace36a1a82af29eb8978147b0c4e534ad3c7519c0c1fa339b270d",
+          "remoteSha256": "29fbe10b157ace36a1a82af29eb8978147b0c4e534ad3c7519c0c1fa339b270d",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/final/api-verify.txt",
+          "remoteBlob": "c4a1b4f7310008d1b24db768bfc3ace9a3b9100e",
+          "workingSha256": "fe2c14da028b63386d0ddd82a4013e21c2d6a11608bf85e580d97968acc9935d",
+          "remoteSha256": "fe2c14da028b63386d0ddd82a4013e21c2d6a11608bf85e580d97968acc9935d",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/final/forge-full.txt",
+          "remoteBlob": "c9cae6fc3b4c64e17f20c588f38b1c2c39b96435",
+          "workingSha256": "54f3fb3d59d27060d3a98f0fbcb31a833b00548a4c28e05646071fc9fa8b18a6",
+          "remoteSha256": "54f3fb3d59d27060d3a98f0fbcb31a833b00548a4c28e05646071fc9fa8b18a6",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/final/one-typecheck.txt",
+          "remoteBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "workingSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "remoteSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/final/phase-0.txt",
+          "remoteBlob": "8814c094f0b97b4a9989558fdaefd8d58dda44a2",
+          "workingSha256": "27186f17a63e1b6d63b1e4995b867abe6658bbad81c2a39118cf5964bd602682",
+          "remoteSha256": "27186f17a63e1b6d63b1e4995b867abe6658bbad81c2a39118cf5964bd602682",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/final/phase-1.txt",
+          "remoteBlob": "d953ff057e8a58b6f792a9ad957bf011bd772bb2",
+          "workingSha256": "3b2261869e0975b19dfb4f21803d86a09fd84f94d5c658035380f2b0093de96a",
+          "remoteSha256": "3b2261869e0975b19dfb4f21803d86a09fd84f94d5c658035380f2b0093de96a",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/final/phase-2.txt",
+          "remoteBlob": "99147cc7a9a64b00fd37ad0ca261340fa6514273",
+          "workingSha256": "073815754c37ea488ca650d61766849a13d7eff4db9afa9a3c975f56f2d2e4f8",
+          "remoteSha256": "073815754c37ea488ca650d61766849a13d7eff4db9afa9a3c975f56f2d2e4f8",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/final/phase-3.txt",
+          "remoteBlob": "e9ff0de69b228c95c08da183313c8798a8fcbbd5",
+          "workingSha256": "ddd1ebaff398696707e8678e938b202abcbcd6844f5b180ee82ba530894bc8a5",
+          "remoteSha256": "ddd1ebaff398696707e8678e938b202abcbcd6844f5b180ee82ba530894bc8a5",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/final/source-after.json",
+          "remoteBlob": "f5ba3eeac61b21c012be4e95ff114ddf082106dd",
+          "workingSha256": "856d24ae3c49729152d8d6f72f175c439b3979e3482fde54ce391becdb852828",
+          "remoteSha256": "856d24ae3c49729152d8d6f72f175c439b3979e3482fde54ce391becdb852828",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/final/source-before.json",
+          "remoteBlob": "f5ba3eeac61b21c012be4e95ff114ddf082106dd",
+          "workingSha256": "856d24ae3c49729152d8d6f72f175c439b3979e3482fde54ce391becdb852828",
+          "remoteSha256": "856d24ae3c49729152d8d6f72f175c439b3979e3482fde54ce391becdb852828",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/final/verification.json",
+          "remoteBlob": "ade69ced75509165e2e9f061a2e259d533306472",
+          "workingSha256": "662fdbf86600261577e1c348a91bb8b77876cafc79f198aa3879d7520f628d28",
+          "remoteSha256": "662fdbf86600261577e1c348a91bb8b77876cafc79f198aa3879d7520f628d28",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/forge-browser-consumer-focused.txt",
+          "remoteBlob": "6eb285972cd113dd195e19c9da0f5d2a380c5829",
+          "workingSha256": "1a2fc4288b5788f22580e49f0b5085c2a9ad8a69b4b39b0253c1ecaa35cf7a67",
+          "remoteSha256": "1a2fc4288b5788f22580e49f0b5085c2a9ad8a69b4b39b0253c1ecaa35cf7a67",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/forge-browser-screen-verification.json",
+          "remoteBlob": "89fee23a82e58fd019e272f961c4a29a62c39106",
+          "workingSha256": "86dc17ec3554114d0c8d2d417bf595651de24a02f41e72d39a12bfccced47d24",
+          "remoteSha256": "86dc17ec3554114d0c8d2d417bf595651de24a02f41e72d39a12bfccced47d24",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/forge-post-text-normalization.txt",
+          "remoteBlob": "7dfb4fbca191da3798272c40f048279880e019ae",
+          "workingSha256": "4620414494945d9b6383c4e12c19177849b588d0d01483f95dd4b28727f99a55",
+          "remoteSha256": "4620414494945d9b6383c4e12c19177849b588d0d01483f95dd4b28727f99a55",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/forge-source-pin.txt",
+          "remoteBlob": "1143d5925ea3907f99659984414da40b5a378541",
+          "workingSha256": "48feabadf6b7ca6ce1777e0f6e70e1b1cd0daf250c13b1487f9742e792585730",
+          "remoteSha256": "48feabadf6b7ca6ce1777e0f6e70e1b1cd0daf250c13b1487f9742e792585730",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/forge-worker-failed-fixture-cleanup.json",
+          "remoteBlob": "f856956cbd214a480b9e32b145016167a614a9ce",
+          "workingSha256": "70903e553c8e50d17af198b4c609ecae1ff8cd7c98fca764a02d8e109d2e70fd",
+          "remoteSha256": "70903e553c8e50d17af198b4c609ecae1ff8cd7c98fca764a02d8e109d2e70fd",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/forge-worker-failed-fixture-custody.json",
+          "remoteBlob": "61554844eb180c05d057f545448a3be6f0e53939",
+          "workingSha256": "16666971ed850ca3a31374f4e4cf6603b2267c9192bde9d1b0daa8d03f66e148",
+          "remoteSha256": "16666971ed850ca3a31374f4e4cf6603b2267c9192bde9d1b0daa8d03f66e148",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/forge-worker-source-scan-inputs.json",
+          "remoteBlob": "0919a44d8573d867dab0501930106e270d570c9e",
+          "workingSha256": "57c0797f69fc83783cce4fc56440cf0181d7537e3c59c41f9bbf18ca581f3331",
+          "remoteSha256": "57c0797f69fc83783cce4fc56440cf0181d7537e3c59c41f9bbf18ca581f3331",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/forge-worker-source-secrets.txt",
+          "remoteBlob": "fb5fd737866ba9b4e6b3de61bc8e4ff0796ffede",
+          "workingSha256": "b8c72cece5741bbdd16f4c8c10fec2fb59a165bb065a1ed7344f8284f42cdfa1",
+          "remoteSha256": "b8c72cece5741bbdd16f4c8c10fec2fb59a165bb065a1ed7344f8284f42cdfa1",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/forge-worker-text-normalization.json",
+          "remoteBlob": "49ef411f740bc4ee69073f2b4687c5dcb9da184f",
+          "workingSha256": "2e5e71832918293f19ab16eb7bdc406d3848753768a1ee4fafd9d4749e6201ba",
+          "remoteSha256": "2e5e71832918293f19ab16eb7bdc406d3848753768a1ee4fafd9d4749e6201ba",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/header-recheck/api-verify.txt",
+          "remoteBlob": "6518edc9a0013a41a084e1056d93e285918223fa",
+          "workingSha256": "811e6cb85b279d691a042199e0f378f27d61e32acea37c4b75d63f291ddb7d4d",
+          "remoteSha256": "811e6cb85b279d691a042199e0f378f27d61e32acea37c4b75d63f291ddb7d4d",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/header-recheck/one-typecheck.txt",
+          "remoteBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "workingSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "remoteSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/header-recheck/phase-0.txt",
+          "remoteBlob": "dbcdf475b326e425c951fe75d1fd64b0651b34a1",
+          "workingSha256": "aff8ebca182d651dff72df064f8c2e5860419eafc371af5e66eba661b903b0e3",
+          "remoteSha256": "aff8ebca182d651dff72df064f8c2e5860419eafc371af5e66eba661b903b0e3",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/header-recheck/source-after.json",
+          "remoteBlob": "2edc8464031277a870c48a46d317aaf205d51672",
+          "workingSha256": "a470f1bd1f8bfc1aee32ccaf1346654f117ef8b7da6d56da1ca4aaeb88809128",
+          "remoteSha256": "a470f1bd1f8bfc1aee32ccaf1346654f117ef8b7da6d56da1ca4aaeb88809128",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/header-recheck/source-before.json",
+          "remoteBlob": "2edc8464031277a870c48a46d317aaf205d51672",
+          "workingSha256": "a470f1bd1f8bfc1aee32ccaf1346654f117ef8b7da6d56da1ca4aaeb88809128",
+          "remoteSha256": "a470f1bd1f8bfc1aee32ccaf1346654f117ef8b7da6d56da1ca4aaeb88809128",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/header-recheck/verification.json",
+          "remoteBlob": "e123de69a9116f5a1f00c6b53c7a6c4fb089eed0",
+          "workingSha256": "bfe3c6316405cbb115154db420af61f9bdd0e5c63ba56ed64c37adadbca28c6a",
+          "remoteSha256": "bfe3c6316405cbb115154db420af61f9bdd0e5c63ba56ed64c37adadbca28c6a",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/initial/api-verify.txt",
+          "remoteBlob": "8ea39ce50ede0db9ef17c2863cc93ad67566fed4",
+          "workingSha256": "00ae5da3e84ce3e790a302eda7b52f67655e8d91fcf723377254b3f59a45269b",
+          "remoteSha256": "00ae5da3e84ce3e790a302eda7b52f67655e8d91fcf723377254b3f59a45269b",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/initial/forge-full.txt",
+          "remoteBlob": "908285d065a822bbd1b64a3a44f6689e73c53ae1",
+          "workingSha256": "8f7e698d3e3efbad5bfc5f94cada55466a95dbbf25966b78828657f47fe15be7",
+          "remoteSha256": "8f7e698d3e3efbad5bfc5f94cada55466a95dbbf25966b78828657f47fe15be7",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/initial/phase-0.txt",
+          "remoteBlob": "50803aef9ce0316f684737041048c861159f1474",
+          "workingSha256": "dcc426d5a608fa8a1a65e438054c3b9bb4e1e55728c8fc0d290aa5a4046790a6",
+          "remoteSha256": "dcc426d5a608fa8a1a65e438054c3b9bb4e1e55728c8fc0d290aa5a4046790a6",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/initial/phase-1.txt",
+          "remoteBlob": "91c26c6f7525c30ce2cdd6e77da58ae1e7b768ff",
+          "workingSha256": "8f19405975450583d0d5a380f6c34ca32fd4791479b8fdda632caf6c9b6ff3fa",
+          "remoteSha256": "8f19405975450583d0d5a380f6c34ca32fd4791479b8fdda632caf6c9b6ff3fa",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/initial/phase-2.txt",
+          "remoteBlob": "80d857878461abc533598963a04d895a7620c391",
+          "workingSha256": "a866365971cfce81ba30e52dab0c8c5df273294de26d072f42065d70d4788501",
+          "remoteSha256": "a866365971cfce81ba30e52dab0c8c5df273294de26d072f42065d70d4788501",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/initial/phase-3.txt",
+          "remoteBlob": "1844743354a208c23439584a5e2d9c5bc49b469a",
+          "workingSha256": "442f5a1419bdf7b93bce7febc0253bfdb69703cfb5658a603334bc27dc3b1999",
+          "remoteSha256": "442f5a1419bdf7b93bce7febc0253bfdb69703cfb5658a603334bc27dc3b1999",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/initial/source-after.json",
+          "remoteBlob": "2edc8464031277a870c48a46d317aaf205d51672",
+          "workingSha256": "a470f1bd1f8bfc1aee32ccaf1346654f117ef8b7da6d56da1ca4aaeb88809128",
+          "remoteSha256": "a470f1bd1f8bfc1aee32ccaf1346654f117ef8b7da6d56da1ca4aaeb88809128",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/initial/source-before.json",
+          "remoteBlob": "2edc8464031277a870c48a46d317aaf205d51672",
+          "workingSha256": "a470f1bd1f8bfc1aee32ccaf1346654f117ef8b7da6d56da1ca4aaeb88809128",
+          "remoteSha256": "a470f1bd1f8bfc1aee32ccaf1346654f117ef8b7da6d56da1ca4aaeb88809128",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/initial/verification.json",
+          "remoteBlob": "7a7e5cf588843773811a46f52b2ad02c5964b652",
+          "workingSha256": "ca5bfe957a27240e2a2c28f75354ae70eb100810fa3d1e6325cbfcb281c1e48c",
+          "remoteSha256": "ca5bfe957a27240e2a2c28f75354ae70eb100810fa3d1e6325cbfcb281c1e48c",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/live-verification.json",
+          "remoteBlob": "63ae6ee80bdd897995c260e22a89f3d7171b92ac",
+          "workingSha256": "b22c05a1a82de4bea7cf0a867c46f371dd48cd6bce64fe38dc1eecaa260f2928",
+          "remoteSha256": "b22c05a1a82de4bea7cf0a867c46f371dd48cd6bce64fe38dc1eecaa260f2928",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/owner-forge-five-diagnostic.txt",
+          "remoteBlob": "664b8f15cce93360e64373df27d7e8692808aa89",
+          "workingSha256": "4f3e6421ca83a4c860ebff40468b345beba87e44f18fbb57464db2c009af5361",
+          "remoteSha256": "4f3e6421ca83a4c860ebff40468b345beba87e44f18fbb57464db2c009af5361",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/owner-forge-five-native-bounds.txt",
+          "remoteBlob": "8c0d057806df1ba9600bb734fcc473b9243a04a0",
+          "workingSha256": "f3bc452ef0b3c7034ef7f3e17260324650eff74420af398484280ea5fc038be7",
+          "remoteSha256": "f3bc452ef0b3c7034ef7f3e17260324650eff74420af398484280ea5fc038be7",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/owner-forge-five-operations.txt",
+          "remoteBlob": "ba38d70bb4688358836a474a02d5f14e290a57ea",
+          "workingSha256": "3feca6797c33b6cf26349429aa60ac6a459d0e619fe17bd6847e9fbb3b60d1bc",
+          "remoteSha256": "3feca6797c33b6cf26349429aa60ac6a459d0e619fe17bd6847e9fbb3b60d1bc",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/owner-forge-five-private-stdin.txt",
+          "remoteBlob": "21eecda03083c7646f86e646f89628ab447fd21b",
+          "workingSha256": "2598c5e2daea2eff6b1f895362c173757cec0a41ef087715ee31859c3de9fd24",
+          "remoteSha256": "2598c5e2daea2eff6b1f895362c173757cec0a41ef087715ee31859c3de9fd24",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/owner-forge-five-serial.txt",
+          "remoteBlob": "f45b2ddde8a1d6a27d4943f6d258f75e3e3d520c",
+          "workingSha256": "083e4a6b90ff21a27f0abd5aaf2968c15dded0731745d9c2fc825be18f5f7198",
+          "remoteSha256": "083e4a6b90ff21a27f0abd5aaf2968c15dded0731745d9c2fc825be18f5f7198",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/post-formatting.txt",
+          "remoteBlob": "c99d48d480c194942eeb304c462a5ef863100ffe",
+          "workingSha256": "04fa770b37e529396b7c41bd34b6c1d9622fcd850886442c3df15ee1c052fbca",
+          "remoteSha256": "04fa770b37e529396b7c41bd34b6c1d9622fcd850886442c3df15ee1c052fbca",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/postjoin-verification.json",
+          "remoteBlob": "7f9eb9297e22370a4bb3370e9594f1424cff9ab1",
+          "workingSha256": "e3f17f7cf6a6419633b78dd2e9ac3d223b47cdcd5400862a299ed3949d26cd66",
+          "remoteSha256": "e3f17f7cf6a6419633b78dd2e9ac3d223b47cdcd5400862a299ed3949d26cd66",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/postjoin/api-verify.txt",
+          "remoteBlob": "dbd6c31da89fb6fbc3927ed0014cdcf904366bb5",
+          "workingSha256": "73ab1b4166a7554700cfb178a88e416d4fc2acf8e91f9d88ad4a0a1c8a53c93b",
+          "remoteSha256": "73ab1b4166a7554700cfb178a88e416d4fc2acf8e91f9d88ad4a0a1c8a53c93b",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/postjoin/one-affected.txt",
+          "remoteBlob": "e0a79c0fdc505873a3f0bfccc72d48815d448c31",
+          "workingSha256": "4baa7a12f362d1c7548ae796886bea712673c2d8ed108a17fd479f1d5f8768de",
+          "remoteSha256": "4baa7a12f362d1c7548ae796886bea712673c2d8ed108a17fd479f1d5f8768de",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/postjoin/one-typecheck.txt",
+          "remoteBlob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+          "workingSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "remoteSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/postjoin/source-after.json",
+          "remoteBlob": "f2cb063514d60e179189cbf6bcf4c06439abdbb1",
+          "workingSha256": "ae4b2279b86713ccc02b629983dd6bc27d94737218d56e8e8d752a2916989c7f",
+          "remoteSha256": "ae4b2279b86713ccc02b629983dd6bc27d94737218d56e8e8d752a2916989c7f",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/postjoin/source-before.json",
+          "remoteBlob": "f2cb063514d60e179189cbf6bcf4c06439abdbb1",
+          "workingSha256": "ae4b2279b86713ccc02b629983dd6bc27d94737218d56e8e8d752a2916989c7f",
+          "remoteSha256": "ae4b2279b86713ccc02b629983dd6bc27d94737218d56e8e8d752a2916989c7f",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/postjoin/verification.json",
+          "remoteBlob": "bb74a36d0dfbf6ed86e8916399d54bb1f4f0a94a",
+          "workingSha256": "da46b638e0bdb9863ab5a54e58f9bd4f940ae1b64690ef5d3bf07b73424625a6",
+          "remoteSha256": "da46b638e0bdb9863ab5a54e58f9bd4f940ae1b64690ef5d3bf07b73424625a6",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/qualify_forge_worker_browser.py.executed.txt",
+          "remoteBlob": "bcf2710e5f1c622ee7d9e5b127fd5e4e81b8d05f",
+          "workingSha256": "f3bcef5d104919f98431cbe285059b2ba2e1c696f2d507a0e29a640e48d9cbe6",
+          "remoteSha256": "f3bcef5d104919f98431cbe285059b2ba2e1c696f2d507a0e29a640e48d9cbe6",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/secret-scan-classification.json",
+          "remoteBlob": "4945e2be8cadc8b93ca6a7ff0f10cfb44be551aa",
+          "workingSha256": "1fdeea1c5fdfbc6882b83b1e1a2aca8dd072e4b1f19b51547b9ca2b71c360072",
+          "remoteSha256": "1fdeea1c5fdfbc6882b83b1e1a2aca8dd072e4b1f19b51547b9ca2b71c360072",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/secret-scan-log.txt",
+          "remoteBlob": "5cba04e7b95768a8c9d26887c136d5b8c26d5d86",
+          "workingSha256": "06630203380cf24ee5fc25e03d16542addd567c6212e3f58831b5fe5fab86650",
+          "remoteSha256": "06630203380cf24ee5fc25e03d16542addd567c6212e3f58831b5fe5fab86650",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/text-normalization.json",
+          "remoteBlob": "53ec77170fba0312670c749dbb49730472c6ef7b",
+          "workingSha256": "ac8bd30083dfbc63d8c87c59600d449d95c5e00c0d2096bda283ec9aa6fec1c8",
+          "remoteSha256": "ac8bd30083dfbc63d8c87c59600d449d95c5e00c0d2096bda283ec9aa6fec1c8",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/verification.json",
+          "remoteBlob": "86eb272c76d1f0b352344a81887ce5c50c726eac",
+          "workingSha256": "b7450b985f924cfe9bc096be55ae6c3dcd21694ff33717139d5cf71e3628ab70",
+          "remoteSha256": "b7450b985f924cfe9bc096be55ae6c3dcd21694ff33717139d5cf71e3628ab70",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/verify_forge_permanent_worker.mjs.executed.txt",
+          "remoteBlob": "1eb489c41a64839643b0054ea54ae88ef157352c",
+          "workingSha256": "c3f3bdcfd5ed21bf72e9dac5c9b1f0ad30a579860091901ec79a3cf6919773b6",
+          "remoteSha256": "c3f3bdcfd5ed21bf72e9dac5c9b1f0ad30a579860091901ec79a3cf6919773b6",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "scripts/owner-department-client.ts",
+          "remoteBlob": "3815da7ea3531587fd54124a9cd649a1f5c04612",
+          "workingSha256": "d0e8df50075efc579f14de12136269c2870b4dffd016dbd2f2da693b3eea821d",
+          "remoteSha256": "d0e8df50075efc579f14de12136269c2870b4dffd016dbd2f2da693b3eea821d",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "src/department-gateway.ts",
+          "remoteBlob": "139464fbbbe5fe6ba12db827f0e496bc732d6d78",
+          "workingSha256": "3370a249725b58a1409e08783e06fa5614aa451326289b6473ceeec15bcfcb1f",
+          "remoteSha256": "3370a249725b58a1409e08783e06fa5614aa451326289b6473ceeec15bcfcb1f",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "src/forge-catalog-client.ts",
+          "remoteBlob": "9c119d5d8f9975cc65c542281ef5c81808162b44",
+          "workingSha256": "b865ae2f5de437f2b0cf1a5612c8e080162499ae907e913c27bee73d8ea29102",
+          "remoteSha256": "81185549ae8f3616e7b096a56c58d616b73333c59fa458f0005068fa19784372",
+          "comparison": "CRLF/LF-only"
+        },
+        {
+          "path": "src/forge-department.ts",
+          "remoteBlob": "0a16b21555e7d626cdfebb13e2bdac7407cccef2",
+          "workingSha256": "7f7a8b2731156022617978ca79282bb61cee6ee3d6763c1ec78a269a042a8509",
+          "remoteSha256": "7f7a8b2731156022617978ca79282bb61cee6ee3d6763c1ec78a269a042a8509",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "test/forge-department.test.ts",
+          "remoteBlob": "3486efd9c787290764e084626d1bed542b8e3109",
+          "workingSha256": "cae2450f678d07abc8c8cb7adf736384932d15d7351dc8dc566a01fd760590d1",
+          "remoteSha256": "cae2450f678d07abc8c8cb7adf736384932d15d7351dc8dc566a01fd760590d1",
+          "comparison": "byte-exact"
+        }
+      ],
+      "nonForcePush": true,
+      "cleanAfterSourceCommit": true
+    },
+    {
+      "repository": "MGR-ONE",
+      "branch": "integrate/department-tools-2026-10-28",
+      "sourceCommit": "c1cb7eefda74f9d93b5031949350dd867ab96e9f",
+      "fetchedRemoteHead": "c1cb7eefda74f9d93b5031949350dd867ab96e9f",
+      "changedFilesReadBack": 36,
+      "fileChecks": [
+        {
+          "path": ".gitattributes",
+          "remoteBlob": "62d60b8be0fc9df6015b26523bb4a8eaa6b868b0",
+          "workingSha256": "b2831e501d1342bc67a42152039871faf3f30c2a2ca0b6e120955d2b7a64d2ef",
+          "remoteSha256": "b2831e501d1342bc67a42152039871faf3f30c2a2ca0b6e120955d2b7a64d2ef",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "AGENTS.md",
+          "remoteBlob": "467beb4fa2991c954e3bc00e478532cbd91b5968",
+          "workingSha256": "a66f7dec636806ae29bc643081ee6063b8fc74f8438212f8b550f49b6ba3c53d",
+          "remoteSha256": "a66f7dec636806ae29bc643081ee6063b8fc74f8438212f8b550f49b6ba3c53d",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "HANDOFF.md",
+          "remoteBlob": "dbd1424152bf4fef3450b57d961026178834098f",
+          "workingSha256": "82d96f0e957ab2af105323e8e2d6a15929c3a62d6e703181304fe7f0e9d0a649",
+          "remoteSha256": "82d96f0e957ab2af105323e8e2d6a15929c3a62d6e703181304fe7f0e9d0a649",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "coordination/ECOSYSTEM-PRODUCTION-AUDIT.md",
+          "remoteBlob": "ca6115a33ac732b12c3ba05be0f3edce82371d54",
+          "workingSha256": "627f3a827157acd62728aeba552ce5730ac364f4a6c761f300794bd2a95124d3",
+          "remoteSha256": "627f3a827157acd62728aeba552ce5730ac364f4a6c761f300794bd2a95124d3",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "coordination/ECOSYSTEM-REUSE-AND-MERGE-PLAN.md",
+          "remoteBlob": "fc3c62a31571a6d7e682e476e79dded05ac579b9",
+          "workingSha256": "0b917ae6867a2b8364edbc6ed5e7ad7f528a6b60a582181c49d6318425e1dea6",
+          "remoteSha256": "0b917ae6867a2b8364edbc6ed5e7ad7f528a6b60a582181c49d6318425e1dea6",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "docs/PROGRESS-SCORECARD.md",
+          "remoteBlob": "b0089748658e2c3801863b3435f9c0e1d9f595ef",
+          "workingSha256": "56c82ad01a493597fadcd4aa51fa5c595489d6a91bb869ca8f3e682afccfb1b8",
+          "remoteSha256": "56c82ad01a493597fadcd4aa51fa5c595489d6a91bb869ca8f3e682afccfb1b8",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "docs/runtime/TEVIN-EVERYDAY-OWNER.md",
+          "remoteBlob": "616867f71ddce9ef06ebee31de1551cdfacfb543",
+          "workingSha256": "3d4191969d7ee0f7ce7966d7810aac23a4deda5e80e1aeb9aada72f1bb2dbf0f",
+          "remoteSha256": "3d4191969d7ee0f7ce7966d7810aac23a4deda5e80e1aeb9aada72f1bb2dbf0f",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "docs/runtime/TEVIN-FORGE-OWNER-WORKER.md",
+          "remoteBlob": "37392581dea08190c068c8d68308b0dad108e8af",
+          "workingSha256": "1265ae87ac32d24cd3f1b2d6548441b0c4c8cadc3a542dddb0b516706364a46b",
+          "remoteSha256": "1265ae87ac32d24cd3f1b2d6548441b0c4c8cadc3a542dddb0b516706364a46b",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/EVIDENCE-LOCATION.txt",
+          "remoteBlob": "7d1c1862939a24e32db5d0b2fcdc3c3fb955abf0",
+          "workingSha256": "0ed08efc9566a960f1fed64b44c6272bb6402a10b639c39e92344d279828a665",
+          "remoteSha256": "0ed08efc9566a960f1fed64b44c6272bb6402a10b639c39e92344d279828a665",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/REPORT.md",
+          "remoteBlob": "f461b0bbaf408f91a8d14987f35bc518f3466de8",
+          "workingSha256": "29fbe10b157ace36a1a82af29eb8978147b0c4e534ad3c7519c0c1fa339b270d",
+          "remoteSha256": "29fbe10b157ace36a1a82af29eb8978147b0c4e534ad3c7519c0c1fa339b270d",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/forge-browser-screen-verification.json",
+          "remoteBlob": "89fee23a82e58fd019e272f961c4a29a62c39106",
+          "workingSha256": "86dc17ec3554114d0c8d2d417bf595651de24a02f41e72d39a12bfccced47d24",
+          "remoteSha256": "86dc17ec3554114d0c8d2d417bf595651de24a02f41e72d39a12bfccced47d24",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/forge-worker-failed-fixture-cleanup.json",
+          "remoteBlob": "f856956cbd214a480b9e32b145016167a614a9ce",
+          "workingSha256": "70903e553c8e50d17af198b4c609ecae1ff8cd7c98fca764a02d8e109d2e70fd",
+          "remoteSha256": "70903e553c8e50d17af198b4c609ecae1ff8cd7c98fca764a02d8e109d2e70fd",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/live-verification.json",
+          "remoteBlob": "63ae6ee80bdd897995c260e22a89f3d7171b92ac",
+          "workingSha256": "b22c05a1a82de4bea7cf0a867c46f371dd48cd6bce64fe38dc1eecaa260f2928",
+          "remoteSha256": "b22c05a1a82de4bea7cf0a867c46f371dd48cd6bce64fe38dc1eecaa260f2928",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/postjoin-verification.json",
+          "remoteBlob": "7f9eb9297e22370a4bb3370e9594f1424cff9ab1",
+          "workingSha256": "e3f17f7cf6a6419633b78dd2e9ac3d223b47cdcd5400862a299ed3949d26cd66",
+          "remoteSha256": "e3f17f7cf6a6419633b78dd2e9ac3d223b47cdcd5400862a299ed3949d26cd66",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/secret-scan-classification.json",
+          "remoteBlob": "4945e2be8cadc8b93ca6a7ff0f10cfb44be551aa",
+          "workingSha256": "1fdeea1c5fdfbc6882b83b1e1a2aca8dd072e4b1f19b51547b9ca2b71c360072",
+          "remoteSha256": "1fdeea1c5fdfbc6882b83b1e1a2aca8dd072e4b1f19b51547b9ca2b71c360072",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/text-normalization.json",
+          "remoteBlob": "53ec77170fba0312670c749dbb49730472c6ef7b",
+          "workingSha256": "ac8bd30083dfbc63d8c87c59600d449d95c5e00c0d2096bda283ec9aa6fec1c8",
+          "remoteSha256": "ac8bd30083dfbc63d8c87c59600d449d95c5e00c0d2096bda283ec9aa6fec1c8",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "evidence/forge-owner-worker-2026-11-01/verification.json",
+          "remoteBlob": "86eb272c76d1f0b352344a81887ce5c50c726eac",
+          "workingSha256": "b7450b985f924cfe9bc096be55ae6c3dcd21694ff33717139d5cf71e3628ab70",
+          "remoteSha256": "b7450b985f924cfe9bc096be55ae6c3dcd21694ff33717139d5cf71e3628ab70",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "scripts/tevin-owner.mjs",
+          "remoteBlob": "7ec0601cfd59d02caec0909a96ea95bb9ceebfb3",
+          "workingSha256": "d4362a2d10125f74084755407a114329c448c44508b2f811197ef3c884ede22f",
+          "remoteSha256": "d4362a2d10125f74084755407a114329c448c44508b2f811197ef3c884ede22f",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "web/codex-conversation-runtime.mjs",
+          "remoteBlob": "4ffa7ddba3feb4fc95f3f886c637ee7797791fd6",
+          "workingSha256": "280cfec307a2cff371b0ce2db90cfb0c4a366bf5fa663a3b872a2c8d136305c5",
+          "remoteSha256": "280cfec307a2cff371b0ce2db90cfb0c4a366bf5fa663a3b872a2c8d136305c5",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "web/codex-conversation-runtime.test.mjs",
+          "remoteBlob": "1a7e85acc28d2d5ef31140a71a0be5d4d095fa79",
+          "workingSha256": "fc6b35364195e84a98c5cc392b12991cdfc1065e59188ead395d345ebe22712e",
+          "remoteSha256": "fc6b35364195e84a98c5cc392b12991cdfc1065e59188ead395d345ebe22712e",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "web/conversation-runtime.mjs",
+          "remoteBlob": "70b965c128df41becef2bb74e1f4fc3aa0ea04c1",
+          "workingSha256": "5b4d91c582bc5383743897ca1c5416a508eb3a915c4ac773ef64f0b8e58114b9",
+          "remoteSha256": "5b4d91c582bc5383743897ca1c5416a508eb3a915c4ac773ef64f0b8e58114b9",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "web/conversation-runtime.test.mjs",
+          "remoteBlob": "d0b50413f9b2e4f06b481005bcba57074c5be494",
+          "workingSha256": "e6ebd6c58833e1d8f97f813a0e7e2438a3849b31e673664631b4239e5fb80a9f",
+          "remoteSha256": "e6ebd6c58833e1d8f97f813a0e7e2438a3849b31e673664631b4239e5fb80a9f",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "web/department-capabilities.mjs",
+          "remoteBlob": "3518824e4be8f5f5b94abb97043c10658bdfb56a",
+          "workingSha256": "8edc169f929be203b619f639bf2041e2899cfb21c4e8ef746b3205d3ad850ef2",
+          "remoteSha256": "8edc169f929be203b619f639bf2041e2899cfb21c4e8ef746b3205d3ad850ef2",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "web/department-conversation-ui.js",
+          "remoteBlob": "2cbd29218ead7911c75fbba06646cb90ed6492a9",
+          "workingSha256": "f5092717550265bfff5228a0de67077c3da700cf5959adde3986a709e9d247ca",
+          "remoteSha256": "f5092717550265bfff5228a0de67077c3da700cf5959adde3986a709e9d247ca",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "web/department-conversation-ui.test.mjs",
+          "remoteBlob": "4c23465776244b83719a53f87f2c55a5a3ae1894",
+          "workingSha256": "a985bdb3cbef0963b150987a7ccedb916aef6f673280e7e263058d8008baff27",
+          "remoteSha256": "a985bdb3cbef0963b150987a7ccedb916aef6f673280e7e263058d8008baff27",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "web/ecosystem-workflows.mjs",
+          "remoteBlob": "a3d7e1f51431c01b5c2a02f1b7bfef506c8b784a",
+          "workingSha256": "4575b48e30ef891820bfff220198367cd8c94436c75f7a866b6258fcc15a362d",
+          "remoteSha256": "4575b48e30ef891820bfff220198367cd8c94436c75f7a866b6258fcc15a362d",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "web/forge-runtime-snapshot.mjs",
+          "remoteBlob": "b5d5eb5b7f13cffd77d8a9fc1229cc41931a1ae2",
+          "workingSha256": "0090a52e0d1ba17d0744f6c83e5325fedeacb2c173012969751f93f26caf6b2f",
+          "remoteSha256": "0090a52e0d1ba17d0744f6c83e5325fedeacb2c173012969751f93f26caf6b2f",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "web/forge-runtime-snapshot.test.mjs",
+          "remoteBlob": "93462d40c271405de9cf027b12454abf7659253f",
+          "workingSha256": "796cf470148ed06c724e69932d7f97d41f1760fa997ef53515eac13fb28ca9a5",
+          "remoteSha256": "796cf470148ed06c724e69932d7f97d41f1760fa997ef53515eac13fb28ca9a5",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "web/forge-workflows.mjs",
+          "remoteBlob": "ab4a75849d6b981b1d838f649ec3478420a20d43",
+          "workingSha256": "ef8446aa7181d8740d0e6bf0ab50222a68af3e82ce0bc7be229a5a7859a2dff3",
+          "remoteSha256": "ef8446aa7181d8740d0e6bf0ab50222a68af3e82ce0bc7be229a5a7859a2dff3",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "web/forge-workflows.test.mjs",
+          "remoteBlob": "d3347445d4c507bad4d58943196eeb7e196db955",
+          "workingSha256": "cb1af1cd0e3cc49dc9f1894c642329dd10048d302d7faa33267b067f84c16554",
+          "remoteSha256": "cb1af1cd0e3cc49dc9f1894c642329dd10048d302d7faa33267b067f84c16554",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "web/owner-departments.mjs",
+          "remoteBlob": "2a6d0c12618185dbb05788a287f2ae293fb2aa98",
+          "workingSha256": "deb509e558547a2fb72e607087f7d6627363c4625498558de3ce9db6f1a83a7d",
+          "remoteSha256": "deb509e558547a2fb72e607087f7d6627363c4625498558de3ce9db6f1a83a7d",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "web/owner-departments.test.mjs",
+          "remoteBlob": "5d092b044a89f3158566128edd4dafcd93d61036",
+          "workingSha256": "ae9d3c4ee0fbd55365ce0d8c0fd3b900982ac070d418dd753d995dae169b1052",
+          "remoteSha256": "ae9d3c4ee0fbd55365ce0d8c0fd3b900982ac070d418dd753d995dae169b1052",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "web/owner-forge-worker.mjs",
+          "remoteBlob": "63760d067a37c0270a55fdec84b7e15aeaeee82c",
+          "workingSha256": "5a024d167e1b5d65e91a1f8efba0bb1e83a484a38ffddd9a69afa4ec3b0b3a51",
+          "remoteSha256": "5a024d167e1b5d65e91a1f8efba0bb1e83a484a38ffddd9a69afa4ec3b0b3a51",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "web/owner-forge-worker.test.mjs",
+          "remoteBlob": "a663b51fd7f7545a8d9df5606c4c9a5040bac23c",
+          "workingSha256": "4332c922e3c1e299cf6a0235b5a3d3b590c1ed4b6d757e77b86286998f6b59fa",
+          "remoteSha256": "4332c922e3c1e299cf6a0235b5a3d3b590c1ed4b6d757e77b86286998f6b59fa",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "web/registered-department-startup.mjs",
+          "remoteBlob": "8570caee072676a90c752832eb8fc083943c785a",
+          "workingSha256": "a4e12769de999668654958bf7d3090620443bd6f67695b78cb282a1152722da4",
+          "remoteSha256": "a4e12769de999668654958bf7d3090620443bd6f67695b78cb282a1152722da4",
+          "comparison": "byte-exact"
+        },
+        {
+          "path": "web/server.mjs",
+          "remoteBlob": "464def4a3eb6d87efbe4aec6d891424aab900ef2",
+          "workingSha256": "cea42b3d0872491202e765704ece022b8b29681f26f504ba6fb9420fcf1a61d5",
+          "remoteSha256": "cea42b3d0872491202e765704ece022b8b29681f26f504ba6fb9420fcf1a61d5",
+          "comparison": "byte-exact"
+        }
+      ],
+      "nonForcePush": true,
+      "cleanAfterSourceCommit": true
+    }
+  ],
+  "scope": "Non-force published runtime/doc/evidence source with fetched exact branch heads and changed-file content readback; local qualified source, not production deployment",
+  "originalCountsUnchanged": true,
+  "authenticatedBrowserDownloadVerified": false,
+  "cleanupReviewRejectionRetained": true
+}

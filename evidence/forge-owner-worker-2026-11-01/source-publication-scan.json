@@ -1,0 +1,6 @@
+{
+  "scanner": "gitleaks default rules, redacted",
+  "findings": 0,
+  "publicationFileSha256": "2d49eedefe472f36a4aa0ef00f7c5f481910084da56c7dfe012ac01c0bb00305",
+  "scope": "Exact source-publication JSON; runtime/source/log scans have separate retained classification"
+}
