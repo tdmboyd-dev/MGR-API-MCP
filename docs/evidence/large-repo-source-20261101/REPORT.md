@@ -1,0 +1,7 @@
+# Actual large-repository source qualification
+
+The existing normal compiled HTTP API completed 29 local checks, including nine resumable compiler-source windows covering 2,715 eligible JS/TS files in the owner-authorized pinned IKICKITZ source. Continuation scope revocation and removal of the root were refused. Source programs were not executed. Inventory/indexing is not a security audit or an application repair.
+
+The optional qualifier uses MGR_LARGE_REPO_READ_ROOT (absolute owner-authorized root) and MGR_LARGE_REPO_READ_REVISION (exact 40-character commit). It enrolls that root at startup through the existing fixture registry. The normal fixture path is unchanged when these variables are absent. A ten-minute synthetic test token is used only for this multi-minute optional trial; normal fixture tokens remain two minutes and deployed credential policy is unchanged. Run the existing scripts/verify-four-repo-edge.ts qualifier with the reviewed Backpack and Code Monster toolkit roots and the compiled normal HTTP entrypoint. No alternate transport or new production authorization is introduced.
+
+The adjacent JSON contains actual executed checks. JWT/JWKS identities and proxy settings were local fixtures; Git/compiler, HTTP and SQLite operations were real. This does not prove hosted TLS, real account OAuth, current permanent Tevin integration, provider, Docker or production readiness. Later native-feature discovery and candidate fixes do not relabel this earlier window-generator qualification as a full source audit.

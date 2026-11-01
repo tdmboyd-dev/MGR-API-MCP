@@ -22,12 +22,13 @@ const gitEnv:NodeJS.ProcessEnv={GIT_CONFIG_NOSYSTEM:'1',GIT_CONFIG_GLOBAL:'/dev/
 const git=(...args:string[])=>execFileSync('git',['-C',root,'-c','core.hooksPath=/dev/null','-c','commit.gpgsign=false','-c','core.fsmonitor=false',...args],{env:gitEnv,encoding:'utf8',stdio:['ignore','pipe','pipe']});
 git('init','--quiet');git('add','README.md','fixture.ts','package.json');git('-c','user.name=Owned fixture','-c','user.email=fixture@localhost','commit','-qm','Owned source fixture');
 const cmConfig=path.join(base,'cm-projects.json'),cmBindings=path.join(base,'cm-bindings.json');
-fs.writeFileSync(cmConfig,JSON.stringify({projects:[{id:'owned-project',root}]}));
+const extraSourceRoot=process.env.MGR_LARGE_REPO_READ_ROOT;if(extraSourceRoot)assert(path.isAbsolute(extraSourceRoot));
+fs.writeFileSync(cmConfig,JSON.stringify({projects:[{id:'owned-project',root},...(extraSourceRoot?[{id:'real-large-source',root:extraSourceRoot}]:[])]}));
 const config=path.join(base,'host.json'),bindingPath=path.join(base,'bindings.json');
 const host={dataDir:path.join(base,'store'),roots:[root],actor:'owned-host'};
 fs.writeFileSync(config,JSON.stringify(host));
 const binding={tenantId:'owned-tenant',actorId:'owned-actor',project:'owned-project'};
-fs.writeFileSync(bindingPath,JSON.stringify([binding]));fs.writeFileSync(cmBindings,JSON.stringify([binding]));
+fs.writeFileSync(bindingPath,JSON.stringify([binding]));fs.writeFileSync(cmBindings,JSON.stringify([binding,...(extraSourceRoot?[{...binding,project:'real-large-source'}]:[])]));
 const engine=new Backpack(host);engine.register({id:binding.project,root,purpose:'Real normal HTTP qualification',owner:'fixture'});engine.close();
 const {privateKey,publicKey}=await generateKeyPair('RS256');
 const key={...await exportJWK(publicKey),kid:'owned-fixture-key',alg:'RS256',use:'sig'};
@@ -53,7 +54,7 @@ try{
  await new Promise<void>((resolve,reject)=>{let done=false;const finish=(error?:Error)=>{if(done)return;done=true;clearTimeout(timer);error?reject(error):resolve();};const timer=setTimeout(()=>finish(Error('Normal HTTP startup timed out: '+diagnostics)),20000);child.once('error',error=>finish(error));child.once('exit',code=>finish(Error('Normal HTTP startup exited '+code+': '+diagnostics)));child.stdout.on('data',chunk=>{if(String(chunk).includes('mgr_api_mcp_listening'))finish();});});
  assert.equal((await localFetch(audience)).status,401);checks.push('unauthenticated-refused');
  const metadata=await (await localFetch(origin+'/.well-known/oauth-protected-resource')).json() as any;assert.equal(metadata.resource,audience);checks.push('real-protected-resource-metadata');
- const access=await token();await jwtVerify(access,createRemoteJWKSet(new URL(issuer+'/jwks')),{issuer,audience});const probe=await localFetch(audience,{method:'POST',headers:{authorization:'Bearer '+access,'content-type':'application/json',accept:'application/json, text/event-stream'},body:JSON.stringify({jsonrpc:'2.0',id:1,method:'initialize',params:{protocolVersion:'2025-11-25',capabilities:{},clientInfo:{name:'probe',version:'1'}}})});assert.equal(probe.status,200,await probe.text());const client=await connect(access);
+ const access=await token('owned-actor','owned-tenant','tools:read backpack:read code-monster:read',extraSourceRoot?'10m':'2m');await jwtVerify(access,createRemoteJWKSet(new URL(issuer+'/jwks')),{issuer,audience});const probe=await localFetch(audience,{method:'POST',headers:{authorization:'Bearer '+access,'content-type':'application/json',accept:'application/json, text/event-stream'},body:JSON.stringify({jsonrpc:'2.0',id:1,method:'initialize',params:{protocolVersion:'2025-11-25',capabilities:{},clientInfo:{name:'probe',version:'1'}}})});assert.equal(probe.status,200,await probe.text());const client=await connect(access);
  const tools=(await client.listTools()).tools;
  assert.equal(tools.filter(tool=>tool.name.startsWith('mgr_backpack_')).length,9);
  assert(!tools.some(tool=>tool.name.startsWith('mgr_legacy_')));checks.push('normal-startup-nine-read-tools-no-legacy-transport');
@@ -72,6 +73,19 @@ try{
  const symbols=await client.callTool({name:'code_monster_symbols',arguments:{...cmInput,symbol:'ownedSourceCapability'}});assert(!symbols.isError);assert(JSON.stringify(symbols).includes('ownedSourceCapability'));checks.push('exact-source-symbol-citation');
  for(const [name,label]of [['code_monster_references','real-bound-references'],['code_monster_impact','real-potential-impact']]){const result=await client.callTool({name,arguments:{...cmInput,symbol:'ownedSourceCapability'}});assert(!result.isError,JSON.stringify(result));const data=JSON.parse((result.content as any[])[0].text);assert.equal(data.resolution,'unique');assert(data.totalMatches>=1);assert.equal(data.contract,name==='code_monster_references'?'mgr.code-monster.source-references.v1':'mgr.code-monster.source-impact.v1');checks.push(label);}
  for(const [name,contract]of [['code_monster_outline','mgr.code-monster.source-outline.v1'],['code_monster_automation','mgr.code-monster.automation-map.v1']]){const result=await client.callTool({name,arguments:cmInput});assert(!result.isError,JSON.stringify(result));const data=JSON.parse((result.content as any[])[0].text);assert.equal(data.contract,contract);assert(data.totalMatches>=1);assert(!JSON.stringify(data).includes('FIXTURE_BODY_MUST_NOT_LEAVE_AUTOMATION'));checks.push('real-'+name);}
+ const largeRoot=process.env.MGR_LARGE_REPO_READ_ROOT,largeRevision=process.env.MGR_LARGE_REPO_READ_REVISION;
+ if(largeRoot){
+  assert(path.isAbsolute(largeRoot));assert(largeRevision&&/^[a-f0-9]{40}$/.test(largeRevision));const realBinding={...binding,project:'real-large-source'};
+  fs.writeFileSync(cmConfig,JSON.stringify({projects:[{id:binding.project,root},{id:realBinding.project,root:largeRoot}]}));fs.writeFileSync(cmBindings,JSON.stringify([binding,realBinding]));
+  let next:any={revision:largeRevision},windows=0,parsed=0,finished=false;
+  for(let i=0;i<100;i++){
+   const result=await client.callTool({name:'code_monster_profile',arguments:{project:realBinding.project,...next}},{timeout:120000});assert(!result.isError,JSON.stringify(result));const data=JSON.parse((result.content as any[])[0].text);assert.equal(data.commit,largeRevision);assert.equal(data.analysisWindow.securityAuditPerformed,false);assert.equal(data.analysisWindow.repairsPerformed,0);windows++;parsed+=data.coverage.parsed;
+   if(data.analysisWindow.next&&i===0){fs.writeFileSync(cmBindings,JSON.stringify([binding]));assert.equal((await client.callTool({name:'code_monster_profile',arguments:{project:realBinding.project,...data.analysisWindow.next}})).isError,true);checks.push('real-large-continuation-revocation-refused');fs.writeFileSync(cmBindings,JSON.stringify([binding,realBinding]));}
+   if(!data.analysisWindow.next){finished=true;break;}assert.notEqual(data.analysisWindow.next.continuation,next.continuation);next=data.analysisWindow.next;
+  }
+  assert(finished);assert(windows>1);assert(parsed>2000);checks.push('real-large-source-all-windows:'+windows+':parsed:'+parsed);
+  fs.writeFileSync(cmConfig,JSON.stringify({projects:[{id:binding.project,root}]}));fs.writeFileSync(cmBindings,JSON.stringify([binding]));assert.equal((await client.callTool({name:'code_monster_profile',arguments:{project:realBinding.project,revision:largeRevision}})).isError,true);checks.push('real-large-root-removal-refused');
+ }
  const sourceDenied=await connect(await token('owned-actor','owned-tenant','tools:read backpack:read'));assert.equal((await sourceDenied.callTool({name:'code_monster_profile',arguments:cmInput})).isError,true);assert(!(await sourceDenied.callTool({name:'mgr_backpack_context',arguments:cmInput})).isError);checks.push('component-scope-does-not-cross-grant');
  for(const [actor,tenant]of [['other-actor','owned-tenant'],['owned-actor','other-tenant']]){const denied=await connect(await token(actor,tenant));assert.equal((await denied.callTool({name:'code_monster_profile',arguments:cmInput})).isError,true);}checks.push('code-monster-actor-and-tenant-refused');
  assert.equal((await client.callTool({name:'code_monster_profile',arguments:{...cmInput,root,actorId:'owned-actor'}})).isError,true);checks.push('caller-root-and-identity-fields-refused');
