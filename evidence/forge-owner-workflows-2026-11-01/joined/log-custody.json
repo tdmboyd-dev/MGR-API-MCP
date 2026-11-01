@@ -1,0 +1,62 @@
+[
+  {
+    "path": "api-source-publication.json",
+    "sha256": "d24404b5de3a496bee0ea1a94ce06ba382cb060d5f682c05be5665ecad39fdbb",
+    "bytes": 11081
+  },
+  {
+    "path": "api-verify.txt",
+    "sha256": "e46f421c185dca432900c64925750768e8e0acadb19fd3573e78139ab052a9c1",
+    "bytes": 28069
+  },
+  {
+    "path": "initial-counts-with-log-collision.json",
+    "sha256": "00fff06b9b883adf8c2da2385292144673fd7fd79288dd3b41a14fe96bf25e39",
+    "bytes": 1181
+  },
+  {
+    "path": "native-workflow.json",
+    "sha256": "e05f064b8ea13541a0bb3deee003701620fa8dd18a3d52c0e055d23ba4252d18",
+    "bytes": 2750
+  },
+  {
+    "path": "primary.txt",
+    "sha256": "0426d7441933e5051efbba5c0aab5fb14639bbd77dc94b6e9fc48bac65b4eabf",
+    "bytes": 84469
+  },
+  {
+    "path": "qualify_forge_owner_joined.py",
+    "sha256": "7b9cd764b150c59109d831710f91d7bbbd58b128bc957cafa7efa072b4a99a7a",
+    "bytes": 3297
+  },
+  {
+    "path": "retain_joined_serial.py",
+    "sha256": "ae374cd0a47459e7bdca69850cfb08e3bc960ad2a47b72ba46d895b828ef1f95",
+    "bytes": 1805
+  },
+  {
+    "path": "serial-0.txt",
+    "sha256": "22840a90b5337726dc25b573010d3067a1741a82fff9e6651d1d0cb241477e44",
+    "bytes": 27324
+  },
+  {
+    "path": "serial-1.txt",
+    "sha256": "b5f62de6faf58a6636b6f7ab686213f938d21334845ab785e298e241b56f4e48",
+    "bytes": 1335
+  },
+  {
+    "path": "source-after.json",
+    "sha256": "3d9462ab5fe906e7ee6c7a95271fc61cef9e6ce3f3ffae863add381f217faed1",
+    "bytes": 244484
+  },
+  {
+    "path": "source-before.json",
+    "sha256": "3d9462ab5fe906e7ee6c7a95271fc61cef9e6ce3f3ffae863add381f217faed1",
+    "bytes": 244484
+  },
+  {
+    "path": "verification.json",
+    "sha256": "2a47e6c9f26783055d6e49495effb9818355ce8fcd5d29ad1e7742995434daea",
+    "bytes": 1963
+  }
+]

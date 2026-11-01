@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "sourceStable": true,
+  "guardedInputs": 2178,
+  "changed": [],
+  "added": [],
+  "removed": [],
+  "runs": [
+    {
+      "log": "api-verify.txt",
+      "exitCode": 0,
+      "counts": {
+        "tests": 292,
+        "pass": 292,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "log": "primary.txt",
+      "exitCode": 0,
+      "counts": {
+        "tests": 782,
+        "pass": 782,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "log": "serial-0.txt",
+      "exitCode": 0,
+      "counts": {
+        "tests": 276,
+        "pass": 276,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "files": [
+        "web/backward-research.test.mjs",
+        "web/registered-engineering-startup.test.mjs",
+        "web/registered-model-startup.test.mjs",
+        "web/registered-research-startup.test.mjs",
+        "web/research-watch-abandonment.test.mjs",
+        "web/research-watch-discovery.test.mjs",
+        "web/research-watch-prefix-archive.test.mjs"
+      ]
+    },
+    {
+      "log": "serial-1.txt",
+      "exitCode": 0,
+      "counts": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "files": [
+        "web/native-browser-job-recovery.test.mjs"
+      ]
+    }
+  ],
+  "OneTestFiles": 101,
+  "sourceBaseONE": "fd234a670a98e80bcbe9a1aaababf3ccc2a4b086",
+  "elapsedSeconds": 250.51,
+  "modelCalls": 0,
+  "permanentForgeInstallationVerified": false,
+  "productionVerified": false,
+  "serialLogCustodyReverified": true,
+  "same2178InputsForFreshSerial": true,
+  "oneTestTotal": 1063,
+  "scope": "Joined Forge workflow and peer owner memory/history/recovery; real temporary owner native workflow; not permanent installation, account/model, native process-crash or production acceptance."
+}

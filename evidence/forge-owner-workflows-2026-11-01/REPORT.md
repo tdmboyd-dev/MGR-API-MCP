@@ -22,7 +22,7 @@ The initial mutable creature-forwarding-copy regression was fixed by freezing th
 
 ## Remaining engineering and next batch
 
-1. Join the peer's published owner-memory/history/recovery source without overwriting it, then qualify the joined tree. This checkpoint alone does not qualify that merge.
+1. RESOLVED by the subsequent joined-source qualification below; the original isolated proof alone did not qualify the later merge.
 2. Add native read-only readiness/exact-request preparation before consuming a Forge approval: wrong workspace, unreachable worker or known changed-source/ID conflict must fail before effect admission when knowable. Postdispatch uncertainty still requires reconciliation.
 3. Enroll/start/stop/recover Forge privately through existing permanent owner services; register its exact workspace and operations in startup. Current `owner-departments.mjs` still enables only Creation rendering. No permanent Forge capability or model connection is inferred from fixture construction.
 4. Complete the real conversation/proposal/owner approval/native action/artifact save/normal launcher reopen journey. Model proposals remain bounded by the existing3500-character inputJson surface; large owner inputs need an existing-custody/reference path rather than invented data. Cancellation after native dispatch and orphan Blender/native-worker process custody need native support/proof.
@@ -30,3 +30,13 @@ The initial mutable creature-forwarding-copy regression was fixed by freezing th
 6. Continue original Code Monster/OmniDev/OmniSight actual worker/live-view/tool repair and all eleven tools' per-operation audits, full original ForgeF01-F156/64CLI scope, raw-WAV/large private artifact/full GLB semantics, provider/device/art/hosted/production acceptance. Whole13-repo audit remains Unassessed; original283IDs/21closed15open36packages/selected-ten5of10 are unchanged, zero new parent closures.
 
 The owner's cross-repo requirement is durable in coordination/ECOSYSTEM-REUSE-AND-MERGE-PLAN.md: provider/consumer capability map, integration matrix, internal/external comparison, total cost/maintenance, migration/rollback and owning handoffs. Existing code receives no automatic preference. No dollar savings or external quality equivalence has been measured.
+
+## Subsequent joined-source qualification — current November1 checkpoint
+
+ONE runtime source fd234a670a98e80bcbe9a1aaababf3ccc2a4b086 joins this adapter with published peer memory/history/recovery c447085/f7320dc and shared plan9f878f2. Both source lanes and their histories are preserved. Code merged without source conflicts; the two documentation conflicts retained both lanes' instructions and evidence. Current joined qualification: **1063/1063 ONE tests across101files, API292/292,2178stable inputs**. Native approval/SDK/HTTP/Forge/Blender five-operation/six-job/artifact/reopen/lost-response journey passed again against the joined source; permanent owner launcher/runtime was not changed or restarted.
+
+The qualification driver initially reused a filename for two serial groups: counts276and5were parsed, but the first raw log was overwritten. That receipt is retained explicitly as initial counts with log collision. Both serial groups were rerun to distinct serial-0/serial-1 files, all281passed, with the exact same2178source inputs as the original joined run. Current merged verification links primary782plus retained serial276+5, not repeated or summed suites. No assertions/deadlines were weakened. Actual source/log hashes and API35file fetched-source comparison are under joined/; original isolated and failed qualifications retain their own scope.
+
+Native unchanged Forge receiving full suite:654run/651pass/3optionalSAM-unavailable skips. That is separate from the ONE/API denominators and does not establish optional-provider, native process-crash, device, hosted or production acceptance. No new original parent requirement closed.
+
+The instruction to join/qualify the peer source is now resolved. Next active engineering is read-only native preparation before effect admission, permanent Forge worker/workspace startup and recovery, actual model conversation/normal-launcher journey, Creation history reconciliation and the remaining original all-tool operations/audits/production gates. Existing code remains subject to the owner's internal-reuse/quality/cost comparison requirement.

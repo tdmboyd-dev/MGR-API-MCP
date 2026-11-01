@@ -1,122 +1,210 @@
-[
-  {
-    "path": "api-verify.txt",
-    "bytes": 28069,
-    "sha256": "8dfa6dc5462784a860c3483b374ef9677ec442b1291641b18fa22858f1667644"
-  },
-  {
-    "path": "historical/forge-owner-boundary-focused.txt",
-    "bytes": 4285,
-    "sha256": "34782f78361fa5ca12cb512362d9c4b59610216aade23a4ce3a6b8ce01c6c876"
-  },
-  {
-    "path": "historical/forge-owner-model-focused.txt",
-    "bytes": 1450,
-    "sha256": "faa5a360549e277ae0ed50c39cbca70c9f68b433c38dd9ddef1f7f3b937fa80d"
-  },
-  {
-    "path": "historical/forge-owner-qualification/api-verify.txt",
-    "bytes": 658,
-    "sha256": "545f34797d07b223dc965bd4a1da871607732b6929200b63d4539c12feb8a4f6"
-  },
-  {
-    "path": "historical/forge-owner-qualification/primary.txt",
-    "bytes": 79417,
-    "sha256": "040db6da0bcae24d3e009913a886a757bb6c9dd1de9a14d6a74a6e2d7ac94d42"
-  },
-  {
-    "path": "historical/forge-owner-qualification/source-after.json",
-    "bytes": 222738,
-    "sha256": "2f5a016dc1b088c0d9b1c3a41e645c2d08829d6c844583e7ce1a2ab098473098"
-  },
-  {
-    "path": "historical/forge-owner-qualification/source-before.json",
-    "bytes": 222738,
-    "sha256": "2f5a016dc1b088c0d9b1c3a41e645c2d08829d6c844583e7ce1a2ab098473098"
-  },
-  {
-    "path": "historical/forge-owner-qualification/timed.txt",
-    "bytes": 27499,
-    "sha256": "4af2c15b659887ad8b1178ec2585bc21049fff32f9b10ac36db6b460bbcd6dd7"
-  },
-  {
-    "path": "historical/forge-owner-qualification/verification.json",
-    "bytes": 861,
-    "sha256": "bc7de31757a42790e0df1dd903de53232a5f4d7f88fe2ab0613020e7db25ff88"
-  },
-  {
-    "path": "historical/forge-owner-qualification-fixed/api-verify.txt",
-    "bytes": 28536,
-    "sha256": "3ff6da7c8fcb15780b2bfc9b4ca6e8dc1d95166ea23c253b6ab42233deaaec67"
-  },
-  {
-    "path": "historical/forge-owner-qualification-fixed/primary.txt",
-    "bytes": 81749,
-    "sha256": "fe91fd09d7f71012c6314c925e1997292de05996e8c5a5527991fd638f04f7a3"
-  },
-  {
-    "path": "historical/forge-owner-qualification-fixed/source-after.json",
-    "bytes": 222738,
-    "sha256": "b9a483c0c12a2b9102c681fba618fc6b5721d906fb4b09f5a05094cb8b01562f"
-  },
-  {
-    "path": "historical/forge-owner-qualification-fixed/source-before.json",
-    "bytes": 222738,
-    "sha256": "ac373bd85eac255541f96413f9acc15fd32fec23698c510fcf90452f3b59f30d"
-  },
-  {
-    "path": "historical/forge-owner-qualification-fixed/timed.txt",
-    "bytes": 27490,
-    "sha256": "86e52b310d0c5227acfe6c07a46b5dd91dd0dfdb102ab292400211eec5c42324"
-  },
-  {
-    "path": "historical/forge-owner-qualification-fixed/verification.json",
-    "bytes": 1065,
-    "sha256": "b73c6a12816ad3774cb95115d90612185eeadf72637d4bc2c4ac39af93728658"
-  },
-  {
-    "path": "historical/forge-owner-workflows-kind-focused.txt",
-    "bytes": 1438,
-    "sha256": "8cfc0084b6fd3006f428404332b10498781f276fffe72aadb45ed75c5863d5b1"
-  },
-  {
-    "path": "native-workflow.json",
-    "bytes": 2750,
-    "sha256": "70f0b6acc4efbb4da261145443d7aed535448dcf3c68bed6894ff1374749d399"
-  },
-  {
-    "path": "primary.txt",
-    "bytes": 81335,
-    "sha256": "252180481bedcc8a3a8338b4c3e2807c8c2186e107ce9224cc202a1be4707160"
-  },
-  {
-    "path": "qualification-driver.py",
-    "bytes": 3284,
-    "sha256": "4c4a81f9e8098e3b5cc46cfc2c1bca622c5d87447fcf457b11417def5f5e1909"
-  },
-  {
-    "path": "REPORT.md",
-    "bytes": 6786,
-    "sha256": "08194d929e92363a9fd3b8f6240476a9e411ccbf026250bab7cd4c7bd814eafe"
-  },
-  {
-    "path": "source-after.json",
-    "bytes": 243591,
-    "sha256": "e1349bf3c49ea850249e6dfe8277d6c067b4de09b1b9fc6cd554445bd698452a"
-  },
-  {
-    "path": "source-before.json",
-    "bytes": 243591,
-    "sha256": "e1349bf3c49ea850249e6dfe8277d6c067b4de09b1b9fc6cd554445bd698452a"
-  },
-  {
-    "path": "timed.txt",
-    "bytes": 27481,
-    "sha256": "c54fd73a1b9d3a1b08bf54308eefc2ea28d084bc5bc7f679279dc5402600b194"
-  },
-  {
-    "path": "verification.json",
-    "bytes": 980,
-    "sha256": "adfee83f8d23a50f0c5fec6f3b14cdae0df14ecab9b53c8b5aa8256aab598bb4"
-  }
-]
+{
+  "scope": "Current public API evidence packet. ONE and Forge retain receiving metadata; raw logs/maps remain at this API path. Historical manifest applies to Git sourcea873526, whose report bytes are retained separately.",
+  "files": [
+    {
+      "path": "api-verify.txt",
+      "bytes": 28069,
+      "sha256": "8dfa6dc5462784a860c3483b374ef9677ec442b1291641b18fa22858f1667644"
+    },
+    {
+      "path": "historical/forge-owner-boundary-focused.txt",
+      "bytes": 4285,
+      "sha256": "34782f78361fa5ca12cb512362d9c4b59610216aade23a4ce3a6b8ce01c6c876"
+    },
+    {
+      "path": "historical/forge-owner-model-focused.txt",
+      "bytes": 1450,
+      "sha256": "faa5a360549e277ae0ed50c39cbca70c9f68b433c38dd9ddef1f7f3b937fa80d"
+    },
+    {
+      "path": "historical/forge-owner-qualification/api-verify.txt",
+      "bytes": 658,
+      "sha256": "545f34797d07b223dc965bd4a1da871607732b6929200b63d4539c12feb8a4f6"
+    },
+    {
+      "path": "historical/forge-owner-qualification/primary.txt",
+      "bytes": 79417,
+      "sha256": "040db6da0bcae24d3e009913a886a757bb6c9dd1de9a14d6a74a6e2d7ac94d42"
+    },
+    {
+      "path": "historical/forge-owner-qualification/source-after.json",
+      "bytes": 222738,
+      "sha256": "2f5a016dc1b088c0d9b1c3a41e645c2d08829d6c844583e7ce1a2ab098473098"
+    },
+    {
+      "path": "historical/forge-owner-qualification/source-before.json",
+      "bytes": 222738,
+      "sha256": "2f5a016dc1b088c0d9b1c3a41e645c2d08829d6c844583e7ce1a2ab098473098"
+    },
+    {
+      "path": "historical/forge-owner-qualification/timed.txt",
+      "bytes": 27499,
+      "sha256": "4af2c15b659887ad8b1178ec2585bc21049fff32f9b10ac36db6b460bbcd6dd7"
+    },
+    {
+      "path": "historical/forge-owner-qualification/verification.json",
+      "bytes": 861,
+      "sha256": "bc7de31757a42790e0df1dd903de53232a5f4d7f88fe2ab0613020e7db25ff88"
+    },
+    {
+      "path": "historical/forge-owner-qualification-fixed/api-verify.txt",
+      "bytes": 28536,
+      "sha256": "3ff6da7c8fcb15780b2bfc9b4ca6e8dc1d95166ea23c253b6ab42233deaaec67"
+    },
+    {
+      "path": "historical/forge-owner-qualification-fixed/primary.txt",
+      "bytes": 81749,
+      "sha256": "fe91fd09d7f71012c6314c925e1997292de05996e8c5a5527991fd638f04f7a3"
+    },
+    {
+      "path": "historical/forge-owner-qualification-fixed/source-after.json",
+      "bytes": 222738,
+      "sha256": "b9a483c0c12a2b9102c681fba618fc6b5721d906fb4b09f5a05094cb8b01562f"
+    },
+    {
+      "path": "historical/forge-owner-qualification-fixed/source-before.json",
+      "bytes": 222738,
+      "sha256": "ac373bd85eac255541f96413f9acc15fd32fec23698c510fcf90452f3b59f30d"
+    },
+    {
+      "path": "historical/forge-owner-qualification-fixed/timed.txt",
+      "bytes": 27490,
+      "sha256": "86e52b310d0c5227acfe6c07a46b5dd91dd0dfdb102ab292400211eec5c42324"
+    },
+    {
+      "path": "historical/forge-owner-qualification-fixed/verification.json",
+      "bytes": 1065,
+      "sha256": "b73c6a12816ad3774cb95115d90612185eeadf72637d4bc2c4ac39af93728658"
+    },
+    {
+      "path": "historical/forge-owner-workflows-kind-focused.txt",
+      "bytes": 1438,
+      "sha256": "8cfc0084b6fd3006f428404332b10498781f276fffe72aadb45ed75c5863d5b1"
+    },
+    {
+      "path": "historical/log-custody-at-a873526.json",
+      "bytes": 4064,
+      "sha256": "0d258ef84858f61c5e52b87e5bae843d55e9695877ec4b2dd10fb094e280a061"
+    },
+    {
+      "path": "historical/REPORT-at-a873526.md",
+      "bytes": 6786,
+      "sha256": "08194d929e92363a9fd3b8f6240476a9e411ccbf026250bab7cd4c7bd814eafe"
+    },
+    {
+      "path": "joined/api-source-publication.json",
+      "bytes": 11081,
+      "sha256": "d24404b5de3a496bee0ea1a94ce06ba382cb060d5f682c05be5665ecad39fdbb"
+    },
+    {
+      "path": "joined/api-verify.txt",
+      "bytes": 28069,
+      "sha256": "e46f421c185dca432900c64925750768e8e0acadb19fd3573e78139ab052a9c1"
+    },
+    {
+      "path": "joined/initial-counts-with-log-collision.json",
+      "bytes": 1181,
+      "sha256": "00fff06b9b883adf8c2da2385292144673fd7fd79288dd3b41a14fe96bf25e39"
+    },
+    {
+      "path": "joined/log-custody.json",
+      "bytes": 1811,
+      "sha256": "24f22b631abbfa85de3e8659fd60a86a4fcc31f965c9d2ce775376959258eb07"
+    },
+    {
+      "path": "joined/native-workflow.json",
+      "bytes": 2750,
+      "sha256": "e05f064b8ea13541a0bb3deee003701620fa8dd18a3d52c0e055d23ba4252d18"
+    },
+    {
+      "path": "joined/primary.txt",
+      "bytes": 84469,
+      "sha256": "0426d7441933e5051efbba5c0aab5fb14639bbd77dc94b6e9fc48bac65b4eabf"
+    },
+    {
+      "path": "joined/qualify_forge_owner_joined.py",
+      "bytes": 3297,
+      "sha256": "7b9cd764b150c59109d831710f91d7bbbd58b128bc957cafa7efa072b4a99a7a"
+    },
+    {
+      "path": "joined/retain_joined_serial.py",
+      "bytes": 1805,
+      "sha256": "ae374cd0a47459e7bdca69850cfb08e3bc960ad2a47b72ba46d895b828ef1f95"
+    },
+    {
+      "path": "joined/secret-scan-classification.json",
+      "bytes": 32019,
+      "sha256": "5baab445660a1e3112f46d96d69c1996b3bd5c0ffde4bcafb73e2ff7e4608f4c"
+    },
+    {
+      "path": "joined/serial-0.txt",
+      "bytes": 27324,
+      "sha256": "22840a90b5337726dc25b573010d3067a1741a82fff9e6651d1d0cb241477e44"
+    },
+    {
+      "path": "joined/serial-1.txt",
+      "bytes": 1335,
+      "sha256": "b5f62de6faf58a6636b6f7ab686213f938d21334845ab785e298e241b56f4e48"
+    },
+    {
+      "path": "joined/source-after.json",
+      "bytes": 244484,
+      "sha256": "3d9462ab5fe906e7ee6c7a95271fc61cef9e6ce3f3ffae863add381f217faed1"
+    },
+    {
+      "path": "joined/source-before.json",
+      "bytes": 244484,
+      "sha256": "3d9462ab5fe906e7ee6c7a95271fc61cef9e6ce3f3ffae863add381f217faed1"
+    },
+    {
+      "path": "joined/verification.json",
+      "bytes": 1963,
+      "sha256": "2a47e6c9f26783055d6e49495effb9818355ce8fcd5d29ad1e7742995434daea"
+    },
+    {
+      "path": "native-workflow.json",
+      "bytes": 2750,
+      "sha256": "70f0b6acc4efbb4da261145443d7aed535448dcf3c68bed6894ff1374749d399"
+    },
+    {
+      "path": "primary.txt",
+      "bytes": 81335,
+      "sha256": "252180481bedcc8a3a8338b4c3e2807c8c2186e107ce9224cc202a1be4707160"
+    },
+    {
+      "path": "qualification-driver.py",
+      "bytes": 3284,
+      "sha256": "4c4a81f9e8098e3b5cc46cfc2c1bca622c5d87447fcf457b11417def5f5e1909"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 8825,
+      "sha256": "8e95a631f7139efa2735041dc0c52c7a80ca4df45b46a66ead125f655d619804"
+    },
+    {
+      "path": "secret-scan-classification.json",
+      "bytes": 99127,
+      "sha256": "f44e5018b2cdb2880950c6726c7db860adb0133c6ce1998c89a59633310e0c1a"
+    },
+    {
+      "path": "source-after.json",
+      "bytes": 243591,
+      "sha256": "e1349bf3c49ea850249e6dfe8277d6c067b4de09b1b9fc6cd554445bd698452a"
+    },
+    {
+      "path": "source-before.json",
+      "bytes": 243591,
+      "sha256": "e1349bf3c49ea850249e6dfe8277d6c067b4de09b1b9fc6cd554445bd698452a"
+    },
+    {
+      "path": "timed.txt",
+      "bytes": 27481,
+      "sha256": "c54fd73a1b9d3a1b08bf54308eefc2ea28d084bc5bc7f679279dc5402600b194"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 980,
+      "sha256": "adfee83f8d23a50f0c5fec6f3b14cdae0df14ecab9b53c8b5aa8256aab598bb4"
+    }
+  ]
+}

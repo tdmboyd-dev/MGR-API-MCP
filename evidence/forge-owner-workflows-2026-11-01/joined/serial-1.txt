@@ -1,0 +1,15 @@
+{"qualification":"actual-native-browser-worker-SIGKILL-recovery","jobTotalProcesses":11,"jobActiveProcesses":0,"originalWorkerHandleExited":true,"originalWorkerListenerAbsent":true,"checkpointFaultRetriedFromPreservedWitness":true,"newBrowserLaunches":0,"modelCalls":0,"securityProfilesCreated":false,"allOsDescendantsClaimed":false}
+{"diagnostic":"original-native-parent-wait-after-worker-death","parentWaitResult":0,"parentWaitElapsedMs":231,"parentWaitLimitMs":8993,"totalCleanupBudgetMs":9000,"cleanupObservedElapsedMs":245,"securityProfileCreated":false,"policyChanged":false}
+✔ actual killed SQL worker stops its original native Chrome job, preserves zero-member witness and recovers after final-checkpoint fault without relaunch (4745.0754ms)
+✔ wrong native stop scope/member count/supervisor birth deny before OS queries or filesystem cleanup (52.7593ms)
+✔ live original proxy or post-query revocation preserve native work root and do not archive or remove evidence (31.3069ms)
+✔ recovery refuses replaced or newly appeared directories across held OS metadata boundaries (71.328ms)
+✔ metadata recovery preserves its independent archived stop witness across repeated absent-directory cleanup (34.6803ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6225.6165
