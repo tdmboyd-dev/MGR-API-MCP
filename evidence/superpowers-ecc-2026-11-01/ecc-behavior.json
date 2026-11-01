@@ -1,0 +1,17 @@
+{
+  "checks": [
+    {
+      "name": "Original config hook blocks the absolute existing protected path",
+      "exitCode": 2
+    },
+    {
+      "name": "Same file named relative to payload.cwd is allowed when process.cwd differs",
+      "exitCode": 0
+    },
+    {
+      "name": "Malformed JSON input returns allow",
+      "exitCode": 0
+    }
+  ],
+  "scope": "Direct unchanged hook subprocess, owned project/caller directories; no file edit performed. Relative-path observation requires a harness supplying relative paths without changing process cwd. Not a demonstrated default Claude Code bypass; malformed-input behavior is fail-open advice, not MGR authorization."
+}

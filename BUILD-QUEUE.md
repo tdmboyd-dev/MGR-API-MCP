@@ -1,3 +1,13 @@
+## Completed native child-package automation and selected research â€” November 1, 2026
+
+Canonical Code Monster automationMap now includes committed child app/package manifests and package-directory identities while withholding script bodies, values and dependency data. Existing limits, scoped Git reads, symlink exclusions and authority stay intact. The actual pinned Every App repository comparison improved one manifest to nine without executing package commands. Focused25/25; final full Code Monster268pass/0fail/6explicit Windows skips (274 results); actual canonical Tevin owner chain24/24; normal source and compiled HTTP19/19 each. The first full run failed owned temporary cleanup with Windows EPERM; bounded retries and preservation of primary errors repaired that test fixture, then focused CLI13pass/1skip and final full passed. Product deadlines and authorization were unchanged.
+
+Selected original Every App policy4/4 and validation6/6 passed. TStack original controlled watcher findings, Superpowers helper12/12, ECC hook17pass/1skip and supported REA/partial traces are recorded in their owning evidence. JEV first-party skill identity and distinct wrapper origins were separated; Hyrax was studied as a hosted public-doc reference. No duplicate gateway/brain/memory/grant engine, PR watcher/auto-merge, provider council or live inference was installed. The prior Auditor packet also passed four exact tree/commit reconstructions and ZIP extraction checks.
+
+The actual installed Backpack fixed procedure still requires owner review of its stale source fingerprint; private configuration/expiry/commands were not changed. Local model/JWT fixtures and synthetic HTTPS-to-loopback mapping do not prove live providers, hosted TLS/OAuth, permanent-owner or production acceptance. Whole candidates/products remain unassessed. See owning everyapp-tstack report, manifest and VERIFICATION.json plus separate superpowers-ecc and jev-hyrax reports.
+
+---
+
 ## Completed native audit intake coverage and engagement research — November 1, 2026
 
 Original source-profile.auditCoverage now reports language-attributed source counts, parsed/error/excluded counts and bounded examples through existing Code Monster and Tevin profile reads. It opens no extra files and explicitly reports securityAuditPerformed=false. Rust/Anchor parsing and vulnerability review remain unimplemented; filenames and parsed JavaScript/TypeScript are not whole-repository audit acceptance. No additional brain, memory store, tool, permission or service was added.

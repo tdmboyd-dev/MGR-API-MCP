@@ -1,0 +1,127 @@
+{
+  "repositories": [
+    {
+      "name": "every-app/every-app",
+      "commit": "f60692bb9586eef4b364b0a97370abd463cb4f0b",
+      "license": "MIT original repository"
+    },
+    {
+      "name": "t3dotgg/tstack",
+      "commit": "1085050f3baed1ac724caa4a8166145fb2ac88af",
+      "license": "MIT"
+    }
+  ],
+  "readScope": [
+    {
+      "repository": "every-app/every-app",
+      "path": "README.md",
+      "sha256": "a825e42bdbf4d2f726a5f626e955f542340fb93951b3c83a3d274d99661abde4",
+      "scope": "Selected source read; complete policy/principal/validation/test source, selected execute sections. Not whole gateway audit."
+    },
+    {
+      "repository": "every-app/every-app",
+      "path": "LICENSE",
+      "sha256": "20d6a396fdb6d7c20bcc9925fa4249811b88880e775da8594275caed92548bee",
+      "scope": "Selected source read; complete policy/principal/validation/test source, selected execute sections. Not whole gateway audit."
+    },
+    {
+      "repository": "every-app/every-app",
+      "path": "packages/toolbus/src/policy.ts",
+      "sha256": "27316fd2947dd597c871a76a29b1a6aeccacb1248db74de917cf2ef76e967919",
+      "scope": "Selected source read; complete policy/principal/validation/test source, selected execute sections. Not whole gateway audit."
+    },
+    {
+      "repository": "every-app/every-app",
+      "path": "packages/toolbus/src/policy.test.ts",
+      "sha256": "a0645bc7aee0e543817813d16cb9c651eccc371be82956a2fb7f20992082269c",
+      "scope": "Selected source read; complete policy/principal/validation/test source, selected execute sections. Not whole gateway audit."
+    },
+    {
+      "repository": "every-app/every-app",
+      "path": "packages/toolbus/src/principal.ts",
+      "sha256": "32f752cc25ec2af867f095b5a1b682f06cd4199cca97757c3aecf1bdf374f9ce",
+      "scope": "Selected source read; complete policy/principal/validation/test source, selected execute sections. Not whole gateway audit."
+    },
+    {
+      "repository": "every-app/every-app",
+      "path": "packages/toolbus/src/execute.ts",
+      "sha256": "fe38c8e4d0ceccd2db228595de2d3eb62936031540e216293dd0c168d19771c4",
+      "scope": "Selected source read; complete policy/principal/validation/test source, selected execute sections. Not whole gateway audit."
+    },
+    {
+      "repository": "every-app/every-app",
+      "path": "packages/toolbus/src/validation.ts",
+      "sha256": "0d1c012c352ed472669c7aab0b1da0a4421bf460d8b45e21a066d2ea4fdcfce9",
+      "scope": "Selected source read; complete policy/principal/validation/test source, selected execute sections. Not whole gateway audit."
+    },
+    {
+      "repository": "every-app/every-app",
+      "path": "packages/toolbus/src/validation.test.ts",
+      "sha256": "64067c08956ed1f795188e7ce54e06295df02098a36e87aa2f303a3a3fa3bcfc",
+      "scope": "Selected source read; complete policy/principal/validation/test source, selected execute sections. Not whole gateway audit."
+    },
+    {
+      "repository": "every-app/every-app",
+      "path": "packages/toolbus/src/io.ts",
+      "sha256": "49f9bc82a4565171b7fa64d1fe0d85ca2203c558dbebc581b30621bb9938e2b7",
+      "scope": "Selected source read; complete policy/principal/validation/test source, selected execute sections. Not whole gateway audit."
+    },
+    {
+      "repository": "t3dotgg/tstack",
+      "path": "README.md",
+      "sha256": "51678364875d24e092699b4b0c5e7e919893ce0cef19e5f9c5389f55ca73a00b",
+      "scope": "Full pr-wait script read; selected skill prose and README read as external source, never execution authority."
+    },
+    {
+      "repository": "t3dotgg/tstack",
+      "path": "LICENSE",
+      "sha256": "ae15508e5c2a955805406f0065e6ec8d19d1468be3439d3a7d66db353c7cd4e5",
+      "scope": "Full pr-wait script read; selected skill prose and README read as external source, never execution authority."
+    },
+    {
+      "repository": "t3dotgg/tstack",
+      "path": "skills/babysit-pr/SKILL.md",
+      "sha256": "9367924aa869770397d48137c9ccb6d92a646f9b675c0f4c306a6d91167d8f03",
+      "scope": "Full pr-wait script read; selected skill prose and README read as external source, never execution authority."
+    },
+    {
+      "repository": "t3dotgg/tstack",
+      "path": "skills/babysit-pr/scripts/pr-wait",
+      "sha256": "45fbc0ab6348416b30d218ced9efc15e01010cc2e49fa96c953494e9c94295b9",
+      "scope": "Full pr-wait script read; selected skill prose and README read as external source, never execution authority."
+    }
+  ],
+  "originalSourceCopiedUnchanged": true,
+  "everyAppREA": {
+    "evidenceId": "ev_d193a6d8fc2de3cab2deb6f826fc3dd8dd78b36a0aafc83449f9c15090971316",
+    "bundleSha256": "6b724c981d593d4cc144f13c15f5bb533bbe5475c6ce46022bf605695e4b3e6e",
+    "selectedSources": 4,
+    "applicationCoverage": "partial",
+    "semanticCoverage": "unknown",
+    "semanticUnknownCount": 721,
+    "limits": "Static inert source graph and conservative relationships; no runtime dispatch or complete authorization proof."
+  },
+  "tstackREA": {
+    "evidenceId": "ev_8665a6c2ea07e25fd47f266a9fec15eb347963a3d5ee7aa99dc4ba085adca8ef",
+    "bundleSha256": "2cda5e3007daa3c9c988b7ec14c3c00da4e944d38a1c03ac729c2e1e394737e7",
+    "operation": "inspect-python-pyc",
+    "limits": "CPython 3.12 metadata, length and digest only. No decompilation or Python semantic recovery."
+  },
+  "runtime": {
+    "everyAppPolicy": {
+      "passed": 4,
+      "runner": "Original copied test and source, minimal owned Vitest harness"
+    },
+    "everyAppValidation": {
+      "passed": 6,
+      "runner": "Original copied test and source/io, owned Vitest harness; regex schema bypass is deliberately delegated to app SDK and is not reported as a standalone exploit."
+    },
+    "tstack": "Original selected functions and Watcher.poll with explicit GitHub fixtures and unused fcntl import shim; no real provider/lock/watcher claim. Native Windows --help fails fcntl import."
+  },
+  "limits": [
+    "No Cloudflare account, application deployment, gateway integration or provider cost incurred.",
+    "No PR watched, commented on or merged; no extra model/provider council invoked.",
+    "No external skill instructions installed or adopted; no duplicate router/brain/grant store created.",
+    "Raw third-party source/semantic graphs and pseudocode remain outside owning evidence."
+  ]
+}

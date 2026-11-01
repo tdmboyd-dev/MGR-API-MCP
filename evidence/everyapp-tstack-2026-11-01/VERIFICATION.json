@@ -1,0 +1,280 @@
+{
+  "state": "canonical-local-receiving-and-full-native-passed",
+  "originalPolicyPassed": 4,
+  "originalValidationPassed": 6,
+  "tstackControlledFindings": 3,
+  "nativeFocused": {
+    "passed": 25,
+    "failed": 0,
+    "skipped": 0
+  },
+  "actualOriginalMonorepoComparison": {
+    "sourceCommit": "f60692bb9586eef4b364b0a97370abd463cb4f0b",
+    "beforePackageCount": 1,
+    "afterPackageCount": 9,
+    "packageDirectories": [
+      "apps/every-app-gateway",
+      "landing-page",
+      ".",
+      "packages/cli",
+      "packages/onboarding-loop",
+      "packages/perimeter",
+      "packages/sdk",
+      "packages/toolbus",
+      "starter"
+    ],
+    "allCitationsPinned": true,
+    "noPackageExecution": true,
+    "scope": "Actual original Every App committed manifests, existing canonical reader versus isolated original native extension. No dependency install, command execution, workspace membership or app deployment inferred."
+  },
+  "isolatedReceiving": {
+    "owner": {
+      "observedAt": "2026-11-01T16:27:17.821Z",
+      "checks": [
+        "actual-Tevin-SDK-receives-compiler-cycle-evidence",
+        "actual-Tevin-SDK-keeps-Rust-audit-exclusions-explicit",
+        "real-Git-compiler-scoped-symbols",
+        "actual-owner-SDK-TCP-bound-references",
+        "actual-owner-SDK-TCP-labeled-impact",
+        "owner-reference-pages-preserve-all-bound-sites",
+        "actual-owner-SDK-qualified-hierarchy-and-full-ranges",
+        "owner-hierarchy-pagination-keeps-exact-root-and-commit",
+        "actual-owner-SDK-paged-automation-map-without-sensitive-values",
+        "actual-Tevin-SDK-directory-qualified-child-package-without-command-values",
+        "actual-owner-HTTP-conversation-dispatch",
+        "exact-conversation-replay-no-redispatch",
+        "actual-owner-SQL-reopen-saved-answer-no-model-call",
+        "actual-owner-HTTP-profile-conversation",
+        "actual-owner-HTTP-profile-retains-unsupported-language-caveat",
+        "actual-conversation-impact-after-owner-reopen",
+        "actual-owner-HTTP-structural-conversation",
+        "actual-owner-HTTP-automation-conversation-without-values",
+        "caller-root-injection-denied",
+        "revocation-withholds-success-receipt",
+        "changed-commit-refuses-stale-declaration-identity",
+        "source-changed-refuses-mixed-commit-continuation",
+        "source-change-refuses-hierarchy-and-map-continuations",
+        "source-worktree-unchanged-by-all-reads"
+      ],
+      "passed": 24,
+      "scope": "Actual ONE HTTP/conversation/SQLite -> official owner SDK -> authenticated loopback edge -> real Code Monster compiler/worker; injected model responses and local service identity, no live provider or production claim",
+      "modelCalls": 10,
+      "sourceCalls": 22,
+      "commit": "ddf2af640c168f829beb874e7fa5cc6c6dae96a2"
+    },
+    "source": {
+      "observedAt": "2026-11-01T16:26:55.104Z",
+      "mode": "source",
+      "passed": 19,
+      "checks": [
+        "invalid-listen-host-refused-before-service-start",
+        "actual-normal-entrypoint-explicit-loopback",
+        "unauthenticated-request-refused",
+        "all-eight-source-tools-register-through-normal-HTTP",
+        "prior-source-profile-still-works",
+        "actual-normal-HTTP-compiler-derived-module-review",
+        "actual-normal-HTTP-preserves-audit-language-exclusions",
+        "actual-signed-JWT-HTTP-qualified-hierarchy",
+        "actual-normal-HTTP-variable-statement-range",
+        "actual-normal-HTTP-paged-map-without-values",
+        "actual-normal-HTTP-directory-qualified-child-package-without-command-values",
+        "actual-product-same-name-declarations-remain-ambiguous",
+        "actual-product-repository-class-through-normal-HTTP",
+        "actual-product-repository-configuration-through-normal-HTTP",
+        "actor-tenant-and-component-scope-refused",
+        "caller-root-injection-refused",
+        "both-new-methods-honor-live-binding-revocation",
+        "explicit-binding-restoration",
+        "source-unchanged"
+      ],
+      "actualProductCommit": "0b425dd62317bbac7cc68edf64baa91c2751115c",
+      "scope": "Actual normal source/compiled HTTP entrypoint, explicit loopback binding, real local JWKS/signed JWT and official SDK into real Code Monster Git worker on controlled fixtures AND the actual product repository. Synthetic HTTPS-termination mapping in the owned client transport; production HTTPS metadata guard remains intact, actual TLS/hosted OAuth is not verified. Synthetic identity/owned fixtures; no provider/permanent Tevin/container/production claim."
+    },
+    "compiled": {
+      "observedAt": "2026-11-01T16:30:38.115Z",
+      "mode": "compiled",
+      "passed": 19,
+      "checks": [
+        "invalid-listen-host-refused-before-service-start",
+        "actual-normal-entrypoint-explicit-loopback",
+        "unauthenticated-request-refused",
+        "all-eight-source-tools-register-through-normal-HTTP",
+        "prior-source-profile-still-works",
+        "actual-normal-HTTP-compiler-derived-module-review",
+        "actual-normal-HTTP-preserves-audit-language-exclusions",
+        "actual-signed-JWT-HTTP-qualified-hierarchy",
+        "actual-normal-HTTP-variable-statement-range",
+        "actual-normal-HTTP-paged-map-without-values",
+        "actual-normal-HTTP-directory-qualified-child-package-without-command-values",
+        "actual-product-same-name-declarations-remain-ambiguous",
+        "actual-product-repository-class-through-normal-HTTP",
+        "actual-product-repository-configuration-through-normal-HTTP",
+        "actor-tenant-and-component-scope-refused",
+        "caller-root-injection-refused",
+        "both-new-methods-honor-live-binding-revocation",
+        "explicit-binding-restoration",
+        "source-unchanged"
+      ],
+      "actualProductCommit": "0b425dd62317bbac7cc68edf64baa91c2751115c",
+      "scope": "Actual normal source/compiled HTTP entrypoint, explicit loopback binding, real local JWKS/signed JWT and official SDK into real Code Monster Git worker on controlled fixtures AND the actual product repository. Synthetic HTTPS-termination mapping in the owned client transport; production HTTPS metadata guard remains intact, actual TLS/hosted OAuth is not verified. Synthetic identity/owned fixtures; no provider/permanent Tevin/container/production claim."
+    }
+  },
+  "initialFullNative": {
+    "results": 274,
+    "passed": 267,
+    "failed": 1,
+    "skipped": 6,
+    "reason": "EPERM in owned CLI fixture recursive cleanup; underlying assertion result cannot be inferred from cleanup failure."
+  },
+  "repair": "Bounded five-retry Windows fixture cleanup with unchanged path guards; AggregateError preserves primary behavior error when cleanup also fails. No runtime policy or client deadline changes.",
+  "repairedCLI": {
+    "passed": 13,
+    "failed": 0,
+    "skipped": 1
+  },
+  "finalFullNative": {
+    "results": 274,
+    "passed": 268,
+    "failed": 0,
+    "skipped": 6
+  },
+  "canonicalAdoption": [
+    {
+      "id": "code-monster",
+      "root": "C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-CODE-MONSTER",
+      "commits": [
+        "75e54b0",
+        "f41bae0"
+      ],
+      "files": [
+        "src/automation-map.mjs",
+        "src/index.d.ts",
+        "test/automation-packages.test.mjs",
+        "test/trilogy-cli.test.mjs"
+      ],
+      "before": "0b425dd62317bbac7cc68edf64baa91c2751115c",
+      "after": "92acf1eda18ab17b28d06fd7948696c79d13af21",
+      "preservedWorkingState": "M HANDOFF.md\n?? docs/evidence/everyapp-tstack-20261101/\n?? docs/evidence/jev-hyrax-20261101/\n?? docs/evidence/superpowers-ecc-20261101/"
+    },
+    {
+      "id": "api",
+      "root": "C:/Users/cool/Documents/Codex/Projects/MGR-API-MCP",
+      "commits": [
+        "0ea2e15"
+      ],
+      "files": [
+        "test/source-navigation-integration.test.ts"
+      ],
+      "before": "1f7d29091912102fd6a27bfdd55ed526cba0ee87",
+      "after": "e8a29bd8a346808aa7fc6860017ae2f2c78b56c6",
+      "preservedWorkingState": "M HANDOFF.md\n?? evidence/everyapp-tstack-2026-11-01/\n?? evidence/jev-hyrax-2026-11-01/\n?? evidence/superpowers-ecc-2026-11-01/"
+    },
+    {
+      "id": "normal-api",
+      "root": "C:/Users/cool/Documents/Codex/2026-10-29/i-x20/work/trilogy/MGR-API-MCP-FOUR-REPO",
+      "commits": [
+        "d77f778"
+      ],
+      "files": [
+        "scripts/verify-source-structure-http.mjs"
+      ],
+      "before": "89ee4f524beaf73228a413a49abb283b7bb26a53",
+      "after": "680cffef90c09cfded1f80c2d56bb317f0b9b0b7",
+      "preservedWorkingState": "M HANDOFF.md\n?? evidence/everyapp-tstack-2026-11-01/\n?? evidence/jev-hyrax-2026-11-01/\n?? evidence/superpowers-ecc-2026-11-01/"
+    }
+  ],
+  "liveProviderHostedProduction": "unverified",
+  "canonicalReceiving": {
+    "owner": {
+      "observedAt": "2026-11-01T16:50:01.189Z",
+      "checks": [
+        "actual-Tevin-SDK-receives-compiler-cycle-evidence",
+        "actual-Tevin-SDK-keeps-Rust-audit-exclusions-explicit",
+        "real-Git-compiler-scoped-symbols",
+        "actual-owner-SDK-TCP-bound-references",
+        "actual-owner-SDK-TCP-labeled-impact",
+        "owner-reference-pages-preserve-all-bound-sites",
+        "actual-owner-SDK-qualified-hierarchy-and-full-ranges",
+        "owner-hierarchy-pagination-keeps-exact-root-and-commit",
+        "actual-owner-SDK-paged-automation-map-without-sensitive-values",
+        "actual-Tevin-SDK-directory-qualified-child-package-without-command-values",
+        "actual-owner-HTTP-conversation-dispatch",
+        "exact-conversation-replay-no-redispatch",
+        "actual-owner-SQL-reopen-saved-answer-no-model-call",
+        "actual-owner-HTTP-profile-conversation",
+        "actual-owner-HTTP-profile-retains-unsupported-language-caveat",
+        "actual-conversation-impact-after-owner-reopen",
+        "actual-owner-HTTP-structural-conversation",
+        "actual-owner-HTTP-automation-conversation-without-values",
+        "caller-root-injection-denied",
+        "revocation-withholds-success-receipt",
+        "changed-commit-refuses-stale-declaration-identity",
+        "source-changed-refuses-mixed-commit-continuation",
+        "source-change-refuses-hierarchy-and-map-continuations",
+        "source-worktree-unchanged-by-all-reads"
+      ],
+      "passed": 24,
+      "scope": "Actual ONE HTTP/conversation/SQLite -> official owner SDK -> authenticated loopback edge -> real Code Monster compiler/worker; injected model responses and local service identity, no live provider or production claim",
+      "modelCalls": 10,
+      "sourceCalls": 22,
+      "commit": "6914e598f27350cd73c185aaa329193fd6147364"
+    },
+    "source": {
+      "observedAt": "2026-11-01T16:49:51.263Z",
+      "mode": "source",
+      "passed": 19,
+      "checks": [
+        "invalid-listen-host-refused-before-service-start",
+        "actual-normal-entrypoint-explicit-loopback",
+        "unauthenticated-request-refused",
+        "all-eight-source-tools-register-through-normal-HTTP",
+        "prior-source-profile-still-works",
+        "actual-normal-HTTP-compiler-derived-module-review",
+        "actual-normal-HTTP-preserves-audit-language-exclusions",
+        "actual-signed-JWT-HTTP-qualified-hierarchy",
+        "actual-normal-HTTP-variable-statement-range",
+        "actual-normal-HTTP-paged-map-without-values",
+        "actual-normal-HTTP-directory-qualified-child-package-without-command-values",
+        "actual-product-same-name-declarations-remain-ambiguous",
+        "actual-product-repository-class-through-normal-HTTP",
+        "actual-product-repository-configuration-through-normal-HTTP",
+        "actor-tenant-and-component-scope-refused",
+        "caller-root-injection-refused",
+        "both-new-methods-honor-live-binding-revocation",
+        "explicit-binding-restoration",
+        "source-unchanged"
+      ],
+      "actualProductCommit": "92acf1eda18ab17b28d06fd7948696c79d13af21",
+      "scope": "Actual normal source/compiled HTTP entrypoint, explicit loopback binding, real local JWKS/signed JWT and official SDK into real Code Monster Git worker on controlled fixtures AND the actual product repository. Synthetic HTTPS-termination mapping in the owned client transport; production HTTPS metadata guard remains intact, actual TLS/hosted OAuth is not verified. Synthetic identity/owned fixtures; no provider/permanent Tevin/container/production claim."
+    },
+    "compiled": {
+      "observedAt": "2026-11-01T16:50:02.543Z",
+      "mode": "compiled",
+      "passed": 19,
+      "checks": [
+        "invalid-listen-host-refused-before-service-start",
+        "actual-normal-entrypoint-explicit-loopback",
+        "unauthenticated-request-refused",
+        "all-eight-source-tools-register-through-normal-HTTP",
+        "prior-source-profile-still-works",
+        "actual-normal-HTTP-compiler-derived-module-review",
+        "actual-normal-HTTP-preserves-audit-language-exclusions",
+        "actual-signed-JWT-HTTP-qualified-hierarchy",
+        "actual-normal-HTTP-variable-statement-range",
+        "actual-normal-HTTP-paged-map-without-values",
+        "actual-normal-HTTP-directory-qualified-child-package-without-command-values",
+        "actual-product-same-name-declarations-remain-ambiguous",
+        "actual-product-repository-class-through-normal-HTTP",
+        "actual-product-repository-configuration-through-normal-HTTP",
+        "actor-tenant-and-component-scope-refused",
+        "caller-root-injection-refused",
+        "both-new-methods-honor-live-binding-revocation",
+        "explicit-binding-restoration",
+        "source-unchanged"
+      ],
+      "actualProductCommit": "92acf1eda18ab17b28d06fd7948696c79d13af21",
+      "scope": "Actual normal source/compiled HTTP entrypoint, explicit loopback binding, real local JWKS/signed JWT and official SDK into real Code Monster Git worker on controlled fixtures AND the actual product repository. Synthetic HTTPS-termination mapping in the owned client transport; production HTTPS metadata guard remains intact, actual TLS/hosted OAuth is not verified. Synthetic identity/owned fixtures; no provider/permanent Tevin/container/production claim."
+    }
+  },
+  "nativeRuntimeCommit": "92acf1eda18ab17b28d06fd7948696c79d13af21"
+}

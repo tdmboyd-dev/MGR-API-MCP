@@ -1,3 +1,31 @@
+## Completed native child-package automation and selected research â€” November 1, 2026
+
+Canonical Code Monster automationMap now includes committed child app/package manifests and package-directory identities while withholding script bodies, values and dependency data. Existing limits, scoped Git reads, symlink exclusions and authority stay intact. The actual pinned Every App repository comparison improved one manifest to nine without executing package commands. Focused25/25; final full Code Monster268pass/0fail/6explicit Windows skips (274 results); actual canonical Tevin owner chain24/24; normal source and compiled HTTP19/19 each. The first full run failed owned temporary cleanup with Windows EPERM; bounded retries and preservation of primary errors repaired that test fixture, then focused CLI13pass/1skip and final full passed. Product deadlines and authorization were unchanged.
+
+Selected original Every App policy4/4 and validation6/6 passed. TStack original controlled watcher findings, Superpowers helper12/12, ECC hook17pass/1skip and supported REA/partial traces are recorded in their owning evidence. JEV first-party skill identity and distinct wrapper origins were separated; Hyrax was studied as a hosted public-doc reference. No duplicate gateway/brain/memory/grant engine, PR watcher/auto-merge, provider council or live inference was installed. The prior Auditor packet also passed four exact tree/commit reconstructions and ZIP extraction checks.
+
+The actual installed Backpack fixed procedure still requires owner review of its stale source fingerprint; private configuration/expiry/commands were not changed. Local model/JWT fixtures and synthetic HTTPS-to-loopback mapping do not prove live providers, hosted TLS/OAuth, permanent-owner or production acceptance. Whole candidates/products remain unassessed. See owning everyapp-tstack report, manifest and VERIFICATION.json plus separate superpowers-ecc and jev-hyrax reports.
+
+---
+
+## JEV / Hyrax primary identity and public behavior research completed
+
+TypeSafe documentation verifies typesafe-ai/skills as its first-party skill. A similarly named jev-ai wrapper uses a distinct origin/envelope and was not installed or given keys. Hyrax appears to be a hosted service, with public discovery/audit/triage/fix/context behavior; no open backend or authenticated runtime was accessed. Documented capabilities and MGR gaps are recorded in the owning jev-hyrax report. No live inference, provider calibration, hosted audit, upload or native parity is claimed.
+
+---
+
+## Superpowers / ECC selected original behavior research completed
+
+Original Superpowers helper assertions12/12 and ECC config-protection17pass/0fail/1explicit Windows skip executed. Controlled probes found absent-task/non-ancestor text completion and relative-path/malformed-input hook assumptions. Actual REA container inventory and ECC partial/ambiguous source trace are recorded. Existing MGR signed identity/output checks already reject the relevant receipt substitutions; no duplicate authority/hook installation added. See owning superpowers-ecc report and SOURCE-REA-MANIFEST.json. Whole frameworks, live providers and production remain unassessed.
+
+---
+
+## Every App / TStack research and native child-package mapping in qualification
+
+Selected original Every App policy4/4 and validation6/6 passed. TStack controlled original watcher findings3/3 reproduced; native Windows fcntl import is unsupported. Original native Code Monster automationMap child-package discovery is in isolated qualification, not yet canonical runtime acceptance. No duplicate gateway, watcher, merge authority or provider council installed. See the owning everyapp-tstack evidence report/manifest for read scope, real tests and remaining gates. The installed Backpack source-profile refresh remains pending owner review; private configuration was not changed.
+
+---
+
 ## Actual native REA function proof and installed-host boundary â€” November 1, 2026
 
 The separate official SDK/stdio REA session completed original-binary source-name search, exact PE-entry analyze_function and clean close. Entry 0x1403eb630 returned pseudocode, assembly, CFG, callers/callees/references and value-flow facets: four assembly rows, one basic block, two callees, three value-flow operations, no value-flow truncation for that entry. This is a CRT/PE entry observation, not proof that the Rust scan_path domain routine was recovered. Its name search returned zero rows with PDB load state unknown. Source/runtime findings remain independently grounded in original Rust and owned CLI tests. The 60-second initial SDK harness timeout and its corrected two-argument SDK call options remain documented; product deadlines/guards were unchanged.

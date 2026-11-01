@@ -1,0 +1,19 @@
+{
+  "sourceCommit": "f60692bb9586eef4b364b0a97370abd463cb4f0b",
+  "beforePackageCount": 1,
+  "afterPackageCount": 9,
+  "packageDirectories": [
+    "apps/every-app-gateway",
+    "landing-page",
+    ".",
+    "packages/cli",
+    "packages/onboarding-loop",
+    "packages/perimeter",
+    "packages/sdk",
+    "packages/toolbus",
+    "starter"
+  ],
+  "allCitationsPinned": true,
+  "noPackageExecution": true,
+  "scope": "Actual original Every App committed manifests, existing canonical reader versus isolated original native extension. No dependency install, command execution, workspace membership or app deployment inferred."
+}

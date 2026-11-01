@@ -1,0 +1,22 @@
+{
+  "nativeSourceChanged": false,
+  "checks": [
+    {
+      "name": "Existing native receipt accepts exact synthetic signed identity/output",
+      "passed": true
+    },
+    {
+      "name": "Existing native receipt rejects different task identity",
+      "reason": "identity-mismatch:taskId"
+    },
+    {
+      "name": "Existing native receipt rejects different pinned base",
+      "reason": "identity-mismatch:baseCommit"
+    },
+    {
+      "name": "Existing native receipt rejects changed output bytes",
+      "reason": "output-mismatch"
+    }
+  ],
+  "scope": "Existing original MGR receipt functions with owned ephemeral signer/output fixtures, not executed runner, isolation, live provider or whole-product acceptance. Base identity check is not a general Git ancestry oracle."
+}

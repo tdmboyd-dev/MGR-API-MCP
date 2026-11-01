@@ -1,0 +1,70 @@
+{
+  "sources": [
+    {
+      "repository": "obra/superpowers",
+      "commit": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+      "license": "MIT original source",
+      "sourceHashes": {
+        "LICENSE": "0da33ed814ee87e72db078f489c4447af72f13d9f25d9e17476f32efd77705fc",
+        "README.md": "79f29f50c735862d2e304ea547b4c9aa67d9db6909ff6fb7b5ea922d7bcbc3e7",
+        "skills/executing-plans/scripts/task-start": "5eb4db5457bfe9d201712fd7322896afd2f7f12b277b563900331b4e2ddfb114",
+        "skills/executing-plans/scripts/task-done": "91e1a68e50a2c9b31193e8ca7feeba9f21e81eee9aa409ba05e5d407ff926bd6",
+        "skills/subagent-driven-development/scripts/task-brief": "51bb3fb73b07f85fd19d8f29f178451f7557b8c3d084a85835c5bc6bc15869f3",
+        "skills/subagent-driven-development/scripts/sdd-workspace": "882dd51412f09717fadad6a84c5e60266a8d8a902f43b49bc07f8cc739222c79",
+        "skills/verification-before-completion/SKILL.md": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+        "tests/claude-code/test-executing-plans-scripts.sh": "4bb8ac69cd96add9d524c5d9d04726853f4e82810aefcb87fd8965d9a55cbc76"
+      },
+      "readScope": "Selected full helper/hook implementations; selected README/package and original test sections. Not a full skill/hook/harness audit."
+    },
+    {
+      "repository": "affaan-m/ECC",
+      "commit": "b38be6a7f6350964d59328b52f0624e1d1d552d1",
+      "license": "MIT original source",
+      "sourceHashes": {
+        "LICENSE": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2",
+        "package.json": "90c70a2182bc809be895226834fb90d4c9b65a17f6194ea74571cd959440698b",
+        "scripts/hooks/config-protection.js": "bc51422b6be2ebe442d3dd4b692a10013defcb27e17d364fab75b5b7a8a24e15",
+        "scripts/hooks/run-with-flags.js": "4d83adc3ea8234f865ed169209e61164b3190faaf9299de55ad0341fcd471b6a",
+        "tests/hooks/config-protection.test.js": "ee8940acd041d049371da9b08e07753816aa0273959cd8af15c362e667f9820a"
+      },
+      "readScope": "Selected full helper/hook implementations; selected README/package and original test sections. Not a full skill/hook/harness audit."
+    }
+  ],
+  "rea": {
+    "superpowers": "Actual installed MGR REA X-Ray six-file ZIP container inventory; no Bash semantic analyzer or execution inferred. See REA-SUPERPOWERS-ARTIFACT.json.",
+    "ecc": {
+      "applicationEvidence": "ev_ac255a5c7a8ce6292ef853c2c03e4a18b0008fe7d73474006930f1993caa9d34",
+      "bundleSha256": "fc9780ebbbaf49bab1f8f6d49cec5f232e834dbb6077af580612b46d1b7c9906",
+      "selectedSourceCount": 2,
+      "semanticUnknowns": 422,
+      "traceEvidence": "ev_1586f8aa258374a49ce748595fbfce8a597a306415d180ee46cd540055c4a5d3",
+      "traceStatus": "ambiguous",
+      "traceCoverage": {
+        "status": "partial"
+      },
+      "traceSummary": {
+        "total_seed_matches": 3,
+        "traversed_nodes": 3,
+        "traversed_relations": 0,
+        "traversed_functions": 3,
+        "traversed_modules": 2,
+        "relevant_unknowns": 3
+      },
+      "limits": "file_path forward trace has three seeds, zero traversed relations and three unknowns; it does not establish the executed relative-path result. Original subprocess probes supply that result."
+    }
+  },
+  "executed": {
+    "superpowersOriginalSelectedAssertionsPassed": 12,
+    "eccOriginalSelectedPassed": 17,
+    "eccSkipped": 1,
+    "superpowersControlledFindings": 2,
+    "eccControlledPathAndInputObservations": 3,
+    "existingMGRReceiptComparisonChecks": 4
+  },
+  "limits": [
+    "No Superpowers/ECC hook or skill installed into MGR/host.",
+    "No model delegation, live providers, PR comments or merges.",
+    "Original helper behavior is bookkeeping, not a security or release grant.",
+    "No whole-model, whole-framework or production acceptance."
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "repositories": [
+    {
+      "repository": "typesafe-ai/skills",
+      "commit": "302eea662c54bca6730873fe245bec1d69ebc23d",
+      "sourceHashes": {
+        "LICENSE": "0263f48022acba5ef61b8ae8248486b12841d2f3c6f7bdd9ecf321948ae0fb12",
+        "README.md": "f764e30aab0f0ec92b905dec4d04579a5f8ed2acd58c4a1df01717ae7567698f",
+        "skills/typesafe-ai/SKILL.md": "f514998712a1fa13663de7e3c2bd562144ad4bf74b32945aaf74f73b81392800"
+      },
+      "licenseScope": "MIT skill instructions, not model weights"
+    },
+    {
+      "repository": "jev-ai/jev-agent-skill",
+      "commit": "8702f435249b3b0bed22ec23ef78eb1e0d7c05f6",
+      "sourceHashes": {
+        "README.md": "36bc48a312b5ed022c526311052f873bde437ce2328352387597441b321a25d6",
+        "SKILL.md": "5d18b9e6e6761cc9280f04012a50e9bf916c1e3c358b0136fdddce956f8ecc23"
+      },
+      "licenseScope": "No license file in selected checkout; not vendored"
+    }
+  ],
+  "primaryJevIdentityVerifiedBy": "https://docs.typesafe.ai/introduction/quickstart",
+  "jevReadScope": "README, selected skill sections and official quickstart; no SDK/model/provider execution. Separate wrapper README/skill read to establish origin/envelope distinction.",
+  "hyraxScope": "Public introduction, how-it-works, workflows, MCP and changelog documentation, not authenticated runtime/backend source. Likely intended product, exact owner intent not assumed beyond name match.",
+  "sources": [
+    "https://docs.typesafe.ai/introduction/quickstart",
+    "https://github.com/typesafe-ai/skills",
+    "https://github.com/jev-ai/jev-agent-skill",
+    "https://docs.gethyrax.app/",
+    "https://docs.gethyrax.app/concepts/how-it-works",
+    "https://docs.gethyrax.app/concepts/workflows",
+    "https://docs.gethyrax.app/api/mcp",
+    "https://docs.gethyrax.app/changelog"
+  ],
+  "nativeInferenceImplemented": false,
+  "providerCalls": 0,
+  "spend": 0,
+  "rea": "Markdown/source inventory can identify selected artifacts; no supported source/model reconstruction of hosted internals is claimed. Current deep-native Ghidra runtime does not create access to a hosted backend."
+}
