@@ -1,0 +1,34 @@
+{
+  "contract": "mgr.selected-source-verification.v1",
+  "owner": "normal-api",
+  "sourceBeforeReceipt": "87281b2d15a581d031f50fdab82f43f10e332b9e",
+  "nativeRuntimeCommit": "ed7db4e131cbc200a446cdf08900ed2e25ee2fc5",
+  "nativeFullSuite": {
+    "results": 270,
+    "passed": 264,
+    "failed": 0,
+    "skipped": 6
+  },
+  "canonicalLocalReceiving": {
+    "owner": 23,
+    "normalSource": 18,
+    "normalCompiled": 18
+  },
+  "originalAuditTool": {
+    "rustTests": 2,
+    "workflowRecipes": 11,
+    "fixtures": 45,
+    "controlledProbes": 4
+  },
+  "nativeReaOverview": {
+    "evidenceId": "ev_f9663d6cc762d386d4ed0f5ad580bb867a00c5de6d09db550856f367be545491",
+    "procedures": 21465,
+    "strings": 3593,
+    "scope": "Defined inventory only; not recovered behavior or complete program discovery."
+  },
+  "limits": [
+    "No new full API/ONE whole-suite claim; qualifier typecheck and current local receiving executed.",
+    "No live provider/permanent service/hosted TLS/OAuth or production acceptance.",
+    "Native entry MCP investigation remains separate; raw native and upstream source excluded."
+  ]
+}

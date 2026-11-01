@@ -1,3 +1,17 @@
+## Completed native audit intake coverage and engagement research — November 1, 2026
+
+Original source-profile.auditCoverage now reports language-attributed source counts, parsed/error/excluded counts and bounded examples through existing Code Monster and Tevin profile reads. It opens no extra files and explicitly reports securityAuditPerformed=false. Rust/Anchor parsing and vulnerability review remain unimplemented; filenames and parsed JavaScript/TypeScript are not whole-repository audit acceptance. No additional brain, memory store, tool, permission or service was added.
+
+Native full suite: 270 results, 264 passed, 0 failed, 6 explicit Windows skips. Focused intake/module/stdio checks 12/12; source gates and demo passed. Canonical owner HTTP/SQLite/SDK/Git receiving passed 23/23 with injected model responses; normal source and compiled HTTP each passed 18/18 with owned local JWT/JWKS and official SDK. HTTPS is synthetically mapped to owned loopback HTTP. No live-model comprehension, permanent-owner activation, hosted TLS/OAuth, device or production acceptance is inferred. Existing host source-verification pins may need their ordinary reviewed refresh after source changes; no private host approval/configuration was changed here.
+
+Pinned original auditor Rust integration tests passed 2/2. Its GitHub Actions locator suite passed 11 recipes, 45 fixtures, 7 copy checks and 2,002 large-input workflows. Controlled original probes reproduced missing-root successful emptiness, silent malformed-Rust omission and stale false-positive suppression despite newer rulings/observations. The engagement lifecycle is mapped in the adjacent report; no complete 1,446-check corpus or professional security audit is claimed. MGR retains its existing pinned reads, explicit coverage and source-bound execution proofs.
+
+REA inspected original binary imports and completed a real Ghidra 12.1.4 native overview after portable, official-hash-verified Ghidra/JDK setup. The first 330-second attempt timed out and remains failed evidence; a fresh 660-second attempt recovered a defined inventory of 21,465 procedures and 3,593 strings in six segments. These inventory counts are not recovered domain semantics. PDB load state is unknown and decompiler warnings remain. The separate native MCP entry-function investigation remains ongoing until an executed supplemental receipt exists. Raw native graphs/third-party source and private provider diagnostics are excluded from owning public evidence.
+
+Owning evidence: REPORT.md, SOURCE-REA-MANIFEST.json and VERIFICATION.json under the auditor-engagement evidence directory. Current receiving/runtime source and exact incremental recovery are recorded in task outputs/AUDITOR-ENGAGEMENT-SOURCE-DELIVERY.json. Wider source-language engines, live-provider acceptance and the remaining research catalog stay open. Every App/TStack selected source testing is the next active research slice.
+
+---
+
 ## Completed RepoMind / ArchitectPlaybook native dependency review — November 1, 2026
 
 Built original compiler-derived moduleReview data into the existing Code Monster profile, which Tevin consumes through repository_read. It reports bounded structural dependency groups with pinned edge citations and explicit unresolved/omitted coverage. Type-only imports may be included; this is not runtime-cycle or defect proof. No extra tool, memory database, brain, grant engine or service was added.
