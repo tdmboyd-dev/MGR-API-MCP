@@ -24,7 +24,7 @@ Continuation: RepoMind and ArchitectPlaybook selected-source behavior testing is
 
 ---
 
-# Current compiled eight-tool composition with Backpack0.6.2 — November 1, 2026
+# Current compiled eight-tool composition with Backpack0.6.2 â€” November 1, 2026
 
 Rebuilt current normal HTTP source and executed26/26 real local TCP/JWKS/signed-JWT/SQLite/Git/compiler checks with Backpack0.6.2 and eight-tool Code Monster. The qualifier now checks nonempty source hierarchy/automation, withheld command bodies and current revocation of all four navigation/structure reads. Its fixture now commits a package declaration so automation success cannot be mistaken for an empty map. Existing principal/project scopes and all product authority stay unchanged. Raw final proof: evidence/no-restart-navigation-20261101/compiled-backpack-062-eight-tools.json. Initial stale compiled/catalog and empty-fixture harness failures remain in private owning Backpack evidence; they are not passing runs.
 
