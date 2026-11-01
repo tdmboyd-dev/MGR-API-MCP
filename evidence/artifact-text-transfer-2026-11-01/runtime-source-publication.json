@@ -1,0 +1,64 @@
+{
+  "repositories": [
+    {
+      "repository": "MGR-ONE",
+      "gitCommit": "5d94cfa5e40e5be27a0d72694b877dfd4d12343c"
+    },
+    {
+      "repository": "MGR-CREATE-Os",
+      "gitCommit": "e2b216ae596efbbb7beb8bf12931f0e7d853e064"
+    },
+    {
+      "repository": "MGR-API-MCP",
+      "gitCommit": "43736b9f5659a5969e35e09b48eeec5ac142b448"
+    },
+    {
+      "repository": "MGR-SIGN-ME",
+      "gitCommit": "02467b2640d0aeefde80096af3b1f477931252e9"
+    }
+  ],
+  "canonicalBlobs": [
+    {
+      "repository": "MGR-CREATE-Os",
+      "path": "src/objectives/stage-outputs.ts",
+      "gitBlob": "418eb565934ffecaf98f9b2d78a7995804197192"
+    },
+    {
+      "repository": "MGR-CREATE-Os",
+      "path": "src/factories/contracts.ts",
+      "gitBlob": "758fa493a68ef3e5728f0011632e4be7fb89988c"
+    },
+    {
+      "repository": "MGR-CREATE-Os",
+      "path": "src/factories/owner-workflow-factory.ts",
+      "gitBlob": "4bc1553ae1d838bcde17ba862e4f5ea51d9d0eb9"
+    },
+    {
+      "repository": "MGR-CREATE-Os",
+      "path": "src/api/durable-objectives.ts",
+      "gitBlob": "da2a1eee5b7d5de94b4ec5f70c03164f690cc0fd"
+    },
+    {
+      "repository": "MGR-CREATE-Os",
+      "path": "test/artifact-text.test.ts",
+      "gitBlob": "e7009c431e1d28af37c9f2fe9e3fa31025fd19ac"
+    },
+    {
+      "repository": "MGR-ONE",
+      "path": "web/owner-creation-projects.mjs",
+      "gitBlob": "f450f973e86d9ec203130d6c5b7f0d9c2d754b21"
+    },
+    {
+      "repository": "MGR-ONE",
+      "path": "web/creation-project-contract.mjs",
+      "gitBlob": "8e21b4f10398ccf965159dd3469b94a85efed0eb"
+    },
+    {
+      "repository": "MGR-ONE",
+      "path": "scripts/qualification/owner-signme-http.test.mjs",
+      "gitBlob": "cefd08768c1893f924c8275dd67098d0eaa93406"
+    }
+  ],
+  "nonForcePushFetchedAndMatched": true,
+  "mainPromoted": false
+}
