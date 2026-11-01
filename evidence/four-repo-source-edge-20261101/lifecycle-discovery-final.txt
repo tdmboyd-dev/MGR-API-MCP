@@ -1,0 +1,20 @@
+✔ no success until both owners confirm, listener settles first (7.0543ms)
+✔ no success until both owners confirm, handler settles first (3.3541ms)
+✔ injected never-settling handler still starts listener close and has a referenced deadline (1.0731ms)
+✔ injected listener synchronous throw cannot skip handler cleanup or hide its exact cause (0.6555ms)
+✔ injected handler synchronous throw cannot skip listener cleanup (0.3821ms)
+✔ both callback failure and async rejection remain private and never yield exit zero (0.6316ms)
+✔ undefined Promise rejection is failure, not a successful handler acknowledgment (0.2879ms)
+✔ deadline survives force-close throw and late failure cannot rewrite timed-out result (0.4404ms)
+✔ an injected failed timer reference still attempts both closes and fails conservatively (0.4989ms)
+✔ logging failure cannot bypass cleanup and raw causes never become log payloads (0.8625ms)
+✔ actual normal HTTP entrypoint gates shutdown and preserves discovered scopes (252.6438ms)
+✔ actual normal HTTP entrypoint gates shutdown and preserves explicit scopes (68.6218ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2129.9041

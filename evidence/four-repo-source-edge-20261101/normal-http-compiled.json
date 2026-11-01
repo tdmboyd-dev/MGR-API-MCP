@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-01T09:40:01.338Z",
+  "scope": "Actual normal HTTP/JWKS/JWT/SQLite plus real Git/compiler Code Monster and Backpack; synthetic identity, no deployment/provider/Tevin acceptance",
+  "passed": 21,
+  "checks": [
+    "unauthenticated-refused",
+    "real-protected-resource-metadata",
+    "normal-startup-nine-read-tools-no-legacy-transport",
+    "signed-jwt-actual-project-context",
+    "refused-actor",
+    "refused-tenant",
+    "refused-scope",
+    "binding-revocation-takes-effect-without-restart",
+    "explicit-binding-restored",
+    "expired-signed-token-refused",
+    "source-unchanged",
+    "normal-startup-four-code-monster-tools",
+    "authenticated-code-monster-self",
+    "real-git-compiler-source-profile",
+    "exact-source-symbol-citation",
+    "component-scope-does-not-cross-grant",
+    "code-monster-actor-and-tenant-refused",
+    "caller-root-and-identity-fields-refused",
+    "source-binding-revocation-is-independent",
+    "source-root-removal-refused-without-restart",
+    "explicit-source-restoration-and-unchanged-git"
+  ],
+  "codeMonsterVersion": "0.3.1",
+  "toolkitVersion": "0.6.1",
+  "normalEntrypoint": "compiled dist/src/http-server.js",
+  "legacyConfigured": false
+}

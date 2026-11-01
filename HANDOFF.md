@@ -1,3 +1,25 @@
+# Normal and compiled shared source edge verified — November 1, 2026
+
+Current API regression passed165/165, zero failure/skip, typecheck, artifact syntax and plugin validation with explicit pinned ONEfixtureea51bd2 and actual reviewed Code Monster source. The first163/164 failure was a missing new dependency in the normal-entrypoint shutdown test fixture, now repaired; that failed output is retained. The later164/164 run preceded automatic domain-scope discovery; final165/165 includes both default discovery and explicit-host-scope preservation. Lifecycle tests require both domains to stay open until MCP cleanup confirms, then close before successful exit.
+
+Normal source and compiled HTTP processes each passed21actual local TCP/JWKS/signed-JWT/SQLite/Git/compiler checks with Code Monster0.3.1 and Backpack0.6.1. This wires four existing source tools plus nine existing context reads to the normal service, with separate scopes/bindings and a global source analysis admission. Actual source/root revocation, caller identity/root rejection, exact declarations, restoration and unchanged Git passed. Original identity is reverified before/after; no new authorization brain or domain store exists.
+
+Optional combined container packaging is now coded: Dockerfile.code-monster adds Git and locked source toolkit to the Backpack service image when MGR_CODE_MONSTER_BUILD_ROOT is explicitly supplied to the local-only wrapper. The owned runtime qualifier enables/tests that source component when included in its build receipt. Both scripts syntax-check; no Docker build or container run is claimed while the owner defers restart. Keep correct Git ownership and explicit private mounts. See docs/CODE-MONSTER-DOMAIN.md and docs/BACKPACK-CONTAINER.md.
+
+Actual current Tevin, hosted TLS/OAuth/account/browser, provider, container/worker and production acceptance remain unverified. The historical pinned ONE contract fixture is not proof of the other agent's newer changing Tevin checkout. Original owning four-repo completion remains active; no default branch merge or release certification.
+
+---
+
+# Code Monster source connected to the normal shared edge — November 1, 2026
+
+The existing HTTP startup can compose Code Monster's four read-only tools with Backpack's nine context tools. It uses the original authenticated request, tools:read + code-monster:read, exact host-owned actor/tenant/project bindings and Code Monster's existing root resolver. Results are revalidated after reads; roots/identities are not accepted from the caller. One source analysis admission is shared across HTTP handlers. Cancellation, time/heap/response limits and fixed error withholding are preserved. No new authority, source executor, scheduler or canonical store was introduced.
+
+Actual normal HTTP/JWKS/signed-JWT/SQLite plus Git/compiler verification passed21 checks with Code Monster0.3.1 and Backpack0.6.1. It proved exact symbol output, wrong actor/tenant/scope/root refusal, independent component grants, source/root revocation, restoration and unchanged Git. This is local TCP with synthetic identity and emulated HTTPS proxy; not deployed TLS/OAuth, provider, current Tevin, Docker or production acceptance. Focused actual source-service/binding tests passed3/3; full API verification and compiled-entrypoint proof are next.
+
+Configuration and full how-to: docs/CODE-MONSTER-DOMAIN.md. The default Backpack-only container does not include Code Monster/Git; its variables alone cannot create that runtime. Combined container packaging/qualification remains a named requirement rather than a fake successful deployment. The owner deferred restart; keep Docker host acceptance parked and continue source work.
+
+---
+
 # Current local integration and repaired Docker launcher — November 1, 2026
 
 The current clean-source Trilogy integration passed14/14 at OmniDev7a7c5e1, Code Monster125b0c8 and OmniSight7c6b5bd. Actual Git/SQLite/HTTP, candidate/receipt binding, restart, permission revocation and fixture publication were exercised. Backpack0.6.0 persisted/reopened the linked evidence in7 MCP calls without mirroring canonical jobs or tasks. OmniDev full80/80 and OmniSight130/130 local suites passed. See current private/raw and public/sanitized receipts in their owning repositories; these are local scoped results, not production certification.

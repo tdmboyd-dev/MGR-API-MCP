@@ -1,0 +1,17 @@
+# syntax=docker/dockerfile:1
+ARG API_IMAGE=mgr-backpack-edge:reviewed-base
+FROM node:24-bookworm-slim AS source
+WORKDIR /toolkit
+COPY --from=code-monster-source package.json package-lock.json ./
+RUN npm ci --omit=dev --ignore-scripts
+COPY --from=code-monster-source src ./src
+COPY --from=code-monster-source docs ./docs
+COPY --from=code-monster-source README.md BACKPACK-CAPABILITY.json ./
+
+FROM ${API_IMAGE} AS runtime
+USER root
+RUN apt-get update && apt-get install --yes --no-install-recommends git ca-certificates && rm -rf /var/lib/apt/lists/*
+COPY --from=source /toolkit /opt/mgr-code-monster
+USER node
+# Activation still requires all three explicit Code Monster host variables.
+# Merely including the toolkit does not enroll or authorize a repository.

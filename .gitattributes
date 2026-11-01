@@ -5,3 +5,7 @@
 *.mjs text eol=lf
 
 evidence/owner-launch-completion-2026-10-30/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Preserve exact local source-edge execution output, including failed baselines.
+/evidence/four-repo-source-edge-20261101/** -text
+/evidence/four-repo-source-edge-20261101/*.txt -diff

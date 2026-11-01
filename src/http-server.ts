@@ -8,6 +8,7 @@ import { DepartmentGateway } from "./department-gateway.js";
 import { omniPolicy } from "./omnidev-client.js";
 import {createHttpShutdownController} from './http-shutdown.js';
 import {loadBackpackDomain} from './backpack-domain.js';
+import {loadCodeMonsterDomain} from './code-monster-domain.js';
 
 const port=Number(process.env.PORT ?? "8787");
 const baseUrl=requiredUrl("MCP_PUBLIC_BASE_URL");
@@ -38,6 +39,8 @@ const legacy=legacyBaseUrl?new LegacyEdgeClient({
   timeoutMs:Number(process.env.LEGACY_TIMEOUT_MS ?? "15000")
 }):undefined;
 const backpack=loadBackpackDomain();
+const codeMonster=loadCodeMonsterDomain();
+if(!process.env.MCP_ADVERTISED_SCOPES){if(backpack)advertisedScopes.push('backpack:read');if(codeMonster)advertisedScopes.push('code-monster:read');}
 if(process.env.MGR_DEPARTMENTS_ENABLED==="true"&&!legacy)throw Error('LEGACY_BASE_URL is required for enabled departments');
 const mcp=createAuthorizedMgrMcpHttpHandler({
   verifier,
@@ -45,7 +48,7 @@ const mcp=createAuthorizedMgrMcpHttpHandler({
   requiredScopes,
   resourceMetadataUrl,
   ...(legacy?{legacy}:{}),
-  ...(backpack?{registerReadOnlyDomainTools:backpack.register}:{}),
+  ...((backpack||codeMonster)?{registerReadOnlyDomainTools(server,context){backpack?.register(server,context);codeMonster?.register(server,context);}}:{}),
   ...(process.env.MGR_DEPARTMENTS_ENABLED==="true"?{departments:new DepartmentGateway({
     actorId:required("MGR_DEPARTMENT_ACTOR_ID"),tenantId:required("MGR_DEPARTMENT_TENANT_ID"),legacy:legacy!,
     creation:{baseUrl:requiredUrl("CREATION_BASE_URL"),token:required("CREATION_SERVICE_TOKEN")},
@@ -110,7 +113,7 @@ const server=createServer(async(req,res)=>{
   }
 });
 
-const shutdown=createHttpShutdownController({server,handler:{async close(){await mcp.close();backpack?.close();}},report:record=>console.log(JSON.stringify(record))});
+const shutdown=createHttpShutdownController({server,handler:{async close(){await mcp.close();backpack?.close();codeMonster?.close();}},report:record=>console.log(JSON.stringify(record))});
 
 server.listen(port,"0.0.0.0",()=>{
   console.log(JSON.stringify({event:"mgr_api_mcp_listening",port,resourceAudience}));

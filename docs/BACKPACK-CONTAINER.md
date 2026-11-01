@@ -91,3 +91,10 @@ existing worker fleet; it does not activate or certify those workers.
 ## Host update after renewed owner authorization
 
 The missing-registration repair subsequently executed with exit0 and verified InstallLocation readback. The owner clicked Skip; Docker now reaches Dashboard but reports Virtual Machine Platform not enabled and Engine stopped. The Windows feature check says Enabled while the WSL installation says changes take effect only after reboot; HypervisorPresent is false. Save current work, let the owner choose restart timing, then recheck the actual engine before using the build/qualification commands above. Earlier canceled-attempt descriptions are historical; no container acceptance is inferred from this repair.
+
+
+## Include the existing Code Monster source service
+
+The same local-only build wrapper now accepts MGR_CODE_MONSTER_BUILD_ROOT as an optional absolute reviewed clean Code Monster checkout. Set it alongside MGR_BACKPACK_BUILD_ROOT to add Dockerfile.code-monster after the Backpack image. That layer installs Git and the locked Code Monster runtime; it preserves the non-root API entrypoint. No source component is enabled by image inclusion alone. Runtime configuration still requires all three MGR_CODE_MONSTER_* host paths, exact bindings and a readable Git clone mounted read-only. Use a clone whose .git directory exists inside the mounted root; linked-worktree host paths need their own explicit container layout. Preserve Git ownership protections: provide correctly owned/readable source rather than disabling safe-directory checks.
+
+The build receipt records the additional commit/tree and Dockerfile hash. The runtime qualifier detects that component in the receipt, creates only an owned Git fixture, enables the actual source adapter, and checks compiler symbols, separate source scope, revocation and unchanged Git as well as Backpack persistence. The additional Dockerfile/build/qualifier branches are syntax checked only until the owner resumes actual Docker qualification. No successful image or combined-container result is claimed while the host engine is stopped.

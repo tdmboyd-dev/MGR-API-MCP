@@ -92,3 +92,6 @@ this check at another agent's changing work and then call it an accepted release
 
 
 For packaged service builds and the separately gated real runtime check, read [BACKPACK-CONTAINER.md](BACKPACK-CONTAINER.md). Container source exists; no actual image/container is qualified on the current host yet.
+
+
+Code Monster's existing source tools can be composed alongside these Backpack reads using a separate domain scope and host bindings. See [CODE-MONSTER-DOMAIN.md](CODE-MONSTER-DOMAIN.md). Current local normal-HTTP proof covers both components; hosted/account/currentTevin and combined-container qualification remain separate.
