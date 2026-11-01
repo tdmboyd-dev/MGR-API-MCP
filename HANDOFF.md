@@ -1,3 +1,13 @@
+# Six-tool source service composed and verified — November 1, 2026
+
+Code Monster's reconciled source-navigation work adds references and impact. The prior four-tool allowlist genuinely refused its declarations; that initial failure is retained privately. The normal shared adapter now accepts exactly six read-only tools and applies current project/actor/tenant/scope authorization, before/after revalidation, cancellation/resource withholding and global single-analysis admission to all four semantic reads. Caller-selected roots and identities remain forbidden.
+
+Current full verification passed165/165 with pinned historical ONEfixtureea51bd2 and actual immutable Code Monster source0232107; typecheck, hosted artifacts and plugin checks passed. Normal source and compiled HTTP entrypoints each passed24/24 local TCP/JWKS/signed-JWT/SQLite/Git/compiler checks with Backpack0.6.1. The compiled test includes actual nonempty bound references and potential impact, independent grants and immediate project revocation for the new methods. Raw proof is evidence/no-restart-navigation-20261101. No hosted TLS/OAuth, live provider, current permanent Tevin service or production acceptance is inferred.
+
+The optional combined-container verifier now expects all six source tools and tests navigation when that component is built. It is syntax checked only; actual Docker remains deferred with the owner-selected restart window. This normal HTTP adapter is distinct from the other AI's separately committed enrolled owner gateway/SDK consumer work. Its13-check local injected-model Tevin result is not silently promoted as this entrypoint's production acceptance.
+
+---
+
 # Normal and compiled shared source edge verified — November 1, 2026
 
 Current API regression passed165/165, zero failure/skip, typecheck, artifact syntax and plugin validation with explicit pinned ONEfixtureea51bd2 and actual reviewed Code Monster source. The first163/164 failure was a missing new dependency in the normal-entrypoint shutdown test fixture, now repaired; that failed output is retained. The later164/164 run preceded automatic domain-scope discovery; final165/165 includes both default discovery and explicit-host-scope preservation. Lifecycle tests require both domains to stay open until MCP cleanup confirms, then close before successful exit.

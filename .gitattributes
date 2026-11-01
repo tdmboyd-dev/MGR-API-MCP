@@ -9,3 +9,6 @@ evidence/owner-launch-completion-2026-10-30/** -text whitespace=blank-at-eol,bla
 # Preserve exact local source-edge execution output, including failed baselines.
 /evidence/four-repo-source-edge-20261101/** -text
 /evidence/four-repo-source-edge-20261101/*.txt -diff
+
+/evidence/no-restart-navigation-20261101/** -text
+/evidence/no-restart-navigation-20261101/*.txt -diff

@@ -1,0 +1,11 @@
+✔ source domain is absent until explicitly configured and refuses partial paths (5.1725ms)
+✔ shared host binding reader refuses duplicate, unexpected and hardlinked grants (32.7296ms)
+✔ actual source service enforces project scope, post-read revocation and global analysis ownership (43766.3415ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 44505.6566

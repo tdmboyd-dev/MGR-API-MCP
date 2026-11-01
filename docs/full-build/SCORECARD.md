@@ -1,3 +1,13 @@
+# Six-tool source service composed and verified — November 1, 2026
+
+Code Monster's reconciled source-navigation work adds references and impact. The prior four-tool allowlist genuinely refused its declarations; that initial failure is retained privately. The normal shared adapter now accepts exactly six read-only tools and applies current project/actor/tenant/scope authorization, before/after revalidation, cancellation/resource withholding and global single-analysis admission to all four semantic reads. Caller-selected roots and identities remain forbidden.
+
+Current full verification passed165/165 with pinned historical ONEfixtureea51bd2 and actual immutable Code Monster source0232107; typecheck, hosted artifacts and plugin checks passed. Normal source and compiled HTTP entrypoints each passed24/24 local TCP/JWKS/signed-JWT/SQLite/Git/compiler checks with Backpack0.6.1. The compiled test includes actual nonempty bound references and potential impact, independent grants and immediate project revocation for the new methods. Raw proof is evidence/no-restart-navigation-20261101. No hosted TLS/OAuth, live provider, current permanent Tevin service or production acceptance is inferred.
+
+The optional combined-container verifier now expects all six source tools and tests navigation when that component is built. It is syntax checked only; actual Docker remains deferred with the owner-selected restart window. This normal HTTP adapter is distinct from the other AI's separately committed enrolled owner gateway/SDK consumer work. Its13-check local injected-model Tevin result is not silently promoted as this entrypoint's production acceptance.
+
+---
+
 # Four-repo Backpack connection — November 1, 2026
 
 Isolated branch `integrate/four-repo-tools-20261101` adds Backpack to the existing normal authenticated HTTP entrypoint. Other agents' canonical API-MCP/ONE working trees were not edited. API-MCP remains the shared edge; ONE owns reasoning/permissions.
