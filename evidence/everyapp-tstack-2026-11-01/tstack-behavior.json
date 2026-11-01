@@ -1,0 +1,24 @@
+{
+  "commit": "1085050f3baed1ac724caa4a8166145fb2ac88af",
+  "checks": [
+    {
+      "name": "Original required-check discovery collapses two permission errors to an empty set",
+      "observed": true,
+      "errorsLogged": 2,
+      "requiredNamesReturned": 0
+    },
+    {
+      "name": "Ordinary human login containing a gating-bot name satisfies original selected readiness logic",
+      "observed": true,
+      "exitCode": 0,
+      "limits": "Watch notification only; upstream skill separately requires an independent merge gate. Native Windows CLI still fails fcntl import."
+    },
+    {
+      "name": "Unknown protection permissions can become green after two stable observed-check polls",
+      "observed": true,
+      "exitCode": 0,
+      "limits": "Controlled GitHub responses; no actual account or PR was read, watched, commented on or merged."
+    }
+  ],
+  "scope": "Selected original functions/Watcher.poll executed unchanged. fcntl import shim only, never used; state relocated to owned temporary directory and GitHub functions explicitly replaced with controlled responses. Not a full watcher/lock/provider test."
+}

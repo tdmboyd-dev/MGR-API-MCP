@@ -1,3 +1,31 @@
+## Completed native child-package automation and selected research â€” November 1, 2026
+
+Canonical Code Monster automationMap now includes committed child app/package manifests and package-directory identities while withholding script bodies, values and dependency data. Existing limits, scoped Git reads, symlink exclusions and authority stay intact. The actual pinned Every App repository comparison improved one manifest to nine without executing package commands. Focused25/25; final full Code Monster268pass/0fail/6explicit Windows skips (274 results); actual canonical Tevin owner chain24/24; normal source and compiled HTTP19/19 each. The first full run failed owned temporary cleanup with Windows EPERM; bounded retries and preservation of primary errors repaired that test fixture, then focused CLI13pass/1skip and final full passed. Product deadlines and authorization were unchanged.
+
+Selected original Every App policy4/4 and validation6/6 passed. TStack original controlled watcher findings, Superpowers helper12/12, ECC hook17pass/1skip and supported REA/partial traces are recorded in their owning evidence. JEV first-party skill identity and distinct wrapper origins were separated; Hyrax was studied as a hosted public-doc reference. No duplicate gateway/brain/memory/grant engine, PR watcher/auto-merge, provider council or live inference was installed. The prior Auditor packet also passed four exact tree/commit reconstructions and ZIP extraction checks.
+
+The actual installed Backpack fixed procedure still requires owner review of its stale source fingerprint; private configuration/expiry/commands were not changed. Local model/JWT fixtures and synthetic HTTPS-to-loopback mapping do not prove live providers, hosted TLS/OAuth, permanent-owner or production acceptance. Whole candidates/products remain unassessed. See owning everyapp-tstack report, manifest and VERIFICATION.json plus separate superpowers-ecc and jev-hyrax reports.
+
+---
+
+## JEV / Hyrax primary identity and public behavior research completed
+
+TypeSafe documentation verifies typesafe-ai/skills as its first-party skill. A similarly named jev-ai wrapper uses a distinct origin/envelope and was not installed or given keys. Hyrax appears to be a hosted service, with public discovery/audit/triage/fix/context behavior; no open backend or authenticated runtime was accessed. Documented capabilities and MGR gaps are recorded in the owning jev-hyrax report. No live inference, provider calibration, hosted audit, upload or native parity is claimed.
+
+---
+
+## Superpowers / ECC selected original behavior research completed
+
+Original Superpowers helper assertions12/12 and ECC config-protection17pass/0fail/1explicit Windows skip executed. Controlled probes found absent-task/non-ancestor text completion and relative-path/malformed-input hook assumptions. Actual REA container inventory and ECC partial/ambiguous source trace are recorded. Existing MGR signed identity/output checks already reject the relevant receipt substitutions; no duplicate authority/hook installation added. See owning superpowers-ecc report and SOURCE-REA-MANIFEST.json. Whole frameworks, live providers and production remain unassessed.
+
+---
+
+## Every App / TStack research and native child-package mapping in qualification
+
+Selected original Every App policy4/4 and validation6/6 passed. TStack controlled original watcher findings3/3 reproduced; native Windows fcntl import is unsupported. Original native Code Monster automationMap child-package discovery is in isolated qualification, not yet canonical runtime acceptance. No duplicate gateway, watcher, merge authority or provider council installed. See the owning everyapp-tstack evidence report/manifest for read scope, real tests and remaining gates. The installed Backpack source-profile refresh remains pending owner review; private configuration was not changed.
+
+---
+
 ## Objective integrity and permanent tool knowledge repaired — November1,2026
 
 Creation owning source46cccc9 is published/adopted: typecheck/full176pass (39new included), real Forge+document project/restart fixture1pass with unchanged two effects. Actual permanent knowledge read then exposed a removed Backpack0.4.0 cache dependency. ONE now reuses the existing live private host pointer;5host/12ONE/13API affected checks passed. Normal restart restored four source and eleven manual roots, actual latest Creation handbook/stale-pin denial/current Code Monster profile; account/host configuration and original workflow/effect rows unchanged, no new inference/creates. [Full evidence and unfinished adapter](evidence/objective-integrity-2026-11-01/CONNECTION-REPORT.md). Source execution approval remains separately stale; no profile/permission renewal. Whole-product/source/production scope Unassessed.
