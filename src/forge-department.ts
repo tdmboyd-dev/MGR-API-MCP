@@ -39,6 +39,11 @@ export class ForgeDepartmentAdapter{
   return this.inspect(c,false);
  }
  async status(raw:ForgeDepartmentCommand){return this.inspect(raw,false);}
+ async worldContext(workspaceId:string){
+  if(workspaceId!==this.#workspace||!this.#client.readWorldContext)throw Error('Forge world context not configured for workspace');
+  const value=z.object({schema:z.literal('mgr.forge.world-context.v1'),sourceVerified:z.literal(true),sideEffects:z.literal(false),edits:forgeWorldInput.shape.edits,materials:z.array(z.string().min(1).max(100)).max(32),grounds:z.object({width:z.number().finite().positive(),depth:z.number().finite().positive()}).strict(),limits:z.object({maximumEditedBuildings:z.number().int().positive().max(300),maximumHeight:z.number().finite().positive()}).strict()}).strict().parse(await this.#client.readWorldContext());
+  return {...value,schema:'mgr.forge.department-world-context.v1',workspaceId:this.#workspace,tenantId:this.#tenant,actorId:this.#actor};
+ }
  async prepare(raw:ForgeDepartmentCommand){
   const {command:c,request:r}=this.original(raw),native=await this.#client.verifyRequest!(r);
   const base={requestId:c.requestId,operation:c.operation,workspaceId:this.#workspace,tenantId:this.#tenant,actorId:this.#actor,commandSha256:forgeDepartmentDigest(c,this.#tenant,this.#actor),nativeKind:r.kind};

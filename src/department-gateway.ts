@@ -68,6 +68,7 @@ export class DepartmentGateway {
     const result=await this.request("creation",`/v1/creation/jobs/${encodeURIComponent(c.requestId)}/run`,{});
     return this.verifyCreation(c,result);
   }
+  async forgeWorldContext(workspaceId:string){if(!this.forge)throw Error('Native Forge context not configured');return this.forge.worldContext(workspaceId);}
   async prepare(command:DepartmentCommand){const c=departmentCommand.parse(command);if(!isForgeDepartmentCommand(c)||!this.forge)throw Error('Native Forge preparation not configured');return this.forge.prepare(c);}
   async execute(command:DepartmentCommand,preDispatch?:()=>void){
     const c=departmentCommand.parse(command),p=this.config;
@@ -160,6 +161,7 @@ function departmentPublicationFence(options:DepartmentToolOptions,write=false){
   return ()=>{if(!Number.isFinite(auth.expiresAt)||auth.expiresAt<=Date.now())throw new DepartmentAuthorityExpired('Department authorization expired');if(options.auth!==auth||options.gateway!==gateway||gateway.config!==config||auth.expiresAt!==expires||identity()!==original)throw Error('Department original authority changed');gateway.authorize(auth,options.resourceAudience,write);};
 }
 export function registerDepartmentTools(server:McpServer,options:DepartmentToolOptions){
+  server.registerTool('mgr_department_forge_context',{description:'Read the verified base world and native edit facts for this exact enrolled Forge workspace. No approval, creation or binary artifacts.',inputSchema:z.object({workspaceId:id}).strict()},async input=>{try{const current=departmentPublicationFence(options);current();const result=await options.gateway.forgeWorldContext(input.workspaceId);current();const text=JSON.stringify(result);current();return {content:[{type:'text',text}]};}catch{return {isError:true,content:[{type:'text',text:'{"error":"Forge world context unavailable","sideEffects":false}'}]};}});
   server.registerTool("mgr_department_context",{
     description:"Read the authenticated department gateway principal. No domain request or mutation; identity comes only from the verified session.",
     inputSchema:z.object({}).strict()

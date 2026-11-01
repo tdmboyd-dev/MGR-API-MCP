@@ -1,0 +1,11 @@
+{
+  "authenticatedBrowserDownloadVerified": false,
+  "publicHttpPageVerified": true,
+  "publicHttpPageState": "Runtime reachable; Owner session locked",
+  "privateFileLaunchAttempt": "Rejected by browser URL policy; allowed protocols http/https only",
+  "credentialTransferOrAlternateSurfaceBypass": false,
+  "ownerActionRequested": "Open Tevin normally in Chrome; no payment/new delegation",
+  "fixtureUiChecks": 54,
+  "fixtureUiPass": 54,
+  "actualOwnerSdkArtifactAndRestartVerifiedSeparately": true
+}

@@ -1,0 +1,144 @@
+{
+  "schema": "mgr.owned-forge-failed-fixtures.v1",
+  "rows": [
+    {
+      "fixture": "tevin-owned-forge-O4xJ3m",
+      "root": "C:\\Users\\cool\\AppData\\Local\\Temp\\tevin-owned-forge-O4xJ3m",
+      "originalWorkerPid": 32344,
+      "kernelJobActive": null,
+      "markerSha256": "76d6428d17430870b7ba3b4c205d36d6e962a247475229bf0f8962466e92a00b",
+      "savedNativeRecords": [
+        {
+          "path": "forge/workspace/biome-requests.json",
+          "bytes": 398,
+          "sha256": "cd86d78fcd9f3758b1998aa085fc4c5ea90bf6351206ce133548ad555a6a1ad2",
+          "states": {
+            "owner-worker-biome-001": "MATERIALIZED"
+          }
+        },
+        {
+          "path": "forge/workspace/creature-requests.json",
+          "bytes": 290,
+          "sha256": "f1741a8d52e6cf4719ec93bb201ebd3bb7586f3f1c83a5388c2931745bb30a45",
+          "states": {
+            "owner-department-forge-001": "MATERIALIZED"
+          }
+        },
+        {
+          "path": "forge/workspace/world-composition-requests.json",
+          "bytes": 482,
+          "sha256": "e2d426a7afe238f5a64ec4f3d9ecf4af71a21dad1d55e25ed5cda07fe2ae27f3",
+          "states": {
+            "owner-worker-compose-001": "MATERIALIZED"
+          }
+        },
+        {
+          "path": "forge/workspace/world-requests.json",
+          "bytes": 402,
+          "sha256": "035a1bae0484bf28ba170108604c6b231a37dd03385cd17696c33957568d1d2c",
+          "states": {
+            "owner-department-world-001": "MATERIALIZED"
+          }
+        }
+      ],
+      "cleanupAuthorizedOwnedFixture": true
+    },
+    {
+      "fixture": "tevin-owned-forge-vLFdQD",
+      "root": "C:\\Users\\cool\\AppData\\Local\\Temp\\tevin-owned-forge-vLFdQD",
+      "originalWorkerPid": 34584,
+      "kernelJobActive": null,
+      "markerSha256": "8a9dac7c3455f76ac3d3c519628420d4619b47b98c283a8c25e1d41003f0046f",
+      "savedNativeRecords": [
+        {
+          "path": "forge/workspace/biome-requests.json",
+          "bytes": 398,
+          "sha256": "319ee2a94673ebdb80a164980c34fef7aea31c5798d1b907efa4e063abd8a819",
+          "states": {
+            "owner-worker-biome-001": "MATERIALIZED"
+          }
+        },
+        {
+          "path": "forge/workspace/creature-requests.json",
+          "bytes": 290,
+          "sha256": "239d701de8ead619e0c1277a93085e34ffeb8cc1dae86016a1a97873f5764b97",
+          "states": {
+            "owner-department-forge-001": "MATERIALIZED"
+          }
+        },
+        {
+          "path": "forge/workspace/world-composition-requests.json",
+          "bytes": 482,
+          "sha256": "76e1fe6e0597bd9ba5f5fb5a2c3fde3bd4b6a55a35e3090aa1cc4979baf7923b",
+          "states": {
+            "owner-worker-compose-001": "MATERIALIZED"
+          }
+        },
+        {
+          "path": "forge/workspace/world-requests.json",
+          "bytes": 402,
+          "sha256": "bd36221fb498e22b081d68a470377c66da1dc8c575dc9a6a8e2a5ce33b23862f",
+          "states": {
+            "owner-department-world-001": "MATERIALIZED"
+          }
+        }
+      ],
+      "cleanupAuthorizedOwnedFixture": true
+    },
+    {
+      "fixture": "tevin-owned-forge-OCu6fm",
+      "root": "C:\\Users\\cool\\AppData\\Local\\Temp\\tevin-owned-forge-OCu6fm",
+      "originalWorkerPid": 9344,
+      "kernelJobActive": null,
+      "markerSha256": "4be50e1ee7a45de600ea20c53579724123521bf4abd8946ba8d6d6eb7cb20dbf",
+      "savedNativeRecords": [
+        {
+          "path": "forge/workspace/biome-requests.json",
+          "bytes": 398,
+          "sha256": "8ccb48f3b3186922a3f39f0f8c85b359900f5818ac265480dd43db5f523a8e1a",
+          "states": {
+            "owner-worker-biome-001": "MATERIALIZED"
+          }
+        },
+        {
+          "path": "forge/workspace/creature-requests.json",
+          "bytes": 290,
+          "sha256": "5a840bacbb492d3b5428dcdba65c91ff6b343434f928be47a5a40f591fca2e5e",
+          "states": {
+            "owner-department-forge-001": "MATERIALIZED"
+          }
+        },
+        {
+          "path": "forge/workspace/jobs/f72ff8b51c4b0a3a145676cc/compose-error.json",
+          "bytes": 2513,
+          "sha256": "aa2e7285605febfd280e59b35add830b7bf99fbf41663aec20cf364dde78386b",
+          "failureType": "TimeoutExpired"
+        },
+        {
+          "path": "forge/workspace/world-composition-requests.json",
+          "bytes": 432,
+          "sha256": "4e51402c9e503ace0c9fdd672db59a0e940d4cf756a3118763ffe3a760e5740b",
+          "states": {
+            "owner-worker-compose-001": "FAILED"
+          }
+        },
+        {
+          "path": "forge/workspace/world-requests.json",
+          "bytes": 402,
+          "sha256": "9072819711a281c7b9a738f4e91f2976953108ac7b9c5834073e073f274d887e",
+          "states": {
+            "owner-department-world-001": "MATERIALIZED"
+          }
+        }
+      ],
+      "cleanupAuthorizedOwnedFixture": true
+    }
+  ],
+  "notes": [
+    "Early test wait was shorter than native Blender bounds; cleanup failure masked primary failure.",
+    "Later longer-run composition reached native TimeoutExpired.",
+    "All-five successful run followed explicit DEVNULL Blender stdin; no product timeouts or assertions relaxed.",
+    "Source snapshots, native records and failures retained until independent original kernel job exit observation.",
+    "No previously policy-rejected startup folders are targeted."
+  ]
+}

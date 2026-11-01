@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "sourceStable": true,
+  "guardedInputs": 2267,
+  "runs": [
+    {
+      "log": "api-verify.txt",
+      "exitCode": 0,
+      "counts": {
+        "tests": 299,
+        "pass": 299,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "log": "one-affected.txt",
+      "exitCode": 0,
+      "counts": {
+        "tests": 124,
+        "pass": 124,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "log": "one-typecheck.txt",
+      "exitCode": 0,
+      "counts": {}
+    }
+  ],
+  "testFiles": 13,
+  "files": [
+    "web/owner-repository-connection.test.mjs",
+    "web/repository-manuals.test.mjs",
+    "web/conversation-runtime.test.mjs",
+    "web/codex-conversation-runtime.test.mjs",
+    "web/server.test.mjs",
+    "web/department-conversation.test.mjs",
+    "web/department-business-scope.test.mjs",
+    "web/department-conversation-ui.test.mjs",
+    "web/forge-workflows.test.mjs",
+    "web/registered-department-startup.test.mjs",
+    "scripts/reign-feature-handoff.test.mjs",
+    "web/owner-departments.test.mjs",
+    "web/owner-forge-worker.test.mjs"
+  ],
+  "sourceBaseONE": "51db80f9234640255c34516c15dd297b4ef04227",
+  "sourceBaseAPI": "e489c60ea2d49626c0e296203328d674e740a38d",
+  "elapsedSeconds": 265.33,
+  "scope": "Latest hierarchy/automation peer join + unchanged owned Forge lifecycle/world context/consumer source. Full1117 baseline is distinct; this is current affected qualification. UI test LF-only normalization and required header restoration included. No account/model request."
+}

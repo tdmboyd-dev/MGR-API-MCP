@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "scope": "Actual normal owner launcher and saved account -> real model/native world context -> exact proposal -> authorized owner approval -> shared SDK/native saved world -> bytes/hash -> original process service shutdown -> normal restart/replay with no duplicate native request",
+  "requestId": "owner-forge-world-cc62ed84-0f00-4cd5-9246-be68fb0c2a7e",
+  "workflowRequestId": "chat-08017a0b54ad92ffd7cb50991618f3287e3971812548ee249bfd1dfbf8800692",
+  "model": "gpt-6.1-sol",
+  "defaultModel": "gpt-6.1-sol",
+  "accountCatalogModels": [
+    "gpt-6.1-sol",
+    "gpt-6-astra",
+    "gpt-6.1-terra",
+    "gpt-6-sol",
+    "gpt-6-luna",
+    "gpt-5.6-sol",
+    "gpt-5.6-terra",
+    "gpt-5.6-luna"
+  ],
+  "realModelTurns": 3,
+  "toolReceipts": [
+    {
+      "name": "forge_world_context",
+      "receiptId": "96465d1c-fd32-4780-bbfe-3685224b6a76"
+    },
+    {
+      "name": "department_preview",
+      "receiptId": "d81336b7-d439-46e0-b47c-c297b817a7d8"
+    }
+  ],
+  "nativeJobId": "8e858bd5e2db37871458ca8c",
+  "artifactSha256": "2f905f7173262967850ce1cc4cb320f61dcac4362454c412c2dc8b36a5604bac",
+  "artifactBytes": 12012,
+  "savedAnswerSha256": "dc1107a5b470e7330f1e1b8d1712f671611a351eaf45453766d0a5d8d3e785b1",
+  "recoveryNewModelRequests": 0,
+  "recoveryNewExternalActions": 0,
+  "configurationByteIdentical": true,
+  "selectedAndDefaultPreserved": true,
+  "remainingLocalConversations": 86,
+  "privateTranscriptPublished": false,
+  "actualAccountChargeKnown": false,
+  "productionVerified": false
+}

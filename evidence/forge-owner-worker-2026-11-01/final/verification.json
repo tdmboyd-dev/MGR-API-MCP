@@ -1,0 +1,245 @@
+{
+  "passed": true,
+  "sourceStable": true,
+  "guardedInputs": 2267,
+  "changed": [],
+  "added": [],
+  "removed": [],
+  "runs": [
+    {
+      "log": "api-verify.txt",
+      "exitCode": 0,
+      "counts": {
+        "tests": 299,
+        "pass": 299,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "log": "phase-0.txt",
+      "exitCode": 0,
+      "counts": {
+        "tests": 829,
+        "pass": 829,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "log": "phase-1.txt",
+      "exitCode": 0,
+      "counts": {
+        "tests": 276,
+        "pass": 276,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "log": "phase-2.txt",
+      "exitCode": 0,
+      "counts": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "log": "phase-3.txt",
+      "exitCode": 0,
+      "counts": {
+        "tests": 7,
+        "pass": 7,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "log": "one-typecheck.txt",
+      "exitCode": 0,
+      "counts": {}
+    },
+    {
+      "log": "forge-full.txt",
+      "exitCode": 0,
+      "counts": {}
+    }
+  ],
+  "OneTestFiles": 111,
+  "sourceBaseONE": "ca11b6ffa41fdbff34d947b0386aa7aa2be163d7",
+  "elapsedSeconds": 498.46,
+  "modelCalls": 0,
+  "permanentForgeInstallationVerified": false,
+  "phases": [
+    {
+      "phase": "primary",
+      "exitCode": 0,
+      "testFiles": 101,
+      "concurrency": 2,
+      "counts": {
+        "tests": 823,
+        "pass": 823,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "files": [
+        "web/registered-research-host.test.mjs",
+        "web/research-history.test.mjs",
+        "web/research-history-http.test.mjs",
+        "web/research-maintenance.test.mjs",
+        "web/research-watch-history.test.mjs",
+        "web/research-watch-maintenance.test.mjs",
+        "web/parent-watch-maintenance-http.test.mjs",
+        "web/parent-research-maintenance-review.test.mjs",
+        "web/work-tool-services.test.mjs",
+        "web/model-launch-registration.test.mjs",
+        "web/connected-workflows.test.mjs",
+        "web/connected-workflows-model-only.test.mjs",
+        "web/execution-coordinator.test.mjs",
+        "web/ecosystem-workflows.test.mjs",
+        "web/ecosystem-workflows-review.test.mjs",
+        "scripts/reign-feature-handoff.test.mjs",
+        "web/governed-conversation-calculation.test.mjs",
+        "web/model-dispatch-host.test.mjs",
+        "web/codex-conversation-runtime.test.mjs",
+        "web/conversation-runtime.test.mjs",
+        "web/server.test.mjs",
+        "web/tevin-persona.test.mjs",
+        "web/brain-choices.test.mjs",
+        "web/business-workspace-replay.test.mjs",
+        "web/business-context-publication.test.mjs",
+        "web/business-memory-isolation.test.mjs",
+        "web/department-business-scope.test.mjs",
+        "web/memory-revision.test.mjs",
+        "web/memory-replay-policy.test.mjs",
+        "web/memory-read-fence.test.mjs",
+        "web/memory-midturn-quarantine.test.mjs",
+        "web/memory-transitive-invalidation.test.mjs",
+        "web/source-memory-lifecycle.test.mjs",
+        "web/codex-account-observer.test.mjs",
+        "web/model-bootstrap.test.mjs",
+        "web/model-bootstrap-startup.test.mjs",
+        "web/codex-stop-uncertainty.test.mjs",
+        "web/codex-strict-configuration.test.mjs",
+        "web/environment-startup-isolation.test.mjs",
+        "scripts/reign-codex-config-audit.test.mjs",
+        "scripts/qualification/owner-document-journey.test.mjs",
+        "web/ecosystem-workflow-admission.test.mjs",
+        "web/ecosystem-resume.test.mjs",
+        "web/registered-department-startup.test.mjs",
+        "web/department-conversation.test.mjs",
+        "web/department-delegation.test.mjs",
+        "scripts/qualification/normal-department-creation.test.mjs",
+        "scripts/qualification/normal-department-resume.test.mjs",
+        "web/ecosystem-result-limits.test.mjs",
+        "web/department-storage-http.test.mjs",
+        "web/routing-checkpoint.test.mjs",
+        "web/job-goal-recovery.test.mjs",
+        "web/department-retired-conversation.test.mjs",
+        "scripts/qualification/department-retention-native.test.mjs",
+        "web/owner-model-connection.test.mjs",
+        "web/owner-account-channel.test.mjs",
+        "scripts/reign-audit-package-status.test.mjs",
+        "web/database-admission-recovery.test.mjs",
+        "web/database-backup.test.mjs",
+        "web/restore-identity.test.mjs",
+        "web/department-cancellation-custody.test.mjs",
+        "scripts/reign-audit-proof-path.test.mjs",
+        "web/owner-repository-connection.test.mjs",
+        "web/memory-recall.test.mjs",
+        "web/department-conversation-ui.test.mjs",
+        "web/omnidev-workflows.test.mjs",
+        "web/chatgpt-access.test.mjs",
+        "web/a22-session-currentness.test.mjs",
+        "web/a22-protected-response-currentness.test.mjs",
+        "scripts/reign-codex-runtime.test.mjs",
+        "web/codex-model-adapter.test.mjs",
+        "web/routing-financial-custody.test.mjs",
+        "web/bounded-status-history.test.mjs",
+        "web/repository-manuals.test.mjs",
+        "web/workspace-storage.test.mjs",
+        "web/conversation-cancellation.test.mjs",
+        "web/model-runtime.test.mjs",
+        "web/local-model-runtime.test.mjs",
+        "web/model-evidence-boundaries.test.mjs",
+        "web/conversation-identities-beast.test.mjs",
+        "web/conversation-evidence-boundaries.test.mjs",
+        "web/database-schema-recovery.test.mjs",
+        "web/repository-scanner.test.mjs",
+        "web/scanner-process.test.mjs",
+        "web/private-maintenance-receipts.test.mjs",
+        "web/memory-register-boundary.test.mjs",
+        "web/repair-replay-integration.test.mjs",
+        "web/owner-memory-storage.test.mjs",
+        "web/scoped-history-cleanup.test.mjs",
+        "web/scanner-stop-custody.test.mjs",
+        "web/native-folder-journal.test.mjs",
+        "web/history-archive.test.mjs",
+        "web/native-recovery-discovery.test.mjs",
+        "web/forge-workflows.test.mjs",
+        "web/backward-memory-search.test.mjs",
+        "web/held-out-memory-evaluation.test.mjs",
+        "web/memory-direct-authority.test.mjs",
+        "web/memory-heldout-lifecycle.test.mjs",
+        "web/memory-intent.test.mjs",
+        "web/memory-stream-review.test.mjs",
+        "web/forge-runtime-snapshot.test.mjs"
+      ]
+    },
+    {
+      "phase": "timed-owner-paths",
+      "exitCode": 0,
+      "testFiles": 7,
+      "concurrency": 1,
+      "counts": {
+        "tests": 276,
+        "pass": 276,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "files": [
+        "web/backward-research.test.mjs",
+        "web/registered-engineering-startup.test.mjs",
+        "web/registered-model-startup.test.mjs",
+        "web/registered-research-startup.test.mjs",
+        "web/research-watch-abandonment.test.mjs",
+        "web/research-watch-discovery.test.mjs",
+        "web/research-watch-prefix-archive.test.mjs"
+      ]
+    },
+    {
+      "phase": "owned-native-browser-recovery",
+      "exitCode": 0,
+      "testFiles": 1,
+      "concurrency": 1,
+      "counts": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0
+      },
+      "files": [
+        "web/native-browser-job-recovery.test.mjs"
+      ]
+    },
+    {
+      "phase": "owned-forge-services",
+      "concurrency": 1,
+      "files": [
+        "web/owner-departments.test.mjs",
+        "web/owner-forge-worker.test.mjs"
+      ]
+    }
+  ],
+  "productionVerified": false
+}

@@ -1,0 +1,15 @@
+✔ an unavailable optional repository backend does not disable the existing real document service (1597.0286ms)
+✔ owned Creation-only TCP gateway persists actual Markdown across service restart and denies unavailable departments (2206.8933ms)
+✔ history discloses only matching saved calculation receipts and obeys invalidation and business scope (222.9795ms)
+✔ owned permanent-service factory uses actual Forge worker, SDK approval, native artifact and restart (29374.2251ms)
+✔ unavailable Forge worker does not advertise Forge or disable existing native Creation (1136.1017ms)
+✔ optional worker cleanup retries the retained resource after an unconfirmed close (1160.5597ms)
+✔ actual private native worker locks its workspace, creates a native artifact and closes its owned family (3388.1587ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 39403.3515

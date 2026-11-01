@@ -1,0 +1,26 @@
+✔ an unavailable optional repository backend does not disable the existing real document service (12500.228ms)
+✔ owned Creation-only TCP gateway persists actual Markdown across service restart and denies unavailable departments (26266.7963ms)
+✔ history discloses only matching saved calculation receipts and obeys invalidation and business scope (425.2401ms)
+Owned worker service fixture retained because cleanup is unconfirmed.
+✖ owned permanent-service factory uses actual Forge worker, SDK approval, native artifact and restart (89962.0497ms)
+✔ unavailable Forge worker does not advertise Forge or disable existing native Creation (6756.0233ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 4
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 161494.2467
+
+✖ failing tests:
+
+test at web\owner-departments.test.mjs:47:1
+✖ owned permanent-service factory uses actual Forge worker, SDK approval, native artifact and restart (89962.0497ms)
+  Error: owner-department-cleanup-unconfirmed
+      at file:///C:/Users/cool/Documents/Codex/Projects/MGR-ONE/web/owner-departments.mjs:30:280
+      at runNextTicks (node:internal/process/task_queues:65:5)
+      at process.processTimers (node:internal/timers:615:9)
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/Projects/MGR-ONE/web/owner-departments.test.mjs:57:15)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

@@ -1,0 +1,7 @@
+{
+  "file": "ONE/web/department-conversation-ui.test.mjs",
+  "change": "CRLF to LF only; test assertions and runtime production code unchanged",
+  "beforeSha256": "6d70776326a9b8127a884ebebd38183ad570ed0d64cbc1ca744bd489a672b7ed",
+  "afterSha256": "a985bdb3cbef0963b150987a7ccedb916aef6f673280e7e263058d8008baff27",
+  "normalizedBytesEqual": true
+}

@@ -1,0 +1,16 @@
+{
+  "file": "ONE/web/department-conversation-ui.test.mjs",
+  "change": "CRLF to LF only; test assertions and runtime production code unchanged",
+  "beforeSha256": "6d70776326a9b8127a884ebebd38183ad570ed0d64cbc1ca744bd489a672b7ed",
+  "afterSha256": "a985bdb3cbef0963b150987a7ccedb916aef6f673280e7e263058d8008baff27",
+  "normalizedBytesEqual": true,
+  "additionalFiles": [
+    {
+      "file": "ONE/web/forge-runtime-snapshot.test.mjs",
+      "beforeSha256": "317d737837ac970aea84292213888229dc47c2bb9c7c39ccaafe80540514c30e",
+      "afterSha256": "796cf470148ed06c724e69932d7f97d41f1760fa997ef53515eac13fb28ca9a5",
+      "normalizedBytesEqual": true,
+      "change": "Final CRLF to LF only; same test code, production inputs unchanged"
+    }
+  ]
+}

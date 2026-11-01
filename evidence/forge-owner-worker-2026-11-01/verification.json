@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "scope": "Final joined runtime qualification; browser authentication/download acceptance remains separate",
+  "ONE": {
+    "tests": 1117,
+    "pass": 1117,
+    "files": 111,
+    "noEmitTypecheckPassed": true,
+    "fullBaselineSource": "ca11b6ffa41fdbff34d947b0386aa7aa2be163d7"
+  },
+  "API": {
+    "tests": 299,
+    "pass": 299,
+    "skip": 0,
+    "typecheckHostedSyntaxPluginPassed": true
+  },
+  "FORGE": {
+    "run": 659,
+    "pass": 656,
+    "skip": 3,
+    "skipReason": "Optional SAM unavailable"
+  },
+  "guardedInputs": 2267,
+  "sourceStable": true,
+  "permanentOwnerFiveStepJourneyPassed": true,
+  "realModelTurns": 3,
+  "accountCatalogModels": 8,
+  "authenticatedBrowserDownloadVerified": false,
+  "productionVerified": false,
+  "originalParentClosures": 0,
+  "latestJoinedONE": {
+    "tests": 124,
+    "pass": 124,
+    "files": 13,
+    "baseSource": "51db80f9234640255c34516c15dd297b4ef04227",
+    "typecheckPassed": true
+  },
+  "latestJoinedAPI": {
+    "tests": 299,
+    "pass": 299,
+    "baseSource": "e489c60ea2d49626c0e296203328d674e740a38d"
+  },
+  "normalizationAndConcurrentHeaderRestorationVerified": true,
+  "currentPermanentOwnerReplayedAfterLatestSourceJoin": true,
+  "secretReviewUnresolved": 0,
+  "postQualificationWhitespaceOnlyTestFiles": 2,
+  "postFormattingSnapshotUiHandoffChecks": 18
+}

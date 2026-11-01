@@ -1,0 +1,44 @@
+✔ owner feature-first handoff is accepted with explicit current date and original evidence boundaries (3.1471ms)
+✔ existing canonical header and foundation routing stay compatible (1.8316ms)
+✔ new owner presentation still rejects stale impossible dates and unknown routing (0.5283ms)
+✔ owner presentation cannot promote product completion or remove preserved requirements (0.2809ms)
+✖ actual current root handoff and shared state pass the existing verifier (10.4833ms)
+✔ ordinary replies with no connected departments do not mount authority controls or issue failed reads (5.8518ms)
+✔ Creation-only authority hides VOICE and disables empty scope grants (3.6369ms)
+✔ inline review controls perform real route sequence and automatically expose verified Markdown (25.8234ms)
+✔ restored speech exposes audio controls without autoplay and late locked restoration discloses nothing (14.2874ms)
+✔ held saved-conversation response cannot disclose the previous workspace after an away-and-back context change (1.8444ms)
+✔ restored Omni succeeded refreshes applicability before auto-displaying actual JSON report (14.2439ms)
+✔ restored Omni failed refreshes applicability before auto-displaying actual JSON report (15.1114ms)
+✔ Forge authority choices are opt-in and use the actual enrolled workspace separately from Creation (24.3823ms)
+✔ Forge browser artifact valid is verified as binary and uses GLB download instead of text decoding (15.0057ms)
+✔ Forge browser artifact hash is verified as binary and uses GLB download instead of text decoding (15.3314ms)
+✔ Forge browser artifact mime is verified as binary and uses GLB download instead of text decoding (14.7232ms)
+✔ Forge browser artifact header is verified as binary and uses GLB download instead of text decoding (15.5172ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 16
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 308.4394
+
+✖ failing tests:
+
+test at scripts\reign-feature-handoff.test.mjs:9:1
+✖ actual current root handoff and shared state pass the existing verifier (10.4833ms)
+  AssertionError [ERR_ASSERTION]: {"valid":false,"activeArea":"owner_delivery_and_connected_service_integration","canonicalRouter":"docs/reign-plan/ONE-WORK-ORDER.md","archivedHistoryPreserved":true,"issues":["stale-handoff-header"]}
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/Projects/MGR-ONE/scripts/reign-feature-handoff.test.mjs:9:137)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

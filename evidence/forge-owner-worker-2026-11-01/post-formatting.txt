@@ -1,0 +1,26 @@
+✔ owner feature-first handoff is accepted with explicit current date and original evidence boundaries (4.225ms)
+✔ existing canonical header and foundation routing stay compatible (0.9816ms)
+✔ new owner presentation still rejects stale impossible dates and unknown routing (0.8738ms)
+✔ owner presentation cannot promote product completion or remove preserved requirements (0.3793ms)
+✔ actual current root handoff and shared state pass the existing verifier (23.3997ms)
+✔ ordinary replies with no connected departments do not mount authority controls or issue failed reads (8.4359ms)
+✔ Creation-only authority hides VOICE and disables empty scope grants (4.8423ms)
+✔ inline review controls perform real route sequence and automatically expose verified Markdown (46.3527ms)
+✔ restored speech exposes audio controls without autoplay and late locked restoration discloses nothing (17.0499ms)
+✔ held saved-conversation response cannot disclose the previous workspace after an away-and-back context change (2.8481ms)
+✔ restored Omni succeeded refreshes applicability before auto-displaying actual JSON report (14.026ms)
+✔ restored Omni failed refreshes applicability before auto-displaying actual JSON report (18.1799ms)
+✔ Forge authority choices are opt-in and use the actual enrolled workspace separately from Creation (39.2165ms)
+✔ Forge browser artifact valid is verified as binary and uses GLB download instead of text decoding (17.9687ms)
+✔ Forge browser artifact hash is verified as binary and uses GLB download instead of text decoding (15.1494ms)
+✔ Forge browser artifact mime is verified as binary and uses GLB download instead of text decoding (15.4977ms)
+✔ Forge browser artifact header is verified as binary and uses GLB download instead of text decoding (23.0209ms)
+✔ native runtime snapshot pins indexed source, excludes untracked private files and refuses saved tampering (1143.523ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1458.9894

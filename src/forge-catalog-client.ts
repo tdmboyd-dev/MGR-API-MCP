@@ -56,6 +56,7 @@ export interface ForgeHumanLipSyncInput{
  };
 }
 export interface ForgeCatalogClient {
+  readWorldContext?():Promise<Record<string,unknown>>;
   verifyRequest?(input:ForgeRequestVerification):Promise<Record<string,unknown>>;
   search(input:ForgeCatalogSearch):Promise<Record<string,unknown>>;
   createWorld?(input:{requestId:string;edits:ForgeWorldEdits}):Promise<Record<string,unknown>>;
@@ -99,6 +100,7 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
     this.transport=options.transport ?? fetch;
   }
 
+  async readWorldContext():Promise<Record<string,unknown>>{return this.post('/api/world-context',{});}
   async verifyRequest(raw:ForgeRequestVerification):Promise<Record<string,unknown>>{
     const value=forgeVerifyInput.parse(raw);
     let request:Record<string,unknown>;

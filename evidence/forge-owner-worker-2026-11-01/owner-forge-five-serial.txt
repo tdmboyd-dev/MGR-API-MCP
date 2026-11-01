@@ -1,0 +1,20 @@
+Owned worker service fixture retained because cleanup is unconfirmed.
+✖ owned permanent-service factory uses actual Forge worker, SDK approval, native artifact and restart (82022.8109ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 132332.6642
+
+✖ failing tests:
+
+test at web\owner-departments.test.mjs:47:1
+✖ owned permanent-service factory uses actual Forge worker, SDK approval, native artifact and restart (82022.8109ms)
+  Error: owner-department-cleanup-unconfirmed
+      at file:///C:/Users/cool/Documents/Codex/Projects/MGR-ONE/web/owner-departments.mjs:30:280
+      at async TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/Projects/MGR-ONE/web/owner-departments.test.mjs:57:15)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)

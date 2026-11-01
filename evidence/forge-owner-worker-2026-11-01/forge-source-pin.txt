@@ -1,0 +1,9 @@
+✔ native runtime snapshot pins indexed source, excludes untracked private files and refuses saved tampering (2454.501ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2951.8466

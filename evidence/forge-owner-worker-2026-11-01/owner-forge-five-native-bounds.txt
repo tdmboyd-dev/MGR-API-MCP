@@ -1,0 +1,31 @@
+✖ owned permanent-service factory uses actual Forge worker, SDK approval, native artifact and restart (122642.4913ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 123359.9757
+
+✖ failing tests:
+
+test at web\owner-departments.test.mjs:47:1
+✖ owned permanent-service factory uses actual Forge worker, SDK approval, native artifact and restart (122642.4913ms)
+  AssertionError [ERR_ASSERTION]: forge.world.compose must finish within native job bound
+  + actual - expected
+  
+  + 'failed'
+  - 'succeeded'
+  
+      at TestContext.<anonymous> (file:///C:/Users/cool/Documents/Codex/Projects/MGR-ONE/web/owner-departments.test.mjs:55:342)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'failed',
+    expected: 'succeeded',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
