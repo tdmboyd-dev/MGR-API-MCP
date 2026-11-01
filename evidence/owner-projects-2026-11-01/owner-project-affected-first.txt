@@ -1,0 +1,50 @@
+{"actualOwnerHTTP":true,"nativeDocuments":2,"originalEffects":2,"projectAndArtifactReopen":true,"retirementBlockedForActiveCompletedAndDisabled":true,"modelCalls":0}
+✔ actual owner API -> project prepare/approval/native files -> retained child -> all-host restart (12235.2707ms)
+✔ project APIs reject a changed plan, selected business and unknown extra inputs (3343.637ms)
+{"injectedModelRounds":5,"actualProjectPlanAndStatus":true,"nativeApprovals":0,"nativeDispatches":0,"liveModel":false}
+✔ conversation proposal and checkpoint reads use actual project persistence without approving or executing native actions (4156.8902ms)
+✔ retirement approval/apply recheck later project custody and preserve the original result (4025.1833ms)
+✔ persisted retention requirement blocks a later unguarded workflow instance (3847.2728ms)
+✔ server rejects a forged project host and request fences reject an away-and-back business switch (2637.8325ms)
+✔ Codex Forge context is opt-in, host-receipted and refuses caller-selected workspaces before any read (993.0617ms)
+✔ configured repository reads use host receipts and remain absent when context reads are disabled (615.1178ms)
+✔ repository read with caller root or command fails the complete tool batch before any call (275.0508ms)
+✔ Codex uses the same exact-decimal host calculation without granting private memory reads (341.069ms)
+✔ Codex refuses a false host calculation and validates all arguments before any execution (597.8073ms)
+✔ fake CLI protocol preserves split UTF8, usage and startup warning; all temporary turn directories removed (1312.9926ms)
+✔ fake CLI unknown events and invalid ordering cannot be reported as a tool-free confirmed turn (2904.8373ms)
+✔ fake CLI malformed/error/native-tool/encoding/size/usage output is denied and cleaned up (4304.3529ms)
+✔ fake CLI malformed final JSON is a fixed safe error without model content (443.1461ms)
+✔ fake CLI cancellation kills owned process and removes turn data before rejection completes (299.7282ms)
+✔ failure to launch the configured process removes its prepared turn schema (281.3284ms)
+✔ fixture credentials and policy-directory overrides are absent from the native child allowlist (391.2224ms)
+✔ host validates the complete requested batch before any local tool executes (243.0708ms)
+✔ host malformed tool JSON denies the whole batch without exposing model content (237.0847ms)
+✔ host uses receipts as evidence and preserves exact accumulated usage; private context/tool training is conditional (555.5063ms)
+✔ host rejects malformed tool receipts and unconfirmed/invalid usage without another model call (1897.8642ms)
+✔ host busy ownership survives pending runner and is released after cancellation failure (356.0896ms)
+✔ provider-neutral Forge context is only exposed for configured Forge and validates the whole empty-input batch (1170.5963ms)
+✔ language defaults, exact-owner controls, revision conflict, replay and undo survive restart (306.575ms)
+✔ conversation executes real host read callback then sends result, preserving profanity and usage (399.0706ms)
+✔ disabled calls and unapproved context never execute; unknown tools and extra arguments are rejected (1266.8047ms)
+✔ duplicate tool IDs, tool batches and provider loops cannot repeat or exceed bound (1289.2659ms)
+✔ oversized, incomplete, usage-less, provider failure and concurrent requests fail without retry (2405.3484ms)
+✔ history preserves profanity, caps context and deduplicates completed turns (21.5512ms)
+✔ actual HTTP conversation uses durable profile and history; denied access, replay, uncertainty and backup recovery (1094.5339ms)
+✔ normal registered owner HTTP previews approves retires recovers capacity and reopens without redispatch (1128.2156ms)
+✔ all account GPT models are exposed; selected model persists through restart without resetting budget (1275.9206ms)
+✔ catalog checks, selection conflicts and unauthenticated changes deny without model requests (498.8557ms)
+✔ current included usage denial blocks before reservation and transport (477.1462ms)
+✔ one-use launch tickets authenticate once and expire without exposing the durable credential (483ms)
+✔ public instance challenges prove the local service without revealing owner configuration (439.9013ms)
+✔ the finite local allowance persists across models and restart (971.9148ms)
+✔ model selection cannot race a conversation waiting for account preflight (887.3814ms)
+✔ standard nullable account permission remains unknown and every visible GPT catalog entry survives projection (4.7713ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33034.6611

@@ -1,0 +1,22 @@
+# Owner Creation projects: original authority, retained native results
+
+November 1, 2026. Creation source fd322d7910044d08b5b70c6d0c8169ebc79c4c35 is published, exactly fetched and adopted by canonical Projects/MGR-CREATE-Os. ONE adds its authenticated personal-owner project host, strict /api/ecosystem/projects/{prepare,open,resume,status,list,cancel} APIs, model plan/status tool, and persistent parent-retention binding. Existing native operation approvals, executions and custody stay in their original workflows. No new grant engine, brain, native job ledger, vault or provider dependency.
+
+Actual host integration is branded to the original store/coordinator/workflows. Per-request asynchronous context captures the business revision and denies an away/back business switch. Native calls and publication recheck current context. Model tools can prepare metadata and inspect saved progress; they cannot approve, resume, cancel or execute native operations. New plans remain QUEUED until the original owner controls advance them. Existing account-available GPT selection and Sol default remain unchanged.
+
+The read-only Creation guard protects referenced active AND completed results across this owner's project workspaces. Original storage preview/approval/apply and replay recheck custody. A requirement persisted in ONE's original requests table prevents an unbound later workflow instance from retiring results. Endpoint disablement still loads custody protection; unavailable/damaged/replaced state denies rather than freeing references.
+
+## Executed evidence
+
+- Creation TypeScript and complete228/228; eight new domain metadata/retention tests included.
+- Initial actual HTTP six-case qualifier plus affected model/storage/account regressions40/40, including five injected model rounds. Account tests confirm all returned GPT entries and persistent choice; this is not a new live account/model trial.
+- Final explicit source owner HTTP7/7: original two-document approvals/files/restarts; invalid plan/principal/business/input denials; actual conversation metadata/status with injected model transport; retirement reference races; later unguarded instance; forged binding and business revision; original mixed Forge creature GLB + Creation Markdown project, two existing native effects, all-host cold reopen and zero redispatch.
+- Existing owner/conversation/UI/handoff regressions36/36, including actual native worker and all five original Forge operations.
+
+Scopes overlap; do not sum them as independent acceptance coverage. Logs are retained alongside this report. Qualification used an isolated explicit Creation root with the same published source. Native bytes/SQLite/SDK/HTTP/Blender are real; model responses in the project qualifier are injected. No live inference, account charge, browser result, production or full studio acceptance is inferred.
+
+## Remaining work and durable continuation
+
+Permanent normal-launcher activation and actual retained owner data require a separately recorded backup/restart/trial. New project UI remains deferred. Explicit completed-project release/archive lifecycle, bounded project growth, other four Forge paths through this NEW project adapter, dynamic output references, full source/capability comparisons, external quality/total-cost baselines and production/provider/device acceptance remain unfinished. Full ecosystem completion is Unassessed. Original283IDs/package counts/selected-ten and Forge requirements stay unchanged.
+
+The coordinated audit/reuse register remains coordination/ECOSYSTEM-REUSE-AND-MERGE-PLAN.md; this is receiving evidence, not another backlog. Every recommendation must compare existing owned code and replaceable outside alternatives, owner tasks, quality/recovery, full operating/maintenance costs, exact provider-consumer contracts and tested migration/rollback. No monetary savings claim is supported yet. Reuse this runtime and authority instead of duplicating infrastructure.

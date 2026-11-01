@@ -1,0 +1,44 @@
+✔ owner feature-first handoff is accepted with explicit current date and original evidence boundaries (5.7611ms)
+✔ existing canonical header and foundation routing stay compatible (1.0605ms)
+✔ new owner presentation still rejects stale impossible dates and unknown routing (0.8483ms)
+✔ owner presentation cannot promote product completion or remove preserved requirements (0.3442ms)
+✔ actual current root handoff and shared state pass the existing verifier (15.7325ms)
+✔ concurrent delivery notes preserve the first canonical main heading and all original date checks (1.3142ms)
+✔ code fences cannot supply or supersede the actual main handoff heading (0.6417ms)
+✔ ordinary replies with no connected departments do not mount authority controls or issue failed reads (9.3956ms)
+✔ Creation-only authority hides VOICE and disables empty scope grants (4.5015ms)
+✔ inline review controls perform real route sequence and automatically expose verified Markdown (36.4946ms)
+✔ restored speech exposes audio controls without autoplay and late locked restoration discloses nothing (13.921ms)
+✔ held saved-conversation response cannot disclose the previous workspace after an away-and-back context change (2.6247ms)
+✔ restored Omni succeeded refreshes applicability before auto-displaying actual JSON report (12.5755ms)
+✔ restored Omni failed refreshes applicability before auto-displaying actual JSON report (15.042ms)
+✔ Forge authority choices are opt-in and use the actual enrolled workspace separately from Creation (32.6018ms)
+✔ Forge browser artifact valid is verified as binary and uses GLB download instead of text decoding (14.2427ms)
+✔ Forge browser artifact hash is verified as binary and uses GLB download instead of text decoding (14.5264ms)
+✔ Forge browser artifact mime is verified as binary and uses GLB download instead of text decoding (14.9284ms)
+✔ Forge browser artifact header is verified as binary and uses GLB download instead of text decoding (15.9258ms)
+✔ main conversation prepares an exact source-bound proposal; only owner preview/approval permits dispatch (976.7963ms)
+✔ model cannot approve or execute, and unconfigured departments expose no preview tool (942.2842ms)
+✔ revoked memory invalidates stored conversation proposals before owner review (732.1842ms)
+✔ provider failure after planning leaves no orphan workflow or retained draft in receipts (518.4566ms)
+✔ streamed main conversation carries the actual host proposal link to the owner client (506.1148ms)
+✔ inline action rechecks source after awaited execution while preserving the actual accepted outcome (1027.9208ms)
+✔ delegated HTTP succeeded truth replaces stale model text in response, history, replay and recent view (694.7801ms)
+✔ delegated HTTP pending truth replaces stale model text in response, history, replay and recent view (749.1456ms)
+✔ delegated HTTP unknown truth replaces stale model text in response, history, replay and recent view (727.1426ms)
+✔ delegated summary publication holds the current-source writer fence through actual HTTP send (1059.4646ms)
+✔ recent history publication retains its source writer fence through the actual GET response (750.0559ms)
+✔ an unavailable optional repository backend does not disable the existing real document service (3154.5573ms)
+✔ owned Creation-only TCP gateway persists actual Markdown across service restart and denies unavailable departments (4955.9822ms)
+✔ history discloses only matching saved calculation receipts and obeys invalidation and business scope (338.3879ms)
+✔ owned permanent-service factory uses actual Forge worker, SDK approval, native artifact and restart (69065.6186ms)
+✔ unavailable Forge worker does not advertise Forge or disable existing native Creation (3418.3914ms)
+✔ optional worker cleanup retries the retained resource after an unconfirmed close (3988.1519ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 85441.9454

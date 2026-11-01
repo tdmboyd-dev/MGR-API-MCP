@@ -1,0 +1,18 @@
+{"actualOwnerHTTP":true,"nativeDocuments":2,"originalEffects":2,"projectAndArtifactReopen":true,"retirementBlockedForActiveCompletedAndDisabled":true,"modelCalls":0}
+✔ actual owner API -> project prepare/approval/native files -> retained child -> all-host restart (34004.9153ms)
+✔ project APIs reject a changed plan, selected business and unknown extra inputs (4383.6368ms)
+{"injectedModelRounds":5,"actualProjectPlanAndStatus":true,"nativeApprovals":0,"nativeDispatches":0,"liveModel":false}
+✔ conversation proposal and checkpoint reads use actual project persistence without approving or executing native actions (4679.4474ms)
+✔ retirement approval/apply recheck later project custody and preserve the original result (4100.313ms)
+✔ persisted retention requirement blocks a later unguarded workflow instance (3837.909ms)
+✔ server rejects a forged project host and request fences reject an away-and-back business switch (3249.7833ms)
+{"actualOwnerMixedProject":true,"nativeForgeAndCreation":true,"originalEffects":2,"allHostRestart":true,"redispatches":0,"liveInference":0}
+✔ actual owner project API joins original Forge creature and Creation document with cold recovery (12886.23ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 72029.323
