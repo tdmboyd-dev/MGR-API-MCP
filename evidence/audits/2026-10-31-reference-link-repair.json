@@ -1,0 +1,11 @@
+{
+  "checks": 184,
+  "date": "2026-10-31",
+  "defect": "historical markdown link [WORK-STATE.md](WORK-STATE.md) resolved inside docs/history instead of repo root",
+  "failures_after": 0,
+  "fix": "changed only link target to ../../WORK-STATE.md; old historical prose retained",
+  "schema": "mgr.api.repository-link-repair.v1",
+  "scope": "repo reference and manifest integrity only; not deployed MCP/provider verification",
+  "source": "MGR-API-MCP/docs/history/FORGE-SOURCE-CHECKPOINT-2026-10-30.md",
+  "test": "python scripts/verify_repository.py"
+}

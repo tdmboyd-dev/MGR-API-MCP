@@ -1,3 +1,7 @@
+## October 31, 2026 — Repo audit reference repair
+
+- Found one broken archive-local link in docs/history/FORGE-SOURCE-CHECKPOINT-2026-10-30.md: WORK-STATE.md resolves two directories above, not inside docs/history. Repaired to ../../WORK-STATE.md and reran python scripts/verify_repository.py: 184 checks PASS, 0 errors. Evidence evidence/audits/2026-10-31-reference-link-repair.json. Historical content otherwise preserved.
+
 ## 2026-10-31 — Forge direct creation, scope repair and real process proof
 
 - Used existing API/MCP actor/audience/tenant and `tools:execute` scope after detecting proposed `tools:write` mismatch. No second router, database, token manager or Creation OS middleman.

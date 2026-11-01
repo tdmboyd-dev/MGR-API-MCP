@@ -66,7 +66,7 @@ Do not claim the remote MCP surface is production-ready until those gates pass.
 
 ## Current resume checkpoint — September 29, 2026
 
-Read [WORK-STATE.md](WORK-STATE.md), AGENTS.md, BUILD-QUEUE.md and the latest dated section of docs/full-build/SCORECARD.md.
+Read [WORK-STATE.md](../../WORK-STATE.md), AGENTS.md, BUILD-QUEUE.md and the latest dated section of docs/full-build/SCORECARD.md.
 Inspected base: d5fdea390702b7ca7e5a3602ad2e4d149960aea8.
 
 The repository now contains the first executable shared-edge foundation. The README and September 29 scorecard supersede the September 28 research-only implementation status below. Source includes an in-memory task engine, model-independent Brain controller, DecisionEngine, approval/security boundaries, Creation OS client, MCP stdio server and HTTP/OAuth-related modules.

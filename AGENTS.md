@@ -1,5 +1,7 @@
 # MGR-API-MCP working agreement
 
+- Read this source-grounded docs/API-MCP-ENGINEERING-HANDBOOK.md and evidence/audits/2026-10-31-baseline-static-inventory.json before adding any component. A roadmap cannot prove a module missing; perform source/tests/runtime verification and keep the ONE repo HANDOFF current.
+
 This repository is the user-designated home for the JARVIS/Jev research and unified assistant. Preserve this scope; other MGR businesses and repositories are not implicitly included.
 
 ## Work and communication

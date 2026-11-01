@@ -1,4 +1,19 @@
 # Resume MGR-API-MCP
+
+## CURRENT FULL SOURCE-BASED API/MCP HANDBOOK — 2026-10-31
+
+**Additional integrity fix:** docs/history/FORGE-SOURCE-CHECKPOINT-2026-10-30.md had a broken relative WORK-STATE.md link; corrected to ../../WORK-STATE.md and preserved the dated record. python scripts/verify_repository.py now **184 checks PASS, 0 failures**. Safe proof: evidence/audits/2026-10-31-reference-link-repair.json. This is repository integrity, not hosted service certification.
+
+
+
+**Final same-wave verification:** npm run verify **69/69**, python scripts/verify-forge-studio.py actual local Node/Python original world and creature GLB PASS after Forge artifact token security update; Forge 608 run with 3 skips and Creation OS 123/123. No hosted remote Tevin/ChatGPT acceptance claimed.
+
+This is the user's ACTUAL shared MGR-API-MCP repository, not a new local bridge. Current code includes hosted src/http-server.ts, src/mcp-http.ts, src/mcp-server.ts, real JWT/OAuth auth and source bindings to Forge; 'local' in the previous test report only names the Windows location of verified Python Studio -> Node adapter tests. A live hosted remote client and private Forge worker relay are not proved by localhost.
+
+Static full tracked-file audit: 169 files at b0b225c, 56 JS/TS source texts read, 4 Python AST, 47 Markdown, 21 tests, zero parse errors; exact hashed inventory evidence/audits/2026-10-31-baseline-static-inventory.json. New real how-to and call/permissions map: docs/API-MCP-ENGINEERING-HANDBOOK.md. Forge's current complete module/operating guides live in sibling MGR-3D-FORGE; do not copy as a rival handoff.
+
+Forge now consistently requires its session token for all local private output /files GET, not just creatures. This existing API/MCP bridge already uses the Studio token; hosted expiring artifact delivery/real OAuth path remains OPEN. Baseline verification 68/68 tests, plus new handbook guard pending rerun. Creation OS is optional multi-factory. This HANDOFF.md stays sole living API/MCP resume authority.
+
 ## Current native 3D Forge Creator connection — 2026-10-31
 
 **Only current API/MCP handoff remains HANDOFF.md**; sibling Forge authority is MGR-3D-FORGE/docs/HANDOFF.md and the published full spec is MGR-3D-FORGE/docs/MASTER-FORGE-PROGRAM-2026-10-31.md. The previous dated REA and world-creation sections below are historical proof, not a claim that hosted ChatGPT execution now exists.
