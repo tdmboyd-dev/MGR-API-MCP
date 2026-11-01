@@ -1,3 +1,9 @@
+## Completed native navigation receiving slice — November 1, 2026
+
+The existing repository read gateway and owner SDK now carry bound references and labeled potential change impact, including bounded continuation. Actual local ONE HTTP/SDK/TCP/compiler/SQL-reopen checks and preserved failed attempts are recorded in evidence/native-navigation-2026-11-01/REPORT.md. The original 48 queue IDs and wider open gates are unchanged; this is no new job/permission engine or provider/production claim.
+
+---
+
 ## 2026-11-01 — Continued original Forge composition via shared MCP
 
 - Preserved source on existing MGR-API-MCP Git main 7ce84d7. src/forge-catalog-client.ts and src/forge-mcp-tools.ts extend one authorized Forge service with stable source-backed composed world creation/status; no duplicate API/MCP instance. Real Forge backend uses owner forge/world_composition_jobs.py and existing Studio job auth, exports one actual Blender-composed GLB plus Godot source. Current npm run verify **85 tests passed**, TypeScript and plugin checks pass.

@@ -1,5 +1,7 @@
 # Shared repository operating knowledge
 
+The existing source gateway also enrolls `code_monster_references` and `code_monster_impact` alongside profile/symbols. The owner SDK admits only enrolled project IDs, committed source selection and bounded queries; it accepts no caller root or command. All four compiler operations share one gateway admission slot and the source timeout. Tevin receives references/impact through its existing three-field `repository_read` contract and saves the same ordinary read receipts. Exact declaration IDs from symbol discovery disambiguate names; impact labels conservative module dependencies separately from bound uses. This extends source review and test planning, not engineering job execution. Local actual HTTP/SDK/compiler/reopen verification and its fixture-model limits are recorded in `evidence/native-navigation-2026-11-01/REPORT.md`.
+
 The existing shared gateway exposes `mgr_repository_manual` for trusted host-enrolled repositories. This is reusable by Tevin and other authorized clients; it is not another brain, job database or permission owner. Static ecosystem catalog entries describe potential enrollment, not global access.
 
 ## Host integration

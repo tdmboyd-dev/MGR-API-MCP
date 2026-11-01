@@ -1,3 +1,9 @@
+## Completed native navigation receiving slice — November 1, 2026
+
+The existing repository read gateway and owner SDK now carry bound references and labeled potential change impact, including bounded continuation. Actual local ONE HTTP/SDK/TCP/compiler/SQL-reopen checks and preserved failed attempts are recorded in evidence/native-navigation-2026-11-01/REPORT.md. The original 48 queue IDs and wider open gates are unchanged; this is no new job/permission engine or provider/production claim.
+
+---
+
 # Research-to-build queue
 
 ## Joined shared edge: Forge, Tevin departments and current knowledge - November 1, 2026

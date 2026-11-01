@@ -1,3 +1,8 @@
+## Completed native source navigation slice — November 1, 2026
+
+MGR-API-MCP: original bound-reference and labeled potential-impact abilities are implemented and integrated through the existing Code Monster → API-MCP → Tevin read path. Actual local HTTP/SDK/compiler/SQLite integration passed 13/13 checks, including replay, reopen, authority and source-change refusals. Injected model responses and local fixture identity are explicit; permanent-owner/live-provider/production acceptance is not claimed. Existing requirements remain partial beyond this slice. [Completed work, external behavior evidence and verification](evidence/native-navigation-2026-11-01/REPORT.md). Final source/adoption and final checks are recorded alongside that report.
+---
+
 # Resume MGR-API-MCP
 
 ## Native preparation before approval consumption — November1, 2026

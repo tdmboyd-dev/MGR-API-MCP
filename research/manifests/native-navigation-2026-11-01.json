@@ -1,0 +1,59 @@
+{
+  "date": "2026-11-01",
+  "sources": [
+    {
+      "url": "https://github.com/myuon/refactor-mcp",
+      "commit": "32bac1b92a0aba68f6ed1a00d5c44530e1e8692d",
+      "scope": [
+        "src/core/refactor-tool.ts",
+        "src/utils/file-utils.ts",
+        "src/server.ts"
+      ],
+      "executed": "Original built performRefactor on owned fixtures; regex lexical and context-regex behavior; not whole application acceptance."
+    },
+    {
+      "url": "https://github.com/Egonex-AI/Understand-Anything",
+      "commit": "4e6d3299017a7432da15957874992837a315c5b4",
+      "scope": [
+        "understand-anything-plugin/packages/core/src/analyzer/graph-builder.ts"
+      ],
+      "executed": "Original selected builder unchanged/transpiled, explicit injected registry and synthetic structured analysis; not full app or real language-server trial."
+    }
+  ],
+  "rea": {
+    "version": "6.8.0",
+    "applicationAnalysisSelectedSources": 4,
+    "traces": [
+      {
+        "file": "rea-context-filter-trace.json",
+        "sha256": "d9eb3446f8586ae5da7093ee5022ccaec0ecf146524b490cc4436b831816168a",
+        "evidenceId": "ev_a334cb7497f9d31f972a183ce3f5c1f7d1816c252b2c1ae66526d2a426631bd9",
+        "status": "ambiguous",
+        "seed": {
+          "kind": "property",
+          "name": "contextPattern"
+        },
+        "nodes": 1,
+        "relations": 0,
+        "unknowns": 2,
+        "scope": "Static influence inference only; ambiguous result is not resolved behavioral proof."
+      },
+      {
+        "file": "rea-node-identity-trace.json",
+        "sha256": "4685be2f03d6e09422d6046d8e686976eb485db38df9088f091c16dc98785908",
+        "evidenceId": "ev_4ed8458cd82736a63bc1486f0ab44157b622328181bd33a8fd33f8b7457ea912",
+        "status": "ambiguous",
+        "seed": {
+          "kind": "property",
+          "name": "name"
+        },
+        "nodes": 6,
+        "relations": 0,
+        "unknowns": 18,
+        "scope": "Static influence inference only; ambiguous result is not resolved behavioral proof."
+      }
+    ]
+  },
+  "implementation": "Original extension of existing MGR compiler and registered consumer; no competitor source vendored.",
+  "remaining": "Other candidate runtime tests, full selected app acceptance and wider languages/design/mutation/live-provider gates remain open."
+}
