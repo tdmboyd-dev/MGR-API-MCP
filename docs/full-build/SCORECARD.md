@@ -114,3 +114,7 @@ November1 receiving-lane publication: source `6b23dfeb6faaf962197ab9d28dd2315bb5
 ## Forge Studio receiving checkpoint — November 1, 2026
 
 Existing Forge/shared edge and revision-aware knowledge gain the secured native entry repair and current consumer proof. See `../../evidence/forge-studio-access-2026-11-01/REPORT.md`. Full Forge642/639pass/3SAMskips, real Chrome and SDK/Blender pass in their explicit scopes. Whole products remain Unassessed; no parent requirement closed. Personal Tevin write/approval/job/artifact/reopen/cancel remains unfinished engineering.
+
+## Existing Forge consumer: artifact receiver repair — November 1, 2026
+
+The same original Forge/shared-edge work gains bounded structural GLB validation and canceled unread streams. New26regressions,45focused and273full API checks pass; actual SDK/Blender native file return remains compatible. See evidence/forge-glb-2026-11-01/verification.json (root-relative). Native engine/domain ownership retained. Permanent Tevin action/save/reopen and full GLB scene semantics/large delivery remain open; no original queue ID closed or whole-product percentage assigned.

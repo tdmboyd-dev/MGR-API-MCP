@@ -1,0 +1,41 @@
+{
+  "API": {
+    "failed": 0,
+    "passed": 273,
+    "skipped": 0
+  },
+  "APIInputFiles": 110,
+  "baseCommit": "71b493dc839a34170044d6b1aec5a732ffdaa470",
+  "elapsedSeconds": 50.02,
+  "exitCode": 0,
+  "focusedPassed": 45,
+  "forgeSourceCommit": "57619c835c75c3ad1cf59e80fe3d3658482573af",
+  "initialNewFailures": 15,
+  "logs": {
+    "api-verify.txt": "094e7e0465efb09c87c946a6c091f79bd8f2c6bcdafb1bcb3c01ebb94814fecf",
+    "before-failures.txt": "ea5c8973a765f73b7e5c3cd14ea5602aa1fec895a89a3638177f10c88baa5034",
+    "focused.txt": "4c3a7a5ce5bc7ddefae01040211352cb9b3e1cf443a364531ccb71930d948bfc",
+    "real-protocol.json": "f3f2be3b6efe803e9c3fa3a2ec4b629925b8f8331e64bfabb3c2b5388ea11199"
+  },
+  "newModelCalls": 0,
+  "newRegressionTests": 26,
+  "originalNativeImplementation": "MGR-3D-FORGE/forge/glb.py inspect_glb",
+  "passed": true,
+  "permanentTevinWriteAccepted": false,
+  "productionAccepted": false,
+  "profile": "mgr.forge.shared-glb-triangles.v1",
+  "realProtocol": "real-protocol.json",
+  "scope": "Current shared API source/tests/scripts/manifests; companion ONE workspace may be changing under another authorized lane. Not a frozen whole-ecosystem qualification.",
+  "sourceSha256": {
+    "src/forge-catalog-client.ts": "bbf741709f676872bb3cf0c41d3728c1b052f581176e00e37ae55d12e0dfd029",
+    "src/forge-glb.ts": "11f79c67e3a3cfb2bc43f579d0930d68c25e9376a164b7ced0e812c84c423edb",
+    "src/forge-mcp-tools.ts": "05d88c8d410ae613e0d5512847f6cdaf8e862ae8f59cd2f0058bfac3dd924fb0",
+    "test/fixtures/forge-glb.ts": "a491e64f81f4c00d7f26bab0938f92dc48ad2ba39452cfa96664130f60c9038f",
+    "test/forge-artifact-transfer.test.ts": "3ee2b490ad188c2c877259c68d4ef8654cbdce67057a755cbbfa0bba1bf29f92",
+    "test/forge-authority-lifecycle.test.ts": "c61f04d40688460f5cb29415938ead041ab4c0c18209151cd38153c6d2c3fe8e",
+    "test/forge-glb-boundary.test.ts": "7102c98cebf3716db9eb91b22a11a88fe11ac8bd5459c7ca96269b9ad3aaf600"
+  },
+  "sourceStable": true,
+  "standardsReference": "https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html",
+  "wholeProductAcceptance": "Unassessed"
+}

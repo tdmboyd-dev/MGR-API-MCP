@@ -3,8 +3,9 @@ import assert from "node:assert/strict";
 import {createHash} from "node:crypto";
 import {ForgeStudioCatalogClient} from "../src/forge-catalog-client.js";
 import {readForgeArtifactMcp} from "../src/forge-mcp-tools.js";
+import {forgeTriangleGlb} from './fixtures/forge-glb.js';
 
-const blob=Buffer.concat([Buffer.from("glTF"),Buffer.alloc(300,17)]);
+const blob=forgeTriangleGlb();
 const sha=createHash("sha256").update(blob).digest("hex");
 const input={jobId:"a".repeat(24),kind:"creature" as const,expectedSha256:sha};
 const actor={actorId:"owner",tenantId:"tenant",audience:"https://mcp.example",expiresAt:Date.now()+90000,scopes:["tools:read"]};

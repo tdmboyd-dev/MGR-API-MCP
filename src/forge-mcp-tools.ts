@@ -5,6 +5,7 @@ import {authorizeTool, type AuthContext} from "./authz.js";
 import type {ForgeCatalogClient,ForgeCatalogSearch,ForgeWorldEdits,ForgeCreatureInput,ForgeBiomeInput,ForgeArtifactRequest,ForgeHumanLipSyncInput,ForgeWorldCompositionInput} from "./forge-catalog-client.js";
 import {createHash} from "node:crypto";
 import {types} from "node:util";
+import {inspectForgeGlb} from './forge-glb.js';
 
 export interface ForgeMcpToolOptions {
   auth:AuthContext;
@@ -238,10 +239,11 @@ export async function readForgeArtifactMcp(options:ForgeMcpToolOptions,input:For
        result.blobBase64.length>1_100_000 || typeof result.bytes!=="number" ||
        result.bytes<28 || result.bytes>800_000)throw new Error("invalid Forge delivery proof");
     const data=Buffer.from(result.blobBase64,"base64");
-    if(data.length!==result.bytes || data.toString("ascii",0,4)!=="glTF" ||
+    if(data.length!==result.bytes || data.toString('base64')!==result.blobBase64 ||
        createHash("sha256").update(data).digest("hex")!==input.expectedSha256){
       throw new Error("artifact content not independently authentic to receipt");
     }
+    inspectForgeGlb(data);
     return {accepted:true,status:"VERIFIED_PRIVATE_GLTF_BLOB",
             jobId:input.jobId,kind:input.kind,
             sha256:result.sha256,bytes:result.bytes,

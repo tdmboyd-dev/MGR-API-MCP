@@ -1,5 +1,13 @@
 # Resume MGR-API-MCP
 
+## Forge artifact receiver qualification — November 1, 2026
+
+The previous shared reader could accept matching-hash garbage with a `glTF` prefix. Its oversized/error bodies also retained unread upstream data. The existing client/MCP receiver now validates both paths with a bounded transfer profile adapted from native Forge's inspector: glTF2 header/length, JSON/BIN chunks, strict UTF8, local buffer/view/accessor ranges/alignment, finite float data, indexed triangle references and morph counts. External URI keys and required decoder extensions are refused. Canonical base64 and declared lengths are checked; overflow, HTTP errors and excessive stream chunks cancel unread bodies/release readers. No new geometry engine, studio, vault, provider or permission owner was introduced.
+
+Fifteen original new cases failed before repair. Current45focused/273full API checks pass, zero skips, plus typecheck/hosted artifact/plugin checks;110API source/test/script/manifest inputs stayed unchanged. Actual official SDK/HTTP/Python/Blender rerun accepted native creature/biome, composed world and animated human private GLB resources, preserving saved hashes/replay, independent Blender reimport and foreign actor/tenant/scope denials. [Executed logs, source hashes and native protocol](evidence/forge-glb-2026-11-01/verification.json).
+
+This is a bounded receiver profile, not universal glTF semantic certification: one local buffer, indexed position/normal triangles, no sparse/nonindexed/compressed/externally referenced paths or integer matrices. Maximum800KB transfer,4096views/8192accessors,64JSON depth/100000JSON nodes and2000000scalar validation work are explicit current limits, not permanent Forge product ceilings. Full scene/skin/animation/material semantics, premium art, large private delivery, mobile, hosted OAuth and production still need their own qualification. A fixture protocol identity does not prove permanent Tevin approval/job/artifact/save/reopen. Continue that original engineering through ONE's existing authorities; do not bypass them by exposing raw creates to the model.
+
 ## Secured Forge entry and actual consumer proof — November 1, 2026
 
 Forge source57619c835c75c3ad1cf59e80fe3d3658482573af is published/read back on main. Its anonymous editor previously embedded its private bearer and world, defeating artifact/POST token protection. The existing server now returns a constant public unlock shell, protects the editor with exactly one valid header and provides a private owner fragment link with validation/error/cancel and tab-session reload. Do not publish the actual launcher link or token. This supersedes tokenless editor-entry assumptions.

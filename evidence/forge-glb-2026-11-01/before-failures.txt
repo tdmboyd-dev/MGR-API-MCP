@@ -1,0 +1,241 @@
+✖ receiver rejects matching-hash magic-only forgery at HTTP and custom adapter boundaries (33.5362ms)
+✖ receiver rejects matching-hash wrong version at HTTP and custom adapter boundaries (1.4412ms)
+✖ receiver rejects matching-hash wrong total at HTTP and custom adapter boundaries (0.7534ms)
+✖ receiver rejects matching-hash truncated chunk at HTTP and custom adapter boundaries (0.7506ms)
+✖ receiver rejects matching-hash external buffer at HTTP and custom adapter boundaries (3.4891ms)
+✖ receiver rejects matching-hash external image at HTTP and custom adapter boundaries (1.3349ms)
+✖ receiver rejects matching-hash unqualified compression at HTTP and custom adapter boundaries (0.915ms)
+✖ receiver rejects matching-hash escaped view at HTTP and custom adapter boundaries (0.7991ms)
+✖ receiver rejects matching-hash escaped accessor at HTTP and custom adapter boundaries (3.0697ms)
+✖ receiver rejects matching-hash out of range vertex at HTTP and custom adapter boundaries (1.5169ms)
+✖ receiver rejects matching-hash nonfinite geometry at HTTP and custom adapter boundaries (0.7156ms)
+✖ receiver rejects matching-hash missing geometry at HTTP and custom adapter boundaries (0.5585ms)
+✖ receiver rejects matching-hash wrong morph count at HTTP and custom adapter boundaries (0.6494ms)
+✖ artifact response is canceled and released on overflow, including absent length (2.6113ms)
+✖ declared oversized response is canceled without locking or reading (1.2891ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 0
+ℹ fail 15
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 901.8911
+
+✖ failing tests:
+
+test at test\forge-glb-boundary.test.ts:1:2192
+✖ receiver rejects matching-hash magic-only forgery at HTTP and custom adapter boundaries (33.5362ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (C:\Users\cool\Documents\Codex\Projects\MGR-API-MCP\test\forge-glb-boundary.test.ts:27:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /GLB|glTF/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at test\forge-glb-boundary.test.ts:1:2192
+✖ receiver rejects matching-hash wrong version at HTTP and custom adapter boundaries (1.4412ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (C:\Users\cool\Documents\Codex\Projects\MGR-API-MCP\test\forge-glb-boundary.test.ts:27:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /GLB|glTF/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at test\forge-glb-boundary.test.ts:1:2192
+✖ receiver rejects matching-hash wrong total at HTTP and custom adapter boundaries (0.7534ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (C:\Users\cool\Documents\Codex\Projects\MGR-API-MCP\test\forge-glb-boundary.test.ts:27:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /GLB|glTF/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at test\forge-glb-boundary.test.ts:1:2192
+✖ receiver rejects matching-hash truncated chunk at HTTP and custom adapter boundaries (0.7506ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (C:\Users\cool\Documents\Codex\Projects\MGR-API-MCP\test\forge-glb-boundary.test.ts:27:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /GLB|glTF/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at test\forge-glb-boundary.test.ts:1:2192
+✖ receiver rejects matching-hash external buffer at HTTP and custom adapter boundaries (3.4891ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (C:\Users\cool\Documents\Codex\Projects\MGR-API-MCP\test\forge-glb-boundary.test.ts:27:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /GLB|glTF/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at test\forge-glb-boundary.test.ts:1:2192
+✖ receiver rejects matching-hash external image at HTTP and custom adapter boundaries (1.3349ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (C:\Users\cool\Documents\Codex\Projects\MGR-API-MCP\test\forge-glb-boundary.test.ts:27:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /GLB|glTF/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at test\forge-glb-boundary.test.ts:1:2192
+✖ receiver rejects matching-hash unqualified compression at HTTP and custom adapter boundaries (0.915ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (C:\Users\cool\Documents\Codex\Projects\MGR-API-MCP\test\forge-glb-boundary.test.ts:27:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /GLB|glTF/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at test\forge-glb-boundary.test.ts:1:2192
+✖ receiver rejects matching-hash escaped view at HTTP and custom adapter boundaries (0.7991ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (C:\Users\cool\Documents\Codex\Projects\MGR-API-MCP\test\forge-glb-boundary.test.ts:27:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /GLB|glTF/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at test\forge-glb-boundary.test.ts:1:2192
+✖ receiver rejects matching-hash escaped accessor at HTTP and custom adapter boundaries (3.0697ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (C:\Users\cool\Documents\Codex\Projects\MGR-API-MCP\test\forge-glb-boundary.test.ts:27:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /GLB|glTF/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at test\forge-glb-boundary.test.ts:1:2192
+✖ receiver rejects matching-hash out of range vertex at HTTP and custom adapter boundaries (1.5169ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (C:\Users\cool\Documents\Codex\Projects\MGR-API-MCP\test\forge-glb-boundary.test.ts:27:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /GLB|glTF/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at test\forge-glb-boundary.test.ts:1:2192
+✖ receiver rejects matching-hash nonfinite geometry at HTTP and custom adapter boundaries (0.7156ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (C:\Users\cool\Documents\Codex\Projects\MGR-API-MCP\test\forge-glb-boundary.test.ts:27:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /GLB|glTF/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at test\forge-glb-boundary.test.ts:1:2192
+✖ receiver rejects matching-hash missing geometry at HTTP and custom adapter boundaries (0.5585ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (C:\Users\cool\Documents\Codex\Projects\MGR-API-MCP\test\forge-glb-boundary.test.ts:27:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /GLB|glTF/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at test\forge-glb-boundary.test.ts:1:2192
+✖ receiver rejects matching-hash wrong morph count at HTTP and custom adapter boundaries (0.6494ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (C:\Users\cool\Documents\Codex\Projects\MGR-API-MCP\test\forge-glb-boundary.test.ts:27:2)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /GLB|glTF/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at test\forge-glb-boundary.test.ts:1:2935
+✖ artifact response is canceled and released on overflow, including absent length (2.6113ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\Projects\MGR-API-MCP\test\forge-glb-boundary.test.ts:35:9)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\forge-glb-boundary.test.ts:1:3452
+✖ declared oversized response is canceled without locking or reading (1.2891ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\Projects\MGR-API-MCP\test\forge-glb-boundary.test.ts:40:101)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

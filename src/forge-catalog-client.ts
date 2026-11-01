@@ -1,5 +1,6 @@
 /** Bounded authenticated adapter to Forge Studio catalog, durable creation and files. */
 import {createHash} from "node:crypto";
+import {inspectForgeGlb} from './forge-glb.js';
 export interface ForgeCatalogSearch {
   mode:"sources"|"models";
   query:string;
@@ -218,32 +219,13 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
       method:"GET",headers:{"X-MGR-Forge-Token":this.token},
       signal:AbortSignal.timeout(this.timeoutMs),redirect:"error"
     });
-    if(!response.ok)throw new Error("Forge artifact read returned HTTP "+response.status);
-    const claimed=response.headers.get("content-length");
-    if(claimed!==null && (!/^\d+$/.test(claimed) || Number(claimed)>800_000))
-      throw new Error("Forge artifact exceeds bounded MCP transfer size");
-    if(!response.body)throw new Error("Forge artifact response body unavailable");
-    const chunks:Uint8Array[]=[];
-    const reader=response.body.getReader();
-    let size=0;
-    try{
-      for(;;){
-        const {value,done}=await reader.read();
-        if(done)break;
-        size+=value.byteLength;
-        if(size>800_000)throw new Error("Forge artifact exceeds bounded MCP transfer size");
-        chunks.push(value);
-      }
-    }finally{
-      reader.releaseLock();
-    }
-    if(size<28)throw new Error("Empty or corrupt Forge artifact");
-    const binary=Buffer.concat(chunks.map(c=>Buffer.from(c)));
-    if(binary.toString("ascii",0,4)!=="glTF")throw new Error("Forge artifact is not real GLB");
+    if(!response.ok){try{await response.body?.cancel();}catch{}throw new Error("Forge artifact read returned HTTP "+response.status);}
+    const binary=await this.responseBytes(response,800_000,'Forge artifact exceeds bounded MCP transfer size');
+    inspectForgeGlb(binary);
     const sha=createHash("sha256").update(binary).digest("hex");
     if(sha!==input.expectedSha256)
       throw new Error("Forge artifact SHA-256 changed from job receipt; reconciliation required");
-    return {blobBase64:binary.toString("base64"),sha256:sha,bytes:size,
+    return {blobBase64:binary.toString("base64"),sha256:sha,bytes:binary.length,
             mimeType:"model/gltf-binary"};
   }
 
@@ -255,30 +237,28 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
       headers:{"Content-Type":"application/json","X-MGR-Forge-Token":this.token},
       body, signal:AbortSignal.timeout(this.timeoutMs), redirect:"error"
     });
-    if(!response.ok) throw new Error(`Forge Studio returned HTTP ${response.status}`);
-    const declared=Number(response.headers.get("content-length") ?? "0");
-    if(!Number.isFinite(declared) || declared>300_000){
-      throw new Error("Forge response outside byte budget");
-    }
-    const reader=response.body?.getReader();
-    if(!reader) throw new Error("Forge response has no body");
-    const chunks:Uint8Array[]=[];
-    let size=0;
-    try{
-      for(;;){
-        const {value,done}=await reader.read();
-        if(done) break;
-        size+=value.byteLength;
-        if(size>300_000) throw new Error("Forge response outside byte budget");
-        chunks.push(value);
-      }
-    }finally{
-      reader.releaseLock();
-    }
-    const parsed:unknown=JSON.parse(new TextDecoder().decode(Buffer.concat(chunks)));
+    if(!response.ok){try{await response.body?.cancel();}catch{}throw new Error(`Forge Studio returned HTTP ${response.status}`);}
+    const bytes=await this.responseBytes(response,300_000,'Forge response outside byte budget');
+    const parsed:unknown=JSON.parse(new TextDecoder('utf-8',{fatal:true,ignoreBOM:true}).decode(bytes));
     if(!parsed || typeof parsed!=="object" || Array.isArray(parsed)){
       throw new Error("Forge returned invalid JSON envelope");
     }
     return parsed as Record<string,unknown>;
+  }
+
+  private async responseBytes(response:Response,limit:number,message:string):Promise<Buffer>{
+    let reader:ReadableStreamDefaultReader<Uint8Array>|undefined,complete=false;
+    try{
+      const declared=response.headers.get('content-length');
+      if(declared!==null&&(!/^\d+$/.test(declared)||!Number.isSafeInteger(Number(declared))||Number(declared)>limit))throw Error(message);
+      if(!response.body)throw Error('Forge response has no body');
+      reader=response.body.getReader();const chunks:Uint8Array[]=[];let size=0;
+      for(;;){const {value,done}=await reader.read();if(done){complete=true;break;}size+=value.byteLength;if(size>limit||chunks.length>=4096)throw Error(message);chunks.push(value);}
+      if(declared!==null&&Number(declared)!==size)throw Error('Forge declared response length mismatch');
+      return Buffer.concat(chunks);
+    }finally{
+      try{if(!complete){if(reader)await reader.cancel();else if(response.body)await response.body.cancel();}}catch{/* Preserve original invalid/unconfirmed result. */}
+      finally{reader?.releaseLock();}
+    }
   }
 }

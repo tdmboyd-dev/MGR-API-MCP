@@ -96,3 +96,7 @@ Research packet: research/BEAST-SMARTWIZ-OMNIROUTE-VOICEBOX-FREEBUF-SERVERBYT-20
 
 47. [verified bounded local] ONE/MCP/native-worker positive journey plus exact report reopen, finite delegation and negative reconciliation; see evidence/completion-2026-10-28/RESULTS.md. Wider qualification remains open.
 48. [repaired] Pre-dispatch expiry and caller-selected risk classification; generic high-risk approvals remain unavailable rather than bypassed.
+
+## Existing Forge consumer: artifact receiver repair — November 1, 2026
+
+The same original Forge/shared-edge work gains bounded structural GLB validation and canceled unread streams. New26regressions,45focused and273full API checks pass; actual SDK/Blender native file return remains compatible. See evidence/forge-glb-2026-11-01/verification.json (root-relative). Native engine/domain ownership retained. Permanent Tevin action/save/reopen and full GLB scene semantics/large delivery remain open; no original queue ID closed or whole-product percentage assigned.

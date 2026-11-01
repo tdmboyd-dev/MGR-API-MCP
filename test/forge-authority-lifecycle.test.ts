@@ -3,8 +3,9 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import * as tools from '../src/forge-mcp-tools.js';
 import type {ForgeMcpToolOptions} from '../src/forge-mcp-tools.js';
+import {forgeTriangleGlb} from './fixtures/forge-glb.js';
 const audience='https://owned-forge.invalid/mcp',job='a'.repeat(24),sha='b'.repeat(64),requestId='owned-forge-job-0001';
-const blob=Buffer.concat([Buffer.from('glTF'),Buffer.alloc(28)]),blobSha=createHash('sha256').update(blob).digest('hex');
+const blob=forgeTriangleGlb(),blobSha=createHash('sha256').update(blob).digest('hex');
 const cases=[
  ['directory','search',tools.searchForgeMcp,{mode:'sources',query:''},{}],
  ['world-create','createWorld',tools.createForgeWorldMcp,{requestId,edits:{schema:"mgr.forge.world-edit.v1",asset_sha256:sha,buildings:[{id:"owned-building",center:[0,0,0],size:[1,1,1],material:"owned-material"}]}},{status:'MATERIALIZED',job_id:job,world_sha256:sha,world_bytes:100}],
