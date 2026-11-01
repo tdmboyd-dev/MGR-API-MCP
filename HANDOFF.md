@@ -2,6 +2,10 @@
 
 ## CURRENT RECOVERED FORGE WORLD COMPOSITION — 2026-11-01
 
+**Final cross-repo regression:** MGR-API-MCP **85/85 PASS** (TypeScript, plugin validation), and exact sibling Forge recovery commit 70a9197 passed **638 total / 635 executed / 3 skipped / 0 failed**, safe evidence/evidence/audits/2026-11-01-full-regression.json in Forge. Hosted remote business/Tevin/ChatGPT, neural model and Godot runtime remain OPEN.
+
+
+
 **This is the ONE existing shared MGR API/MCP repository**, not a new local service. Recovering source built after 2026-10-31 published commit 7ce84d7. Current src/forge-catalog-client.ts and src/forge-mcp-tools.ts add scoped composed-world creation/status using the SAME authorized tenant, audience, tools:execute and tools:read, reusing Forge's one Studio job/vault. No duplicate transport/router/Creation OS middleman. Tests/test/forge-world-composition.test.ts and existing full suite npm run verify 85/85 PASS.
 
 **Real related Forge backend:** sibling MGR-3D-FORGE/forge/world_composition.py and forge/world_composition_jobs.py, existing Studio /api/world-compose-create/status and Blender receiver, one GLB plus Godot source archive and replay-safe job. Evidence in Forge evidence/world/2026-11-01-combined-world-blender-godot.json and evidence/world/2026-11-01-studio-composed-world-acceptance.json. Source archive packaging does NOT prove a running Godot engine, hosted remote endpoint, production OAuth/JWKS, or ChatGPT/Tevin app acceptance. The private Forge Creator plugin remains skills-first unless deployed hosted tools are independently proven.
