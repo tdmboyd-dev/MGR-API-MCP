@@ -86,3 +86,8 @@ provider, connect the intended ChatGPT/Codex account, and exercise its authorize
 reads and denials before claiming remote availability. No remote write/execute
 tools are exposed by this adapter. The API container is separate from OmniDev's
 existing worker fleet; it does not activate or certify those workers.
+
+
+## Host update after renewed owner authorization
+
+The missing-registration repair subsequently executed with exit0 and verified InstallLocation readback. The owner clicked Skip; Docker now reaches Dashboard but reports Virtual Machine Platform not enabled and Engine stopped. The Windows feature check says Enabled while the WSL installation says changes take effect only after reboot; HypervisorPresent is false. Save current work, let the owner choose restart timing, then recheck the actual engine before using the build/qualification commands above. Earlier canceled-attempt descriptions are historical; no container acceptance is inferred from this repair.

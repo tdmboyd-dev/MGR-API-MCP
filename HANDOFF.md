@@ -1,3 +1,13 @@
+# Current local integration and repaired Docker launcher — November 1, 2026
+
+The current clean-source Trilogy integration passed14/14 at OmniDev7a7c5e1, Code Monster125b0c8 and OmniSight7c6b5bd. Actual Git/SQLite/HTTP, candidate/receipt binding, restart, permission revocation and fixture publication were exercised. Backpack0.6.0 persisted/reopened the linked evidence in7 MCP calls without mirroring canonical jobs or tasks. OmniDev full80/80 and OmniSight130/130 local suites passed. See current private/raw and public/sanitized receipts in their owning repositories; these are local scoped results, not production certification.
+
+The owner explicitly renewed authorization for the previously canceled Docker registration repair. It executed with exit0 and exact HKLM64 InstallLocation readback. The normal launcher reaches Dashboard after the owner clicked Skip. Docker now reports Virtual Machine Platform not enabled / Engine stopped. Earlier Windows feature state was Enabled, but WSL's actual installation message requires a reboot; HypervisorPresent is false. No automatic restart was requested. Actual images, containers and worker remain unqualified until owner-chosen restart and fresh engine verification. The prior canceled attempt remains preserved as history, not a current refusal after renewed authorization.
+
+Continue owning source reconciliation, actual hosted/browser/current Tevin and original acceptance work; this is not the finished product handoff the owner requested.
+
+---
+
 # Container packaging and compiled Backpack0.6.0 — November 1, 2026
 
 Added non-root API/Backpack Docker packaging, locked dependency installs, private-state exclusions, a local-only clean-source build wrapper and owned constrained runtime qualification. Both scripts pass syntax checks. The full current source verifier passed161/161 (zero failure/skip), typecheck, hosted-artifact syntax and plugin validation with the separately pinned ONE fixture at ea51bd23cca449feebd3e3149e108233d646a45f. Actual compiled normal HTTP with Backpack0.6.0 passed11 local TCP/JWKS/signed-JWT/SQLite checks.
