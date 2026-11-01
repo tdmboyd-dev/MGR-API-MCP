@@ -1,0 +1,181 @@
+{
+  "revision": "8eb73a2a041cb7ce4574676d50fd18a9e98b84b6",
+  "license": "MIT for original auditor corpus/tool sources; optional Trail of Bits submodule has separate terms and was not initialized/executed.",
+  "selectedSources": [
+    {
+      "path": "docs/audit-flows.md",
+      "sha256": "510d489154be8f71754d9be66704e43058336452515e9d772784fa54a1091ed0"
+    },
+    {
+      "path": "references/audit-lifecycle/methodology.md",
+      "sha256": "2dca559143c71fefa1afc78c869eef9cd03dadd14f96b669102acbfbd0b32e4a"
+    },
+    {
+      "path": "tools/auditor-tools/src/scan.rs",
+      "sha256": "da3efa4ed134ad135007f7f85d9aea876c27536583c340a3bad4381b3faf4f75"
+    },
+    {
+      "path": "tools/auditor-tools/src/mem.rs",
+      "sha256": "0c3bca03693de5609d6126c4b8a83c90984cd7d43e80178312d9bf3c5fa96cf8"
+    },
+    {
+      "path": "tools/auditor-tools/src/bin/audit-scan.rs",
+      "sha256": "cbf2f228e8c35454e6a2887e3d70ece8ae9d3775c0a4e0401138d410538b76ff"
+    },
+    {
+      "path": "tools/auditor-tools/src/bin/audit-mem.rs",
+      "sha256": "b8ea838043ead08f01adfb2fb4c0d188e4af7d7f16238d97d3315ea6dd9de3ec"
+    },
+    {
+      "path": "scripts/tests/test-gha-recipes.sh",
+      "sha256": "71c1187dbeebd557fdcf77f1765112c795ccf4ac04e8e6db80006bb9cfc40557"
+    },
+    {
+      "path": "discovery/grep-commands.md",
+      "sha256": "d94ecc8d633edc7c6a3b9c166c9f7ea748e0277c063930b3d3191807ed2537b4"
+    }
+  ],
+  "readScope": "Audit flow document and selected lifecycle/scanner/memory/CLI/recipe sections plus tests. Full 1,446-item corpus and full repository not read or executed.",
+  "rea": {
+    "version": "6.8.0",
+    "operation": "inspect_pe_imports",
+    "evidenceId": "ev_8dde545494f5f085e2c58bfeb04fb326672b6684452789f4e7c1040c2578250c",
+    "binarySha256": "2a380831c4f5449312dc996cbd4505d28f79440c36edd828dfb12ff72353b6f7",
+    "imports": {
+      "status": "complete",
+      "reason": null,
+      "examined_dlls": 13,
+      "imports": 170,
+      "delay_imports": 0
+    },
+    "limits": "PE import metadata only, not decompilation, function semantics or exploit proof. Original source and original controlled CLI trials provide behavior evidence.",
+    "deepNativeProviderAvailability": [
+      {
+        "id": "ghidra",
+        "status": "unavailable",
+        "reason": "Set GHIDRA_INSTALL_DIR to an extracted Ghidra 12.1.x release directory."
+      },
+      {
+        "id": "hopper",
+        "status": "unavailable",
+        "reason": "Hopper integration is not supported on win32."
+      },
+      {
+        "id": "ida",
+        "status": "unavailable",
+        "reason": "REA configuration is invalid: Set REA_IDA_MCP_CONFIG to an upstream IDA MCP JSON registration; see docs/ida-provider.md."
+      },
+      {
+        "id": "kuna",
+        "status": "unavailable",
+        "reason": "Set REA_KUNA_COMMAND to the absolute path of a caller-supplied kuna executable (verified with 1.833). REA does not download, install or update Kuna."
+      }
+    ],
+    "initialProviderUnavailable": true,
+    "nativeBackend": {
+      "provider": "ghidra",
+      "version": "12.1.4",
+      "jdk": "21.0.13+9",
+      "setup": "Portable official archives; digests verified; task-local CLI environment only. Global host/plugin configuration unchanged.",
+      "archiveDigests": {
+        "ghidra": "ddac49f903da9d5bac833e5cc79395098b9c33cfd3279be5f31bd00387d2d4db",
+        "jdk": "a4dbaa05fca4bd89d84584e58c459bd732efebb1722af80ab13c6516832004f9"
+      },
+      "doctor": "Provider installation, Java and native process/DACL/handle checks passed. Other optional providers remain unavailable.",
+      "firstTrial": {
+        "code": "provider_timeout",
+        "timeoutMs": 330000,
+        "cleanup": "Owned Java process ended; incomplete output retained privately, not accepted as native analysis."
+      },
+      "completedOverview": {
+        "operation": "binary_overview",
+        "evidenceId": "ev_f9663d6cc762d386d4ed0f5ad580bb867a00c5de6d09db550856f367be545491",
+        "artifactSha256": "2a380831c4f5449312dc996cbd4505d28f79440c36edd828dfb12ff72353b6f7",
+        "document": "target-2a380831c4f5.exe",
+        "image_base": "0x140000000",
+        "segments": [
+          {
+            "name": "Headers",
+            "start": "0x140000000",
+            "end": "0x140000400",
+            "length": 1024,
+            "image_base": "0x140000000",
+            "address_space": "ram"
+          },
+          {
+            "name": ".text",
+            "start": "0x140001000",
+            "end": "0x1403eec00",
+            "length": 4119552,
+            "image_base": "0x140000000",
+            "address_space": "ram"
+          },
+          {
+            "name": ".rdata",
+            "start": "0x1403ef000",
+            "end": "0x140494400",
+            "length": 676864,
+            "image_base": "0x140000000",
+            "address_space": "ram"
+          },
+          {
+            "name": ".data",
+            "start": "0x140495000",
+            "end": "0x1404a7ef0",
+            "length": 77552,
+            "image_base": "0x140000000",
+            "address_space": "ram"
+          },
+          {
+            "name": ".pdata",
+            "start": "0x1404a8000",
+            "end": "0x1404e4000",
+            "length": 245760,
+            "image_base": "0x140000000",
+            "address_space": "ram"
+          },
+          {
+            "name": ".reloc",
+            "start": "0x1404e4000",
+            "end": "0x1404e6e00",
+            "length": 11776,
+            "image_base": "0x140000000",
+            "address_space": "ram"
+          }
+        ],
+        "segment_count": 6,
+        "procedure_count": 21465,
+        "string_count": 3593
+      },
+      "limits": [
+        "Counts describe Ghidra-defined inventories, not discovery of every function/string or program understanding.",
+        "PDB load state unknown; original names/types may be absent. Decompiler constructor warnings retained.",
+        "Native entry-function MCP investigation is separate and not yet claimed complete."
+      ]
+    }
+  },
+  "originalRuntime": {
+    "rustTestsPassed": 2,
+    "workflowRecipes": 11,
+    "workflowFixtures": 45,
+    "recipeCopies": 7,
+    "largeInputWorkflows": 2002,
+    "behaviorProbes": 4
+  },
+  "native": {
+    "runtimeCommit": "ed7db4e131cbc200a446cdf08900ed2e25ee2fc5",
+    "focusedPassed": 12,
+    "state": "canonical local receiving and full suite passed",
+    "fullSuite": {
+      "results": 270,
+      "passed": 264,
+      "failed": 0,
+      "skipped": 6
+    },
+    "canonicalReceiving": {
+      "owner": 23,
+      "normalSource": 18,
+      "normalCompiled": 18
+    }
+  }
+}
