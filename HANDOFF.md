@@ -1,5 +1,10 @@
 ## Durable Creation runtime and native adapter — November1,2026
 
+## Permanent mixed-project connection verified — November 1, 2026
+
+Normal owner setup now runs ONEdd3d143 with Creationfd322d7. Consistent backups, preserved original2artifacts/29effects, actual protected mixed Forge+Creation project/two exact approvals/two native outputs, second normal restart and zero-redispatch replay passed. Configuration/selected/default models preserved; no new inference. [Nonprivate result](evidence/owner-projects-2026-11-01/permanent-owner-result.json). Supersedes the earlier pending-permanent-activation direction below; project UI, release/archive, remaining adapter paths/dynamic references and wider source/reuse/cost/production work stay open. Scope is local permanent backend acceptance, not whole-product completion.
+
+
 ## Authenticated owner projects and retained results — November 1, 2026
 
 Creationfd322d7 is published/adopted. ONE now binds durable Creation projects to its original authenticated owner workflows and exposes prepare/status/list/resume/cancel APIs; conversation can prepare and inspect plans without granting native authority. Parent retention protects active/completed artifacts, survives endpoint disablement, and blocks later unguarded retirement. Creation228/228; affected40/40; final native mixed-project HTTP7/7; existing owner/conversation/UI/handoff36/36. Counts overlap. Injected conversation responses are not live-model proof. [Exact source, limits and continuation](evidence/owner-projects-2026-11-01/RECEIVING-REPORT.md).

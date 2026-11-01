@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "permanentOwner": true,
+  "normalLauncherRestarts": 2,
+  "consistentBackups": 2,
+  "oldArtifactsPreserved": 2,
+  "nativeForgeAndCreationArtifacts": 2,
+  "originalNativeEffects": 2,
+  "replayRedispatches": 0,
+  "newInferenceCalls": 0,
+  "configurationUnchanged": true,
+  "selectedAndDefaultModelsPreserved": true,
+  "accountCatalogReturned": true,
+  "projectUIAccepted": false,
+  "productionAccepted": false,
+  "privateValuesPrinted": false
+}
