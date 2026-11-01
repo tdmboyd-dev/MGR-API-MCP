@@ -1,0 +1,9 @@
+{
+  "creation/src/api/durable-objectives.ts": "53087acfbccd3ddb4a4fc331e6a3a739d3c9f6b43949f84926f53b079ec12966",
+  "creation/src/objectives/stage-outputs.ts": "9c6951068ccfe0e2bce3eda0ea772926dcb1557a5b14d777ba3566549acb0f78",
+  "creation/src/persistence/sqlite.ts": "32d17433e2d2c54107eb79bcad9d18d2cbd4d9baab3b894dc962a8815f55d655",
+  "creation/test/stage-outputs.test.ts": "681494c413594e90bbf5d050a74e09ddd9b9a93c978e4c519a77e2e2a11fa9ef",
+  "one/web/owner-creation-projects.mjs": "17a59f7efb6854cdb24fabb4076c9a9340d81eb7c39b658e7c3f557bf3e80477",
+  "one/web/creation-project-contract.mjs": "8af97da1b0f5b6ccd2063e01f47494824427953b1699522110ca5b0c5b3f730e",
+  "one/scripts/qualification/owner-projects-http.test.mjs": "1394dc3b690b231021ff9ebd4e06c0448609f7fa1b28e4ccb0c43125bfd7c606"
+}

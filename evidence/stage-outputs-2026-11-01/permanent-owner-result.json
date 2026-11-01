@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "permanentOwner": true,
+  "normalLauncherRestarts": 2,
+  "consistentBackups": 2,
+  "oldArtifactsPreserved": 4,
+  "nativeForgeAndCreationArtifacts": 3,
+  "originalNativeEffects": 3,
+  "generatedBiomeDependency": true,
+  "nativeJobListPreserved": true,
+  "replayRedispatches": 0,
+  "newInferenceCalls": 0,
+  "configurationUnchanged": true,
+  "selectedAndDefaultModelsPreserved": true,
+  "accountCatalogReturned": true,
+  "projectUIAccepted": false,
+  "productionAccepted": false,
+  "privateValuesPrinted": false
+}

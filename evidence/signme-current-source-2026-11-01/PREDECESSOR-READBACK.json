@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "permanentOwner": true,
+  "sharedAPI": true,
+  "sourceCommit": "38c3328aff24338f0aeae8f15579d7563140d677",
+  "documents": [
+    {
+      "path": "HANDOFF.md",
+      "pages": 1,
+      "gitBlob": "35d412c52a6a98a1e2a7bcd88e70746cf4045b2f",
+      "sha256": "69fe897d8fb7ecb0abb9cb68339b3269305c7acfdbc09f15a1280447f6c8de25"
+    },
+    {
+      "path": "docs/SIGNME-OPERATION-GUIDE.md",
+      "pages": 1,
+      "gitBlob": "207e08a4fc19276190d56cfdb43b934475292e8b",
+      "sha256": "afefdb7ac48c203c312f0b43e6717c08fcc9212ad8382e454f88132cdb7b2b0b"
+    },
+    {
+      "path": "docs/ecosystem/SERVICE-WORKFLOWS.md",
+      "pages": 1,
+      "gitBlob": "8ddcddc9d7ee4b95dcf45dcdd62ead62dbdef752",
+      "sha256": "52adaf1970a91f6425dc7e17d36503a8792558dfbd3d018cd7ab53f286c4a515"
+    }
+  ],
+  "oldPinnedCommitRefused": true,
+  "executionEffectsUnchanged": true,
+  "privateConfigurationUnchanged": true,
+  "newInferenceCalls": 0,
+  "signmeNativeExecutionEnabled": false,
+  "fullKnowledgeCoverage": "Unassessed",
+  "privateValuesPrinted": false
+}

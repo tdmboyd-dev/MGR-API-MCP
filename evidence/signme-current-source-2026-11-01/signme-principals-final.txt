@@ -1,0 +1,20 @@
+✔ registration ignores paid entitlement escalation and never exposes session token in JSON (184.5047ms)
+✔ authentication queries require server expiry and deny cross-site cookie mutations (32.4951ms)
+✔ unconfigured AI and billing paths do not fabricate results or mutate entitlements (57.5956ms)
+✔ SignMe real process/SQLite: owned immutable drafts, receipts, replay, conflict and restart (866.5602ms)
+✔ fresh SignMe SQL migrations include session token and immutable version bridge (21.9387ms)
+✔ signature fields deny foreign document read and write without storage effects (224.4339ms)
+✔ owned field write rejects recipient from another document and invalid geometry (33.6406ms)
+✔ saved signature cannot attach to a recipient owned by someone else (19.7001ms)
+✔ caller mutation cannot replace a captured service credential or its tenant/actor (200.002ms)
+✔ caller array mutation cannot enroll an additional service principal (97.5928ms)
+✔ duplicate bearer credentials are rejected before database creation (5.6474ms)
+✔ malformed credential encoding is rejected before database creation (1.9879ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1074.8374

@@ -1,0 +1,54 @@
+{"actualOwnerHTTP":true,"nativeDocuments":2,"originalEffects":2,"projectAndArtifactReopen":true,"retirementBlockedForActiveCompletedAndDisabled":true,"modelCalls":0}
+✔ actual owner API -> project prepare/approval/native files -> retained child -> all-host restart (10035.0201ms)
+✔ project APIs reject a changed plan, selected business and unknown extra inputs (2380.2298ms)
+{"injectedModelRounds":5,"actualProjectPlanAndStatus":true,"nativeApprovals":0,"nativeDispatches":0,"liveModel":false}
+✔ conversation proposal and checkpoint reads use actual project persistence without approving or executing native actions (2867.6181ms)
+✔ retirement approval/apply recheck later project custody and preserve the original result (2399.6499ms)
+✔ persisted retention requirement blocks a later unguarded workflow instance (2606.524ms)
+✔ server rejects a forged project host and request fences reject an away-and-back business switch (2315.7028ms)
+{"actualOwnerMixedProject":true,"nativeForgeAndCreation":true,"originalEffects":2,"allHostRestart":true,"redispatches":0,"liveInference":0}
+✔ actual owner project API joins original Forge creature and Creation document with cold recovery (11686.0244ms)
+{"actualNativeProjectPaths":["forge.world.create","forge.creature.create","forge.biome.create","forge.world.compose","forge.human.lipsync","creation.document.render"],"nativePathsAccepted":6,"generatedBiomeReference":true,"reopenedBeforeComposition":true,"coldReopen":true,"originalEffects":6,"redispatches":0,"modelInference":0}
+✔ all six native project paths and generated biome dependency survive exact approvals and cold reopen (62833.2366ms)
+✔ Codex Forge context is opt-in, host-receipted and refuses caller-selected workspaces before any read (932.9177ms)
+✔ configured repository reads use host receipts and remain absent when context reads are disabled (623.939ms)
+✔ repository read with caller root or command fails the complete tool batch before any call (299.5287ms)
+✔ Codex uses the same exact-decimal host calculation without granting private memory reads (361.6385ms)
+✔ Codex refuses a false host calculation and validates all arguments before any execution (723.2056ms)
+✔ fake CLI protocol preserves split UTF8, usage and startup warning; all temporary turn directories removed (1187.9682ms)
+✔ fake CLI unknown events and invalid ordering cannot be reported as a tool-free confirmed turn (2465.6744ms)
+✔ fake CLI malformed/error/native-tool/encoding/size/usage output is denied and cleaned up (3205.7053ms)
+✔ fake CLI malformed final JSON is a fixed safe error without model content (419.6818ms)
+✔ fake CLI cancellation kills owned process and removes turn data before rejection completes (288.1574ms)
+✔ failure to launch the configured process removes its prepared turn schema (281.7546ms)
+✔ fixture credentials and policy-directory overrides are absent from the native child allowlist (376.888ms)
+✔ host validates the complete requested batch before any local tool executes (237.4037ms)
+✔ host malformed tool JSON denies the whole batch without exposing model content (239.4515ms)
+✔ host uses receipts as evidence and preserves exact accumulated usage; private context/tool training is conditional (613.3013ms)
+✔ host rejects malformed tool receipts and unconfirmed/invalid usage without another model call (2156.0627ms)
+✔ host busy ownership survives pending runner and is released after cancellation failure (299.8246ms)
+✔ provider-neutral Forge context is only exposed for configured Forge and validates the whole empty-input batch (1269.0641ms)
+✔ language defaults, exact-owner controls, revision conflict, replay and undo survive restart (320.742ms)
+✔ conversation executes real host read callback then sends result, preserving profanity and usage (444.5468ms)
+✔ disabled calls and unapproved context never execute; unknown tools and extra arguments are rejected (1293.8423ms)
+✔ duplicate tool IDs, tool batches and provider loops cannot repeat or exceed bound (1171.6797ms)
+✔ oversized, incomplete, usage-less, provider failure and concurrent requests fail without retry (1454.3031ms)
+✔ history preserves profanity, caps context and deduplicates completed turns (21.9404ms)
+✔ actual HTTP conversation uses durable profile and history; denied access, replay, uncertainty and backup recovery (1020.6598ms)
+✔ normal registered owner HTTP previews approves retires recovers capacity and reopens without redispatch (1028.5168ms)
+✔ all account GPT models are exposed; selected model persists through restart without resetting budget (1108.4389ms)
+✔ catalog checks, selection conflicts and unauthenticated changes deny without model requests (516.4052ms)
+✔ current included usage denial blocks before reservation and transport (518.9089ms)
+✔ one-use launch tickets authenticate once and expire without exposing the durable credential (480.4909ms)
+✔ public instance challenges prove the local service without revealing owner configuration (438.6096ms)
+✔ the finite local allowance persists across models and restart (770.7548ms)
+✔ model selection cannot race a conversation waiting for account preflight (754.3201ms)
+✔ standard nullable account permission remains unknown and every visible GPT catalog entry survives projection (3.167ms)
+ℹ tests 42
+ℹ suites 0
+ℹ pass 42
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 100427.8651
