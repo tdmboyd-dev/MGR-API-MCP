@@ -139,3 +139,21 @@ test('expiry after accepted POST suppresses publication and never retries the ef
  const response=await handlers.get('mgr_department_execute')({operation:'omnidev.job.verify',requestId,input});
  assert.equal(posts,1);assert.equal(response.isError,true);assert.doesNotMatch(JSON.stringify(response),/reportSha256|sourceDigest/);
 });
+
+for(const exactId of ['.','..','owner:trial_revision','_draft','-draft'])test('native exact request identity survives status report and cancel: '+exactId,async()=>{
+ const f=fixture();f.common.requestId=exactId;f.common.inputDigest=omniSha256(canonicalOmniJson({actorId,tenantId,requestId:exactId,...input}));
+ let executionPosts=0;const seen:string[]=[];
+ const fetcher=(async(url,init)=>{
+  const path=new URL(String(url)).pathname;seen.push(path);
+  if(path.endsWith('/binding'))return json(f.binding);
+  if(path==='/v1/engineering/verifications'){executionPosts++;return json(f.common);}
+  const dot=exactId==='.'||exactId==='..',body=init?.body?JSON.parse(String(init.body)):undefined;
+  const status=dot?'/v1/engineering/verification-status':'/v1/engineering/verifications/'+encodeURIComponent(exactId);
+  const report=dot?'/v1/engineering/verification-report':status+'/report';
+  const cancel=dot?'/v1/engineering/verification-cancel':status+'/cancel';
+  if(path===status||path===report){assert.equal(init?.method,dot?'POST':'GET');if(dot)assert.deepEqual(body,{requestId:exactId});return json(path===report?{...f.common,report:f.report}:f.common);}
+  if(path===cancel){assert.equal(init?.method,'POST');assert.equal(body.requestId,exactId);return json(f.common);}
+  throw Error('Unexpected normalized identity route');
+ }) as typeof fetch;
+ const c=client(fetcher);assert.equal((await c.status(exactId,input)).requestId,exactId);assert.equal((await c.artifact(exactId,input)).requestId,exactId);assert.equal((await c.cancel(exactId,input)).requestId,exactId);assert.equal(executionPosts,0);assert.ok(seen.length>=6);
+});

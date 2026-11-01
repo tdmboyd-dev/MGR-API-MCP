@@ -66,11 +66,12 @@ export class OmniEngineeringClient {
  private publicReceipt(v:any){return {requestId:v.requestId,actorId:v.actorId,tenantId:v.tenantId,workspaceId:v.workspaceId,jobId:v.jobId,sourceDigest:v.sourceDigest,candidateDigest:v.candidateDigest,testManifestDigest:v.testManifestDigest,inputDigest:v.inputDigest,status:v.status,cancelRequested:v.cancelRequested,receiptId:v.receiptId,policyIdentity:{...this.config.expectedPolicy},readbackVerified:false,currentBindingVerified:false};}
  async status(requestId:string,input:OmniInput){return this.readStatus(requestId,input);}
  async artifact(requestId:string,input:OmniInput){const result=await this.readStatus(requestId,input,true);if(!result.readbackVerified||!("contentBase64" in result))throw Error("Omni verified report unavailable");return {...result,sha256:(result as {reportSha256:string}).reportSha256};}
+ private receiptRead(requestId:string,kind:'status'|'report'){return requestId==='.'||requestId==='..'?this.request('/v1/engineering/verification-'+kind,{requestId}):this.request('/v1/engineering/verifications/'+encodeURIComponent(requestId)+(kind==='report'?'/report':''));}
  private async readStatus(requestId:string,input:OmniInput,includeBytes=false){
-  this.body(requestId,input);const value=this.checkReceipt(await this.request('/v1/engineering/verifications/'+encodeURIComponent(requestId)),requestId,input);
+  this.body(requestId,input);const value=this.checkReceipt(await this.receiptRead(requestId,'status'),requestId,input);
   if(value.status==='succeeded'&&!durableId(value.reportId))throw Error('Omni successful report ID missing');
   if(!['succeeded','failed'].includes(value.status)||!value.reportId)return this.publicReceipt(value);
-  const fetched=this.checkReceipt(await this.request('/v1/engineering/verifications/'+encodeURIComponent(requestId)+'/report'),requestId,input);
+  const fetched=this.checkReceipt(await this.receiptRead(requestId,'report'),requestId,input);
   if(!durableId(value.receiptId)||!durableId(fetched.receiptId)||!durableId(value.reportId)||!durableId(fetched.reportId))throw Error('Omni successful receipt ID missing');
   const report=fetched.report,a=report?.assignment,n=report?.nativeReceipt,tests=report?.externalTests;
   this.identity(report);
@@ -85,7 +86,7 @@ export class OmniEngineeringClient {
   return {...this.publicReceipt(fetched),readbackVerified:true,currentBindingVerified,reportId,reportSha256:sha,bytes:bytes.length,mediaType:'application/json',assignmentId:a.id,native:n,...(includeBytes?{contentBase64:bytes.toString('base64')}:{ }),scope:'Approved MGR snapshot only; supervised disk budget, no hard filesystem quota'};
  }
  async cancel(requestId:string,input:OmniInput){
-  const body=this.body(requestId,input);const value=this.checkReceipt(await this.request('/v1/engineering/verifications/'+encodeURIComponent(requestId)+'/cancel',body),requestId,input);
+  const body=this.body(requestId,input);const path=requestId==='.'||requestId==='..'?'/v1/engineering/verification-cancel':'/v1/engineering/verifications/'+encodeURIComponent(requestId)+'/cancel';const value=this.checkReceipt(await this.request(path,body),requestId,input);
   // Cancellation acknowledgment is not a claim of verified process-tree cleanup.
   return value.status==='succeeded'||value.status==='failed'&&value.reportId?this.status(requestId,input):this.publicReceipt(value);
  }
