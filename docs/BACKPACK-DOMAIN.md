@@ -89,3 +89,6 @@ tested by the shutdown controller tests. Temporary cleanup is restricted to its
 newly created directory. `MGR_ONE_TEST_ROOT` selects the exact compatible Tevin
 source for the separate owner-startup tests; build that source first. Never point
 this check at another agent's changing work and then call it an accepted release.
+
+
+For packaged service builds and the separately gated real runtime check, read [BACKPACK-CONTAINER.md](BACKPACK-CONTAINER.md). Container source exists; no actual image/container is qualified on the current host yet.

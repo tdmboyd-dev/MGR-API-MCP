@@ -4,3 +4,12 @@ dist
 .local
 .env
 .env.*
+.backpack
+owner-lab
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.pem
+*.key
+*.pfx
+*.p12

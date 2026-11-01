@@ -1,0 +1,19 @@
+# syntax=docker/dockerfile:1
+# Build with scripts/build-backpack-container.mjs. Named context is the reviewed
+# private Backpack checkout; its store, credentials and node_modules are excluded.
+ARG API_IMAGE=mgr-api-mcp:backpack-base
+FROM node:24-bookworm-slim AS backpack
+WORKDIR /toolkit
+COPY --from=backpack-source package.json package-lock.json ./
+RUN npm ci --omit=dev --ignore-scripts
+COPY --from=backpack-source src ./src
+COPY --from=backpack-source docs ./docs
+COPY --from=backpack-source core ./core
+COPY --from=backpack-source skills ./skills
+COPY --from=backpack-source README.md HANDOFF.md THIRD-PARTY-NOTICES.md BACKPACK-CAPABILITY.json ./
+
+FROM ${API_IMAGE} AS runtime
+COPY --from=backpack /toolkit /opt/mgr-backpack
+ENV MGR_BACKPACK_TOOLKIT_ROOT=/opt/mgr-backpack
+# Inherits the non-root API entrypoint. Private BACKPACK_CONFIG, project bindings,
+# allowed project roots and persistent store must be explicitly mounted by owner.

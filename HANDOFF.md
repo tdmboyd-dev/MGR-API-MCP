@@ -1,3 +1,13 @@
+# Container packaging and compiled Backpack0.6.0 — November 1, 2026
+
+Added non-root API/Backpack Docker packaging, locked dependency installs, private-state exclusions, a local-only clean-source build wrapper and owned constrained runtime qualification. Both scripts pass syntax checks. The full current source verifier passed161/161 (zero failure/skip), typecheck, hosted-artifact syntax and plugin validation with the separately pinned ONE fixture at ea51bd23cca449feebd3e3149e108233d646a45f. Actual compiled normal HTTP with Backpack0.6.0 passed11 local TCP/JWKS/signed-JWT/SQLite checks.
+
+No Docker image build or actual container is verified: the host engine is not ready, the last administrator prompt was canceled and its path registration repair was not executed. Do not retry that step without renewed owner authorization. Host restart timing and license acceptance remain the owner's. See docs/BACKPACK-CONTAINER.md for exact build, runtime qualification, mounts and operations. A container is not OmniDev's worker fleet or a hosted OAuth/account connection.
+
+Other agents' canonical API/ONE worktrees remain untouched. Current Tevin consumption, public HTTPS/OAuth/browser and original product acceptance are unverified; the pinned historical ONE contract test does not prove a newer changing Tevin checkout.
+
+---
+
 # Four-repo Backpack connection — November 1, 2026
 
 Isolated branch `integrate/four-repo-tools-20261101` adds Backpack to the existing normal authenticated HTTP entrypoint. Other agents' canonical API-MCP/ONE working trees were not edited. API-MCP remains the shared edge; ONE owns reasoning/permissions.

@@ -32,7 +32,9 @@ const origin='https://owned-backpack.fixture.invalid',local=`http://127.0.0.1:${
 const localFetch:typeof fetch=async(input,init)=>{const request=new Request(input,init),headers=Object.fromEntries(request.headers),body=Buffer.from(await request.arrayBuffer());headers.host=new URL(origin).host;headers.connection='close';if(body.length)headers['content-length']=String(body.length);return new Promise<Response>((resolve,reject)=>{const req=httpRequest(local+new URL(request.url).pathname,{method:request.method,headers,agent:false},res=>{const chunks:Buffer[]=[];res.on('data',chunk=>chunks.push(Buffer.from(chunk)));res.on('error',reject);res.on('end',()=>{const out=new Headers();for(const [key,value] of Object.entries(res.headers))if(value!==undefined)out.set(key,Array.isArray(value)?value.join(','):value);resolve(new Response(res.statusCode===204?null:Buffer.concat(chunks),{status:res.statusCode,headers:out}));});});req.on('error',reject);req.end(body);});};
 const env={...process.env,PORT:String(port),MCP_PUBLIC_BASE_URL:origin,MCP_AUTH_ISSUER:issuer,MCP_JWKS_URL:issuer+'/jwks',MGR_BACKPACK_TOOLKIT_ROOT:toolkit,BACKPACK_CONFIG:config,MGR_BACKPACK_BINDINGS_FILE:bindingPath,MCP_REQUIRED_SCOPES:'tools:read',MCP_ADVERTISED_SCOPES:'tools:read,backpack:read',MGR_DEPARTMENTS_ENABLED:'false'};
 delete env.LEGACY_BASE_URL;
-const child=spawn(process.execPath,['--import','tsx','src/http-server.ts'],{env,cwd:path.resolve('.'),stdio:['ignore','pipe','pipe'],windowsHide:true});
+const compiledEntry=process.env.MGR_API_HTTP_ENTRY;
+if(compiledEntry&&(!path.isAbsolute(compiledEntry)||!fs.statSync(compiledEntry).isFile()))throw Error('MGR_API_HTTP_ENTRY must be an existing absolute compiled entrypoint');
+const child=spawn(process.execPath,compiledEntry?[compiledEntry]:['--import','tsx','src/http-server.ts'],{env,cwd:path.resolve('.'),stdio:['ignore','pipe','pipe'],windowsHide:true});
 let diagnostics='';child.stderr.on('data',chunk=>diagnostics+=String(chunk));
 const clients:Client[]=[],checks:string[]=[];
 async function token(actor='owned-actor',tenant='owned-tenant',scope='tools:read backpack:read',expires='2m'){
@@ -55,7 +57,7 @@ try{
  fs.writeFileSync(bindingPath,JSON.stringify([binding]));assert(!(await client.callTool({name:'mgr_backpack_context',arguments:{project:binding.project}})).isError);checks.push('explicit-binding-restored');
  const expired=await localFetch(audience,{headers:{authorization:'Bearer '+await token('owned-actor','owned-tenant','tools:read backpack:read','-1s')}});assert.equal(expired.status,401);checks.push('expired-signed-token-refused');
  assert.equal(fs.readFileSync(path.join(root,'README.md'),'utf8'),'Owned HTTP verification fixture. No repository code is run.');checks.push('source-unchanged');
- console.log(JSON.stringify({at:new Date().toISOString(),scope:'Actual local TCP HTTP entrypoint/JWKS/JWT/SQLite; synthetic identity, no deployment/provider/Tevin acceptance',passed:checks.length,checks,toolkitVersion:JSON.parse(fs.readFileSync(path.join(toolkit,'package.json'),'utf8')).version,normalEntrypoint:'src/http-server.ts',legacyConfigured:false},null,2));
+ console.log(JSON.stringify({at:new Date().toISOString(),scope:'Actual local TCP HTTP entrypoint/JWKS/JWT/SQLite; synthetic identity, no deployment/provider/Tevin acceptance',passed:checks.length,checks,toolkitVersion:JSON.parse(fs.readFileSync(path.join(toolkit,'package.json'),'utf8')).version,normalEntrypoint:compiledEntry?'compiled dist/src/http-server.js':'src/http-server.ts',legacyConfigured:false},null,2));
 }finally{
  await Promise.allSettled(clients.map(client=>client.close()));
  if(child.exitCode===null){child.kill();await new Promise<void>(resolve=>{if(child.exitCode!==null)return resolve();child.once('exit',()=>resolve());});}
