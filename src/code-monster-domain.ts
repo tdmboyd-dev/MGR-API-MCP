@@ -5,7 +5,7 @@ import {authorizeTool,type AuthContext} from './authz.js';
 import {projectBindingReader} from './project-bindings.js';
 import type {AuthorizedMgrMcpHttpOptions} from './mcp-http.js';
 
-const catalog=new Set(['code_monster_self','code_monster_help','code_monster_profile','code_monster_symbols']);
+const catalog=new Set(['code_monster_self','code_monster_help','code_monster_profile','code_monster_symbols','code_monster_references','code_monster_impact']);
 const principal=(auth:AuthContext)=>JSON.stringify([auth.actorId,auth.tenantId,auth.audience,[...auth.scopes].sort(),auth.expiresAt]);
 /** Host composition of the existing read-only source service. No new token,
  * scheduler, canonical evidence store, code runner or root enrollment is added. */
@@ -38,7 +38,7 @@ export function loadCodeMonsterDomain(env:NodeJS.ProcessEnv=process.env):{
   const facade={registerTool(name:string,definition:any,handler:(input:any,callContext:any)=>Promise<any>){
    if(!catalog.has(name)||definition.annotations?.readOnlyHint!==true)throw Error('Unexpected Code Monster tool declaration');
    return server.registerTool(name,definition,async(input:any,callContext:any)=>{
-    const analyzes=name==='code_monster_profile'||name==='code_monster_symbols';let ownsAnalysis=false;
+    const analyzes=['code_monster_profile','code_monster_symbols','code_monster_references','code_monster_impact'].includes(name);let ownsAnalysis=false;
     try{
      const auth=await current(analyzes?input.project:undefined);
      // Reserve across all HTTP handlers, not just one newly-created MCP server.

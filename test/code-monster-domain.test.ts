@@ -34,8 +34,9 @@ test('actual source service enforces project scope, post-read revocation and glo
   const tools=new Map<string,(input:any,context:any)=>Promise<any>>();domain.register({registerTool(name:string,_definition:any,handler:any){tools.set(name,handler);}} as any,{auth,resourceAudience:auth.audience,revalidateAuth});return tools;
  }
  const tools=register(),call=(name:string,input:any={})=>tools.get(name)!(input,{}),input={project:'owned',revision:'HEAD',prefixes:[]};
- assert.equal(tools.size,4);assert.equal((await call('code_monster_self')).isError,undefined);
+ assert.equal(tools.size,6);assert.equal((await call('code_monster_self')).isError,undefined);
  const profile=await call('code_monster_profile',input);assert(!profile.isError,JSON.stringify(profile));assert(JSON.stringify(profile).includes('owned'));
+ for(const name of ['code_monster_references','code_monster_impact']){const result=await call(name,{...input,symbol:'ownedCapability',offset:0,limit:10,...(name==='code_monster_impact'?{maxDepth:2}:{})});assert(!result.isError,JSON.stringify(result));assert(JSON.stringify(result).includes('unique'));}
  const symbols=await call('code_monster_symbols',{...input,symbol:'ownedCapability',offset:0,limit:10});assert(!symbols.isError);assert(JSON.stringify(symbols).includes('ownedCapability'));
  for(const change of [{actorId:'other'},{tenantId:'other'},{scopes:['tools:read']},{expiresAt:0}]){const saved=auth;auth={...auth,...change};const result=await call('code_monster_profile',input);assert.equal(result.isError,true);assert(!JSON.stringify(result).includes('ownedCapability'));auth=saved;}
  fs.writeFileSync(bindings,'[]');assert.equal((await call('code_monster_profile',input)).isError,true);fs.writeFileSync(bindings,JSON.stringify([grant]));
@@ -45,7 +46,7 @@ test('actual source service enforces project scope, post-read revocation and glo
  let release!:()=>void,reached!:()=>void,calls=0;const held=new Promise<void>(r=>release=r),entered=new Promise<void>(r=>reached=r);
  const first=register(async()=>{if(++calls===2){reached();await held;}return {...auth,scopes:[...auth.scopes]};}),second=register();
  const pending=first.get('code_monster_profile')!(input,{});await entered;
- try{const busy=await second.get('code_monster_profile')!(input,{});assert.equal(busy.isError,true,'one analysis admission across distinct HTTP server instances');}finally{release();}assert(!(await pending).isError);
+ try{const busy=await second.get('code_monster_references')!({...input,symbol:'ownedCapability',offset:0,limit:10},{});assert.equal(busy.isError,true,'one analysis admission across distinct HTTP server instances');}finally{release();}assert(!(await pending).isError);
  assert(!(await second.get('code_monster_profile')!(input,{})).isError,'admission releases after owned analysis cleanup');
  const abort=new AbortController();abort.abort();assert.equal((await tools.get('code_monster_profile')!(input,{mcpReq:{signal:abort.signal}})).isError,true);assert(!(await call('code_monster_profile',input)).isError,'cancelled read releases analysis admission');
  fs.writeFileSync(config,JSON.stringify({projects:[]}));assert.equal((await call('code_monster_profile',input)).isError,true);

@@ -1,6 +1,6 @@
 # Code Monster source tools through the existing API edge
 
-The normal HTTP service can now register Code Monster's existing four read-only
+The normal HTTP service can now register Code Monster's existing six read-only
 source tools alongside Backpack's nine guarded context tools. This connects
 source intelligence to the shared edge. MGR-ONE/Tevin still owns reasoning and
 permission decisions; Code Monster owns its source observations and candidate
@@ -14,6 +14,8 @@ evidence. No new brain, scheduler, token issuer or canonical job database exists
 | `code_monster_help` | Read bounded hashed handbook/readme pages | Reference text, never an execution grant |
 | `code_monster_profile` | Inspect a permitted committed repository's source structure and coverage | Bounded JavaScript/TypeScript compiler observations; unsupported coverage stays explicit |
 | `code_monster_symbols` | Find exact declarations with commit, source hash and range citations | Bounded declaration query, not proof that a feature works |
+| `code_monster_references` | Follow exact compiler-bound references; ambiguous names return candidates | No lexical name merge or behavior certification |
+| `code_monster_impact` | List bounded potential affected files with actual bindings separate from conservative module dependents | Review/test planning only; unsupported/dynamic behavior remains unknown |
 
 Profile/symbol inputs use a registered `project`, optional exact `revision` or
 `HEAD`, and optional narrowing `prefixes`. Symbols additionally support `symbol`,
