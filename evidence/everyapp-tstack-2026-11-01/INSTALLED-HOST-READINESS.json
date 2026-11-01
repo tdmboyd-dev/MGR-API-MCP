@@ -1,0 +1,24 @@
+{
+  "observedAt": "2026-11-01T16:58:08.612Z",
+  "card": {
+    "status": "current-source-references",
+    "sha256": "961b0d6ac421e25e52c4c427ff574509658c3ce0933de289582a7c4875de1598",
+    "reviewStatus": "draft-requires-owner-review",
+    "references": 16,
+    "allCurrent": true,
+    "dispatchAllowed": false
+  },
+  "fixedProcedure": {
+    "project": "code-monster",
+    "task": "host-check-code-monster",
+    "profile": {
+      "id": "code-monster-source-contracts",
+      "ready": false,
+      "reason": "Execution profile source approval is stale; owner review is required"
+    },
+    "currentPassed": 0,
+    "currentTotal": 1
+  },
+  "configurationChanged": false,
+  "limits": "Readiness/source-reference readback only; old successful runs do not qualify current changed source. Pending owner review retained."
+}
