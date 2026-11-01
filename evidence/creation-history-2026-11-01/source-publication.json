@@ -1,0 +1,178 @@
+{
+  "publication": "non-force pushed and independently fetched; all qualified own commits ancestors; main branches not promoted",
+  "repositories": [
+    {
+      "repository": "MGR-ONE",
+      "branch": "integrate/department-tools-2026-10-28",
+      "ownCommit": "08440ac704c1d70d32e4bdbe5ea38e427f17dff4",
+      "publishedHead": "2fbbce24d17ee402466bd245a72232c9530f77fc",
+      "fetchedHead": "2fbbce24d17ee402466bd245a72232c9530f77fc",
+      "entireHeadEqualsFetch": true,
+      "exactOwnFiles": [
+        {
+          "path": "coordination/ECOSYSTEM-PRODUCTION-AUDIT.md",
+          "sha256": "2e26f74fc115dc816ee9178a1b2cbf5afd732bfdae6d2e4a8caba95a1709a3c5"
+        },
+        {
+          "path": "coordination/ECOSYSTEM-REUSE-AND-MERGE-PLAN.md",
+          "sha256": "f01e58dcb161f8e73bec899991a4436955c660780b19ec49585360609df67d95"
+        },
+        {
+          "path": "docs/reign-plan/ONE-WORK-ORDER.md",
+          "sha256": "2210961e69a1f269234aa214883f0be361581ee15ecbba32845516f24624c40d"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/CONSUMER-MIGRATION.md",
+          "sha256": "62839fa79100d99a923f6b5a3e1e1cc5d51af56f57ea34b29780d4a4a3371ce3"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/canonical-source-custody.json",
+          "sha256": "4b0ff43648f2c2a5e5407ae212ef46acda9e36d72524f474d0d4a85a2f4bcd0d"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/consumer-source-inputs.json",
+          "sha256": "461fd59abd0b19876bdd4b68e4d9db090f5ddce804c44ab39bb46ae423d14ca6"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/creation-api-affected.txt",
+          "sha256": "c176ee78a9fad02f991a983866d7edc7a534b2c8836530a4b9d75ac40e4f17cb"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/creation-canonical-conversation.txt",
+          "sha256": "fc864c3214702e4db11dca2d548dd07ff6082aed32025357157532dfb940ac36"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/creation-canonical-final.txt",
+          "sha256": "1b39d0f2a267f6cd9d7a52a2f17f09c4a839bd7af52f7c23bc562ae27b46a88b"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/creation-canonical-owner-qualification.txt",
+          "sha256": "0dd9f7a809bde3854873be96290a7481f09e440195d44bf30fd44aac3d3024c2"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/creation-canonical-typecheck.txt",
+          "sha256": "f3bca0b34dd87803699fea97f50dc56a916e4a8af1e03df4e40ce054a2ae3216"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/creation-permanent-after.txt",
+          "sha256": "7b0bea69d0ebcf7f39c0873390574e313b3056d2c0f87b96c491ff3e19280330"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/creation-permanent-before.txt",
+          "sha256": "de86eee6aa1422046819231a41b3aeb67a950e47c161f3ae71abccd1573c1e80"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/publication-secret-review.json",
+          "sha256": "03ecde41ebd618038249069cedc30ee7acacb639b04b3644e1ee42a6ad378602"
+        },
+        {
+          "path": "web/owner-departments.mjs",
+          "sha256": "edca1608c8e791173709d53e4dfb96032fdaa732aaef0e68395f2f759ada745e"
+        }
+      ],
+      "concurrentJoinedNotes": [
+        {
+          "path": "HANDOFF.md",
+          "reason": "Peer appended/prepended independently owned audit notes; our Creation delivery section is preserved",
+          "publishedSha256": "d1e3adef5d98169c78164d009c78bc7af357a34c42c1e4b7d8623143a4a4bdf7"
+        },
+        {
+          "path": "docs/PROGRESS-SCORECARD.md",
+          "reason": "Peer appended/prepended independently owned audit notes; our Creation delivery section is preserved",
+          "publishedSha256": "c8c44761dad825b1ba5387ed7f1c8ab92b9e359547e5f60969639629a40c948e"
+        }
+      ]
+    },
+    {
+      "repository": "MGR-API-MCP",
+      "branch": "repair/completion-2026-10-28",
+      "ownCommit": "7722311a9d3c4e8266ac72d686a832a7bd527d87",
+      "publishedHead": "b775abbde1a3e538dfafa6f329f27d0fc098bb5f",
+      "fetchedHead": "b775abbde1a3e538dfafa6f329f27d0fc098bb5f",
+      "entireHeadEqualsFetch": true,
+      "exactOwnFiles": [
+        {
+          "path": "evidence/creation-history-2026-11-01/CONSUMER-MIGRATION.md",
+          "sha256": "62839fa79100d99a923f6b5a3e1e1cc5d51af56f57ea34b29780d4a4a3371ce3"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/canonical-source-custody.json",
+          "sha256": "4b0ff43648f2c2a5e5407ae212ef46acda9e36d72524f474d0d4a85a2f4bcd0d"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/consumer-source-inputs.json",
+          "sha256": "461fd59abd0b19876bdd4b68e4d9db090f5ddce804c44ab39bb46ae423d14ca6"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/creation-api-affected.txt",
+          "sha256": "c176ee78a9fad02f991a983866d7edc7a534b2c8836530a4b9d75ac40e4f17cb"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/creation-canonical-conversation.txt",
+          "sha256": "fc864c3214702e4db11dca2d548dd07ff6082aed32025357157532dfb940ac36"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/creation-canonical-final.txt",
+          "sha256": "1b39d0f2a267f6cd9d7a52a2f17f09c4a839bd7af52f7c23bc562ae27b46a88b"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/creation-canonical-owner-qualification.txt",
+          "sha256": "0dd9f7a809bde3854873be96290a7481f09e440195d44bf30fd44aac3d3024c2"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/creation-canonical-typecheck.txt",
+          "sha256": "f3bca0b34dd87803699fea97f50dc56a916e4a8af1e03df4e40ce054a2ae3216"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/creation-permanent-after.txt",
+          "sha256": "7b0bea69d0ebcf7f39c0873390574e313b3056d2c0f87b96c491ff3e19280330"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/creation-permanent-before.txt",
+          "sha256": "de86eee6aa1422046819231a41b3aeb67a950e47c161f3ae71abccd1573c1e80"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/publication-secret-review.json",
+          "sha256": "03ecde41ebd618038249069cedc30ee7acacb639b04b3644e1ee42a6ad378602"
+        }
+      ],
+      "concurrentJoinedNotes": [
+        {
+          "path": "HANDOFF.md",
+          "reason": "Peer appended/prepended independently owned audit notes; our Creation delivery section is preserved",
+          "publishedSha256": "8f2a130586130f40638b9a88bd19f8886acbc659eabfa6c2b4f72fc4446ac683"
+        },
+        {
+          "path": "docs/full-build/SCORECARD.md",
+          "reason": "Peer appended/prepended independently owned audit notes; our Creation delivery section is preserved",
+          "publishedSha256": "7a2acd71e0fd668c15a7a9717c43a5302ecb1df438b9b1d4e054a141e1dc5008"
+        }
+      ]
+    },
+    {
+      "repository": "MGR-CREATE-Os",
+      "branch": "repair/completion-2026-10-28",
+      "ownCommit": "54352ed9e2ef98fa41aad13ac1b4acb4d1362f72",
+      "publishedHead": "54352ed9e2ef98fa41aad13ac1b4acb4d1362f72",
+      "fetchedHead": "54352ed9e2ef98fa41aad13ac1b4acb4d1362f72",
+      "entireHeadEqualsFetch": true,
+      "exactOwnFiles": [
+        {
+          "path": "evidence/creation-history-2026-11-01/canonical-source-custody.json",
+          "sha256": "4b0ff43648f2c2a5e5407ae212ef46acda9e36d72524f474d0d4a85a2f4bcd0d"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/consumer-source-inputs.json",
+          "sha256": "461fd59abd0b19876bdd4b68e4d9db090f5ddce804c44ab39bb46ae423d14ca6"
+        },
+        {
+          "path": "evidence/creation-history-2026-11-01/publication-secret-review.json",
+          "sha256": "03ecde41ebd618038249069cedc30ee7acacb639b04b3644e1ee42a6ad378602"
+        }
+      ],
+      "concurrentJoinedNotes": []
+    }
+  ],
+  "unresolvedReadbackDifferences": 0,
+  "scope": "Creation source migration and consumer/cost-plan checkpoint; not whole-product or provider acceptance"
+}
