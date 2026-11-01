@@ -1,3 +1,9 @@
+## 2026-11-01 — Continued original Forge composition via shared MCP
+
+- Preserved source on existing MGR-API-MCP Git main 7ce84d7. src/forge-catalog-client.ts and src/forge-mcp-tools.ts extend one authorized Forge service with stable source-backed composed world creation/status; no duplicate API/MCP instance. Real Forge backend uses owner forge/world_composition_jobs.py and existing Studio job auth, exports one actual Blender-composed GLB plus Godot source. Current npm run verify **85 tests passed**, TypeScript and plugin checks pass.
+- Source Studio/Blender proof lives in sibling MGR-3D-FORGE/evidence/world/2026-11-01-studio-composed-world-acceptance.json; direct spawned test alone does NOT prove hosted remote OAuth or Tevin/ChatGPT end-to-end. Maintain no model weights, paid provider calls or private credential exposures.
+
+
 ## 2026-10-31 Original shared Forge MCP add-on wave
 
 - Actual src/mcp-server.ts tools:write description mismatch fixed to existing tools:execute. Added biomorphic world/Human Forge jobs and SHA-checked exact real GLB delivery through the existing MCP adapter, no second storage or control plane. Actual local official MCP SDK created/replayed two 3D sources and retrieved bytes, wrong tenant and digest failed closed; source/test/evidence in this repo. Human Blender MCP acceptance and deployed endpoint separately tracked. No licensed CUDA neural weights, cost or hosted iOS verified.

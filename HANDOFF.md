@@ -1,5 +1,14 @@
 # Resume MGR-API-MCP
 
+## CURRENT RECOVERED FORGE WORLD COMPOSITION — 2026-11-01
+
+**This is the ONE existing shared MGR API/MCP repository**, not a new local service. Recovering source built after 2026-10-31 published commit 7ce84d7. Current src/forge-catalog-client.ts and src/forge-mcp-tools.ts add scoped composed-world creation/status using the SAME authorized tenant, audience, tools:execute and tools:read, reusing Forge's one Studio job/vault. No duplicate transport/router/Creation OS middleman. Tests/test/forge-world-composition.test.ts and existing full suite npm run verify 85/85 PASS.
+
+**Real related Forge backend:** sibling MGR-3D-FORGE/forge/world_composition.py and forge/world_composition_jobs.py, existing Studio /api/world-compose-create/status and Blender receiver, one GLB plus Godot source archive and replay-safe job. Evidence in Forge evidence/world/2026-11-01-combined-world-blender-godot.json and evidence/world/2026-11-01-studio-composed-world-acceptance.json. Source archive packaging does NOT prove a running Godot engine, hosted remote endpoint, production OAuth/JWKS, or ChatGPT/Tevin app acceptance. The private Forge Creator plugin remains skills-first unless deployed hosted tools are independently proven.
+
+**Current operator reading order:** THIS HANDOFF.md -> docs/API-MCP-ENGINEERING-HANDBOOK.md -> src/forge-mcp-tools.ts, src/forge-catalog-client.ts, src/mcp-http.ts and tests -> sibling MGR-3D-FORGE/docs/HANDOFF.md. Keep exact state/repair/next proof in these two canonical handoffs, not a competing document.
+
+
 ## CURRENT DIRECT MGR FORGE CREATION + VERIFIED GLB MCP EDGE — 2026-10-31
 
 **Latest exact verification:** npm run verify => 81/81 API tests PASS; real official MCP protocol using fixture authorizations also passed both original biome/creature and Human Forge independent Blender GLB bytes with tenant/scope/digest checks. Forge full same-wave regression: 624 tests run, 3 skipped, zero failures, source MGR-3D-FORGE/evidence/audits/2026-10-31-megawave-full-regression.json. Both repo-owned Chrome source tests passed in the Forge checkout. No public deploy/OAuth credentials or paid neural GPU was proven in these local tests.

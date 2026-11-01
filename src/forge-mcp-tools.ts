@@ -2,7 +2,7 @@
 import type {McpServer} from "@modelcontextprotocol/server";
 import * as z from "zod/v4";
 import {authorizeTool, type AuthContext} from "./authz.js";
-import type {ForgeCatalogClient,ForgeCatalogSearch,ForgeWorldEdits,ForgeCreatureInput,ForgeBiomeInput,ForgeArtifactRequest,ForgeHumanLipSyncInput} from "./forge-catalog-client.js";
+import type {ForgeCatalogClient,ForgeCatalogSearch,ForgeWorldEdits,ForgeCreatureInput,ForgeBiomeInput,ForgeArtifactRequest,ForgeHumanLipSyncInput,ForgeWorldCompositionInput} from "./forge-catalog-client.js";
 import {createHash} from "node:crypto";
 
 export interface ForgeMcpToolOptions {
@@ -197,7 +197,7 @@ export async function readForgeArtifactMcp(options:ForgeMcpToolOptions,input:For
   if(!options.forge.readArtifact)return {accepted:false,state:"EXECUTOR_UNAVAILABLE"};
   if(!/^[a-f0-9]{24}$/.test(input.jobId) ||
      !/^[a-f0-9]{64}$/.test(input.expectedSha256) ||
-     !["creature","biome","world","human"].includes(input.kind))
+     !["creature","biome","world","human","composed"].includes(input.kind))
     return {accepted:false,state:"INVALID_ARTIFACT_IDENTITY"};
   try{
     const result=await options.forge.readArtifact(input);
@@ -276,6 +276,84 @@ export async function statusForgeHumanLipSyncMcp(options:ForgeMcpToolOptions,req
   }catch(error){
     return {accepted:false,state:"FORGE_UNAVAILABLE_OR_UNKNOWN",requestId,reconciliationRequired:true,
             reason:error instanceof Error?error.message:"Human job status unavailable"};
+  }
+}
+
+export async function createForgeCompositionMcp(options:ForgeMcpToolOptions,input:ForgeWorldCompositionInput):Promise<Record<string,unknown>>{
+  const reason=denied(options,"tools:execute");
+  if(reason)return {accepted:false,state:"DENY",reason};
+  if(!options.forge.createComposition)return {accepted:false,state:"EXECUTOR_UNAVAILABLE"};
+  if(!/^[A-Za-z0-9_-]{12,100}$/.test(input.requestId) ||
+     !/^[A-Za-z0-9_-]{12,100}$/.test(input.biomeRequestId))
+    return {accepted:false,state:"INVALID_COMPOSITION_ID"};
+  try{
+    const result=await options.forge.createComposition(input);
+    if(result.status==="RUNNING" && typeof result.job_id==="string" &&
+       /^[a-f0-9]{24}$/.test(result.job_id)){
+      return {accepted:true,status:"MGR_WORLD_COMPOSITION_RUNNING",
+              jobId:result.job_id,requestId:input.requestId,artifactReady:false};
+    }
+    if(result.status==="BUSY")
+      return {accepted:false,state:"HEAVY_BLENDER_WORKER_BUSY",requestId:input.requestId};
+    if(result.status==="MATERIALIZED" && typeof result.combined_world_sha256==="string" &&
+       /^[a-f0-9]{64}$/.test(result.combined_world_sha256) &&
+       typeof result.world_sha256==="string" && /^[a-f0-9]{64}$/.test(result.world_sha256) &&
+       typeof result.biome_sha256==="string" && /^[a-f0-9]{64}$/.test(result.biome_sha256) &&
+       typeof result.job_id==="string" && /^[a-f0-9]{24}$/.test(result.job_id) &&
+       result.independently_blender_verified===true &&
+       typeof result.combined_bytes==="number" &&
+       Number.isSafeInteger(result.combined_bytes) && result.combined_bytes>=28 &&
+       result.combined_bytes<=800000 && result.full_game_navigation_verified===false){
+      return {accepted:true,status:"MGR_COMPOSED_WORLD_GLTF_VERIFIED",
+              jobId:result.job_id,requestId:input.requestId,
+              artifactSha256:result.combined_world_sha256,
+              sourceCitySha256:result.world_sha256,
+              sourceBiomeSha256:result.biome_sha256,
+              artifactBytes:result.combined_bytes,
+              triangles:result.triangles,artifactReady:true,
+              blenderReimported:true,godotProjectSourceIncluded:true,
+              godotRuntimeAccepted:false,
+              hostedForgeVerified:false,ownerArtApproved:false};
+    }
+    return {accepted:false,state:result.status==="NEEDS_RECONCILIATION"?
+      "RECONCILIATION_REQUIRED":"WORLD_COMPOSITION_UNVERIFIED",
+      requestId:input.requestId,jobId:result.job_id};
+  }catch(error){
+    return {accepted:false,state:"COMPOSED_WORKER_OUTCOME_UNKNOWN",
+            requestId:input.requestId,reconciliationRequired:true,
+            reason:error instanceof Error?error.message:"world composition worker unavailable"};
+  }
+}
+
+export async function statusForgeCompositionMcp(options:ForgeMcpToolOptions,requestId:string):Promise<Record<string,unknown>>{
+  const reason=denied(options,"tools:read");
+  if(reason)return {accepted:false,state:"DENY",reason};
+  if(!options.forge.compositionStatus)return {accepted:false,state:"EXECUTOR_UNAVAILABLE"};
+  try{
+    const result=await options.forge.compositionStatus(requestId);
+    if(result.status==="RUNNING")
+      return {accepted:true,status:"MGR_WORLD_COMPOSITION_RUNNING",
+              requestId,jobId:result.job_id,artifactReady:false};
+    if(result.status==="MATERIALIZED" &&
+       typeof result.combined_world_sha256==="string" &&
+       /^[a-f0-9]{64}$/.test(result.combined_world_sha256) &&
+       result.independently_blender_verified===true &&
+       typeof result.job_id==="string" && /^[a-f0-9]{24}$/.test(result.job_id)){
+      return {accepted:true,status:"MGR_COMPOSED_WORLD_GLTF_VERIFIED",
+              requestId,jobId:result.job_id,
+              artifactSha256:result.combined_world_sha256,
+              artifactBytes:result.combined_bytes,
+              sourceCitySha256:result.world_sha256,
+              sourceBiomeSha256:result.biome_sha256,
+              blenderReimported:true,artifactReady:true,
+              hostedForgeVerified:false};
+    }
+    return {accepted:false,state:result.status||"UNKNOWN",
+            requestId,reconciliationRequired:result.status==="NEEDS_RECONCILIATION"};
+  }catch(error){
+    return {accepted:false,state:"COMPOSED_WORKER_OUTCOME_UNKNOWN",requestId,
+            reconciliationRequired:true,
+            reason:error instanceof Error?error.message:"world composition status unavailable"};
   }
 }
 
@@ -370,7 +448,7 @@ export function registerForgeMcpTools(server:McpServer,options:ForgeMcpToolOptio
       description:"Read exact tenant-authorized Forge GLB bytes by immutable job ID and SHA-256 via the existing MCP edge; optional embedded binary resource, not a public URL.",
       inputSchema:z.object({
         jobId:z.string().regex(/^[a-f0-9]{24}$/),
-        kind:z.enum(["creature","biome","world","human"]),
+        kind:z.enum(["creature","biome","world","human","composed"]),
         expectedSha256:z.string().regex(/^[a-f0-9]{64}$/),
         includeData:z.boolean().default(false)
       }).strict()
@@ -420,6 +498,27 @@ export function registerForgeMcpTools(server:McpServer,options:ForgeMcpToolOptio
       inputSchema:z.object({requestId:z.string().regex(/^[A-Za-z0-9_-]{12,100}$/)})
     },async input=>{
       const result=await statusForgeHumanLipSyncMcp(options,input.requestId);
+      return {content:[{type:"text",text:JSON.stringify(result)}],isError:result.accepted!==true};
+    });
+  }
+  if(options.forge.createComposition){
+    server.registerTool("mgr_forge_world_compose_create",{
+      description:"Merge an already saved original MGR world + pinned Forge biome in a real Blender job. Same shared MCP/Forge worker; independent reimport required.",
+      inputSchema:z.object({
+        requestId:z.string().regex(/^[A-Za-z0-9_-]{12,100}$/),
+        biomeRequestId:z.string().regex(/^[A-Za-z0-9_-]{12,100}$/)
+      }).strict()
+    },async input=>{
+      const result=await createForgeCompositionMcp(options,input);
+      return {content:[{type:"text",text:JSON.stringify(result)}],isError:result.accepted!==true};
+    });
+  }
+  if(options.forge.compositionStatus){
+    server.registerTool("mgr_forge_world_compose_status",{
+      description:"Read the exact original MGR World composition Blender job, GLB SHA and private artifact proof with the existing tools:read scope.",
+      inputSchema:z.object({requestId:z.string().regex(/^[A-Za-z0-9_-]{12,100}$/)})
+    },async input=>{
+      const result=await statusForgeCompositionMcp(options,input.requestId);
       return {content:[{type:"text",text:JSON.stringify(result)}],isError:result.accepted!==true};
     });
   }

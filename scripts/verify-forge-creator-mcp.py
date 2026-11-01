@@ -17,6 +17,7 @@ with TemporaryDirectory(prefix="mgr-mcp-protocol-") as temp:
     scratch=Path(temp)
     build(WorldSpec(seed=88,columns=2,rows=2,buildings=2),scratch/"world")
     human_mode=os.environ.get("MGR_RUN_HUMAN_LIPSYNC")=="1"
+    compose_mode=os.environ.get("MGR_RUN_WORLD_COMPOSITION")=="1"
     blender_binary=r"C:\Program Files\Blender Foundation\Blender 5.2\blender.exe"
     if human_mode and not Path(blender_binary).is_file():
         raise RuntimeError("Real Human Forge MCP proof requires installed Blender 5.2")
@@ -30,7 +31,7 @@ with TemporaryDirectory(prefix="mgr-mcp-protocol-") as temp:
         env["MGR_FORGE_STUDIO_TOKEN"]=studio.token
         process=subprocess.run(
             ["node","--import","tsx","scripts/verify-forge-native-mcp-protocol.mjs"],
-            cwd=repo,env=env,capture_output=True,text=True,timeout=95)
+            cwd=repo,env=env,capture_output=True,text=True,timeout=180)
         if process.returncode:
             print("MGR_LOCAL_MCP_PROTOCOL_FAILED",process.stderr[-4000:],process.stdout[-1800:])
             raise SystemExit(1)

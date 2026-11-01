@@ -1,3 +1,10 @@
+## 2026-11-01 — Forge composed world and remaining real hosted acceptance
+
+- [x] Single existing authorized MCP adapter gained composed-world create/status with job ID and actual source SHA contract; TypeScript/test 85/85 passed.
+- [ ] Real remote production issuer + tenant-scoped worker that can be reached by the hosted MGR API/MCP and ChatGPT/Tevin; no localhost authentication shortcut.
+- [ ] Real Godot engine render/collision/navigation acceptance, not just packaged source.
+- [ ] Properly licensed CUDA model inference, waveform phoneme alignment and owner visual approval; source-only REA inspection is not an installed model.
+
 ## 2026-10-31 Native Forge Creator MCP follow-on
 
 CREATOR-05 [LOCAL VERIFIED]: original Forge 3D biome, Human Blender job and authorized model binary read reuse src/forge-catalog-client.ts and src/forge-mcp-tools.ts. No duplicate backend; scoped real client test passes.

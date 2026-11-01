@@ -27,9 +27,13 @@ export interface ForgeBiomeInput {
   seed:number;
   resolution:number;
 }
+export interface ForgeWorldCompositionInput{
+  requestId:string;
+  biomeRequestId:string;
+}
 export interface ForgeArtifactRequest {
   jobId:string;
-  kind:"creature"|"biome"|"world"|"human";
+  kind:"creature"|"biome"|"world"|"human"|"composed";
   expectedSha256:string;
 }
 export interface ForgeArtifactProof {
@@ -57,6 +61,8 @@ export interface ForgeCatalogClient {
   creatureStatus?(requestId:string):Promise<Record<string,unknown>>;
   createBiome?(input:ForgeBiomeInput):Promise<Record<string,unknown>>;
   biomeStatus?(requestId:string):Promise<Record<string,unknown>>;
+  createComposition?(input:ForgeWorldCompositionInput):Promise<Record<string,unknown>>;
+  compositionStatus?(requestId:string):Promise<Record<string,unknown>>;
   readArtifact?(input:ForgeArtifactRequest):Promise<ForgeArtifactProof>;
   startHumanLipSync?(input:ForgeHumanLipSyncInput):Promise<Record<string,unknown>>;
   humanLipSyncStatus?(requestId:string):Promise<Record<string,unknown>>;
@@ -162,6 +168,18 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
     return this.post("/api/biome-status",{request_id:requestId});
   }
 
+  async createComposition(input:ForgeWorldCompositionInput):Promise<Record<string,unknown>>{
+    if(!/^[A-Za-z0-9_-]{12,100}$/.test(input.requestId) ||
+       !/^[A-Za-z0-9_-]{12,100}$/.test(input.biomeRequestId))
+      throw new Error("Invalid stable World Forge composition request/biome ID");
+    return this.post("/api/world-compose-create",{
+      request_id:input.requestId,biome_request_id:input.biomeRequestId});
+  }
+  async compositionStatus(requestId:string):Promise<Record<string,unknown>>{
+    if(!/^[A-Za-z0-9_-]{12,100}$/.test(requestId))
+      throw new Error("Invalid World Forge composition status request");
+    return this.post("/api/world-compose-status",{request_id:requestId});
+  }
   async startHumanLipSync(input:ForgeHumanLipSyncInput):Promise<Record<string,unknown>>{
     if(!/^[A-Za-z0-9_-]{12,100}$/.test(input.requestId) ||
        !Number.isInteger(input.fps) || input.fps<12 || input.fps>60 ||
@@ -185,14 +203,15 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
   async readArtifact(input:ForgeArtifactRequest):Promise<ForgeArtifactProof>{
     if(!/^[a-f0-9]{24}$/.test(input.jobId) ||
        !/^[a-f0-9]{64}$/.test(input.expectedSha256) ||
-       !["creature","biome","world","human"].includes(input.kind)){
+       !["creature","biome","world","human","composed"].includes(input.kind)){
       throw new Error("Invalid Forge artifact identity or expected digest");
     }
     const route={
       creature:"creature/creature.glb",
       biome:"biome/biome.glb",
       world:"edited/world.glb",
-      human:"human/facial-animation/human-lipsync.glb"
+      human:"human/facial-animation/human-lipsync.glb",
+      composed:"composed/world.glb"
     }[input.kind];
     const path=new URL("/files/"+input.jobId+"/"+route,this.baseUrl);
     const response=await this.transport(path,{

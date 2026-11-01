@@ -137,6 +137,42 @@ try{
                           {...biomeInput,requestId:"mcp-foreign-probe-0001"});
   assert.equal(denied.state,"DENY");
  }finally{await foreign.close();}
+ let composedCase=null;
+ if(process.env.MGR_RUN_WORLD_COMPOSITION==="1"){
+  const request={requestId:"mcp-protocol-combined-0001",biomeRequestId:biomeInput.requestId};
+  const started=await call(owner,"mgr_forge_world_compose_create",request);
+  assert.equal(started.accepted,true,JSON.stringify(started));
+  assert.equal(started.artifactReady,false);
+  const again=await call(owner,"mgr_forge_world_compose_create",request);
+  assert.equal(again.jobId,started.jobId);
+  let finished=null;
+  for(let attempt=0;attempt<120;attempt++){
+    const status=await call(owner,"mgr_forge_world_compose_status",{requestId:request.requestId});
+    if(status.status==="MGR_COMPOSED_WORLD_GLTF_VERIFIED"){
+      finished=status;break;
+    }
+    assert.equal(status.status,"MGR_WORLD_COMPOSITION_RUNNING",JSON.stringify(status));
+    await new Promise(resolve=>setTimeout(resolve,1000));
+  }
+  assert.ok(finished,"World Forge did not produce completed real Blender composition");
+  assert.equal(finished.blenderReimported,true);
+  assert.equal(finished.hostedForgeVerified,false);
+  const binary=await owner.callTool({name:"mgr_forge_artifact_read",arguments:{
+    jobId:finished.jobId,kind:"composed",expectedSha256:finished.artifactSha256,includeData:true
+  }});
+  const resource=binary.content?.find(part=>part.type==="resource");
+  assert.ok(resource&&resource.type==="resource","Missing real combined World GLB");
+  const model=Buffer.from(resource.resource.blob,"base64");
+  assert.equal(model.toString("ascii",0,4),"glTF");
+  assert.equal(model.length,finished.artifactBytes);
+  assert.equal(createHash("sha256").update(model).digest("hex"),finished.artifactSha256);
+  composedCase={sha256:finished.artifactSha256,bytes:model.length,
+    source_city_sha256:finished.sourceCitySha256,
+    source_biome_sha256:finished.sourceBiomeSha256,
+    original_city_and_biome_real_blender:true,
+    same_shared_mcp_authenticated_resource:true,
+    no_public_hosted_worker_claim:true};
+ }
  let humanCase=null;
  if(process.env.MGR_RUN_HUMAN_LIPSYNC==="1"){
   const timings={schema:"mgr.forge.phoneme-timeline.v1",actor_id:"mgr-human-mcp-proof",
@@ -189,6 +225,7 @@ try{
   biome_sha256:biome.artifactSha256,
   creature_bytes:created.artifactBytes,biome_bytes:biome.artifactBytes,
   human_facial_blender_proof:humanCase,
+  composed_world_blender_proof:composedCase,
   stable_replay:true,read_only_execution_denied:true,cross_tenant_execution_denied:true,
   verified_mcp_binary_resource:true,verified_mcp_blob_sha256:created.artifactSha256,
   signed_private_public_download_url_exists:false,private_read_only_access_approved:true,
