@@ -62,7 +62,7 @@ export class RepositoryReadGateway {
   // HTTP constructs a server per request. Keep the analysis admission slot on
   // this shared gateway, so those independent servers cannot multiply workers.
   const sourceServer={registerTool:(name:string,definition:any,handler:any)=>server.registerTool(name,definition,async(...args:any[])=>{
-   if(!['code_monster_profile','code_monster_symbols','code_monster_references','code_monster_impact'].includes(name))return handler(...args);
+   if(!['code_monster_profile','code_monster_symbols','code_monster_references','code_monster_impact','code_monster_outline','code_monster_automation'].includes(name))return handler(...args);
    if(this.sourceBusy)return {isError:true,content:[{type:'text' as const,text:'Source analysis is busy; no second analysis started.'}]};
    this.sourceBusy=true;try{return await handler(...args);}finally{this.sourceBusy=false;}
   })} as unknown as McpServer;

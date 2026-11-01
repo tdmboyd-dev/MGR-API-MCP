@@ -1,3 +1,9 @@
+## Serena / Claude Map original native receiving slice — November 1, 2026
+
+Completed selected research: Serena real LSP5checks and original65+32tests; Claude Map isolated original HTTP4checks; supported REA source/bytecode inspection with explicit limits. Native qualified structural context and committed value-withholding automation inventory are coded and locally integrated through existing Code Monster/API/Tevin ownership. Actual HTTP/SDK/Git/SQL flow passed19/19named checks; full API297/297, affected ONE34/34+build. The initial loaded Code Monster full run failed one existing CLI service-availability case; unchanged focused CLI recheck passed13with1explicit Windows skip. Final full source verification and canonical delivery are pending. [Evidence and remaining work](evidence/serena-claudemap-2026-11-01/REPORT.md). Original requirement/queue IDs and broader product acceptance remain unchanged.
+
+---
+
 ## Completed native navigation receiving slice — November 1, 2026
 
 The existing repository read gateway and owner SDK now carry bound references and labeled potential change impact, including bounded continuation. Actual local ONE HTTP/SDK/TCP/compiler/SQL-reopen checks and preserved failed attempts are recorded in evidence/native-navigation-2026-11-01/REPORT.md. The original 48 queue IDs and wider open gates are unchanged; this is no new job/permission engine or provider/production claim.

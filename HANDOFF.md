@@ -1,3 +1,21 @@
+## Completed native hierarchy/automation source qualification — November 1, 2026
+
+Serena real LSP5/5 and original65+32tests; Claude Map original isolated HTTP4/4 with completed cleanup; supported REA and ambiguity limits retained. Original native hierarchy/name paths/labeled ranges and value-withholding committed automation map are built through existing owners. Code Monster final263results:257pass/0fail/6explicit Windows skips; enrolled API297/297; ONE35/35+build; normal API165/165 and distinct actual source/compiled HTTP qualification. The original deadline, normal-adapter registration and loaded CLI failures remain preserved. [Completed work, repaired integration and boundaries](evidence/serena-claudemap-2026-11-01/REPORT.md). Canonical adoption/current runtime and final source receipts are recorded next; no permanent live-model/production acceptance is claimed.
+
+---
+
+## Verified Serena / Claude Map receiving behavior — November 1, 2026
+
+Completed selected original research/runtime: Serena real LSP5/5, matching65/65 and timeout32/32; Claude Map actual isolated HTTP4/4; supported REA operations and limits recorded. Original native hierarchy and committed value-withholding automation map are implemented through existing ownership. Actual local Tevin HTTP/SDK/Git/SQL chain passed19/19 named checks with injected model/local identity. [Completed work and exact remaining qualification](evidence/serena-claudemap-2026-11-01/REPORT.md). Broad suites/canonical adoption are still in progress; the failed deadline and CLI/worker trial are retained, not promoted.
+
+---
+
+## Serena / Claude Map continuation — November 1, 2026
+
+In progress under the owner's explicit continuation: pinned original behavior, deeper REA, existing-MGR comparison, original missing abilities, actual registered Tevin integration, required verification and canonical delivery. Earlier native navigation remains completed history; this new scope is not yet complete. Work is isolated on build/serena-claudemap-20261101; concurrent canonical Forge edits are preserved. Final completed work and evidence will replace this progress status when each receiving slice is verified.
+
+---
+
 ## Final native navigation delivery — November 1, 2026
 
 **Completed and adopted:** bound references, labeled potential impact and commit-bound Tevin continuation. Canonical actual cross-product integration passed **13/13** named checks; full API **297/297**, affected ONE **34/34** plus build, Code Monster full **237 pass / 0 fail / 6 explicit Windows skips**, joined **19/19**, then latest campaign-bound **4/4**. Source scopes remain separate. [Exact completed work, source and limits](evidence/native-navigation-2026-11-01/REPORT.md); [verification record](evidence/native-navigation-2026-11-01/VERIFICATION.json). Concurrent edits are preserved; no permanent service restart, live inference or production acceptance is claimed.

@@ -4,8 +4,8 @@ import type {AuthContext} from '../src/authz.js';import type {McpServer} from '@
 import * as z from 'zod/v4';
 const audience='https://owned-read.invalid/mcp';
 
-test('profile, symbols, references and impact share one analysis admission across request servers',async()=>{
- const names=['code_monster_profile','code_monster_symbols','code_monster_references','code_monster_impact'];let release!:()=>void;const held=new Promise<void>(r=>release=r),registrations=[new Map<string,any>(),new Map<string,any>()];let starts=0;
+test('all six source reads share one analysis admission across request servers',async()=>{
+ const names=['code_monster_profile','code_monster_symbols','code_monster_references','code_monster_impact','code_monster_outline','code_monster_automation'];let release!:()=>void;const held=new Promise<void>(r=>release=r),registrations=[new Map<string,any>(),new Map<string,any>()];let starts=0;
  const gateway=new RepositoryReadGateway({backpack:{project:id=>({id,root:'C:/owned'}),capabilityCard:()=>({}),context:()=>({})},bindings:[{project:'source',root:'C:/owned',tenantId:'tenant',actorId:'owner'}],assertCurrent:()=>{},registerSourceTools:server=>{for(const name of names)server.registerTool(name,{inputSchema:z.object({}).strict()},async()=>{starts++;await held;return {content:[{type:'text',text:'{}'}]};});}});
  const auth={actorId:'owner',tenantId:'tenant',audience,expiresAt:Date.now()+60000,scopes:['tools:read','repositories:read']};for(const map of registrations)gateway.register({registerTool:(name:string,_def:any,handler:any)=>map.set(name,handler)} as unknown as McpServer,auth,audience);
  const first=registrations[0]!.get('code_monster_references')({});for(const name of names)assert.equal((await registrations[1]!.get(name)({})).isError,true);assert.equal(starts,1);release();await first;assert.notEqual((await registrations[1]!.get('code_monster_impact')({})).isError,true);assert.equal(starts,2);
