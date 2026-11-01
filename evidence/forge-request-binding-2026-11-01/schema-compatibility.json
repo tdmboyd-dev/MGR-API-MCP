@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "previousSource": "f0b025648c4ae9b6ac44bd9b4c5b1455b144798a",
+  "originalRegisteredSchemasUnchanged": 12,
+  "currentRegisteredTools": 13,
+  "originalSchemaSha256": {
+    "mgr_forge_asset_discover": "453b2e28952f1044868cd79cb0493042dd78434be2fa4a697517c9bfe7beaa42",
+    "mgr_forge_creature_create": "3db41c64b88b8cfd27684c37a22ec8f73d45fbad7908af426bb8144f30dfb6e4",
+    "mgr_forge_creature_status": "48414c4bc38b28fc806b4c1a6b5561bb8f7691ad3e5712dd954df14b78e0d5d9",
+    "mgr_forge_biome_create": "d740b21ceb4ae5dc346f4a00063a95624506f5bd0ea8f1f2f86e1e1496289ea4",
+    "mgr_forge_biome_status": "48414c4bc38b28fc806b4c1a6b5561bb8f7691ad3e5712dd954df14b78e0d5d9",
+    "mgr_forge_artifact_read": "7940ca3544b6a1e017ef7bc26ab2579ee9ed3d726ca6814dd423082367aaaef9",
+    "mgr_forge_human_lipsync_start": "a54ee3a12c48b8934ae7755d9ab7101768b41e2fd1ee7e50d0eb08f406cb85af",
+    "mgr_forge_human_lipsync_status": "48414c4bc38b28fc806b4c1a6b5561bb8f7691ad3e5712dd954df14b78e0d5d9",
+    "mgr_forge_world_compose_create": "151afdb50ba1e69c9883ae6e4ffd4ba0fcc49949d1f42977f25c8eef019b4139",
+    "mgr_forge_world_compose_status": "48414c4bc38b28fc806b4c1a6b5561bb8f7691ad3e5712dd954df14b78e0d5d9",
+    "mgr_forge_world_create": "a2cd0338e87c68fc64548d74c58370ac875728a06c20b2c0b1df0d2e1c090908",
+    "mgr_forge_world_status": "48414c4bc38b28fc806b4c1a6b5561bb8f7691ad3e5712dd954df14b78e0d5d9"
+  },
+  "newTool": "mgr_forge_request_verify",
+  "scope": "Actual old/new tool registrations -> same Zod JSON schemas; no native job or provider call"
+}

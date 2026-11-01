@@ -1,0 +1,115 @@
+{
+  "APIFocusedPassed": 21,
+  "APIPassed": 278,
+  "ForgePassed": 651,
+  "ForgeRun": 654,
+  "ForgeSkipReason": "Optional SAM unavailable",
+  "ForgeSkipped": 3,
+  "ONECanonicalChangingTreeQualified": false,
+  "ONEFixtureSource": "e22dfa6bce45c65e42d25b342ad47c653d56cdb4",
+  "added": [],
+  "changed": [],
+  "currentForgeMcpTools": 13,
+  "elapsedSeconds": 79.78,
+  "evidenceSha256": {
+    "api-focused.txt": "953d8e16178675ec0c6e1fae03ab0c93e7e4512e6a0fdaeb97074c9ed088beda",
+    "api-verify.txt": "cd57d2f58babb76ed153ac7004976c9b2578e42b59827fdd0107d19089244824",
+    "before-denied-body.txt": "2b612e3b4bdb4d382ef3300fba8c0e6a41d1186d75d48367942c6424896a8038",
+    "before-native.txt": "adfe73ca4bb27ae662dcca33828c0ba3fdfcbd58969a92e4bc0a7623ce4b3bd2",
+    "forge-unittest.txt": "2dc6b5741309faffdbee9f97ec5c600b52dd46122b7c2e0d055e6a8ba3a406ea",
+    "native-focused.txt": "25c6e0972347302489452634528d00af4493249c9ab7cc8326e7cc5076d86cee",
+    "real-protocol.json": "e6443882df8ec0b0c36d8dd524260a45bd0b41b2a410963d6ef476fb6881d983",
+    "schema-compatibility.json": "ae7e87f9c4bb0870b23c3b4ba0abd139c391a1eda536fc9d73044940e681b0af"
+  },
+  "firstQualification": {
+    "API": {
+      "cause": "Isolated ONE checkout lacked compiled dist module; direct local TypeScript build completed, no assertions changed.",
+      "fail": 8,
+      "pass": 270
+    },
+    "native": {
+      "errors": 0,
+      "pass": 647,
+      "run": 650,
+      "skip": 3
+    }
+  },
+  "initialFailureReceiptSha256": "bffecd43276b2df547d624aafc4654bad833b71f9edd3c55aaf1c7cd523c2333",
+  "inputCount": 2059,
+  "inputCounts": {
+    "API": 111,
+    "FORGE": 221,
+    "ONE-isolated": 1727
+  },
+  "intermediateQualifications": [
+    {
+      "errors": 1,
+      "fault": "Windows10053 on denied character upload",
+      "nativeRun": 650,
+      "skip": 3
+    },
+    {
+      "errors": 1,
+      "fault": "Windows10053 on denied creature upload",
+      "nativeRun": 650,
+      "skip": 3
+    }
+  ],
+  "intermediateReceiptSha256": [
+    "69d07fc3c971ab87f90141e997b43acc2355da46f8da818c9dd4f48e48aeeb3c",
+    "5e68586eec2d8f00ae3d5bca808b5a0e58da0145347d6f38e3726f4e13069579"
+  ],
+  "modelCalls": 0,
+  "nativeBefore": {
+    "cause": "New exact-request route absent; negative error expectations also passed before implementation.",
+    "errors": 4,
+    "passed": 3,
+    "run": 7
+  },
+  "nativeDenialBefore": {
+    "cause": "Early denied POST closed before its small body arrived.",
+    "failed": 1,
+    "run": 1
+  },
+  "nativeFocusedCheckpointPassed": 55,
+  "original12SchemasUnchanged": true,
+  "passed": true,
+  "permanentOwnerForgeActionAccepted": false,
+  "productionAccepted": false,
+  "removed": [],
+  "restartCoverage": "New ForgeWorkstation reads real native journals; async held-thread fixtures remain reconciliation-required. Real SDK/Blender completed jobs/replay, not permanent Tevin or mid-Blender process-crash acceptance.",
+  "runs": [
+    {
+      "exitCode": 0,
+      "log": "api-verify.txt"
+    },
+    {
+      "exitCode": 0,
+      "log": "forge-unittest.txt"
+    }
+  ],
+  "sourceSha256": {
+    "API": {
+      "scripts/verify-forge-creator-mcp.py": "6b4647d4358b432ec45877a509bfc12b73575db5ca644c713c2bab14a40f2727",
+      "scripts/verify-forge-native-mcp-protocol.mjs": "0d24d9330b8b88ceb92bf69b2359cd1272dc780a11a8a4b566d9137d34ca895c",
+      "src/forge-catalog-client.ts": "fb3d3584f94d24115098bd34a8f52d5a42c519719cb11fadc93c492d2221e9f0",
+      "src/forge-inputs.ts": "e4dafa7556a2ea49f833875522055cc9bc4b114ffd48b1a5c7dcae2c3efa84df",
+      "src/forge-mcp-tools.ts": "691e3101dba23548bb02a1658ffbd111c990733cecf9c7b71e3182b464a659b0",
+      "test/forge-authority-lifecycle.test.ts": "b185a13b9363af126730887c0028a0112b881e4f34ff7bc5ae6c1fa33a4f44f3",
+      "test/forge-request-binding.test.ts": "5f454df75160f3ed3c3a53e15ab1bac59428f9cc32158e966e99ac358858e321"
+    },
+    "FORGE": {
+      "forge/biome_jobs.py": "e3bc9a91e824c28ba47a9ba6eb9dfdcd4d196cc8b584816a9a05776a39bf963d",
+      "forge/creature_jobs.py": "5c5ffcf2ae051410de0335d7b20efde9b7770d6e4fefd6011e2cce3546807208",
+      "forge/human_jobs.py": "52a2618d31e47d8b003cec32acf2cc5a5ebe4edfc2b4a618fcdc7a3379c012ce",
+      "forge/request_binding.py": "bf09c9e5fa61a9dcbe0169a630e7a265f42b326e8fe37a4914b110088606849c",
+      "forge/studio_server.py": "c2feaa1667e1cd5a3949f400635292220d8d1bfa76b2dcb7a4742737949dadf4",
+      "forge/world_composition_jobs.py": "534940cc5382d6da9496cc3a5c62cc93ed15531fb7a908d11c10483781956a02",
+      "forge/world_jobs.py": "59e4a39b468f4e99232a61c300c8b8dde26cac29d294df358cddc7d866437e28",
+      "tests/test_request_binding.py": "9acb70ee95e453bc790d307e1233b0cead5a681be9e523f6f87f37b088d8d117",
+      "tests/test_studio_server.py": "b48905499eef4e1f56f491feeaffe5ecddcd06c9bd4a3e9ad7ae7391d1046498"
+    }
+  },
+  "sourceStable": true,
+  "wholeProductAcceptance": "Unassessed"
+}

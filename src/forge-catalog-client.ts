@@ -1,6 +1,7 @@
 /** Bounded authenticated adapter to Forge Studio catalog, durable creation and files. */
 import {createHash} from "node:crypto";
 import {inspectForgeGlb} from './forge-glb.js';
+import {forgeVerifyInput,type ForgeRequestVerification} from './forge-inputs.js';
 export interface ForgeCatalogSearch {
   mode:"sources"|"models";
   query:string;
@@ -55,6 +56,7 @@ export interface ForgeHumanLipSyncInput{
  };
 }
 export interface ForgeCatalogClient {
+  verifyRequest?(input:ForgeRequestVerification):Promise<Record<string,unknown>>;
   search(input:ForgeCatalogSearch):Promise<Record<string,unknown>>;
   createWorld?(input:{requestId:string;edits:ForgeWorldEdits}):Promise<Record<string,unknown>>;
   worldStatus?(requestId:string):Promise<Record<string,unknown>>;
@@ -95,6 +97,19 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
       throw new Error("Forge Studio timeout out of bounds");
     }
     this.transport=options.transport ?? fetch;
+  }
+
+  async verifyRequest(raw:ForgeRequestVerification):Promise<Record<string,unknown>>{
+    const value=forgeVerifyInput.parse(raw);
+    let request:Record<string,unknown>;
+    switch(value.kind){
+      case 'world':request={request_id:value.input.requestId,edits:value.input.edits};break;
+      case 'creature':request={request_id:value.input.requestId,prompt:value.input.prompt,seed:value.input.seed,variants:value.input.variants,morph:value.input.morph??{}};break;
+      case 'biome':request={request_id:value.input.requestId,biome:value.input.biome,seed:value.input.seed,resolution:value.input.resolution};break;
+      case 'human':request={request_id:value.input.requestId,timings:value.input.timings,fps:value.input.fps};break;
+      case 'composed':request={request_id:value.input.requestId,biome_request_id:value.input.biomeRequestId};break;
+    }
+    return this.post('/api/request-verify',{kind:value.kind,request});
   }
 
   async search(input:ForgeCatalogSearch):Promise<Record<string,unknown>>{

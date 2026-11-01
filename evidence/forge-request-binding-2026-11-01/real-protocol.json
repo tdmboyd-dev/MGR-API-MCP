@@ -1,0 +1,72 @@
+{
+  "actual_transport": "localhost Node HTTP -> authorized MGR MCP handler -> Python Forge Studio",
+  "biome_bytes": 32860,
+  "biome_sha256": "1b0b1f6b09155e07d8cd9a25ac62a5c316e85d5ac3c252870024458a37e8110e",
+  "composed_world_blender_proof": {
+    "bytes": 43816,
+    "no_public_hosted_worker_claim": true,
+    "original_city_and_biome_real_blender": true,
+    "same_shared_mcp_authenticated_resource": true,
+    "sha256": "9c22b3c770c6e3f69402bd213e8495b0aff7c63b3d23cebbaf194eabce6a0a81",
+    "source_biome_sha256": "1b0b1f6b09155e07d8cd9a25ac62a5c316e85d5ac3c252870024458a37e8110e",
+    "source_city_sha256": "cdabdf816a769af23d5a1fbb43f8af93c760c815d2fe530fe5f5a4eb9f94ec66"
+  },
+  "creature_bytes": 112764,
+  "creature_sha256": "aa584234dc1fed5453e47c68c7154b0b86ebbc333023cb197097cf3db503f948",
+  "cross_tenant_execution_denied": true,
+  "foreign_tenant_artifact_denied": true,
+  "hosted_chatgpt_verified": false,
+  "hosted_tevin_verified": false,
+  "human_facial_blender_proof": {
+    "actual_mcp_blob_verified": true,
+    "bytes": 230644,
+    "hosted": false,
+    "independent_blender_verified": true,
+    "inferred_audio_alignment": false,
+    "morph_targets": 8,
+    "sha256": "31cfaa9f5078a9e5acd54baf28abd4a8d10974c814857f32d1d3f0937dd70ea2"
+  },
+  "input_verified_kinds": [
+    "creature",
+    "biome",
+    "world",
+    "composed",
+    "human"
+  ],
+  "no_neural_model": true,
+  "no_paid_gpu": true,
+  "private_read_only_access_approved": true,
+  "protocol_client": "official @modelcontextprotocol/client StreamableHTTPClientTransport",
+  "read_only_execution_denied": true,
+  "remote_worker_reachable_over_internet": false,
+  "same_id_changed_input_does_not_accept_old_artifact": true,
+  "same_tenant_foreign_actor_denied": true,
+  "schema": "mgr.mcp.forge.protocol-acceptance.v1",
+  "signed_private_public_download_url_exists": false,
+  "stable_replay": true,
+  "status": "MGR_FULL_LOCAL_MCP_PROTOCOL_VERIFIED",
+  "token_verifier": "fixture; not deployed OIDC/JWKS",
+  "tools_available": [
+    "mgr_forge_request_verify",
+    "mgr_forge_asset_discover",
+    "mgr_forge_creature_create",
+    "mgr_forge_creature_status",
+    "mgr_forge_biome_create",
+    "mgr_forge_biome_status",
+    "mgr_forge_artifact_read",
+    "mgr_forge_human_lipsync_start",
+    "mgr_forge_human_lipsync_status",
+    "mgr_forge_world_compose_create",
+    "mgr_forge_world_compose_status",
+    "mgr_forge_world_create",
+    "mgr_forge_world_status"
+  ],
+  "verified_mcp_binary_resource": true,
+  "verified_mcp_blob_sha256": "aa584234dc1fed5453e47c68c7154b0b86ebbc333023cb197097cf3db503f948",
+  "world_edit_proof": {
+    "bytes": 12036,
+    "inputVerified": true,
+    "sha256": "db702752e4c8f768afcd5e409e4dc6951c75dcf54ec3d680c160f87a7c0e18fc"
+  },
+  "wrong_sha_artifact_denied": true
+}

@@ -7,6 +7,7 @@ import {forgeTriangleGlb} from './fixtures/forge-glb.js';
 const audience='https://owned-forge.invalid/mcp',job='a'.repeat(24),sha='b'.repeat(64),requestId='owned-forge-job-0001';
 const blob=forgeTriangleGlb(),blobSha=createHash('sha256').update(blob).digest('hex');
 const cases=[
+ ['request-verify','verifyRequest',tools.verifyForgeRequestMcp,{kind:'creature',input:{requestId,prompt:'Original creature',seed:42,variants:4}},{status:'MATERIALIZED',request_id:requestId,request_kind:'creature',input_verified:true,input_fingerprint:sha,job_id:job}],
  ['directory','search',tools.searchForgeMcp,{mode:'sources',query:''},{}],
  ['world-create','createWorld',tools.createForgeWorldMcp,{requestId,edits:{schema:"mgr.forge.world-edit.v1",asset_sha256:sha,buildings:[{id:"owned-building",center:[0,0,0],size:[1,1,1],material:"owned-material"}]}},{status:'MATERIALIZED',job_id:job,world_sha256:sha,world_bytes:100}],
  ['world-status','worldStatus',tools.statusForgeWorldMcp,requestId,{status:'MATERIALIZED',job_id:job,world_sha256:sha}],

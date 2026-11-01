@@ -5,6 +5,7 @@ import {authorizeTool, type AuthContext} from "./authz.js";
 import type {ForgeCatalogClient,ForgeCatalogSearch,ForgeWorldEdits,ForgeCreatureInput,ForgeBiomeInput,ForgeArtifactRequest,ForgeHumanLipSyncInput,ForgeWorldCompositionInput} from "./forge-catalog-client.js";
 import {createHash} from "node:crypto";
 import {types} from "node:util";
+import {forgeWorldInput,forgeCreatureInput,forgeBiomeInput,forgeHumanInput,forgeCompositionInput,forgeVerifyInput,type ForgeRequestVerification} from './forge-inputs.js';
 import {inspectForgeGlb} from './forge-glb.js';
 
 export interface ForgeMcpToolOptions {
@@ -39,6 +40,20 @@ function publicationGuard(options:ForgeMcpToolOptions,scope:"tools:read"|"tools:
       throw Error("Forge authority changed before result publication; inspect the original request before retrying");
     if(denied(options,scope)!==null)throw Error("Forge authority unavailable before result publication; inspect the original request before retrying");
   };
+}
+
+export async function verifyForgeRequestMcp(options:ForgeMcpToolOptions,input:ForgeRequestVerification):Promise<Record<string,unknown>>{
+  const reason=denied(options,'tools:read');if(reason)return {accepted:false,state:'DENY',reason};
+  const parsed=forgeVerifyInput.safeParse(input);if(!parsed.success)return {accepted:false,state:'INVALID_REQUEST_IDENTITY'};
+  if(!options.forge.verifyRequest)return {accepted:false,state:'EXECUTOR_UNAVAILABLE'};
+  const current=publicationGuard(options,'tools:read'),value=parsed.data;
+  try{
+    const result=await options.forge.verifyRequest(value);current();
+    if(result.request_id!==value.input.requestId||result.request_kind!==value.kind)throw Error('native request identity mismatch');
+    if(result.status==='NOT_FOUND'&&result.input_verified===false)return {accepted:false,state:'NOT_FOUND',requestId:value.input.requestId,kind:value.kind};
+    if(result.input_verified!==true||typeof result.input_fingerprint!=='string'||!/^[a-f0-9]{64}$/.test(result.input_fingerprint)||typeof result.job_id!=='string'||!/^[a-f0-9]{24}$/.test(result.job_id)||!['MATERIALIZED','RUNNING','FAILED','NEEDS_RECONCILIATION'].includes(String(result.status)))throw Error('native input verification unavailable');
+    return {accepted:true,status:'NATIVE_REQUEST_INPUT_VERIFIED',requestId:value.input.requestId,kind:value.kind,inputFingerprint:result.input_fingerprint,nativeStatus:result.status,nativeResult:result};
+  }catch{return {accepted:false,state:'REQUEST_INPUT_UNVERIFIED',requestId:value.input.requestId,kind:value.kind,reconciliationRequired:true};}
 }
 
 export async function searchForgeMcp(
@@ -399,17 +414,6 @@ export async function statusForgeCompositionMcp(options:ForgeMcpToolOptions,requ
   }
 }
 
-const coordinates=z.tuple([z.number().finite(),z.number().finite(),z.number().finite()]);
-const worldEdits=z.object({
-  schema:z.literal("mgr.forge.world-edit.v1"),
-  asset_sha256:z.string().regex(/^[a-f0-9]{64}$/),
-  buildings:z.array(z.object({
-    id:z.string().min(1).max(120),
-    center:coordinates, size:coordinates,
-    material:z.string().min(1).max(100)
-  }).strict()).min(1).max(300)
-}).strict();
-
 const executionTools=new Set(['mgr_forge_world_create','mgr_forge_creature_create','mgr_forge_biome_create','mgr_forge_human_lipsync_start','mgr_forge_world_compose_create']);
 function scopedRegistrar(server:McpServer,options:ForgeMcpToolOptions):McpServer['registerTool']{
   // Keep the SDK's generic schema/callback signature at every registration.
@@ -428,6 +432,13 @@ function scopedRegistrar(server:McpServer,options:ForgeMcpToolOptions):McpServer
 
 export function registerForgeMcpTools(server:McpServer,options:ForgeMcpToolOptions):void{
   const register=scopedRegistrar(server,options);
+  if(options.forge.verifyRequest)register('mgr_forge_request_verify',{
+    description:'Read-only verification that an existing native Forge job matches these exact original creation instructions and sources. Does not create, retry, approve, cancel or grant authority. RUNNING/FAILED/NEEDS_RECONCILIATION remain their actual states.',
+    inputSchema:forgeVerifyInput
+  },async input=>{
+    const result=await verifyForgeRequestMcp(options,input);
+    return {content:[{type:'text',text:JSON.stringify(result)}],isError:result.accepted!==true};
+  });
   register("mgr_forge_asset_discover",{
     description:"Search MGR Forge's approved source directories and public asset metadata; read only.",
     inputSchema:z.object({
@@ -450,20 +461,7 @@ export function registerForgeMcpTools(server:McpServer,options:ForgeMcpToolOptio
   if(options.forge.createCreature){
     register("mgr_forge_creature_create",{
       description:"Generate an original CPU procedural creature GLB through authenticated Forge. Requires tools:execute, stable request ID; returns hashed local artifact. No paid model/API or public hosted download.",
-      inputSchema:z.object({
-        requestId:z.string().regex(/^[A-Za-z0-9_-]{12,100}$/),
-        prompt:z.string().min(8).max(500),
-        seed:z.number().int().min(0).max(4294967295).default(42),
-        variants:z.number().int().min(1).max(12).default(4),
-        morph:z.object({
-          length:z.number().finite().min(0.5).max(2.2).optional(),
-          height:z.number().finite().min(0.5).max(2.2).optional(),
-          width:z.number().finite().min(0.5).max(2.2).optional(),
-          twist_degrees:z.number().finite().min(-45).max(45).optional(),
-          bend_degrees:z.number().finite().min(-30).max(30).optional(),
-          taper:z.number().finite().min(0.65).max(1.45).optional()
-        }).strict().optional()
-      }).strict()
+      inputSchema:forgeCreatureInput
     },async input=>{
       const creatureInput:ForgeCreatureInput={requestId:input.requestId,prompt:input.prompt,seed:input.seed,variants:input.variants,...(input.morph===undefined?{}:{morph:input.morph})};
       const result=await createForgeCreatureMcp(options,creatureInput);
@@ -482,12 +480,7 @@ export function registerForgeMcpTools(server:McpServer,options:ForgeMcpToolOptio
   if(options.forge.createBiome){
     register("mgr_forge_biome_create",{
       description:"Build original city-preserving terrain as an optional Forge GLB layer; requires tools:execute, no rented neural GPU",
-      inputSchema:z.object({
-        requestId:z.string().regex(/^[A-Za-z0-9_-]{12,100}$/),
-        biome:z.enum(["forest","desert","tundra","volcanic","alien"]),
-        seed:z.number().int().min(0).max(4294967295).default(42),
-        resolution:z.number().int().min(10).max(64).default(28)
-      }).strict()
+      inputSchema:forgeBiomeInput
     },async input=>{
       const result=await createForgeBiomeMcp(options,input);
       return {content:[{type:"text",text:JSON.stringify(result)}],isError:result.accepted!==true};
@@ -531,21 +524,7 @@ export function registerForgeMcpTools(server:McpServer,options:ForgeMcpToolOptio
   if(options.forge.startHumanLipSync){
     register("mgr_forge_human_lipsync_start",{
       description:"Start existing Human Forge Blender facial animation from user-supplied timed phonemes; creates generic model, no inferred raw audio or human likeness, requires tools:execute.",
-      inputSchema:z.object({
-        requestId:z.string().regex(/^[A-Za-z0-9_-]{12,100}$/),
-        fps:z.number().int().min(12).max(60).default(24),
-        timings:z.object({
-          schema:z.literal("mgr.forge.phoneme-timeline.v1"),
-          actor_id:z.string().min(1).max(80).regex(/^[A-Za-z0-9_-]+$/),
-          language:z.literal("en-US"),
-          duration_ms:z.number().int().min(100).max(120000),
-          phonemes:z.array(z.object({
-            phoneme:z.string().min(1).max(8),
-            start_ms:z.number().int().min(0),
-            end_ms:z.number().int().min(1)
-          }).strict()).min(1).max(1000)
-        }).strict()
-      }).strict()
+      inputSchema:forgeHumanInput
     },async input=>{
       const result=await startForgeHumanLipSyncMcp(options,input);
       return {content:[{type:"text",text:JSON.stringify(result)}],isError:result.accepted!==true};
@@ -563,10 +542,7 @@ export function registerForgeMcpTools(server:McpServer,options:ForgeMcpToolOptio
   if(options.forge.createComposition){
     register("mgr_forge_world_compose_create",{
       description:"Merge an already saved original MGR world + pinned Forge biome in a real Blender job. Same shared MCP/Forge worker; independent reimport required.",
-      inputSchema:z.object({
-        requestId:z.string().regex(/^[A-Za-z0-9_-]{12,100}$/),
-        biomeRequestId:z.string().regex(/^[A-Za-z0-9_-]{12,100}$/)
-      }).strict()
+      inputSchema:forgeCompositionInput
     },async input=>{
       const result=await createForgeCompositionMcp(options,input);
       return {content:[{type:"text",text:JSON.stringify(result)}],isError:result.accepted!==true};
@@ -584,7 +560,7 @@ export function registerForgeMcpTools(server:McpServer,options:ForgeMcpToolOptio
   if(options.forge.createWorld){
     register("mgr_forge_world_create",{
       description:"With tools:execute permission, materialize one idempotent local Forge world edit and return the actual GLB SHA-256; Creation OS not required.",
-      inputSchema:z.object({requestId:z.string().regex(/^[A-Za-z0-9_-]{12,100}$/),edits:worldEdits})
+      inputSchema:forgeWorldInput
     },async input=>{
       const result=await createForgeWorldMcp(options,{requestId:input.requestId,edits:input.edits});
       return {content:[{type:"text",text:JSON.stringify(result)}],isError:result.accepted!==true};

@@ -118,3 +118,7 @@ Existing Forge/shared edge and revision-aware knowledge gain the secured native 
 ## Existing Forge consumer: artifact receiver repair — November 1, 2026
 
 The same original Forge/shared-edge work gains bounded structural GLB validation and canceled unread streams. New26regressions,45focused and273full API checks pass; actual SDK/Blender native file return remains compatible. See evidence/forge-glb-2026-11-01/verification.json (root-relative). Native engine/domain ownership retained. Permanent Tevin action/save/reopen and full GLB scene semantics/large delivery remain open; no original queue ID closed or whole-product percentage assigned.
+
+## Exact native request identity — November 1, 2026
+
+Existing Forge/job/shared-consumer work gains native original-request verification and bounded denied-body transport repair; API278/278,Forge654/651pass/3SAMskips and actual SDK/Blender all-five input proof passed. Same existing ledgers/permissions; old twelve schemas unchanged. See root-relative evidence/forge-request-binding-2026-11-01/verification.json. Permanent Tevin action/save/reopen and broader whole-product/hosted acceptance remain open; no original parent ID closed.

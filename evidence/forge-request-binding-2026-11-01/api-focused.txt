@@ -1,0 +1,29 @@
+✔ Forge request-verify rechecks current exact authority after the held upstream result (7.5003ms)
+✔ Forge directory rechecks current exact authority after the held upstream result (0.6139ms)
+✔ Forge world-create rechecks current exact authority after the held upstream result (0.6686ms)
+✔ Forge world-status rechecks current exact authority after the held upstream result (0.6158ms)
+✔ Forge creature-create rechecks current exact authority after the held upstream result (0.6018ms)
+✔ Forge creature-status rechecks current exact authority after the held upstream result (0.4373ms)
+✔ Forge biome-create rechecks current exact authority after the held upstream result (0.5154ms)
+✔ Forge biome-status rechecks current exact authority after the held upstream result (0.3765ms)
+✔ Forge artifact rechecks current exact authority after the held upstream result (3.5245ms)
+✔ Forge human-start rechecks current exact authority after the held upstream result (0.7547ms)
+✔ Forge human-status rechecks current exact authority after the held upstream result (0.8124ms)
+✔ Forge composition-create rechecks current exact authority after the held upstream result (1.1938ms)
+✔ Forge composition-status rechecks current exact authority after the held upstream result (1.1697ms)
+✔ async or promise-returning host fences cannot authorize Forge and rejected promises are drained (0.5159ms)
+✔ same-tenant foreign actor and missing workstation actor enrollment deny before Forge dispatch (0.3062ms)
+✔ registered Forge artifact withholds serialized content after current host authority changes (2.4214ms)
+✔ registered Forge creature-create withholds serialized content after current host authority changes (0.5964ms)
+✔ native verification preserves original job identity and actual lifecycle state (11.8188ms)
+✔ missing job and changed input are never acceptance of old artifact (1.1825ms)
+✔ native verification needs the same current enrolled actor and read scope (0.299ms)
+✔ all five exact schemas map only to read-only native request verification (59.3531ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 896.7913

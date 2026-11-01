@@ -71,6 +71,13 @@ async function call(client,name,args){
  return JSON.parse(text);
 }
 let owner;
+const verifiedInputs=[];
+async function verifyInput(kind,input,jobId){
+ const result=await call(owner,'mgr_forge_request_verify',{kind,input});
+ assert.equal(result.accepted,true,JSON.stringify(result));assert.equal(result.nativeStatus,'MATERIALIZED');
+ assert.equal(result.nativeResult.job_id,jobId);assert.equal(result.nativeResult.input_verified,true);
+ assert.match(result.inputFingerprint,/^[a-f0-9]{64}$/);verifiedInputs.push(kind);
+}
 try{
  owner=await connect("owner");
  const list=await owner.listTools();
@@ -88,6 +95,10 @@ try{
  assert.equal(again.replayed,true);
  const status=await call(owner,"mgr_forge_creature_status",{requestId:creatureInput.requestId});
  assert.equal(status.artifactSha256,created.artifactSha256);
+ await verifyInput('creature',creatureInput,created.jobId);
+ const conflict=await call(owner,'mgr_forge_creature_create',{...creatureInput,seed:18});assert.equal(conflict.accepted,false);
+ const oldStatus=await call(owner,'mgr_forge_creature_status',{requestId:creatureInput.requestId});assert.equal(oldStatus.artifactSha256,created.artifactSha256);
+ const rejectOld=await call(owner,'mgr_forge_request_verify',{kind:'creature',input:{...creatureInput,seed:18}});assert.equal(rejectOld.accepted,false);
  const biomeInput={requestId:"mcp-protocol-biome-00001",biome:"tundra",seed:29,resolution:18};
  const biome=await call(owner,"mgr_forge_biome_create",biomeInput);
  assert.equal(biome.accepted,true,JSON.stringify(biome));
@@ -96,6 +107,17 @@ try{
  assert.equal(againBiome.artifactSha256,biome.artifactSha256);
  const biomeStatus=await call(owner,"mgr_forge_biome_status",{requestId:biomeInput.requestId});
  assert.equal(biomeStatus.artifactSha256,biome.artifactSha256);
+ await verifyInput('biome',biomeInput,biome.jobId);
+ let worldProof=null;
+ if(process.env.MGR_FORGE_QA_WORLD_EDITS){
+  const input={requestId:'mcp-bound-world-0001',edits:JSON.parse(process.env.MGR_FORGE_QA_WORLD_EDITS)};
+  const created=await call(owner,'mgr_forge_world_create',input);assert.equal(created.accepted,true,JSON.stringify(created));
+  await verifyInput('world',input,created.jobId);
+  const bytes=await owner.callTool({name:'mgr_forge_artifact_read',arguments:{jobId:created.jobId,kind:'world',expectedSha256:created.artifactSha256,includeData:true}});
+  const resource=bytes.content.find(x=>x.type==='resource');assert.ok(resource);
+  const blob=Buffer.from(resource.resource.blob,'base64');assert.equal(createHash('sha256').update(blob).digest('hex'),created.artifactSha256);
+  worldProof={sha256:created.artifactSha256,bytes:blob.length,inputVerified:true};
+ }
  // The SAME authenticated MCP service returns actual 3D bytes without a made-up public URL.
  const artifactResponse=await owner.callTool({name:"mgr_forge_artifact_read",arguments:{
    jobId:created.jobId,kind:"creature",expectedSha256:created.artifactSha256,includeData:true
@@ -164,6 +186,7 @@ try{
     await new Promise(resolve=>setTimeout(resolve,1000));
   }
   assert.ok(finished,"World Forge did not produce completed real Blender composition");
+  await verifyInput('composed',request,finished.jobId);
   assert.equal(finished.blenderReimported,true);
   assert.equal(finished.hostedForgeVerified,false);
   const binary=await owner.callTool({name:"mgr_forge_artifact_read",arguments:{
@@ -206,6 +229,7 @@ try{
     await new Promise(resolve=>setTimeout(resolve,1000));
   }
   assert.ok(finished,"Human Forge did not complete independently checked Blender facial GLB");
+  await verifyInput('human',input,finished.jobId);
   assert.equal(finished.morphTargets,8);
   assert.equal(finished.audioAlignment,false);
   const binary=await owner.callTool({name:"mgr_forge_artifact_read",arguments:{
@@ -230,6 +254,9 @@ try{
   actual_transport:"localhost Node HTTP -> authorized MGR MCP handler -> Python Forge Studio",
   token_verifier:"fixture; not deployed OIDC/JWKS",
   tools_available:[...names].filter(x=>x.startsWith("mgr_forge_")),
+  input_verified_kinds:verifiedInputs,
+  same_id_changed_input_does_not_accept_old_artifact:true,
+  world_edit_proof:worldProof,
   creature_sha256:created.artifactSha256,
   biome_sha256:biome.artifactSha256,
   creature_bytes:created.artifactBytes,biome_bytes:biome.artifactBytes,

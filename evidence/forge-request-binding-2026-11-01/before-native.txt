@@ -1,0 +1,68 @@
+test_all_five_original_inputs_verified_without_new_jobs_or_false_async_success (tests.test_request_binding.RequestBindingTests.test_all_five_original_inputs_verified_without_new_jobs_or_false_async_success) ... ERROR
+test_changed_instruction_under_same_id_is_never_accepted_as_old_job (tests.test_request_binding.RequestBindingTests.test_changed_instruction_under_same_id_is_never_accepted_as_old_job) ... ok
+test_changed_world_refuses_previous_world_and_biome_acceptance (tests.test_request_binding.RequestBindingTests.test_changed_world_refuses_previous_world_and_biome_acceptance) ... ok
+test_missing_request_is_read_only_not_a_creation (tests.test_request_binding.RequestBindingTests.test_missing_request_is_read_only_not_a_creation) ... ERROR
+test_native_normalization_remains_owned_by_original_creature_validator (tests.test_request_binding.RequestBindingTests.test_native_normalization_remains_owned_by_original_creature_validator) ... ERROR
+test_reopen_reads_exact_original_and_async_interruption_stays_unknown (tests.test_request_binding.RequestBindingTests.test_reopen_reads_exact_original_and_async_interruption_stays_unknown) ... ERROR
+test_saved_original_request_tampering_cannot_be_hidden_by_unchanged_output (tests.test_request_binding.RequestBindingTests.test_saved_original_request_tampering_cannot_be_hidden_by_unchanged_output) ... ok
+
+======================================================================
+ERROR: test_all_five_original_inputs_verified_without_new_jobs_or_false_async_success (tests.test_request_binding.RequestBindingTests.test_all_five_original_inputs_verified_without_new_jobs_or_false_async_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\cool\Documents\Codex\Projects\MGR-3D-FORGE\tests\test_request_binding.py", line 37, in test_all_five_original_inputs_verified_without_new_jobs_or_false_async_success
+    result=self.verify(kind)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cool\Documents\Codex\Projects\MGR-3D-FORGE\tests\test_request_binding.py", line 31, in verify
+    return self.studio.command('/api/request-verify',{'kind':kind,'request':request or self.requests[kind]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cool\Documents\Codex\Projects\MGR-3D-FORGE\forge\studio_server.py", line 305, in command
+    raise ValueError("unknown studio command")
+ValueError: unknown studio command
+
+======================================================================
+ERROR: test_missing_request_is_read_only_not_a_creation (tests.test_request_binding.RequestBindingTests.test_missing_request_is_read_only_not_a_creation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\cool\Documents\Codex\Projects\MGR-3D-FORGE\tests\test_request_binding.py", line 63, in test_missing_request_is_read_only_not_a_creation
+    r=self.verify(kind);self.assertEqual(r['status'],'NOT_FOUND');self.assertFalse(r['input_verified'])
+      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cool\Documents\Codex\Projects\MGR-3D-FORGE\tests\test_request_binding.py", line 31, in verify
+    return self.studio.command('/api/request-verify',{'kind':kind,'request':request or self.requests[kind]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cool\Documents\Codex\Projects\MGR-3D-FORGE\forge\studio_server.py", line 305, in command
+    raise ValueError("unknown studio command")
+ValueError: unknown studio command
+
+======================================================================
+ERROR: test_native_normalization_remains_owned_by_original_creature_validator (tests.test_request_binding.RequestBindingTests.test_native_normalization_remains_owned_by_original_creature_validator)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\cool\Documents\Codex\Projects\MGR-3D-FORGE\tests\test_request_binding.py", line 75, in test_native_normalization_remains_owned_by_original_creature_validator
+    self.assertTrue(self.verify('creature',request)['input_verified'])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cool\Documents\Codex\Projects\MGR-3D-FORGE\tests\test_request_binding.py", line 31, in verify
+    return self.studio.command('/api/request-verify',{'kind':kind,'request':request or self.requests[kind]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cool\Documents\Codex\Projects\MGR-3D-FORGE\forge\studio_server.py", line 305, in command
+    raise ValueError("unknown studio command")
+ValueError: unknown studio command
+
+======================================================================
+ERROR: test_reopen_reads_exact_original_and_async_interruption_stays_unknown (tests.test_request_binding.RequestBindingTests.test_reopen_reads_exact_original_and_async_interruption_stays_unknown)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\cool\Documents\Codex\Projects\MGR-3D-FORGE\tests\test_request_binding.py", line 59, in test_reopen_reads_exact_original_and_async_interruption_stays_unknown
+    r=self.verify(kind);self.assertTrue(r['input_verified'])
+      ^^^^^^^^^^^^^^^^^
+  File "C:\Users\cool\Documents\Codex\Projects\MGR-3D-FORGE\tests\test_request_binding.py", line 31, in verify
+    return self.studio.command('/api/request-verify',{'kind':kind,'request':request or self.requests[kind]})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cool\Documents\Codex\Projects\MGR-3D-FORGE\forge\studio_server.py", line 305, in command
+    raise ValueError("unknown studio command")
+ValueError: unknown studio command
+
+----------------------------------------------------------------------
+Ran 7 tests in 2.975s
+
+FAILED (errors=4)

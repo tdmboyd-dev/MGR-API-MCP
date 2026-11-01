@@ -5,7 +5,7 @@ No production credentials are written to any file.
 """
 from pathlib import Path
 from tempfile import TemporaryDirectory
-import argparse,json,os,subprocess,sys,threading
+import argparse,json,os,subprocess,sys,threading,hashlib
 repo=Path(__file__).resolve().parents[1]
 forge=Path(os.environ.get("MGR_FORGE_SOURCE_DIR",repo.parent/"MGR-3D-FORGE"))
 if not (forge/"forge/studio_server.py").is_file():
@@ -39,6 +39,8 @@ with TemporaryDirectory(prefix="mgr-mcp-protocol-") as temp:
         env=os.environ.copy()
         env["MGR_FORGE_STUDIO_URL"]=f"http://127.0.0.1:{service.server_port}"
         env["MGR_FORGE_STUDIO_TOKEN"]=studio.token
+        manifest=json.loads((scratch/'world/manifest.json').read_text())
+        env['MGR_FORGE_QA_WORLD_EDITS']=json.dumps({'schema':'mgr.forge.world-edit.v1','asset_sha256':hashlib.sha256((scratch/'world/world.glb').read_bytes()).hexdigest(),'buildings':[{k:b[k] for k in ['id','center','size','material']} for b in manifest['buildings']]})
         process=subprocess.run(
             ["node","--import","tsx","scripts/verify-forge-native-mcp-protocol.mjs"],
             cwd=repo,env=env,capture_output=True,text=True,timeout=180)
@@ -48,6 +50,9 @@ with TemporaryDirectory(prefix="mgr-mcp-protocol-") as temp:
         line=[x for x in process.stdout.splitlines() if x.startswith("MGR_FULL_MCP_PROTOCOL=")]
         if len(line)!=1:raise RuntimeError("missing unique verified MCP protocol receipt")
         proof=json.loads(line[0].partition("=")[2])
+        expected_kinds={'world','creature','biome'}|({'human'} if human_mode else set())|({'composed'} if compose_mode else set())
+        if set(proof.get('input_verified_kinds',[]))!=expected_kinds or not proof.get('same_id_changed_input_does_not_accept_old_artifact'):
+            raise RuntimeError('Native exact-input verification incomplete')
         if proof["status"]!="MGR_FULL_LOCAL_MCP_PROTOCOL_VERIFIED" or not (
            proof["stable_replay"] and proof["cross_tenant_execution_denied"] and
            proof["read_only_execution_denied"] and not proof["hosted_chatgpt_verified"] and

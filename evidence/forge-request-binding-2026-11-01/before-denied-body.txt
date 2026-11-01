@@ -1,0 +1,14 @@
+test_small_denied_post_drains_bounded_body_before_response_and_close (tests.test_studio_server.StudioServerTests.test_small_denied_post_drains_bounded_body_before_response_and_close) ... FAIL
+
+======================================================================
+FAIL: test_small_denied_post_drains_bounded_body_before_response_and_close (tests.test_studio_server.StudioServerTests.test_small_denied_post_drains_bounded_body_before_response_and_close)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\cool\Documents\Codex\Projects\MGR-3D-FORGE\tests\test_studio_server.py", line 94, in test_small_denied_post_drains_bounded_body_before_response_and_close
+    self.assertFalse(select.select([connection],[],[],0.03)[0],'server closes rejected POST while its small body is still pending')
+AssertionError: [<socket.socket fd=760, family=2, type=1, proto=0, laddr=('127.0.0.1', 51026), raddr=('127.0.0.1', 51025)>] is not false : server closes rejected POST while its small body is still pending
+
+----------------------------------------------------------------------
+Ran 1 test in 0.701s
+
+FAILED (failures=1)
