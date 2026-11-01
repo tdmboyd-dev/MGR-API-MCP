@@ -9,7 +9,7 @@ import { OmniEngineeringClient, omniBindingInput, omniVerificationInput, type Om
 import {forgeDepartmentCommands,isForgeDepartmentCommand,ForgeDepartmentAdapter,type ForgeDepartmentConfig} from './forge-department.js';
 
 const id=z.string().regex(/^[a-zA-Z0-9_.:-]{1,128}$/);
-const content=z.string().min(1).max(10000);
+const content=z.string().min(1).max(10000).refine(value=>Buffer.from(value,'utf8').toString('utf8')===value&&value.trim().length>0);
 const voiceId=z.string().regex(/^[a-zA-Z0-9_-]{1,80}$/);
 export const departmentCommand=z.discriminatedUnion("operation",[
   ...forgeDepartmentCommands,
@@ -17,7 +17,7 @@ export const departmentCommand=z.discriminatedUnion("operation",[
   z.object({operation:z.literal("creation.document.render"),requestId:id,input:z.object({workspaceId:id,title:z.string().min(1).max(500),sections:z.array(z.object({heading:z.string().min(1).max(500),body:content}).strict()).min(1).max(10),rightsRefs:z.array(id).min(1).max(10)}).strict()}).strict(),
   z.object({operation:z.literal("voice.speech"),requestId:voiceId,input:z.object({sessionId:voiceId,turnId:voiceId,text:z.string().min(1).max(1500).refine(v=>v.trim().length>0),profileId:z.literal("af_heart"),exactText:z.literal(true)}).strict()}).strict(),
   z.object({operation:z.literal("omnidev.job.verify"),requestId:id,input:omniVerificationInput}).strict(),
-  z.object({operation:z.literal("signme.draft.create"),requestId:id,input:z.object({workspaceId:id,title:z.string().min(1).max(500),content,documentId:id.optional(),expectedVersion:z.number().int().positive().optional()}).strict()}).strict()
+  z.object({operation:z.literal("signme.draft.create"),requestId:id,input:z.object({workspaceId:id,title:z.string().min(1).max(500).refine(value=>Buffer.from(value,'utf8').toString('utf8')===value&&value.trim().length>0),content,documentId:id.optional(),expectedVersion:z.number().int().positive().optional()}).strict().refine(value=>(value.documentId!==undefined)===(value.expectedVersion!==undefined))}).strict()
 ]);
 export type DepartmentCommand=z.infer<typeof departmentCommand>;
 export interface DepartmentEndpoint {baseUrl:string;token:string}
@@ -52,7 +52,7 @@ export class DepartmentGateway {
       if(response.body){const reader=response.body.getReader();try{for(;;){const {done,value}=await reader.read();if(done)break;length+=value.length;if(length>limit){await reader.cancel();throw Error("Department response exceeds limit");}chunks.push(value);}}finally{reader.releaseLock();}}
       if(!response.ok)throw Error(`Department ${service} returned HTTP ${response.status}`);
       const bytes=Buffer.concat(chunks);if(raw)return {bytes,mediaType:response.headers.get("content-type")};
-      try{return JSON.parse(bytes.toString());}catch{throw Error(`Department ${service} returned invalid JSON`);}
+      try{return JSON.parse(new TextDecoder('utf-8',{fatal:true,ignoreBOM:true}).decode(bytes));}catch{throw Error(`Department ${service} returned invalid JSON`);}
     }catch(error){if(controller.signal.aborted)throw Error(`Department ${service} timed out; reconcile request before retry`);throw error;}finally{clearTimeout(timer);}
   }
   async candidateBinding(input:z.infer<typeof omniBindingInput>){if(!this.omni)throw Error("Omni engineering service not configured");return this.omni.binding(input);}
@@ -90,13 +90,14 @@ export class DepartmentGateway {
     return this.verifySignMe(c,result);
   }
   private creationRequest(c:Extract<DepartmentCommand,{operation:"creation.document.render"}>){const {workspaceId,...payload}=c.input;return {requestId:c.requestId,tenantId:this.config.tenantId,workspaceId,capability:"document.markdown",input:{actorId:this.config.actorId,correlationId:c.requestId,payload},acceptanceCriteria:["nonempty durable Markdown artifact with matching SHA256"],maxCost:0};}
-  private async verifySignMe(c:Extract<DepartmentCommand,{operation:"signme.draft.create"}>,result:any){
-    if(result.requestId!==c.requestId||result.status!=="draft"||result.inputDigest!==inputDigest({actorId:this.config.actorId,tenantId:this.config.tenantId,requestId:c.requestId,...c.input})||!id.safeParse(result.documentId).success||!Number.isSafeInteger(result.version)||result.version<1||typeof result.receiptId!=="string")throw Error("SignMe operation mismatch");
+  private async readSignMeVersion(c:Extract<DepartmentCommand,{operation:"signme.draft.create"}>,result:any){
+    if(result.requestId!==c.requestId||result.status!=="draft"||result.inputDigest!==inputDigest({actorId:this.config.actorId,tenantId:this.config.tenantId,requestId:c.requestId,...c.input})||!id.safeParse(result.documentId).success||!Number.isSafeInteger(result.version)||result.version<1||!id.safeParse(result.receiptId).success)throw Error("SignMe operation mismatch");
     if((c.input.documentId!==undefined&&result.documentId!==c.input.documentId)||result.version!==(c.input.expectedVersion===undefined?1:c.input.expectedVersion+1))throw Error("SignMe target or version mismatch");
     const document=await this.request("signme",`/v1/documents/${encodeURIComponent(result.documentId)}/versions/${result.version}`);
     if(document.tenantId!==this.config.tenantId||document.workspaceId!==c.input.workspaceId||document.documentId!==result.documentId||document.version!==result.version||document.title!==c.input.title||document.content!==c.input.content||digest(Buffer.from(document.content))!==result.sha256||Buffer.byteLength(document.content)!==result.bytes)throw Error("SignMe document readback mismatch");
-    return {...result,operation:c.operation,status:"SUCCEEDED",readbackVerified:true};
+    return document;
   }
+  private async verifySignMe(c:Extract<DepartmentCommand,{operation:"signme.draft.create"}>,result:any){await this.readSignMeVersion(c,result);return {...result,operation:c.operation,status:"SUCCEEDED",readbackVerified:true};}
   private verifyVoice(c:Extract<DepartmentCommand,{operation:"voice.speech"}>,result:any){
     const body={requestId:c.requestId,sessionId:c.input.sessionId,turnId:c.input.turnId,text:c.input.text,profileId:c.input.profileId,exactText:true};
     if(result.requestId!==c.requestId||result.sessionId!==c.input.sessionId||result.turnId!==c.input.turnId||result.profileId!==c.input.profileId||result.exactText!==true||result.textSha256!==digest(Buffer.from(c.input.text))||result.inputSha256!==digest(Buffer.from(JSON.stringify(body)))||!["queued","running","succeeded","failed","cancelled","unknown"].includes(result.status))throw Error("Voice receipt input mismatch");
@@ -140,6 +141,10 @@ export class DepartmentGateway {
   async artifact(command:DepartmentCommand){
     const c=departmentCommand.parse(command);
     if(isForgeDepartmentCommand(c)){if(!this.forge)throw Error('Forge department not configured');return this.forge.artifact(c);}
+    if(c.operation==="signme.draft.create"){
+      const result=await this.request("signme",`/v1/documents/operations/${encodeURIComponent(c.requestId)}`),document=await this.readSignMeVersion(c,result),bytes=Buffer.from(document.content,'utf8');
+      return {requestId:c.requestId,documentId:document.documentId,version:document.version,sha256:digest(bytes),bytes:bytes.length,mediaType:'text/plain; charset=utf-8',contentBase64:bytes.toString('base64'),readbackVerified:true};
+    }
     if(c.operation==="omnidev.job.verify"){if(!this.omni)throw Error("Omni engineering service not configured");return this.omni.artifact(c.requestId,c.input);}let fetched:any,expected:any;
     if(c.operation==="creation.document.render"){
       const r=await this.verifyCreation(c,await this.request("creation",`/v1/creation/jobs/${encodeURIComponent(c.requestId)}`));expected=r.artifacts?.[0];if(!expected)throw Error("Artifact unavailable");id.parse(expected.id);fetched=await this.request("creation",`/v1/creation/artifacts/${encodeURIComponent(expected.id)}`,undefined,true);

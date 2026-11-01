@@ -1,0 +1,27 @@
+{
+  "bases": {
+    "signme": "396ad2d912315e64cd2c85ba7fa7b993ae993742",
+    "creation": "ea76c39c972d78b1c8b8b9503397733f0c3a2fcf",
+    "one": "bfeaf81d709f68d9aef783cba912cdba31c8d611",
+    "shared-edge-repository": "53f26edd83a7300edb65d11e824e13cdd978a07f"
+  },
+  "qualificationWorkingBytes": {
+    "signme/scripts/domain-service.mjs": "239702331cccfd8a9e2d98ddfdd34a46aac3bc58ae5c34a8e9cdf4588985b9ce",
+    "signme/test/service-hardening.test.mjs": "64b82acb643b36bb32ae31c5e9bc8b6173159006fa2a04424bf555b5ad5ee825",
+    "api/src/department-gateway.ts": "c842be851d54ead203dc150feb65d101ce8803d755291af973ac273729f400db",
+    "api/test/signme-artifact.test.ts": "7551939a99a3cb08f296975e7cd91bad275534bcdf3a1369f15c885c7adf4583",
+    "creation/src/factories/owner-workflow-factory.ts": "a48e3b174c7d01835c894af5afc4540bd3e1417697f899c1ac1c3522981bd126",
+    "creation/test/owner-signme-factory.test.ts": "8d809b703d783ea3dda001febd3c9be1d46d3aa2f8197f212707ad0ff95625dc",
+    "one/scripts/tevin-owner.mjs": "208e6b7f36e5d98e62fb495c92242ef273136fc397e98e8e80d969f232d7ab33",
+    "one/web/owner-departments.mjs": "e9e80e29d97ec85bdbb95491ca76efa3f7b67cff29985860cb3e23d80fafc518",
+    "one/web/server.mjs": "908ce7075666194ebcb3962a2ffd736ced168c89f53591923cca872678eaf3bd",
+    "one/web/ecosystem-workflows.mjs": "57e66531fa948eebb3130a68d80c7ddcf596fe7ca4993ffd854a197f5a7f634b",
+    "one/web/owner-creation-projects.mjs": "a1c080ac37415e1675ef159c58cd2fc840b291396fb3381553cf219f0623c51b",
+    "one/web/creation-project-contract.mjs": "101e341af4c38d723c519eb596e51ad39320bf40eba9607ec8529d05d5e1b09e",
+    "one/scripts/qualification/owner-signme-http.test.mjs": "1b06b0764a9ad5a50003b7737566a12f50ea8cd744cbb8114155679aeffa6a96",
+    "one/scripts/qualification/owner-projects-http.test.mjs": "79da4f83af9195fee78485635e962716bc58013ee3c536cf4360dee5aabca82d",
+    "signme/test/service-cli.test.mjs": "80099f1f73fa553113360345d230c6832a4dbaf992c9ab74f9b176fec84e0e06",
+    "one/web/department-command-custody.test.mjs": "e98c63358892fabe2176319e7c9a51b63af0062ff5dd68c624c9313d1bc53c1c"
+  },
+  "unchangedAfterFinalJoin": true
+}
