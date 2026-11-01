@@ -1,3 +1,13 @@
+## Actual native REA function proof and installed-host boundary â€” November 1, 2026
+
+The separate official SDK/stdio REA session completed original-binary source-name search, exact PE-entry analyze_function and clean close. Entry 0x1403eb630 returned pseudocode, assembly, CFG, callers/callees/references and value-flow facets: four assembly rows, one basic block, two callees, three value-flow operations, no value-flow truncation for that entry. This is a CRT/PE entry observation, not proof that the Rust scan_path domain routine was recovered. Its name search returned zero rows with PDB load state unknown. Source/runtime findings remain independently grounded in original Rust and owned CLI tests. The 60-second initial SDK harness timeout and its corrected two-argument SDK call options remain documented; product deadlines/guards were unchanged.
+
+The actual installed Backpack 0.6.2 connection also read the current Code Monster card: all 16 source references are current, the card remains draft and dispatchAllowed=false. Its existing code-monster-source-contracts fixed-check profile is stale and explicitly requires owner review. The source refresh approval is pending; no protected procedure, private configuration, command, root, permission or expiry has been changed. CODE-MONSTER-HOST-REVIEW.md in the task outputs contains the concrete reviewed-source/test packet. Other canonical source/receiving test results stand at their recorded scopes.
+
+Scope additions: installed-host fixed-procedure execution remains an open acceptance gate; the separate native MCP function-proof gate is now passed within the selected entry scope. The original ten intake/research outcomes are tracked separately from these two added checks and from whole-product completion.
+
+---
+
 ## Completed native audit intake coverage and engagement research — November 1, 2026
 
 Original source-profile.auditCoverage now reports language-attributed source counts, parsed/error/excluded counts and bounded examples through existing Code Monster and Tevin profile reads. It opens no extra files and explicitly reports securityAuditPerformed=false. Rust/Anchor parsing and vulnerability review remain unimplemented; filenames and parsed JavaScript/TypeScript are not whole-repository audit acceptance. No additional brain, memory store, tool, permission or service was added.

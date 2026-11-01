@@ -1,0 +1,40 @@
+{
+  "observedAt": "2026-11-01T16:01:53.678Z",
+  "version": "0.6.2",
+  "codeMonsterProjectReady": {
+    "id": "code-monster",
+    "ready": true
+  },
+  "sourceCard": {
+    "status": "current-source-references",
+    "sha256": "d5023350b808114a0bac338953d4fcbb522ca756fe8864dcafb8a0ee4ebc3a6f",
+    "currentReferences": 16,
+    "totalReferences": 16,
+    "reviewStatus": "draft-requires-owner-review",
+    "dispatchAllowed": false
+  },
+  "fixedProfile": {
+    "id": "code-monster-source-contracts",
+    "project": "code-monster",
+    "ready": false,
+    "reason": "Execution profile source approval is stale; owner review is required"
+  },
+  "hostTask": {
+    "task": "host-check-code-monster",
+    "title": "Host procedure: selected local contract tests only",
+    "passed": 0,
+    "total": 1,
+    "complete": false,
+    "checks": [
+      {
+        "id": "contracts",
+        "description": "Run the exact source-pinned code-monster-source-contracts procedure. This is not canonical product completion, provider or production acceptance.",
+        "level": "local",
+        "runner": "code-monster-source-contracts",
+        "status": "stale"
+      }
+    ],
+    "checksTruncated": false
+  },
+  "scope": "Actual installed Backpack tools called. Read-only card/source-reference integration passed; protected configured execution remains owner-review pending. No profile, roots, command, expiry or private configuration modified."
+}

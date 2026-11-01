@@ -150,8 +150,73 @@
       "limits": [
         "Counts describe Ghidra-defined inventories, not discovery of every function/string or program understanding.",
         "PDB load state unknown; original names/types may be absent. Decompiler constructor warnings retained.",
-        "Native entry-function MCP investigation is separate and not yet claimed complete."
+        "Separate actual SDK/stdio native entry-function dossier and clean close are now qualified in NATIVE-MCP-VERIFICATION.json; source-domain function-name recovery remains unknown."
       ]
+    },
+    "nativeMcpSelectedFunction": {
+      "entry": "0x1403eb630",
+      "evidenceId": "ev_1545ef2238b4cb6c5ed8e7db790b0ce2b1e10da8d44cc142f021bdf4ccf80bdd",
+      "summary": {
+        "procedure": {
+          "name": "entry",
+          "address": "0x1403eb630"
+        },
+        "pseudocode": {
+          "available": true,
+          "code_units": 90
+        },
+        "value_flow": {
+          "available": true,
+          "truncated": false
+        },
+        "facet_availability": {
+          "pseudocode": {
+            "available": true
+          },
+          "assembly": {
+            "available": true
+          },
+          "comments": {
+            "available": true
+          },
+          "callers": {
+            "available": true
+          },
+          "callees": {
+            "available": true
+          },
+          "references": {
+            "available": true
+          },
+          "strings_names": {
+            "available": true
+          },
+          "cfg": {
+            "available": true
+          }
+        },
+        "counts": {
+          "assembly": 4,
+          "basic_blocks": 1,
+          "comments": 0,
+          "callers": 0,
+          "callees": 2,
+          "incoming_references": 2,
+          "outgoing_references": 2,
+          "unresolved_calls": 0,
+          "referenced_strings": 0,
+          "referenced_names": 2,
+          "swift_string_literals": null,
+          "swift_string_literal_omissions": null,
+          "value_flow_operations": 3,
+          "value_flow_def_use": 0,
+          "value_flow_effects": 2,
+          "value_flow_parameters": 0,
+          "value_flow_parameter_uses": 0
+        },
+        "limitation_count": 5
+      },
+      "limits": "PE/CRT entry selected by PE header. This is not an identity claim for the Rust scanner domain function; no original source recovery, runtime execution or whole-program completeness is inferred."
     }
   },
   "originalRuntime": {

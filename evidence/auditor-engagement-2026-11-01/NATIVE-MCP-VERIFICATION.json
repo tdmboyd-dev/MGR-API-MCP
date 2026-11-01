@@ -1,0 +1,97 @@
+{
+  "contract": "mgr.selected-native-rea-proof.v1",
+  "artifactSha256": "2a380831c4f5449312dc996cbd4505d28f79440c36edd828dfb12ff72353b6f7",
+  "originalSourceCommit": "8eb73a2a041cb7ce4574676d50fd18a9e98b84b6",
+  "transport": "Actual official MCP SDK 2.4.0 over stdio to REA 6.8.0 and Ghidra 12.1.4; target not executed by this analysis.",
+  "search": {
+    "pattern": "scan_path",
+    "rows": 0,
+    "evidenceId": "ev_9267fb74e039198f913eb10c85f9b7e034353f0f49d9d1c7c0fc1ac321d6428a",
+    "limits": "PDB load state unknown; zero recovered names does not establish absence of the source function."
+  },
+  "selectedFunction": {
+    "entry": "0x1403eb630",
+    "evidenceId": "ev_1545ef2238b4cb6c5ed8e7db790b0ce2b1e10da8d44cc142f021bdf4ccf80bdd",
+    "summary": {
+      "procedure": {
+        "name": "entry",
+        "address": "0x1403eb630"
+      },
+      "pseudocode": {
+        "available": true,
+        "code_units": 90
+      },
+      "value_flow": {
+        "available": true,
+        "truncated": false
+      },
+      "facet_availability": {
+        "pseudocode": {
+          "available": true
+        },
+        "assembly": {
+          "available": true
+        },
+        "comments": {
+          "available": true
+        },
+        "callers": {
+          "available": true
+        },
+        "callees": {
+          "available": true
+        },
+        "references": {
+          "available": true
+        },
+        "strings_names": {
+          "available": true
+        },
+        "cfg": {
+          "available": true
+        }
+      },
+      "counts": {
+        "assembly": 4,
+        "basic_blocks": 1,
+        "comments": 0,
+        "callers": 0,
+        "callees": 2,
+        "incoming_references": 2,
+        "outgoing_references": 2,
+        "unresolved_calls": 0,
+        "referenced_strings": 0,
+        "referenced_names": 2,
+        "swift_string_literals": null,
+        "swift_string_literal_omissions": null,
+        "value_flow_operations": 3,
+        "value_flow_def_use": 0,
+        "value_flow_effects": 2,
+        "value_flow_parameters": 0,
+        "value_flow_parameter_uses": 0
+      },
+      "limitation_count": 5
+    },
+    "limits": "PE/CRT entry selected by PE header. This is not an identity claim for the Rust scanner domain function; no original source recovery, runtime execution or whole-program completeness is inferred."
+  },
+  "close": {
+    "operationReturned": true,
+    "clientCloseReturned": true,
+    "scope": "Owned session completed. No persistent analysis server or background watcher is scheduled."
+  },
+  "failedTrials": [
+    {
+      "trial": "CLI native overview first run",
+      "result": "provider_timeout",
+      "limitMs": 330000,
+      "resolvedBy": "Same analyzers, fresh import, 660000 ms bound; actual overview then completed."
+    },
+    {
+      "trial": "First SDK selected-function session",
+      "result": "REQUEST_TIMEOUT",
+      "limitMs": 60000,
+      "cause": "Harness used old three-argument callTool form against SDK 2.4.0. Corrected to two-argument options; current source APIs were unchanged."
+    }
+  ],
+  "rawEvidencePolicy": "Original binary, native pseudocode, full third-party graphs and provider diagnostics remain private task research files; only bounded observed summaries are copied to owning repositories."
+}
