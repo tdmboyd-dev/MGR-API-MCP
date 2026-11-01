@@ -1,3 +1,9 @@
+## Native hierarchy/automation receiving adapter — November 1, 2026
+
+The original six-tool catalog failure is reproduced and repaired with eight explicitly known read-only tools, existing current project/principal checks and one heavy-read slot across request handlers. Normal full165/165, typecheck/artifact/plugin checks and actual source/compiled signed-JWT HTTP qualifiers are separately recorded. Explicit loopback binding and invalid-host refusal are implemented/tested. [Completed source, original findings and exact limits](evidence/serena-claudemap-2026-11-01/REPORT.md). No hosted OAuth/TLS, current permanent-owner, container, provider or production promotion; original48queueIDs remain.
+
+---
+
 # Research-to-build queue
 
 Read [HANDOFF.md](HANDOFF.md) for the current source checkpoint. The actual owned edge TCP/JWKS/official-client harness is integrated; canonical full npm verify now passes147/147 with stable61inputs including actual normal HTTP shutdown, terminal admission and fixed64 outer ownership. The separate real PostgreSQL/domain/ONE27-chain keeps its own source boundary. Earlier ONE2362/2490 and API113 totals are historical. IDs1–48 remain the sole wider queue; no whole-product/package closure follows.

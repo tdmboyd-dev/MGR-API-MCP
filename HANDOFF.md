@@ -1,3 +1,9 @@
+## Completed native hierarchy/automation source qualification — November 1, 2026
+
+Serena real LSP5/5 and original65+32tests; Claude Map original isolated HTTP4/4 with completed cleanup; supported REA and ambiguity limits retained. Original native hierarchy/name paths/labeled ranges and value-withholding committed automation map are built through existing owners. Code Monster final263results:257pass/0fail/6explicit Windows skips; enrolled API297/297; ONE35/35+build; normal API165/165 and distinct actual source/compiled HTTP qualification. The original deadline, normal-adapter registration and loaded CLI failures remain preserved. [Completed work, repaired integration and boundaries](evidence/serena-claudemap-2026-11-01/REPORT.md). Canonical adoption/current runtime and final source receipts are recorded next; no permanent live-model/production acceptance is claimed.
+
+---
+
 # Six-tool source service composed and verified — November 1, 2026
 
 Code Monster's reconciled source-navigation work adds references and impact. The prior four-tool allowlist genuinely refused its declarations; that initial failure is retained privately. The normal shared adapter now accepts exactly six read-only tools and applies current project/actor/tenant/scope authorization, before/after revalidation, cancellation/resource withholding and global single-analysis admission to all four semantic reads. Caller-selected roots and identities remain forbidden.

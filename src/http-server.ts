@@ -11,6 +11,8 @@ import {loadBackpackDomain} from './backpack-domain.js';
 import {loadCodeMonsterDomain} from './code-monster-domain.js';
 
 const port=Number(process.env.PORT ?? "8787");
+const listenHost=process.env.MCP_LISTEN_HOST ?? "0.0.0.0";
+if(!["127.0.0.1","::1","0.0.0.0","::"].includes(listenHost))throw Error("MCP_LISTEN_HOST must be an explicit supported IP address");
 const baseUrl=requiredUrl("MCP_PUBLIC_BASE_URL");
 const publicOrigin=new URL(baseUrl).origin;
 const publicHost=new URL(baseUrl).host;
@@ -115,8 +117,8 @@ const server=createServer(async(req,res)=>{
 
 const shutdown=createHttpShutdownController({server,handler:{async close(){await mcp.close();backpack?.close();codeMonster?.close();}},report:record=>console.log(JSON.stringify(record))});
 
-server.listen(port,"0.0.0.0",()=>{
-  console.log(JSON.stringify({event:"mgr_api_mcp_listening",port,resourceAudience}));
+server.listen(port,listenHost,()=>{
+  console.log(JSON.stringify({event:"mgr_api_mcp_listening",port,listenHost,resourceAudience}));
 });
 
 process.on("SIGTERM",()=>void shutdown.begin("SIGTERM"));

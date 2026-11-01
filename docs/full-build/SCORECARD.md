@@ -1,3 +1,9 @@
+## Native hierarchy/automation receiving adapter — November 1, 2026
+
+The original six-tool catalog failure is reproduced and repaired with eight explicitly known read-only tools, existing current project/principal checks and one heavy-read slot across request handlers. Normal full165/165, typecheck/artifact/plugin checks and actual source/compiled signed-JWT HTTP qualifiers are separately recorded. Explicit loopback binding and invalid-host refusal are implemented/tested. [Completed source, original findings and exact limits](../../evidence/serena-claudemap-2026-11-01/REPORT.md). No hosted OAuth/TLS, current permanent-owner, container, provider or production promotion; original48queueIDs remain.
+
+---
+
 # Six-tool source service composed and verified — November 1, 2026
 
 Code Monster's reconciled source-navigation work adds references and impact. The prior four-tool allowlist genuinely refused its declarations; that initial failure is retained privately. The normal shared adapter now accepts exactly six read-only tools and applies current project/actor/tenant/scope authorization, before/after revalidation, cancellation/resource withholding and global single-analysis admission to all four semantic reads. Caller-selected roots and identities remain forbidden.

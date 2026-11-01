@@ -1,0 +1,100 @@
+{
+  "sources": [
+    {
+      "name": "Serena",
+      "url": "https://github.com/oraios/serena",
+      "commit": "ede329aaf0c824bea75455a2926f01420d7aa620",
+      "license": "Serena application GPL-3.0-or-later; SolidLSP MIT",
+      "readScope": [
+        "src/serena/symbol.py: NamePathMatcher and LanguageServerSymbol selected methods",
+        "src/serena/repl/api/lsp_api.py: collection/overview renderer and find_symbol",
+        "src/serena/repl/representable.py: complete file",
+        "src/solidlsp/language_servers/typescript_language_server.py: versioning, dependency, pinning, readiness/indexing timeout and initialization sections",
+        "src/solidlsp/ls.py: factory, dependency storage, context startup and selected reads",
+        "src/solidlsp/dependency_provider.py: explicit launch override",
+        "test/serena/test_symbol.py: TestSymbolNameMatching",
+        "test/solidlsp/test_typescript_timeout_policy.py: selected original tests"
+      ],
+      "runtime": "Real original LSP5checks; original matching65/65 and timeout-policy32/32. Selected core dependencies, GUI dependencies omitted. Full root conftest originally failed on unavailable webview; pure selected tests run with explicit confcutdir. Full Serena GUI/MCP/other languages/editing not accepted."
+    },
+    {
+      "name": "Claude Map",
+      "url": "https://github.com/shamim0902/claude-map",
+      "commit": "657a0fd708af569a77077ac6d2de7bcebbbdcf16",
+      "license": "MIT",
+      "readScope": [
+        "package.json and LICENSE",
+        "server.js: selected readers, cache, scan assembly, allowed-path helper, file GET/POST, settings routes, listener and terminal startup",
+        "bin/cli.js: selected REA static analysis"
+      ],
+      "runtime": "Actual original Express server/HTTP4checks with isolated home, loopback ephemeral listener and disabled PTY. No original source rewrite. No real profiles, shell or external targets used."
+    }
+  ],
+  "rea": [
+    {
+      "target": "symbol",
+      "operation": "inspect_python_pyc",
+      "evidenceId": "ev_2c3404b925517f1702b4e63ae03668ca51c042ddc403e33040fa27462a343d00",
+      "sha256": "8e5787a75ff238dfd16a614266697b3564bc7b1dbc590ddc174e756a745c25da",
+      "limits": [
+        "Bytecode is retained as length and SHA-256 only; this workflow does not decompile, disassemble, or recover source.",
+        "The selected file is not executed and CPython is not invoked.",
+        "source_mtime and source_size are header fields; they do not prove a matching .py is present.",
+        "python_version is the pinned CPython magic table for this header, not a runtime interpreter."
+      ]
+    },
+    {
+      "target": "lsp-api",
+      "operation": "inspect_python_pyc",
+      "evidenceId": "ev_016d6e4290fa5ac167bd741d2e8fa686bcfadc266af7eae0619aa5de2495cfcd",
+      "sha256": "bdd375c79b4200f51dba6a51f744dbb92aad32e2c127a466ec9f40e15750643f",
+      "limits": [
+        "Bytecode is retained as length and SHA-256 only; this workflow does not decompile, disassemble, or recover source.",
+        "The selected file is not executed and CPython is not invoked.",
+        "source_mtime and source_size are header fields; they do not prove a matching .py is present.",
+        "python_version is the pinned CPython magic table for this header, not a runtime interpreter."
+      ]
+    },
+    {
+      "target": "renderer",
+      "operation": "inspect_python_pyc",
+      "evidenceId": "ev_f0f3d8b6b8d65d3b3d502db43ae0cf324a0508ed2de81660738f16200ec1c763",
+      "sha256": "5a58513827a5b399f0b9e30d1dbf1c461aa1c3940e9ae6f4fcd775fd3bfea66b",
+      "limits": [
+        "Bytecode is retained as length and SHA-256 only; this workflow does not decompile, disassemble, or recover source.",
+        "The selected file is not executed and CPython is not invoked.",
+        "source_mtime and source_size are header fields; they do not prove a matching .py is present.",
+        "python_version is the pinned CPython magic table for this header, not a runtime interpreter."
+      ]
+    },
+    {
+      "target": "typescript-lsp",
+      "operation": "inspect_python_pyc",
+      "evidenceId": "ev_3f0d07d3372590d7ef48903e70536a1689bcaf31f072270028603d35b8277045",
+      "sha256": "3d25c3509fc997ea70f10cd4eff052fd5c3e466a76f3061077e9759a4b49b37d",
+      "limits": [
+        "Bytecode is retained as length and SHA-256 only; this workflow does not decompile, disassemble, or recover source.",
+        "The selected file is not executed and CPython is not invoked.",
+        "source_mtime and source_size are header fields; they do not prove a matching .py is present.",
+        "python_version is the pinned CPython magic table for this header, not a runtime interpreter."
+      ]
+    },
+    {
+      "target": "claudemap server.js and bin/cli.js",
+      "operation": "analyze_javascript_application",
+      "evidenceId": "ev_b1b4c4b97670de121d0edd11ba1f268f04bcbbc9e61e817b00a8c421af0161f6",
+      "sha256": "e0b3f6cf90bfd83fafa4718f9688115dc4b000a611fac484d87779f6f1c7a76e",
+      "limits": "Selected two original JavaScript sources, inert application/semantic graph. Installed dependency inventory is not selected-source coverage. Static relationships are not runtime acceptance."
+    },
+    {
+      "target": "Claude Map project property influence",
+      "operation": "trace_javascript_semantics",
+      "evidenceId": "ev_53bd6497637e31ab2ee1db1379d5d09480d7b3bcf23f7e91f69897a118bc35c4",
+      "status": "ambiguous",
+      "sha256": "1a6dcc5431e0e4159482c79d2bb128c54a6e67e618119f577f3e18c9008213f1",
+      "limits": "Ambiguous static result; controlled original HTTP probes establish runtime observations."
+    }
+  ],
+  "originalCodeVendored": false,
+  "nativeOwnership": "Existing Code Monster compiler/read worker; shared API enrollment and SDK; existing ONE repository_read/durable receipt authority."
+}

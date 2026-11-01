@@ -1,6 +1,6 @@
 # Code Monster source tools through the existing API edge
 
-The normal HTTP service can now register Code Monster's existing six read-only
+The normal HTTP service can now register Code Monster's existing eight read-only
 source tools alongside Backpack's nine guarded context tools. This connects
 source intelligence to the shared edge. MGR-ONE/Tevin still owns reasoning and
 permission decisions; Code Monster owns its source observations and candidate
@@ -107,3 +107,9 @@ claiming browser/mobile or current Tevin access.
 
 
 Container packaging is implemented as the optional Dockerfile.code-monster layer selected by MGR_CODE_MONSTER_BUILD_ROOT in the existing local-only wrapper. See BACKPACK-CONTAINER.md. Its actual build/runtime remains unverified because the owner deferred restart. When MCP_ADVERTISED_SCOPES is absent, normal startup advertises enabled Backpack/Code Monster read scopes automatically; an explicit host list remains authoritative and should include the intended component scopes. Scope advertisement never issues a token or grants project access.
+
+## Structural context and committed automation map
+
+code_monster_outline exposes qualified name paths, bounded parents/children and labeled source declaration/statement ranges without body/literal values. code_monster_automation inventories allowlisted committed instruction/configuration declarations with credential values, URLs and command bodies withheld. Both require the same existing code-monster:read/project binding and share the original heavy-read admission slot. The strict known-tool allowlist now includes these two tools; unknown tools still refuse. Set MCP_LISTEN_HOST=127.0.0.1 for explicit local-only listening; supported IP choices are127.0.0.1,::1,0.0.0.0,::. The default0.0.0.0 stays compatible. Invalid values refuse startup.
+
+Run scripts/verify-source-structure-http.mjs source or compiled with an explicit MGR_CODE_MONSTER_TEST_ROOT. The qualifier uses owned JWT/JWKS/project fixtures plus the actual enrolled Code Monster repository. Its synthetic HTTPS-termination mapping does not verify TLS or hosted OAuth. No permanent service is restarted. See evidence/serena-claudemap-2026-11-01/REPORT.md.
