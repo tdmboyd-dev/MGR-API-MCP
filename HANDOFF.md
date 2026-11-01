@@ -2,6 +2,10 @@
 
 ## CURRENT DIRECT MGR FORGE CREATION + VERIFIED GLB MCP EDGE — 2026-10-31
 
+**Latest exact verification:** npm run verify => 81/81 API tests PASS; real official MCP protocol using fixture authorizations also passed both original biome/creature and Human Forge independent Blender GLB bytes with tenant/scope/digest checks. Forge full same-wave regression: 624 tests run, 3 skipped, zero failures, source MGR-3D-FORGE/evidence/audits/2026-10-31-megawave-full-regression.json. Both repo-owned Chrome source tests passed in the Forge checkout. No public deploy/OAuth credentials or paid neural GPU was proven in these local tests.
+
+
+
 **One original shared API/MCP repo, not a new local project.** It owns the real HTTP, OAuth/JWKS, verified audience and scope binding. Forge owns geometry, Blender jobs, model assets and job state. The local SDK tests use a FIXTURE token verifier to test the real existing handler and do NOT prove a deployed hosted session.
 
 **Source paths built in this wave:** src/mcp-server.ts fixed misleading old tools:write status to actual tools:execute. src/forge-catalog-client.ts gained six-field MorphRig contract, createBiome/biomeStatus, startHumanLipSync/humanLipSyncStatus and readArtifact. src/forge-mcp-tools.ts registers governed mgr_forge_biome_create/status, mgr_forge_human_lipsync_start/status and mgr_forge_artifact_read with job ID + exact SHA and optional real GLB resource (800KB maximum). tools:read for read-only, tools:execute for side effects, no public file URL, no new backend or duplicate Forge Vault. Negative proof includes wrong tenant, missing execute scope, forged receipt/wrong digest.
