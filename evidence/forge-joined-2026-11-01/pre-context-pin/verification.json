@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "sourceStable": true,
+  "guardedInputs": 2047,
+  "changed": [],
+  "added": [],
+  "removed": [],
+  "runs": [
+    {
+      "file": "api-verify.txt",
+      "exitCode": 0
+    },
+    {
+      "file": "forge-unittest.txt",
+      "exitCode": 0
+    }
+  ],
+  "elapsedSeconds": 79.43,
+  "modelProviderCalls": 0,
+  "hostedOrProductionAcceptance": false
+}

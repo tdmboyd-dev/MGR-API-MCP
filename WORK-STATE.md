@@ -1,4 +1,12 @@
+**Latest current 2026-10-31:** MGR API/MCP original creature creation + local direct Forge Studio HTTP proof now passes 68/68 tests; original GLB 114192 bytes SHA b019e661..., replay and tenant/scope/token controls verified. Forge Creator plugin source is skills-only; hosted ChatGPT/mobile remains OPEN. The ONLY canonical API resume authority is HANDOFF.md; lower dated facts are historical.
+
+**Latest 2026-10-31 REA X-Ray checkpoint:** private plugin v0.1.0 saved; local REA MCP static ZIP inspection on Windows PASS; sibling Forge independently matched 302/302 child files, not redistribution rights. Current API/MCP regression 62/62 PASS. **HANDOFF.md is the sole resume authority**; October 30 results below are historical.
+
+**Current authority 2026-10-31:** `HANDOFF.md`. This document keeps prior recovery chronology; do not use its 2026-10-05 current-state claims as today's truth.
+
 # Current work and resume record — MGR-API-MCP
+
+**Latest checkpoint 2026-10-30:** Forge read-only MCP asset discovery wave locally coded and fully regression-tested (55/55 API tests; cross-process Forge Studio HTTP + Node authorized client PASS, wrong tenant denied). Five scoped integration gates: 4 PASS, 1 OPEN (actual hosted Tevin/Creation OS 3D generation). Owner is the current session until Git commit/push; no background agent or lock is implied. **`HANDOFF.md` is the single current resume authority** and queue items 44–48 hold the next actions. The dated October 5 material below is historical.
 
 Updated: 2026-10-05. Responsible session: hosted-mcp-hardening-2026-10-05.
 Repository: `tdmboyd-dev/MGR-API-MCP`
@@ -49,3 +57,8 @@ No scheduled continuation was created by this recovery.
 
 ## Backwards–Forwards HTTP research — 2026-09-29
 New owner dossier: research/MCP-HTTP-AUTH-BOUNDARY-2026-09-29.md. Actual HTTP handler currently creates an MCP server without invoking the separate `authorizeMcpRequest` helper. Primary MCP spec and repo source define the bridging requirements and denial cases. Existing handler test proves only exported functions. Queue and ledger updated. No HTTP service, provider or deployment was run; public entry remains a research-to-build item.
+
+
+## Joined receiving checkpoint - November 1, 2026
+
+Existing Forge main and Tevin gateway histories reconciled;247/247API and638run/635pass/3skipForge with2,051stable inputs. Exact actor plus tenant enrollment and after-await/final-serialization authority checks now cover the optional Forge bridge; document UTF8/root identity repaired. See evidence/forge-joined-2026-11-01/REPORT.md and the current root handoff. Permanent Tevin Forge execution, newer raw-WAV shared adapter, stronger GLB structural validation and hosted/production acceptance remain open. Prior dated baselines retain historical scope.

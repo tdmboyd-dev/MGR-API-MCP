@@ -1,0 +1,1016 @@
+{
+  "scope": "All actual merge publication paths copied to a fresh isolated scan directory. Runtime/private credentials, raw private inputs and personal transcripts are excluded. Known-format scan and reviewed findings do not establish universal secret detection.",
+  "scannedFiles": 80,
+  "reviewedFindings": 168,
+  "unresolvedFindings": 0,
+  "classifications": [
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 96,
+      "rule": "jfrog-identity-token",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 233,
+      "rule": "jfrog-identity-token",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 323,
+      "rule": "jfrog-identity-token",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 21,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 27,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 39,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 51,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 82,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 92,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 404,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 405,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 488,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 489,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 490,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 491,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 570,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 571,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 616,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 617,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 716,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 717,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1036,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1037,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1058,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1059,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1060,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1061,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1064,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1065,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 96,
+      "rule": "jfrog-identity-token",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 233,
+      "rule": "jfrog-identity-token",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 323,
+      "rule": "jfrog-identity-token",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 21,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 27,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 39,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 51,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 82,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 92,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 404,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 405,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 488,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 489,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 490,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 491,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 570,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 571,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 616,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 617,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 716,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 717,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1036,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1037,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1058,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1059,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1060,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1061,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1064,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1065,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 96,
+      "rule": "jfrog-identity-token",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 233,
+      "rule": "jfrog-identity-token",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 323,
+      "rule": "jfrog-identity-token",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 21,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 27,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 39,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 51,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 82,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 92,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 404,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 405,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 488,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 489,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 490,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 491,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 570,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 571,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 616,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 617,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 716,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 717,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1036,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1037,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1058,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1059,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1060,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1061,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1064,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1065,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 96,
+      "rule": "jfrog-identity-token",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 233,
+      "rule": "jfrog-identity-token",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 323,
+      "rule": "jfrog-identity-token",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 21,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 27,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 39,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 51,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 82,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 92,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 404,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 405,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 488,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 489,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 490,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 491,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 570,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 571,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 616,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 617,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 716,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 717,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1036,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1037,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1058,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1059,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1060,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1061,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1064,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1065,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1277,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1298,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1356,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1368,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1277,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1298,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1356,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1368,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1277,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1298,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1356,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1368,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1277,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1298,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1356,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1368,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1429,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1471,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1472,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1514,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1537,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1587,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1429,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1471,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1472,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1514,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1537,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1587,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1429,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1471,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1472,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1514,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1537,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1587,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1429,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1471,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1472,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1514,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1537,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1587,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1692,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1693,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-after.json",
+      "line": 1735,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1692,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1693,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/source-before.json",
+      "line": 1735,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1690,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1691,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-before.json",
+      "line": 1733,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1690,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1691,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    },
+    {
+      "path": "evidence/forge-joined-2026-11-01/pre-context-pin/source-after.json",
+      "line": 1733,
+      "rule": "generic-api-key",
+      "classification": "Actual SHA256 input fingerprint in byte-identical generated qualification map, not credential material"
+    }
+  ]
+}

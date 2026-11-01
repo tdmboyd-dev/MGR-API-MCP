@@ -1,0 +1,24 @@
+✔ Forge directory rechecks current exact authority after the held upstream result (2.2736ms)
+✔ Forge world-create rechecks current exact authority after the held upstream result (0.688ms)
+✔ Forge world-status rechecks current exact authority after the held upstream result (0.4667ms)
+✔ Forge creature-create rechecks current exact authority after the held upstream result (0.6185ms)
+✔ Forge creature-status rechecks current exact authority after the held upstream result (0.6449ms)
+✔ Forge biome-create rechecks current exact authority after the held upstream result (0.4787ms)
+✔ Forge biome-status rechecks current exact authority after the held upstream result (0.3957ms)
+✔ Forge artifact rechecks current exact authority after the held upstream result (0.527ms)
+✔ Forge human-start rechecks current exact authority after the held upstream result (0.5755ms)
+✔ Forge human-status rechecks current exact authority after the held upstream result (1.8233ms)
+✔ Forge composition-create rechecks current exact authority after the held upstream result (0.6576ms)
+✔ Forge composition-status rechecks current exact authority after the held upstream result (0.3841ms)
+✔ async or promise-returning host fences cannot authorize Forge and rejected promises are drained (0.2706ms)
+✔ same-tenant foreign actor and missing workstation actor enrollment deny before Forge dispatch (0.1832ms)
+✔ registered Forge artifact withholds serialized content after current host authority changes (3.5623ms)
+✔ registered Forge creature-create withholds serialized content after current host authority changes (1.2496ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 617.9893

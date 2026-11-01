@@ -1,4 +1,52 @@
+## 2026-11-01 — Continued original Forge composition via shared MCP
+
+- Preserved source on existing MGR-API-MCP Git main 7ce84d7. src/forge-catalog-client.ts and src/forge-mcp-tools.ts extend one authorized Forge service with stable source-backed composed world creation/status; no duplicate API/MCP instance. Real Forge backend uses owner forge/world_composition_jobs.py and existing Studio job auth, exports one actual Blender-composed GLB plus Godot source. Current npm run verify **85 tests passed**, TypeScript and plugin checks pass.
+- Source Studio/Blender proof lives in sibling MGR-3D-FORGE/evidence/world/2026-11-01-studio-composed-world-acceptance.json; direct spawned test alone does NOT prove hosted remote OAuth or Tevin/ChatGPT end-to-end. Maintain no model weights, paid provider calls or private credential exposures.
+
+
+## 2026-10-31 Original shared Forge MCP add-on wave
+
+- Actual src/mcp-server.ts tools:write description mismatch fixed to existing tools:execute. Added biomorphic world/Human Forge jobs and SHA-checked exact real GLB delivery through the existing MCP adapter, no second storage or control plane. Actual local official MCP SDK created/replayed two 3D sources and retrieved bytes, wrong tenant and digest failed closed; source/test/evidence in this repo. Human Blender MCP acceptance and deployed endpoint separately tracked. No licensed CUDA neural weights, cost or hosted iOS verified.
+
+## October 31, 2026 — Repo audit reference repair
+
+- Found one broken archive-local link in docs/history/FORGE-SOURCE-CHECKPOINT-2026-10-30.md: WORK-STATE.md resolves two directories above, not inside docs/history. Repaired to ../../WORK-STATE.md and reran python scripts/verify_repository.py: 184 checks PASS, 0 errors. Evidence evidence/audits/2026-10-31-reference-link-repair.json. Historical content otherwise preserved.
+
+## 2026-10-31 — Forge direct creation, scope repair and real process proof
+
+- Used existing API/MCP actor/audience/tenant and `tools:execute` scope after detecting proposed `tools:write` mismatch. No second router, database, token manager or Creation OS middleman.
+- Added Studio catalog client createWorld/worldStatus and permissioned MCP `mgr_forge_world_create` and `mgr_forge_world_status`; source discovery includes official ambientCG metadata. Unknown/partial result cannot silently report success. Read-only and creation actions are distinct tools.
+- Actual local process integration initially returned HTTP 400 due to unsupported `mcp-created-` building ID; changed test to Forge's real `mgr-created-0001` contract. Re-run PASS: generated 13,964-byte GLB SHA `89144125aa7e9ac42d755a10eabdd283d6271cb2fb5f2af948d84e45fb0198ac`, duplicate same hash, wrong tenant and missing execute scope denied.
+- `npm run verify`: TypeScript typecheck, **60/60** tests, hosted-artifacts syntax and plugin manifest checks PASS. This is local Python Studio HTTP + Node function execution, not real remote hosted Tevin/MCP protocol or file engine QA.
+- Full Forge native imagination/morph engine is a separate F121–F123 creation path in `MGR-3D-FORGE`; API-MCP does not yet provide those generation tools.
+
+
 # Audit ledger
+
+## October 31, 2026 — Real original 3D Creator direct MCP
+
+- Verified existing ForgeStudioCatalogClient and registerForgeMcpTools already own authorization/transport; added bounded optional createCreature/status and tools under existing scopes tools:execute/read, no new router or independent geometry backend.
+- Reproduced and fixed TypeScript exactOptionalPropertyTypes morph optional-field mismatch with correct field typing. No global compiler safety downgrade.
+- Actual same-local-process integration: src client → Python Forge Studio HTTP → native CPU model GLB; independently token-authenticated GET hash compared with receipt. 114192 bytes, 1748 triangles, SHA b019e661..., replay identical. Cross-tenant, absent execute scope and tokenless download refused. Full evidence evidence/forge-creator/2026-10-31-native-creature-local-bridge.json.
+- API npm run verify 68/68 PASS including five new creature authorization/receipt checks and skills-only Forge Creator package source tests. Private Forge Creator plugin release v0.1.0 saved, exact source fingerprints matched and files read back; no hosted MCP registered. No hosted remote ChatGPT/Tevin, no quality acceptance, no model spend; full browser click open.
+- Reuse MGR API/MCP for future ChatGPT Forge Creator plugin; its 0.1.0 SKILL-only source in integrations/forge-creator-plugin is not a connected remote tool. Missing hosted OAuth/expiring file URLs/generation request authorizations remain queue items CREATOR-02..04.
+
+
+## October 31, 2026 — REA 6.8.0 local X-Ray plugin and Forge receipt bridge
+
+- Verified official `morluto/rea` source, MIT plus third-party notices, isolated npm 6.8.0 release and SHA-256-verified portable Node runtime (avoided global Node drift). REA static ZIP `inspect-artifact` command actually ran with full Evidence required; no untrusted package executable was launched.
+- Account-private `MGR REA X-Ray` plugin v0.1.0 created, saved release downloaded back, local MCP protocol/tool/denial/read verified. Source/identity pins kept under `integrations/rea-xray-plugin`, no REA source copied into MGR code.
+- Connected Forge `rea-kit-audit` against REA bundle and existing rights/asset Vault; 302/302 real ZIP file SHA/size matches, preserves source scope as NOT RIGHTS CLEARED. No API/MCP duplicate rights database, no mandatory Creation OS hop.
+- `npm run verify` passed 62/62 tests and TypeScript/artifact/plugin checks. Hosted plugin connection and Tevin user journey remain unverified.
+
+
+## October 30, 2026 — MGR Forge source bridge implementation and proof
+
+- Inspected current Forge + API GitHub main, guarded MCP registration, Creation OS service dispatch and Forge Studio token-protected HTTP endpoints. Used the existing shared auth/transport, avoiding a second router.
+- Implemented conditional `mgr_forge_asset_discover` plus bounds, allowed tenant, read-scope requirement, upstream HTTPS/loopback transport constraints, response-budget and timeout guards; no secrets in repository.
+- Verified current 55-test API suite/typecheck/plugin checker and actual loopback Forge Studio process ↔ Node adapter/authorized MCP read. Captured refusal for wrong tenant. Hosted Tevin session, external OAuth/service creds and Creation OS creative execution remain unverified.
+- Sibling Forge Source Atlas/rights source ledger and machine receipt are referenced in `HANDOFF.md`; MGR API/MCP does not own the raw GLB vault or licenses.
+- Open: canonical rights-accepted asset, independently opened in Blender/engine, full Tevin user journey, production endpoint and restart/cancel/duplicate tolerance for actual 3D jobs.
 
 ## September 28, 2026
 
@@ -75,3 +123,8 @@ Subsequent broader ONE qualification reproduced sticky-close failure after unrea
 Final corrected-dependency API follow-up:181/181,0fail/cancel/skip, strict standalone starter noEmit0,3,327 guarded inputs byte-stable at startupd30531d1/workflow0e1322fc. Parent broader failures remain retained; final API scope does not imply its54-file or owner-journey outcome. Prior181/3325 and181/3327-at-2ff035 raw receipts/maps preserved. Public-index/security/publication and original acceptance remain parent continuation.
 
 Final parent frozen-delivery graph passed744/744 across54files with zero drift, including normal owner HTTP/MCP TCP/Creation SQLite/reopen/resume. Canonical run with concurrent peer edits and the missing isolated adapter fixture remain retained diagnostics. Current peer model/account/shared-server/UI overlay is preserved and excluded. This is local engineering proof, not original package or production closure. Publication is recorded separately.
+
+
+## Joined receiving checkpoint - November 1, 2026
+
+Existing Forge main and Tevin gateway histories reconciled;247/247API and638run/635pass/3skipForge with2,051stable inputs. Exact actor plus tenant enrollment and after-await/final-serialization authority checks now cover the optional Forge bridge; document UTF8/root identity repaired. See evidence/forge-joined-2026-11-01/REPORT.md and the current root handoff. Permanent Tevin Forge execution, newer raw-WAV shared adapter, stronger GLB structural validation and hosted/production acceptance remain open. Prior dated baselines retain historical scope.

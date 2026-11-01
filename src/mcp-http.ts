@@ -4,6 +4,7 @@ import { createMgrMcpServer } from "./mcp-server.js";
 import { authorizeMcpRequest, type AccessTokenVerifier, type McpAuthResult } from "./http-auth.js";
 import type { LegacyEdgeClient } from "./legacy-client.js";
 import type { CreationOSClient } from "./creation-client.js";
+import type {ForgeCatalogClient} from "./forge-catalog-client.js";
 import type { DepartmentGateway, DepartmentToolOptions } from "./department-gateway.js";
 
 export interface AuthorizedMgrMcpHttpOptions {
@@ -13,6 +14,9 @@ export interface AuthorizedMgrMcpHttpOptions {
   resourceMetadataUrl:string;
   legacy?:LegacyEdgeClient;
   creation?:CreationOSClient;
+  forge?:ForgeCatalogClient;
+  forgeAllowedTenantId?:string;
+  forgeAllowedActorId?:string;
   departments?:DepartmentGateway;
   repositories?:RepositoryReadGateway;
   /** Host may lower the fixed64 outer auth/handler admission budget. */
@@ -49,6 +53,7 @@ export function createMgrMcpHttpHandler() {
  * replace the authenticated identity.
  */
 export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOptions){
+  if(options.forge && (!options.forgeAllowedTenantId || !options.forgeAllowedActorId))throw Error("Forge requires an exact workstation actor and tenant enrollment");
   const activeHandlers=new Set<ReturnType<typeof createMcpHandler>>();
   const closingHandlers=new WeakMap<ReturnType<typeof createMcpHandler>,Promise<void>>();
   const maximumPendingRequests=options.maximumPendingRequests===undefined?64:options.maximumPendingRequests;
@@ -86,6 +91,7 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
       }
 
       const serverOptions:{
+        forge?:{auth:typeof authResult.auth;resourceAudience:string;forge:ForgeCatalogClient;allowedTenantId:string;allowedActorId:string;assertCurrent:()=>void};
         departments?:DepartmentToolOptions;
         repositories?:{gateway:RepositoryReadGateway;auth:typeof authResult.auth;resourceAudience:string};
         legacy?:{
@@ -109,6 +115,7 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
       }
       if(options.repositories)serverOptions.repositories={gateway:options.repositories,auth:authResult.auth,resourceAudience:options.resourceAudience};
       if(options.departments)serverOptions.departments={auth:authResult.auth,resourceAudience:options.resourceAudience,gateway:options.departments};
+      if(options.forge && options.forgeAllowedTenantId && options.forgeAllowedActorId)serverOptions.forge={auth:authResult.auth,resourceAudience:options.resourceAudience,forge:options.forge,allowedTenantId:options.forgeAllowedTenantId,allowedActorId:options.forgeAllowedActorId,assertCurrent:()=>{if(closed || request.signal.aborted)throw Error("Forge request or host no longer current");}};
       if(closed)return unavailable();
       const handler=createMcpHandler(()=>createMgrMcpServer(serverOptions));
       activeHandlers.add(handler);

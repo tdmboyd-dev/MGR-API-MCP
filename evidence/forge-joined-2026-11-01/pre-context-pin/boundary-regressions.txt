@@ -1,0 +1,27 @@
+✔ Forge directory rechecks current exact authority after the held upstream result (5.46ms)
+✔ Forge world-create rechecks current exact authority after the held upstream result (1.5574ms)
+✔ Forge world-status rechecks current exact authority after the held upstream result (1.9144ms)
+✔ Forge creature-create rechecks current exact authority after the held upstream result (2.6295ms)
+✔ Forge creature-status rechecks current exact authority after the held upstream result (5.3606ms)
+✔ Forge biome-create rechecks current exact authority after the held upstream result (1.3355ms)
+✔ Forge biome-status rechecks current exact authority after the held upstream result (1.2156ms)
+✔ Forge artifact rechecks current exact authority after the held upstream result (1.5133ms)
+✔ Forge human-start rechecks current exact authority after the held upstream result (5.5718ms)
+✔ Forge human-status rechecks current exact authority after the held upstream result (1.7533ms)
+✔ Forge composition-create rechecks current exact authority after the held upstream result (1.5034ms)
+✔ Forge composition-status rechecks current exact authority after the held upstream result (1.0253ms)
+✔ same-tenant foreign actor and missing workstation actor enrollment deny before Forge dispatch (0.9146ms)
+✔ registered Forge artifact withholds serialized content after current host authority changes (14.5347ms)
+✔ registered Forge creature-create withholds serialized content after current host authority changes (3.1993ms)
+✔ malformed UTF8 cannot be silently replaced and published with a misleading content hash (3447.9333ms)
+✔ valid Unicode/BOM/CRLF documents preserve the committed byte hash and readable text (3465.296ms)
+✔ a replacement directory at the same enrolled path cannot inherit old repository knowledge enrollment (3213.6259ms)
+✔ an oversized source document and a line beyond the page budget are refused explicitly (4602.9924ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 15359.3834

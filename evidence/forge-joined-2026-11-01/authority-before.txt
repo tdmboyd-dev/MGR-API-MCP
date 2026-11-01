@@ -1,0 +1,244 @@
+✖ Forge directory rechecks current exact authority after the held upstream result (41.3738ms)
+✖ Forge world-create rechecks current exact authority after the held upstream result (14.1333ms)
+✖ Forge world-status rechecks current exact authority after the held upstream result (12.2584ms)
+✖ Forge creature-create rechecks current exact authority after the held upstream result (11.5586ms)
+✖ Forge creature-status rechecks current exact authority after the held upstream result (1.5297ms)
+✖ Forge biome-create rechecks current exact authority after the held upstream result (1.3089ms)
+✖ Forge biome-status rechecks current exact authority after the held upstream result (0.999ms)
+✖ Forge artifact rechecks current exact authority after the held upstream result (35.6182ms)
+✖ Forge human-start rechecks current exact authority after the held upstream result (3.2689ms)
+✖ Forge human-status rechecks current exact authority after the held upstream result (1.9895ms)
+✖ Forge composition-create rechecks current exact authority after the held upstream result (24.0393ms)
+✖ Forge composition-status rechecks current exact authority after the held upstream result (0.8789ms)
+✖ same-tenant foreign actor and missing workstation actor enrollment deny before Forge dispatch (0.8193ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 0
+ℹ fail 13
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3645.508
+
+✖ failing tests:
+
+test at test\forge-authority-lifecycle.test.ts:1:2909
+✖ Forge directory rechecks current exact authority after the held upstream result (41.3738ms)
+  AssertionError [ERR_ASSERTION]: directory
+  
+  true !== false
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-forge-joined\test\forge-authority-lifecycle.test.ts:32:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\forge-authority-lifecycle.test.ts:1:2909
+✖ Forge world-create rechecks current exact authority after the held upstream result (14.1333ms)
+  AssertionError [ERR_ASSERTION]: world-create
+  
+  true !== false
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-forge-joined\test\forge-authority-lifecycle.test.ts:32:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\forge-authority-lifecycle.test.ts:1:2909
+✖ Forge world-status rechecks current exact authority after the held upstream result (12.2584ms)
+  AssertionError [ERR_ASSERTION]: world-status
+  
+  true !== false
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-forge-joined\test\forge-authority-lifecycle.test.ts:32:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\forge-authority-lifecycle.test.ts:1:2909
+✖ Forge creature-create rechecks current exact authority after the held upstream result (11.5586ms)
+  AssertionError [ERR_ASSERTION]: creature-create
+  
+  true !== false
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-forge-joined\test\forge-authority-lifecycle.test.ts:32:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\forge-authority-lifecycle.test.ts:1:2909
+✖ Forge creature-status rechecks current exact authority after the held upstream result (1.5297ms)
+  AssertionError [ERR_ASSERTION]: creature-status
+  
+  true !== false
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-forge-joined\test\forge-authority-lifecycle.test.ts:32:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\forge-authority-lifecycle.test.ts:1:2909
+✖ Forge biome-create rechecks current exact authority after the held upstream result (1.3089ms)
+  AssertionError [ERR_ASSERTION]: biome-create
+  
+  true !== false
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-forge-joined\test\forge-authority-lifecycle.test.ts:32:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\forge-authority-lifecycle.test.ts:1:2909
+✖ Forge biome-status rechecks current exact authority after the held upstream result (0.999ms)
+  AssertionError [ERR_ASSERTION]: biome-status
+  
+  true !== false
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-forge-joined\test\forge-authority-lifecycle.test.ts:32:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\forge-authority-lifecycle.test.ts:1:2909
+✖ Forge artifact rechecks current exact authority after the held upstream result (35.6182ms)
+  AssertionError [ERR_ASSERTION]: artifact
+  
+  true !== false
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-forge-joined\test\forge-authority-lifecycle.test.ts:32:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\forge-authority-lifecycle.test.ts:1:2909
+✖ Forge human-start rechecks current exact authority after the held upstream result (3.2689ms)
+  AssertionError [ERR_ASSERTION]: human-start
+  
+  true !== false
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-forge-joined\test\forge-authority-lifecycle.test.ts:32:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\forge-authority-lifecycle.test.ts:1:2909
+✖ Forge human-status rechecks current exact authority after the held upstream result (1.9895ms)
+  AssertionError [ERR_ASSERTION]: human-status
+  
+  true !== false
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-forge-joined\test\forge-authority-lifecycle.test.ts:32:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\forge-authority-lifecycle.test.ts:1:2909
+✖ Forge composition-create rechecks current exact authority after the held upstream result (24.0393ms)
+  AssertionError [ERR_ASSERTION]: composition-create
+  
+  true !== false
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-forge-joined\test\forge-authority-lifecycle.test.ts:32:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\forge-authority-lifecycle.test.ts:1:2909
+✖ Forge composition-status rechecks current exact authority after the held upstream result (0.8789ms)
+  AssertionError [ERR_ASSERTION]: composition-status
+  
+  true !== false
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-forge-joined\test\forge-authority-lifecycle.test.ts:32:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\forge-authority-lifecycle.test.ts:1:3682
+✖ same-tenant foreign actor and missing workstation actor enrollment deny before Forge dispatch (0.8193ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-forge-joined\test\forge-authority-lifecycle.test.ts:36:260)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

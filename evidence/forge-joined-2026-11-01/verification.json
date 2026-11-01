@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "sourceStable": true,
+  "guardedInputs": 2051,
+  "changed": [],
+  "added": [],
+  "removed": [],
+  "runs": [
+    {
+      "file": "api-verify.txt",
+      "exitCode": 0
+    }
+  ],
+  "elapsedSeconds": 49.62,
+  "modelProviderCalls": 0,
+  "hostedOrProductionAcceptance": false
+}

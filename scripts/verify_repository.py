@@ -22,6 +22,8 @@ def verify(root=ROOT, local=False):
         if p.name=='.env.example':
             for line in p.read_text(encoding='utf-8').splitlines():
                 if not line.strip() or line.lstrip().startswith('#') or '=' not in line: continue
+                if not re.fullmatch(r'[A-Z][A-Z0-9_]*=.*',line):
+                    errors.append(f'Invalid environment-template syntax: {rel}'); continue
                 key,value=line.split('=',1)
                 if not re.search(r'TOKEN|SECRET|PASSWORD|PRIVATE_KEY|API_KEY',key,re.I): continue
                 value=value.strip().strip('"\'')

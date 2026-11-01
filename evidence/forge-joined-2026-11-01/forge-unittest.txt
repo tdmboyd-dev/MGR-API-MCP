@@ -1,0 +1,851 @@
+test_ambientcg_official_v3_source_is_only_cached_metadata (tests.test_ambientcg_source.AmbientCgTests.test_ambientcg_official_v3_source_is_only_cached_metadata) ... ok
+test_invalid_query_redirect_and_response_fail (tests.test_ambientcg_source.AmbientCgTests.test_invalid_query_redirect_and_response_fail) ... ok
+test_acquire_missing_listing_refused (tests.test_asset_atlas.TestAssetAtlas.test_acquire_missing_listing_refused) ... ok
+test_acquire_real_glb_bytes_into_existing_hash_vault_but_quarantine (tests.test_asset_atlas.TestAssetAtlas.test_acquire_real_glb_bytes_into_existing_hash_vault_but_quarantine) ... ok
+test_acquire_rejects_cdn_redirect (tests.test_asset_atlas.TestAssetAtlas.test_acquire_rejects_cdn_redirect) ... ok
+test_acquire_rejects_source_byte_mismatch_without_vault_write (tests.test_asset_atlas.TestAssetAtlas.test_acquire_rejects_source_byte_mismatch_without_vault_write) ... ok
+test_api_redirect_outside_allowlist_is_rejected (tests.test_asset_atlas.TestAssetAtlas.test_api_redirect_outside_allowlist_is_rejected) ... ok
+test_asset_registry_prevents_conflicting_provenance (tests.test_asset_atlas.TestAssetAtlas.test_asset_registry_prevents_conflicting_provenance) ... ok
+test_cli_owner_can_find_source_families_without_network (tests.test_asset_atlas.TestAssetAtlas.test_cli_owner_can_find_source_families_without_network) ... ok
+test_cli_reopens_cached_model_search (tests.test_asset_atlas.TestAssetAtlas.test_cli_reopens_cached_model_search) ... ok
+test_glb_rejects_external_asset_uri (tests.test_asset_atlas.TestAssetAtlas.test_glb_rejects_external_asset_uri) ... ok
+test_glb_rejects_negative_declared_buffer_length (tests.test_asset_atlas.TestAssetAtlas.test_glb_rejects_negative_declared_buffer_length) ... ok
+test_license_or_cdn_changes_do_not_silently_replace_existing_entry (tests.test_asset_atlas.TestAssetAtlas.test_license_or_cdn_changes_do_not_silently_replace_existing_entry) ... ok
+test_live_search_bounds (tests.test_asset_atlas.TestAssetAtlas.test_live_search_bounds) ... ok
+test_live_search_is_metadata_only_and_persistent (tests.test_asset_atlas.TestAssetAtlas.test_live_search_is_metadata_only_and_persistent) ... ok
+test_polyhaven_search_caches_models_with_api_credit_obligation (tests.test_asset_atlas.TestAssetAtlas.test_polyhaven_search_caches_models_with_api_credit_obligation) ... ok
+test_polyhaven_type_filter_and_remote_host_validation (tests.test_asset_atlas.TestAssetAtlas.test_polyhaven_type_filter_and_remote_host_validation) ... ok
+test_restricted_pack_is_not_mislabeled_cc0 (tests.test_asset_atlas.TestAssetAtlas.test_restricted_pack_is_not_mislabeled_cc0) ... ok
+test_search_directory_by_creator_kind (tests.test_asset_atlas.TestAssetAtlas.test_search_directory_by_creator_kind) ... ok
+test_source_directory_spans_requested_creation_domains (tests.test_asset_atlas.TestAssetAtlas.test_source_directory_spans_requested_creation_domains) ... ok
+test_unexpected_download_host_is_rejected_before_caching (tests.test_asset_atlas.TestAssetAtlas.test_unexpected_download_host_is_rejected_before_caching) ... ok
+test_upstream_payload_budget (tests.test_asset_atlas.TestAssetAtlas.test_upstream_payload_budget) ... ok
+test_wrong_license_is_not_promoted (tests.test_asset_atlas.TestAssetAtlas.test_wrong_license_is_not_promoted) ... ok
+test_matching_glb_and_obj_geometry (tests.test_asset_parity.ExportParityTests.test_matching_glb_and_obj_geometry) ... ok
+test_missing_face_detected (tests.test_asset_parity.ExportParityTests.test_missing_face_detected) ... ok
+test_rejects_bad_face_indices_and_nonfinite_vertices (tests.test_asset_parity.ExportParityTests.test_rejects_bad_face_indices_and_nonfinite_vertices) ... ok
+test_rejects_nonfinite_tolerance (tests.test_asset_parity.ExportParityTests.test_rejects_nonfinite_tolerance) ... ok
+test_wrong_vertex_location_detected (tests.test_asset_parity.ExportParityTests.test_wrong_vertex_location_detected) ... ok
+test_invalid_audio_declined_without_creating_output (tests.test_audio_motion.AudioMotionTests.test_invalid_audio_declined_without_creating_output) ... ok
+test_missing_blender_denied_before_editing_audio_inputs (tests.test_audio_motion.AudioMotionTests.test_missing_blender_denied_before_editing_audio_inputs) ... ok
+test_silence_does_not_claim_speech (tests.test_audio_motion.AudioMotionTests.test_silence_does_not_claim_speech) ... ok
+test_sound_produces_bounded_jaw_but_not_false_phoneme_alignment (tests.test_audio_motion.AudioMotionTests.test_sound_produces_bounded_jaw_but_not_false_phoneme_alignment) ... ok
+test_create_hash_replay_and_reopen (tests.test_biome_jobs.BiomeJobTests.test_create_hash_replay_and_reopen) ... ok
+test_wrong_body_conflicts_invalid_inputs_and_corruption (tests.test_biome_jobs.BiomeJobTests.test_wrong_body_conflicts_invalid_inputs_and_corruption) ... ok
+test_blender_false_success_is_not_exported (tests.test_blender_roundtrip.BlenderRoundtripSafetyTests.test_blender_false_success_is_not_exported) ... ok
+test_command_is_static_and_has_explicit_paths (tests.test_blender_roundtrip.BlenderRoundtripSafetyTests.test_command_is_static_and_has_explicit_paths) ... ok
+test_existing_output_refused (tests.test_blender_roundtrip.BlenderRoundtripSafetyTests.test_existing_output_refused) ... ok
+test_missing_blend_refused (tests.test_blender_roundtrip.BlenderRoundtripSafetyTests.test_missing_blend_refused) ... ok
+test_missing_blender_binary_is_not_a_fake_success (tests.test_blender_roundtrip.BlenderRoundtripSafetyTests.test_missing_blender_binary_is_not_a_fake_success) ... ok
+test_original_glb_mutation_fails_closed (tests.test_blender_roundtrip.BlenderRoundtripSafetyTests.test_original_glb_mutation_fails_closed) ... ok
+test_cli_source_is_complete_after_publication (tests.test_canon.MgrCanonTests.test_cli_source_is_complete_after_publication)
+Regression: a prior GitHub upload silently truncated cli.py. ... ok
+test_current_inventory_has_real_blender_receipt (tests.test_canon.MgrCanonTests.test_current_inventory_has_real_blender_receipt) ... ok
+test_native_identity_excludes_vendor_named_capabilities (tests.test_canon.MgrCanonTests.test_native_identity_excludes_vendor_named_capabilities) ... ok
+test_readme_local_links_all_exist (tests.test_canon.MgrCanonTests.test_readme_local_links_all_exist) ... ok
+test_bad_manifest_or_plan_rejected (tests.test_cell_transport.CellTransportTests.test_bad_manifest_or_plan_rejected) ... ok
+test_cli_failed_integrity_returns_nonzero_with_receipt (tests.test_cell_transport.CellTransportTests.test_cli_failed_integrity_returns_nonzero_with_receipt) ... ok
+test_cli_runs_real_io_and_writes_receipt (tests.test_cell_transport.CellTransportTests.test_cli_runs_real_io_and_writes_receipt) ... ok
+test_corrupt_disk_file_fails_closed (tests.test_cell_transport.CellTransportTests.test_corrupt_disk_file_fails_closed) ... ok
+test_missing_cell_is_explicit_fault (tests.test_cell_transport.CellTransportTests.test_missing_cell_is_explicit_fault) ... ok
+test_prefetch_does_not_evict_active (tests.test_cell_transport.CellTransportTests.test_prefetch_does_not_evict_active) ... ok
+test_real_disk_cache_and_repeat_no_extra_read (tests.test_cell_transport.CellTransportTests.test_real_disk_cache_and_repeat_no_extra_read) ... ok
+test_two_active_cells_exceeding_budget_are_not_false_loaded (tests.test_cell_transport.CellTransportTests.test_two_active_cells_exceeding_budget_are_not_false_loaded) ... ok
+test_compression_explicitly_rejected (tests.test_character_glb.CharacterGLBTests.test_compression_explicitly_rejected) ... ok
+test_header_corruption_refused (tests.test_character_glb.CharacterGLBTests.test_header_corruption_refused) ... ok
+test_index_exceeding_vertex_count_refused (tests.test_character_glb.CharacterGLBTests.test_index_exceeding_vertex_count_refused) ... ok
+test_negative_bufferview_not_python_negative_index (tests.test_character_glb.CharacterGLBTests.test_negative_bufferview_not_python_negative_index) ... ok
+test_negative_index_accessor_rejected (tests.test_character_glb.CharacterGLBTests.test_negative_index_accessor_rejected) ... ok
+test_negative_position_accessor_rejected (tests.test_character_glb.CharacterGLBTests.test_negative_position_accessor_rejected) ... ok
+test_no_uv_is_valid (tests.test_character_glb.CharacterGLBTests.test_no_uv_is_valid) ... ok
+test_non_glb_refused (tests.test_character_glb.CharacterGLBTests.test_non_glb_refused) ... ok
+test_sparse_requires_normalization (tests.test_character_glb.CharacterGLBTests.test_sparse_requires_normalization) ... ok
+test_truncation_refused (tests.test_character_glb.CharacterGLBTests.test_truncation_refused) ... ok
+test_unsigned_short_indices_and_uv_accepted (tests.test_character_glb.CharacterGLBTests.test_unsigned_short_indices_and_uv_accepted) ... ok
+test_actual_source_mesh_inspected (tests.test_character_intake.CharacterIntakeTests.test_actual_source_mesh_inspected) ... ok
+test_admission_cannot_overwrite (tests.test_character_intake.CharacterIntakeTests.test_admission_cannot_overwrite) ... ok
+test_admission_preserves_binary (tests.test_character_intake.CharacterIntakeTests.test_admission_preserves_binary) ... ok
+test_blender_unavailable_cannot_fake_project (tests.test_character_intake.CharacterIntakeTests.test_blender_unavailable_cannot_fake_project) ... ok
+test_bounds_are_finite (tests.test_character_intake.CharacterIntakeTests.test_bounds_are_finite) ... ok
+test_cli_admission (tests.test_character_intake.CharacterIntakeTests.test_cli_admission) ... ok
+test_corrupt_glb_refused (tests.test_character_intake.CharacterIntakeTests.test_corrupt_glb_refused) ... ok
+test_invalid_output_suffix_refused (tests.test_character_intake.CharacterIntakeTests.test_invalid_output_suffix_refused) ... ok
+test_large_input_refused_before_read (tests.test_character_intake.CharacterIntakeTests.test_large_input_refused_before_read) ... ok
+test_missing_source_refused (tests.test_character_intake.CharacterIntakeTests.test_missing_source_refused) ... ok
+test_modified_admitted_glb_refused_for_blender (tests.test_character_intake.CharacterIntakeTests.test_modified_admitted_glb_refused_for_blender) ... ok
+test_no_phony_likeness_or_rig_claim (tests.test_character_intake.CharacterIntakeTests.test_no_phony_likeness_or_rig_claim) ... ok
+test_reopen_rejects_invalid_fingerprint (tests.test_character_intake.CharacterIntakeTests.test_reopen_rejects_invalid_fingerprint) ... ok
+test_reopen_requires_existing_blend (tests.test_character_intake.CharacterIntakeTests.test_reopen_requires_existing_blend) ... ok
+test_reopen_requires_native_blender_binary (tests.test_character_intake.CharacterIntakeTests.test_reopen_requires_native_blender_binary) ... ok
+test_reopen_requires_new_receipt (tests.test_character_intake.CharacterIntakeTests.test_reopen_requires_new_receipt) ... ok
+test_wrong_extension_refused (tests.test_character_intake.CharacterIntakeTests.test_wrong_extension_refused) ... ok
+test_invalid_export_suffix_refused (tests.test_character_motion.CharacterMotionTests.test_invalid_export_suffix_refused) ... ok
+test_missing_blender_not_faked (tests.test_character_motion.CharacterMotionTests.test_missing_blender_not_faked) ... ok
+test_missing_rig_refused (tests.test_character_motion.CharacterMotionTests.test_missing_rig_refused) ... ok
+test_no_overwrite_export (tests.test_character_motion.CharacterMotionTests.test_no_overwrite_export) ... ok
+test_no_overwrite_import (tests.test_character_motion.CharacterMotionTests.test_no_overwrite_import) ... ok
+test_source_fingerprint_required (tests.test_character_motion.CharacterMotionTests.test_source_fingerprint_required) ... ok
+test_unavailable_receiving_blender_fails (tests.test_character_motion.CharacterMotionTests.test_unavailable_receiving_blender_fails) ... ok
+test_cli_writes_new_receipt (tests.test_character_readiness.CharacterReadinessTests.test_cli_writes_new_receipt) ... ok
+test_invalid_output_type_refused (tests.test_character_readiness.CharacterReadinessTests.test_invalid_output_type_refused) ... ok
+test_invalid_source_refused (tests.test_character_readiness.CharacterReadinessTests.test_invalid_source_refused) ... ok
+test_mesh_parts_are_measured (tests.test_character_readiness.CharacterReadinessTests.test_mesh_parts_are_measured) ... ok
+test_mismatched_skin_accessor_not_ready (tests.test_character_readiness.CharacterReadinessTests.test_mismatched_skin_accessor_not_ready) ... ok
+test_nonglb_refused (tests.test_character_readiness.CharacterReadinessTests.test_nonglb_refused) ... ok
+test_real_model_is_not_claimed_rigged (tests.test_character_readiness.CharacterReadinessTests.test_real_model_is_not_claimed_rigged) ... ok
+test_semantic_labels_never_auto_approved (tests.test_character_readiness.CharacterReadinessTests.test_semantic_labels_never_auto_approved) ... ok
+test_skin_must_be_bound (tests.test_character_readiness.CharacterReadinessTests.test_skin_must_be_bound) ... ok
+test_blender_unavailable_is_not_success (tests.test_character_separation.CharacterSeparationTests.test_blender_unavailable_is_not_success) ... ok
+test_existing_destination_refused (tests.test_character_separation.CharacterSeparationTests.test_existing_destination_refused) ... ok
+test_in_place_overwrite_refused (tests.test_character_separation.CharacterSeparationTests.test_in_place_overwrite_refused) ... ok
+test_invalid_suffix_rejected (tests.test_character_separation.CharacterSeparationTests.test_invalid_suffix_rejected) ... ok
+test_missing_original_rejected (tests.test_character_separation.CharacterSeparationTests.test_missing_original_rejected) ... ok
+test_multi_file_unattended_apply_then_rollback (tests.test_code_architect.CodeArchitectTests.test_multi_file_unattended_apply_then_rollback) ... ok
+test_out_of_scope_paths_and_symlink_blocked (tests.test_code_architect.CodeArchitectTests.test_out_of_scope_paths_and_symlink_blocked) ... ok
+test_precondition_collision_and_budget (tests.test_code_architect.CodeArchitectTests.test_precondition_collision_and_budget) ... ok
+test_rollback_refuses_to_overwrite_later_edit (tests.test_code_architect.CodeArchitectTests.test_rollback_refuses_to_overwrite_later_edit) ... ok
+test_bad_geometry_fails_closed (tests.test_consciousness.SceneConsciousnessTests.test_bad_geometry_fails_closed) ... ok
+test_generated_facts_stable_and_grounded (tests.test_consciousness.SceneConsciousnessTests.test_generated_facts_stable_and_grounded) ... ok
+test_no_invented_entities (tests.test_consciousness.SceneConsciousnessTests.test_no_invented_entities) ... ok
+test_specific_object_and_qualified_route (tests.test_consciousness.SceneConsciousnessTests.test_specific_object_and_qualified_route) ... ok
+test_detect_tamper (tests.test_creation_memory.CreationMemoryTests.test_detect_tamper) ... ok
+test_reject_invalid_identity_and_values (tests.test_creation_memory.CreationMemoryTests.test_reject_invalid_identity_and_values) ... ok
+test_revision_continuity_and_owner_lock (tests.test_creation_memory.CreationMemoryTests.test_revision_continuity_and_owner_lock) ... ok
+test_stale_revision_rejected (tests.test_creation_memory.CreationMemoryTests.test_stale_revision_rejected) ... ok
+test_changed_request_id_cannot_be_reused (tests.test_creature_jobs.CreatureJobsTests.test_changed_request_id_cannot_be_reused) ... ok
+test_malformed_prompts_fail_before_job_creation (tests.test_creature_jobs.CreatureJobsTests.test_malformed_prompts_fail_before_job_creation) ... ok
+test_real_glb_replays_without_recreating_and_restarts (tests.test_creature_jobs.CreatureJobsTests.test_real_glb_replays_without_recreating_and_restarts) ... ok
+test_tamper_and_incomplete_job_are_not_silent_success (tests.test_creature_jobs.CreatureJobsTests.test_tamper_and_incomplete_job_are_not_silent_success) ... ok
+test_existing_output_protected (tests.test_creature_rig.CreatureRigLocalTests.test_existing_output_protected) ... ok
+test_missing_blender_fails_without_partial_output (tests.test_creature_rig.CreatureRigLocalTests.test_missing_blender_fails_without_partial_output) ... ok
+test_wrong_input_fails_before_side_effects (tests.test_creature_rig.CreatureRigLocalTests.test_wrong_input_fails_before_side_effects) ... ok
+test_zero_exit_with_error_output_fails_closed (tests.test_creature_rig.CreatureRigLocalTests.test_zero_exit_with_error_output_fails_closed) ... ok
+test_disallowed_or_invalid_rig_shape_fails (tests.test_creature_rig_recipe.RigRecipeTests.test_disallowed_or_invalid_rig_shape_fails) ... ok
+test_manifest_to_recoverable_recipe_and_no_overwrite (tests.test_creature_rig_recipe.RigRecipeTests.test_manifest_to_recoverable_recipe_and_no_overwrite) ... ok
+test_rig_matches_exact_morph_field_for_corresponding_original_joint (tests.test_creature_rig_recipe.RigRecipeTests.test_rig_matches_exact_morph_field_for_corresponding_original_joint) ... ok
+test_winged_spider_hybrid_creates_parents_legs_wings_and_tail (tests.test_creature_rig_recipe.RigRecipeTests.test_winged_spider_hybrid_creates_parents_legs_wings_and_tail) ... ok
+test_blender_director_command_requires_real_scene (tests.test_director.NativeDirectorTests.test_blender_director_command_requires_real_scene) ... ok
+test_directed_camera_dolly_has_movement_and_correct_timeline (tests.test_director.NativeDirectorTests.test_directed_camera_dolly_has_movement_and_correct_timeline) ... ok
+test_easing_curve_preserves_endpoints (tests.test_director.NativeDirectorTests.test_easing_curve_preserves_endpoints) ... ok
+test_frame_rate_and_motion_contract_validation (tests.test_director.NativeDirectorTests.test_frame_rate_and_motion_contract_validation) ... ok
+test_invalid_dolly_rejected (tests.test_director.NativeDirectorTests.test_invalid_dolly_rejected) ... ok
+test_invalid_motion_rejected (tests.test_director.NativeDirectorTests.test_invalid_motion_rejected) ... ok
+test_motion_samples_stable_and_smooth (tests.test_director.NativeDirectorTests.test_motion_samples_stable_and_smooth) ... ok
+test_nonoverlapping_shot_cuts (tests.test_director.NativeDirectorTests.test_nonoverlapping_shot_cuts) ... ok
+test_timeline_render_command_validates_new_output (tests.test_director.NativeDirectorTests.test_timeline_render_command_validates_new_output) ... ok
+test_claim_empty_returns_none (tests.test_durable_queue.DurableQueueTests.test_claim_empty_returns_none) ... ok
+test_complete (tests.test_durable_queue.DurableQueueTests.test_complete) ... ok
+test_complete_missing_raises (tests.test_durable_queue.DurableQueueTests.test_complete_missing_raises) ... ok
+test_counts (tests.test_durable_queue.DurableQueueTests.test_counts) ... ok
+test_duplicate_enqueue_raises (tests.test_durable_queue.DurableQueueTests.test_duplicate_enqueue_raises) ... ok
+test_enqueue_and_claim (tests.test_durable_queue.DurableQueueTests.test_enqueue_and_claim) ... ok
+test_fail_exhausts_attempts (tests.test_durable_queue.DurableQueueTests.test_fail_exhausts_attempts) ... ok
+test_fail_missing_raises (tests.test_durable_queue.DurableQueueTests.test_fail_missing_raises) ... ok
+test_fail_requeues (tests.test_durable_queue.DurableQueueTests.test_fail_requeues) ... ok
+test_recover_interrupted (tests.test_durable_queue.DurableQueueTests.test_recover_interrupted) ... ok
+test_status_lookup (tests.test_durable_queue.DurableQueueTests.test_status_lookup) ... ok
+test_update_progress (tests.test_durable_queue.DurableQueueTests.test_update_progress) ... ok
+test_continuous_sweep_catches_thin_wall_without_sampling (tests.test_dynamics.MotionContactTests.test_continuous_sweep_catches_thin_wall_without_sampling) ... ok
+test_earliest_collision_wins_order_independently (tests.test_dynamics.MotionContactTests.test_earliest_collision_wins_order_independently) ... ok
+test_invalid_bounds_and_nonfinite_rejected (tests.test_dynamics.MotionContactTests.test_invalid_bounds_and_nonfinite_rejected) ... ok
+test_parallel_segment_clear (tests.test_dynamics.MotionContactTests.test_parallel_segment_clear) ... ok
+test_start_inside_reports_immediate_contact (tests.test_dynamics.MotionContactTests.test_start_inside_reports_immediate_contact) ... ok
+test_bad_source_manifest_refused (tests.test_engine_handoff.EngineHandoffTests.test_bad_source_manifest_refused) ... ok
+test_binary_asset_preserved_exactly (tests.test_engine_handoff.EngineHandoffTests.test_binary_asset_preserved_exactly) ... ok
+test_cli_writes_project (tests.test_engine_handoff.EngineHandoffTests.test_cli_writes_project) ... ok
+test_collider_count_matches_buildings (tests.test_engine_handoff.EngineHandoffTests.test_collider_count_matches_buildings) ... ok
+test_duplicate_building_identity_refused (tests.test_engine_handoff.EngineHandoffTests.test_duplicate_building_identity_refused) ... ok
+test_independent_scene_entry_and_light (tests.test_engine_handoff.EngineHandoffTests.test_independent_scene_entry_and_light) ... ok
+test_infinite_collision_value_refused (tests.test_engine_handoff.EngineHandoffTests.test_infinite_collision_value_refused) ... ok
+test_manifest_hash_preserved (tests.test_engine_handoff.EngineHandoffTests.test_manifest_hash_preserved) ... ok
+test_refuse_overwrite (tests.test_engine_handoff.EngineHandoffTests.test_refuse_overwrite) ... ok
+test_source_project_materialized (tests.test_engine_handoff.EngineHandoffTests.test_source_project_materialized) ... ok
+test_tampered_asset_refused (tests.test_engine_handoff.EngineHandoffTests.test_tampered_asset_refused) ... ok
+test_a_pose_matches_procedural_character (tests.test_forge.ForgeTests.test_a_pose_matches_procedural_character) ... ok
+test_adapter_refuses_unavailable_neural (tests.test_forge.ForgeTests.test_adapter_refuses_unavailable_neural) ... ok
+test_adapter_remote_requires_explicit_budget_and_approval (tests.test_forge.ForgeTests.test_adapter_remote_requires_explicit_budget_and_approval) ... ok
+test_adapter_selects_free_native_world (tests.test_forge.ForgeTests.test_adapter_selects_free_native_world) ... ok
+test_asset_provenance_required (tests.test_forge.ForgeTests.test_asset_provenance_required) ... ok
+test_asset_registry_deduplicates_and_detects_tamper (tests.test_forge.ForgeTests.test_asset_registry_deduplicates_and_detects_tamper) ... ok
+test_beam_geometry_faces_and_export (tests.test_forge.ForgeTests.test_beam_geometry_faces_and_export) ... ok
+test_benchmark_receipt_small (tests.test_forge.ForgeTests.test_benchmark_receipt_small) ... ok
+test_blender_bridge_has_explicit_proof_gate (tests.test_forge.ForgeTests.test_blender_bridge_has_explicit_proof_gate) ... ok
+test_bounded_prompt_planner (tests.test_forge.ForgeTests.test_bounded_prompt_planner) ... ok
+test_box_face_normals_point_outward (tests.test_forge.ForgeTests.test_box_face_normals_point_outward) ... ok
+test_build_manifest_and_file (tests.test_forge.ForgeTests.test_build_manifest_and_file) ... ok
+test_camera_interpolation_and_boundaries (tests.test_forge.ForgeTests.test_camera_interpolation_and_boundaries) ... ok
+test_camera_tour_is_actual_3d_not_video (tests.test_forge.ForgeTests.test_camera_tour_is_actual_3d_not_video) ... ok
+test_character_exports_detachable_components (tests.test_forge.ForgeTests.test_character_exports_detachable_components) ... ok
+test_character_identity_proportion_drift (tests.test_forge.ForgeTests.test_character_identity_proportion_drift) ... ok
+test_character_missing_hand (tests.test_forge.ForgeTests.test_character_missing_hand) ... ok
+test_chunks_cover_every_building_once (tests.test_forge.ForgeTests.test_chunks_cover_every_building_once) ... ok
+test_collision_hits_building_not_road (tests.test_forge.ForgeTests.test_collision_hits_building_not_road) ... ok
+test_collision_rejects_nonfinite (tests.test_forge.ForgeTests.test_collision_rejects_nonfinite) ... ok
+test_free_local_plan_auto_allowed (tests.test_forge.ForgeTests.test_free_local_plan_auto_allowed) ... ok
+test_generic_character_both_poses_have_complete_hands (tests.test_forge.ForgeTests.test_generic_character_both_poses_have_complete_hands) ... ok
+test_glb_export_roundtrip (tests.test_forge.ForgeTests.test_glb_export_roundtrip) ... ok
+test_glb_rejects_corrupt_index (tests.test_forge.ForgeTests.test_glb_rejects_corrupt_index) ... ok
+test_glb_rejects_short_chunk (tests.test_forge.ForgeTests.test_glb_rejects_short_chunk) ... ok
+test_interior_geometry_deterministic (tests.test_forge.ForgeTests.test_interior_geometry_deterministic) ... ok
+test_interior_mesh_and_provenance (tests.test_forge.ForgeTests.test_interior_mesh_and_provenance) ... ok
+test_large_world_no_missing_lots (tests.test_forge.ForgeTests.test_large_world_no_missing_lots) ... ok
+test_license_gate_requires_explicit_approval (tests.test_forge.ForgeTests.test_license_gate_requires_explicit_approval) ... ok
+test_lod_distance_boundaries (tests.test_forge.ForgeTests.test_lod_distance_boundaries) ... ok
+test_material_export_validates_mesh_count (tests.test_forge.ForgeTests.test_material_export_validates_mesh_count) ... ok
+test_mesh_repair_drops_degenerate_and_invalid_indices (tests.test_forge.ForgeTests.test_mesh_repair_drops_degenerate_and_invalid_indices) ... ok
+test_mesh_repair_rejects_nonfinite_vertices (tests.test_forge.ForgeTests.test_mesh_repair_rejects_nonfinite_vertices) ... ok
+test_model_recipe_fails_closed_on_license_and_gpu (tests.test_forge.ForgeTests.test_model_recipe_fails_closed_on_license_and_gpu) ... ok
+test_model_recipe_rejects_unpinned_hash (tests.test_forge.ForgeTests.test_model_recipe_rejects_unpinned_hash) ... ok
+test_new_seed_changes_geometry (tests.test_forge.ForgeTests.test_new_seed_changes_geometry) ... ok
+test_obj_has_same_triangle_count_as_glb (tests.test_forge.ForgeTests.test_obj_has_same_triangle_count_as_glb) ... ok
+test_obj_refuses_unsafe_mtl_path (tests.test_forge.ForgeTests.test_obj_refuses_unsafe_mtl_path) ... ok
+test_paid_plan_needs_budget_and_explicit_approval (tests.test_forge.ForgeTests.test_paid_plan_needs_budget_and_explicit_approval) ... ok
+test_parks_fill_empty_lots_with_real_geometry (tests.test_forge.ForgeTests.test_parks_fill_empty_lots_with_real_geometry) ... ok
+test_parks_reproducible (tests.test_forge.ForgeTests.test_parks_reproducible) ... ok
+test_plan_rejects_nan_cost_and_budget (tests.test_forge.ForgeTests.test_plan_rejects_nan_cost_and_budget) ... ok
+test_planner_refuses_unbounded_request (tests.test_forge.ForgeTests.test_planner_refuses_unbounded_request) ... ok
+test_pose_track_preserves_anatomy (tests.test_forge.ForgeTests.test_pose_track_preserves_anatomy) ... ok
+test_route_between_distant_buildings (tests.test_forge.ForgeTests.test_route_between_distant_buildings) ... ok
+test_seed_deterministic (tests.test_forge.ForgeTests.test_seed_deterministic) ... ok
+test_simple_lod_reduces_triangle_count (tests.test_forge.ForgeTests.test_simple_lod_reduces_triangle_count) ... ok
+test_spatial_overview_detects_occlusion (tests.test_forge.ForgeTests.test_spatial_overview_detects_occlusion) ... ok
+test_spatial_overview_evidence_labels (tests.test_forge.ForgeTests.test_spatial_overview_evidence_labels) ... ok
+test_spatial_overview_rejects_nonfinite_camera (tests.test_forge.ForgeTests.test_spatial_overview_rejects_nonfinite_camera) ... ok
+test_spec_rejects_excess_count (tests.test_forge.ForgeTests.test_spec_rejects_excess_count) ... ok
+test_spec_rejects_extra_json_fields (tests.test_forge.ForgeTests.test_spec_rejects_extra_json_fields) ... ok
+test_spec_rejects_nonfinite_ground (tests.test_forge.ForgeTests.test_spec_rejects_nonfinite_ground) ... ok
+test_svg_preview_is_deterministic_and_safe (tests.test_forge.ForgeTests.test_svg_preview_is_deterministic_and_safe) ... ok
+test_svg_preview_rejects_oversize (tests.test_forge.ForgeTests.test_svg_preview_rejects_oversize) ... ok
+test_workflow_dependency_order (tests.test_forge.ForgeTests.test_workflow_dependency_order) ... ok
+test_workflow_job_id_no_path_traversal (tests.test_forge.ForgeTests.test_workflow_job_id_no_path_traversal) ... ok
+test_workflow_rejects_cycles (tests.test_forge.ForgeTests.test_workflow_rejects_cycles) ... ok
+test_workflow_rejects_missing_dependencies (tests.test_forge.ForgeTests.test_workflow_rejects_missing_dependencies) ... ok
+test_workflow_restart_checkpoint (tests.test_forge.ForgeTests.test_workflow_restart_checkpoint) ... ok
+test_world_bundle_detects_tampering (tests.test_forge.ForgeTests.test_world_bundle_detects_tampering) ... ok
+test_world_meshes_have_nonzero_triangles (tests.test_forge.ForgeTests.test_world_meshes_have_nonzero_triangles) ... ok
+test_world_qa (tests.test_forge.ForgeTests.test_world_qa) ... ok
+test_world_road_graph_size_and_symmetric_links (tests.test_forge.ForgeTests.test_world_road_graph_size_and_symmetric_links) ... ok
+test_blender_fx_bridge_rejects_absent_glb (tests.test_fx.FantasyForgeTests.test_blender_fx_bridge_rejects_absent_glb) ... ok
+test_blender_fx_scene_has_real_light_and_optical_glow_contract (tests.test_fx.FantasyForgeTests.test_blender_fx_scene_has_real_light_and_optical_glow_contract) ... ok
+test_cli_writes_inspectable_effect_and_receipt (tests.test_fx.FantasyForgeTests.test_cli_writes_inspectable_effect_and_receipt) ... ok
+test_effect_determinism_and_motion (tests.test_fx.FantasyForgeTests.test_effect_determinism_and_motion) ... ok
+test_emission_in_real_gltf_materials (tests.test_fx.FantasyForgeTests.test_emission_in_real_gltf_materials) ... ok
+test_invalid_budget_and_unsupported_effect_rejected (tests.test_fx.FantasyForgeTests.test_invalid_budget_and_unsupported_effect_rejected) ... ok
+test_three_effects_are_actual_3d_glb (tests.test_fx.FantasyForgeTests.test_three_effects_are_actual_3d_glb) ... ok
+test_volume_density_is_strictly_bounded (tests.test_fx.FantasyForgeTests.test_volume_density_is_strictly_bounded) ... ok
+test_identical_pixels_fail_quality_gate (tests.test_fx_judge.AtmosphereJudgeTests.test_identical_pixels_fail_quality_gate) ... ok
+test_missing_physical_medium_refused (tests.test_fx_judge.AtmosphereJudgeTests.test_missing_physical_medium_refused) ... ok
+test_real_pixel_delta_and_density (tests.test_fx_judge.AtmosphereJudgeTests.test_real_pixel_delta_and_density) ... ok
+test_unbounded_or_nan_acceptance_refused (tests.test_fx_judge.AtmosphereJudgeTests.test_unbounded_or_nan_acceptance_refused) ... ok
+test_unmatched_camera_refused (tests.test_fx_judge.AtmosphereJudgeTests.test_unmatched_camera_refused) ... ok
+test_coverage_rejects_empty (tests.test_garment_fit.GarmentFitTests.test_coverage_rejects_empty) ... ok
+test_coverage_report (tests.test_garment_fit.GarmentFitTests.test_coverage_report) ... ok
+test_fit_moves_garment_outward (tests.test_garment_fit.GarmentFitTests.test_fit_moves_garment_outward) ... ok
+test_fit_rejects_bad_input (tests.test_garment_fit.GarmentFitTests.test_fit_rejects_bad_input) ... ok
+test_external_weights_are_not_implicitly_installed_or_unlimited (tests.test_generative_backends.GenerativeBackendsTests.test_external_weights_are_not_implicitly_installed_or_unlimited) ... ok
+test_invalid_requests_fail (tests.test_generative_backends.GenerativeBackendsTests.test_invalid_requests_fail) ... ok
+test_native_only_currently_executable_without_external_weights (tests.test_generative_backends.GenerativeBackendsTests.test_native_only_currently_executable_without_external_weights) ... ok
+test_researched_riggers_and_hosted_api_are_not_installed_generators (tests.test_generative_backends.GenerativeBackendsTests.test_researched_riggers_and_hosted_api_are_not_installed_generators) ... ok
+test_unlicensed_gpu_job_cannot_be_promoted (tests.test_generative_backends.GenerativeBackendsTests.test_unlicensed_gpu_job_cannot_be_promoted) ... ok
+test_nonbinary_and_invalid_relative_buffer_denied (tests.test_glb_blender_compat.BlenderGlbCompatibilityTests.test_nonbinary_and_invalid_relative_buffer_denied) ... ok
+test_original_32bit_and_real_16bit_indices_both_pass (tests.test_glb_blender_compat.BlenderGlbCompatibilityTests.test_original_32bit_and_real_16bit_indices_both_pass) ... ok
+test_sparse_unsupported_and_corrupt_total_denied (tests.test_glb_blender_compat.BlenderGlbCompatibilityTests.test_sparse_unsupported_and_corrupt_total_denied) ... ok
+test_ushort_out_of_range_rejected_not_silent_corruption (tests.test_glb_blender_compat.BlenderGlbCompatibilityTests.test_ushort_out_of_range_rejected_not_silent_corruption) ... ok
+test_add_credential (tests.test_gpu_accounts.AccountStoreTests.test_add_credential) ... ok
+test_add_credential_replaces_duplicate (tests.test_gpu_accounts.AccountStoreTests.test_add_credential_replaces_duplicate) ... ok
+test_credentials_encrypted_at_rest (tests.test_gpu_accounts.AccountStoreTests.test_credentials_encrypted_at_rest) ... ok
+test_list_users (tests.test_gpu_accounts.AccountStoreTests.test_list_users) ... ok
+test_masked_credential (tests.test_gpu_accounts.AccountStoreTests.test_masked_credential) ... ok
+test_persistence (tests.test_gpu_accounts.AccountStoreTests.test_persistence) ... ok
+test_register_founder (tests.test_gpu_accounts.AccountStoreTests.test_register_founder) ... ok
+test_register_user (tests.test_gpu_accounts.AccountStoreTests.test_register_user) ... ok
+test_remove_credential (tests.test_gpu_accounts.AccountStoreTests.test_remove_credential) ... ok
+test_remove_nonexistent_returns_false (tests.test_gpu_accounts.AccountStoreTests.test_remove_nonexistent_returns_false) ... ok
+test_allocate_negative_raises (tests.test_gpu_accounts.GpuAccountManagerTests.test_allocate_negative_raises) ... ok
+test_allocate_pool (tests.test_gpu_accounts.GpuAccountManagerTests.test_allocate_pool) ... ok
+test_connect_rejects_short_key (tests.test_gpu_accounts.GpuAccountManagerTests.test_connect_rejects_short_key) ... ok
+test_connect_rejects_unknown_provider (tests.test_gpu_accounts.GpuAccountManagerTests.test_connect_rejects_unknown_provider) ... ok
+test_consume_insufficient_shadow_raises (tests.test_gpu_accounts.GpuAccountManagerTests.test_consume_insufficient_shadow_raises) ... ok
+test_consume_no_founder_raises (tests.test_gpu_accounts.GpuAccountManagerTests.test_consume_no_founder_raises) ... ok
+test_consume_shadow_hours (tests.test_gpu_accounts.GpuAccountManagerTests.test_consume_shadow_hours) ... ok
+test_contribute_more_than_pool_raises (tests.test_gpu_accounts.GpuAccountManagerTests.test_contribute_more_than_pool_raises) ... ok
+test_contribute_shadow_hours (tests.test_gpu_accounts.GpuAccountManagerTests.test_contribute_shadow_hours) ... ok
+test_describe (tests.test_gpu_accounts.GpuAccountManagerTests.test_describe) ... ok
+test_disconnect (tests.test_gpu_accounts.GpuAccountManagerTests.test_disconnect) ... ok
+test_founder_shadow_pool (tests.test_gpu_accounts.GpuAccountManagerTests.test_founder_shadow_pool) ... ok
+test_register_and_connect (tests.test_gpu_accounts.GpuAccountManagerTests.test_register_and_connect) ... ok
+test_select_account (tests.test_gpu_accounts.GpuAccountManagerTests.test_select_account) ... ok
+test_select_account_no_credentials_raises (tests.test_gpu_accounts.GpuAccountManagerTests.test_select_account_no_credentials_raises) ... ok
+test_select_account_unknown_user_raises (tests.test_gpu_accounts.GpuAccountManagerTests.test_select_account_unknown_user_raises) ... ok
+test_allocate_and_pool_status (tests.test_gpu_lifecycle.BillingLedgerTests.test_allocate_and_pool_status) ... ok
+test_charge_deducts_pool (tests.test_gpu_lifecycle.BillingLedgerTests.test_charge_deducts_pool) ... ok
+test_insufficient_pool_raises (tests.test_gpu_lifecycle.BillingLedgerTests.test_insufficient_pool_raises) ... ok
+test_negative_allocation_raises (tests.test_gpu_lifecycle.BillingLedgerTests.test_negative_allocation_raises) ... ok
+test_receipts_filter_by_user (tests.test_gpu_lifecycle.BillingLedgerTests.test_receipts_filter_by_user) ... ok
+test_total_billed (tests.test_gpu_lifecycle.BillingLedgerTests.test_total_billed) ... ok
+test_double_terminate_raises (tests.test_gpu_lifecycle.InstanceManagerTests.test_double_terminate_raises) ... ok
+test_duplicate_raises (tests.test_gpu_lifecycle.InstanceManagerTests.test_duplicate_raises) ... ok
+test_register_and_get (tests.test_gpu_lifecycle.InstanceManagerTests.test_register_and_get) ... ok
+test_shadow_available_seconds (tests.test_gpu_lifecycle.InstanceManagerTests.test_shadow_available_seconds) ... ok
+test_terminate (tests.test_gpu_lifecycle.InstanceManagerTests.test_terminate) ... ok
+test_total_cost (tests.test_gpu_lifecycle.InstanceManagerTests.test_total_cost) ... ok
+test_unknown_instance_raises (tests.test_gpu_lifecycle.InstanceManagerTests.test_unknown_instance_raises) ... ok
+test_decreasing_packing_recovers_spaces_that_naive_queue_wastes (tests.test_gpu_packer.GpuPackerTests.test_decreasing_packing_recovers_spaces_that_naive_queue_wastes) ... ok
+test_fails_closed_on_bad_jobs (tests.test_gpu_packer.GpuPackerTests.test_fails_closed_on_bad_jobs) ... ok
+test_multiblock_job_reserves_nonoverlapping_timeline (tests.test_gpu_packer.GpuPackerTests.test_multiblock_job_reserves_nonoverlapping_timeline) ... ok
+test_only_shadow_jobs_never_allocate_money (tests.test_gpu_packer.GpuPackerTests.test_only_shadow_jobs_never_allocate_money) ... ok
+test_rejects_invalid_billing_block (tests.test_gpu_packer.GpuPackerTests.test_rejects_invalid_billing_block) ... ok
+test_serial_schedule_and_block_calculation (tests.test_gpu_packer.GpuPackerTests.test_serial_schedule_and_block_calculation) ... ok
+test_shadow_fills_existing_unbilled_time_only (tests.test_gpu_packer.GpuPackerTests.test_shadow_fills_existing_unbilled_time_only) ... ok
+test_missing_prices_is_not_a_fake_quote (tests.test_gpu_rental.GpuRentalTests.test_missing_prices_is_not_a_fake_quote) ... ok
+test_recent_quoted_offer_is_only_an_estimate (tests.test_gpu_rental.GpuRentalTests.test_recent_quoted_offer_is_only_an_estimate) ... ok
+test_rejects_bad_or_future_quotes (tests.test_gpu_rental.GpuRentalTests.test_rejects_bad_or_future_quotes) ... ok
+test_stale_or_unqualified_quotes_not_admitted (tests.test_gpu_rental.GpuRentalTests.test_stale_or_unqualified_quotes_not_admitted) ... ok
+test_cuda_heavy_model_rejected (tests.test_hardware.HardwareGateTests.test_cuda_heavy_model_rejected) ... ok
+test_local_cpu_path_allowed (tests.test_hardware.HardwareGateTests.test_local_cpu_path_allowed) ... ok
+test_shared_gpu_memory_not_treated_as_dedicated (tests.test_hardware.HardwareGateTests.test_shared_gpu_memory_not_treated_as_dedicated) ... ok
+test_unverified_license_stops_even_cpu (tests.test_hardware.HardwareGateTests.test_unverified_license_stops_even_cpu) ... ok
+test_completed_receipt_requires_real_glb_and_independent_blender (tests.test_human_jobs.HumanStudioTests.test_completed_receipt_requires_real_glb_and_independent_blender) ... ok
+test_invalid_parameters_do_not_allocate_jobs (tests.test_human_jobs.HumanStudioTests.test_invalid_parameters_do_not_allocate_jobs) ... ok
+test_starts_one_job_and_replay_after_restart_needs_reconciliation (tests.test_human_jobs.HumanStudioTests.test_starts_one_job_and_replay_after_restart_needs_reconciliation) ... ok
+test_invalid_timing_or_unsupported_phonemes_refused (tests.test_human_lipsync.LipSyncTests.test_invalid_timing_or_unsupported_phonemes_refused) ... ok
+test_no_faked_blender_when_binary_missing (tests.test_human_lipsync.LipSyncTests.test_no_faked_blender_when_binary_missing) ... ok
+test_original_mannequin_and_timeline_are_written_before_blender (tests.test_human_lipsync.LipSyncTests.test_original_mannequin_and_timeline_are_written_before_blender) ... ok
+test_real_timed_viseme_weights_are_bounded_and_different (tests.test_human_lipsync.LipSyncTests.test_real_timed_viseme_weights_are_bounded_and_different) ... ok
+test_corrupt_png_crc (tests.test_image_relief.ImageReliefTests.test_corrupt_png_crc) ... ok
+test_corrupt_png_cut_end (tests.test_image_relief.ImageReliefTests.test_corrupt_png_cut_end) ... ok
+test_corrupt_png_cut_header (tests.test_image_relief.ImageReliefTests.test_corrupt_png_cut_header) ... ok
+test_corrupt_png_cut_idat (tests.test_image_relief.ImageReliefTests.test_corrupt_png_cut_idat) ... ok
+test_corrupt_png_empty (tests.test_image_relief.ImageReliefTests.test_corrupt_png_empty) ... ok
+test_corrupt_png_junk (tests.test_image_relief.ImageReliefTests.test_corrupt_png_junk) ... ok
+test_corrupt_png_oversized (tests.test_image_relief.ImageReliefTests.test_corrupt_png_oversized) ... ok
+test_corrupt_png_signature (tests.test_image_relief.ImageReliefTests.test_corrupt_png_signature) ... ok
+test_corrupt_png_tail (tests.test_image_relief.ImageReliefTests.test_corrupt_png_tail) ... ok
+test_corrupt_png_trailing_chunk (tests.test_image_relief.ImageReliefTests.test_corrupt_png_trailing_chunk) ... ok
+test_corrupt_png_unsupported_color (tests.test_image_relief.ImageReliefTests.test_corrupt_png_unsupported_color) ... ok
+test_decoded_pixel_depth_matches_actual_source (tests.test_image_relief.ImageReliefTests.test_decoded_pixel_depth_matches_actual_source) ... ok
+test_png_filter_0_channels_1 (tests.test_image_relief.ImageReliefTests.test_png_filter_0_channels_1) ... ok
+test_png_filter_0_channels_3 (tests.test_image_relief.ImageReliefTests.test_png_filter_0_channels_3) ... ok
+test_png_filter_0_channels_4 (tests.test_image_relief.ImageReliefTests.test_png_filter_0_channels_4) ... ok
+test_png_filter_1_channels_1 (tests.test_image_relief.ImageReliefTests.test_png_filter_1_channels_1) ... ok
+test_png_filter_1_channels_3 (tests.test_image_relief.ImageReliefTests.test_png_filter_1_channels_3) ... ok
+test_png_filter_1_channels_4 (tests.test_image_relief.ImageReliefTests.test_png_filter_1_channels_4) ... ok
+test_png_filter_2_channels_1 (tests.test_image_relief.ImageReliefTests.test_png_filter_2_channels_1) ... ok
+test_png_filter_2_channels_3 (tests.test_image_relief.ImageReliefTests.test_png_filter_2_channels_3) ... ok
+test_png_filter_2_channels_4 (tests.test_image_relief.ImageReliefTests.test_png_filter_2_channels_4) ... ok
+test_png_filter_3_channels_1 (tests.test_image_relief.ImageReliefTests.test_png_filter_3_channels_1) ... ok
+test_png_filter_3_channels_3 (tests.test_image_relief.ImageReliefTests.test_png_filter_3_channels_3) ... ok
+test_png_filter_3_channels_4 (tests.test_image_relief.ImageReliefTests.test_png_filter_3_channels_4) ... ok
+test_png_filter_4_channels_1 (tests.test_image_relief.ImageReliefTests.test_png_filter_4_channels_1) ... ok
+test_png_filter_4_channels_3 (tests.test_image_relief.ImageReliefTests.test_png_filter_4_channels_3) ... ok
+test_png_filter_4_channels_4 (tests.test_image_relief.ImageReliefTests.test_png_filter_4_channels_4) ... ok
+test_real_glb_obj_mtl_and_receipts (tests.test_image_relief.ImageReliefTests.test_real_glb_obj_mtl_and_receipts) ... ok
+test_reject_base_invalid_0 (tests.test_image_relief.ImageReliefTests.test_reject_base_invalid_0) ... ok
+test_reject_base_invalid_1 (tests.test_image_relief.ImageReliefTests.test_reject_base_invalid_1) ... ok
+test_reject_base_invalid_2 (tests.test_image_relief.ImageReliefTests.test_reject_base_invalid_2) ... ok
+test_reject_base_invalid_3 (tests.test_image_relief.ImageReliefTests.test_reject_base_invalid_3) ... ok
+test_reject_base_invalid_4 (tests.test_image_relief.ImageReliefTests.test_reject_base_invalid_4) ... ok
+test_reject_base_invalid_5 (tests.test_image_relief.ImageReliefTests.test_reject_base_invalid_5) ... ok
+test_reject_depth_invalid_0 (tests.test_image_relief.ImageReliefTests.test_reject_depth_invalid_0) ... ok
+test_reject_depth_invalid_1 (tests.test_image_relief.ImageReliefTests.test_reject_depth_invalid_1) ... ok
+test_reject_depth_invalid_2 (tests.test_image_relief.ImageReliefTests.test_reject_depth_invalid_2) ... ok
+test_reject_depth_invalid_3 (tests.test_image_relief.ImageReliefTests.test_reject_depth_invalid_3) ... ok
+test_reject_depth_invalid_4 (tests.test_image_relief.ImageReliefTests.test_reject_depth_invalid_4) ... ok
+test_reject_depth_invalid_5 (tests.test_image_relief.ImageReliefTests.test_reject_depth_invalid_5) ... ok
+test_reject_grid_invalid_0 (tests.test_image_relief.ImageReliefTests.test_reject_grid_invalid_0) ... ok
+test_reject_grid_invalid_1 (tests.test_image_relief.ImageReliefTests.test_reject_grid_invalid_1) ... ok
+test_reject_grid_invalid_2 (tests.test_image_relief.ImageReliefTests.test_reject_grid_invalid_2) ... ok
+test_reject_grid_invalid_3 (tests.test_image_relief.ImageReliefTests.test_reject_grid_invalid_3) ... ok
+test_reject_grid_invalid_4 (tests.test_image_relief.ImageReliefTests.test_reject_grid_invalid_4) ... ok
+test_reject_height_invalid_0 (tests.test_image_relief.ImageReliefTests.test_reject_height_invalid_0) ... ok
+test_reject_height_invalid_1 (tests.test_image_relief.ImageReliefTests.test_reject_height_invalid_1) ... ok
+test_reject_height_invalid_2 (tests.test_image_relief.ImageReliefTests.test_reject_height_invalid_2) ... ok
+test_reject_height_invalid_3 (tests.test_image_relief.ImageReliefTests.test_reject_height_invalid_3) ... ok
+test_reject_height_invalid_4 (tests.test_image_relief.ImageReliefTests.test_reject_height_invalid_4) ... ok
+test_reject_height_invalid_5 (tests.test_image_relief.ImageReliefTests.test_reject_height_invalid_5) ... ok
+test_reject_overwrite (tests.test_image_relief.ImageReliefTests.test_reject_overwrite) ... ok
+test_reject_width_invalid_0 (tests.test_image_relief.ImageReliefTests.test_reject_width_invalid_0) ... ok
+test_reject_width_invalid_1 (tests.test_image_relief.ImageReliefTests.test_reject_width_invalid_1) ... ok
+test_reject_width_invalid_2 (tests.test_image_relief.ImageReliefTests.test_reject_width_invalid_2) ... ok
+test_reject_width_invalid_3 (tests.test_image_relief.ImageReliefTests.test_reject_width_invalid_3) ... ok
+test_reject_width_invalid_4 (tests.test_image_relief.ImageReliefTests.test_reject_width_invalid_4) ... ok
+test_reject_width_invalid_5 (tests.test_image_relief.ImageReliefTests.test_reject_width_invalid_5) ... ok
+test_relief_is_real_deterministic_3d_mesh (tests.test_image_relief.ImageReliefTests.test_relief_is_real_deterministic_3d_mesh) ... ok
+test_all_candidate_geometry_passes_real_triangle_validation (tests.test_imagination.ImaginationTests.test_all_candidate_geometry_passes_real_triangle_validation) ... ok
+test_deterministic_same_seed_same_glb_different_seed_variants_change_geometry (tests.test_imagination.ImaginationTests.test_deterministic_same_seed_same_glb_different_seed_variants_change_geometry) ... ok
+test_invalid_budget_prompt_output_overwrite_refused (tests.test_imagination.ImaginationTests.test_invalid_budget_prompt_output_overwrite_refused) ... ok
+test_prompt_constraints_change_body_features (tests.test_imagination.ImaginationTests.test_prompt_constraints_change_body_features) ... ok
+test_prompt_creates_original_mesh_without_preset_or_provider (tests.test_imagination.ImaginationTests.test_prompt_creates_original_mesh_without_preset_or_provider) ... ok
+test_blend_and_report_cannot_be_overwritten (tests.test_live_blender.BlenderLiveSceneTests.test_blend_and_report_cannot_be_overwritten) ... ok
+test_blender_false_zero_exit_without_receipt_is_rejected (tests.test_live_blender.BlenderLiveSceneTests.test_blender_false_zero_exit_without_receipt_is_rejected) ... ok
+test_missing_blender_is_not_falsely_verified (tests.test_live_blender.BlenderLiveSceneTests.test_missing_blender_is_not_falsely_verified) ... ok
+test_non_editor_input_rejected (tests.test_live_blender.BlenderLiveSceneTests.test_non_editor_input_rejected) ... ok
+test_tampered_glb_rejected (tests.test_live_blender.BlenderLiveSceneTests.test_tampered_glb_rejected) ... ok
+test_validated_real_geometry_is_accepted (tests.test_live_blender.BlenderLiveSceneTests.test_validated_real_geometry_is_accepted) ... ok
+test_one_current_handoff_master_plan_and_feature_ids (tests.test_master_continuity.MasterContinuityTests.test_one_current_handoff_master_plan_and_feature_ids) ... ok
+test_sources_have_distinct_ids_and_over_one_hundred_distinct_names (tests.test_master_continuity.MasterContinuityTests.test_sources_have_distinct_ids_and_over_one_hundred_distinct_names) ... ok
+test_targets_keep_exact_authorization_and_license_gate (tests.test_master_continuity.MasterContinuityTests.test_targets_keep_exact_authorization_and_license_gate) ... ok
+test_all_native_pbr_presets (tests.test_materials_cinematic_wardrobe.MaterialsAndCinematicTests.test_all_native_pbr_presets) ... ok
+test_camera_inside_known_building_fails (tests.test_materials_cinematic_wardrobe.MaterialsAndCinematicTests.test_camera_inside_known_building_fails) ... ok
+test_character_has_independently_editable_trousers (tests.test_materials_cinematic_wardrobe.MaterialsAndCinematicTests.test_character_has_independently_editable_trousers) ... ok
+test_glb_keeps_actual_pbr_params (tests.test_materials_cinematic_wardrobe.MaterialsAndCinematicTests.test_glb_keeps_actual_pbr_params) ... ok
+test_lighting_moods_are_distinct_and_valid (tests.test_materials_cinematic_wardrobe.MaterialsAndCinematicTests.test_lighting_moods_are_distinct_and_valid) ... ok
+test_material_guardian_rejects_missing_and_invalid (tests.test_materials_cinematic_wardrobe.MaterialsAndCinematicTests.test_material_guardian_rejects_missing_and_invalid) ... ok
+test_override_index_validated (tests.test_materials_cinematic_wardrobe.MaterialsAndCinematicTests.test_override_index_validated) ... ok
+test_pbr_nonfinite_and_out_of_range_fail (tests.test_materials_cinematic_wardrobe.MaterialsAndCinematicTests.test_pbr_nonfinite_and_out_of_range_fail) ... ok
+test_pbr_wrong_channels_fail (tests.test_materials_cinematic_wardrobe.MaterialsAndCinematicTests.test_pbr_wrong_channels_fail) ... ok
+test_shot_validation_rejects_bad_camera_and_duplicate (tests.test_materials_cinematic_wardrobe.MaterialsAndCinematicTests.test_shot_validation_rejects_bad_camera_and_duplicate) ... ok
+test_wardrobe_missing_piece_and_bad_rig_fail (tests.test_materials_cinematic_wardrobe.MaterialsAndCinematicTests.test_wardrobe_missing_piece_and_bad_rig_fail) ... ok
+test_world_emits_cinematic_and_material_proof (tests.test_materials_cinematic_wardrobe.MaterialsAndCinematicTests.test_world_emits_cinematic_and_material_proof) ... ok
+test_bend_taper_is_shared_by_all_meshes_and_rig_joints (tests.test_morph_engine.MorphTests.test_bend_taper_is_shared_by_all_meshes_and_rig_joints) ... ok
+test_bend_taper_reject_unbounded_or_non_numeric_values (tests.test_morph_engine.MorphTests.test_bend_taper_reject_unbounded_or_non_numeric_values) ... ok
+test_existing_mesh_stays_unchanged_morph_rebuilds_normals (tests.test_morph_engine.MorphTests.test_existing_mesh_stays_unchanged_morph_rebuilds_normals) ... ok
+test_morphed_creature_variants_produce_independent_file_hashes (tests.test_morph_engine.MorphTests.test_morphed_creature_variants_produce_independent_file_hashes) ... ok
+test_rejected_morphs_do_not_invent_geometry (tests.test_morph_engine.MorphTests.test_rejected_morphs_do_not_invent_geometry) ... ok
+test_abrupt_velocity_change_fails_acceleration (tests.test_motion_truth.MotionTruthTests.test_abrupt_velocity_change_fails_acceleration) ... ok
+test_constant_velocity_is_continuous (tests.test_motion_truth.MotionTruthTests.test_constant_velocity_is_continuous) ... ok
+test_duplicate_or_reversed_timestamps_rejected (tests.test_motion_truth.MotionTruthTests.test_duplicate_or_reversed_timestamps_rejected) ... ok
+test_nan_or_unbounded_samples_rejected (tests.test_motion_truth.MotionTruthTests.test_nan_or_unbounded_samples_rejected) ... ok
+test_subnormal_timing_overflow_rejected_without_fake_receipt (tests.test_motion_truth.MotionTruthTests.test_subnormal_timing_overflow_rejected_without_fake_receipt) ... ok
+test_teleport_spike_fails_limit (tests.test_motion_truth.MotionTruthTests.test_teleport_spike_fails_limit) ... ok
+test_back_and_right_masks_are_mirrored_before_carving (tests.test_multiview.MultiViewTests.test_back_and_right_masks_are_mirrored_before_carving)
+A back camera sees the mirrored image, so an offset bump survives carving. ... ok
+test_carving_removes_volume_the_second_view_forbids (tests.test_multiview.MultiViewTests.test_carving_removes_volume_the_second_view_forbids)
+A wide front silhouette plus a thin side silhouette must stay thin. ... ok
+test_cli_marching_flag (tests.test_multiview.MultiViewTests.test_cli_marching_flag) ... ok
+test_cli_reconstructs_real_files_end_to_end (tests.test_multiview.MultiViewTests.test_cli_reconstructs_real_files_end_to_end) ... ok
+test_cli_score_refuses_to_overwrite_a_receipt (tests.test_multiview.MultiViewTests.test_cli_score_refuses_to_overwrite_a_receipt) ... ok
+test_cli_scores_hull_against_truth_file (tests.test_multiview.MultiViewTests.test_cli_scores_hull_against_truth_file) ... ok
+test_cli_smooth_flag_produces_smoothed_manifest (tests.test_multiview.MultiViewTests.test_cli_smooth_flag_produces_smoothed_manifest) ... ok
+test_cube_phantom_recovers_measured_bounds_and_volume (tests.test_multiview.MultiViewTests.test_cube_phantom_recovers_measured_bounds_and_volume) ... ok
+test_duplicate_and_unknown_axes_are_rejected (tests.test_multiview.MultiViewTests.test_duplicate_and_unknown_axes_are_rejected) ... ok
+test_empty_and_missing_masks_are_rejected (tests.test_multiview.MultiViewTests.test_empty_and_missing_masks_are_rejected) ... ok
+test_every_supplied_silhouette_is_reproduced (tests.test_multiview.MultiViewTests.test_every_supplied_silhouette_is_reproduced) ... ok
+test_export_is_byte_deterministic (tests.test_multiview.MultiViewTests.test_export_is_byte_deterministic) ... ok
+test_export_writes_verifiable_glb_obj_and_manifest (tests.test_multiview.MultiViewTests.test_export_writes_verifiable_glb_obj_and_manifest) ... ok
+test_face_budget_cannot_be_hit_by_a_legal_solid_grid (tests.test_multiview.MultiViewTests.test_face_budget_cannot_be_hit_by_a_legal_solid_grid)
+A solid at maximum legal grid stays well under the face cap. ... ok
+test_grid_and_bounds_are_bounded (tests.test_multiview.MultiViewTests.test_grid_and_bounds_are_bounded) ... ok
+test_hull_never_invents_unseen_detail (tests.test_multiview.MultiViewTests.test_hull_never_invents_unseen_detail) ... ok
+test_humanoid_phantom_uses_depth_view_to_limit_thickness (tests.test_multiview.MultiViewTests.test_humanoid_phantom_uses_depth_view_to_limit_thickness) ... ok
+test_identical_silhouettes_give_identical_hull (tests.test_multiview.MultiViewTests.test_identical_silhouettes_give_identical_hull)
+Two different subjects with the same silhouette set are indistinguishable. ... ok
+test_invalid_threshold_and_oversized_spec_are_rejected (tests.test_multiview.MultiViewTests.test_invalid_threshold_and_oversized_spec_are_rejected) ... ok
+test_marching_cubes_produces_smooth_mesh (tests.test_multiview.MultiViewTests.test_marching_cubes_produces_smooth_mesh) ... ok
+test_missing_spec_is_rejected (tests.test_multiview.MultiViewTests.test_missing_spec_is_rejected) ... ok
+test_opposing_views_must_agree_on_scale (tests.test_multiview.MultiViewTests.test_opposing_views_must_agree_on_scale) ... ok
+test_score_against_matching_solid_is_exact (tests.test_multiview.MultiViewTests.test_score_against_matching_solid_is_exact) ... ok
+test_score_exposes_overfill_where_two_views_cannot_disagree (tests.test_multiview.MultiViewTests.test_score_exposes_overfill_where_two_views_cannot_disagree)
+Half the row is thick, half is thin: no silhouette can separate them. ... ok
+test_score_rejects_unusable_solids (tests.test_multiview.MultiViewTests.test_score_rejects_unusable_solids) ... ok
+test_smooth_normals_preserves_triangles_and_dedups_vertices (tests.test_multiview.MultiViewTests.test_smooth_normals_preserves_triangles_and_dedups_vertices) ... ok
+test_spec_paths_are_relative_to_the_spec_directory (tests.test_multiview.MultiViewTests.test_spec_paths_are_relative_to_the_spec_directory) ... ok
+test_two_view_minimum_is_enforced (tests.test_multiview.MultiViewTests.test_two_view_minimum_is_enforced) ... ok
+test_views_must_agree_on_image_size_and_height (tests.test_multiview.MultiViewTests.test_views_must_agree_on_image_size_and_height) ... ok
+test_directory_licenses_do_not_bleed_into_sibling_code (tests.test_pack_mirror.PackMirrorTests.test_directory_licenses_do_not_bleed_into_sibling_code) ... ok
+test_official_pinned_archive_has_durable_file_and_license_receipt (tests.test_pack_mirror.PackMirrorTests.test_official_pinned_archive_has_durable_file_and_license_receipt) ... ok
+test_saved_receipt_marks_each_asset_folder_scope_without_licensing_siblings (tests.test_pack_mirror.PackMirrorTests.test_saved_receipt_marks_each_asset_folder_scope_without_licensing_siblings) ... ok
+test_wrong_repo_commit_license_and_traversal_rejected (tests.test_pack_mirror.PackMirrorTests.test_wrong_repo_commit_license_and_traversal_rejected) ... ok
+test_cpu_pipeline_retains_truthful_no_blender_status (tests.test_pipeline.PipelineTests.test_cpu_pipeline_retains_truthful_no_blender_status) ... ok
+test_no_fake_visual_comparison_without_blender (tests.test_pipeline.PipelineTests.test_no_fake_visual_comparison_without_blender) ... ok
+test_refuse_overwriting_existing_work (tests.test_pipeline.PipelineTests.test_refuse_overwriting_existing_work) ... ok
+test_bone_stretch_fails (tests.test_pose_guardian.PoseGuardianTests.test_bone_stretch_fails) ... ok
+test_frozen_animation_fails (tests.test_pose_guardian.PoseGuardianTests.test_frozen_animation_fails) ... ok
+test_invalid_numbers_fail_closed (tests.test_pose_guardian.PoseGuardianTests.test_invalid_numbers_fail_closed) ... ok
+test_joint_gap_fails (tests.test_pose_guardian.PoseGuardianTests.test_joint_gap_fails) ... ok
+test_missing_hand_fails (tests.test_pose_guardian.PoseGuardianTests.test_missing_hand_fails) ... ok
+test_mixed_weight_sleeve_accepts_normalized_blend (tests.test_pose_guardian.PoseGuardianTests.test_mixed_weight_sleeve_accepts_normalized_blend) ... ok
+test_unblended_or_unnormalized_sleeve_fails (tests.test_pose_guardian.PoseGuardianTests.test_unblended_or_unnormalized_sleeve_fails) ... ok
+test_valid_connected_animation_passes (tests.test_pose_guardian.PoseGuardianTests.test_valid_connected_animation_passes) ... ok
+test_weightless_mesh_fails (tests.test_pose_guardian.PoseGuardianTests.test_weightless_mesh_fails) ... ok
+test_bytes_match_tamper_fail_and_no_fake_signing (tests.test_rambler.RamblerTests.test_bytes_match_tamper_fail_and_no_fake_signing) ... ok
+test_cannot_forge_publisher_signature_claim (tests.test_rambler.RamblerTests.test_cannot_forge_publisher_signature_claim) ... ok
+test_hidden_secrets_unlisted_files_paths_and_overwrite_blocked (tests.test_rambler.RamblerTests.test_hidden_secrets_unlisted_files_paths_and_overwrite_blocked) ... ok
+test_degenerate_returns_none (tests.test_rectify.RectifyTests.test_degenerate_returns_none) ... ok
+test_identity_homography (tests.test_rectify.RectifyTests.test_identity_homography) ... ok
+test_rectify_identity_preserves_mask (tests.test_rectify.RectifyTests.test_rectify_identity_preserves_mask) ... ok
+test_scale_homography (tests.test_rectify.RectifyTests.test_scale_homography) ... ok
+test_wrong_count_raises (tests.test_rectify.RectifyTests.test_wrong_count_raises) ... ok
+test_duplicate_view_refused (tests.test_reference_pack.ReferencePackTests.test_duplicate_view_refused) ... ok
+test_no_overwrite (tests.test_reference_pack.ReferencePackTests.test_no_overwrite) ... ok
+test_one_view_is_not_full_character (tests.test_reference_pack.ReferencePackTests.test_one_view_is_not_full_character) ... ok
+test_owner_approval_is_distinct_from_technical_verification (tests.test_reference_pack.ReferencePackTests.test_owner_approval_is_distinct_from_technical_verification) ... ok
+test_parent_escape_refused (tests.test_reference_pack.ReferencePackTests.test_parent_escape_refused) ... ok
+test_sha_and_dimensions_recorded (tests.test_reference_pack.ReferencePackTests.test_sha_and_dimensions_recorded) ... ok
+test_sheet_is_not_four_verified_views (tests.test_reference_pack.ReferencePackTests.test_sheet_is_not_four_verified_views) ... ok
+test_unknown_asset_refused (tests.test_reference_pack.ReferencePackTests.test_unknown_asset_refused) ... ok
+test_unrecognized_approval_refused (tests.test_reference_pack.ReferencePackTests.test_unrecognized_approval_refused) ... ok
+test_exhaustion_keeps_workspace_clean (tests.test_repair.RepairTests.test_exhaustion_keeps_workspace_clean) ... ok
+test_fail_revert_then_succeed (tests.test_repair.RepairTests.test_fail_revert_then_succeed) ... ok
+test_reject_unbounded_attempts (tests.test_repair.RepairTests.test_reject_unbounded_attempts) ... ok
+test_budget_is_deterministic_at_equal_distance (tests.test_residency.ResidencyTests.test_budget_is_deterministic_at_equal_distance) ... ok
+test_distant_cell_is_evicted_and_never_claimed_loaded (tests.test_residency.ResidencyTests.test_distant_cell_is_evicted_and_never_claimed_loaded) ... ok
+test_invalid_chunk_registry_or_radius_rejected (tests.test_residency.ResidencyTests.test_invalid_chunk_registry_or_radius_rejected) ... ok
+test_nearby_active_and_distant_prefetch (tests.test_residency.ResidencyTests.test_nearby_active_and_distant_prefetch) ... ok
+test_default_registry_stays_manual_only (tests.test_sam_adapter.SamAdapterGatingTests.test_default_registry_stays_manual_only) ... ok
+test_end_to_end_when_available (tests.test_sam_adapter.SamAdapterGatingTests.test_end_to_end_when_available) ... skipped 'SAM not available'
+test_import_is_safe (tests.test_sam_adapter.SamAdapterGatingTests.test_import_is_safe) ... ok
+test_mode_validation (tests.test_sam_adapter.SamAdapterGatingTests.test_mode_validation) ... ok
+test_register_is_no_op_when_unavailable (tests.test_sam_adapter.SamAdapterGatingTests.test_register_is_no_op_when_unavailable) ... ok
+test_register_when_available (tests.test_sam_adapter.SamAdapterGatingTests.test_register_when_available) ... skipped 'SAM not available'
+test_segment_parts_when_available (tests.test_sam_adapter.SamAdapterGatingTests.test_segment_parts_when_available) ... skipped 'SAM not available'
+test_segment_refuses_when_unavailable (tests.test_sam_adapter.SamAdapterGatingTests.test_segment_refuses_when_unavailable) ... ok
+test_weights_env_var_is_honored (tests.test_sam_adapter.SamAdapterGatingTests.test_weights_env_var_is_honored) ... ok
+test_cli_materializes_receipt_and_refuses_overwrite (tests.test_scene_layers.SceneLayerTests.test_cli_materializes_receipt_and_refuses_overwrite) ... ok
+test_cli_rejects_unexpected_input_envelope (tests.test_scene_layers.SceneLayerTests.test_cli_rejects_unexpected_input_envelope) ... ok
+test_nested_unknown_fields_rejected (tests.test_scene_layers.SceneLayerTests.test_nested_unknown_fields_rejected) ... ok
+test_output_deterministic_without_mutating_inputs (tests.test_scene_layers.SceneLayerTests.test_output_deterministic_without_mutating_inputs) ... ok
+test_rejects_bad_paths_duplicate_ids_and_nonfinite (tests.test_scene_layers.SceneLayerTests.test_rejects_bad_paths_duplicate_ids_and_nonfinite) ... ok
+test_stronger_layer_overrides_field_without_losing_other_fields (tests.test_scene_layers.SceneLayerTests.test_stronger_layer_overrides_field_without_losing_other_fields) ... ok
+test_tombstone_and_reintroduction (tests.test_scene_layers.SceneLayerTests.test_tombstone_and_reintroduction) ... ok
+test_default_registry_contains_only_manual_adapter (tests.test_segmentation.SegmentationContractTests.test_default_registry_contains_only_manual_adapter) ... ok
+test_manual_adapter_is_always_available_and_never_claims_inference (tests.test_segmentation.SegmentationContractTests.test_manual_adapter_is_always_available_and_never_claims_inference) ... ok
+test_mask_result_serializes_provenance (tests.test_segmentation.SegmentationContractTests.test_mask_result_serializes_provenance) ... ok
+test_no_neural_adapter_is_claimed_available_by_default (tests.test_segmentation.SegmentationContractTests.test_no_neural_adapter_is_claimed_available_by_default) ... ok
+test_registry_rejects_duplicates_and_unknown_names (tests.test_segmentation.SegmentationContractTests.test_registry_rejects_duplicates_and_unknown_names) ... ok
+test_registry_require_available_passes_for_manual (tests.test_segmentation.SegmentationContractTests.test_registry_require_available_passes_for_manual) ... ok
+test_unavailable_adapter_refuses_to_segment (tests.test_segmentation.SegmentationContractTests.test_unavailable_adapter_refuses_to_segment) ... ok
+test_187_rights_gated_candidates_are_not_187_installed_models (tests.test_source_handbook.SourceHandbookTests.test_187_rights_gated_candidates_are_not_187_installed_models) ... ok
+test_all_actual_cli_subcommands_documented (tests.test_source_handbook.SourceHandbookTests.test_all_actual_cli_subcommands_documented) ... ok
+test_baseline_static_inventory_is_complete_and_sha_versioned (tests.test_source_handbook.SourceHandbookTests.test_baseline_static_inventory_is_complete_and_sha_versioned) ... ok
+test_module_index_covers_actual_tracked_python_without_imaginary_file (tests.test_source_handbook.SourceHandbookTests.test_module_index_covers_actual_tracked_python_without_imaginary_file) ... ok
+test_one_handoff_and_source_based_howto_exist (tests.test_source_handbook.SourceHandbookTests.test_one_handoff_and_source_based_howto_exist) ... ok
+test_box_sections_change_with_height (tests.test_spatial_truth.SpatialTruthTests.test_box_sections_change_with_height) ... ok
+test_cross_sections_are_reproducible (tests.test_spatial_truth.SpatialTruthTests.test_cross_sections_are_reproducible) ... ok
+test_inverse_ray_aligns_with_source_direction_not_depth (tests.test_spatial_truth.SpatialTruthTests.test_inverse_ray_aligns_with_source_direction_not_depth) ... ok
+test_projection_rejects_invalid_camera (tests.test_spatial_truth.SpatialTruthTests.test_projection_rejects_invalid_camera) ... ok
+test_rotated_camera_recovers_point_not_parallel (tests.test_spatial_truth.SpatialTruthTests.test_rotated_camera_recovers_point_not_parallel) ... ok
+test_rotated_camera_rejects_reflection_and_scale (tests.test_spatial_truth.SpatialTruthTests.test_rotated_camera_rejects_reflection_and_scale) ... ok
+test_same_pixel_can_represent_multiple_depths (tests.test_spatial_truth.SpatialTruthTests.test_same_pixel_can_represent_multiple_depths) ... ok
+test_slicer_rejects_untrusted_geometry_or_budget (tests.test_spatial_truth.SpatialTruthTests.test_slicer_rejects_untrusted_geometry_or_budget) ... ok
+test_spatial_proof_cli_persists_truth (tests.test_spatial_truth.SpatialTruthTests.test_spatial_proof_cli_persists_truth) ... ok
+test_stereo_recovers_known_point_from_two_views (tests.test_spatial_truth.SpatialTruthTests.test_stereo_recovers_known_point_from_two_views) ... ok
+test_stereo_rejects_backwards_point (tests.test_spatial_truth.SpatialTruthTests.test_stereo_rejects_backwards_point) ... ok
+test_stereo_rejects_mismatched_correspondences (tests.test_spatial_truth.SpatialTruthTests.test_stereo_rejects_mismatched_correspondences) ... ok
+test_stereo_rejects_zero_parallax (tests.test_spatial_truth.SpatialTruthTests.test_stereo_rejects_zero_parallax) ... ok
+test_atmosphere_memory_detects_unexpected_flash (tests.test_studio_quality.StudioQualityTests.test_atmosphere_memory_detects_unexpected_flash) ... ok
+test_cross_view_judge_checks_anatomy_under_camera_rotation (tests.test_studio_quality.StudioQualityTests.test_cross_view_judge_checks_anatomy_under_camera_rotation) ... ok
+test_horizon_truth_does_not_claim_actual_streaming (tests.test_studio_quality.StudioQualityTests.test_horizon_truth_does_not_claim_actual_streaming) ... ok
+test_layered_world_preserves_source_and_stable_hash (tests.test_studio_quality.StudioQualityTests.test_layered_world_preserves_source_and_stable_hash) ... ok
+test_light_orchestra_is_ranked_and_bounded (tests.test_studio_quality.StudioQualityTests.test_light_orchestra_is_ranked_and_bounded) ... ok
+test_living_hair_tracks_root_and_strand_stretch (tests.test_studio_quality.StudioQualityTests.test_living_hair_tracks_root_and_strand_stretch) ... ok
+test_material_witness_catches_bad_roughness (tests.test_studio_quality.StudioQualityTests.test_material_witness_catches_bad_roughness) ... ok
+test_real_blender_studio_command_requires_new_typed_outputs (tests.test_studio_quality.StudioQualityTests.test_real_blender_studio_command_requires_new_typed_outputs) ... ok
+test_studio_cli_materializes_all_ten_evidence_receipts (tests.test_studio_quality.StudioQualityTests.test_studio_cli_materializes_all_ten_evidence_receipts) ... ok
+test_surface_guardian_uses_real_mesh_edge_audit (tests.test_studio_quality.StudioQualityTests.test_surface_guardian_uses_real_mesh_edge_audit) ... ok
+test_surface_reconciler_rejects_large_landmark_drift (tests.test_studio_quality.StudioQualityTests.test_surface_reconciler_rejects_large_landmark_drift) ... ok
+test_translucence_decreases_with_thickness_and_rejects_bad_input (tests.test_studio_quality.StudioQualityTests.test_translucence_decreases_with_thickness_and_rejects_bad_input) ... ok
+test_bad_blender_job_refused (tests.test_studio_server.StudioServerTests.test_bad_blender_job_refused) ... ok
+test_blender_background_failure_is_reported (tests.test_studio_server.StudioServerTests.test_blender_background_failure_is_reported) ... ok
+test_blender_job_receipt_persists_between_sessions (tests.test_studio_server.StudioServerTests.test_blender_job_receipt_persists_between_sessions) ... ok
+test_blender_poll_before_start_is_not_started (tests.test_studio_server.StudioServerTests.test_blender_poll_before_start_is_not_started) ... ok
+test_blender_runs_once_even_with_duplicate_clicks (tests.test_studio_server.StudioServerTests.test_blender_runs_once_even_with_duplicate_clicks) ... ok
+test_blender_status_requires_correct_token (tests.test_studio_server.StudioServerTests.test_blender_status_requires_correct_token) ... ok
+test_character_upload_refuses_invalid_base64 (tests.test_studio_server.StudioServerTests.test_character_upload_refuses_invalid_base64) ... ok
+test_character_upload_refuses_other_keys (tests.test_studio_server.StudioServerTests.test_character_upload_refuses_other_keys) ... ok
+test_character_upload_token_required (tests.test_studio_server.StudioServerTests.test_character_upload_token_required) ... ok
+test_creation_chat_has_morph_and_world_biome_controls (tests.test_studio_server.StudioServerTests.test_creation_chat_has_morph_and_world_biome_controls) ... ok
+test_downloads_require_token_for_relief_world_and_candidate (tests.test_studio_server.StudioServerTests.test_downloads_require_token_for_relief_world_and_candidate) ... ok
+test_engine_endpoint_refuses_invalid_job (tests.test_studio_server.StudioServerTests.test_engine_endpoint_refuses_invalid_job) ... ok
+test_engine_endpoint_requires_token (tests.test_studio_server.StudioServerTests.test_engine_endpoint_requires_token) ... ok
+test_existing_creation_chat_links_fetch_private_artifacts_with_token (tests.test_studio_server.StudioServerTests.test_existing_creation_chat_links_fetch_private_artifacts_with_token) ... ok
+test_foreign_host_and_origin_cannot_read_local_studio (tests.test_studio_server.StudioServerTests.test_foreign_host_and_origin_cannot_read_local_studio) ... ok
+test_foreign_origin_cannot_post (tests.test_studio_server.StudioServerTests.test_foreign_origin_cannot_post) ... ok
+test_godot_package_from_live_edited_world (tests.test_studio_server.StudioServerTests.test_godot_package_from_live_edited_world) ... ok
+test_http_biome_creation_real_glb_token_status_and_replay (tests.test_studio_server.StudioServerTests.test_http_biome_creation_real_glb_token_status_and_replay) ... ok
+test_http_original_creature_produces_real_token_protected_glb_and_replay (tests.test_studio_server.StudioServerTests.test_http_original_creature_produces_real_token_protected_glb_and_replay) ... ok
+test_interrupted_blender_job_is_recovered_as_failure (tests.test_studio_server.StudioServerTests.test_interrupted_blender_job_is_recovered_as_failure) ... ok
+test_invalid_image_refused_before_job_allocation (tests.test_studio_server.StudioServerTests.test_invalid_image_refused_before_job_allocation) ... ok
+test_invalid_receipt_does_not_crash_recovery (tests.test_studio_server.StudioServerTests.test_invalid_receipt_does_not_crash_recovery) ... ok
+test_job_state_replaces_file_without_extra_files (tests.test_studio_server.StudioServerTests.test_job_state_replaces_file_without_extra_files) ... ok
+test_no_arbitrary_python (tests.test_studio_server.StudioServerTests.test_no_arbitrary_python) ... ok
+test_no_public_tokenless_post (tests.test_studio_server.StudioServerTests.test_no_public_tokenless_post) ... ok
+test_non_json_refused (tests.test_studio_server.StudioServerTests.test_non_json_refused) ... ok
+test_path_traversal_not_exposed (tests.test_studio_server.StudioServerTests.test_path_traversal_not_exposed) ... ok
+test_png_to_real_downloadable_glb (tests.test_studio_server.StudioServerTests.test_png_to_real_downloadable_glb) ... ok
+test_safety_headers (tests.test_studio_server.StudioServerTests.test_safety_headers) ... ok
+test_source_atlas_cached_search_no_external_network (tests.test_studio_server.StudioServerTests.test_source_atlas_cached_search_no_external_network) ... ok
+test_source_atlas_polyhaven_routed_to_matching_read_adapter (tests.test_studio_server.StudioServerTests.test_source_atlas_polyhaven_routed_to_matching_read_adapter) ... ok
+test_source_atlas_rejects_unbounded_live_search (tests.test_studio_server.StudioServerTests.test_source_atlas_rejects_unbounded_live_search) ... ok
+test_source_atlas_search_authenticated_over_local_http (tests.test_studio_server.StudioServerTests.test_source_atlas_search_authenticated_over_local_http) ... ok
+test_studio_binds_only_localhost (tests.test_studio_server.StudioServerTests.test_studio_binds_only_localhost) ... ok
+test_studio_renders_actual_3d_editor (tests.test_studio_server.StudioServerTests.test_studio_renders_actual_3d_editor) ... ok
+test_studio_token_unique_per_session (tests.test_studio_server.StudioServerTests.test_studio_token_unique_per_session) ... ok
+test_unknown_command_404 (tests.test_studio_server.StudioServerTests.test_unknown_command_404) ... ok
+test_uploaded_real_glb_is_preserved_and_inspected (tests.test_studio_server.StudioServerTests.test_uploaded_real_glb_is_preserved_and_inspected) ... ok
+test_world_json_materialization_and_download (tests.test_studio_server.StudioServerTests.test_world_json_materialization_and_download) ... ok
+test_world_rejects_untrusted_sha (tests.test_studio_server.StudioServerTests.test_world_rejects_untrusted_sha) ... ok
+test_bad_index_rejected (tests.test_surface_truth.SurfaceTruthTests.test_bad_index_rejected) ... ok
+test_closed_box_edge_candidate (tests.test_surface_truth.SurfaceTruthTests.test_closed_box_edge_candidate) ... ok
+test_duplicate_face_is_nonmanifold (tests.test_surface_truth.SurfaceTruthTests.test_duplicate_face_is_nonmanifold) ... ok
+test_hole_is_detected (tests.test_surface_truth.SurfaceTruthTests.test_hole_is_detected) ... ok
+test_triangle_budget_is_enforced (tests.test_surface_truth.SurfaceTruthTests.test_triangle_budget_is_enforced) ... ok
+test_invalid_inputs_and_budgets_fail (tests.test_traversal.WorldTraversalTests.test_invalid_inputs_and_budgets_fail) ... ok
+test_road_agent_reaches_goal_without_building_contact (tests.test_traversal.WorldTraversalTests.test_road_agent_reaches_goal_without_building_contact) ... ok
+test_same_building_zero_distance (tests.test_traversal.WorldTraversalTests.test_same_building_zero_distance) ... ok
+test_cli_three_stage_real_files (tests.test_unclothe_3d.UnclotheTests.test_cli_three_stage_real_files) ... ok
+test_duplicate_part_blocked (tests.test_unclothe_3d.UnclotheTests.test_duplicate_part_blocked) ... ok
+test_empty_mask_blocks (tests.test_unclothe_3d.UnclotheTests.test_empty_mask_blocks) ... ok
+test_invalid_kind (tests.test_unclothe_3d.UnclotheTests.test_invalid_kind) ... ok
+test_invalid_schema (tests.test_unclothe_3d.UnclotheTests.test_invalid_schema) ... ok
+test_no_overwrite (tests.test_unclothe_3d.UnclotheTests.test_no_overwrite) ... ok
+test_pending_blocks_everything (tests.test_unclothe_3d.UnclotheTests.test_pending_blocks_everything) ... ok
+test_proxy_invalid_grid (tests.test_unclothe_3d.UnclotheTests.test_proxy_invalid_grid) ... ok
+test_proxy_rejects_second_write (tests.test_unclothe_3d.UnclotheTests.test_proxy_rejects_second_write) ... ok
+test_proxy_rejects_tampered_bounds (tests.test_unclothe_3d.UnclotheTests.test_proxy_rejects_tampered_bounds) ... ok
+test_rejected_only_blocks (tests.test_unclothe_3d.UnclotheTests.test_rejected_only_blocks) ... ok
+test_rejected_part_excluded (tests.test_unclothe_3d.UnclotheTests.test_rejected_part_excluded) ... ok
+test_review_and_real_extraction (tests.test_unclothe_3d.UnclotheTests.test_review_and_real_extraction) ... ok
+test_separate_real_glb_proxy_after_approval (tests.test_unclothe_3d.UnclotheTests.test_separate_real_glb_proxy_after_approval) ... ok
+test_size_mismatch_blocks_without_output (tests.test_unclothe_3d.UnclotheTests.test_size_mismatch_blocks_without_output) ... ok
+test_traversal_blocked (tests.test_unclothe_3d.UnclotheTests.test_traversal_blocked) ... ok
+test_different_silhouette_or_blank_does_not_claim_identity (tests.test_view_identity.ViewIdentityTests.test_different_silhouette_or_blank_does_not_claim_identity) ... ok
+test_image_plane_rotation_is_not_asset_identity_proof (tests.test_view_identity.ViewIdentityTests.test_image_plane_rotation_is_not_asset_identity_proof) ... ok
+test_same_approved_asset_across_pose_and_camera (tests.test_view_identity.ViewIdentityTests.test_same_approved_asset_across_pose_and_camera) ... ok
+test_same_name_different_source_is_not_proof_of_character_difference (tests.test_view_identity.ViewIdentityTests.test_same_name_different_source_is_not_proof_of_character_difference) ... ok
+test_translated_same_shape_appearance_consistent (tests.test_view_identity.ViewIdentityTests.test_translated_same_shape_appearance_consistent) ... ok
+test_transparent_background_does_not_count_as_subject (tests.test_view_identity.ViewIdentityTests.test_transparent_background_does_not_count_as_subject) ... ok
+test_two_real_procedural_pose_exports_share_neutral_template (tests.test_view_identity.ViewIdentityTests.test_two_real_procedural_pose_exports_share_neutral_template) ... ok
+test_alpha_overrides_bright_background (tests.test_visualqa.VisualJudgeTests.test_alpha_overrides_bright_background) ... ok
+test_bad_crc_and_shape_rejected (tests.test_visualqa.VisualJudgeTests.test_bad_crc_and_shape_rejected) ... ok
+test_identical_render_passes (tests.test_visualqa.VisualJudgeTests.test_identical_render_passes) ... ok
+test_mutation_flagged (tests.test_visualqa.VisualJudgeTests.test_mutation_flagged) ... ok
+test_bad_world_manifest_is_rejected (tests.test_web_runtime.OfflineWorldFlightTests.test_bad_world_manifest_is_rejected) ... ok
+test_cli_writes_once_and_never_overwrites (tests.test_web_runtime.OfflineWorldFlightTests.test_cli_writes_once_and_never_overwrites) ... ok
+test_corrupt_glb_fails_receipt_before_packaging (tests.test_web_runtime.OfflineWorldFlightTests.test_corrupt_glb_fails_receipt_before_packaging) ... ok
+test_self_contained_world_bundles_real_glb_and_data (tests.test_web_runtime.OfflineWorldFlightTests.test_self_contained_world_bundles_real_glb_and_data) ... ok
+test_biome_generates_real_asset_outside_unchanged_original_city (tests.test_world_biome.BiomeTests.test_biome_generates_real_asset_outside_unchanged_original_city) ... ok
+test_biome_is_reproducible_without_paid_model (tests.test_world_biome.BiomeTests.test_biome_is_reproducible_without_paid_model) ... ok
+test_rejects_incorrect_biome_resolution_and_tampered_world (tests.test_world_biome.BiomeTests.test_rejects_incorrect_biome_resolution_and_tampered_world) ... ok
+test_disallows_cross_world_biome_and_duplicate_output (tests.test_world_composition.WorldComposerTests.test_disallows_cross_world_biome_and_duplicate_output) ... ok
+test_failed_blender_preserves_partial_failure_proof_not_false_success (tests.test_world_composition.WorldComposerTests.test_failed_blender_preserves_partial_failure_proof_not_false_success) ... ok
+test_missing_blender_does_not_touch_originals (tests.test_world_composition.WorldComposerTests.test_missing_blender_does_not_touch_originals) ... ok
+test_heavy_blender_slot_does_not_allocate_duplicate_job (tests.test_world_composition_jobs.WorldCompositionJobTests.test_heavy_blender_slot_does_not_allocate_duplicate_job) ... ok
+test_invalid_and_unmaterialized_biome_refused_before_job (tests.test_world_composition_jobs.WorldCompositionJobTests.test_invalid_and_unmaterialized_biome_refused_before_job) ... ok
+test_same_id_replay_and_restart_reconcile (tests.test_world_composition_jobs.WorldCompositionJobTests.test_same_id_replay_and_restart_reconcile) ... ok
+test_bad_identity_rejected (tests.test_world_editor.WorldEditorRoundtripTests.test_bad_identity_rejected) ... ok
+test_bad_sha_rejected_before_output_created (tests.test_world_editor.WorldEditorRoundtripTests.test_bad_sha_rejected_before_output_created) ... ok
+test_browser_edits_materialize_into_real_exported_assets (tests.test_world_editor.WorldEditorRoundtripTests.test_browser_edits_materialize_into_real_exported_assets) ... ok
+test_cli_and_deterministic_repeated_exports (tests.test_world_editor.WorldEditorRoundtripTests.test_cli_and_deterministic_repeated_exports) ... ok
+test_duplicate_or_unauthorized_created_identity_fails (tests.test_world_editor.WorldEditorRoundtripTests.test_duplicate_or_unauthorized_created_identity_fails) ... ok
+test_invalid_height_rejected (tests.test_world_editor.WorldEditorRoundtripTests.test_invalid_height_rejected) ... ok
+test_native_created_building_exports_true_new_geometry (tests.test_world_editor.WorldEditorRoundtripTests.test_native_created_building_exports_true_new_geometry) ... ok
+test_native_deleted_building_updates_true_geometry (tests.test_world_editor.WorldEditorRoundtripTests.test_native_deleted_building_updates_true_geometry) ... ok
+test_native_resized_building_materializes_true_dimensions (tests.test_world_editor.WorldEditorRoundtripTests.test_native_resized_building_materializes_true_dimensions) ... ok
+test_oversized_json_rejected (tests.test_world_editor.WorldEditorRoundtripTests.test_oversized_json_rejected) ... ok
+test_tampered_source_glb_rejected (tests.test_world_editor.WorldEditorRoundtripTests.test_tampered_source_glb_rejected) ... ok
+test_bad_edits_do_not_create_job (tests.test_world_jobs.DurableWorldJobs.test_bad_edits_do_not_create_job) ... ok
+test_create_replay_after_restart_and_status (tests.test_world_jobs.DurableWorldJobs.test_create_replay_after_restart_and_status) ... ok
+test_incomplete_request_is_not_built_again (tests.test_world_jobs.DurableWorldJobs.test_incomplete_request_is_not_built_again) ... ok
+test_tampered_world_cannot_replay (tests.test_world_jobs.DurableWorldJobs.test_tampered_world_cannot_replay) ... ok
+test_wrong_payload_id_cannot_reuse_existing_job (tests.test_world_jobs.DurableWorldJobs.test_wrong_payload_id_cannot_reuse_existing_job) ... ok
+test_independent_bytes_verified_but_rights_not_granted (tests.test_xray_kit.XRayKitTests.test_independent_bytes_verified_but_rights_not_granted) ... ok
+test_missing_schemas_fails_closed (tests.test_xray_kit.XRayKitTests.test_missing_schemas_fails_closed) ... ok
+test_tamper_wrong_archive_wrong_file_and_incomplete_coverage_fail (tests.test_xray_kit.XRayKitTests.test_tamper_wrong_archive_wrong_file_and_incomplete_coverage_fail) ... ok
+
+----------------------------------------------------------------------
+Ran 638 tests in 47.601s
+
+OK (skipped=3)
+{
+  "status": "PARTIAL_FAILURE",
+  "receipt": "C:\\Users\\cool\\AppData\\Local\\Temp\\tmpv0ohxiij\\tamper-report.json"
+}
+{
+  "status": "PASS",
+  "receipt": "C:\\Users\\cool\\AppData\\Local\\Temp\\tmpnua_dt9q\\transport-report.json"
+}
+{
+  "schema": "mgr.forge.character-candidate.v1",
+  "status": "INSPECTED",
+  "source_sha256": "90a98b906c865c64e185ea90505b2a7a67c5e5b390800436288b3aa1a0e20e1f",
+  "source_bytes": 20932,
+  "geometry": {
+    "valid": true,
+    "meshes": 1,
+    "primitives": 7,
+    "vertices": 528,
+    "triangles": 264,
+    "materials": 7
+  },
+  "nodes": 1,
+  "skin_count": 0,
+  "joint_references": 0,
+  "animation_clips": 0,
+  "morph_target_groups": 0,
+  "bounds_min": [
+    -0.99,
+    0.0,
+    -0.2614107583743455
+  ],
+  "bounds_max": [
+    0.99,
+    1.9200000000000002,
+    0.17500000000000002
+  ],
+  "warnings": [
+    "No skin/armature in source; not animation-ready",
+    "No embedded animation clips",
+    "One mesh container; clothing/hair separation not demonstrated"
+  ],
+  "identity_verified": false,
+  "anatomy_verified": false,
+  "deformation_verified": false,
+  "image_reconstruction_performed": false
+}
+{
+  "schema": "mgr.forge.character-readiness.v1",
+  "source_sha256": "90a98b906c865c64e185ea90505b2a7a67c5e5b390800436288b3aa1a0e20e1f",
+  "geometry": {
+    "valid": true,
+    "meshes": 1,
+    "primitives": 7,
+    "vertices": 528,
+    "triangles": 264,
+    "materials": 7
+  },
+  "parts": [
+    {
+      "mesh_index": 0,
+      "name": "MGR Anonymous T-pose",
+      "node_instances": [
+        0
+      ],
+      "primitives": [
+        {
+          "vertices": 192,
+          "material": "skin-placeholder",
+          "has_uv": false,
+          "has_joint_weights": false,
+          "incomplete_joint_weights": false,
+          "morph_targets": 0
+        },
+        {
+          "vertices": 24,
+          "material": "hair-placeholder",
+          "has_uv": false,
+          "has_joint_weights": false,
+          "incomplete_joint_weights": false,
+          "morph_targets": 0
+        },
+        {
+          "vertices": 24,
+          "material": "undershirt",
+          "has_uv": false,
+          "has_joint_weights": false,
+          "incomplete_joint_weights": false,
+          "morph_targets": 0
+        },
+        {
+          "vertices": 96,
+          "material": "coat",
+          "has_uv": false,
+          "has_joint_weights": false,
+          "incomplete_joint_weights": false,
+          "morph_targets": 0
+        },
+        {
+          "vertices": 96,
+          "material": "pants",
+          "has_uv": false,
+          "has_joint_weights": false,
+          "incomplete_joint_weights": false,
+          "morph_targets": 0
+        },
+        {
+          "vertices": 48,
+          "material": "boots",
+          "has_uv": false,
+          "has_joint_weights": false,
+          "incomplete_joint_weights": false,
+          "morph_targets": 0
+        },
+        {
+          "vertices": 48,
+          "material": "chain",
+          "has_uv": false,
+          "has_joint_weights": false,
+          "incomplete_joint_weights": false,
+          "morph_targets": 0
+        }
+      ],
+      "independently_named_mesh": false
+    }
+  ],
+  "skins": 0,
+  "joint_references": 0,
+  "rig_structure": "NOT_READY",
+  "rig_issues": [
+    "no skin data; model cannot be called deforming-rig ready"
+  ],
+  "garments_semantically_verified": false,
+  "hair_semantically_verified": false,
+  "hands_anatomically_verified": false,
+  "pose_deformation_verified": false,
+  "owner_approved_identity": false,
+  "notes": [
+    "Mesh names/materials are inventory hints, not proof of body-part identity.",
+    "A structurally plausible skin does not prove pose or deformation quality."
+  ]
+}
+{
+  "schema": "mgr.forge.engine-handoff.v1",
+  "status": "MATERIALIZED",
+  "engine": "Godot 4",
+  "source_glb_sha256": "9f582586e7d5a95b023fa7bf85716cace8a29f1e39417e4047c410d7b0cb789a",
+  "triangles": 156,
+  "building_colliders": 3,
+  "engine_import_verified": false,
+  "files": [
+    "project.godot",
+    "world.tscn",
+    "assets/world.glb"
+  ]
+}
+{
+  "status": "PASS",
+  "kind": "portal",
+  "triangles": 960,
+  "output": "C:\\Users\\cool\\AppData\\Local\\Temp\\tmpkc5trlj8\\portal"
+}
+{
+  "status": "PASS",
+  "objects": 2,
+  "sha256": "72d07803e5890dde847a4d5e56a72984eef26b05323ad9824614037507799859",
+  "receipt": "C:\\Users\\cool\\AppData\\Local\\Temp\\tmpvuf8md_q\\scene.json"
+}
+{
+  "status": "PASS",
+  "spatial_proof": "C:\\Users\\cool\\AppData\\Local\\Temp\\tmpgvjbphck\\proof.json"
+}
+{
+  "status": "PASS",
+  "studio_proof": "C:\\Users\\cool\\AppData\\Local\\Temp\\tmp1sax2smd\\studio.json",
+  "checks": 10
+}
+{
+  "schema": "mgr.forge.world-flight.v1",
+  "status": "MATERIALIZED",
+  "html": "C:\\Users\\cool\\AppData\\Local\\Temp\\tmp7m64x84d\\flight.html",
+  "bytes": 99303,
+  "glb_sha256": "72986d0617420d88ca4d67e6025bf40117ea44ccdf46613a3cf6afdc8c893d23",
+  "triangles": 180,
+  "buildings": 3,
+  "runtime": "offline-browser-WebGL2",
+  "limitations": [
+    "browser GPU/WebGL2 capability required",
+    "procedural editor changes do not modify embedded GLB until apply-world-edits",
+    "bounds-based building collision, no navmesh or full physics",
+    "browser performance and visual QA require actual browser execution"
+  ]
+}
+{
+  "schema": "mgr.forge.edited-world.v1",
+  "status": "MATERIALIZED",
+  "output": "C:\\Users\\cool\\AppData\\Local\\Temp\\tmpvjy7t70i\\edited-a",
+  "changed_buildings": 2,
+  "buildings": 4,
+  "triangles": 204,
+  "glb_sha256": "00ad3f95ce1c26e4a1447dcf9b6087fffc86e1f2735617c0a5d04830b6ec7572",
+  "viewer": "C:\\Users\\cool\\AppData\\Local\\Temp\\tmpvjy7t70i\\edited-a\\world-editor.html"
+}

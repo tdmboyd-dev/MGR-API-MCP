@@ -1,10 +1,17 @@
 # MGR-API-MCP
 
+## Current joined Forge and Tevin shared edge — November 1, 2026
+
+The same shared edge retains department/repository knowledge connections and existing native Forge creation/status/private-artifact tools. Exact workstation actor and tenant enrollment, scope/expiry/current-host fences and final response checks are required. Full API247/247 and actual SDK/HTTP/Forge/Blender resource proofs pass in their stated scopes. [Current handoff](HANDOFF.md) and [Forge integration contract](docs/FORGE-CONNECTION-AND-RECOVERY.md) distinguish this from permanent Tevin job/approval integration and hosted/production acceptance. Earlier dated checkpoints retain historical scope.
+
+
 For the current operating contract, read [MGR Beast Pack](MGR-Beast-Pack/MGR-BEAST-PACK.md). The supplied pack is preserved unchanged; existing work queues and evidence remain the project source of truth.
 
 The research and build home for an owned, portable assistant informed by JARVIS and Jev. The intended system brings research, coding, memory, voice, tools and optional content/phone/device workflows into one task engine, with ChatGPT-facing MCP and replaceable model providers.
 
-**Current state: executable authenticated shared edge with deployment-ready hosted MCP surface.** The repo now includes typed task/decision/security contracts, governed stdio + HTTP MCP, JWT/JWKS auth, tenant/scope binding, Legacy-backed side-effect dispatch with authoritative receipts and reconciliation, Creation OS routing, container deployment, Render blueprint, Auth0/OIDC preflight, direct remote MCP verification, OpenAI Responses remote-MCP verification, and green containerized restart/timeout/duplicate-delivery proof. A real public host, real Auth0/OAuth credentials, deployed Legacy endpoint, and final hosted OpenAI/ChatGPT MCP session remain external proof rather than missing repository code.
+**Current state: executable authenticated shared edge; hosted source exists and production acceptance remains open.** The repo now includes typed task/decision/security contracts, governed stdio + HTTP MCP, JWT/JWKS auth, tenant/scope binding, Legacy-backed side-effect dispatch with authoritative receipts and reconciliation, Creation OS routing, container deployment, Render blueprint, Auth0/OIDC preflight, direct remote MCP verification, OpenAI Responses remote-MCP verification, and green containerized restart/timeout/duplicate-delivery proof. A real public host, real Auth0/OAuth credentials, deployed Legacy endpoint, and final hosted OpenAI/ChatGPT MCP session remain external proof rather than missing repository code.
+
+**Current Forge integration:** twelve optional shared operations cover catalog, native world/creature/biome, timed-phoneme Human animation, composition, status and bounded private artifact return. Configure all four actor/tenant/URL/token settings in `.env.example`; incomplete enrollment is refused. Forge also has newer audio behavior awaiting its typed shared adapter. [Setup and recovery](docs/FORGE-CONNECTION-AND-RECOVERY.md).
 
 ## Start here
 

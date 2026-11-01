@@ -1,13 +1,14 @@
 import {execFileSync} from 'node:child_process';
-import {realpathSync} from 'node:fs';
+import {realpathSync,lstatSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const docId=path=>'doc-'+sha(path).slice(0,16);
 // Never inherit Git overrides, credentials, hooks, pagers or project execution.
-function git(root,...args){const env={};for(const key of ['PATH','SystemRoot','WINDIR','TEMP','TMP'])if(process.env[key])env[key]=process.env[key];Object.assign(env,{GIT_CONFIG_NOSYSTEM:'1',GIT_CONFIG_GLOBAL:'/dev/null',GIT_CONFIG_SYSTEM:'/dev/null',GIT_NO_REPLACE_OBJECTS:'1',GIT_NO_LAZY_FETCH:'1',GIT_OPTIONAL_LOCKS:'0',GIT_TERMINAL_PROMPT:'0'});return execFileSync('git',['-C',root,'-c','core.fsmonitor=false','-c','protocol.allow=never',...args],{env,encoding:'utf8',windowsHide:true,timeout:10000,maxBuffer:2*1024*1024,stdio:['ignore','pipe','pipe']});}
+function git(root,...args){const env={};for(const key of ['PATH','SystemRoot','WINDIR','TEMP','TMP'])if(process.env[key])env[key]=process.env[key];Object.assign(env,{GIT_CONFIG_NOSYSTEM:'1',GIT_CONFIG_GLOBAL:'/dev/null',GIT_CONFIG_SYSTEM:'/dev/null',GIT_NO_REPLACE_OBJECTS:'1',GIT_NO_LAZY_FETCH:'1',GIT_OPTIONAL_LOCKS:'0',GIT_TERMINAL_PROMPT:'0'});const bytes=execFileSync('git',['-C',root,'-c','core.fsmonitor=false','-c','protocol.allow=never',...args],{env,windowsHide:true,timeout:10000,maxBuffer:2*1024*1024,stdio:['ignore','pipe','pipe']});try{return new TextDecoder('utf-8',{fatal:true,ignoreBOM:true}).decode(bytes);}catch{throw Error('manual-source-invalid-utf8');}}
 export function createRepositoryManuals(roots){
  const enrolled=Object.freeze(Object.fromEntries(Object.entries(roots).map(([id,root])=>[id,realpathSync(root)])));
- const current=id=>{if(!Object.hasOwn(enrolled,id)||realpathSync(enrolled[id])!==enrolled[id])throw Error('manual-project-unavailable');return enrolled[id];};
+ const identities=new Map(Object.entries(enrolled).map(([id,root])=>[id,lstatSync(root,{bigint:true})]));
+ const current=id=>{if(!Object.hasOwn(enrolled,id)||realpathSync(enrolled[id])!==enrolled[id])throw Error('manual-project-unavailable');const expected=identities.get(id),actual=lstatSync(enrolled[id],{bigint:true});if(actual.isSymbolicLink()||actual.dev!==expected.dev||actual.ino!==expected.ino)throw Error('manual-project-unavailable');return enrolled[id];};
  return Object.freeze({projects:Object.freeze(Object.keys(enrolled)),project(id){return {id,root:current(id)};},read(id,{document='index',startLine=1,expectedCommit}={}){
   const root=current(id);if(!Number.isSafeInteger(startLine)||startLine<1||startLine>999999)throw Error('manual-page-invalid');
   const commit=git(root,'rev-parse','--verify','HEAD^{commit}').trim();if(!/^[a-f0-9]{40}$/.test(commit)||expectedCommit&&expectedCommit!==commit)throw Error('manual-source-changed');

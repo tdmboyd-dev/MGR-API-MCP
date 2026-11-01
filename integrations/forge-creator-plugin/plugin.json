@@ -1,0 +1,28 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mgr-forge-creator",
+  "version": "0.1.0",
+  "description": "Plan and direct MGR-native 3D creation using existing Forge and MGR API/MCP, with source-rights, actual GLB and quality acceptance gates.",
+  "author": {
+    "name": "MGR"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "MGR Forge Creator",
+        "shortDescription": "Build 3D with MGR Forge",
+        "longDescription": "MGR 3D Forge creative workflow companion. Uses an already connected, authorized MGR Forge API/MCP or an approved local desktop workflow when available; this skills-only first release does not itself host a 3D generator, paid AI model or mobile-accessible server.",
+        "developerName": "MGR",
+        "category": "Productivity",
+        "capabilities": [
+          "Interactive"
+        ],
+        "defaultPrompt": [
+          "Create an original fantasy creature using MGR 3D Forge and show me real saved files and verification.",
+          "Audit what MGR Forge can build today and what is still missing.",
+          "Help me generate or revise a 3D world using the existing MGR Forge tools and receipts."
+        ]
+      }
+    }
+  }
+}

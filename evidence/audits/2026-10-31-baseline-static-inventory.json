@@ -1,0 +1,3321 @@
+{
+  "all_tracked_file_sha256_bytes_and_parse_classifications": [
+    {
+      "bytes": 48,
+      "classification": "TRACKED_TEXT_READ",
+      "lines": 6,
+      "path": ".dockerignore",
+      "sha256": "820611deadee980c6d47dff3e8465e2199b92d0dc1f4720e11ed8b0530e876ac"
+    },
+    {
+      "bytes": 1331,
+      "classification": "TRACKED_TEXT_READ",
+      "lines": 27,
+      "path": ".env.example",
+      "sha256": "f670e0c4554b8edadce24119fb4a4b02d6340ab8e0833a17e79ad416b7c0798a"
+    },
+    {
+      "bytes": 88,
+      "classification": "TRACKED_TEXT_READ",
+      "lines": 5,
+      "path": ".gitattributes",
+      "sha256": "73a397708e6ddc395354dc684eadb2782bc9afe8fe47f200ea1fcd47d688b106"
+    },
+    {
+      "bytes": 41,
+      "classification": "TRACKED_TEXT_READ",
+      "lines": 1,
+      "path": ".github/boundary-trigger",
+      "sha256": "1ccdb607acb45156ffa6dc6f25b06a126b47c666f82b21b97e5370161a854459"
+    },
+    {
+      "bytes": 63,
+      "classification": "TRACKED_TEXT_READ",
+      "lines": 1,
+      "path": ".github/ci-trigger",
+      "sha256": "08c7b43f6ff8aba5ec4d9f2e6b8159356a9d26a83cb9955cadb89cba464e7d86"
+    },
+    {
+      "bytes": 393,
+      "classification": "TEXT_READ",
+      "lines": 21,
+      "path": ".github/workflows/ci.yml",
+      "sha256": "9ae9b6ec530c90fa759601daeb9cb66eb08db4c6089b061de12cdf35c39a9431"
+    },
+    {
+      "bytes": 3915,
+      "classification": "TEXT_READ",
+      "lines": 86,
+      "path": ".github/workflows/container-boundary.yml",
+      "sha256": "49d176800aee3c0365668d1379865cf26a4d712f5fff847f43a82285a8d5e880"
+    },
+    {
+      "bytes": 614,
+      "classification": "TEXT_READ",
+      "lines": 20,
+      "path": ".github/workflows/deployed-boundary.yml",
+      "sha256": "4d80b5ea6409aa43120496bfd8587462c24dddb6c5c8d62755a3f4613d600945"
+    },
+    {
+      "bytes": 1325,
+      "classification": "TEXT_READ",
+      "lines": 37,
+      "path": ".github/workflows/hosted-proof.yml",
+      "sha256": "cc060fc0445e079c85501d688ce2b8e1d9d6cb60b11be23b549f1bc267bbced9"
+    },
+    {
+      "bytes": 120,
+      "classification": "TRACKED_TEXT_READ",
+      "lines": 13,
+      "path": ".gitignore",
+      "sha256": "d99236ce168f651355ec9ae14747c1b8d7dff472bc163f3f4400e486eca5d555"
+    },
+    {
+      "bytes": 2876,
+      "classification": "TEXT_READ",
+      "lines": 29,
+      "path": "AGENTS.md",
+      "sha256": "d2a3cdd1a2c31904adbffc2a3d71b122a72f03815a799faa2a8c9e866b616f21"
+    },
+    {
+      "bytes": 8925,
+      "classification": "TEXT_READ",
+      "lines": 74,
+      "path": "AUDIT-LEDGER.md",
+      "sha256": "69fbd825fde97c0f83f18f574fa7457b0680f5fae8a239e248ad79c6ff0a7ed2"
+    },
+    {
+      "bytes": 13613,
+      "classification": "TEXT_READ",
+      "lines": 102,
+      "path": "BUILD-QUEUE.md",
+      "sha256": "5221ed39cca6a0ccf82d124e5e902ab63d5c0fecb0e98f5efd84ac9ff423428a"
+    },
+    {
+      "bytes": 397,
+      "classification": "TRACKED_TEXT_READ",
+      "lines": 17,
+      "path": "Dockerfile",
+      "sha256": "282d57693ca05ecee271e1e1bdc58a7be51ad9c444df890b821c0d934344a79a"
+    },
+    {
+      "bytes": 12156,
+      "classification": "TEXT_READ",
+      "lines": 65,
+      "path": "HANDOFF.md",
+      "sha256": "38e05513ac257237b1f776766292a08718d361382765e420f85c2174c69ddf4d"
+    },
+    {
+      "bytes": 594,
+      "classification": "TEXT_READ",
+      "lines": 13,
+      "path": "JEV-READ-FIRST.md",
+      "sha256": "4afad36d208d8f9eb322671aa0abb35ada8fafbbcf08a1e7dd1c045950126bf6"
+    },
+    {
+      "bytes": 909,
+      "classification": "TEXT_READ",
+      "lines": 1,
+      "path": "MGR-Beast-Pack/ACTIVATION-PROMPT.txt",
+      "sha256": "4fb070e1aac62bbb640a07ea4d0f58e4fbd4be2ea5a2b754b30ae768375cc51a"
+    },
+    {
+      "bytes": 112,
+      "classification": "TEXT_READ",
+      "lines": 8,
+      "path": "MGR-Beast-Pack/CALL-MGR-BEAST.txt",
+      "sha256": "8c452d8bfd52c3b751723b7f75400f0012b3fdbcd911a1da2c2c6d09cf6e70e3"
+    },
+    {
+      "bytes": 45257,
+      "classification": "TEXT_READ",
+      "lines": 2121,
+      "path": "MGR-Beast-Pack/MGR-BEAST-PACK.md",
+      "sha256": "22f8e089ad975cc1c1ba4f5fa43c8e3363fcbeaa429e2027230ba469df23f4f2"
+    },
+    {
+      "bytes": 824,
+      "classification": "TEXT_READ",
+      "lines": 24,
+      "path": "MGR-Beast-Pack/templates/ARCHITECTURE-COMPLETENESS-CHECKLIST.md",
+      "sha256": "cb20291b77b320537a2a7f2b4e1e647bce39ff656ae920a4d2910603598a2163"
+    },
+    {
+      "bytes": 421,
+      "classification": "TEXT_READ",
+      "lines": 39,
+      "path": "MGR-Beast-Pack/templates/AUDIT-LEDGER-TEMPLATE.md",
+      "sha256": "1453283284ce7df4caa35bd1f262d53cbd1a1ea52766b3b20f4e0c328e5f1e18"
+    },
+    {
+      "bytes": 258,
+      "classification": "TEXT_READ",
+      "lines": 4,
+      "path": "MGR-Beast-Pack/templates/BUILD-QUEUE-TEMPLATE.md",
+      "sha256": "d6d959ec7e3d4f0d2cb72ff9288af2926d36511cbfd6a17409a3b70bf7f5e0a3"
+    },
+    {
+      "bytes": 253,
+      "classification": "TEXT_READ",
+      "lines": 23,
+      "path": "MGR-Beast-Pack/templates/CAPABILITY-MAP-TEMPLATE.md",
+      "sha256": "5a7b6b36efdf12ca9f5d9dc3b97368d4dfaa87603ee3017c4599a0065605049f"
+    },
+    {
+      "bytes": 199,
+      "classification": "TEXT_READ",
+      "lines": 4,
+      "path": "MGR-Beast-Pack/templates/DEFECT-LEDGER-TEMPLATE.md",
+      "sha256": "d062c08741c1395c34ec7ddc48a7f934e4aa900cb8d4a6e616611646d64a70b3"
+    },
+    {
+      "bytes": 624,
+      "classification": "TEXT_READ",
+      "lines": 47,
+      "path": "MGR-Beast-Pack/templates/RESEARCH-PACKET-TEMPLATE.md",
+      "sha256": "07afd1c2e6325a96c754f851b3b0cdbb410c6ae70356a9aba5fd8dfbcb098a70"
+    },
+    {
+      "bytes": 211,
+      "classification": "TEXT_READ",
+      "lines": 4,
+      "path": "MGR-Beast-Pack/templates/RESEARCH-QUEUE-TEMPLATE.md",
+      "sha256": "00f912976f6406b06bfbe4626b57afb4c28cd4ee65e94966c4298372a30e8202"
+    },
+    {
+      "bytes": 531,
+      "classification": "TEXT_READ",
+      "lines": 28,
+      "path": "MGR-Beast-Pack/templates/SCORECARD-TEMPLATE.md",
+      "sha256": "91d052e9f57b2243e140c2a39beea7d0be4560ca2015373c8618d47cae546a78"
+    },
+    {
+      "bytes": 110,
+      "classification": "TRACKED_TEXT_READ",
+      "lines": 1,
+      "path": "MGR-Beast-Pack/templates/TASK-LEDGER-TEMPLATE.csv",
+      "sha256": "7b30b6eb7a6b6cd32748b8f6c1e4ab76d7d9d2c20fab0d4788d2608018311e9c"
+    },
+    {
+      "bytes": 4052,
+      "classification": "TEXT_READ",
+      "lines": 38,
+      "path": "README.md",
+      "sha256": "7f9d095328c4a76b426129e41e68554db9128e8212d3716619e06b7a0faa6402"
+    },
+    {
+      "bytes": 5761,
+      "classification": "TEXT_READ",
+      "lines": 59,
+      "path": "WORK-STATE.md",
+      "sha256": "46e4a75d369df4f0dbb060edf5c52d770400e167d48479f02d554eb5bd608cf4"
+    },
+    {
+      "bytes": 1104,
+      "classification": "TEXT_READ",
+      "lines": 34,
+      "path": "architecture/BRAIN-BOUNDARY.md",
+      "sha256": "423ed403297a6dbc8616e052f18b1e55ade60ca8669ad7ef4ade767fb31db3ad"
+    },
+    {
+      "bytes": 2456,
+      "classification": "TEXT_READ",
+      "lines": 18,
+      "path": "architecture/DECISIONS.md",
+      "sha256": "6c788863cf60aef2ba5002e6d4f9007ed5626186d2f55d97901ed5890730e1d9"
+    },
+    {
+      "bytes": 4582,
+      "classification": "TEXT_READ",
+      "lines": 115,
+      "path": "architecture/LEGACY-INTEGRATION.md",
+      "sha256": "f56fb80e6be55d391d79e37ffaa3c09e964c5d96e1b49dd447b01d0c6ff9938c"
+    },
+    {
+      "bytes": 1513,
+      "classification": "TEXT_READ",
+      "lines": 33,
+      "path": "architecture/SERVICE-TOPOLOGY.md",
+      "sha256": "5f3a9f10cf49162506dbf10877acb8d8ccca11ce6265b07c1f60968c588a0e52"
+    },
+    {
+      "bytes": 1469,
+      "classification": "TEXT_READ",
+      "lines": 32,
+      "path": "architecture/UNIVERSAL-MCP-MODEL-ROUTING.md",
+      "sha256": "d868c89880e08ff821c56f3dd282fbb76722336de4b7e528e5e8c82eb2bb0c4d"
+    },
+    {
+      "bytes": 813,
+      "classification": "TEXT_READ",
+      "lines": 20,
+      "path": "chatgpt-plugin/README.md",
+      "sha256": "5c4239e79ef1526e30447b30fa495d3e4ca841ba71da87d0f376449254312446"
+    },
+    {
+      "bytes": 1064,
+      "classification": "VALID_JSON",
+      "lines": 24,
+      "path": "chatgpt-plugin/plugin.json",
+      "sha256": "5f8d4cd3e5e6e2ef3f7b4542cf73e6f06635000cdfee9b018c840ea62c8f03e4"
+    },
+    {
+      "bytes": 1443,
+      "classification": "TEXT_READ",
+      "lines": 25,
+      "path": "chatgpt-plugin/skills/mgr-control/SKILL.md",
+      "sha256": "19e46b54675f1b438b66dfa0560eca69fa1387cf1e4a40748005365b9fc7cc87"
+    },
+    {
+      "bytes": 1932,
+      "classification": "TEXT_READ",
+      "lines": 13,
+      "path": "docs/MIGRATION.md",
+      "sha256": "20cae95e3a59f593687694334eb75390239613d6fb96635a03c58aa1538ffeb7"
+    },
+    {
+      "bytes": 1060,
+      "classification": "TEXT_READ",
+      "lines": 9,
+      "path": "docs/SOURCE-POLICY.md",
+      "sha256": "7d87208901c64d409b1339f0dcfc7cae9a2f42e922ba2c20edd7eade729ef911"
+    },
+    {
+      "bytes": 6194,
+      "classification": "TEXT_READ",
+      "lines": 160,
+      "path": "docs/deployment/HOSTED-MCP-PROOF.md",
+      "sha256": "e2b725175df874b3b3b9e136e594013b7c758fae4eb7b65fcaa9b5d817186431"
+    },
+    {
+      "bytes": 2407,
+      "classification": "TEXT_READ",
+      "lines": 70,
+      "path": "docs/deployment/PUBLIC-MCP.md",
+      "sha256": "322aec83f4ea913c8c611e195dd83035da2a5a8b84fda23cf29976adf0f10b45"
+    },
+    {
+      "bytes": 7012,
+      "classification": "TEXT_READ",
+      "lines": 79,
+      "path": "docs/full-build/SCORECARD.md",
+      "sha256": "8f2be66b05e2c43071f7afe4a797d915d5e143203260331ab957d5de386cea94"
+    },
+    {
+      "bytes": 2652,
+      "classification": "TEXT_READ",
+      "lines": 19,
+      "path": "docs/history/2026-09-23-BUILD-QUEUE.md",
+      "sha256": "06fd513e4976674628817da7e8c55619c54e7ddaf46c16b86348c2394025c594"
+    },
+    {
+      "bytes": 4223,
+      "classification": "TEXT_READ",
+      "lines": 42,
+      "path": "docs/history/2026-09-23-SCORECARD.md",
+      "sha256": "90093bf4cfcdf173ccb61c997bdd9e28547e6c8623a9214463a4ff7a66bc7870"
+    },
+    {
+      "bytes": 11549,
+      "classification": "TEXT_READ",
+      "lines": 115,
+      "path": "docs/history/FORGE-SOURCE-CHECKPOINT-2026-10-30.md",
+      "sha256": "ad26775f9f358cc2792372d1a37b76d13a94c9aa27b98daf0e0f293018439aaa"
+    },
+    {
+      "bytes": 1755,
+      "classification": "TEXT_READ",
+      "lines": 33,
+      "path": "evidence/container-boundary-2026-10-05.md",
+      "sha256": "4c7324deb6e87ad20ffd5cfc7886b272c0e45072b29de9f373ee6f80ff7b5ba8"
+    },
+    {
+      "bytes": 738,
+      "classification": "VALID_JSON",
+      "lines": 18,
+      "path": "evidence/continuity-integrity-2026-09-29.json",
+      "sha256": "a0cb9538427c6ffc726d6d2898ea4a57d3dc1b105612f973f30ab779fbc2d26e"
+    },
+    {
+      "bytes": 1285,
+      "classification": "VALID_JSON",
+      "lines": 25,
+      "path": "evidence/forge-creator/2026-10-31-native-creature-local-bridge.json",
+      "sha256": "57a5377c87801b6c01ad7816ec9ec2a22bff91f760c0a28f7fda2dcbb23fbd86"
+    },
+    {
+      "bytes": 21323,
+      "classification": "VALID_JSON",
+      "lines": 671,
+      "path": "evidence/history/2026-09-23-collection-integrity.json",
+      "sha256": "8a843d2ac26a1d60a523605e833e530e25cc26c5b9758d778069d778c84005b9"
+    },
+    {
+      "bytes": 2203,
+      "classification": "VALID_JSON",
+      "lines": 89,
+      "path": "evidence/history/2026-09-23-community-integrity.json",
+      "sha256": "6d4187d549cbb614cca9127cc4067567b41773eb5afa5add25717c1c8eec52d9"
+    },
+    {
+      "bytes": 4826,
+      "classification": "VALID_JSON",
+      "lines": 155,
+      "path": "evidence/history/2026-09-23-task-ledger.json",
+      "sha256": "1eba98abaa3b39acff01fb99de21af88d007199fe0de700dd899fcdfd61f0e9d"
+    },
+    {
+      "bytes": 1457,
+      "classification": "VALID_JSON",
+      "lines": 40,
+      "path": "evidence/history/2026-09-23-typesafe-sdk-probes.json",
+      "sha256": "69f7eecdd341126abd761d79e7f6198f0e01c05f237f3e0a30c12b76755d663d"
+    },
+    {
+      "bytes": 774,
+      "classification": "TEXT_READ",
+      "lines": 25,
+      "path": "evidence/hosted-mcp-ready-2026-10-05.md",
+      "sha256": "da567ae65e0e350d04ed9df5e8e907f78e3973508477891fc3a6e3cbadfcfa60"
+    },
+    {
+      "bytes": 1169,
+      "classification": "VALID_JSON",
+      "lines": 28,
+      "path": "evidence/rea-xray/2026-10-31-local-plugin-proof.json",
+      "sha256": "0a6b4c79f6e873b25fda321640b5dce65373896a783edc566319faf3ad4429d8"
+    },
+    {
+      "bytes": 466,
+      "classification": "VALID_JSON",
+      "lines": 8,
+      "path": "evidence/remote-publication.json",
+      "sha256": "43e98eb23e8d3a5bd09cad53b413c11b79a47a6d6f713783532327d42a6b1531"
+    },
+    {
+      "bytes": 167,
+      "classification": "VALID_JSON",
+      "lines": 7,
+      "path": "evidence/repository-integrity-2026-09-28.json",
+      "sha256": "5cb0e55f9bb7ce56b23e0701945a88788e454d40384706763ee54a1b7e60c324"
+    },
+    {
+      "bytes": 180,
+      "classification": "VALID_JSON",
+      "lines": 7,
+      "path": "evidence/typesafe-index-diff.json",
+      "sha256": "c9d770d8d5e6b24f2ccac5751f87879ee6147975065f0d31421119c59a15b22c"
+    },
+    {
+      "bytes": 1457,
+      "classification": "VALID_JSON",
+      "lines": 40,
+      "path": "evidence/typesafe-sdk-probes-2026-09-28.json",
+      "sha256": "69f7eecdd341126abd761d79e7f6198f0e01c05f237f3e0a30c12b76755d663d"
+    },
+    {
+      "bytes": 1596,
+      "classification": "TEXT_READ",
+      "lines": 9,
+      "path": "integrations/forge-creator-plugin/README.md",
+      "sha256": "3b926e06bf50a20df724e85a6936859882d86d4be0f1b66c8d3463ae19ee0ca3"
+    },
+    {
+      "bytes": 1280,
+      "classification": "VALID_JSON",
+      "lines": 26,
+      "path": "integrations/forge-creator-plugin/RELEASE-RECEIPT.json",
+      "sha256": "23a08597cbb876300e8735eaa3c404429e645028a26135cf5166e04ab69ab5b2"
+    },
+    {
+      "bytes": 1253,
+      "classification": "VALID_JSON",
+      "lines": 28,
+      "path": "integrations/forge-creator-plugin/plugin.json",
+      "sha256": "5a2fd8b78d70ca5e545625fcb60e0fbf27838dd0ad2fae68bbaa1093aefdc8f0"
+    },
+    {
+      "bytes": 3775,
+      "classification": "TEXT_READ",
+      "lines": 30,
+      "path": "integrations/forge-creator-plugin/skills/mgr-forge-create/SKILL.md",
+      "sha256": "2c2505c4eac481376b0445802647c59bb4d56ec258018bbb6ce80e26bf90a1f4"
+    },
+    {
+      "bytes": 1079,
+      "classification": "TEXT_READ",
+      "lines": 8,
+      "path": "integrations/rea-xray-plugin/README.md",
+      "sha256": "d8b8729a33cfe04eed9ab3ccae1d3339115d5b44dd0f8751d538998953cbe587"
+    },
+    {
+      "bytes": 262,
+      "classification": "VALID_JSON",
+      "lines": 11,
+      "path": "integrations/rea-xray-plugin/mcp.json",
+      "sha256": "7e82235f288935c164428659eba6aa1ed67d1dc22a81ac82e345572ba1bbea4c"
+    },
+    {
+      "bytes": 1438,
+      "classification": "VALID_JSON",
+      "lines": 37,
+      "path": "integrations/rea-xray-plugin/plugin.json",
+      "sha256": "d9e1e174b380b6b2d7eb73c0ebb1e5ba49c3b953db11cde4124b6b84471eb196"
+    },
+    {
+      "bytes": 1064,
+      "classification": "VALID_JSON",
+      "lines": 20,
+      "path": "integrations/rea-xray-plugin/rea-dependency-pin.json",
+      "sha256": "35dcda86c44f0126e8cc596df2272664db2f25e374a4397fb5b1353e1fc16003"
+    },
+    {
+      "bytes": 7321,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 88,
+      "path": "integrations/rea-xray-plugin/server/rea-safe-mcp.mjs",
+      "sha256": "dd4409b4bb80d44ef74048612e725dd03e2787923a3c4e05407c277c22edbd81"
+    },
+    {
+      "bytes": 3872,
+      "classification": "TEXT_READ",
+      "lines": 26,
+      "path": "integrations/rea-xray-plugin/skills/mgr-rea-xray/SKILL.md",
+      "sha256": "aa495fc8a7b73fc90dc15a979d22096c5f974313b71f65e2d2083e753677afdd"
+    },
+    {
+      "bytes": 1237,
+      "classification": "VALID_JSON",
+      "lines": 31,
+      "path": "package.json",
+      "sha256": "b0d449577c174ef5e5c51d5a813b7cae990ea4c4dbe115928a195883482b9257"
+    },
+    {
+      "bytes": 1054,
+      "classification": "TEXT_READ",
+      "lines": 39,
+      "path": "render.yaml",
+      "sha256": "937c1208416e038442b46978c9fa3feb7ee4b7bd8b77d542d5be729ad8f8d595"
+    },
+    {
+      "bytes": 6992,
+      "classification": "TEXT_READ",
+      "lines": 41,
+      "path": "research/2026-09-28-REVIEW.md",
+      "sha256": "945581843fb13645606ae711b1db4e39cc478d75579df3ff8f7814368d79ac05"
+    },
+    {
+      "bytes": 1541,
+      "classification": "TEXT_READ",
+      "lines": 23,
+      "path": "research/BEAST-EXPANSION-2026-09-28.md",
+      "sha256": "2f02d178010d6a20636c9753187de5419620b1df40fc793f8c34f77551e630c7"
+    },
+    {
+      "bytes": 8300,
+      "classification": "TEXT_READ",
+      "lines": 114,
+      "path": "research/BEAST-SMARTWIZ-OMNIROUTE-VOICEBOX-FREEBUF-SERVERBYT-2026-10-05.md",
+      "sha256": "5c1a076585e8d168241312d3590288aa1de510214eea6def25edc7e0de46e36f"
+    },
+    {
+      "bytes": 11128,
+      "classification": "TEXT_READ",
+      "lines": 76,
+      "path": "research/CLASSROOM-CATALOG.md",
+      "sha256": "babe401f939e9259885cafda42d7e938a4cb84bc29a8da7008c9dfe1c7d65a89"
+    },
+    {
+      "bytes": 11094,
+      "classification": "TEXT_READ",
+      "lines": 72,
+      "path": "research/COMMUNITY-MERGE-REVIEW.md",
+      "sha256": "a52ba5056a72bc266af37e3f47b5d280291e7430a221ba34164aa625413c991c"
+    },
+    {
+      "bytes": 5139,
+      "classification": "TEXT_READ",
+      "lines": 32,
+      "path": "research/MCP-HTTP-AUTH-BOUNDARY-2026-09-29.md",
+      "sha256": "8fbd38078635d040130d156dc13ccadc3c64b4ea18e1430c6d8df1043a8788c7"
+    },
+    {
+      "bytes": 1208,
+      "classification": "TEXT_READ",
+      "lines": 12,
+      "path": "research/README.md",
+      "sha256": "ed667fb4563ee736b54617f444637e7974655ae8f8d52cab3bd7d4accd1389a3"
+    },
+    {
+      "bytes": 10759,
+      "classification": "TEXT_READ",
+      "lines": 195,
+      "path": "research/RECURSIVE-BEAST-CAPABILITY-WAVE-2-2026-10-05.md",
+      "sha256": "8742b84297878059464f6a31ae834c1365b6f528347fc9da17de9075587889a6"
+    },
+    {
+      "bytes": 3646,
+      "classification": "TEXT_READ",
+      "lines": 39,
+      "path": "research/SOURCE-UNIVERSE.md",
+      "sha256": "d52c5eaf6385b056d2654cc46818dcb7d48599ea5368c68f323372d89aaa9692"
+    },
+    {
+      "bytes": 18779,
+      "classification": "VALID_JSON",
+      "lines": 519,
+      "path": "research/classroom-catalog.json",
+      "sha256": "58c22f53e65afe692cefcb5c750d6342af7afcbb54274d1c9b48efb6be0a5dfa"
+    },
+    {
+      "bytes": 689,
+      "classification": "TEXT_READ",
+      "lines": 29,
+      "path": "research/file-lists/ai-ads-claude-files.txt",
+      "sha256": "d603839a6c43147b3deb98ef965558fa766bd1706bc56621fbede5948854c06a"
+    },
+    {
+      "bytes": 524,
+      "classification": "TEXT_READ",
+      "lines": 22,
+      "path": "research/file-lists/ai-agency-claude-files.txt",
+      "sha256": "d1c546897fca05cc2c6a90399cdb8b09d0ebe090c4637a063b9853b3df4d98c8"
+    },
+    {
+      "bytes": 600,
+      "classification": "TEXT_READ",
+      "lines": 23,
+      "path": "research/file-lists/ai-crypto-claude-files.txt",
+      "sha256": "011c625ca892350da3ac1e2db35a72c89f32aea94be630135835eed001b52cbf"
+    },
+    {
+      "bytes": 604,
+      "classification": "TEXT_READ",
+      "lines": 23,
+      "path": "research/file-lists/ai-finance-claude-files.txt",
+      "sha256": "228136f497de9bb959029f0e79e99f790f2038fafec516140a038d6f570b7ad5"
+    },
+    {
+      "bytes": 727,
+      "classification": "TEXT_READ",
+      "lines": 27,
+      "path": "research/file-lists/ai-legal-claude-files.txt",
+      "sha256": "739d870064e62dd53e5822edabeb2d4d9db9954cfa8ebbb90ab83e77357e3cb4"
+    },
+    {
+      "bytes": 972,
+      "classification": "TEXT_READ",
+      "lines": 37,
+      "path": "research/file-lists/ai-marketing-claude-files.txt",
+      "sha256": "952a760a1c182b9b2b2d472c1e8a9180b92bad25c0fe2fbc35dbe2f27ae4adc6"
+    },
+    {
+      "bytes": 756,
+      "classification": "TEXT_READ",
+      "lines": 28,
+      "path": "research/file-lists/ai-proposal-claude-files.txt",
+      "sha256": "b54ea8a5e0ae78fd7d444c794896f11092aae76b40e8d1e68382e57794143c88"
+    },
+    {
+      "bytes": 806,
+      "classification": "TEXT_READ",
+      "lines": 28,
+      "path": "research/file-lists/ai-realestate-claude-files.txt",
+      "sha256": "a2d6261648f3648c1f38e806a9a2c8b3d3053b01754d1c8008bd838e3561ed31"
+    },
+    {
+      "bytes": 603,
+      "classification": "TEXT_READ",
+      "lines": 23,
+      "path": "research/file-lists/ai-recruiter-claude-files.txt",
+      "sha256": "3bbbed0e898aaca5ae27a4792f9f2c2fa4c1c2eeda0922d5ecf3d28bfc020fd3"
+    },
+    {
+      "bytes": 777,
+      "classification": "TEXT_READ",
+      "lines": 25,
+      "path": "research/file-lists/ai-reputation-claude-files.txt",
+      "sha256": "739a3f8b980fadd9dc705cd0824b123224667f361dbb63642866b02fd116f898"
+    },
+    {
+      "bytes": 648,
+      "classification": "TEXT_READ",
+      "lines": 23,
+      "path": "research/file-lists/ai-restaurant-claude-files.txt",
+      "sha256": "d02fdf498d7f4253531ef8c869d731d74634a53b6a03d8959c6e09ce1a0fa95a"
+    },
+    {
+      "bytes": 940,
+      "classification": "TEXT_READ",
+      "lines": 36,
+      "path": "research/file-lists/ai-sales-team-claude-files.txt",
+      "sha256": "2548c3c28a5462e9fac381883b92104b11ffe7b456b7ded9b7e9f7ee255d6c18"
+    },
+    {
+      "bytes": 743,
+      "classification": "TEXT_READ",
+      "lines": 29,
+      "path": "research/file-lists/ai-trading-claude-files.txt",
+      "sha256": "dc51327a4794c9be89fc16d421039ca502cd5d42db30fa7e34c69c61e2ddf619"
+    },
+    {
+      "bytes": 658,
+      "classification": "TEXT_READ",
+      "lines": 26,
+      "path": "research/file-lists/ai-trading-hermes-files.txt",
+      "sha256": "0960643523129a748840c43be8e33349e2ffb090f7191106fe5d6a186b080f87"
+    },
+    {
+      "bytes": 102,
+      "classification": "TEXT_READ",
+      "lines": 8,
+      "path": "research/file-lists/brain-map-files.txt",
+      "sha256": "f2b68edaf89a7dd3098be832869f2ee0b45622da1cda1cb632976b0e093ba0da"
+    },
+    {
+      "bytes": 992,
+      "classification": "TEXT_READ",
+      "lines": 38,
+      "path": "research/file-lists/dataforseo-claude-files.txt",
+      "sha256": "f6b3767511199205c95960bc49f36e8da72348c21c3da6a088bc17b1608a193a"
+    },
+    {
+      "bytes": 1996,
+      "classification": "TEXT_READ",
+      "lines": 72,
+      "path": "research/file-lists/geo-seo-claude-files.txt",
+      "sha256": "a8a87408324610fc633ad8ed7119d37c62c17054470103a4f16cc25ba8622b83"
+    },
+    {
+      "bytes": 696,
+      "classification": "TEXT_READ",
+      "lines": 26,
+      "path": "research/file-lists/holo-gestures-files.txt",
+      "sha256": "06db17b3aac653efbb13411824afe6d9e2dd8867d7d1c59bac2f8a483fef5917"
+    },
+    {
+      "bytes": 256,
+      "classification": "TEXT_READ",
+      "lines": 11,
+      "path": "research/file-lists/scroll-cinematic-claude-files.txt",
+      "sha256": "a52c8788d22995a674b824ebdc06e8f0c74ebc8ff88b5f38bf0878e0f924a667"
+    },
+    {
+      "bytes": 56079,
+      "classification": "VALID_JSON",
+      "lines": 1226,
+      "path": "research/manifests/checkpoint-inventory.json",
+      "sha256": "73591f1907833238f6ab86a194c5fb2d2b30a8ae166b2bdf38f184d2dc63a2c1"
+    },
+    {
+      "bytes": 1474,
+      "classification": "VALID_JSON",
+      "lines": 60,
+      "path": "research/manifests/community-additions-2026-09-28.json",
+      "sha256": "938658443c7d6c9529b9308e0b730bc5cd2e609322a63705d14559f0703b6b28"
+    },
+    {
+      "bytes": 10112,
+      "classification": "VALID_JSON",
+      "lines": 317,
+      "path": "research/manifests/community.json",
+      "sha256": "8c9c8691283cbc5b736ae066ac45f04bca9bb0aae86e3eaea5a375780c7b79f5"
+    },
+    {
+      "bytes": 56905,
+      "classification": "VALID_JSON",
+      "lines": 1254,
+      "path": "research/manifests/documents.json",
+      "sha256": "4888f70bc240b6888f635346a6e296cd84831e4f003b118a485182e4a594fb9e"
+    },
+    {
+      "bytes": 1664,
+      "classification": "VALID_JSON",
+      "lines": 52,
+      "path": "research/manifests/legacy-tools.json",
+      "sha256": "bcda7c6a313f3dc0cf681b1fd8608bd407f1558b04813650e565bd131256d50a"
+    },
+    {
+      "bytes": 12467,
+      "classification": "VALID_JSON",
+      "lines": 323,
+      "path": "research/manifests/repositories.json",
+      "sha256": "38a689caa54b76649e0c5bc10c72139794659a9950c09191961fc42740d7d112"
+    },
+    {
+      "bytes": 1504,
+      "classification": "VALID_JSON",
+      "lines": 49,
+      "path": "research/manifests/sdk-reading-2026-09-28.json",
+      "sha256": "d120cfd0261f1ff33c8be17b2bf889dd9af840fe63c6e5910c329542fdea1fac"
+    },
+    {
+      "bytes": 1225,
+      "classification": "VALID_JSON",
+      "lines": 32,
+      "path": "research/manifests/standards-2026-09-28.json",
+      "sha256": "b824abd08ef3875f66eeef179c2234e0a7ed55fe782934ff5d3db97a03b339f2"
+    },
+    {
+      "bytes": 3713,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 123,
+      "path": "scripts/mock-boundary-deps.mjs",
+      "sha256": "de32cd7f76528f3152b3dbda92bcb8d3949e88be0bc3dfc4db0566f3355a3684"
+    },
+    {
+      "bytes": 4688,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 38,
+      "path": "scripts/probe-sdk.mjs",
+      "sha256": "b3303f66061ebafbfbd46da1ef6bdf444f6bc1fb4b9a8043c6b981c76a747a55"
+    },
+    {
+      "bytes": 911,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 23,
+      "path": "scripts/render-chatgpt-plugin.mjs",
+      "sha256": "b470263e690345990d658932530761e0c7c2153013be305bbffd8200fb003155"
+    },
+    {
+      "bytes": 2199,
+      "classification": "PYTHON_AST_PARSED",
+      "lines": 49,
+      "path": "scripts/restore_sources.py",
+      "sha256": "7faba44a3888045e802411aa105e6ca93e27f12011542462eaa98b752ac1c49c"
+    },
+    {
+      "bytes": 2927,
+      "classification": "PYTHON_AST_PARSED",
+      "lines": 47,
+      "path": "scripts/test_verifier.py",
+      "sha256": "838b2a70de384da250b409d154289ea211568e2d1ab7f1657f37434794f3da85"
+    },
+    {
+      "bytes": 1034,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 17,
+      "path": "scripts/verify-chatgpt-plugin.mjs",
+      "sha256": "ac3d490381597cb53465aee0fbc79c6094069b82197360118a422021b34fdc48"
+    },
+    {
+      "bytes": 5242,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 86,
+      "path": "scripts/verify-forge-studio-client.mjs",
+      "sha256": "36259dfe27adf760555acb3bbc3d203e553dcd50897fe1bbf59ed2033efcd688"
+    },
+    {
+      "bytes": 2566,
+      "classification": "PYTHON_AST_PARSED",
+      "lines": 57,
+      "path": "scripts/verify-forge-studio.py",
+      "sha256": "cba80526677ba68896f0157f485586f188a7c2a8bef94b16d356aaabe0878929"
+    },
+    {
+      "bytes": 3178,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 95,
+      "path": "scripts/verify-mcp-client.mjs",
+      "sha256": "4bd11537c557095251bc966c4651d29be5408caec1c9f3a7fb31b238e3674350"
+    },
+    {
+      "bytes": 2725,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 67,
+      "path": "scripts/verify-oauth-provider.mjs",
+      "sha256": "d3c0bfcbd29b6e89e9ba7ff456d73dc0743ca04fec79ece6feb19a562732d635"
+    },
+    {
+      "bytes": 2226,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 60,
+      "path": "scripts/verify-openai-remote-mcp.mjs",
+      "sha256": "26ef286fd024123eb2ef7abdf9e70abe1569e4e998bbed4d63b0681959ae4e5f"
+    },
+    {
+      "bytes": 2262,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 69,
+      "path": "scripts/verify-remote-boundary.mjs",
+      "sha256": "306c571374758f9d0bd8de38923358de308ca4e4a16fab6bbe882467807cede4"
+    },
+    {
+      "bytes": 4836,
+      "classification": "PYTHON_AST_PARSED",
+      "lines": 79,
+      "path": "scripts/verify_repository.py",
+      "sha256": "d45d63ed428f15d7ecd047e669d61e75b4fe37b6788de5ddadd4866460424a35"
+    },
+    {
+      "bytes": 2169,
+      "classification": "TEXT_READ",
+      "lines": 21,
+      "path": "skills/time-voice/SKILL.md",
+      "sha256": "8a5b7dba8afac520e0cc9fa13c1e5f9a298c50ae5ac8e46fc2a5d9f7d96168ed"
+    },
+    {
+      "bytes": 2324,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 74,
+      "path": "src/action-sentinel.ts",
+      "sha256": "52c5b0bbfbe4cfd819b20b5d82615eb9d31ccf0573f2cf909603e5d77fbc27c0"
+    },
+    {
+      "bytes": 987,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 33,
+      "path": "src/authz.ts",
+      "sha256": "5b5c21799035602f75d126f56914ffd92ca6792d6fc7c6f42503a2aea590d714"
+    },
+    {
+      "bytes": 2038,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 75,
+      "path": "src/brain-controller.ts",
+      "sha256": "15113cdd22eb708213d370ba0eb25aab195a1ab400fb2b2a063ef3adb35b7c5f"
+    },
+    {
+      "bytes": 2877,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 141,
+      "path": "src/contracts.ts",
+      "sha256": "7a3f4832e9959fb2c22a60ae01cda6efd873d700514759949044c75cff7165de"
+    },
+    {
+      "bytes": 1342,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 44,
+      "path": "src/creation-client.ts",
+      "sha256": "f8e72d84b3bce50b4efc8c0d866e3c06385273dc162b9cf123716d7e53f9f869"
+    },
+    {
+      "bytes": 3962,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 128,
+      "path": "src/creation-mcp-tools.ts",
+      "sha256": "c6100792c03f5b94953d27b180b3bdb55eb902e986c776077cb5dc0ee30d2581"
+    },
+    {
+      "bytes": 1396,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 46,
+      "path": "src/decision.ts",
+      "sha256": "9c18a1b00a93c668c6febcfb647f1d663a4e86ec76b277899d9a4727b1d4b347"
+    },
+    {
+      "bytes": 5894,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 157,
+      "path": "src/engine.ts",
+      "sha256": "c65e853584f77b97854dc917c2c4c5e9c1ef2709cc621d3834b002e3c3d9f644"
+    },
+    {
+      "bytes": 6563,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 150,
+      "path": "src/forge-catalog-client.ts",
+      "sha256": "683dfc6955a78bd8a3d328d3a0200bab66a3db3cfc3eb586c406c8f50871700b"
+    },
+    {
+      "bytes": 12001,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 226,
+      "path": "src/forge-mcp-tools.ts",
+      "sha256": "3818df98c5fe95887ce4f8567e35c3a80c2c597a9f56dde24ab2c52e93dccff8"
+    },
+    {
+      "bytes": 2757,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 99,
+      "path": "src/http-auth.ts",
+      "sha256": "70b3b10ceae5818158c5f7ae91b436db0c6b0176e58c7fc671d4116d2687a1bb"
+    },
+    {
+      "bytes": 5547,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 141,
+      "path": "src/http-server.ts",
+      "sha256": "5882b76e2d8ccf3813dadec9f8ada76683da6cdd16c6f90471c22cb2ae6bbbda"
+    },
+    {
+      "bytes": 1660,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 51,
+      "path": "src/jwt-verifier.ts",
+      "sha256": "87d2f60fee5a4afc7642efd28117e8961a4252f833510c785bb9fa01296e96d6"
+    },
+    {
+      "bytes": 4370,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 146,
+      "path": "src/legacy-client.ts",
+      "sha256": "5246d7d85866750bcb24733791cbc74302f6ec354c73fdc216ce035af86573f4"
+    },
+    {
+      "bytes": 1792,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 63,
+      "path": "src/legacy-dispatch.ts",
+      "sha256": "a6707b282b7f90e1b59e97ab1163aa77d6a857041c162b3600b0e39c548e3a5c"
+    },
+    {
+      "bytes": 6197,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 190,
+      "path": "src/legacy-mcp-tools.ts",
+      "sha256": "d0d134296d87c30ab7e9027fd3dd302942550354a6d16bb5a3f82c03c91319b1"
+    },
+    {
+      "bytes": 3992,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 120,
+      "path": "src/mcp-http.ts",
+      "sha256": "ecb5701768bbbd8524022b43e3df75cb5705001946f96f9cd5b98a57d5b2d63f"
+    },
+    {
+      "bytes": 6654,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 190,
+      "path": "src/mcp-server.ts",
+      "sha256": "e04bcea6dac4e5c53f9ca064d6269922b2309629dc14c88264d9979859a08df0"
+    },
+    {
+      "bytes": 6382,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 164,
+      "path": "src/model-router.ts",
+      "sha256": "d4c382d5a1741c7f9ebe05ee8552b42eab13c86c2d8c59ed3f67fb53cc206d59"
+    },
+    {
+      "bytes": 1814,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 54,
+      "path": "src/oauth-metadata.ts",
+      "sha256": "d44e8c346930650ee192ae40a66f70509079ce4d853b93e774b82910e6314d79"
+    },
+    {
+      "bytes": 2909,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 100,
+      "path": "src/privacy-firewall.ts",
+      "sha256": "daadd018c70fe7cfd312fbb3dc2d3bdb357e767fa60bb7d3e1674e5765b73e1e"
+    },
+    {
+      "bytes": 1375,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 41,
+      "path": "src/security-research.ts",
+      "sha256": "a5e62c53ed3a94ff14c0d12f3c37c7fb3941156f9c674f6793e7fd0c28e615f3"
+    },
+    {
+      "bytes": 771,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 18,
+      "path": "src/security.ts",
+      "sha256": "b08e0e6901fa188fc85492b6da8e6072a104937e89124fcd556d464984203245"
+    },
+    {
+      "bytes": 1631,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 42,
+      "path": "src/state.ts",
+      "sha256": "03889a5e3b783d57a111ecc4c8c4683d1c45f65eacb54e1e401943c710c605aa"
+    },
+    {
+      "bytes": 5582,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 158,
+      "path": "src/voice-fabric.ts",
+      "sha256": "db1362b9da0ca8d4e976120bb40a836661b5fcf92111dde5412fc08649a415ea"
+    },
+    {
+      "bytes": 1983,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 73,
+      "path": "test/action-sentinel.test.ts",
+      "sha256": "bc330b00390749875f0034cfbe4a0e8503cb66858088b6a9116b562360280ebb"
+    },
+    {
+      "bytes": 1233,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 23,
+      "path": "test/contracts.test.ts",
+      "sha256": "700f6a516ead9b10c62d241772e1003917c6d33ca74902cbed61ecba6142912c"
+    },
+    {
+      "bytes": 2086,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 75,
+      "path": "test/creation-mcp-tools.test.ts",
+      "sha256": "806e3e40e7ba992af27bc95e908dfa9085970ddb5777237ba8d9aa16d00ca108"
+    },
+    {
+      "bytes": 3029,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 91,
+      "path": "test/engine.test.ts",
+      "sha256": "56f12b0e4314501d8870f9e67ea7e2a0f7ad79986775864d4d514451c183944e"
+    },
+    {
+      "bytes": 3866,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 71,
+      "path": "test/forge-catalog.test.ts",
+      "sha256": "0b93b665f02c491c1812f382a4b1c809a913b1d825e2fd5306b575009e725ab5"
+    },
+    {
+      "bytes": 1172,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 23,
+      "path": "test/forge-creator-plugin.test.ts",
+      "sha256": "6ac8256ac1942371adae8c172460a33a2e4ec930bafd7a49e5d7b75748a83572"
+    },
+    {
+      "bytes": 4457,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 94,
+      "path": "test/forge-creature.test.ts",
+      "sha256": "9042708e5ea2dd2d0fdb5fac1d4d27264c2ee5d16388159152b09dc81990ca2d"
+    },
+    {
+      "bytes": 3907,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 78,
+      "path": "test/forge-world.test.ts",
+      "sha256": "f74eac0b33081033905e2a99a6912b4120209fdbb884d3d5b653ec492735eb43"
+    },
+    {
+      "bytes": 2009,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 61,
+      "path": "test/http-auth.test.ts",
+      "sha256": "2529fd11f7a066deaef2af475d0b819ae4438750ba90a9667d7bf7406cf75c13"
+    },
+    {
+      "bytes": 1981,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 52,
+      "path": "test/jwt-verifier.test.ts",
+      "sha256": "61568d3b7901f121fd299d5e42a1d079f77c21210a1f68ece4639ffb28c64b5b"
+    },
+    {
+      "bytes": 1997,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 51,
+      "path": "test/legacy-client.test.ts",
+      "sha256": "e2c9f194460f66a238c3f46ea0ac3f02a56607ef4aa06eb6043a31c75996cd97"
+    },
+    {
+      "bytes": 7608,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 227,
+      "path": "test/legacy-dispatch.test.ts",
+      "sha256": "b99e2ae3ea798ccc72ef4ebf4d9ae0d321469a5067e22af524d2c3a499590c5f"
+    },
+    {
+      "bytes": 3831,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 125,
+      "path": "test/legacy-mcp-tools.test.ts",
+      "sha256": "3e1256582e88fedb664a5c064dde74300e160a381955160473f06d931369e255"
+    },
+    {
+      "bytes": 2182,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 64,
+      "path": "test/mcp-http.test.ts",
+      "sha256": "18392ac8359c56f43a73cd23156c9956dd0a6bf6824f5bd0f82607d9ddcd13ad"
+    },
+    {
+      "bytes": 4235,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 76,
+      "path": "test/model-router.test.ts",
+      "sha256": "ef34cfeb0c6705950458c748e8aac3af4ba2b153c411ab255007a3f494fe5463"
+    },
+    {
+      "bytes": 1230,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 30,
+      "path": "test/oauth-metadata.test.ts",
+      "sha256": "c00268e3f670be1e0abded0e0574a01e512811ed541c52792ca88d0bbd5bcf0a"
+    },
+    {
+      "bytes": 1190,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 41,
+      "path": "test/privacy-firewall.test.ts",
+      "sha256": "291ae960bbae4092559c87b7e09e6ee3b6b96d3abcbca23db79f431b8b7e2ee5"
+    },
+    {
+      "bytes": 2352,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 45,
+      "path": "test/rea-xray-plugin.test.ts",
+      "sha256": "a290a5511625f242860eee94c90837d167853cfefba83a8f24d738c3e8c231df"
+    },
+    {
+      "bytes": 2963,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 95,
+      "path": "test/security-controller.test.ts",
+      "sha256": "2c29a4a95ec82799ed091de20eaa8c14aef066959d04ce71d8ec58fcf24acda2"
+    },
+    {
+      "bytes": 1008,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 27,
+      "path": "test/security-research.test.ts",
+      "sha256": "91209007c4af3db6602292f1ae8b3f8f22e1bb7d9119d9014927344cf4ed45aa"
+    },
+    {
+      "bytes": 2856,
+      "classification": "JS_OR_TS_TEXT_ANALYZED",
+      "lines": 48,
+      "path": "test/voice-fabric.test.ts",
+      "sha256": "a4f673ab4ecc5e8acbeb4752d4e09ab164c74bcf4ba17b8c5211fa0eb956a4a4"
+    },
+    {
+      "bytes": 350,
+      "classification": "VALID_JSON",
+      "lines": 15,
+      "path": "tsconfig.json",
+      "sha256": "b4a03d898d43753392d8e40fb0b8ba0d8c47673b369d37a8cb8bee28e96b3179"
+    }
+  ],
+  "audited_at": "2026-10-31",
+  "baseline_git_commit": "b0b225cc9f225a02b9465db3817fc128532a23b4",
+  "errors": [],
+  "flags_for_review": [
+    {
+      "count": 1,
+      "path": "HANDOFF.md",
+      "type": "STALE_SCOPE"
+    },
+    {
+      "count": 1,
+      "path": "integrations/forge-creator-plugin/README.md",
+      "type": "STALE_SCOPE"
+    }
+  ],
+  "imports": [
+    [
+      "integrations/rea-xray-plugin/server/rea-safe-mcp.mjs",
+      "node:crypto",
+      0
+    ],
+    [
+      "integrations/rea-xray-plugin/server/rea-safe-mcp.mjs",
+      "node:child_process",
+      0
+    ],
+    [
+      "integrations/rea-xray-plugin/server/rea-safe-mcp.mjs",
+      "node:fs/promises",
+      0
+    ],
+    [
+      "integrations/rea-xray-plugin/server/rea-safe-mcp.mjs",
+      "node:os",
+      0
+    ],
+    [
+      "integrations/rea-xray-plugin/server/rea-safe-mcp.mjs",
+      "node:path",
+      0
+    ],
+    [
+      "integrations/rea-xray-plugin/server/rea-safe-mcp.mjs",
+      "node:readline",
+      0
+    ],
+    [
+      "scripts/mock-boundary-deps.mjs",
+      "node:http",
+      0
+    ],
+    [
+      "scripts/mock-boundary-deps.mjs",
+      "jose",
+      0
+    ],
+    [
+      "scripts/mock-boundary-deps.mjs",
+      "node:fs/promises",
+      0
+    ],
+    [
+      "scripts/probe-sdk.mjs",
+      "node:module",
+      0
+    ],
+    [
+      "scripts/probe-sdk.mjs",
+      "node:fs",
+      0
+    ],
+    [
+      "scripts/probe-sdk.mjs",
+      "node:path",
+      0
+    ],
+    [
+      "scripts/probe-sdk.mjs",
+      "node:url",
+      0
+    ],
+    [
+      "scripts/probe-sdk.mjs",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "scripts/render-chatgpt-plugin.mjs",
+      "node:fs/promises",
+      0
+    ],
+    [
+      "scripts/render-chatgpt-plugin.mjs",
+      "node:path",
+      0
+    ],
+    [
+      "scripts/restore_sources.py",
+      "argparse",
+      0
+    ],
+    [
+      "scripts/restore_sources.py",
+      "json",
+      0
+    ],
+    [
+      "scripts/restore_sources.py",
+      "re",
+      0
+    ],
+    [
+      "scripts/restore_sources.py",
+      "shutil",
+      0
+    ],
+    [
+      "scripts/restore_sources.py",
+      "subprocess",
+      0
+    ],
+    [
+      "scripts/restore_sources.py",
+      "pathlib",
+      0
+    ],
+    [
+      "scripts/test_verifier.py",
+      "hashlib",
+      0
+    ],
+    [
+      "scripts/test_verifier.py",
+      "json",
+      0
+    ],
+    [
+      "scripts/test_verifier.py",
+      "pathlib",
+      0
+    ],
+    [
+      "scripts/test_verifier.py",
+      "tempfile",
+      0
+    ],
+    [
+      "scripts/test_verifier.py",
+      "unittest",
+      0
+    ],
+    [
+      "scripts/test_verifier.py",
+      "verify_repository",
+      0
+    ],
+    [
+      "scripts/verify-chatgpt-plugin.mjs",
+      "node:fs/promises",
+      0
+    ],
+    [
+      "scripts/verify-forge-studio-client.mjs",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "scripts/verify-forge-studio-client.mjs",
+      "node:crypto",
+      0
+    ],
+    [
+      "scripts/verify-forge-studio-client.mjs",
+      "../src/forge-catalog-client.ts",
+      0
+    ],
+    [
+      "scripts/verify-forge-studio-client.mjs",
+      "../src/forge-mcp-tools.ts",
+      0
+    ],
+    [
+      "scripts/verify-forge-studio.py",
+      "os",
+      0
+    ],
+    [
+      "scripts/verify-forge-studio.py",
+      "hashlib",
+      0
+    ],
+    [
+      "scripts/verify-forge-studio.py",
+      "json",
+      0
+    ],
+    [
+      "scripts/verify-forge-studio.py",
+      "pathlib",
+      0
+    ],
+    [
+      "scripts/verify-forge-studio.py",
+      "subprocess",
+      0
+    ],
+    [
+      "scripts/verify-forge-studio.py",
+      "sys",
+      0
+    ],
+    [
+      "scripts/verify-forge-studio.py",
+      "tempfile",
+      0
+    ],
+    [
+      "scripts/verify-forge-studio.py",
+      "threading",
+      0
+    ],
+    [
+      "scripts/verify-forge-studio.py",
+      "forge.cli",
+      0
+    ],
+    [
+      "scripts/verify-forge-studio.py",
+      "forge.spec",
+      0
+    ],
+    [
+      "scripts/verify-forge-studio.py",
+      "forge.studio_server",
+      0
+    ],
+    [
+      "scripts/verify-mcp-client.mjs",
+      "@modelcontextprotocol/client",
+      0
+    ],
+    [
+      "scripts/verify_repository.py",
+      "argparse",
+      0
+    ],
+    [
+      "scripts/verify_repository.py",
+      "hashlib",
+      0
+    ],
+    [
+      "scripts/verify_repository.py",
+      "json",
+      0
+    ],
+    [
+      "scripts/verify_repository.py",
+      "re",
+      0
+    ],
+    [
+      "scripts/verify_repository.py",
+      "pathlib",
+      0
+    ],
+    [
+      "scripts/verify_repository.py",
+      "urllib.parse",
+      0
+    ],
+    [
+      "src/action-sentinel.ts",
+      "./contracts.js",
+      0
+    ],
+    [
+      "src/action-sentinel.ts",
+      "./security.js",
+      0
+    ],
+    [
+      "src/action-sentinel.ts",
+      "./authz.js",
+      0
+    ],
+    [
+      "src/action-sentinel.ts",
+      "./authz.js",
+      0
+    ],
+    [
+      "src/brain-controller.ts",
+      "./contracts.js",
+      0
+    ],
+    [
+      "src/brain-controller.ts",
+      "./decision.js",
+      0
+    ],
+    [
+      "src/brain-controller.ts",
+      "./decision.js",
+      0
+    ],
+    [
+      "src/creation-mcp-tools.ts",
+      "node:crypto",
+      0
+    ],
+    [
+      "src/creation-mcp-tools.ts",
+      "@modelcontextprotocol/server",
+      0
+    ],
+    [
+      "src/creation-mcp-tools.ts",
+      "zod/v4",
+      0
+    ],
+    [
+      "src/creation-mcp-tools.ts",
+      "./authz.js",
+      0
+    ],
+    [
+      "src/creation-mcp-tools.ts",
+      "./action-sentinel.js",
+      0
+    ],
+    [
+      "src/creation-mcp-tools.ts",
+      "./contracts.js",
+      0
+    ],
+    [
+      "src/creation-mcp-tools.ts",
+      "./creation-client.js",
+      0
+    ],
+    [
+      "src/decision.ts",
+      "./contracts.js",
+      0
+    ],
+    [
+      "src/engine.ts",
+      "node:crypto",
+      0
+    ],
+    [
+      "src/engine.ts",
+      "./contracts.js",
+      0
+    ],
+    [
+      "src/engine.ts",
+      "./security.js",
+      0
+    ],
+    [
+      "src/engine.ts",
+      "./state.js",
+      0
+    ],
+    [
+      "src/forge-mcp-tools.ts",
+      "@modelcontextprotocol/server",
+      0
+    ],
+    [
+      "src/forge-mcp-tools.ts",
+      "zod/v4",
+      0
+    ],
+    [
+      "src/forge-mcp-tools.ts",
+      "./authz.js",
+      0
+    ],
+    [
+      "src/forge-mcp-tools.ts",
+      "./forge-catalog-client.js",
+      0
+    ],
+    [
+      "src/http-auth.ts",
+      "./authz.js",
+      0
+    ],
+    [
+      "src/http-auth.ts",
+      "./oauth-metadata.js",
+      0
+    ],
+    [
+      "src/http-server.ts",
+      "node:http",
+      0
+    ],
+    [
+      "src/http-server.ts",
+      "node:stream",
+      0
+    ],
+    [
+      "src/http-server.ts",
+      "./oauth-metadata.js",
+      0
+    ],
+    [
+      "src/http-server.ts",
+      "./mcp-http.js",
+      0
+    ],
+    [
+      "src/http-server.ts",
+      "./legacy-client.js",
+      0
+    ],
+    [
+      "src/http-server.ts",
+      "./jwt-verifier.js",
+      0
+    ],
+    [
+      "src/http-server.ts",
+      "./forge-catalog-client.js",
+      0
+    ],
+    [
+      "src/jwt-verifier.ts",
+      "jose",
+      0
+    ],
+    [
+      "src/jwt-verifier.ts",
+      "./http-auth.js",
+      0
+    ],
+    [
+      "src/legacy-dispatch.ts",
+      "./legacy-client.js",
+      0
+    ],
+    [
+      "src/legacy-dispatch.ts",
+      "./legacy-client.js",
+      0
+    ],
+    [
+      "src/legacy-mcp-tools.ts",
+      "node:crypto",
+      0
+    ],
+    [
+      "src/legacy-mcp-tools.ts",
+      "@modelcontextprotocol/server",
+      0
+    ],
+    [
+      "src/legacy-mcp-tools.ts",
+      "zod/v4",
+      0
+    ],
+    [
+      "src/legacy-mcp-tools.ts",
+      "./authz.js",
+      0
+    ],
+    [
+      "src/legacy-mcp-tools.ts",
+      "./authz.js",
+      0
+    ],
+    [
+      "src/legacy-mcp-tools.ts",
+      "./action-sentinel.js",
+      0
+    ],
+    [
+      "src/legacy-mcp-tools.ts",
+      "./contracts.js",
+      0
+    ],
+    [
+      "src/legacy-mcp-tools.ts",
+      "./legacy-client.js",
+      0
+    ],
+    [
+      "src/legacy-mcp-tools.ts",
+      "./legacy-dispatch.js",
+      0
+    ],
+    [
+      "src/mcp-http.ts",
+      "@modelcontextprotocol/server",
+      0
+    ],
+    [
+      "src/mcp-http.ts",
+      "./mcp-server.js",
+      0
+    ],
+    [
+      "src/mcp-http.ts",
+      "./http-auth.js",
+      0
+    ],
+    [
+      "src/mcp-http.ts",
+      "./legacy-client.js",
+      0
+    ],
+    [
+      "src/mcp-http.ts",
+      "./creation-client.js",
+      0
+    ],
+    [
+      "src/mcp-http.ts",
+      "./forge-catalog-client.js",
+      0
+    ],
+    [
+      "src/mcp-server.ts",
+      "@modelcontextprotocol/server",
+      0
+    ],
+    [
+      "src/mcp-server.ts",
+      "@modelcontextprotocol/server/stdio",
+      0
+    ],
+    [
+      "src/mcp-server.ts",
+      "zod/v4",
+      0
+    ],
+    [
+      "src/mcp-server.ts",
+      "./security.js",
+      0
+    ],
+    [
+      "src/mcp-server.ts",
+      "./decision.js",
+      0
+    ],
+    [
+      "src/mcp-server.ts",
+      "./creation-client.js",
+      0
+    ],
+    [
+      "src/mcp-server.ts",
+      "./privacy-firewall.js",
+      0
+    ],
+    [
+      "src/mcp-server.ts",
+      "./legacy-mcp-tools.js",
+      0
+    ],
+    [
+      "src/mcp-server.ts",
+      "./creation-mcp-tools.js",
+      0
+    ],
+    [
+      "src/mcp-server.ts",
+      "./forge-mcp-tools.js",
+      0
+    ],
+    [
+      "src/security.ts",
+      "node:crypto",
+      0
+    ],
+    [
+      "src/state.ts",
+      "./contracts.js",
+      0
+    ],
+    [
+      "test/action-sentinel.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/action-sentinel.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/action-sentinel.test.ts",
+      "../src/action-sentinel.js",
+      0
+    ],
+    [
+      "test/action-sentinel.test.ts",
+      "../src/contracts.js",
+      0
+    ],
+    [
+      "test/contracts.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/contracts.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/contracts.test.ts",
+      "../src/security.js",
+      0
+    ],
+    [
+      "test/contracts.test.ts",
+      "../src/state.js",
+      0
+    ],
+    [
+      "test/creation-mcp-tools.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/creation-mcp-tools.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/creation-mcp-tools.test.ts",
+      "../src/creation-mcp-tools.js",
+      0
+    ],
+    [
+      "test/engine.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/engine.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/engine.test.ts",
+      "../src/decision.js",
+      0
+    ],
+    [
+      "test/engine.test.ts",
+      "../src/engine.js",
+      0
+    ],
+    [
+      "test/forge-catalog.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/forge-catalog.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/forge-catalog.test.ts",
+      "../src/forge-catalog-client.js",
+      0
+    ],
+    [
+      "test/forge-catalog.test.ts",
+      "../src/forge-mcp-tools.js",
+      0
+    ],
+    [
+      "test/forge-creator-plugin.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/forge-creator-plugin.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/forge-creator-plugin.test.ts",
+      "node:fs",
+      0
+    ],
+    [
+      "test/forge-creator-plugin.test.ts",
+      "node:path",
+      0
+    ],
+    [
+      "test/forge-creature.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/forge-creature.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/forge-creature.test.ts",
+      "../src/forge-catalog-client.js",
+      0
+    ],
+    [
+      "test/forge-creature.test.ts",
+      "../src/forge-mcp-tools.js",
+      0
+    ],
+    [
+      "test/forge-world.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/forge-world.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/forge-world.test.ts",
+      "../src/forge-mcp-tools.js",
+      0
+    ],
+    [
+      "test/forge-world.test.ts",
+      "../src/forge-catalog-client.js",
+      0
+    ],
+    [
+      "test/http-auth.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/http-auth.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/http-auth.test.ts",
+      "../src/http-auth.js",
+      0
+    ],
+    [
+      "test/jwt-verifier.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/jwt-verifier.test.ts",
+      "node:http",
+      0
+    ],
+    [
+      "test/jwt-verifier.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/jwt-verifier.test.ts",
+      "jose",
+      0
+    ],
+    [
+      "test/jwt-verifier.test.ts",
+      "../src/jwt-verifier.js",
+      0
+    ],
+    [
+      "test/legacy-client.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/legacy-client.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/legacy-client.test.ts",
+      "../src/legacy-client.js",
+      0
+    ],
+    [
+      "test/legacy-dispatch.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/legacy-dispatch.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/legacy-dispatch.test.ts",
+      "../src/legacy-client.js",
+      0
+    ],
+    [
+      "test/legacy-dispatch.test.ts",
+      "../src/legacy-dispatch.js",
+      0
+    ],
+    [
+      "test/legacy-mcp-tools.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/legacy-mcp-tools.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/legacy-mcp-tools.test.ts",
+      "../src/legacy-mcp-tools.js",
+      0
+    ],
+    [
+      "test/legacy-mcp-tools.test.ts",
+      "../src/legacy-client.js",
+      0
+    ],
+    [
+      "test/mcp-http.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/mcp-http.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/mcp-http.test.ts",
+      "../src/mcp-http.js",
+      0
+    ],
+    [
+      "test/mcp-http.test.ts",
+      "../src/legacy-client.js",
+      0
+    ],
+    [
+      "test/model-router.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/model-router.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/model-router.test.ts",
+      "../src/model-router.js",
+      0
+    ],
+    [
+      "test/oauth-metadata.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/oauth-metadata.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/oauth-metadata.test.ts",
+      "../src/oauth-metadata.js",
+      0
+    ],
+    [
+      "test/privacy-firewall.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/privacy-firewall.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/privacy-firewall.test.ts",
+      "../src/privacy-firewall.js",
+      0
+    ],
+    [
+      "test/rea-xray-plugin.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/rea-xray-plugin.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/rea-xray-plugin.test.ts",
+      "node:child_process",
+      0
+    ],
+    [
+      "test/rea-xray-plugin.test.ts",
+      "node:fs",
+      0
+    ],
+    [
+      "test/rea-xray-plugin.test.ts",
+      "node:path",
+      0
+    ],
+    [
+      "test/security-controller.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/security-controller.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/security-controller.test.ts",
+      "../src/authz.js",
+      0
+    ],
+    [
+      "test/security-controller.test.ts",
+      "../src/brain-controller.js",
+      0
+    ],
+    [
+      "test/security-controller.test.ts",
+      "../src/decision.js",
+      0
+    ],
+    [
+      "test/security-controller.test.ts",
+      "../src/creation-client.js",
+      0
+    ],
+    [
+      "test/security-research.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/security-research.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/security-research.test.ts",
+      "../src/security-research.js",
+      0
+    ],
+    [
+      "test/voice-fabric.test.ts",
+      "node:test",
+      0
+    ],
+    [
+      "test/voice-fabric.test.ts",
+      "node:assert/strict",
+      0
+    ],
+    [
+      "test/voice-fabric.test.ts",
+      "../src/voice-fabric.js",
+      0
+    ]
+  ],
+  "js_ts_text_inspected_not_ast": 56,
+  "limitations": [
+    "Every tracked file was enumerated and hashed and readable text opened",
+    "Python AST parsed, JavaScript/typescript is text/static only; not full TypeScript AST or full dataflow",
+    "No semantic execution or proof of production integrations by this index",
+    "Does not include untracked/private files, branch history, remote deployed services or unmounted artifacts",
+    "An inventory of the BASE COMMIT; edit wave source files added later are deliberately not part of baseline",
+    "A file being parseable does not mean its implementation is correct or connected",
+    "Runtime, Blender, Godot, hosted auth and user acceptance still require separate proof"
+  ],
+  "markdown_files": 47,
+  "python_ast_parsed": 4,
+  "repo": "MGR-API-MCP",
+  "routes": [
+    [
+      "src/creation-mcp-tools.ts",
+      "MCP:mgr_creation_execute",
+      88
+    ],
+    [
+      "src/forge-catalog-client.ts",
+      "/api/asset-sources",
+      63
+    ],
+    [
+      "src/forge-catalog-client.ts",
+      "/api/asset-search",
+      63
+    ],
+    [
+      "src/forge-catalog-client.ts",
+      "/api/world-job",
+      83
+    ],
+    [
+      "src/forge-catalog-client.ts",
+      "/api/world-job-status",
+      90
+    ],
+    [
+      "src/forge-catalog-client.ts",
+      "/api/creature-create",
+      104
+    ],
+    [
+      "src/forge-catalog-client.ts",
+      "/api/creature-status",
+      113
+    ],
+    [
+      "src/forge-mcp-tools.ts",
+      "MCP:mgr_forge_asset_discover",
+      159
+    ],
+    [
+      "src/forge-mcp-tools.ts",
+      "MCP:mgr_forge_creature_create",
+      179
+    ],
+    [
+      "src/forge-mcp-tools.ts",
+      "MCP:mgr_forge_creature_status",
+      200
+    ],
+    [
+      "src/forge-mcp-tools.ts",
+      "MCP:mgr_forge_world_create",
+      209
+    ],
+    [
+      "src/forge-mcp-tools.ts",
+      "MCP:mgr_forge_world_status",
+      218
+    ],
+    [
+      "src/legacy-mcp-tools.ts",
+      "MCP:mgr_legacy_execute",
+      94
+    ],
+    [
+      "src/legacy-mcp-tools.ts",
+      "MCP:mgr_legacy_connectors",
+      131
+    ],
+    [
+      "src/legacy-mcp-tools.ts",
+      "MCP:mgr_truth_summary",
+      157
+    ],
+    [
+      "src/mcp-server.ts",
+      "MCP:mgr_system_info",
+      21
+    ],
+    [
+      "src/mcp-server.ts",
+      "MCP:mgr_action_digest",
+      41
+    ],
+    [
+      "src/mcp-server.ts",
+      "MCP:mgr_validate_choice",
+      55
+    ],
+    [
+      "src/mcp-server.ts",
+      "MCP:mgr_privacy_check",
+      105
+    ],
+    [
+      "src/mcp-server.ts",
+      "MCP:mgr_validate_creation_request",
+      131
+    ],
+    [
+      "test/forge-catalog.test.ts",
+      "/api/asset-search",
+      24
+    ],
+    [
+      "test/forge-creature.test.ts",
+      "/api/creature-create",
+      76
+    ],
+    [
+      "test/forge-creature.test.ts",
+      "/api/creature-status",
+      76
+    ],
+    [
+      "test/forge-world.test.ts",
+      "/api/world-job",
+      67
+    ],
+    [
+      "test/forge-world.test.ts",
+      "/api/world-job-status",
+      67
+    ]
+  ],
+  "schema": "mgr.beast.tracked-static-inventory.v1",
+  "symbols": [
+    [
+      "integrations/rea-xray-plugin/server/rea-safe-mcp.mjs",
+      "respond",
+      24,
+      "JS_DECLARATION"
+    ],
+    [
+      "integrations/rea-xray-plugin/server/rea-safe-mcp.mjs",
+      "error",
+      25,
+      "JS_DECLARATION"
+    ],
+    [
+      "integrations/rea-xray-plugin/server/rea-safe-mcp.mjs",
+      "problem",
+      26,
+      "JS_DECLARATION"
+    ],
+    [
+      "integrations/rea-xray-plugin/server/rea-safe-mcp.mjs",
+      "authorizedPath",
+      27,
+      "JS_DECLARATION"
+    ],
+    [
+      "integrations/rea-xray-plugin/server/rea-safe-mcp.mjs",
+      "runRea",
+      42,
+      "JS_DECLARATION"
+    ],
+    [
+      "integrations/rea-xray-plugin/server/rea-safe-mcp.mjs",
+      "inspect",
+      59,
+      "JS_DECLARATION"
+    ],
+    [
+      "scripts/mock-boundary-deps.mjs",
+      "json",
+      113,
+      "JS_DECLARATION"
+    ],
+    [
+      "scripts/mock-boundary-deps.mjs",
+      "readBody",
+      119,
+      "JS_DECLARATION"
+    ],
+    [
+      "scripts/probe-sdk.mjs",
+      "compile",
+      8,
+      "JS_DECLARATION"
+    ],
+    [
+      "scripts/probe-sdk.mjs",
+      "check",
+      23,
+      "JS_DECLARATION"
+    ],
+    [
+      "scripts/restore_sources.py",
+      "main",
+      11,
+      "FunctionDef"
+    ],
+    [
+      "scripts/restore_sources.py",
+      "git",
+      23,
+      "FunctionDef"
+    ],
+    [
+      "scripts/test_verifier.py",
+      "IntegrityChecks",
+      9,
+      "ClassDef"
+    ],
+    [
+      "scripts/test_verifier.py",
+      "setUp",
+      10,
+      "FunctionDef"
+    ],
+    [
+      "scripts/test_verifier.py",
+      "tearDown",
+      15,
+      "FunctionDef"
+    ],
+    [
+      "scripts/test_verifier.py",
+      "test_valid_minimal_home",
+      16,
+      "FunctionDef"
+    ],
+    [
+      "scripts/test_verifier.py",
+      "test_broken_link_detected",
+      17,
+      "FunctionDef"
+    ],
+    [
+      "scripts/test_verifier.py",
+      "test_raw_pdf_rejected",
+      20,
+      "FunctionDef"
+    ],
+    [
+      "scripts/test_verifier.py",
+      "test_public_env_example_is_allowed_but_real_token_and_env_are_not",
+      23,
+      "FunctionDef"
+    ],
+    [
+      "scripts/test_verifier.py",
+      "test_synthetic_secret_detected_without_echo",
+      31,
+      "FunctionDef"
+    ],
+    [
+      "scripts/test_verifier.py",
+      "test_missing_or_corrupt_local_source_detected",
+      37,
+      "FunctionDef"
+    ],
+    [
+      "scripts/verify-mcp-client.mjs",
+      "callExecute",
+      72,
+      "JS_DECLARATION"
+    ],
+    [
+      "scripts/verify-mcp-client.mjs",
+      "required",
+      88,
+      "JS_DECLARATION"
+    ],
+    [
+      "scripts/verify-mcp-client.mjs",
+      "assert",
+      93,
+      "JS_DECLARATION"
+    ],
+    [
+      "scripts/verify-oauth-provider.mjs",
+      "required",
+      57,
+      "JS_DECLARATION"
+    ],
+    [
+      "scripts/verify-oauth-provider.mjs",
+      "normalize",
+      62,
+      "JS_DECLARATION"
+    ],
+    [
+      "scripts/verify-oauth-provider.mjs",
+      "decodeJwtPayload",
+      63,
+      "JS_DECLARATION"
+    ],
+    [
+      "scripts/verify-openai-remote-mcp.mjs",
+      "required",
+      56,
+      "JS_DECLARATION"
+    ],
+    [
+      "scripts/verify-remote-boundary.mjs",
+      "required",
+      62,
+      "JS_DECLARATION"
+    ],
+    [
+      "scripts/verify-remote-boundary.mjs",
+      "assert",
+      67,
+      "JS_DECLARATION"
+    ],
+    [
+      "scripts/verify_repository.py",
+      "verify",
+      11,
+      "FunctionDef"
+    ],
+    [
+      "src/action-sentinel.ts",
+      "ActionRisk",
+      6,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/action-sentinel.ts",
+      "ProposedAction",
+      8,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/action-sentinel.ts",
+      "SentinelDecision",
+      16,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/action-sentinel.ts",
+      "ActionSentinel",
+      22,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/authz.ts",
+      "AuthContext",
+      1,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/authz.ts",
+      "ProtectedResource",
+      9,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/authz.ts",
+      "assertAuthorized",
+      14,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/authz.ts",
+      "authorizeTool",
+      26,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/brain-controller.ts",
+      "RetrievalItem",
+      5,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/brain-controller.ts",
+      "RetrievalProvider",
+      12,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/brain-controller.ts",
+      "ControllerPlan",
+      16,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/brain-controller.ts",
+      "BrainController",
+      23,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/brain-controller.ts",
+      "StaticDecisionProvider",
+      59,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/contracts.ts",
+      "Id",
+      1,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/contracts.ts",
+      "TaskState",
+      3,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/contracts.ts",
+      "JobState",
+      13,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/contracts.ts",
+      "Task",
+      22,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/contracts.ts",
+      "Job",
+      33,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/contracts.ts",
+      "ToolCapability",
+      43,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/contracts.ts",
+      "ProviderCapability",
+      52,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/contracts.ts",
+      "DecisionRequest",
+      67,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/contracts.ts",
+      "DecisionRecord",
+      76,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/contracts.ts",
+      "Approval",
+      87,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/contracts.ts",
+      "ExecutionAttempt",
+      96,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/contracts.ts",
+      "Receipt",
+      108,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/contracts.ts",
+      "Budget",
+      117,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/contracts.ts",
+      "Schedule",
+      126,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/contracts.ts",
+      "Reconciliation",
+      134,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/creation-client.ts",
+      "CreationCapabilityRequest",
+      1,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/creation-client.ts",
+      "CreationCapabilityResult",
+      11,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/creation-client.ts",
+      "CreationOSClient",
+      19,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/creation-client.ts",
+      "ValidatingCreationOSClient",
+      23,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/creation-mcp-tools.ts",
+      "CreationOSClient",
+      9,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/creation-mcp-tools.ts",
+      "CreationMcpToolOptions",
+      12,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/creation-mcp-tools.ts",
+      "executeCreationMcpCommand",
+      27,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/creation-mcp-tools.ts",
+      "registerCreationMcpTools",
+      87,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/decision.ts",
+      "DecisionProvider",
+      3,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/decision.ts",
+      "DeterministicDecisionRule",
+      8,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/decision.ts",
+      "DecisionEngine",
+      14,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/engine.ts",
+      "InMemoryTaskEngine",
+      15,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/forge-catalog-client.ts",
+      "ForgeCatalogSearch",
+      2,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/forge-catalog-client.ts",
+      "ForgeWorldEdits",
+      11,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/forge-catalog-client.ts",
+      "ForgeCreatureInput",
+      16,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/forge-catalog-client.ts",
+      "ForgeCatalogClient",
+      23,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/forge-catalog-client.ts",
+      "ForgeStudioCatalogOptions",
+      30,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/forge-catalog-client.ts",
+      "ForgeStudioCatalogClient",
+      37,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/forge-mcp-tools.ts",
+      "AuthContext",
+      4,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/forge-mcp-tools.ts",
+      "ForgeMcpToolOptions",
+      7,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/forge-mcp-tools.ts",
+      "denied",
+      14,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/forge-mcp-tools.ts",
+      "searchForgeMcp",
+      26,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/forge-mcp-tools.ts",
+      "createForgeWorldMcp",
+      45,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/forge-mcp-tools.ts",
+      "statusForgeWorldMcp",
+      81,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/forge-mcp-tools.ts",
+      "createForgeCreatureMcp",
+      98,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/forge-mcp-tools.ts",
+      "statusForgeCreatureMcp",
+      131,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/forge-mcp-tools.ts",
+      "registerForgeMcpTools",
+      158,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/http-auth.ts",
+      "VerifiedAccessToken",
+      4,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/http-auth.ts",
+      "AccessTokenVerifier",
+      12,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/http-auth.ts",
+      "McpAuthResult",
+      16,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/http-auth.ts",
+      "authorizeMcpRequest",
+      20,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/http-auth.ts",
+      "bearerToken",
+      76,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/http-auth.ts",
+      "challenge",
+      82,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/http-server.ts",
+      "IncomingMessage",
+      1,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/http-server.ts",
+      "ServerResponse",
+      1,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/http-server.ts",
+      "shutdown",
+      109,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/http-server.ts",
+      "requiredUrl",
+      118,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/http-server.ts",
+      "csv",
+      123,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/http-server.ts",
+      "json",
+      126,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/http-server.ts",
+      "readBody",
+      131,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/jwt-verifier.ts",
+      "JwksAccessTokenVerifierOptions",
+      4,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/jwt-verifier.ts",
+      "JwksAccessTokenVerifier",
+      12,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/legacy-client.ts",
+      "LegacyEdgeContext",
+      1,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/legacy-client.ts",
+      "LegacyCommandRequest",
+      10,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/legacy-client.ts",
+      "LegacyCommandResult",
+      16,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/legacy-client.ts",
+      "LegacyTruthSummary",
+      26,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/legacy-client.ts",
+      "LegacyClientConfig",
+      35,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/legacy-client.ts",
+      "LegacyEdgeClient",
+      42,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/legacy-dispatch.ts",
+      "ReconciledDispatchResult",
+      8,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/legacy-dispatch.ts",
+      "LegacyDispatchCoordinator",
+      21,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/legacy-mcp-tools.ts",
+      "LegacyMcpToolOptions",
+      11,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/legacy-mcp-tools.ts",
+      "executeLegacyMcpCommand",
+      26,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/legacy-mcp-tools.ts",
+      "registerLegacyMcpTools",
+      93,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/mcp-http.ts",
+      "AccessTokenVerifier",
+      3,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/mcp-http.ts",
+      "McpAuthResult",
+      3,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/mcp-http.ts",
+      "AuthorizedMgrMcpHttpOptions",
+      8,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/mcp-http.ts",
+      "authorizeAndBindMcpRequest",
+      19,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/mcp-http.ts",
+      "createMgrMcpHttpHandler",
+      37,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/mcp-http.ts",
+      "createAuthorizedMgrMcpHttpHandler",
+      48,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/mcp-server.ts",
+      "LegacyMcpToolOptions",
+      8,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/mcp-server.ts",
+      "CreationMcpToolOptions",
+      9,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/mcp-server.ts",
+      "ForgeMcpToolOptions",
+      10,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/mcp-server.ts",
+      "createMgrMcpServer",
+      12,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/model-router.ts",
+      "ModelTaskClass",
+      1,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/model-router.ts",
+      "ModelRisk",
+      2,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/model-router.ts",
+      "ModelCandidate",
+      4,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/model-router.ts",
+      "ProviderRouteSignal",
+      21,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/model-router.ts",
+      "ModelRouteRequest",
+      32,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/model-router.ts",
+      "ModelRouteDecision",
+      47,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/model-router.ts",
+      "CostAwareModelRouter",
+      65,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/model-router.ts",
+      "estimateRequestCost",
+      142,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/model-router.ts",
+      "routeWithEscalation",
+      153,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/model-router.ts",
+      "clamp01",
+      164,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/oauth-metadata.ts",
+      "ProtectedResourceMetadata",
+      1,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/oauth-metadata.ts",
+      "AuthorizationServerMetadata",
+      9,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/oauth-metadata.ts",
+      "buildProtectedResourceMetadata",
+      20,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/oauth-metadata.ts",
+      "buildWwwAuthenticate",
+      42,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/privacy-firewall.ts",
+      "DataClass",
+      1,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/privacy-firewall.ts",
+      "PrivacyFinding",
+      10,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/privacy-firewall.ts",
+      "PrivacyPolicy",
+      17,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/privacy-firewall.ts",
+      "PrivacyResult",
+      23,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/privacy-firewall.ts",
+      "inspectPrivacy",
+      39,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/privacy-firewall.ts",
+      "applyPrivacyPolicy",
+      56,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/security-research.ts",
+      "SecuritySourceTier",
+      1,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/security-research.ts",
+      "SecurityResearchSource",
+      3,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/security-research.ts",
+      "SecurityFinding",
+      23,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/security-research.ts",
+      "validateSecurityFinding",
+      31,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/security.ts",
+      "canonicalJson",
+      3,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/security.ts",
+      "actionDigest",
+      12,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/security.ts",
+      "approvalMatches",
+      16,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/state.ts",
+      "canTransitionTask",
+      24,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/state.ts",
+      "canTransitionJob",
+      28,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/state.ts",
+      "assertTaskTransition",
+      32,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/state.ts",
+      "assertJobTransition",
+      38,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/voice-fabric.ts",
+      "VoiceCapability",
+      1,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/voice-fabric.ts",
+      "VoiceExecutionMode",
+      2,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/voice-fabric.ts",
+      "VoiceRights",
+      4,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/voice-fabric.ts",
+      "VoiceProviderDescriptor",
+      12,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/voice-fabric.ts",
+      "VoiceSynthesisRequest",
+      24,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/voice-fabric.ts",
+      "VoiceTranscriptionRequest",
+      33,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/voice-fabric.ts",
+      "VoiceArtifact",
+      39,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/voice-fabric.ts",
+      "VoiceProvider",
+      48,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/voice-fabric.ts",
+      "VoiceRightsRegistry",
+      54,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/voice-fabric.ts",
+      "VoiceFabric",
+      70,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/voice-fabric.ts",
+      "VoiceboxToolInvoker",
+      121,
+      "JS_DECLARATION"
+    ],
+    [
+      "src/voice-fabric.ts",
+      "VoiceboxMcpProvider",
+      125,
+      "JS_DECLARATION"
+    ],
+    [
+      "test/model-router.test.ts",
+      "ModelCandidate",
+      3,
+      "JS_DECLARATION"
+    ],
+    [
+      "test/voice-fabric.test.ts",
+      "VoiceProvider",
+      3,
+      "JS_DECLARATION"
+    ]
+  ],
+  "test_sources": 21,
+  "tracked_file_count": 169
+}

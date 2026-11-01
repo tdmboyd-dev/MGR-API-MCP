@@ -1,0 +1,48 @@
+✖ malformed UTF8 cannot be silently replaced and published with a misleading content hash (2650.8228ms)
+✔ valid Unicode/BOM/CRLF documents preserve the committed byte hash and readable text (2580.0227ms)
+✖ a replacement directory at the same enrolled path cannot inherit old repository knowledge enrollment (4021.6612ms)
+✔ an oversized source document and a line beyond the page budget are refused explicitly (4891.7966ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 2
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 15006.8755
+
+✖ failing tests:
+
+test at test\repository-manual-reader.test.ts:1:1210
+✖ malformed UTF8 cannot be silently replaced and published with a misleading content hash (2650.8228ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-forge-joined\test\repository-manual-reader.test.ts:18:68)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /utf.?8/i,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at test\repository-manual-reader.test.ts:1:1921
+✖ a replacement directory at the same enrolled path cannot inherit old repository knowledge enrollment (4021.6612ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (C:\Users\cool\Documents\Codex\2026-10-30\so-i-have-a-question-and\work\api-forge-joined\test\repository-manual-reader.test.ts:27:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /manual-project-unavailable/,
+    operator: 'throws',
+    diff: 'simple'
+  }

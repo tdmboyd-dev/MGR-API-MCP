@@ -1,0 +1,20 @@
+{
+  "schema": "mgr.api.xray-dependency-pin.v1",
+  "name": "MGR REA X-Ray",
+  "upstream_url": "https://github.com/morluto/rea",
+  "upstream_observed_head": "6e9ee97a69cb16c7150d8b550e705cba055ee4f0",
+  "npm_package": "rea-agents",
+  "npm_version": "6.8.0",
+  "npm_dist_integrity": "sha512-9QDeRnGqEDzABZyr04eLnBXBv/c6I9/TWu/6M0MD4pEfkySI/BIgwTODIbAReX3C1x6hjw9+Jlx4A2yUSPZ9ww==",
+  "runtime_node": "v24.22.1",
+  "runtime_node_zip_sha256": "d2046d28c2c3dcd211ac5145c0bf30e2047ef9dfb306693c8c6e2eccd8b95fa5",
+  "root_rea_license": "MIT",
+  "third_party_licenses": "Preserved by upstream THIRD_PARTY_NOTICES.md; check chosen providers individually",
+  "requires_local_exec": true,
+  "remote_chat_mobile_supported_without_bridge": false,
+  "release_plugin_id": "plugins_6ae674d617d881919da938edf6e018d4",
+  "release_url": "https://chatgpt.com/plugins/plugins_6ae674d617d881919da938edf6e018d4",
+  "installed_windows_path": "%USERPROFILE%\\.mgr-tools\\rea\\runtime",
+  "workspace_path": "%USERPROFILE%\\.mgr-tools\\rea\\workspace",
+  "source_copy_redistributed": false
+}

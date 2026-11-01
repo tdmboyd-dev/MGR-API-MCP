@@ -1,0 +1,21 @@
+{
+  "API": {
+    "tests": 247,
+    "passed": 247,
+    "failed": 0,
+    "skipped": 0
+  },
+  "FORGE": {
+    "tests": 638,
+    "passed": 635,
+    "skipped": 3,
+    "failed": 0,
+    "sourceIdenticalToFullRun": true
+  },
+  "finalGuardedInputs": 2051,
+  "sourceStableThroughFinalAPIQualification": true,
+  "finalRealProtocol": "real-blender-protocol-context-pinned.json",
+  "ONEWorkingDependencyNotClaimedAsCleanGitHead": true,
+  "permanentTevinForgeExecutionVerified": false,
+  "hostedProductionAcceptance": false
+}

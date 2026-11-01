@@ -1,5 +1,15 @@
 # Resume MGR-API-MCP
 
+## Joined shared edge: Forge, Tevin departments and current knowledge - November 1, 2026
+
+The existing main Forge bridge and the Tevin department/repository branch are reconciled in one qualified candidate. Full API247/247 zero skips; current Forge638run/635pass/3skips;2,051guarded inputs unchanged. Actual official SDK/HTTP/Python Forge produced and replayed hashed creature/biome files and completed real Blender composed-world/facial-animation resource return. Test identity is synthetic, not permanent Tevin or deployed OAuth. Exact workstation actor/tenant and after-await/final-serialization authority fences are repaired; malformed UTF8 and replaced-root operating-document reads are refused. [Current report](evidence/forge-joined-2026-11-01/REPORT.md); [connection and recovery](docs/FORGE-CONNECTION-AND-RECOVERY.md).
+
+Original48queue IDs and domain authorities remain. Canonical adoption/publication are separate receipts. Personal Tevin Forge jobs/approvals/saved artifacts and broader full-tool/production acceptance remain open. Earlier85/192counts below are dated source scopes, not current joined totals. Imported main handoffs remain historical.
+
+## Historical preparation before joined qualification - November 1, 2026
+
+Read the [shared bridge engineering handbook](docs/API-MCP-ENGINEERING-HANDBOOK.md). The existing Forge catalog/creation/status/artifact interfaces from API main are being merged with the retained department/repository gateway and owner startup. Prior main and integration tests describe different source trees. Joined authorization, shutdown, consumer and real Forge acceptance must pass before activation; no global execution grant follows from this merge. The original48queue IDs and existing source evidence remain. [Imported main checkpoint](docs/history/FORGE-MAIN-HANDOFF-2026-11-01.md).
+
 ## Shared operating knowledge - November 1, 2026
 
 The existing API owns the reusable revision-pinned committed-document reader. Optional authenticated host enrollment exposes `mgr_repository_manual`; ONE consumes it for eleven confirmed tools. Original catalog entries are retained, Backpack is added as entry22, and obsolete empty-source Code Monster/OmniSight claims are corrected. Full API qualification passed192/192 with zero skips plus typecheck, hosted syntax and plugin checks. Actual permanent ONE all-index retrieval, full Forge handbook reconstruction and real model/manual/restart proof are recorded in ONE's ecosystem-knowledge evidence. No global execution enrollment, complete handbook coverage, remote background learning or production acceptance is inferred. [Integration contract](docs/REPOSITORY-KNOWLEDGE.md).
