@@ -1,3 +1,9 @@
+## Final native navigation delivery — November 1, 2026
+
+**Completed and adopted:** bound references, labeled potential impact and commit-bound Tevin continuation. Canonical actual cross-product integration passed **13/13** named checks; full API **297/297**, affected ONE **34/34** plus build, Code Monster full **237 pass / 0 fail / 6 explicit Windows skips**, joined **19/19**, then latest campaign-bound **4/4**. Source scopes remain separate. [Exact completed work, source and limits](evidence/native-navigation-2026-11-01/REPORT.md); [verification record](evidence/native-navigation-2026-11-01/VERIFICATION.json). Concurrent edits are preserved; no permanent service restart, live inference or production acceptance is claimed.
+
+---
+
 ## Completed native source navigation slice — November 1, 2026
 
 MGR-API-MCP: original bound-reference and labeled potential-impact abilities are implemented and integrated through the existing Code Monster → API-MCP → Tevin read path. Actual local HTTP/SDK/compiler/SQLite integration passed 13/13 checks, including replay, reopen, authority and source-change refusals. Injected model responses and local fixture identity are explicit; permanent-owner/live-provider/production acceptance is not claimed. Existing requirements remain partial beyond this slice. [Completed work, external behavior evidence and verification](evidence/native-navigation-2026-11-01/REPORT.md). Final source/adoption and final checks are recorded alongside that report.

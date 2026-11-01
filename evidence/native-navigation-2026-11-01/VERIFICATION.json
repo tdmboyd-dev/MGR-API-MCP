@@ -1,0 +1,119 @@
+{
+  "observedAt": "2026-11-01T12:28:59.270Z",
+  "product": "api",
+  "codeCommit": "2206b63ae688322bf9ae9b8fdc76c72decfbc581",
+  "sourceFiles": [
+    {
+      "path": "scripts/owner-department-client.ts",
+      "sha256": "2ac8ee31e2f64b5a475894e91c862bd90b82cbf22f02ccdd11fff3b4f6eb10c1"
+    },
+    {
+      "path": "src/repository-read-tools.ts",
+      "sha256": "261b6600b184fa8513590baddefbd1519b417897e0e79f7e1352a8b1420c38b2"
+    },
+    {
+      "path": "test/repository-read-tools.test.ts",
+      "sha256": "e25d0610b06c73ec0bdacc8d53117df5ce76bbc4e4051263af9d5dc86a275c2b"
+    },
+    {
+      "path": "test/source-navigation-integration.test.ts",
+      "sha256": "800a3064c8eab80531009b0df1423dcd3c6a631b6b17dddf05dcb1812670516b"
+    }
+  ],
+  "tests": [
+    {
+      "name": "code-monster-final.log",
+      "pass": 237,
+      "skip": 6,
+      "fail": 0,
+      "scope": "Full native Code Monster tree before concurrent campaign-export adoption; 243 results.",
+      "logSha256": "569b1a6a9553d8bec1213fe110719607355fb80d0e23d71142e25177e9542865"
+    },
+    {
+      "name": "code-monster-joined.log",
+      "pass": 19,
+      "skip": 0,
+      "fail": 0,
+      "scope": "Navigation, actual stdio and joined campaign export.",
+      "logSha256": "b1d5926cc5adb7e71aa1d854d5098b2ca48e0c038d794e98be32da325f218633"
+    },
+    {
+      "name": "code-monster-current-campaign.log",
+      "pass": 4,
+      "skip": 0,
+      "fail": 0,
+      "scope": "Subsequent campaign snapshot query bound change.",
+      "logSha256": "7a8a764870e581cefb845cfc8b2da3cf681708eec14cd434239ddd021659fad3"
+    },
+    {
+      "name": "api-qualified-final.log",
+      "pass": 297,
+      "skip": 0,
+      "fail": 0,
+      "scope": "Full API verify, current explicitly enrolled product roots, including actual SDK/HTTP integration; typecheck, hosted syntax and plugin checks also passed.",
+      "logSha256": "8377308715e5a70f81b43eb24132f0594c939a146b2e17ac9f27aa7a98cd85eb"
+    },
+    {
+      "name": "one-final-affected.log",
+      "pass": 34,
+      "skip": 0,
+      "fail": 0,
+      "scope": "Affected ONE repository/conversation/manual contracts; production build passed separately.",
+      "logSha256": "53fa693101b9d2e544b315f14be13179f7663934d6b0e547d4a8c4b7d2785260"
+    },
+    {
+      "name": "canonical-integration.log",
+      "pass": 1,
+      "skip": 0,
+      "fail": 0,
+      "scope": "Canonical actual HTTP conversation/SQLite/SDK/TCP/compiler integration: 13 named checks with injected model responses and local identity.",
+      "logSha256": "2f1d8f54456ef9c598930e84f6d2fa1fb063c4144f3c847ea50fa77667dea71b"
+    }
+  ],
+  "canonicalIntegration": {
+    "passed": 13,
+    "checks": [
+      "real-Git-compiler-scoped-symbols",
+      "actual-owner-SDK-TCP-bound-references",
+      "actual-owner-SDK-TCP-labeled-impact",
+      "owner-reference-pages-preserve-all-bound-sites",
+      "actual-owner-HTTP-conversation-dispatch",
+      "exact-conversation-replay-no-redispatch",
+      "actual-owner-SQL-reopen-saved-answer-no-model-call",
+      "actual-conversation-impact-after-owner-reopen",
+      "caller-root-injection-denied",
+      "revocation-withholds-success-receipt",
+      "changed-commit-refuses-stale-declaration-identity",
+      "source-changed-refuses-mixed-commit-continuation",
+      "source-worktree-unchanged-by-all-reads"
+    ],
+    "modelCalls": 4,
+    "sourceCalls": 11,
+    "identity": "Local fixture enrollment",
+    "model": "Injected deterministic responses, not live inference",
+    "scope": "Actual ONE HTTP/conversation/SQLite -> official owner SDK -> authenticated loopback edge -> real Code Monster compiler/worker; injected model responses and local service identity, no live provider or production claim"
+  },
+  "adoption": {
+    "id": "api",
+    "root": "C:/Users/cool/Documents/Codex/Projects/MGR-API-MCP",
+    "branch": "repair/completion-2026-10-28",
+    "base": "ab4814e99b9eba782b656c4955edd8d118eee063",
+    "verifiedSource": "a1132d7fbabcf621bf2853725d4f4630831f517d",
+    "canonicalCommit": "2206b63ae688322bf9ae9b8fdc76c72decfbc581",
+    "mode": "apply-owned-patch",
+    "concurrentTrackedDiffSha256Before": "bf157d6441cc81ec10e81fd47fa582447c5a3e52d1bad9fe9e4097d31a44ad73",
+    "concurrentTrackedDiffSha256After": "6a0f39960ada2d699ca99fa9facf422e74040b4bd6cdcf1b794e522ff00f5db3",
+    "untrackedCount": 0,
+    "untrackedHashesPreserved": true,
+    "concurrentSourcePreserved": true,
+    "canonicalCommittedTreeMatchesVerifiedTree": true,
+    "preservationVerification": "The shared client retains the exact original Forge schema addition. Replacing only the expected changed base/index blob-header line reproduces the entire prior concurrent diff SHA256; all other diff bytes match.",
+    "rawDiffHeaderChangedWithOwnedCommit": true
+  },
+  "limits": [
+    "Selected native source-navigation slice only; no whole-product closure.",
+    "Other candidate deep behavior tests, full mutation/rename and design interaction remain open.",
+    "Concurrent uncommitted Forge/runtime work is preserved and is not certified as a whole by these checks.",
+    "No permanent owner service restart, provider inference, Windows restart or production rollout was performed."
+  ]
+}
