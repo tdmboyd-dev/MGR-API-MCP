@@ -1,0 +1,60 @@
+{
+  "creationPublishedSource": "1b252994e5ed12069f35e9055c6e71f7d656fbd8",
+  "branch": "repair/completion-2026-10-28",
+  "independentFetchReadback": true,
+  "exactRuntimeTestAndQualifierBlobs": [
+    {
+      "path": "src/persistence/sqlite.ts",
+      "publishedSha256": "2df5cc143ea7313c7b43a57c2dfbad6bc4cd42148e544604deda261f81fcb509"
+    },
+    {
+      "path": "src/api/durable-objectives.ts",
+      "publishedSha256": "484eac149ba8447d0d39ed685763a837c48003d95c9116cf65a2f8546ab77300"
+    },
+    {
+      "path": "src/factories/owner-workflow-factory.ts",
+      "publishedSha256": "51e0e9de5f5a00cdd2746776dd3bd00845ba0f9f427397232784bb87ecd9ca43"
+    },
+    {
+      "path": "src/factories/contracts.ts",
+      "publishedSha256": "9248c105373b9557542cbd89cbe437e11e688d9a71ddf6fbc8c42929a6737b36"
+    },
+    {
+      "path": "src/factories/default-registry.ts",
+      "publishedSha256": "f2241f7680d07bdcb29df50b5edb25778885d4507fc2d1a99690b2afc7217988"
+    },
+    {
+      "path": "src/factories/index.ts",
+      "publishedSha256": "a320165f4232eae05e8eca0ceb4370d5eb007c52b95ce115a506f1b8fdd3cd09"
+    },
+    {
+      "path": "src/persistence/index.ts",
+      "publishedSha256": "9d8aaac8c4b49f2502af0d82be657748e232110e8e835cc61145a58c0b4e6e04"
+    },
+    {
+      "path": "src/api/index.ts",
+      "publishedSha256": "59a20518abd5b40d76c2d6feeb5d64fec14715facb93e1554a5432742a1959ce"
+    },
+    {
+      "path": "src/bootstrap.ts",
+      "publishedSha256": "316297ce62115312841678615e0426d922abcd15e5d4fec6e90004f25acaedfc"
+    },
+    {
+      "path": "src/objectives/orchestrator.ts",
+      "publishedSha256": "00df23cdd2aff026b3c558175cc7fe455dbb802c33c1ec9dbd62c375218ec19c"
+    },
+    {
+      "path": "test/durable-objectives.test.ts",
+      "publishedSha256": "0017fa73e63ef12a1253a9220098af0fb52c21e11a44cf4eef24b557fa662010"
+    },
+    {
+      "path": "test/owner-workflow-factory.test.ts",
+      "publishedSha256": "2bf41876b91b01abbc9b28e7cb341a340571a9cfcc50851d2d0aacf647e9f664"
+    },
+    {
+      "path": "scripts/qualification/durable-native-project.test.mjs",
+      "publishedSha256": "312617c881a9e7b6d7f7a8dff49b21851c778ef8708b134f7a11e094031e853b"
+    }
+  ],
+  "receivingMetadata": "This proof precedes its enclosing receiving-documentation commit. It does not claim permanent project activation or main promotion."
+}

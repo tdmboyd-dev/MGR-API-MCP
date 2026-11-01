@@ -1,3 +1,9 @@
+## Durable Creation runtime and native adapter — November1,2026
+
+Creation1b25299 is published/adopted: canonical typecheck/full220pass (44new included), actual public-bootstrap native creature+Markdown/approval/lost-reply/four-host-reopen/preapproval-cancel scenario1pass. Concrete scoped SQL persistence and reusable original-owner adapters now exist. Permanent owner reader received new handbook without inference/config/effect changes. [Exact evidence and remaining integration](evidence/durable-projects-2026-11-01/RECEIVING-REPORT.md).
+
+Next: connect the same runtime to permanent authenticated project controls and parent retention; verify four other new Forge paths and dynamic output references. Full studio/source/production remains Unassessed. No second brain/grant/native ledger/vault, no native ID/account migration or dollar-savings claim. Original counts/requirements and peer work preserved.
+
 ## Modular automation source packet recovery completed — November 1, 2026
 
 All four frozen source trees and exact commit IDs were reconstructed from incremental raw patches and bundles. MGR-EVERYAPP-TSTACK-QUALIFIED-SOURCE.zip was freshly extracted: 46/46 manifest hashes matched (47 total files). Archive SHA-256: b81c56856b90c3759e5a4da2f902b6a6f2cf02ebdba553fedfdca9678521340d. Owning PACKAGE-VERIFICATION.json and SOURCE-RECOVERY.json record the exact frozen commits/bases. This later documentation receipt is outside that already sealed packet; it does not change the qualified runtime.

@@ -1,0 +1,35 @@
+{
+  "scope": "public opt-in Creation bootstrap and reusable durable project/owner workflow factories; actual isolated owner SDK/native service acceptance",
+  "runId": "creation-project-056f1cfa0de2ca5a4cc873dafab7ddd68b5d02ce12e3a8d33910e519102cf2b3",
+  "requests": [
+    {
+      "stage_key": "creature",
+      "request_id": "creation-workstream-ac8d142152ea5a82097a07dbce40eac25cb96aafe0231d940d2940b0a871fda6"
+    },
+    {
+      "stage_key": "notes",
+      "request_id": "creation-workstream-262679454216377a51bc1177c7b5fbb8470dbd08f419475ba408c75f9080b94f"
+    }
+  ],
+  "originalOwnerExecuteCalls": 2,
+  "originalEffects": 2,
+  "explicitOwnerApprovals": 2,
+  "allHostReopens": 4,
+  "unknownNativeReplyRecoveredWithoutResend": true,
+  "cancellationBeforeApprovalCreatesNoNativeJob": true,
+  "artifacts": [
+    {
+      "kind": "MEDIA",
+      "sha256": "df9c36bf26166eaf6e8f52b2836325e44ce1281329967fb51c298549fad65af4",
+      "bytes": 112008
+    },
+    {
+      "kind": "DOCUMENT",
+      "sha256": "535a5cb0018b39ab108cc25bc547078b3abdb8ae3c82595188af21a6b7eddfb2",
+      "bytes": 86
+    }
+  ],
+  "modelCalls": 0,
+  "permanentTevinProjectInterface": false,
+  "productionAccepted": false
+}

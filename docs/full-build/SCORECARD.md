@@ -233,3 +233,9 @@ Bounded canonical consumer migration: 4/4 acceptance checks (100% this four-chec
 ## Objective integrity and permanent tool knowledge repaired — November1,2026
 
 Creation owning source46cccc9 is published/adopted: typecheck/full176pass (39new included), real Forge+document project/restart fixture1pass with unchanged two effects. Actual permanent knowledge read then exposed a removed Backpack0.4.0 cache dependency. ONE now reuses the existing live private host pointer;5host/12ONE/13API affected checks passed. Normal restart restored four source and eleven manual roots, actual latest Creation handbook/stale-pin denial/current Code Monster profile; account/host configuration and original workflow/effect rows unchanged, no new inference/creates. [Full evidence and unfinished adapter](../../evidence/objective-integrity-2026-11-01/CONNECTION-REPORT.md). Source execution approval remains separately stale; no profile/permission renewal. Whole-product/source/production scope Unassessed.
+
+## Durable Creation runtime and native adapter — November1,2026
+
+Creation1b25299 is published/adopted: canonical typecheck/full220pass (44new included), actual public-bootstrap native creature+Markdown/approval/lost-reply/four-host-reopen/preapproval-cancel scenario1pass. Concrete scoped SQL persistence and reusable original-owner adapters now exist. Permanent owner reader received new handbook without inference/config/effect changes. [Exact evidence and remaining integration](../../evidence/durable-projects-2026-11-01/RECEIVING-REPORT.md).
+
+Next: connect the same runtime to permanent authenticated project controls and parent retention; verify four other new Forge paths and dynamic output references. Full studio/source/production remains Unassessed. No second brain/grant/native ledger/vault, no native ID/account migration or dollar-savings claim. Original counts/requirements and peer work preserved.
