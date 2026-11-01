@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-01",
+  "sourceCommit": "02f2f9cc08ea9deaf57fabd2667031244287c3db",
+  "mergeParents": [
+    "8a5cb88e3a0b8caa0fdf17b175813c5cc386cee4",
+    "bd036d1ab10d1911c9938b67e0295c92233d9a3d"
+  ],
+  "publishedSourceReadback": {
+    "repair/completion-2026-10-28": "02f2f9cc08ea9deaf57fabd2667031244287c3db",
+    "integrate/forge-shared-edge-20261101": "02f2f9cc08ea9deaf57fabd2667031244287c3db"
+  },
+  "canonicalAPI": "C:/Users/cool/Documents/Codex/Projects/MGR-API-MCP",
+  "forgeRuntimeSource": "6fe053a480d8699ab6382a0599849f7ed679bb06",
+  "forgeOwningHandoffHead": "c7d7b6d8e31f67bcd382e6d7097f50d1a9e5037c",
+  "APIRegression": {
+    "passed": 247,
+    "failed": 0,
+    "skipped": 0
+  },
+  "ForgeRegression": {
+    "run": 638,
+    "passed": 635,
+    "failed": 0,
+    "skipped": 3,
+    "reason": "SAM not available"
+  },
+  "finalGuardedInputs": 2051,
+  "repositoryIntegrityBeforeSourceCommit": {
+    "checks": 555,
+    "failed": 0
+  },
+  "canonicalChangedProgramFilesTextMatched": 25,
+  "ownerLauncherReadback": {
+    "indexes": 11,
+    "fullForgeHandbookLines": 184,
+    "newModelCalls": 0
+  },
+  "ownerSourceGrowth": "c7d7b6d8e31f67bcd382e6d7097f50d1a9e5037c",
+  "savedHistoricalAnswerSHA256": "f5a8ba05841ee3b857a80fdbc6a6db9d6e67b5944c8980fac6ce14e711e530d4",
+  "savedReplayNewModelRequests": 0,
+  "defaultMainPromotionNotClaimed": true,
+  "permanentTevinForgeExecutionNotClaimed": true,
+  "hostedOrProductionAcceptance": false
+}

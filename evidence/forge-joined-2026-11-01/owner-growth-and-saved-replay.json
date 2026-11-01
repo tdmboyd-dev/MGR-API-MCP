@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "scope": "Actual permanent owner -> joined shared API -> newly committed Forge handoff without restart/re-enrollment, plus exact saved historical model-answer recovery after prior normal restart.",
+  "forgeSourceCommit": "c7d7b6d8e31f67bcd382e6d7097f50d1a9e5037c",
+  "operatingDocuments": 25,
+  "indexReceipts": [
+    "aff4db44-eed4-4afd-923f-1cc1e8b40150",
+    "6727fa39-7d47-4236-9eb0-e452f9c5255d"
+  ],
+  "handoffReceipt": "bf6da20f-8f24-41a4-821d-3a8e210144af",
+  "handoffPageSha256": "c04f2804adc5345712d48eb619f5d49f4f650b4d6c8fb252673997d41ec47760",
+  "savedHistoricalModelRequest": "ecosystem-knowledge-9baecb8b-3e24-4f11-9966-73c5b42ecaff",
+  "savedAnswerSha256": "f5a8ba05841ee3b857a80fdbc6a6db9d6e67b5944c8980fac6ce14e711e530d4",
+  "newModelRequests": 0,
+  "sourceWrites": 0,
+  "engineeringJobsCreated": 0,
+  "privateTranscriptPublished": false,
+  "permanentForgeExecutionNotInferred": true
+}

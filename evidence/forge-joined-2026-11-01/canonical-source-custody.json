@@ -1,0 +1,155 @@
+{
+  "scope": "Canonical adoption of the qualified changed API runtime/test files; normalization is explicit.",
+  "files": [
+    {
+      "path": "scripts/test_verifier.py",
+      "canonicalSha256": "616be7147eebe9cd0b6ed04dd7c251ead4c055a74aef48b73d693c8cd0aec871",
+      "qualifiedRuntimeSha256": "616be7147eebe9cd0b6ed04dd7c251ead4c055a74aef48b73d693c8cd0aec871",
+      "match": "exact"
+    },
+    {
+      "path": "scripts/verify-forge-creator-mcp.py",
+      "canonicalSha256": "8b324f84b9a20acb78a02b20a71dddb05292cfc406feb2279551bc56e9e37026",
+      "qualifiedRuntimeSha256": "8b324f84b9a20acb78a02b20a71dddb05292cfc406feb2279551bc56e9e37026",
+      "match": "exact"
+    },
+    {
+      "path": "scripts/verify-forge-native-mcp-protocol.mjs",
+      "canonicalSha256": "5f34f46d81baae3061f9872feed3b7446845201e1830338a65935fb46482b78f",
+      "qualifiedRuntimeSha256": "5f34f46d81baae3061f9872feed3b7446845201e1830338a65935fb46482b78f",
+      "match": "exact"
+    },
+    {
+      "path": "scripts/verify-forge-studio-client.mjs",
+      "canonicalSha256": "e462267e65f44f403a49cad9bff34970ef664c39e355f3cd6b59ca7d134cc77e",
+      "qualifiedRuntimeSha256": "e462267e65f44f403a49cad9bff34970ef664c39e355f3cd6b59ca7d134cc77e",
+      "match": "exact"
+    },
+    {
+      "path": "scripts/verify-forge-studio.py",
+      "canonicalSha256": "cba80526677ba68896f0157f485586f188a7c2a8bef94b16d356aaabe0878929",
+      "qualifiedRuntimeSha256": "cba80526677ba68896f0157f485586f188a7c2a8bef94b16d356aaabe0878929",
+      "match": "exact"
+    },
+    {
+      "path": "scripts/verify_repository.py",
+      "canonicalSha256": "47de8278bd410141af1a886f2b10510abb7e0b92431f60d52e57016ba4402b52",
+      "qualifiedRuntimeSha256": "47de8278bd410141af1a886f2b10510abb7e0b92431f60d52e57016ba4402b52",
+      "match": "exact"
+    },
+    {
+      "path": "src/forge-catalog-client.ts",
+      "canonicalSha256": "6a13b57a87974317f7915b73142f2f61ec8e7e4b8c6d76c1f198fcf86ef3857e",
+      "qualifiedRuntimeSha256": "6a13b57a87974317f7915b73142f2f61ec8e7e4b8c6d76c1f198fcf86ef3857e",
+      "match": "exact"
+    },
+    {
+      "path": "src/forge-mcp-tools.ts",
+      "canonicalSha256": "d40a180afb4bd72831ae9b41f1ddbf9e39647ea369d3ee4e6933607855f5abfb",
+      "qualifiedRuntimeSha256": "8e2ce3e7f9b673a86d9e9bfc0fa3e6fc2cfca960809d1ce7fba7e1ead4e6d3b5",
+      "match": "CRLF/LF checkout normalization only"
+    },
+    {
+      "path": "src/http-server.ts",
+      "canonicalSha256": "76d9ae9e7a49ecdc345397a99a709d3d7fab4e8615a67da7163bfc5f046205fb",
+      "qualifiedRuntimeSha256": "6962468b79bd0204158fed8aeb43a9db5b9e88adf945be29286367ca61cf3acd",
+      "match": "CRLF/LF checkout normalization only"
+    },
+    {
+      "path": "src/mcp-http.ts",
+      "canonicalSha256": "1c7d1e91729d6cef6972df5f86aee9e45c3f13a950d71450942996719bd25aa8",
+      "qualifiedRuntimeSha256": "1c7d1e91729d6cef6972df5f86aee9e45c3f13a950d71450942996719bd25aa8",
+      "match": "exact"
+    },
+    {
+      "path": "src/mcp-server.ts",
+      "canonicalSha256": "4fe91c140f54858b5092174f30cab6264c5e85df85921ffc75b096bcf7053485",
+      "qualifiedRuntimeSha256": "4fe91c140f54858b5092174f30cab6264c5e85df85921ffc75b096bcf7053485",
+      "match": "exact"
+    },
+    {
+      "path": "src/repository-manuals.mjs",
+      "canonicalSha256": "9ba196827a3d67fdd5acdea3f6fa5995752488394865829decd5b412ddf75909",
+      "qualifiedRuntimeSha256": "9ba196827a3d67fdd5acdea3f6fa5995752488394865829decd5b412ddf75909",
+      "match": "exact"
+    },
+    {
+      "path": "test/forge-artifact-transfer.test.ts",
+      "canonicalSha256": "da6eb44c11e5c02f7b466f492fe071860ee7b5db77ff93aee5dd25d14fc155eb",
+      "qualifiedRuntimeSha256": "e171263b125677bee1aa71fe48b4d601d62818f3a15351666e98e014cfe91cf4",
+      "match": "CRLF/LF checkout normalization only"
+    },
+    {
+      "path": "test/forge-authority-lifecycle.test.ts",
+      "canonicalSha256": "d5e631dccc3dec62f3bd04ba561d34c1fef4a509bf7a896e38f0886253f2163e",
+      "qualifiedRuntimeSha256": "60af732c6cbef23c8b61f3614df405508d14a4594526737bbb44d52f6c58e68d",
+      "match": "CRLF/LF checkout normalization only"
+    },
+    {
+      "path": "test/forge-biome.test.ts",
+      "canonicalSha256": "07cbac26a5ca0c2e2c88ea150a8bad6c5e4c9f00e2e45192246c7e1ec27c5b86",
+      "qualifiedRuntimeSha256": "2407159dfd0f82e4e399317a7096f2eb98c99b148562ecbccf86101e633fc366",
+      "match": "CRLF/LF checkout normalization only"
+    },
+    {
+      "path": "test/forge-catalog.test.ts",
+      "canonicalSha256": "0c3d8143c56e8a10f649a7a4a96914eadbb0f4ed8e7ca2a1315af13a1212fc6a",
+      "qualifiedRuntimeSha256": "2dd6a0ae86c7c6787f9eb73983f6136c9bed5e0fbe8ae6d32ac54c8a9211358d",
+      "match": "CRLF/LF checkout normalization only"
+    },
+    {
+      "path": "test/forge-creator-plugin.test.ts",
+      "canonicalSha256": "6ac8256ac1942371adae8c172460a33a2e4ec930bafd7a49e5d7b75748a83572",
+      "qualifiedRuntimeSha256": "e65c3bd1e6a6a49820798a0767ed44d87cedfd1a307d521f8cb28a5128ed95af",
+      "match": "CRLF/LF checkout normalization only"
+    },
+    {
+      "path": "test/forge-creature.test.ts",
+      "canonicalSha256": "107d966a97ad212fb8b61242aa5ca46497117823879204beab176ef09b67d59a",
+      "qualifiedRuntimeSha256": "a7fa0803de425a88485e2fc18757a8d0f6728d0a767338e57f4c3a928e819c08",
+      "match": "CRLF/LF checkout normalization only"
+    },
+    {
+      "path": "test/forge-human-lipsync.test.ts",
+      "canonicalSha256": "942e75d61b42e3f7c5c80bea048f77796c1eb6fed90844f7df1173968a9edc3e",
+      "qualifiedRuntimeSha256": "b8be15dae435633cebb3893998d2799f871b1ffead473153d7a4ad308046aa13",
+      "match": "CRLF/LF checkout normalization only"
+    },
+    {
+      "path": "test/forge-world-composition.test.ts",
+      "canonicalSha256": "d2eb78d0d966cbd84bec5e58513e2b9067ba27be1e0d1a7e475076632474c6e5",
+      "qualifiedRuntimeSha256": "16833e0f8d62306120e1f5a0ea292fad2d3af7dbb2c1c7fc77d93bff6cb7ee3c",
+      "match": "CRLF/LF checkout normalization only"
+    },
+    {
+      "path": "test/forge-world.test.ts",
+      "canonicalSha256": "6941d68d51f5c2665a5a628fb8133044b9c9129d6c95ecb0db30b0da9dbdf624",
+      "qualifiedRuntimeSha256": "e72e3af2bb9e5076315a167a5852e1992a2c7becb24e0c1c65c6e649475a19ab",
+      "match": "CRLF/LF checkout normalization only"
+    },
+    {
+      "path": "test/http-shutdown.test.ts",
+      "canonicalSha256": "4f02623f927657bc095f6955bdca88db852d667ef7242342b8e849252d90a2f4",
+      "qualifiedRuntimeSha256": "4db0f5ad9b13faa5a82654ba4f6c2cf38897d9b4f0735412d355df75767a5ee7",
+      "match": "CRLF/LF checkout normalization only"
+    },
+    {
+      "path": "test/rea-xray-plugin.test.ts",
+      "canonicalSha256": "a290a5511625f242860eee94c90837d167853cfefba83a8f24d738c3e8c231df",
+      "qualifiedRuntimeSha256": "a290a5511625f242860eee94c90837d167853cfefba83a8f24d738c3e8c231df",
+      "match": "exact"
+    },
+    {
+      "path": "test/repository-handbook.test.ts",
+      "canonicalSha256": "433a85e9237d253e5668be614bb1e40620ad0753feb87b40b2d17ff1ac689104",
+      "qualifiedRuntimeSha256": "433a85e9237d253e5668be614bb1e40620ad0753feb87b40b2d17ff1ac689104",
+      "match": "exact"
+    },
+    {
+      "path": "test/repository-manual-reader.test.ts",
+      "canonicalSha256": "471df38e71f5d46902e5c1532055fc5b98f4275ca3cf9f2f88dc368e788d100b",
+      "qualifiedRuntimeSha256": "bf5ff49bb03c5630cc41693fd7aac55850437537c373a269292c905f5cdb814e",
+      "match": "CRLF/LF checkout normalization only"
+    }
+  ]
+}

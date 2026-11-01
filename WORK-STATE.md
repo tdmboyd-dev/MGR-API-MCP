@@ -1,5 +1,9 @@
 **Latest current 2026-10-31:** MGR API/MCP original creature creation + local direct Forge Studio HTTP proof now passes 68/68 tests; original GLB 114192 bytes SHA b019e661..., replay and tenant/scope/token controls verified. Forge Creator plugin source is skills-only; hosted ChatGPT/mobile remains OPEN. The ONLY canonical API resume authority is HANDOFF.md; lower dated facts are historical.
 
+## Current shared-edge engineering checkpoint — November 1, 2026
+
+Canonical Projects/MGR-API-MCP, branch repair/completion-2026-10-28, adopted published source02f2f9cc08ea9deaf57fabd2667031244287c3db. FullAPI247/247, unchanged Forge638run/635pass/3SAM skips, real SDK/HTTP/Blender artifacts and actual permanent-owner knowledge/replay compatibility are recorded in evidence/forge-joined-2026-11-01/. Personal Tevin execution/approvals/artifact custody, raw-WAV shared adapter, GLB structural validation and hosted/production remain open. Current HANDOFF.md and the same original queue govern. Older dated research/checkpoints below are historical source scopes.
+
 **Latest 2026-10-31 REA X-Ray checkpoint:** private plugin v0.1.0 saved; local REA MCP static ZIP inspection on Windows PASS; sibling Forge independently matched 302/302 child files, not redistribution rights. Current API/MCP regression 62/62 PASS. **HANDOFF.md is the sole resume authority**; October 30 results below are historical.
 
 **Current authority 2026-10-31:** `HANDOFF.md`. This document keeps prior recovery chronology; do not use its 2026-10-05 current-state claims as today's truth.

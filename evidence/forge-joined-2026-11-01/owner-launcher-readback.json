@@ -1,0 +1,129 @@
+{
+  "passed": true,
+  "scope": "Actual permanent ONE -> authenticated SDK/TCP API -> shared API-owned reader -> eleven owner-confirmed repository documentation indexes and complete current Forge handbook; no model call",
+  "projects": [
+    {
+      "project": "backpack",
+      "commit": "9b66f7a35981e2064a97a3c33b0ce96c9d1a5b2c",
+      "operatingDocuments": 19,
+      "indexReceipts": [
+        "69433821-db81-4561-a850-8a86dd26f3b5"
+      ]
+    },
+    {
+      "project": "code-monster",
+      "commit": "125b0c893cf3b135bd3920605424506ce50bff48",
+      "operatingDocuments": 31,
+      "indexReceipts": [
+        "688866b7-fa9c-40c0-b933-1b49b6015c63",
+        "b6af91c1-79b4-4646-9d06-280dfcec5f5e"
+      ]
+    },
+    {
+      "project": "omnidev",
+      "commit": "1473310f875668879edc12aea99ae20dc5fdf4ce",
+      "operatingDocuments": 215,
+      "indexReceipts": [
+        "25f8cb76-29d9-4e23-9351-9f6424cf1f13",
+        "056c98f5-bf3e-466f-8871-fff8a5c321cc",
+        "a4b9ceeb-994f-4647-90fb-b4356406a5fa",
+        "ad72dff6-bd89-4b06-a7a2-ba10300c1735",
+        "28f264e9-7d56-4f45-b66b-b92d0b796005",
+        "80470d3e-75f8-4ad6-9810-0b2ce5fceecc",
+        "5abf2c62-3385-43cb-94f6-9adf3d418d96",
+        "de1bcfa9-4899-46f9-b379-6f993f64a77e",
+        "3fdcde7d-d58f-4da4-bba5-d0ed6d80bd68",
+        "0ab8cbea-a2b2-4602-b7f0-2628a65fe56b",
+        "2d50373d-a519-4441-b020-da9bc5e10248"
+      ]
+    },
+    {
+      "project": "omnisight",
+      "commit": "c371fe1a49802f9fa136ba4d8748ced5731fae6e",
+      "operatingDocuments": 24,
+      "indexReceipts": [
+        "c66e14fd-7672-4cb3-9d85-49c689828531",
+        "6be2427f-c6ac-4b01-ab47-43ff742f382d"
+      ]
+    },
+    {
+      "project": "forge",
+      "commit": "6fe053a480d8699ab6382a0599849f7ed679bb06",
+      "operatingDocuments": 25,
+      "indexReceipts": [
+        "d549720f-5b4d-4e91-b6d6-5b7846694813",
+        "225629db-d4ae-4aa7-9f0c-5d4ad38c6ebc"
+      ]
+    },
+    {
+      "project": "creation",
+      "commit": "f43edeaee747557262cd65f68b965d67f773b83f",
+      "operatingDocuments": 46,
+      "indexReceipts": [
+        "9ab1449e-15cd-449c-bcd3-6da18adaa3b6",
+        "50a8f602-2001-44f1-9298-05ac38e068e2",
+        "8b23e954-3bf0-4a07-9d44-08c12f65c6c7"
+      ]
+    },
+    {
+      "project": "create-loco",
+      "commit": "1b0a022757627cb8044788091fa845745c2995b6",
+      "operatingDocuments": 15,
+      "indexReceipts": [
+        "3f74cf2a-ac6d-43a0-af84-8e8f06075c2e"
+      ]
+    },
+    {
+      "project": "hu",
+      "commit": "b30b42f56793ec96969b3a7db88903951e822629",
+      "operatingDocuments": 34,
+      "indexReceipts": [
+        "54e3d4d7-42ac-449b-a48b-5f4d3026c4c9",
+        "2ba12de4-8229-4953-887a-ff7badb5c5af"
+      ]
+    },
+    {
+      "project": "legacy",
+      "commit": "6f60bbdb83af29bfb3777c68bf013a3b384f76e8",
+      "operatingDocuments": 14,
+      "indexReceipts": [
+        "5dcdee09-ebcd-4c64-a13d-a54a1d85cbda"
+      ]
+    },
+    {
+      "project": "signme",
+      "commit": "6678f3c049ea591db8ae519413f167c932e70197",
+      "operatingDocuments": 3,
+      "indexReceipts": [
+        "45e334b0-f44e-427c-ac8f-9420ccc09990"
+      ]
+    },
+    {
+      "project": "agents",
+      "commit": "1b04601f0e84db3e3fc6810db849bb523965fb37",
+      "operatingDocuments": 72,
+      "indexReceipts": [
+        "c2625d00-f63a-498c-9fc1-f5d5a6c1d3a7",
+        "b609f52c-5f3e-4f6b-818c-7a7b8883b007",
+        "87d700e9-a3c6-4f64-8049-ffde49246e8c",
+        "68477ae9-94f9-4107-adb0-5ece0c41a0c9"
+      ]
+    }
+  ],
+  "fullForgeHandbookPages": 4,
+  "fullForgeHandbookLines": 184,
+  "fullForgeHandbookSha256": "6e064ab66c839effccad842cc8e2d46bfa4744edb5b54b42bcbe7705b6d20929",
+  "fullForgeHandbookReceipts": [
+    "2a8135f7-15fe-4bc3-8065-14045f91d8f5",
+    "f75d3560-0b1d-4c2f-bd75-d7b62901c815",
+    "2f548b91-0c47-41a7-86aa-fd6a8868194a",
+    "973d60f2-6f8c-4cf6-a39f-1e330f5db8bd"
+  ],
+  "unauthenticatedReadStatus": 401,
+  "arbitraryPathStatus": 409,
+  "modelCalls": 0,
+  "sourceWrites": 0,
+  "privateDocumentContentsPublished": false,
+  "allCapabilitiesAudited": false,
+  "allExecutionAdaptersConnected": false
+}
