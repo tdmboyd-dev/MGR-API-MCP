@@ -15,6 +15,10 @@
     "bytes": 3484,
     "sha256": "a6c0b1fcb224d906ed50613e4b1ed56cf0ee8b218602e2949723d5b75798b181"
   },
+  "PLAYBACK-JOIN-QUALIFICATION.json": {
+    "bytes": 1103,
+    "sha256": "03beac4b523ead473a9c0a02f65c54fef2eb4a8b86b1e4d7250d2eb4771c2b98"
+  },
   "QUALIFICATION.json": {
     "bytes": 2161,
     "sha256": "0253943c2de0164c2aeffbed716dc33ebe5c31816dcbd116f3b73ed7a0ced2cb"

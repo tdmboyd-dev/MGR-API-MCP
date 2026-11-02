@@ -1,0 +1,36 @@
+{
+  "sourceCommit": "a02fca2a0ec8280eefcc9266c75b2d805e2e9c53",
+  "retainedPeerVoiceSource": "0e902695feb1d3e80e23f0ea9594157b15f23e90",
+  "producerCommit": "6e69de5ba60c391445fa3bd665e83cb1abd3bb6b",
+  "affectedReceiving": {
+    "files": 7,
+    "passed": 39,
+    "failed": 0,
+    "skipped": 0,
+    "scope": "Compiled inert native WAV consumer, original child and owner service, explicit private Voice endpoint and native qualification factory; no real audio/window/model"
+  },
+  "actualNative": {
+    "passed": 14,
+    "total": 14,
+    "executions": 2,
+    "inferenceCalls": 0,
+    "permanentOwnerDbTouched": false
+  },
+  "priorBroaderRegression": {
+    "sourceCommit": "981b0f2",
+    "passed": 194,
+    "failed": 0,
+    "skipped": 0,
+    "notAWholeCurrentSourceRerun": true
+  },
+  "producerFullRegression": {
+    "sourceCommit": "82ca5c8d1ddbb1260c89e48990359128440c0931",
+    "passedProfiles": 92,
+    "failedProfiles": 0,
+    "blockedProfiles": 0
+  },
+  "normalEngineeringEnabled": false,
+  "physicalAudioVerified": false,
+  "browserUnlockVerified": false,
+  "fullProductCompletion": "Unassessed"
+}
