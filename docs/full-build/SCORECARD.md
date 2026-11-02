@@ -1,3 +1,7 @@
+## Joined voice-preset and source-refusal delivery — November 2, 2026 UTC
+
+Preserved peer ee97eeb explicit bounded voice-profile transport; merged source7ba75e3 passed verify334results:313pass/0fail/21explicit skips, typecheck/artifact/plugin checks;129owning inputs unchanged. Repository integrity1042/0 passes. Repeated actual native positive11/11 passed through the joined API,0inference/permanent owner DB untouched. Earlier source4684ed7/311pass scope remains separately recorded, not relabelled or summed. Current API publication includes the peer source; real voice/device and whole-product acceptance remain open. See evidence/native-source-recheck-2026-11-02/REPORT.md and JOINED-VERIFICATION.json.
+
 ## Current source refusal and dispatch observation — November 2, 2026
 
 Original Omni client now carries a strictly bounded definite source refusal to Tevin with a fixed explanation that native code was not started; arbitrary diagnostics, claimed authority or contradictory native-report state refuse. Runtime4684ed7 passed verify:311tests/0fail/21explicit skips, typecheck/artifact/plugin checks;128owning inputs unchanged; focused32/32. Actual four-repository after-claim withdrawal8/8 passes with0native execution/inference and fresh restart/replay. [Evidence](../../evidence/native-source-recheck-2026-11-02/REPORT.md).

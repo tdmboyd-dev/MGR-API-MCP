@@ -1,0 +1,650 @@
+{
+  "sourceCommit": "7ba75e3a171708d03260c352f7e06f585fa36c3a",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 2740,
+      "sha256": "ffa2bb7603ae1f50a76a3910bb46a101b234c8a1c05a77182341bfbaea6b3f0e"
+    },
+    {
+      "path": "integrations/forge-creator-plugin/README.md",
+      "bytes": 1596,
+      "sha256": "3b926e06bf50a20df724e85a6936859882d86d4be0f1b66c8d3463ae19ee0ca3"
+    },
+    {
+      "path": "integrations/forge-creator-plugin/RELEASE-RECEIPT.json",
+      "bytes": 1280,
+      "sha256": "23a08597cbb876300e8735eaa3c404429e645028a26135cf5166e04ab69ab5b2"
+    },
+    {
+      "path": "integrations/forge-creator-plugin/plugin.json",
+      "bytes": 1253,
+      "sha256": "5a2fd8b78d70ca5e545625fcb60e0fbf27838dd0ad2fae68bbaa1093aefdc8f0"
+    },
+    {
+      "path": "integrations/forge-creator-plugin/skills/mgr-forge-create/SKILL.md",
+      "bytes": 3775,
+      "sha256": "2c2505c4eac481376b0445802647c59bb4d56ec258018bbb6ce80e26bf90a1f4"
+    },
+    {
+      "path": "integrations/rea-xray-plugin/README.md",
+      "bytes": 1079,
+      "sha256": "d8b8729a33cfe04eed9ab3ccae1d3339115d5b44dd0f8751d538998953cbe587"
+    },
+    {
+      "path": "integrations/rea-xray-plugin/mcp.json",
+      "bytes": 262,
+      "sha256": "7e82235f288935c164428659eba6aa1ed67d1dc22a81ac82e345572ba1bbea4c"
+    },
+    {
+      "path": "integrations/rea-xray-plugin/plugin.json",
+      "bytes": 1438,
+      "sha256": "d9e1e174b380b6b2d7eb73c0ebb1e5ba49c3b953db11cde4124b6b84471eb196"
+    },
+    {
+      "path": "integrations/rea-xray-plugin/rea-dependency-pin.json",
+      "bytes": 1064,
+      "sha256": "35dcda86c44f0126e8cc596df2272664db2f25e374a4397fb5b1353e1fc16003"
+    },
+    {
+      "path": "integrations/rea-xray-plugin/server/rea-safe-mcp.mjs",
+      "bytes": 7321,
+      "sha256": "dd4409b4bb80d44ef74048612e725dd03e2787923a3c4e05407c277c22edbd81"
+    },
+    {
+      "path": "integrations/rea-xray-plugin/skills/mgr-rea-xray/SKILL.md",
+      "bytes": 3872,
+      "sha256": "aa495fc8a7b73fc90dc15a979d22096c5f974313b71f65e2d2083e753677afdd"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 22759,
+      "sha256": "998b7dc1ef44c99cd877176f9497635245244052a10845066ca9a5464b95fbbb"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1237,
+      "sha256": "c5dbf4478974dbf49b1c22f5a3e406affe40f7cb96779d7311cf3ade021b5e89"
+    },
+    {
+      "path": "scripts/mock-boundary-deps.mjs",
+      "bytes": 3713,
+      "sha256": "de32cd7f76528f3152b3dbda92bcb8d3949e88be0bc3dfc4db0566f3355a3684"
+    },
+    {
+      "path": "scripts/owner-department-client.ts",
+      "bytes": 12161,
+      "sha256": "d0e8df50075efc579f14de12136269c2870b4dffd016dbd2f2da693b3eea821d"
+    },
+    {
+      "path": "scripts/probe-sdk.mjs",
+      "bytes": 4688,
+      "sha256": "b3303f66061ebafbfbd46da1ef6bdf444f6bc1fb4b9a8043c6b981c76a747a55"
+    },
+    {
+      "path": "scripts/protect-local-owner.ps1",
+      "bytes": 1804,
+      "sha256": "1f80e1cf8062fb72d65aab11798be2073d74a30f11ac30b2167467baa9325eab"
+    },
+    {
+      "path": "scripts/prove-departments-local.ts",
+      "bytes": 5839,
+      "sha256": "4df7513781fed95e93075f1d172da92f4a3d1481e77e285be64c8edc8e2c2cb0"
+    },
+    {
+      "path": "scripts/prove-tevin-departments-local.ts",
+      "bytes": 15274,
+      "sha256": "87c4a86ae741b09aa3fe84dfe57148dd5fe0699a8ddceffac37a69c88295c986"
+    },
+    {
+      "path": "scripts/prove-tevin-omnidev-local.ts",
+      "bytes": 11631,
+      "sha256": "85ab949d853630eb3094aedc31e8c31a72ed8394afaee6ae40e5013ad54734b0"
+    },
+    {
+      "path": "scripts/render-chatgpt-plugin.mjs",
+      "bytes": 911,
+      "sha256": "b470263e690345990d658932530761e0c7c2153013be305bbffd8200fb003155"
+    },
+    {
+      "path": "scripts/restore_sources.py",
+      "bytes": 2199,
+      "sha256": "7faba44a3888045e802411aa105e6ca93e27f12011542462eaa98b752ac1c49c"
+    },
+    {
+      "path": "scripts/start-tevin-departments-local.ts",
+      "bytes": 6387,
+      "sha256": "9071d25f84880bcaa5a3ba505d12e6ee12f4839a955cf36d5d99cf04810a750e"
+    },
+    {
+      "path": "scripts/test_verifier.py",
+      "bytes": 3717,
+      "sha256": "616be7147eebe9cd0b6ed04dd7c251ead4c055a74aef48b73d693c8cd0aec871"
+    },
+    {
+      "path": "scripts/tevin-owner-startup.ts",
+      "bytes": 2309,
+      "sha256": "c608a8b0c7c5690ba2b6de41cb673ed6d2433d8d6561a96270d1ea8a6a20fa72"
+    },
+    {
+      "path": "scripts/verify-chatgpt-plugin.mjs",
+      "bytes": 1034,
+      "sha256": "ac3d490381597cb53465aee0fbc79c6094069b82197360118a422021b34fdc48"
+    },
+    {
+      "path": "scripts/verify-forge-creator-mcp.py",
+      "bytes": 5821,
+      "sha256": "6b4647d4358b432ec45877a509bfc12b73575db5ca644c713c2bab14a40f2727"
+    },
+    {
+      "path": "scripts/verify-forge-native-mcp-protocol.mjs",
+      "bytes": 15459,
+      "sha256": "0d24d9330b8b88ceb92bf69b2359cd1272dc780a11a8a4b566d9137d34ca895c"
+    },
+    {
+      "path": "scripts/verify-forge-studio-client.mjs",
+      "bytes": 5265,
+      "sha256": "e462267e65f44f403a49cad9bff34970ef664c39e355f3cd6b59ca7d134cc77e"
+    },
+    {
+      "path": "scripts/verify-forge-studio.py",
+      "bytes": 2566,
+      "sha256": "cba80526677ba68896f0157f485586f188a7c2a8bef94b16d356aaabe0878929"
+    },
+    {
+      "path": "scripts/verify-mcp-client.mjs",
+      "bytes": 3178,
+      "sha256": "4bd11537c557095251bc966c4651d29be5408caec1c9f3a7fb31b238e3674350"
+    },
+    {
+      "path": "scripts/verify-oauth-provider.mjs",
+      "bytes": 2725,
+      "sha256": "d3c0bfcbd29b6e89e9ba7ff456d73dc0743ca04fec79ece6feb19a562732d635"
+    },
+    {
+      "path": "scripts/verify-openai-remote-mcp.mjs",
+      "bytes": 2226,
+      "sha256": "26ef286fd024123eb2ef7abdf9e70abe1569e4e998bbed4d63b0681959ae4e5f"
+    },
+    {
+      "path": "scripts/verify-remote-boundary.mjs",
+      "bytes": 2262,
+      "sha256": "306c571374758f9d0bd8de38923358de308ca4e4a16fab6bbe882467807cede4"
+    },
+    {
+      "path": "scripts/verify_repository.py",
+      "bytes": 4846,
+      "sha256": "47de8278bd410141af1a886f2b10510abb7e0b92431f60d52e57016ba4402b52"
+    },
+    {
+      "path": "src/action-policy.ts",
+      "bytes": 1151,
+      "sha256": "c235bc6ea13d74a738437a9441e69af1c0dfa49ca99e07b2887211ed73bb6bcf"
+    },
+    {
+      "path": "src/action-sentinel.ts",
+      "bytes": 2483,
+      "sha256": "a7859a8d1fd55f488e0eb142532878aace4fc3f84c27366c7fe8e80a91ef0b05"
+    },
+    {
+      "path": "src/authz.ts",
+      "bytes": 1023,
+      "sha256": "a87809a7b1984a9db3026b2c0f7f6a37effb11d6a92cb68c33d7b0608724880c"
+    },
+    {
+      "path": "src/brain-controller.ts",
+      "bytes": 2038,
+      "sha256": "15113cdd22eb708213d370ba0eb25aab195a1ab400fb2b2a063ef3adb35b7c5f"
+    },
+    {
+      "path": "src/contracts.ts",
+      "bytes": 2877,
+      "sha256": "7a3f4832e9959fb2c22a60ae01cda6efd873d700514759949044c75cff7165de"
+    },
+    {
+      "path": "src/creation-client.ts",
+      "bytes": 1342,
+      "sha256": "f8e72d84b3bce50b4efc8c0d866e3c06385273dc162b9cf123716d7e53f9f869"
+    },
+    {
+      "path": "src/creation-mcp-tools.ts",
+      "bytes": 4294,
+      "sha256": "5d2650b1323b5e969da5c92d97e12c90088bda8010754957eb0a27a29c8ce2a8"
+    },
+    {
+      "path": "src/decision.ts",
+      "bytes": 1396,
+      "sha256": "9c18a1b00a93c668c6febcfb647f1d663a4e86ec76b277899d9a4727b1d4b347"
+    },
+    {
+      "path": "src/department-gateway.ts",
+      "bytes": 23237,
+      "sha256": "1c9e0df193f47915507618e862d9739021d19874ef95297cde63e18ca896e709"
+    },
+    {
+      "path": "src/ecosystem-catalog-data.ts",
+      "bytes": 20896,
+      "sha256": "dfd1e4382c9a7b9b57c99580a16ecb997cd2f6d581ffb6ced9b916af7a0ccb11"
+    },
+    {
+      "path": "src/ecosystem-catalog.ts",
+      "bytes": 1639,
+      "sha256": "f03ceb343e177e125f7f240ac3e896f5f4ca581acc53edada7ebfdce5d087bc5"
+    },
+    {
+      "path": "src/engine.ts",
+      "bytes": 5962,
+      "sha256": "b041419084d4f3e673345444a2af4c6d0473b42b4b62a4b88c8ba4c207bb3653"
+    },
+    {
+      "path": "src/forge-catalog-client.ts",
+      "bytes": 14075,
+      "sha256": "b865ae2f5de437f2b0cf1a5612c8e080162499ae907e913c27bee73d8ea29102"
+    },
+    {
+      "path": "src/forge-department.ts",
+      "bytes": 9828,
+      "sha256": "c76f15ae415ff3b98b283befdf24aa1252a88646721a9ac19e11ed1dca2a2051"
+    },
+    {
+      "path": "src/forge-glb.ts",
+      "bytes": 6363,
+      "sha256": "25c88fef408d7fd462145f8b521b85951c0291fbb0d41c6220b35bc6a82626e0"
+    },
+    {
+      "path": "src/forge-inputs.ts",
+      "bytes": 3149,
+      "sha256": "9d5345e0538050072c84198e9bf7130d903b1bede383a388ceb79e9ce5e92547"
+    },
+    {
+      "path": "src/forge-mcp-tools.ts",
+      "bytes": 33842,
+      "sha256": "5362b5eb77dc22864106fb9056af2bd36518812746856db1002c73386d48b2ff"
+    },
+    {
+      "path": "src/http-auth.ts",
+      "bytes": 2797,
+      "sha256": "2542c037615a32aba99a903e347c77b4cbe6afd7b466a7d433bb02b8f844f39e"
+    },
+    {
+      "path": "src/http-server.ts",
+      "bytes": 6842,
+      "sha256": "76d9ae9e7a49ecdc345397a99a709d3d7fab4e8615a67da7163bfc5f046205fb"
+    },
+    {
+      "path": "src/http-shutdown.ts",
+      "bytes": 4605,
+      "sha256": "74dc62e18ec7b0d16febdd4d3cd8f1aadffcb92f65dae60b71530114f7dbba89"
+    },
+    {
+      "path": "src/jwt-verifier.ts",
+      "bytes": 1660,
+      "sha256": "87d2f60fee5a4afc7642efd28117e8961a4252f833510c785bb9fa01296e96d6"
+    },
+    {
+      "path": "src/legacy-client.ts",
+      "bytes": 7725,
+      "sha256": "e00cb6e109c095187b153643279063a8974e511c97b91603980a7ff0c20063a9"
+    },
+    {
+      "path": "src/legacy-dispatch.ts",
+      "bytes": 2452,
+      "sha256": "87d4e4da0d60400c9602cf3091cef93bed10a88db0ea0d299834b1c3aa9bec4b"
+    },
+    {
+      "path": "src/legacy-event-read.ts",
+      "bytes": 3199,
+      "sha256": "df845a4d56e77db642043970e0adea1fb5a6b982a0d37ab5cdc6c3a4fa401b57"
+    },
+    {
+      "path": "src/legacy-mcp-tools.ts",
+      "bytes": 7048,
+      "sha256": "3ee6af495b299bce138b46cf0e684b10a51208c8bf8300a2ee4b4a868f8135d4"
+    },
+    {
+      "path": "src/local-department-edge.ts",
+      "bytes": 3873,
+      "sha256": "fe78d4648fa53eae5361bcf8b5d720139aa33aa1dee2c6941c46a5449b76315d"
+    },
+    {
+      "path": "src/mcp-http.ts",
+      "bytes": 6432,
+      "sha256": "1c7d1e91729d6cef6972df5f86aee9e45c3f13a950d71450942996719bd25aa8"
+    },
+    {
+      "path": "src/mcp-server.ts",
+      "bytes": 7566,
+      "sha256": "4fe91c140f54858b5092174f30cab6264c5e85df85921ffc75b096bcf7053485"
+    },
+    {
+      "path": "src/model-router.ts",
+      "bytes": 6382,
+      "sha256": "d4c382d5a1741c7f9ebe05ee8552b42eab13c86c2d8c59ed3f67fb53cc206d59"
+    },
+    {
+      "path": "src/oauth-metadata.ts",
+      "bytes": 1814,
+      "sha256": "d44e8c346930650ee192ae40a66f70509079ce4d853b93e774b82910e6314d79"
+    },
+    {
+      "path": "src/omnidev-client.ts",
+      "bytes": 12849,
+      "sha256": "62265ac3b28de66c6672e642b0e3658b5962fa45a3478cde35949565dbd7bf0b"
+    },
+    {
+      "path": "src/privacy-firewall.ts",
+      "bytes": 3346,
+      "sha256": "e3ca281372951b549049952ea03c73d8d3cc6fc69ca1f715f3f8988cfab750d9"
+    },
+    {
+      "path": "src/repository-manuals.d.mts",
+      "bytes": 322,
+      "sha256": "dc23b0286af5c88039cca4bf7fd3d1a321a500dbe95117e85f0f9864ef099c57"
+    },
+    {
+      "path": "src/repository-manuals.mjs",
+      "bytes": 4474,
+      "sha256": "9ba196827a3d67fdd5acdea3f6fa5995752488394865829decd5b412ddf75909"
+    },
+    {
+      "path": "src/repository-read-tools.ts",
+      "bytes": 8814,
+      "sha256": "60398582f67f97db1285c4e0e5ab3dde5820813f3f9a2a8cd90d8598328706a2"
+    },
+    {
+      "path": "src/security-research.ts",
+      "bytes": 1375,
+      "sha256": "a5e62c53ed3a94ff14c0d12f3c37c7fb3941156f9c674f6793e7fd0c28e615f3"
+    },
+    {
+      "path": "src/security.ts",
+      "bytes": 771,
+      "sha256": "b08e0e6901fa188fc85492b6da8e6072a104937e89124fcd556d464984203245"
+    },
+    {
+      "path": "src/state.ts",
+      "bytes": 1631,
+      "sha256": "03889a5e3b783d57a111ecc4c8c4683d1c45f65eacb54e1e401943c710c605aa"
+    },
+    {
+      "path": "src/voice-fabric.ts",
+      "bytes": 5643,
+      "sha256": "de86d1a8e344782c29f4e827f57a45c5aec31eb44c8b1bf7613b8e4165ea75ec"
+    },
+    {
+      "path": "test/action-sentinel.test.ts",
+      "bytes": 1983,
+      "sha256": "bc330b00390749875f0034cfbe4a0e8503cb66858088b6a9116b562360280ebb"
+    },
+    {
+      "path": "test/contracts.test.ts",
+      "bytes": 1233,
+      "sha256": "700f6a516ead9b10c62d241772e1003917c6d33ca74902cbed61ecba6142912c"
+    },
+    {
+      "path": "test/creation-mcp-tools.test.ts",
+      "bytes": 4537,
+      "sha256": "ae25f1b93ad44a3e1a84db8679af82e7108ac92ffcee137f59f468373fa3b4fb"
+    },
+    {
+      "path": "test/department-context.test.ts",
+      "bytes": 3234,
+      "sha256": "e89bdf0c20661db2246ab19862f28e7d0229300dbebfc4af829fa4dc45720c23"
+    },
+    {
+      "path": "test/department-gateway.test.ts",
+      "bytes": 5314,
+      "sha256": "21ed10580d8ea61cb9c7582a0c20fee2e81e859f2cc2e5748eec9577dadff7a1"
+    },
+    {
+      "path": "test/department-receipt-binding.test.ts",
+      "bytes": 6126,
+      "sha256": "9e088dd661182a30a762239d946e2c9cbdf24c817de32bc27d6615207b7a184b"
+    },
+    {
+      "path": "test/department-resume.test.ts",
+      "bytes": 4303,
+      "sha256": "ec9eb2dd479e1c3821e7da90a7f1f12bc108b8f32ab51ddc54353a645bc0e840"
+    },
+    {
+      "path": "test/ecosystem-catalog.test.ts",
+      "bytes": 1455,
+      "sha256": "b44df5d6a77285e2d6f0cba7b53abf44a4cbfd1038f6835569b8975523f438fa"
+    },
+    {
+      "path": "test/ecosystem-mcp-integration.test.ts",
+      "bytes": 2306,
+      "sha256": "40bda6621bc36fe2c7dae533ed51a09079abf8eb878a598542511c825996ae1b"
+    },
+    {
+      "path": "test/edge-shutdown.test.ts",
+      "bytes": 8081,
+      "sha256": "3eae39ff25877b4af4e8a8b4af1d282e4a45e00bf3a2bd062fa5d85b8e577338"
+    },
+    {
+      "path": "test/edge-tcp-loopback.test.ts",
+      "bytes": 16473,
+      "sha256": "0746b8ddafe815940c90c87cfe0a28ea84233c1deac8d2704ae2fc91e563388e"
+    },
+    {
+      "path": "test/engine.test.ts",
+      "bytes": 3029,
+      "sha256": "56f12b0e4314501d8870f9e67ea7e2a0f7ad79986775864d4d514451c183944e"
+    },
+    {
+      "path": "test/fixtures/forge-glb.ts",
+      "bytes": 1358,
+      "sha256": "e7614d6926ab2da29d1ce95d8fe0eaf9c78e20cfdbe0385a3d1895b7331b5c11"
+    },
+    {
+      "path": "test/forge-artifact-transfer.test.ts",
+      "bytes": 2805,
+      "sha256": "3ee2b490ad188c2c877259c68d4ef8654cbdce67057a755cbbfa0bba1bf29f92"
+    },
+    {
+      "path": "test/forge-authority-lifecycle.test.ts",
+      "bytes": 6998,
+      "sha256": "b185a13b9363af126730887c0028a0112b881e4f34ff7bc5ae6c1fa33a4f44f3"
+    },
+    {
+      "path": "test/forge-biome.test.ts",
+      "bytes": 4060,
+      "sha256": "07cbac26a5ca0c2e2c88ea150a8bad6c5e4c9f00e2e45192246c7e1ec27c5b86"
+    },
+    {
+      "path": "test/forge-catalog.test.ts",
+      "bytes": 3922,
+      "sha256": "0c3d8143c56e8a10f649a7a4a96914eadbb0f4ed8e7ca2a1315af13a1212fc6a"
+    },
+    {
+      "path": "test/forge-creator-plugin.test.ts",
+      "bytes": 1172,
+      "sha256": "6ac8256ac1942371adae8c172460a33a2e4ec930bafd7a49e5d7b75748a83572"
+    },
+    {
+      "path": "test/forge-creature.test.ts",
+      "bytes": 4485,
+      "sha256": "107d966a97ad212fb8b61242aa5ca46497117823879204beab176ef09b67d59a"
+    },
+    {
+      "path": "test/forge-department.test.ts",
+      "bytes": 14001,
+      "sha256": "ffd5dabb254ebcc6fb5a47480dab17fd5f56880c7941135733cdaf2dad9eb718"
+    },
+    {
+      "path": "test/forge-glb-boundary.test.ts",
+      "bytes": 6311,
+      "sha256": "54ee66f478de7ef710751956a417b3bf30468bea9952e5573ee6252cbe0e6667"
+    },
+    {
+      "path": "test/forge-human-lipsync.test.ts",
+      "bytes": 3975,
+      "sha256": "942e75d61b42e3f7c5c80bea048f77796c1eb6fed90844f7df1173968a9edc3e"
+    },
+    {
+      "path": "test/forge-request-binding.test.ts",
+      "bytes": 3469,
+      "sha256": "39f8400326048751114533bc844c81b4eeee916d5396a349ded018d4cdb70a40"
+    },
+    {
+      "path": "test/forge-world-composition.test.ts",
+      "bytes": 3983,
+      "sha256": "d2eb78d0d966cbd84bec5e58513e2b9067ba27be1e0d1a7e475076632474c6e5"
+    },
+    {
+      "path": "test/forge-world.test.ts",
+      "bytes": 3935,
+      "sha256": "6941d68d51f5c2665a5a628fb8133044b9c9129d6c95ecb0db30b0da9dbdf624"
+    },
+    {
+      "path": "test/http-auth.test.ts",
+      "bytes": 2009,
+      "sha256": "2529fd11f7a066deaef2af475d0b819ae4438750ba90a9667d7bf7406cf75c13"
+    },
+    {
+      "path": "test/http-shutdown.test.ts",
+      "bytes": 10833,
+      "sha256": "4f02623f927657bc095f6955bdca88db852d667ef7242342b8e849252d90a2f4"
+    },
+    {
+      "path": "test/integration-original-corpus.test.ts",
+      "bytes": 5386,
+      "sha256": "ad38fb3198a0449c378688c64fa72a6b384c042294893501ea7a8fb5057dbd5f"
+    },
+    {
+      "path": "test/jwt-verifier.test.ts",
+      "bytes": 1981,
+      "sha256": "61568d3b7901f121fd299d5e42a1d079f77c21210a1f68ece4639ffb28c64b5b"
+    },
+    {
+      "path": "test/legacy-client.test.ts",
+      "bytes": 1997,
+      "sha256": "e2c9f194460f66a238c3f46ea0ac3f02a56607ef4aa06eb6043a31c75996cd97"
+    },
+    {
+      "path": "test/legacy-dispatch.test.ts",
+      "bytes": 8439,
+      "sha256": "4f91db5fdd7e2c4fc578b4b087586086fd5c4c412422cd6c9983a525a66b397b"
+    },
+    {
+      "path": "test/legacy-event-read.test.ts",
+      "bytes": 4164,
+      "sha256": "dedfa546fcbcb88f6cb377bed8bc928c2e09679468f50040a3bedb90a88f3a24"
+    },
+    {
+      "path": "test/legacy-mcp-tools.test.ts",
+      "bytes": 6571,
+      "sha256": "706a6128d24816610c97be426078a6a0fd35d678c65a63a2d4e9fb79e0bed070"
+    },
+    {
+      "path": "test/legacy-transport.test.ts",
+      "bytes": 3140,
+      "sha256": "f0bb429044f7a86f23c303c5bed0da98bc72fad7c7dec1f60cf013a737527702"
+    },
+    {
+      "path": "test/mcp-http.test.ts",
+      "bytes": 2182,
+      "sha256": "18392ac8359c56f43a73cd23156c9956dd0a6bf6824f5bd0f82607d9ddcd13ad"
+    },
+    {
+      "path": "test/model-router.test.ts",
+      "bytes": 4235,
+      "sha256": "ef34cfeb0c6705950458c748e8aac3af4ba2b153c411ab255007a3f494fe5463"
+    },
+    {
+      "path": "test/native-identifier-recovery.test.ts",
+      "bytes": 6948,
+      "sha256": "34b28b08d823309f44ba8f47f976a445171c0d870f72afdb6593a7fb0fd2b380"
+    },
+    {
+      "path": "test/oauth-metadata.test.ts",
+      "bytes": 1230,
+      "sha256": "c00268e3f670be1e0abded0e0574a01e512811ed541c52792ca88d0bbd5bcf0a"
+    },
+    {
+      "path": "test/omnidev-client.test.ts",
+      "bytes": 19544,
+      "sha256": "07265dd55ea6bbe30dd99634a5bd2723d2d165ba555cf3075d6a73d9f21b1739"
+    },
+    {
+      "path": "test/owner-department-client.test.ts",
+      "bytes": 15556,
+      "sha256": "ef00352f22ec0dd17256341b9e218d93b1435d2fc12105f6fbb4622c6fef9550"
+    },
+    {
+      "path": "test/privacy-firewall.test.ts",
+      "bytes": 1190,
+      "sha256": "291ae960bbae4092559c87b7e09e6ee3b6b96d3abcbca23db79f431b8b7e2ee5"
+    },
+    {
+      "path": "test/rea-xray-plugin.test.ts",
+      "bytes": 2352,
+      "sha256": "a290a5511625f242860eee94c90837d167853cfefba83a8f24d738c3e8c231df"
+    },
+    {
+      "path": "test/repository-handbook.test.ts",
+      "bytes": 909,
+      "sha256": "433a85e9237d253e5668be614bb1e40620ad0753feb87b40b2d17ff1ac689104"
+    },
+    {
+      "path": "test/repository-manual-reader.test.ts",
+      "bytes": 2976,
+      "sha256": "471df38e71f5d46902e5c1532055fc5b98f4275ca3cf9f2f88dc368e788d100b"
+    },
+    {
+      "path": "test/repository-manual-tools.test.ts",
+      "bytes": 2351,
+      "sha256": "f412987bd184e458a77058da7a9e3c801cfbc4e386c4aa174cdc79fa865f12a5"
+    },
+    {
+      "path": "test/repository-read-cancellation.test.ts",
+      "bytes": 3351,
+      "sha256": "b679d113fe1b1914393ce542a0184e93eeb38625391dc559d3077fc6f1caeadb"
+    },
+    {
+      "path": "test/repository-read-tools.test.ts",
+      "bytes": 6701,
+      "sha256": "eb5e9bedbfd0ba803d8e4358d7b582842f482c0f56411e533d33a796aac0f273"
+    },
+    {
+      "path": "test/security-boundaries.test.ts",
+      "bytes": 2209,
+      "sha256": "98eb5f758e220f70debad24ad6559fa10eda0261cb482345574b14697d958f75"
+    },
+    {
+      "path": "test/security-controller.test.ts",
+      "bytes": 2963,
+      "sha256": "2c29a4a95ec82799ed091de20eaa8c14aef066959d04ce71d8ec58fcf24acda2"
+    },
+    {
+      "path": "test/security-research.test.ts",
+      "bytes": 1008,
+      "sha256": "91209007c4af3db6602292f1ae8b3f8f22e1bb7d9119d9014927344cf4ed45aa"
+    },
+    {
+      "path": "test/signme-artifact.test.ts",
+      "bytes": 3284,
+      "sha256": "01c7fc646f6cfcd087c468f84c625cdeab521e752ed3afd087304ccca3e06034"
+    },
+    {
+      "path": "test/source-navigation-integration.test.ts",
+      "bytes": 20767,
+      "sha256": "5fe9bd49b037b7ea9cec0b5e342709b9ad092395c43adb9d8476de117cc3c09e"
+    },
+    {
+      "path": "test/tevin-owner-startup.test.ts",
+      "bytes": 6453,
+      "sha256": "b5dda6bbefc962618627907e8804863db3a4e297a709c7e2e40b49778833222a"
+    },
+    {
+      "path": "test/voice-fabric.test.ts",
+      "bytes": 2856,
+      "sha256": "a4f673ab4ecc5e8acbeb4752d4e09ab164c74bcf4ba17b8c5211fa0eb956a4a4"
+    },
+    {
+      "path": "test/voice-profile-transport.test.ts",
+      "bytes": 2077,
+      "sha256": "05ddc62ffa8962bcc8ae60e1e6bec2efb58cd2badd0245998cecb4036d6d7151"
+    }
+  ]
+}
