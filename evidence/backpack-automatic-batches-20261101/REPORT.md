@@ -1,0 +1,9 @@
+# Backpack 0.7.0 result pages through the existing API edge
+
+The API loads the trusted companion registrar; its normal server and permission architecture are unchanged. The updated qualification scripts expect the eleven-read Backpack 0.7.0 catalog and exercise stored inventory/parser results beyond summary previews. A controlled committed source fixture contains 235 actual TODO comments: the HTTP parser reader returns 35 remaining findings after offset 200. Inventory paging returns the final row after offset 2 of 3. No fixture source program or package command is executed.
+
+Normal source HTTP 28/28 and freshly compiled HTTP 28/28 pass with actual locally signed JWTs, local JWKS, SQLite records, eight Code Monster source reads and auth refusal controls. Both new page readers also refuse wrong actor, tenant, missing component scope and removed binding. Backpack-only normal HTTP 11/11 passes. Relevant authentication, remote-handler, shutdown and metadata regression 21/21 pass; strict TypeScript emission and repository verification pass. These denominators overlap; they are not a whole-platform percentage.
+
+Identity is synthetic and owned. The test transport maps the intended HTTPS resource/Host to local TCP; real hosted TLS, OAuth accounts, permanent Tevin, provider and production acceptance are not established. The Docker qualifier now expects the eleven-tool catalog; only JavaScript syntax was checked. No Docker daemon probe, container run or computer restart occurred.
+
+The companion source is the qualified Backpack 0.7.0 runtime at commit 8f3101c10561c1641113405981d16c8d93946631. Its separate private source tests and account/desktop installation receipts remain in its owning repository; no private config, account export, signed URL, SQLite database or user project source is copied into this public repository. Existing legacy/historical receipts remain unchanged.

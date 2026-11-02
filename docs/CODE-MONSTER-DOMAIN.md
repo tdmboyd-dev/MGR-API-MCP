@@ -1,7 +1,7 @@
 # Code Monster source tools through the existing API edge
 
 The normal HTTP service can now register Code Monster's existing eight read-only
-source tools alongside Backpack's nine guarded context tools. This connects
+source tools alongside Backpack 0.7.0's eleven guarded context/result tools. This connects
 source intelligence to the shared edge. MGR-ONE/Tevin still owns reasoning and
 permission decisions; Code Monster owns its source observations and candidate
 evidence. No new brain, scheduler, token issuer or canonical job database exists.

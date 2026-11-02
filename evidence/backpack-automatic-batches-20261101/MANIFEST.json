@@ -1,0 +1,57 @@
+{
+  "scope": "Public-safe owned local source/compiled HTTP and authorization qualification; no real credentials, customer data, private account exports or production acceptance.",
+  "qualification": [
+    {
+      "file": "backpack-070-normal-source-http-20261101.txt",
+      "passed": 28,
+      "scope": "Actual normal HTTP/JWKS/JWT/SQLite plus real Git/compiler Code Monster and Backpack; synthetic identity, no deployment/provider/Tevin acceptance"
+    },
+    {
+      "file": "backpack-070-normal-compiled-http-20261101.txt",
+      "passed": 28,
+      "scope": "Actual normal HTTP/JWKS/JWT/SQLite plus real Git/compiler Code Monster and Backpack; synthetic identity, no deployment/provider/Tevin acceptance"
+    },
+    {
+      "file": "backpack-070-normal-backpack-only-http-20261101.txt",
+      "passed": 11,
+      "scope": "Actual local TCP HTTP entrypoint/JWKS/JWT/SQLite; synthetic identity, no deployment/provider/Tevin acceptance"
+    }
+  ],
+  "files": [
+    {
+      "path": "backpack-070-api-auth-regressions-20261101.txt",
+      "bytes": 1990,
+      "sha256": "580e3c5aa2ed97f938e7195bc92bb5ca6a286b6741f48b9dda7bef2f25af816c"
+    },
+    {
+      "path": "backpack-070-api-compile-20261101.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "backpack-070-api-repository-check-20261101.txt",
+      "bytes": 174,
+      "sha256": "d0d0b57aa995e92a6c3ddf9ae340ce9fdec99e070cdfc61abb5883f1f520a567"
+    },
+    {
+      "path": "backpack-070-normal-backpack-only-http-20261101.txt",
+      "bytes": 704,
+      "sha256": "ec82be36d3112e80d4e75418c628423a6070e7d5d598384cb6a99d585b9e401c"
+    },
+    {
+      "path": "backpack-070-normal-compiled-http-20261101.txt",
+      "bytes": 1519,
+      "sha256": "a610be20fc6e6911d2b9f8da61c6ee8db5ea990c598fca02e5fac88679c818c4"
+    },
+    {
+      "path": "backpack-070-normal-source-http-20261101.txt",
+      "bytes": 1505,
+      "sha256": "352d50d5c2c358ede6309db94ef070cd8d20f18b0ba62408f2b8461f7f91e7cf"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 1896,
+      "sha256": "a5c9bcc222385d4e53608518eb548c169938fcd51cdd4b8f6c186f986a7b1e65"
+    }
+  ]
+}

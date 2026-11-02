@@ -16,7 +16,7 @@ if(!toolkit||!path.isAbsolute(toolkit))throw Error('Set MGR_BACKPACK_TOOLKIT_ROO
 const {Backpack}=await import(pathToFileURL(path.join(toolkit,'src/engine.js')).href);
 const base=fs.mkdtempSync(path.join(os.tmpdir(),'mgr-backpack-http-')),root=path.join(base,'source');fs.mkdirSync(root);
 fs.writeFileSync(path.join(root,'README.md'),'Owned HTTP verification fixture. No repository code is run.');
-fs.writeFileSync(path.join(root,'fixture.ts'),'export function ownedSourceCapability(value: number){ return value + 1; }\nexport const observed = ownedSourceCapability(2);\n');
+fs.writeFileSync(path.join(root,'fixture.ts'),'export function ownedSourceCapability(value: number){ return value + 1; }\nexport const observed = ownedSourceCapability(2);\n'+Array.from({length:235},(_,index)=>'// TODO HTTP marker '+index).join('\n'));
 fs.writeFileSync(path.join(root,'package.json'),JSON.stringify({private:true,scripts:{test:'FIXTURE_BODY_MUST_NOT_LEAVE_AUTOMATION'}}));
 const gitEnv:NodeJS.ProcessEnv={GIT_CONFIG_NOSYSTEM:'1',GIT_CONFIG_GLOBAL:'/dev/null'};for(const name of ['PATH','SystemRoot','TEMP','TMP'])if(process.env[name])gitEnv[name]=process.env[name];
 const git=(...args:string[])=>execFileSync('git',['-C',root,'-c','core.hooksPath=/dev/null','-c','commit.gpgsign=false','-c','core.fsmonitor=false',...args],{env:gitEnv,encoding:'utf8',stdio:['ignore','pipe','pipe']});
@@ -29,7 +29,7 @@ const host={dataDir:path.join(base,'store'),roots:[root],actor:'owned-host'};
 fs.writeFileSync(config,JSON.stringify(host));
 const binding={tenantId:'owned-tenant',actorId:'owned-actor',project:'owned-project'};
 fs.writeFileSync(bindingPath,JSON.stringify([binding]));fs.writeFileSync(cmBindings,JSON.stringify([binding,...(extraSourceRoot?[{...binding,project:'real-large-source'}]:[])]));
-const engine=new Backpack(host);engine.register({id:binding.project,root,purpose:'Real normal HTTP qualification',owner:'fixture'});engine.close();
+const engine=new Backpack(host);engine.register({id:binding.project,root,purpose:'Real normal HTTP qualification',owner:'fixture'});engine.audit(binding.project);engine.close();
 const {privateKey,publicKey}=await generateKeyPair('RS256');
 const key={...await exportJWK(publicKey),kid:'owned-fixture-key',alg:'RS256',use:'sig'};
 const jwks=createServer((_req,res)=>{res.setHeader('content-type','application/json');res.end(JSON.stringify({keys:[key]}));});
@@ -56,13 +56,15 @@ try{
  const metadata=await (await localFetch(origin+'/.well-known/oauth-protected-resource')).json() as any;assert.equal(metadata.resource,audience);checks.push('real-protected-resource-metadata');
  const access=await token('owned-actor','owned-tenant','tools:read backpack:read code-monster:read',extraSourceRoot?'10m':'2m');await jwtVerify(access,createRemoteJWKSet(new URL(issuer+'/jwks')),{issuer,audience});const probe=await localFetch(audience,{method:'POST',headers:{authorization:'Bearer '+access,'content-type':'application/json',accept:'application/json, text/event-stream'},body:JSON.stringify({jsonrpc:'2.0',id:1,method:'initialize',params:{protocolVersion:'2025-11-25',capabilities:{},clientInfo:{name:'probe',version:'1'}}})});assert.equal(probe.status,200,await probe.text());const client=await connect(access);
  const tools=(await client.listTools()).tools;
- assert.equal(tools.filter(tool=>tool.name.startsWith('mgr_backpack_')).length,9);
- assert(!tools.some(tool=>tool.name.startsWith('mgr_legacy_')));checks.push('normal-startup-nine-read-tools-no-legacy-transport');
+ assert.equal(tools.filter(tool=>tool.name.startsWith('mgr_backpack_')).length,11);
+ assert(!tools.some(tool=>tool.name.startsWith('mgr_legacy_')));checks.push('normal-startup-eleven-read-tools-no-legacy-transport');
  const context=await client.callTool({name:'mgr_backpack_context',arguments:{project:binding.project}});assert(!context.isError);checks.push('signed-jwt-actual-project-context');
+ const inventory=await client.callTool({name:'mgr_backpack_inventory_page',arguments:{project:binding.project,offset:2,limit:2}});assert(!inventory.isError);const inventoryData=JSON.parse((inventory.content as any[])[0].text).data;assert.equal(inventoryData.total,3);assert.equal(inventoryData.items.length,1);assert.equal(inventoryData.nextOffset,null);checks.push('actual-saved-inventory-page');
+ const auditPage=await client.callTool({name:'mgr_backpack_audit_page',arguments:{project:binding.project,offset:200,limit:100}});assert(!auditPage.isError);const auditData=JSON.parse((auditPage.content as any[])[0].text).data;assert.equal(auditData.total,235);assert.equal(auditData.items.length,35);assert.equal(auditData.nextOffset,null);checks.push('actual-saved-parser-page-beyond-summary');
  for(const [actor,tenant,scope] of [['other-actor','owned-tenant','tools:read backpack:read'],['owned-actor','other-tenant','tools:read backpack:read'],['owned-actor','owned-tenant','tools:read']]){
-  const other=await connect(await token(actor,tenant,scope));const result=await other.callTool({name:'mgr_backpack_context',arguments:{project:binding.project}});assert.equal(result.isError,true);checks.push('refused-'+(actor==='other-actor'?'actor':tenant==='other-tenant'?'tenant':'scope'));
+  const other=await connect(await token(actor,tenant,scope));const result=await other.callTool({name:'mgr_backpack_context',arguments:{project:binding.project}});assert.equal(result.isError,true);for(const name of ['mgr_backpack_inventory_page','mgr_backpack_audit_page'])assert.equal((await other.callTool({name,arguments:{project:binding.project}})).isError,true);checks.push('refused-'+(actor==='other-actor'?'actor':tenant==='other-tenant'?'tenant':'scope'));
  }
- fs.writeFileSync(bindingPath,'[]');assert.equal((await client.callTool({name:'mgr_backpack_context',arguments:{project:binding.project}})).isError,true);checks.push('binding-revocation-takes-effect-without-restart');
+ fs.writeFileSync(bindingPath,'[]');assert.equal((await client.callTool({name:'mgr_backpack_context',arguments:{project:binding.project}})).isError,true);for(const name of ['mgr_backpack_inventory_page','mgr_backpack_audit_page'])assert.equal((await client.callTool({name,arguments:{project:binding.project}})).isError,true);checks.push('binding-revocation-takes-effect-without-restart');
  fs.writeFileSync(bindingPath,JSON.stringify([binding]));assert(!(await client.callTool({name:'mgr_backpack_context',arguments:{project:binding.project}})).isError);checks.push('explicit-binding-restored');
  const expired=await localFetch(audience,{headers:{authorization:'Bearer '+await token('owned-actor','owned-tenant','tools:read backpack:read','-1s')}});assert.equal(expired.status,401);checks.push('expired-signed-token-refused');
  assert.equal(fs.readFileSync(path.join(root,'README.md'),'utf8'),'Owned HTTP verification fixture. No repository code is run.');checks.push('source-unchanged');

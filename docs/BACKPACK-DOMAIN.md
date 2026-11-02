@@ -3,7 +3,7 @@
 Backpack is a plugin with an embedded skill, operating directions and a callable
 runtime. Local desktop stdio and a remote authenticated service are distinct
 connection paths. A local package cannot make a browser execute a Windows process.
-This integration exposes nine bounded Backpack reads through API-MCP's normal
+With Backpack 0.7.0, this integration exposes eleven bounded Backpack reads through API-MCP's normal
 `npm run start:http` entrypoint. API-MCP remains the shared edge; MGR-ONE retains
 brain/permission ownership. No second scheduler, task store or grant engine is added.
 
@@ -56,13 +56,19 @@ remote MCP configuration. Read protected-resource metadata at
 `/.well-known/oauth-protected-resource`. Validate the account/tenant's real connection
 before claiming browser/mobile availability. A local TCP qualification is not deployment.
 
-The nine reads are `mgr_backpack_context`, `mgr_backpack_brief`,
+The eleven reads are `mgr_backpack_context`, `mgr_backpack_brief`,
 `mgr_backpack_audit`, `mgr_backpack_report`, `mgr_backpack_tasks`,
 `mgr_backpack_memory`, `mgr_backpack_capability_card`,
-`mgr_backpack_capability_map` and `mgr_backpack_capability_draft`.
+`mgr_backpack_capability_map`, `mgr_backpack_capability_draft`,
+`mgr_backpack_inventory_page` and `mgr_backpack_audit_page`.
 Single-project calls use `project`; report additionally requires `task`. Map requires
 an explicit list of 1–10 authorized project IDs. Draft requires owner descriptions
 and 1–8 source evidence paths. It proposes a card and never writes or certifies it.
+Inventory and parser arrays in summaries are previews. Page tools accept offset/limit
+(maximum 100 rows) and return exact totals/nextOffset; follow until null. Preserve
+scanId/auditId for one capture. The owner host captures all eligible source in
+automatic batches; the edge only reads those stored results.
+
 Use Backpack's embedded manual for exact schemas. No remote execution/write tool
 is registered by this adapter. Descriptions and current hashes do not grant authority.
 
@@ -80,7 +86,7 @@ npm run verify
 ```
 
 The first command starts the actual normal HTTP process with an owned SQLite
-store, signed synthetic JWTs and local JWKS service. It checks nine tool registration,
+store, signed synthetic JWTs and local JWKS service. It checks eleven-tool registration,
 context, wrong actor/tenant/scope, binding removal/restoration, token expiry and
 unchanged source. It uses local TCP to emulate the HTTPS reverse proxy's public
 Host and resource URL; no TLS, public OAuth account, provider or deployment is claimed.
@@ -95,3 +101,16 @@ For packaged service builds and the separately gated real runtime check, read [B
 
 
 Code Monster's existing source tools can be composed alongside these Backpack reads using a separate domain scope and host bindings. See [CODE-MONSTER-DOMAIN.md](CODE-MONSTER-DOMAIN.md). Current local normal-HTTP proof covers both components; hosted/account/currentTevin and combined-container qualification remain separate.
+
+
+## 0.7.0 automatic-batch qualification
+
+Normal source and compiled HTTP each passed 28 scoped checks with actual signed
+local JWTs/JWKS, SQLite inventory/parser pages, all eight Code Monster source reads
+and refusal controls. The parser-page check retrieves 35 of 235 saved findings after
+offset 200; tenant/actor/scope and live-binding removal also deny both new reads.
+The corresponding public-safe receipts are in evidence/backpack-automatic-batches-20261101.
+These checks use owned synthetic identity and a local transport mapping; hosted
+TLS/OAuth/account/permanent Tevin and actual container runtime remain unverified.
+The container qualifier targets the updated eleven-tool catalog; only its syntax
+is checked in this wave. No Docker daemon was probed or computer restarted.

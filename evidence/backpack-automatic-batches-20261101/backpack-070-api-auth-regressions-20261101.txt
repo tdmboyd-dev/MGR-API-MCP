@@ -1,0 +1,29 @@
+✔ Backpack domain stays absent until explicitly configured by trusted startup (34.4753ms)
+✔ partial and relative Backpack startup configuration refuses before loading code (16.8843ms)
+✔ MCP request auth fails closed for missing/invalid bearer token (2.6707ms)
+✔ MCP request auth binds audience and scopes (2.072ms)
+✔ no success until both owners confirm, listener settles first (6.8908ms)
+✔ no success until both owners confirm, handler settles first (0.577ms)
+✔ injected never-settling handler still starts listener close and has a referenced deadline (0.6132ms)
+✔ injected listener synchronous throw cannot skip handler cleanup or hide its exact cause (1.2271ms)
+✔ injected handler synchronous throw cannot skip listener cleanup (0.6004ms)
+✔ both callback failure and async rejection remain private and never yield exit zero (1.1195ms)
+✔ undefined Promise rejection is failure, not a successful handler acknowledgment (0.4092ms)
+✔ deadline survives force-close throw and late failure cannot rewrite timed-out result (0.5213ms)
+✔ an injected failed timer reference still attempts both closes and fails conservatively (0.4327ms)
+✔ logging failure cannot bypass cleanup and raw causes never become log payloads (0.7067ms)
+✔ actual normal HTTP entrypoint gates shutdown and preserves discovered scopes (484.9306ms)
+✔ actual normal HTTP entrypoint gates shutdown and preserves explicit scopes (61.8412ms)
+✔ remote MCP factory exposes a web-standard fetch handler (1.8465ms)
+✔ authorized remote MCP binding derives identity from verified token (69.2992ms)
+✔ authorized remote MCP handler fails closed before protocol dispatch (6.68ms)
+✔ protected resource metadata requires HTTPS audience and authorization server (3.4061ms)
+✔ WWW-Authenticate advertises resource metadata and insufficient scope (0.4296ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9353.0363
