@@ -17,3 +17,5 @@ evidence/owner-launch-completion-2026-10-30/** -text whitespace=blank-at-eol,bla
 # Preserve exact automatic-batch qualification output across Windows/Linux.
 /evidence/backpack-automatic-batches-20261101/** -text whitespace=trailing-space,space-before-tab,cr-at-eol
 /evidence/backpack-automatic-batches-20261101/*.txt -diff
+
+/evidence/backpack-capability-pages-20261102/** -text -diff

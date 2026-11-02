@@ -47,8 +47,8 @@ try{
  const metadata=await (await localFetch(origin+'/.well-known/oauth-protected-resource')).json() as any;assert.equal(metadata.resource,audience);checks.push('real-protected-resource-metadata');
  const access=await token();await jwtVerify(access,createRemoteJWKSet(new URL(issuer+'/jwks')),{issuer,audience});const probe=await localFetch(audience,{method:'POST',headers:{authorization:'Bearer '+access,'content-type':'application/json',accept:'application/json, text/event-stream'},body:JSON.stringify({jsonrpc:'2.0',id:1,method:'initialize',params:{protocolVersion:'2025-11-25',capabilities:{},clientInfo:{name:'probe',version:'1'}}})});assert.equal(probe.status,200,await probe.text());const client=await connect(access);
  const tools=(await client.listTools()).tools;
- assert.equal(tools.filter(tool=>tool.name.startsWith('mgr_backpack_')).length,11);
- assert(!tools.some(tool=>tool.name.startsWith('mgr_legacy_')));checks.push('normal-startup-eleven-read-tools-no-legacy-transport');
+ assert.equal(tools.filter(tool=>tool.name.startsWith('mgr_backpack_')).length,12);
+ assert(!tools.some(tool=>tool.name.startsWith('mgr_legacy_')));checks.push('normal-startup-twelve-read-tools-no-legacy-transport');
  const context=await client.callTool({name:'mgr_backpack_context',arguments:{project:binding.project}});assert(!context.isError);checks.push('signed-jwt-actual-project-context');
  for(const [actor,tenant,scope] of [['other-actor','owned-tenant','tools:read backpack:read'],['owned-actor','other-tenant','tools:read backpack:read'],['owned-actor','owned-tenant','tools:read']]){
   const other=await connect(await token(actor,tenant,scope));const result=await other.callTool({name:'mgr_backpack_context',arguments:{project:binding.project}});assert.equal(result.isError,true);checks.push('refused-'+(actor==='other-actor'?'actor':tenant==='other-tenant'?'tenant':'scope'));

@@ -1,0 +1,19 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+4 !== 5
+
+    at <anonymous> (C:\Users\cool\Documents\Codex\2026-10-29\i-x20\work\trilogy\MGR-API-MCP-CAPABILITY-PAGES-20261102\scripts\verify-four-repo-edge.ts:73:239)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 4,
+  expected: 5,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.21.0

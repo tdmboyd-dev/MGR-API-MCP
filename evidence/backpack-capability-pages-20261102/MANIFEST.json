@@ -1,0 +1,40 @@
+{
+  "scope": "Original normal/compiled local HTTP with synthetic owned issuer and actual companion stores; preserves initial fixture failure; excludes credentials/private config/source graphs",
+  "files": [
+    {
+      "path": "api-backpack-catalog-normal-http-20261102.txt",
+      "bytes": 558,
+      "sha256": "d8821a817d1c8d0a3e5dfc8c0ea813f05119e9c078fdfce989fd793ed9aef6af"
+    },
+    {
+      "path": "api-backpack-catalog-normal-http-fixed-20261102.txt",
+      "bytes": 1584,
+      "sha256": "76ca9cfebcaf0eeb171a84b03d93157e454169ab91f48a480ac44e1912e51bf2"
+    },
+    {
+      "path": "api-backpack-catalog-compiled-http-20261102.txt",
+      "bytes": 1598,
+      "sha256": "754ee26c4602077d05863809fcdf8afac160d34b784959acf37e046f6daf6e7e"
+    },
+    {
+      "path": "api-backpack-catalog-domain-http-20261102.txt",
+      "bytes": 704,
+      "sha256": "32e2572f5f551f5a90507a72c2526eb65edba25d8471cc8eff6e56830e27caa5"
+    },
+    {
+      "path": "api-backpack-catalog-repository-20261102.txt",
+      "bytes": 174,
+      "sha256": "6be0452828d54a38980e1b964368682ce76db7d785fe589f39a2c509a73ffde5"
+    },
+    {
+      "path": "api-backpack-catalog-auth-lifecycle-20261102.txt",
+      "bytes": 2573,
+      "sha256": "b86726b4f3bd799ebb3077ffe08bd5cfef22e26fb3f4983fa45041b32b4ff8a5"
+    },
+    {
+      "path": "api-backpack-catalog-repository-final-20261102.txt",
+      "bytes": 174,
+      "sha256": "b56c88365ee1d82c7a32f35e1a61c85435d169f5dff2c334e62b657c3ef2beaf"
+    }
+  ]
+}

@@ -1,3 +1,9 @@
+## Backpack0.8.0 complete capability pages — November 2, 2026
+
+The existing shared HTTP edge now consumes twelve read-only Backpack tools, including mgr_backpack_capability_page. Actual normal-source and freshly emitted compiled HTTP each passed30/30 checks; Backpack-only HTTP11/11 and repository verifier482/482 passed. A controlled catalog with128total interfaces returns its last interface through the real authenticated HTTP tool; actor/tenant/scope/binding refusals cover the new reader. Source input catalog JSONL is separately validated and is not counted as a JS/TS parser input. The initial expected-five-files fixture failure is preserved; the correct eligible inventory is four, because catalog JSONL is deliberately outside inventory's supported source formats. No parser exclusion or permission was weakened.
+
+Only owning qualification scripts/documentation changed here. Current source/compiled qualification uses Backpack source0.8.0; its account/install/native release and permanent Tevin/provider/hosted/container/production remain separate. No Docker probe or PC restart. Preserve the original shared edge, owner records and concurrent native intake work. Evidence: evidence/backpack-capability-pages-20261102.
+
 ## Completed scoped qualification: Backpack 0.7.0 automatic-result pages
 
 The eleven-read companion catalog now has normal-source 28/28, compiled 28/28, Backpack-only 11/11 and affected auth/lifecycle 21/21 evidence. Exact stored inventory/parser pages and refusal paths were exercised. Follow docs/BACKPACK-DOMAIN.md and evidence/backpack-automatic-batches-20261101. Hosting/current native activation/real OAuth/Tevin/container/production remain their own gates; no Docker probe or restart was performed. Historical queue items below retain their own evidence and broader acceptance.

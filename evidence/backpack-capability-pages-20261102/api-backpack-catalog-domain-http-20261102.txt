@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-02T08:59:30.927Z",
+  "scope": "Actual local TCP HTTP entrypoint/JWKS/JWT/SQLite; synthetic identity, no deployment/provider/Tevin acceptance",
+  "passed": 11,
+  "checks": [
+    "unauthenticated-refused",
+    "real-protected-resource-metadata",
+    "normal-startup-twelve-read-tools-no-legacy-transport",
+    "signed-jwt-actual-project-context",
+    "refused-actor",
+    "refused-tenant",
+    "refused-scope",
+    "binding-revocation-takes-effect-without-restart",
+    "explicit-binding-restored",
+    "expired-signed-token-refused",
+    "source-unchanged"
+  ],
+  "toolkitVersion": "0.8.0",
+  "normalEntrypoint": "src/http-server.ts",
+  "legacyConfigured": false
+}

@@ -1,0 +1,34 @@
+✔ Backpack domain stays absent until explicitly configured by trusted startup (3.7569ms)
+✔ partial and relative Backpack startup configuration refuses before loading code (1.245ms)
+✔ closed authenticated edge refuses a fresh request before verifier or SDK server construction (89.5444ms)
+✔ authentication released after completed close cannot construct or dispatch a new MCP server (24.0141ms)
+✔ fixed64 outer budget counts pending authentication before SDK construction and drains originals (781.8458ms)
+✔ trusted lower budget denial and invalid authentication release exactly their own admission slots (25.5563ms)
+✔ outer slot remains held through actual SDK tool dispatch and final handler cleanup (51.6666ms)
+✔ closing is sticky and idempotent while an independent wrapper remains usable (9.7718ms)
+✔ host cannot disable or enlarge the fixed pending request ceiling (2.142ms)
+✔ an actual verifier exception releases only its reservation without dispatch retry (14.4631ms)
+✔ MCP request auth fails closed for missing/invalid bearer token (2.3857ms)
+✔ MCP request auth binds audience and scopes (4.5882ms)
+✔ no success until both owners confirm, listener settles first (10.6222ms)
+✔ no success until both owners confirm, handler settles first (0.6395ms)
+✔ injected never-settling handler still starts listener close and has a referenced deadline (0.6844ms)
+✔ injected listener synchronous throw cannot skip handler cleanup or hide its exact cause (0.7597ms)
+✔ injected handler synchronous throw cannot skip listener cleanup (0.4449ms)
+✔ both callback failure and async rejection remain private and never yield exit zero (0.5432ms)
+✔ undefined Promise rejection is failure, not a successful handler acknowledgment (19.7554ms)
+✔ deadline survives force-close throw and late failure cannot rewrite timed-out result (1.4092ms)
+✔ an injected failed timer reference still attempts both closes and fails conservatively (21.9058ms)
+✔ logging failure cannot bypass cleanup and raw causes never become log payloads (2.233ms)
+✔ actual normal HTTP entrypoint gates shutdown and preserves discovered scopes (886.5584ms)
+✔ actual normal HTTP entrypoint gates shutdown and preserves explicit scopes (227.8922ms)
+✔ protected resource metadata requires HTTPS audience and authorization server (3.1299ms)
+✔ WWW-Authenticate advertises resource metadata and insufficient scope (0.6275ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7111.1324

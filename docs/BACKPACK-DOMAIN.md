@@ -3,7 +3,7 @@
 Backpack is a plugin with an embedded skill, operating directions and a callable
 runtime. Local desktop stdio and a remote authenticated service are distinct
 connection paths. A local package cannot make a browser execute a Windows process.
-With Backpack 0.7.0, this integration exposes eleven bounded Backpack reads through API-MCP's normal
+With Backpack 0.8.0, this integration exposes twelve bounded Backpack reads through API-MCP's normal
 `npm run start:http` entrypoint. API-MCP remains the shared edge; MGR-ONE retains
 brain/permission ownership. No second scheduler, task store or grant engine is added.
 
@@ -56,11 +56,12 @@ remote MCP configuration. Read protected-resource metadata at
 `/.well-known/oauth-protected-resource`. Validate the account/tenant's real connection
 before claiming browser/mobile availability. A local TCP qualification is not deployment.
 
-The eleven reads are `mgr_backpack_context`, `mgr_backpack_brief`,
+The twelve reads are `mgr_backpack_context`, `mgr_backpack_brief`,
 `mgr_backpack_audit`, `mgr_backpack_report`, `mgr_backpack_tasks`,
 `mgr_backpack_memory`, `mgr_backpack_capability_card`,
 `mgr_backpack_capability_map`, `mgr_backpack_capability_draft`,
-`mgr_backpack_inventory_page` and `mgr_backpack_audit_page`.
+`mgr_backpack_inventory_page`, `mgr_backpack_audit_page` and
+`mgr_backpack_capability_page`.
 Single-project calls use `project`; report additionally requires `task`. Map requires
 an explicit list of 1–10 authorized project IDs. Draft requires owner descriptions
 and 1–8 source evidence paths. It proposes a card and never writes or certifies it.
@@ -114,3 +115,9 @@ These checks use owned synthetic identity and a local transport mapping; hosted
 TLS/OAuth/account/permanent Tevin and actual container runtime remain unverified.
 The container qualifier targets the updated eleven-tool catalog; only its syntax
 is checked in this wave. No Docker daemon was probed or computer restarted.
+
+## Complete capability metadata in0.8.0
+
+The small root capability card remains a compatible summary. When its optional BACKPACK-CAPABILITIES.jsonl exists, Backpack automatically consumes every record, validates root binding/completion/counts/hash and reports exact totals. Call mgr_backpack_capability_page with project, kind (interfaces/evidence/dependencies), offset and optional limit/query. Follow the exact nextOffset until null; one page can be smaller than the requested limit because of its byte budget. The host's current verified principal/scopes/project binding is checked before and after delivery. A catalog never grants execution or creates a canonical job. The owner CLI/SDK authors catalogs; this remote edge has no writer.
+
+Source0.8.0 also loads reviewed local MCP profiles per new request under the original pinned actor/store/config selector. This does not change the remote edge's read-only authority or silently reload arbitrary directly constructed SDK services. Deploy/reload actual runtime changes through the existing reviewed host process. Local30/30source and30/30compiled results use synthetic issuer/identity and loopback mapping, not hosted TLS/OAuth/provider/permanent Tevin acceptance.

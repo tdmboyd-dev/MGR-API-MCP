@@ -1,3 +1,9 @@
+## Backpack0.8.0 complete capability pages — November 2, 2026
+
+The existing shared HTTP edge now consumes twelve read-only Backpack tools, including mgr_backpack_capability_page. Actual normal-source and freshly emitted compiled HTTP each passed30/30 checks; Backpack-only HTTP11/11 and repository verifier482/482 passed. A controlled catalog with128total interfaces returns its last interface through the real authenticated HTTP tool; actor/tenant/scope/binding refusals cover the new reader. Source input catalog JSONL is separately validated and is not counted as a JS/TS parser input. The initial expected-five-files fixture failure is preserved; the correct eligible inventory is four, because catalog JSONL is deliberately outside inventory's supported source formats. No parser exclusion or permission was weakened.
+
+Only owning qualification scripts/documentation changed here. Current source/compiled qualification uses Backpack source0.8.0; its account/install/native release and permanent Tevin/provider/hosted/container/production remain separate. No Docker probe or PC restart. Preserve the original shared edge, owner records and concurrent native intake work. Evidence: evidence/backpack-capability-pages-20261102.
+
 ## November1 Backpack 0.7.0 result-page integration
 
 Before: nine-read catalog assumptions and summary-only qualification. After: current eleven-read catalog, real saved inventory/parser pages including 35 of 235 findings beyond offset 200, and the same existing host/actor/tenant/root/scope authority. Normal source 28/28, freshly compiled 28/28, Backpack-only 11/11, affected auth/lifecycle21/21, strict TypeScript emission and repository verification pass. Evidence: evidence/backpack-automatic-batches-20261101. Counts overlap and do not certify full products. Docker qualifier catalog updated/syntax checked only; no daemon probe, container runtime, hosted/account/provider/permanent Tevin or production acceptance claimed.
