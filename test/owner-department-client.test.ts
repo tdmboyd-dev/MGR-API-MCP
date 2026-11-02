@@ -5,6 +5,15 @@ import {McpServer,createMcpHandler} from '@modelcontextprotocol/server';import {
 import {createOwnerDepartmentClient} from '../scripts/owner-department-client.js';
 const token='OWNED_LOCAL_EDGE_TOKEN_1234567890123456',oneRoot=process.env.MGR_ONE_TEST_ROOT;
 const command={name:'mgr_department_execute',arguments:{operation:'creation.document.render',requestId:'owned-context-call',input:{workspaceId:'owned',title:'Owned',sections:[{heading:'Proof',body:'Inert owned text'}],rightsRefs:['owner']}}};
+test('source continuation and symbol offsets remain bounded before transport',async()=>{
+ let requests=0;const client=createOwnerDepartmentClient({endpoint:'http://127.0.0.1:1/mcp',accessToken:token,tenantId:'owned-tenant',actorId:'owned-actor',assertCurrent:()=>{},fetcher:async()=>{requests++;throw Error('unexpected transport');}});
+ try{
+  for(const continuation of ['', 'a'.repeat(32769),{root:'outside'},null])await assert.rejects(client.callTool({name:'code_monster_profile',arguments:{project:'source',revision:'HEAD',prefixes:[],continuation}}));
+  for(const offset of [-1,1000000,0.5,'5'])await assert.rejects(client.callTool({name:'code_monster_symbols',arguments:{project:'source',revision:'HEAD',prefixes:[],symbol:'item',limit:5,offset}}));
+  await assert.rejects(client.callTool({name:'code_monster_profile',arguments:{project:'source',revision:'HEAD',prefixes:[],continuation:'owned',root:'outside'}}));
+  assert.equal(requests,0);
+ }finally{await client.close();}
+});
 const deadline=<T>(promise:Promise<T>,ms=5000)=>{let timer:NodeJS.Timeout;return Promise.race([promise,new Promise<T>((_,reject)=>{timer=setTimeout(()=>reject(Error('owned-fixture-deadline')),ms);})]).finally(()=>clearTimeout(timer));};
 async function fixture(t:any,{raw=false,sql=false,principal='owned-actor',fetcher}:{raw?:boolean;sql?:boolean;principal?:string;fetcher?:typeof fetch}={}){
  let server:any,handler:any,client:any,store:any,coordinator:any,context:any,root:string|undefined,endpoint='',mutations=0,network=0,lists=0,enabled=true,globalAllowed=true,holdNext=false,release!:()=>void,entered!:()=>void;
