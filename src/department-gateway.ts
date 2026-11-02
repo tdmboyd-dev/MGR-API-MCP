@@ -15,7 +15,7 @@ export const departmentCommand=z.discriminatedUnion("operation",[
   ...forgeDepartmentCommands,
   z.object({operation:z.literal("legacy.contact.create"),requestId:id,input:z.object({displayName:z.string().min(1).max(200),email:z.email().optional()}).strict()}).strict(),
   z.object({operation:z.literal("creation.document.render"),requestId:id,input:z.object({workspaceId:id,title:z.string().min(1).max(500),sections:z.array(z.object({heading:z.string().min(1).max(500),body:content}).strict()).min(1).max(10),rightsRefs:z.array(id).min(1).max(10)}).strict()}).strict(),
-  z.object({operation:z.literal("voice.speech"),requestId:voiceId,input:z.object({sessionId:voiceId,turnId:voiceId,text:z.string().min(1).max(1500).refine(v=>v.trim().length>0),profileId:z.literal("af_heart"),exactText:z.literal(true)}).strict()}).strict(),
+  z.object({operation:z.literal("voice.speech"),requestId:voiceId,input:z.object({sessionId:voiceId,turnId:voiceId,text:z.string().min(1).max(1500).refine(v=>v.trim().length>0),profileId:voiceId,exactText:z.literal(true)}).strict()}).strict(),
   z.object({operation:z.literal("omnidev.job.verify"),requestId:id,input:omniVerificationInput}).strict(),
   z.object({operation:z.literal("signme.draft.create"),requestId:id,input:z.object({workspaceId:id,title:z.string().min(1).max(500).refine(value=>Buffer.from(value,'utf8').toString('utf8')===value&&value.trim().length>0),content,documentId:id.optional(),expectedVersion:z.number().int().positive().optional()}).strict().refine(value=>(value.documentId!==undefined)===(value.expectedVersion!==undefined))}).strict()
 ]);

@@ -1,0 +1,16 @@
+{
+  "mappedInputs": 2203,
+  "before": {
+    "privatePath": "C:\\Users\\cool\\Documents\\Codex\\Projects\\MGR-ONE\\.local\\native-profile-selection-20261101\\.local\\native-profile-selection\\final-inputs-before.json",
+    "sha256": "2eb652aa085ea51e94d97152ecca9a1f1c443854147d7fb606c3a42ff19ea364",
+    "bytes": 246182
+  },
+  "after": {
+    "privatePath": "C:\\Users\\cool\\Documents\\Codex\\Projects\\MGR-ONE\\.local\\native-profile-selection-20261101\\.local\\native-profile-selection\\final-inputs-after.json",
+    "sha256": "2eb652aa085ea51e94d97152ecca9a1f1c443854147d7fb606c3a42ff19ea364",
+    "bytes": 246182
+  },
+  "byteEqual": true,
+  "fullMapsExported": false,
+  "scope": "Selected original sources +physical904dist +package/lock and installed package metadata; not all installed dependency binaries/modules or cache weights"
+}

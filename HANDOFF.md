@@ -6,6 +6,12 @@ CM's original revalidateNativeSnapshot and ONE/OmniDev's private original channe
 
 ## Durable reviewed source report receiving — November 2, 2026
 
+## November1 — explicit existing-preset selection
+
+Voice profileId now transports bounded opaque data rather than onlyaf_heart, while exact profile/text/input-hash receipt checks reject substitution. New2+existinggateway4 passed6/6; noEmit passed. Same production source local-edge/owner-client factories also participated in ONE18 selected-profile ASGI synthetic fixture. Owning commit876b021; apply only unique one-line schema hunk to preserve later source. Domain membership and owner-selected profile stay Voice/ONE-owned. No provider/model/device/production acceptance.
+
+Parent integrated exact task source into this owning checkout and verified the combined source with separate metadata6/6 and actual source-loaded MCP/private-ASGI journey1/1. These use synthetic model/PCM, not inference/device acceptance. This lane has not pushed this owning repository; local publication status is recorded by ONE. Original requirements and existing status counts remain.
+
 Original OmniDev7750fd7 now stores reviewed CM provenance on the original job/engineering record/report. Actual combined ONEd72003e through current API1027042 completed10/10 native/save/reopen/replay checks, one Windows execution,0inference and permanent owner DB untouched. The unchanged API client accepts the extra original report field and verifies the complete canonical report bytes/hash; it does not yet expose a dedicated provenance summary in status. No new route/model tool, credential or API runtime change. Owning ONE evidence/reviewed-native-origin-2026-11-02/REPORT.md; OmniDev full93/93 is a separate local scope.
 
 This supersedes missing persistent association and unchanged-reviewed-import directions for the selected native route. Next is current original source/owner/recipe revalidation during approval waits/restart, distinct signed worker/command/signer and controlled permanent caller/update/recovery/rollback. Provenance does not transfer approval or attest producer identity. Full original requirements remain Unassessed/open; normal automatic engineering stays disabled until its route is complete.

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "before.txt.gz",
+    "rawSha256": "2dc4283a263d53893bda2d18850e1a37e8cede5eb98dbb97e9f3ee129b7947f9",
+    "rawBytes": 1068,
+    "gzipSha256": "d3f53d70952f077ec814a69021c1c745576533e3337ea742ece84f272cd026ad",
+    "gzipBytes": 578
+  },
+  {
+    "name": "after.txt.gz",
+    "rawSha256": "44445c1c865bc931b90fbe4eba5309da9139503041051c4609e4053a1ece3414",
+    "rawBytes": 715,
+    "gzipSha256": "8a4f3b7162c3f95a5203e36f584e5d064ec646f6ad036d7eb878a6a78b0a4d73",
+    "gzipBytes": 439
+  },
+  {
+    "name": "typecheck.txt.gz",
+    "rawSha256": "5accdedadcf9274c2a809052b3979b58b4aa2755c0e1d604556983fd2be339d9",
+    "rawBytes": 52,
+    "gzipSha256": "81ba86cc806e32809dc831a8360b95d3f99aea9b4767c0c7038156c7b47f1f79",
+    "gzipBytes": 71
+  },
+  {
+    "name": "repository-integrity.json.gz",
+    "rawSha256": "c9a650952b39609a04f9770c5accc6c6ece2c86b186804179d16c593f68c1e10",
+    "rawBytes": 175,
+    "gzipSha256": "e730c0adaa788d1fab20e094a5082c1b860fa8fff111f0bad9f2f6880b8b4335",
+    "gzipBytes": 154
+  },
+  {
+    "name": "API-task-only.patch.gz",
+    "rawSha256": "7cebe0d7c36d890ce07b52ccbc2cfba870b0417d2e730b3e58f0cb45eab7be29",
+    "rawBytes": 3774,
+    "gzipSha256": "5a080138fc49c2d7d6f200970885ce655b5ca79793c589e30e6b48125ed2f122",
+    "gzipBytes": 1436
+  }
+]
