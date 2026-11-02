@@ -1,5 +1,11 @@
 ## Reviewed Code Monster candidate reaches native snapshot host — November 1, 2026
 
+## November1 — explicit existing-preset selection
+
+Voice profileId now transports bounded opaque data rather than onlyaf_heart, while exact profile/text/input-hash receipt checks reject substitution. New2+existinggateway4 passed6/6; noEmit passed. Same production source local-edge/owner-client factories also participated in ONE18 selected-profile ASGI synthetic fixture. Owning commit876b021; apply only unique one-line schema hunk to preserve later source. Domain membership and owner-selected profile stay Voice/ONE-owned. No provider/model/device/production acceptance.
+
+Parent integrated exact task source into this owning checkout and verified the combined source with separate metadata6/6 and actual source-loaded MCP/private-ASGI journey1/1. These use synthetic model/PCM, not inference/device acceptance. This lane has not pushed this owning repository; local publication status is recorded by ONE. Original requirements and existing status counts remain.
+
 The owning Code Monster bridge now transfers exact staged reviewed Git baseline/patch bytes via trusted SDK `exportNativeSnapshot({request,paths})`. Existing ONE department composition, API/MCP, original OmniDev jobs/current binding/native scope and approved Windows worker handle the same snapshot. Actual disposable HTTP/native/report/save/fresh-process restart/replay passed8/8 with one native execution, zero inference and permanent owner DB untouched. CM original signed-candidate state remained pending independent verification. No new transport contract or executable source change in this receiving repository.
 
 Source boundary: ONE6db7c2d / CM459977db912385dc52aae54a33fbc13f86b58fb0 / OmniDev6e69de5ba60c391445fa3bd665e83cb1abd3bb6b retains runtime82ca5c8d1ddbb1260c89e48990359128440c0931. Reused29-check native qualification is not a fresh OS qualification. Raw native report is owned by ONE evidence/reviewed-native-candidate-2026-11-01/; CM owns source-reader/transport regression. These overlapping scopes are not summed.

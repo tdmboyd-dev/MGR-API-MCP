@@ -1,0 +1,18 @@
+[
+  {
+    "repo": "API",
+    "path": "src/department-gateway.ts",
+    "beforeSha256": "555bc90ed378064125383f2adf8aa779fd4843283f7fe02d064321823cbed26f",
+    "afterSha256": "1c9e0df193f47915507618e862d9739021d19874ef95297cde63e18ca896e709",
+    "bytes": 23237,
+    "ownership": "targeted-shared-delta"
+  },
+  {
+    "repo": "API",
+    "path": "test/voice-profile-transport.test.ts",
+    "beforeSha256": null,
+    "afterSha256": "adc40ae59763d31acd606941d413fd10b8343fc00dfbac5592371b7268b7d32f",
+    "bytes": 2066,
+    "ownership": "owned-task-source"
+  }
+]

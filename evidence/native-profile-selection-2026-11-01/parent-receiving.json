@@ -1,0 +1,42 @@
+{
+  "ONEParentMetadata": {
+    "files": [
+      "web/native-voice-profiles.test.mjs",
+      "web/native-voice-profile-selection.test.mjs"
+    ],
+    "exitCode": 0,
+    "counts": {
+      "tests": 6,
+      "pass": 6,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    "sourceStable": true,
+    "guardedInputs": 1926,
+    "elapsedSeconds": 2.3447906970977783,
+    "scope": "Current combined ONE +actual owning Voice/API source; metadata/selection VM only.",
+    "author18And16SeparateNotRerun": true
+  },
+  "ONEParentJourney": {
+    "files": [
+      "scripts/qualification/native-profile-journey.test.mjs"
+    ],
+    "exitCode": 0,
+    "counts": {
+      "tests": 1,
+      "pass": 1,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    "sourceStable": true,
+    "guardedInputs": 1926,
+    "elapsedSeconds": 17.725550651550293,
+    "scope": "Current combined ONE +actual owning Voice/API source; SAME production API source loaders/official MCP +actual private ASGI/SQLite, injected model/PCM/player. No actual model/speech inference/device/Form/owner config or cold-owner restart.",
+    "author18And16SeparateNotRerun": true
+  },
+  "owningSourcesMatchedTaskManifest": true,
+  "isolatedSourceCommit": "876b021e374467347af02e3b14a4f4629e7d79a8",
+  "countsSummed": false
+}
