@@ -1,3 +1,23 @@
+## n8n/public-apis native intake: completed local delivery
+
+Code Monster now inspects committed n8n workflow declarations and public-API directory claims through the existing automation map and Tevin source operation. Original native code flags duplicate/unknown graph references, cycles and declared effect/credential-reference counts without exporting parameters, credentials, code or URLs. Provider/authentication/quota/terms acceptance and executionReady remain false. A real 13,706-byte owner refusal exposed an integration gap; byte-aware continuation now returns the original corpus in 6,515/10,100-byte pages within the unchanged 12,000-byte receiving limit.
+
+Completed evidence: full native suite 307 passed/0 failed/6 skipped on unchanged tracked source; focused31/31; canonical owner conversation27 checks; actual original-corpus owner6 checks; normal source/compiled HTTP22 checks each. Original public-apis31 tests and controlled loopback probes executed. Original n8n constructor/traversal behavior and actual REA ran with explicit coverage limits. All369 pinned JSON files received static intake:361 parsed,8 unavailable; no whole-workflow/node/security acceptance is inferred. See owning integration-intake evidence REPORT.md, VERIFICATION.json and SOURCE-REA-MANIFEST.json; exact recovery/package receipts follow in this handoff when sealed.
+
+The already-refreshed existing host profile passed the requested fixed check19/19 before these new source changes. No private host configuration, authority, roots, expiry or command changed in this chat. That earlier source-bound result does not qualify a newer fingerprint. Backpack is supporting context/procedure/evidence tooling. Code Monster retains engineering intelligence and execution/candidate custody; OmniDev owns operator jobs/workers, OmniSight presentation, ONE decisions/permissions. No duplicate orchestrator, provider registry or credential store was added.
+
+The canonical owner test first timed out at its unchanged120-second deadline during concurrent checks; the serial acceptance rerun is recorded separately. A TypeScript-only required-path assertion in the corpus fixture was corrected. Real SDK/MCP/Git/SQLite/HTTP paths were exercised with injected models and synthetic identities. No permanent Tevin activation, live provider, workflow/node execution, hosted TLS/OAuth or production claim. Remaining all-candidate research is open.
+
+---
+
+## Approved current host check and n8n/public-apis native intake — November 1, 2026
+
+Owner approved the nine-file review and continuation. Actual installed Backpack0.6.3 already had a ready/current Code Monster fixed profile, with newer owning product changes preserved; no private sourceDigest/config/expiry was rewritten. Exact existing host-check-code-monster/contracts/code-monster-source-contracts run23d71cca-7bda-4b78-bd97-80904db107b6 passed19/19, exit0,88source subjects. Older stale-profile notes below are historical for that prior source. Backpack supplies context/procedures/evidence support; Code Monster remains persistent engineering intelligence and candidate kernel, OmniDev retains operator jobs/workers, OmniSight views and ONE decisions/permissions. Do not narrow those products to this research surface or promote the toolkit to leader.
+
+Next active slice: pinned enescingoz/awesome-n8n-templates and public-apis/public-apis. Original public-apis31tests passed after correcting the research harness PYTHONPATH; initial import failure retained. Template source is CC BY4.0, directory MIT; separately downloaded n8n-workflow2.16.0 is Sustainable Use/enterprise scoped and remains isolated research, not MGR-vendored runtime. Original native workflow/catalog intake projections are coded in an isolated Code Monster worktree and still require focused/full and actual Tevin/HTTP qualification. No workflow activated, credential submitted or provider access inferred. New native changes will need their own current fixed-profile source review; the prior run does not qualify future changed bytes.
+
+---
+
 ## Modular automation source packet recovery completed — November 1, 2026
 
 All four frozen source trees and exact commit IDs were reconstructed from incremental raw patches and bundles. MGR-EVERYAPP-TSTACK-QUALIFIED-SOURCE.zip was freshly extracted: 46/46 manifest hashes matched (47 total files). Archive SHA-256: b81c56856b90c3759e5a4da2f902b6a6f2cf02ebdba553fedfdca9678521340d. Owning PACKAGE-VERIFICATION.json and SOURCE-RECOVERY.json record the exact frozen commits/bases. This later documentation receipt is outside that already sealed packet; it does not change the qualified runtime.

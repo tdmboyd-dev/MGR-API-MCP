@@ -1,0 +1,22 @@
+{
+  "runId": "23d71cca-7bda-4b78-bd97-80904db107b6",
+  "project": "code-monster",
+  "task": "host-check-code-monster",
+  "check": "contracts",
+  "profile": "code-monster-source-contracts",
+  "state": "succeeded",
+  "exitCode": 0,
+  "startedAt": "2026-11-02T00:27:23.714Z",
+  "finishedAt": "2026-11-02T00:28:04.055Z",
+  "profileSha256": "49b6ff21d479622c451a74bf9853082e2b3d4b49d904ecc291b641327e9da24d",
+  "runtimeSha256": "ba4e6d110e8c1592a1ecd390f6b05f3da124b13871a5be62b341a07a853c6c32",
+  "sourceSubjects": 88,
+  "tests": {
+    "passed": 19,
+    "failed": 0,
+    "skipped": 0
+  },
+  "receiptSha256": "a0433d9b936d88834a093aaeb3f9769d3d273d20485acc597be26e7f22c18868",
+  "configurationChangedByThisChat": false,
+  "scope": "Actual installed Backpack 0.6.3 fixed Code Monster procedure. Existing profile was already refreshed/ready on current source; no private config or expiry changed. Toolkit provides bounded execution; it does not lead Code Monster, OmniDev or OmniSight."
+}
