@@ -1,0 +1,15 @@
+{
+  "runtime": "de86abf30b4a7da1e43cb411626cfa0bd187dea6",
+  "counts": {
+    "tests": 335,
+    "pass": 322,
+    "fail": 0,
+    "skipped": 13
+  },
+  "typecheckArtifactsPluginPassed": true,
+  "sourceInputsUnchanged": 119,
+  "inputFingerprint": "94103454491301cebae542fb4cb5ed7bc26f95a39f57ed2ede5cd170ac7dd0c0",
+  "bytes": 32061,
+  "sha256": "3b9d4401ee06430956a530c77bf33c9a57d2636172e695845eba00e2f7ca8f5c",
+  "scope": "Local owning API verification; explicit ONE SQL fixture root, no hosted/provider/device/production acceptance."
+}

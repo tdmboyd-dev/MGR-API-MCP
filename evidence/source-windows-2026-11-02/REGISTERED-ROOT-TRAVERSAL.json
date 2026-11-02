@@ -1,0 +1,262 @@
+{
+  "projects": [
+    {
+      "project": "backpack",
+      "commit": "9c58835a67bbdb8ac00edf51f127493df821724c",
+      "windows": [
+        {
+          "commit": "9c58835a67bbdb8ac00edf51f127493df821724c",
+          "coverage": {
+            "totalEnumerated": 347,
+            "parsed": 56,
+            "notParsed": 291,
+            "parsedWithErrors": 0,
+            "bytesParsed": 341249,
+            "byLanguage": {
+              "unsupported": 291,
+              "javascript": 52,
+              "typescript": 4
+            },
+            "excludedReasons": {
+              "unsupported-language": 291
+            },
+            "untracked": "not-scanned",
+            "submoduleContents": "not-scanned"
+          },
+          "analysisWindow": {
+            "contract": "mgr.code-monster.analysis-window.v1",
+            "status": "window-finished",
+            "priorWindow": false,
+            "firstIndexedPath": "scripts/build-plugin.js",
+            "lastIndexedPath": "web/app.js",
+            "securityAuditPerformed": false,
+            "repairsPerformed": 0,
+            "exportsComplete": true,
+            "exportsOmitted": 0,
+            "parsedFiles": 56,
+            "pendingFiles": 0,
+            "unindexableSelectedFiles": 0,
+            "unindexableExamples": [],
+            "eligibleSelectionComplete": true,
+            "scope": "This window only. Cross-window references, uniqueness and module relationships are not resolved; no security audit or repairs performed."
+          },
+          "indexDigest": "34af8d4978f0ae83a0e219a655286fa821ae3730b62276a3fcffa708585a9628",
+          "generator": {
+            "name": "mgr-code-monster-semantic",
+            "fingerprint": "9ac2b130ad508cbdb213847190ea4eda52767c720f416bba3b779947bb43e824"
+          }
+        }
+      ],
+      "parsed": 56,
+      "exportsOmitted": 0,
+      "unindexable": 0,
+      "continuationExhausted": true,
+      "wholeProductAcceptance": "Unassessed"
+    },
+    {
+      "project": "code-monster",
+      "commit": "ae297682b5d31fcebbb1058caffe48a5277bbd9d",
+      "windows": [
+        {
+          "commit": "ae297682b5d31fcebbb1058caffe48a5277bbd9d",
+          "coverage": {
+            "totalEnumerated": 483,
+            "parsed": 100,
+            "notParsed": 383,
+            "parsedWithErrors": 0,
+            "bytesParsed": 643302,
+            "byLanguage": {
+              "unsupported": 383,
+              "javascript": 99,
+              "typescript": 1
+            },
+            "excludedReasons": {
+              "unsupported-language": 383
+            },
+            "untracked": "not-scanned",
+            "submoduleContents": "not-scanned"
+          },
+          "analysisWindow": {
+            "contract": "mgr.code-monster.analysis-window.v1",
+            "status": "window-finished",
+            "priorWindow": false,
+            "firstIndexedPath": "docs/evidence/all-repository-batches-20261101/verify-code-monster-repaired-all-20261102.mjs",
+            "lastIndexedPath": "test/verification-receipt.test.mjs",
+            "securityAuditPerformed": false,
+            "repairsPerformed": 0,
+            "exportsComplete": true,
+            "exportsOmitted": 0,
+            "parsedFiles": 100,
+            "pendingFiles": 0,
+            "unindexableSelectedFiles": 0,
+            "unindexableExamples": [],
+            "eligibleSelectionComplete": true,
+            "scope": "This window only. Cross-window references, uniqueness and module relationships are not resolved; no security audit or repairs performed."
+          },
+          "indexDigest": "b8125718aac2072981414a62392edcb7f0519658ad4f299b370d7f3a29254d55",
+          "generator": {
+            "name": "mgr-code-monster-semantic",
+            "fingerprint": "9ac2b130ad508cbdb213847190ea4eda52767c720f416bba3b779947bb43e824"
+          }
+        }
+      ],
+      "parsed": 100,
+      "exportsOmitted": 0,
+      "unindexable": 0,
+      "continuationExhausted": true,
+      "wholeProductAcceptance": "Unassessed"
+    },
+    {
+      "project": "omnidev",
+      "commit": "a25ac3ed3f61e23aab628c19313d74ffde1ee603",
+      "windows": [
+        {
+          "commit": "a25ac3ed3f61e23aab628c19313d74ffde1ee603",
+          "coverage": {
+            "totalEnumerated": 3535,
+            "parsed": 186,
+            "notParsed": 3349,
+            "parsedWithErrors": 0,
+            "bytesParsed": 1090928,
+            "byLanguage": {
+              "unsupported": 3231,
+              "javascript": 168,
+              "typescript": 136
+            },
+            "excludedReasons": {
+              "unsupported-language": 3231,
+              "excluded-source-subtree": 4,
+              "analysis-window-pending": 114
+            },
+            "untracked": "not-scanned",
+            "submoduleContents": "not-scanned"
+          },
+          "analysisWindow": {
+            "contract": "mgr.code-monster.analysis-window.v1",
+            "status": "more-windows",
+            "priorWindow": false,
+            "firstIndexedPath": "AGENTOS-ARCHITECTURE/validate.mjs",
+            "lastIndexedPath": "scripts/sites-env.mjs",
+            "securityAuditPerformed": false,
+            "repairsPerformed": 0,
+            "exportsComplete": true,
+            "exportsOmitted": 0,
+            "parsedFiles": 186,
+            "pendingFiles": 114,
+            "unindexableSelectedFiles": 0,
+            "unindexableExamples": [],
+            "eligibleSelectionComplete": false,
+            "scope": "This window only. Cross-window references, uniqueness and module relationships are not resolved; no security audit or repairs performed."
+          },
+          "indexDigest": "273e33ab07209080605e401a46fd71873270c30ac03930aa1ac90664dadbc217",
+          "generator": {
+            "name": "mgr-code-monster-semantic",
+            "fingerprint": "9ac2b130ad508cbdb213847190ea4eda52767c720f416bba3b779947bb43e824"
+          }
+        },
+        {
+          "commit": "a25ac3ed3f61e23aab628c19313d74ffde1ee603",
+          "coverage": {
+            "totalEnumerated": 3535,
+            "parsed": 114,
+            "notParsed": 3421,
+            "parsedWithErrors": 0,
+            "bytesParsed": 760611,
+            "byLanguage": {
+              "unsupported": 3231,
+              "javascript": 168,
+              "typescript": 136
+            },
+            "excludedReasons": {
+              "unsupported-language": 3231,
+              "prior-analysis-window": 190
+            },
+            "untracked": "not-scanned",
+            "submoduleContents": "not-scanned"
+          },
+          "analysisWindow": {
+            "contract": "mgr.code-monster.analysis-window.v1",
+            "status": "window-finished",
+            "priorWindow": true,
+            "firstIndexedPath": "scripts/validate-acceptance-register.mjs",
+            "lastIndexedPath": "worker/windows-worker.mjs",
+            "securityAuditPerformed": false,
+            "repairsPerformed": 0,
+            "exportsComplete": true,
+            "exportsOmitted": 0,
+            "parsedFiles": 114,
+            "pendingFiles": 0,
+            "unindexableSelectedFiles": 0,
+            "unindexableExamples": [],
+            "eligibleSelectionComplete": false,
+            "scope": "This window only. Cross-window references, uniqueness and module relationships are not resolved; no security audit or repairs performed."
+          },
+          "indexDigest": "7248f7d793d6e7844048dc55a6f5690ea2142f8df2e16574d4e9b5b3c5da1556",
+          "generator": {
+            "name": "mgr-code-monster-semantic",
+            "fingerprint": "9ac2b130ad508cbdb213847190ea4eda52767c720f416bba3b779947bb43e824"
+          }
+        }
+      ],
+      "parsed": 300,
+      "exportsOmitted": 0,
+      "unindexable": 0,
+      "continuationExhausted": true,
+      "wholeProductAcceptance": "Unassessed"
+    },
+    {
+      "project": "omnisight",
+      "commit": "ded3fcdf499e5418ec21880ccc69a44d0ccf175b",
+      "windows": [
+        {
+          "commit": "ded3fcdf499e5418ec21880ccc69a44d0ccf175b",
+          "coverage": {
+            "totalEnumerated": 207,
+            "parsed": 46,
+            "notParsed": 161,
+            "parsedWithErrors": 0,
+            "bytesParsed": 270033,
+            "byLanguage": {
+              "unsupported": 161,
+              "javascript": 46
+            },
+            "excludedReasons": {
+              "unsupported-language": 161
+            },
+            "untracked": "not-scanned",
+            "submoduleContents": "not-scanned"
+          },
+          "analysisWindow": {
+            "contract": "mgr.code-monster.analysis-window.v1",
+            "status": "window-finished",
+            "priorWindow": false,
+            "firstIndexedPath": "app/campaign-view.js",
+            "lastIndexedPath": "tests/view-model.test.mjs",
+            "securityAuditPerformed": false,
+            "repairsPerformed": 0,
+            "exportsComplete": true,
+            "exportsOmitted": 0,
+            "parsedFiles": 46,
+            "pendingFiles": 0,
+            "unindexableSelectedFiles": 0,
+            "unindexableExamples": [],
+            "eligibleSelectionComplete": true,
+            "scope": "This window only. Cross-window references, uniqueness and module relationships are not resolved; no security audit or repairs performed."
+          },
+          "indexDigest": "3961503064296973fdc568f57a44b9060d3fceef8086faac02d56308ba7620dd",
+          "generator": {
+            "name": "mgr-code-monster-semantic",
+            "fingerprint": "9ac2b130ad508cbdb213847190ea4eda52767c720f416bba3b779947bb43e824"
+          }
+        }
+      ],
+      "parsed": 46,
+      "exportsOmitted": 0,
+      "unindexable": 0,
+      "continuationExhausted": true,
+      "wholeProductAcceptance": "Unassessed"
+    }
+  ],
+  "jobsCreated": 0,
+  "scope": "All source profile windows reachable through actual registered-root services, authenticated shared HTTP/MCP/client, CM compiler and saved ONE navigation. JS/TS selection/exclusions and unresolved cross-window relationships remain explicit. Disposable ONE store/local fixture principal; no source execution, model/provider/device or production acceptance."
+}
