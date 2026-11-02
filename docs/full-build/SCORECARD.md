@@ -1,3 +1,9 @@
+## Current source refusal and dispatch observation — November 2, 2026
+
+Original Omni client now carries a strictly bounded definite source refusal to Tevin with a fixed explanation that native code was not started; arbitrary diagnostics, claimed authority or contradictory native-report state refuse. Runtime4684ed7 passed verify:311tests/0fail/21explicit skips, typecheck/artifact/plugin checks;128owning inputs unchanged; focused32/32. Actual four-repository after-claim withdrawal8/8 passes with0native execution/inference and fresh restart/replay. [Evidence](../../evidence/native-source-recheck-2026-11-02/REPORT.md).
+
+CM's original revalidateNativeSnapshot and ONE/OmniDev's private original channel now check source/owner/recipe before claim and launch; queued restart and timeout receiving proof remains separately scoped. This supersedes missing dispatch-time revalidation for the selected fixture-authorized route. Permanent caller/authorizer, independent signed worker and controlled activation/update/recovery/rollback remain open. No new model tool, credential, authority engine or production claim.
+
 ## Reviewed Code Monster candidate reaches native snapshot host — November 1, 2026
 
 The owning Code Monster bridge now transfers exact staged reviewed Git baseline/patch bytes via trusted SDK `exportNativeSnapshot({request,paths})`. Existing ONE department composition, API/MCP, original OmniDev jobs/current binding/native scope and approved Windows worker handle the same snapshot. Actual disposable HTTP/native/report/save/fresh-process restart/replay passed8/8 with one native execution, zero inference and permanent owner DB untouched. CM original signed-candidate state remained pending independent verification. No new transport contract or executable source change in this receiving repository.

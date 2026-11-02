@@ -1,3 +1,9 @@
+## Current source refusal and dispatch observation — November 2, 2026
+
+Original Omni client now carries a strictly bounded definite source refusal to Tevin with a fixed explanation that native code was not started; arbitrary diagnostics, claimed authority or contradictory native-report state refuse. Runtime4684ed7 passed verify:311tests/0fail/21explicit skips, typecheck/artifact/plugin checks;128owning inputs unchanged; focused32/32. Actual four-repository after-claim withdrawal8/8 passes with0native execution/inference and fresh restart/replay. [Evidence](../evidence/native-source-recheck-2026-11-02/REPORT.md).
+
+CM's original revalidateNativeSnapshot and ONE/OmniDev's private original channel now check source/owner/recipe before claim and launch; queued restart and timeout receiving proof remains separately scoped. This supersedes missing dispatch-time revalidation for the selected fixture-authorized route. Permanent caller/authorizer, independent signed worker and controlled activation/update/recovery/rollback remain open. No new model tool, credential, authority engine or production claim.
+
 ## n8n/public-apis native intake: completed local delivery
 
 Code Monster now inspects committed n8n workflow declarations and public-API directory claims through the existing automation map and Tevin source operation. Original native code flags duplicate/unknown graph references, cycles and declared effect/credential-reference counts without exporting parameters, credentials, code or URLs. Provider/authentication/quota/terms acceptance and executionReady remain false. A real 13,706-byte owner refusal exposed an integration gap; byte-aware continuation now returns the original corpus in 6,515/10,100-byte pages within the unchanged 12,000-byte receiving limit.

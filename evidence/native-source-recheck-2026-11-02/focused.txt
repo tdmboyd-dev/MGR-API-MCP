@@ -1,0 +1,40 @@
+✔ Omni schema bounds exact jobs, rejects model-provided code and malformed hashes (9.3683ms)
+✔ binding strips private source/objective, verifies configured policy and principal (64.0296ms)
+✔ realistic accepted report shape is independently hashed and bound to native assignment and cleanup (7.4493ms)
+✔ false success, changed exact report bytes and mismatched native cleanup are rejected (26.0591ms)
+✔ receipt actor/action/input mutation cannot reconcile a different operation (7.2232ms)
+✔ dispatch rechecks current digest before POST and credential headers are host-bound (4.9175ms)
+✔ lost POST acknowledgment never auto-repeats native execution; status can independently reconcile (3.707ms)
+✔ historical valid report survives workspace edits without current verification claim (2.5559ms)
+✔ queued cancel and running cancel request remain distinguishable without invented cleanup success (5.0983ms)
+✔ response actual byte cap and safe HTTP errors reject before publication (1.1523ms)
+✔ whole request deadline bounds hung headers AND hung body even transport ignores abort (42.4106ms)
+✔ binding MCP scope and expiry are checked again after asynchronous provider read (6.6462ms)
+✔ invalid UTF8 and excessive JSON depth are rejected; string braces do not count as structure (1.7413ms)
+✔ aborted body stream is actively cancelled and no late body can become success (21.7238ms)
+✔ terminal receipt IDs and uint32 AppContainer SID components are validated (5.4478ms)
+✔ gateway rejects cross-principal service mappings and policy config cannot drift (1.0926ms)
+✔ accepted failed native tests provide verified canonical report artifact without claiming success (4.5663ms)
+✔ pre-execution failure, unknown and cancelled states cannot fabricate report downloads (6.9238ms)
+✔ source refusal reports that native code was not started without inventing an accepted report (5.8974ms)
+✔ source refusal cannot carry arbitrary diagnostics, extra authority or a report contradiction (7.2616ms)
+✔ succeeded receipt missing native report ID fails status, dispatch and cancel (3.5144ms)
+✔ gateway artifact retains standard sha256/bytes/base64 envelope for exact accepted JSON report (5.6988ms)
+✔ registered execute denies expiry during held binding before any native POST (3.3163ms)
+✔ registered execute denies scope during held binding before any native POST (3.045ms)
+✔ registered execute denies actor during held binding before any native POST (2.618ms)
+✔ registered execute denies tenant during held binding before any native POST (1.582ms)
+✔ expiry after accepted POST suppresses publication and never retries the effect (3.7994ms)
+✔ native exact request identity survives status report and cancel: . (8.0681ms)
+✔ native exact request identity survives status report and cancel: .. (4.8335ms)
+✔ native exact request identity survives status report and cancel: owner:trial_revision (8.1103ms)
+✔ native exact request identity survives status report and cancel: _draft (4.6487ms)
+✔ native exact request identity survives status report and cancel: -draft (3.2394ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1454.354

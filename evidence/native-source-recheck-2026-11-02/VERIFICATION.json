@@ -1,0 +1,14 @@
+{
+  "sourceCommit": "4684ed782001676aa0855a81cd32af8c4972b825",
+  "totalTests": 332,
+  "passed": 311,
+  "failed": 0,
+  "skipped": 21,
+  "focusedClientCases": 32,
+  "owningInputsUnchanged": 128,
+  "repositoryIntegrityChecks": 1013,
+  "hostedArtifactSyntaxPassed": true,
+  "pluginVerifyPassed": true,
+  "mcpConfigured": false,
+  "independentParentClosures": 0
+}

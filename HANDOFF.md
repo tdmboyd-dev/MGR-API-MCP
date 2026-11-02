@@ -1,3 +1,9 @@
+## Current source refusal and dispatch observation — November 2, 2026
+
+Original Omni client now carries a strictly bounded definite source refusal to Tevin with a fixed explanation that native code was not started; arbitrary diagnostics, claimed authority or contradictory native-report state refuse. Runtime4684ed7 passed verify:311tests/0fail/21explicit skips, typecheck/artifact/plugin checks;128owning inputs unchanged; focused32/32. Actual four-repository after-claim withdrawal8/8 passes with0native execution/inference and fresh restart/replay. [Evidence](evidence/native-source-recheck-2026-11-02/REPORT.md).
+
+CM's original revalidateNativeSnapshot and ONE/OmniDev's private original channel now check source/owner/recipe before claim and launch; queued restart and timeout receiving proof remains separately scoped. This supersedes missing dispatch-time revalidation for the selected fixture-authorized route. Permanent caller/authorizer, independent signed worker and controlled activation/update/recovery/rollback remain open. No new model tool, credential, authority engine or production claim.
+
 ## Durable reviewed source report receiving — November 2, 2026
 
 Original OmniDev7750fd7 now stores reviewed CM provenance on the original job/engineering record/report. Actual combined ONEd72003e through current API1027042 completed10/10 native/save/reopen/replay checks, one Windows execution,0inference and permanent owner DB untouched. The unchanged API client accepts the extra original report field and verifies the complete canonical report bytes/hash; it does not yet expose a dedicated provenance summary in status. No new route/model tool, credential or API runtime change. Owning ONE evidence/reviewed-native-origin-2026-11-02/REPORT.md; OmniDev full93/93 is a separate local scope.
