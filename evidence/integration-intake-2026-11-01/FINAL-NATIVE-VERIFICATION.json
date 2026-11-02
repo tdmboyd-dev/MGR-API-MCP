@@ -1,0 +1,24 @@
+{
+  "startedAt": "2026-11-02T01:03:03.470271+00:00",
+  "finishedAt": "2026-11-02T01:13:07.402973+00:00",
+  "commit": "8e250ab7a37d4ea223d071d51ea9f608185edbda",
+  "headUnchanged": true,
+  "before": {
+    "trackedFiles": 367,
+    "workingBytesSha256": "f9628346c61e14b53e673b9228cc8f22b74581195e81e6a1aae6a0d55f5659a0"
+  },
+  "after": {
+    "trackedFiles": 367,
+    "workingBytesSha256": "f9628346c61e14b53e673b9228cc8f22b74581195e81e6a1aae6a0d55f5659a0"
+  },
+  "stableTrackedSource": true,
+  "exitCode": 0,
+  "counts": {
+    "tests": 313,
+    "pass": 307,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 6
+  },
+  "scope": "Executed serial full native test suite on stable tracked working bytes. Not whole-repository audit, live-provider/device, production or original full-product acceptance."
+}

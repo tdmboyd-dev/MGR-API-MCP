@@ -1,0 +1,35 @@
+{
+  "package": "n8n-workflow@2.16.0",
+  "records": [
+    {
+      "path": "Other_Integrations_and_Use_Cases/API Schema Extractor.json",
+      "declaredNodes": 88,
+      "graphNodesRetained": 88,
+      "selectedMainParentCount": 9,
+      "scope": "Actual original Workflow graph constructor/traversal with an explicitly empty node-type registry. No node implementation, expression, activation or provider execution."
+    },
+    {
+      "path": "OpenAI_and_LLMs/AI Agent with Ollama for current weather and wiki.json",
+      "declaredNodes": 10,
+      "graphNodesRetained": 10,
+      "selectedMainParentCount": 1,
+      "scope": "Actual original Workflow graph constructor/traversal with an explicitly empty node-type registry. No node implementation, expression, activation or provider execution."
+    }
+  ],
+  "controlledFindings": [
+    {
+      "name": "Selected graph constructor silently replaces earlier same-name node with the later one",
+      "observed": true
+    },
+    {
+      "name": "Selected graph construction retains connection to an absent target without rejecting it",
+      "observed": true
+    }
+  ],
+  "license": "Sustainable Use/enterprise scopes inspected; internal isolated research only, not vendored into MGR.",
+  "limits": [
+    "Graph-only constructor/traversal with no registered node implementations.",
+    "These findings do not establish an n8n API/import-validation or execution-security bypass.",
+    "No provider calls, workflow activation or expression execution performed."
+  ]
+}

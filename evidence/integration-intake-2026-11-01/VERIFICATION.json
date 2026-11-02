@@ -1,0 +1,165 @@
+{
+  "state": "canonical-native-intake-local-receiving-verified",
+  "hostFixedCheck": 19,
+  "originalPublicApiUnitTests": 31,
+  "nativeFocusedPassed": 31,
+  "fullNative": {
+    "startedAt": "2026-11-02T01:03:03.470271+00:00",
+    "finishedAt": "2026-11-02T01:13:07.402973+00:00",
+    "commit": "8e250ab7a37d4ea223d071d51ea9f608185edbda",
+    "headUnchanged": true,
+    "before": {
+      "trackedFiles": 367,
+      "workingBytesSha256": "f9628346c61e14b53e673b9228cc8f22b74581195e81e6a1aae6a0d55f5659a0"
+    },
+    "after": {
+      "trackedFiles": 367,
+      "workingBytesSha256": "f9628346c61e14b53e673b9228cc8f22b74581195e81e6a1aae6a0d55f5659a0"
+    },
+    "stableTrackedSource": true,
+    "exitCode": 0,
+    "counts": {
+      "tests": 313,
+      "pass": 307,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 6
+    },
+    "scope": "Executed serial full native test suite on stable tracked working bytes. Not whole-repository audit, live-provider/device, production or original full-product acceptance."
+  },
+  "canonicalOwner": {
+    "observedAt": "2026-11-02T01:23:56.157Z",
+    "checks": [
+      "actual-Tevin-SDK-receives-compiler-cycle-evidence",
+      "actual-Tevin-SDK-keeps-Rust-audit-exclusions-explicit",
+      "real-Git-compiler-scoped-symbols",
+      "actual-owner-SDK-TCP-bound-references",
+      "actual-owner-SDK-TCP-labeled-impact",
+      "owner-reference-pages-preserve-all-bound-sites",
+      "actual-owner-SDK-qualified-hierarchy-and-full-ranges",
+      "owner-hierarchy-pagination-keeps-exact-root-and-commit",
+      "actual-owner-SDK-paged-automation-map-without-sensitive-values",
+      "actual-Tevin-SDK-directory-qualified-child-package-without-command-values",
+      "actual-Tevin-SDK-workflow-intake-without-execution-or-values",
+      "actual-Tevin-SDK-provider-directory-keeps-claims-unverified",
+      "actual-owner-HTTP-conversation-dispatch",
+      "exact-conversation-replay-no-redispatch",
+      "actual-owner-SQL-reopen-saved-answer-no-model-call",
+      "actual-owner-HTTP-profile-conversation",
+      "actual-owner-HTTP-profile-retains-unsupported-language-caveat",
+      "actual-conversation-impact-after-owner-reopen",
+      "actual-owner-HTTP-structural-conversation",
+      "actual-owner-HTTP-automation-conversation-without-values",
+      "actual-owner-HTTP-intake-conversation-keeps-activation-and-provider-claims-false",
+      "caller-root-injection-denied",
+      "revocation-withholds-success-receipt",
+      "changed-commit-refuses-stale-declaration-identity",
+      "source-changed-refuses-mixed-commit-continuation",
+      "source-change-refuses-hierarchy-and-map-continuations",
+      "source-worktree-unchanged-by-all-reads"
+    ],
+    "passed": 27,
+    "scope": "Actual ONE HTTP/conversation/SQLite -> official owner SDK -> authenticated loopback edge -> real Code Monster compiler/worker; injected model responses and local service identity, no live provider or production claim",
+    "modelCalls": 11,
+    "sourceCalls": 23,
+    "commit": "dda97004ce7a718114ff9a467f13f0282bf0f4a5"
+  },
+  "canonicalOriginalCorpus": {
+    "sourceCommit": "771be12145c2193af6efda167c6ebfc9f710b1b0",
+    "checksPassed": 6,
+    "pages": 2,
+    "responseBytes": [
+      6515,
+      10100
+    ],
+    "ownerBoundaryBytes": 12000,
+    "items": 3,
+    "nodes": [
+      10,
+      88
+    ],
+    "candidateDirectoryRows": 2233,
+    "savedReadReceipts": 2,
+    "sourceUnchanged": true,
+    "scope": "Actual owner SDK/authenticated MCP/Git worker on original licensed research corpus; no live model, node/workflow activation or provider request."
+  },
+  "canonicalNormalHttp": [
+    {
+      "observedAt": "2026-11-02T01:20:19.060Z",
+      "mode": "source",
+      "passed": 22,
+      "checks": [
+        "invalid-listen-host-refused-before-service-start",
+        "actual-normal-entrypoint-explicit-loopback",
+        "unauthenticated-request-refused",
+        "all-eight-source-tools-register-through-normal-HTTP",
+        "prior-source-profile-still-works",
+        "actual-normal-HTTP-compiler-derived-module-review",
+        "actual-normal-HTTP-preserves-audit-language-exclusions",
+        "actual-signed-JWT-HTTP-qualified-hierarchy",
+        "actual-normal-HTTP-variable-statement-range",
+        "actual-normal-HTTP-paged-map-without-values",
+        "actual-normal-HTTP-directory-qualified-child-package-without-command-values",
+        "actual-normal-HTTP-workflow-intake-no-execution-or-values",
+        "actual-normal-HTTP-directory-claims-not-provider-acceptance",
+        "actual-normal-HTTP-original-template-catalog-byte-paging",
+        "actual-product-same-name-declarations-remain-ambiguous",
+        "actual-product-repository-class-through-normal-HTTP",
+        "actual-product-repository-configuration-through-normal-HTTP",
+        "actor-tenant-and-component-scope-refused",
+        "caller-root-injection-refused",
+        "both-new-methods-honor-live-binding-revocation",
+        "explicit-binding-restoration",
+        "source-unchanged"
+      ],
+      "actualProductCommit": "c9ee4c8c97e38417068c181ad9b9c0ae97d1f20e",
+      "scope": "Actual normal source/compiled HTTP entrypoint, explicit loopback binding, real local JWKS/signed JWT and official SDK into real Code Monster Git worker on controlled fixtures AND the actual product repository. Synthetic HTTPS-termination mapping in the owned client transport; production HTTPS metadata guard remains intact, actual TLS/hosted OAuth is not verified. Synthetic identity/owned fixtures; no provider/permanent Tevin/container/production claim."
+    },
+    {
+      "observedAt": "2026-11-02T01:22:04.559Z",
+      "mode": "compiled",
+      "passed": 22,
+      "checks": [
+        "invalid-listen-host-refused-before-service-start",
+        "actual-normal-entrypoint-explicit-loopback",
+        "unauthenticated-request-refused",
+        "all-eight-source-tools-register-through-normal-HTTP",
+        "prior-source-profile-still-works",
+        "actual-normal-HTTP-compiler-derived-module-review",
+        "actual-normal-HTTP-preserves-audit-language-exclusions",
+        "actual-signed-JWT-HTTP-qualified-hierarchy",
+        "actual-normal-HTTP-variable-statement-range",
+        "actual-normal-HTTP-paged-map-without-values",
+        "actual-normal-HTTP-directory-qualified-child-package-without-command-values",
+        "actual-normal-HTTP-workflow-intake-no-execution-or-values",
+        "actual-normal-HTTP-directory-claims-not-provider-acceptance",
+        "actual-normal-HTTP-original-template-catalog-byte-paging",
+        "actual-product-same-name-declarations-remain-ambiguous",
+        "actual-product-repository-class-through-normal-HTTP",
+        "actual-product-repository-configuration-through-normal-HTTP",
+        "actor-tenant-and-component-scope-refused",
+        "caller-root-injection-refused",
+        "both-new-methods-honor-live-binding-revocation",
+        "explicit-binding-restoration",
+        "source-unchanged"
+      ],
+      "actualProductCommit": "c9ee4c8c97e38417068c181ad9b9c0ae97d1f20e",
+      "scope": "Actual normal source/compiled HTTP entrypoint, explicit loopback binding, real local JWKS/signed JWT and official SDK into real Code Monster Git worker on controlled fixtures AND the actual product repository. Synthetic HTTPS-termination mapping in the owned client transport; production HTTPS metadata guard remains intact, actual TLS/hosted OAuth is not verified. Synthetic identity/owned fixtures; no provider/permanent Tevin/container/production claim."
+    }
+  ],
+  "wholeCollection": {
+    "jsonPaths": 369,
+    "parsed": 361,
+    "unavailable": 8,
+    "scope": "Static declarations only; not node/workflow execution or security audit"
+  },
+  "providerOrWorkflowExecution": "not performed",
+  "historicalFailures": [
+    "Pre-repair 13706-byte owner response refusal",
+    "Initial original test/probe harness failures retained",
+    "Initial full run cancelled as obsolete",
+    "First canonical owner timeout during concurrent checks; serial rerun is acceptance",
+    "Required corpus path fixture type corrected after TypeScript rejection"
+  ],
+  "scope": "Bounded native source intake and real local integration. Injected models, synthetic identity and TLS mapping; permanent owner, providers, hosted OAuth/TLS and production remain unverified."
+}
