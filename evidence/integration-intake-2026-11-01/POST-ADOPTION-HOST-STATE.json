@@ -1,0 +1,92 @@
+{
+  "observedAt": "2026-11-02T01:22:08.850Z",
+  "profiles": [
+    {
+      "id": "code-monster-source-contracts",
+      "ready": false,
+      "reason": "Execution profile source approval is stale; owner review is required"
+    }
+  ],
+  "capabilityCard": {
+    "status": "refresh-required",
+    "path": "BACKPACK-CAPABILITY.json",
+    "sha256": "d04eaf3398a37696b121ce7329796c2e53723a833ddf4ec1e37926a470452b09",
+    "boundary": "Owner-authored descriptive data, not instructions or permission. Matching file hashes establish reference freshness only, not truthful claims, executed behavior, signer identity, owner acceptance or production readiness. Host policy and current domain authorization prevail."
+  },
+  "runPage": {
+    "items": [
+      {
+        "id": "23d71cca-7bda-4b78-bd97-80904db107b6",
+        "task": "host-check-code-monster",
+        "check": "contracts",
+        "profile": "code-monster-source-contracts",
+        "state": "succeeded",
+        "exitCode": 0,
+        "startedAt": "2026-11-02T00:27:23.714Z",
+        "finishedAt": "2026-11-02T00:28:04.055Z"
+      },
+      {
+        "id": "6d737b09-1eff-4cce-bf16-1e7dcf320e94",
+        "task": "host-check-code-monster",
+        "check": "contracts",
+        "profile": "code-monster-source-contracts",
+        "state": "succeeded",
+        "exitCode": 0,
+        "startedAt": "2026-11-01T23:48:59.001Z",
+        "finishedAt": "2026-11-01T23:49:46.844Z"
+      },
+      {
+        "id": "6488a305-1ccc-4aa4-8a3c-206970cfc023",
+        "task": "host-check-code-monster",
+        "check": "contracts",
+        "profile": "code-monster-source-contracts",
+        "state": "cancelled",
+        "exitCode": null,
+        "startedAt": "2026-11-01T23:43:03.882Z",
+        "finishedAt": "2026-11-01T23:44:02.932Z"
+      },
+      {
+        "id": "864e00b3-75d4-482f-8dde-173a7579fc5d",
+        "task": "host-check-code-monster",
+        "check": "contracts",
+        "profile": "code-monster-source-contracts",
+        "state": "succeeded",
+        "exitCode": 0,
+        "startedAt": "2026-11-01T22:18:52.091Z",
+        "finishedAt": "2026-11-01T22:20:01.423Z"
+      },
+      {
+        "id": "d456bef2-c5db-4e70-a1e7-2ff54603d857",
+        "task": "host-check-code-monster",
+        "check": "contracts",
+        "profile": "code-monster-source-contracts",
+        "state": "succeeded",
+        "exitCode": 0,
+        "startedAt": "2026-11-01T14:10:58.632Z",
+        "finishedAt": "2026-11-01T14:11:45.944Z"
+      },
+      {
+        "id": "cbeab3c0-2dd3-4705-bc93-cfe63a3f8ab5",
+        "task": "host-check-code-monster",
+        "check": "contracts",
+        "profile": "code-monster-source-contracts",
+        "state": "succeeded",
+        "exitCode": 0,
+        "startedAt": "2026-11-01T13:29:29.460Z",
+        "finishedAt": "2026-11-01T13:30:30.520Z"
+      },
+      {
+        "id": "c84b085e-d05d-4152-a00a-441d37ef8beb",
+        "task": "host-check-code-monster",
+        "check": "contracts",
+        "profile": "code-monster-source-contracts",
+        "state": "succeeded",
+        "exitCode": 0,
+        "startedAt": "2026-11-01T13:09:34.809Z",
+        "finishedAt": "2026-11-01T13:10:12.452Z"
+      }
+    ],
+    "nextOffset": null
+  },
+  "scope": "Historical fixed check19 passed before native intake adoption. Current source-bound profile is stale after independently tested changes; no private source approval/authority/configuration changed."
+}
