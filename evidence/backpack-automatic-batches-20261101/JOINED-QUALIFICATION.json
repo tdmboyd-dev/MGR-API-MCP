@@ -1,0 +1,11 @@
+{
+  "baseApiSource": "a389c66520279274bccbfcc2bf4a13005be91505",
+  "preservedPeerApiSource": "321efe6b3a61496baad50087971d252942825bdf",
+  "backpackQualifiedRuntime": "8f3101c10561c1641113405981d16c8d93946631",
+  "codeMonsterOwnerHeadAtReadback": "a244d0b49ce85de341d8a8c8ac6d3c1a8408c9f3",
+  "normalSourceHttpPassed": 28,
+  "normalCompiledHttpPassed": 28,
+  "apiRuntimeAndTestGitBlobsUnchangedAcrossPeerJoin": true,
+  "handoffResolution": "Both sides were verified pure prefixes of the same common base. Kept both prefixes and the entire original body. No peer work discarded.",
+  "scope": "Fresh local signed-JWT/JWKS/SQLite/official-MCP qualification of guarded result pages and existing source tools, with synthetic identity and local transport mapping. No Docker probe, provider, permanent Tevin or production claim."
+}

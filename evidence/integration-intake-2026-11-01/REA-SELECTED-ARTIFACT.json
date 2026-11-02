@@ -1,0 +1,40 @@
+{
+  "status": "INSPECTED_NOT_RIGHTS_CLEARED",
+  "reaVersion": "6.8.0",
+  "targetRelativePath": "n8n-publicapis-selected-20261101.zip",
+  "targetBytes": 21049,
+  "artifactSha256": "a1f59883ab39f74cffb95ac0d0af53cefde899e900d6c5e30cdd1c7795b7a87d",
+  "summaryEvidenceId": "ev_0229b1b1535a8cb6e12b728e115a67ea239bf37a31fe53313af57f7c784e2739",
+  "sourceInventoryEvidenceId": "ev_e9215880e0b4f43f7589ccae784241701f3988730f7c0f6ad42afb3b9efcc4f4",
+  "evidenceSha256": "f6de1d66667d1bfd4c6aa8e0c8d42bc7da4c2ef0a7a7ef13ee67d00dba527944",
+  "localEvidencePath": "C:\\Users\\cool\\.mgr-tools\\rea\\workspace\\.rea-evidence\\rea-full-929d631b-bbfb-48b3-9b97-d9ccf1c09800.json",
+  "coverage": {
+    "scope": "container-entries",
+    "status": "complete"
+  },
+  "inventory": {
+    "manifest_id": "agm_470d7f226bdb8b3a38d16451cbc11ff2c34821a05df5731d3a7866d7c2282c14",
+    "root_artifact_id": "art_9318447bfded494b3e7d75c65b5e23ede2913f2b6fa849775349ae4c56bea133",
+    "root_sha256": "a1f59883ab39f74cffb95ac0d0af53cefde899e900d6c5e30cdd1c7795b7a87d",
+    "root_format": "zip",
+    "graph_sha256": "882d1693a2c82b18fce4e59eab8f4b8ab8fdea812b42e97d26e1543a006488fb",
+    "node_count": 7,
+    "occurrence_count": 7,
+    "edge_count": 6
+  },
+  "entryKindCounts": {
+    "file": 7,
+    "directory": 0,
+    "symlink": 0,
+    "slice": 0
+  },
+  "limitations": [
+    "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+    "ZIP inventory lists central-directory entries only. Non-entry bytes, including leading bytes before the first entry such as a self-extractor stub, an APK Signing Block before the central directory or a ZIP comment after it, are not occurrences."
+  ],
+  "unknowns": [
+    "Inventory does not establish application runtime behavior or complete format-specific analysis."
+  ],
+  "noAssetLicenseApproval": true,
+  "noSourceCodeReconstructionClaim": true
+}

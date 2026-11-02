@@ -4,6 +4,26 @@ Before: nine-read catalog assumptions and summary-only qualification. After: cur
 
 ---
 
+## n8n/public-apis source recovery and package: completed
+
+12/12 outcomes accepted for the bounded native intake cycle, not whole-product completion. Four raw patches were actually applied at exact bases and matched sealed trees; all incremental bundles verified and fetched the original exact commits. The source ZIP was extracted and all 41 listed hashes matched. Package SHA256: 6cf9d0d5d983e21e550cadbf2f874fdb83420ea85b016692c8359b8f19d33e7b. No upstream runtime/templates, raw semantic graphs, dependencies or private configuration are shipped. The canonical native runtime is c9ee4c8c97e38417068c181ad9b9c0ae97d1f20e. Source delivery commits and prerequisite bases are recorded in SOURCE-DELIVERY.json; these later receipt-only commits are intentionally outside their own archive.
+
+The initial approved fixed check passed19/19. New native source is locally qualified by full307/0fail/6skip, canonical focused31, owner27, original corpus6 and source/compiled HTTP22each. A new five-file source review records current committed and working-byte identities including ordinary Git LF/CRLF conversion. The existing installed host profile is now stale for the changed source; its earlier approval was not silently extended. No permanent Tevin, live model/provider, workflow activation, hosted TLS/OAuth or production verification is claimed.
+
+---
+
+## n8n/public-apis native intake: completed local delivery
+
+Code Monster now inspects committed n8n workflow declarations and public-API directory claims through the existing automation map and Tevin source operation. Original native code flags duplicate/unknown graph references, cycles and declared effect/credential-reference counts without exporting parameters, credentials, code or URLs. Provider/authentication/quota/terms acceptance and executionReady remain false. A real 13,706-byte owner refusal exposed an integration gap; byte-aware continuation now returns the original corpus in 6,515/10,100-byte pages within the unchanged 12,000-byte receiving limit.
+
+Completed evidence: full native suite 307 passed/0 failed/6 skipped on unchanged tracked source; focused31/31; canonical owner conversation27 checks; actual original-corpus owner6 checks; normal source/compiled HTTP22 checks each. Original public-apis31 tests and controlled loopback probes executed. Original n8n constructor/traversal behavior and actual REA ran with explicit coverage limits. All369 pinned JSON files received static intake:361 parsed,8 unavailable; no whole-workflow/node/security acceptance is inferred. See owning integration-intake evidence REPORT.md, VERIFICATION.json and SOURCE-REA-MANIFEST.json; exact recovery/package receipts follow in this handoff when sealed.
+
+The already-refreshed existing host profile passed the requested fixed check19/19 before these new source changes. No private host configuration, authority, roots, expiry or command changed in this chat. That earlier source-bound result does not qualify a newer fingerprint. Backpack is supporting context/procedure/evidence tooling. Code Monster retains engineering intelligence and execution/candidate custody; OmniDev owns operator jobs/workers, OmniSight presentation, ONE decisions/permissions. No duplicate orchestrator, provider registry or credential store was added.
+
+The canonical owner test first timed out at its unchanged120-second deadline during concurrent checks; the serial acceptance rerun is recorded separately. A TypeScript-only required-path assertion in the corpus fixture was corrected. Real SDK/MCP/Git/SQLite/HTTP paths were exercised with injected models and synthetic identities. No permanent Tevin activation, live provider, workflow/node execution, hosted TLS/OAuth or production claim. Remaining all-candidate research is open.
+
+---
+
 ## Modular automation source packet recovery completed — November 1, 2026
 
 All four frozen source trees and exact commit IDs were reconstructed from incremental raw patches and bundles. MGR-EVERYAPP-TSTACK-QUALIFIED-SOURCE.zip was freshly extracted: 46/46 manifest hashes matched (47 total files). Archive SHA-256: b81c56856b90c3759e5a4da2f902b6a6f2cf02ebdba553fedfdca9678521340d. Owning PACKAGE-VERIFICATION.json and SOURCE-RECOVERY.json record the exact frozen commits/bases. This later documentation receipt is outside that already sealed packet; it does not change the qualified runtime.

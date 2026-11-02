@@ -34,6 +34,16 @@
       "sha256": "d0d0b57aa995e92a6c3ddf9ae340ce9fdec99e070cdfc61abb5883f1f520a567"
     },
     {
+      "path": "backpack-070-joined-normal-compiled-http-20261101.txt",
+      "bytes": 1519,
+      "sha256": "3b1b83049511a2f5aac934501030e2cde50faa5cfc07a28f24ebc983a292f603"
+    },
+    {
+      "path": "backpack-070-joined-normal-source-http-20261101.txt",
+      "bytes": 1505,
+      "sha256": "43ae1abd8f78c7a59343b2e1473ae2752be4a160e2909ed0c4a4ed0ecc9ab626"
+    },
+    {
       "path": "backpack-070-normal-backpack-only-http-20261101.txt",
       "bytes": 704,
       "sha256": "ec82be36d3112e80d4e75418c628423a6070e7d5d598384cb6a99d585b9e401c"
@@ -47,6 +57,11 @@
       "path": "backpack-070-normal-source-http-20261101.txt",
       "bytes": 1505,
       "sha256": "352d50d5c2c358ede6309db94ef070cd8d20f18b0ba62408f2b8461f7f91e7cf"
+    },
+    {
+      "path": "JOINED-QUALIFICATION.json",
+      "bytes": 825,
+      "sha256": "7b1d96caa50ded26a4a7695bf8b62b180d8081de28bbb051df560a816ff72a54"
     },
     {
       "path": "REPORT.md",

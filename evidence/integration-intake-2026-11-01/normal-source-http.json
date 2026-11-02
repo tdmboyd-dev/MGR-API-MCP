@@ -1,0 +1,31 @@
+{
+  "observedAt": "2026-11-02T01:20:19.060Z",
+  "mode": "source",
+  "passed": 22,
+  "checks": [
+    "invalid-listen-host-refused-before-service-start",
+    "actual-normal-entrypoint-explicit-loopback",
+    "unauthenticated-request-refused",
+    "all-eight-source-tools-register-through-normal-HTTP",
+    "prior-source-profile-still-works",
+    "actual-normal-HTTP-compiler-derived-module-review",
+    "actual-normal-HTTP-preserves-audit-language-exclusions",
+    "actual-signed-JWT-HTTP-qualified-hierarchy",
+    "actual-normal-HTTP-variable-statement-range",
+    "actual-normal-HTTP-paged-map-without-values",
+    "actual-normal-HTTP-directory-qualified-child-package-without-command-values",
+    "actual-normal-HTTP-workflow-intake-no-execution-or-values",
+    "actual-normal-HTTP-directory-claims-not-provider-acceptance",
+    "actual-normal-HTTP-original-template-catalog-byte-paging",
+    "actual-product-same-name-declarations-remain-ambiguous",
+    "actual-product-repository-class-through-normal-HTTP",
+    "actual-product-repository-configuration-through-normal-HTTP",
+    "actor-tenant-and-component-scope-refused",
+    "caller-root-injection-refused",
+    "both-new-methods-honor-live-binding-revocation",
+    "explicit-binding-restoration",
+    "source-unchanged"
+  ],
+  "actualProductCommit": "c9ee4c8c97e38417068c181ad9b9c0ae97d1f20e",
+  "scope": "Actual normal source/compiled HTTP entrypoint, explicit loopback binding, real local JWKS/signed JWT and official SDK into real Code Monster Git worker on controlled fixtures AND the actual product repository. Synthetic HTTPS-termination mapping in the owned client transport; production HTTPS metadata guard remains intact, actual TLS/hosted OAuth is not verified. Synthetic identity/owned fixtures; no provider/permanent Tevin/container/production claim."
+}

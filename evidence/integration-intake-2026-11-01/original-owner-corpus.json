@@ -1,0 +1,19 @@
+{
+  "sourceCommit": "771be12145c2193af6efda167c6ebfc9f710b1b0",
+  "checksPassed": 6,
+  "pages": 2,
+  "responseBytes": [
+    6515,
+    10100
+  ],
+  "ownerBoundaryBytes": 12000,
+  "items": 3,
+  "nodes": [
+    10,
+    88
+  ],
+  "candidateDirectoryRows": 2233,
+  "savedReadReceipts": 2,
+  "sourceUnchanged": true,
+  "scope": "Actual owner SDK/authenticated MCP/Git worker on original licensed research corpus; no live model, node/workflow activation or provider request."
+}
