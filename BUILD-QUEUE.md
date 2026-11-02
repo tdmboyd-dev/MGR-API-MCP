@@ -1,3 +1,7 @@
+## Registered application domain connection — November 2, 2026
+
+The original OmniDev authorizer, host-pinned Code Monster candidate, existing OmniSight observation and ONE saved-result/reopen path now pass17 controlled joined checks. No workload/provider/signature ran; account/permission responses are fixtures. API source and native acceptance contract remain unchanged: current omnidev.job.verify accepts Windows AppContainer snapshot only. Next is complete committed-source intake, the bounded application adapter and normal owner caller with real qualified execution, cancellation/recovery and saved replay. Do not weaken native validation or recreate the domain authority. See [current integration and reuse plan](docs/REGISTERED-APPLICATION-INTEGRATION.md); original requirements and whole-product Unassessed status remain.
+
 ## n8n/public-apis native intake: completed local delivery
 
 Code Monster now inspects committed n8n workflow declarations and public-API directory claims through the existing automation map and Tevin source operation. Original native code flags duplicate/unknown graph references, cycles and declared effect/credential-reference counts without exporting parameters, credentials, code or URLs. Provider/authentication/quota/terms acceptance and executionReady remain false. A real 13,706-byte owner refusal exposed an integration gap; byte-aware continuation now returns the original corpus in 6,515/10,100-byte pages within the unchanged 12,000-byte receiving limit.

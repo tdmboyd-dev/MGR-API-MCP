@@ -1,3 +1,7 @@
+## Registered application domain connection — November 2, 2026
+
+The original OmniDev authorizer, host-pinned Code Monster candidate, existing OmniSight observation and ONE saved-result/reopen path now pass17 controlled joined checks. No workload/provider/signature ran; account/permission responses are fixtures. API source and native acceptance contract remain unchanged: current omnidev.job.verify accepts Windows AppContainer snapshot only. Next is complete committed-source intake, the bounded application adapter and normal owner caller with real qualified execution, cancellation/recovery and saved replay. Do not weaken native validation or recreate the domain authority. See [current integration and reuse plan](REGISTERED-APPLICATION-INTEGRATION.md); original requirements and whole-product Unassessed status remain.
+
 ## Current source refusal and dispatch observation — November 2, 2026
 
 Original Omni client now carries a strictly bounded definite source refusal to Tevin with a fixed explanation that native code was not started; arbitrary diagnostics, claimed authority or contradictory native-report state refuse. Runtime4684ed7 passed verify:311tests/0fail/21explicit skips, typecheck/artifact/plugin checks;128owning inputs unchanged; focused32/32. Actual four-repository after-claim withdrawal8/8 passes with0native execution/inference and fresh restart/replay. [Evidence](../evidence/native-source-recheck-2026-11-02/REPORT.md).

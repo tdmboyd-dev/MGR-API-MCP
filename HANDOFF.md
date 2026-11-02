@@ -1,3 +1,7 @@
+## Registered application domain connection — November 2, 2026
+
+The original OmniDev authorizer, host-pinned Code Monster candidate, existing OmniSight observation and ONE saved-result/reopen path now pass17 controlled joined checks. No workload/provider/signature ran; account/permission responses are fixtures. API source and native acceptance contract remain unchanged: current omnidev.job.verify accepts Windows AppContainer snapshot only. Next is complete committed-source intake, the bounded application adapter and normal owner caller with real qualified execution, cancellation/recovery and saved replay. Do not weaken native validation or recreate the domain authority. See [current integration and reuse plan](docs/REGISTERED-APPLICATION-INTEGRATION.md); original requirements and whole-product Unassessed status remain.
+
 ## Joined voice-preset and source-refusal delivery — November 2, 2026 UTC
 
 Preserved peer ee97eeb explicit bounded voice-profile transport; merged source7ba75e3 passed verify334results:313pass/0fail/21explicit skips, typecheck/artifact/plugin checks;129owning inputs unchanged. Repository integrity1042/0 passes. Repeated actual native positive11/11 passed through the joined API,0inference/permanent owner DB untouched. Earlier source4684ed7/311pass scope remains separately recorded, not relabelled or summed. Current API publication includes the peer source; real voice/device and whole-product acceptance remain open. See evidence/native-source-recheck-2026-11-02/REPORT.md and JOINED-VERIFICATION.json.
