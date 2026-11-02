@@ -1,3 +1,11 @@
+## n8n/public-apis source recovery and package: completed
+
+12/12 outcomes accepted for the bounded native intake cycle, not whole-product completion. Four raw patches were actually applied at exact bases and matched sealed trees; all incremental bundles verified and fetched the original exact commits. The source ZIP was extracted and all 41 listed hashes matched. Package SHA256: 6cf9d0d5d983e21e550cadbf2f874fdb83420ea85b016692c8359b8f19d33e7b. No upstream runtime/templates, raw semantic graphs, dependencies or private configuration are shipped. The canonical native runtime is c9ee4c8c97e38417068c181ad9b9c0ae97d1f20e. Source delivery commits and prerequisite bases are recorded in SOURCE-DELIVERY.json; these later receipt-only commits are intentionally outside their own archive.
+
+The initial approved fixed check passed19/19. New native source is locally qualified by full307/0fail/6skip, canonical focused31, owner27, original corpus6 and source/compiled HTTP22each. A new five-file source review records current committed and working-byte identities including ordinary Git LF/CRLF conversion. The existing installed host profile is now stale for the changed source; its earlier approval was not silently extended. No permanent Tevin, live model/provider, workflow activation, hosted TLS/OAuth or production verification is claimed.
+
+---
+
 ## n8n/public-apis native intake: completed local delivery
 
 Code Monster now inspects committed n8n workflow declarations and public-API directory claims through the existing automation map and Tevin source operation. Original native code flags duplicate/unknown graph references, cycles and declared effect/credential-reference counts without exporting parameters, credentials, code or URLs. Provider/authentication/quota/terms acceptance and executionReady remain false. A real 13,706-byte owner refusal exposed an integration gap; byte-aware continuation now returns the original corpus in 6,515/10,100-byte pages within the unchanged 12,000-byte receiving limit.

@@ -1,0 +1,8 @@
+{
+  "archive": "MGR-N8N-PUBLICAPIS-QUALIFIED-SOURCE.zip",
+  "sha256": "6cf9d0d5d983e21e550cadbf2f874fdb83420ea85b016692c8359b8f19d33e7b",
+  "files": 42,
+  "extractedHashesMatched": 41,
+  "sourceRecoveryPassed": 4,
+  "scope": "Original native source intake, selected original REA/behavior and bounded local receiving. Existing-profile initial19 check passed; current new source review is separate. No live model/provider/workflow/production acceptance."
+}

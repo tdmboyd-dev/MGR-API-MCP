@@ -1,0 +1,60 @@
+{
+  "base": "9ad5a7f8fa08df25aba5b7da2b6f38707540ca8e",
+  "nativeCommit": "c9ee4c8c97e38417068c181ad9b9c0ae97d1f20e",
+  "patchSha256": "d0dcef0131666373709095bd6a3aeb289c6ffefc45d4ab26c8a10225f847033a",
+  "files": [
+    {
+      "path": "src/automation-map.mjs",
+      "committedSha256": "81cfb1d45c0681c207033d41cb00b6ccd4483f4f41f06d71e8efe51fec700878",
+      "workingSha256": "81cfb1d45c0681c207033d41cb00b6ccd4483f4f41f06d71e8efe51fec700878",
+      "testedWorkingSha256": "81cfb1d45c0681c207033d41cb00b6ccd4483f4f41f06d71e8efe51fec700878",
+      "workingMatchesCommittedBytes": true,
+      "workingMatchesTestedBytes": true,
+      "normalizedWorkingAndTestedMatchCommitted": true,
+      "explanation": "Git core.autocrlf checkout may convert LF to CRLF; committed and test/canonical source contents match after only CRLF normalization."
+    },
+    {
+      "path": "src/index.d.ts",
+      "committedSha256": "51ddff7899788c6e2bd688e3cef3c6da9898422f32663a7648ac733299a61a7d",
+      "workingSha256": "32240fba78d193f20e3a464a11058b5a36ac2f846d5e04c6dfd2446269da47e5",
+      "testedWorkingSha256": "51ddff7899788c6e2bd688e3cef3c6da9898422f32663a7648ac733299a61a7d",
+      "workingMatchesCommittedBytes": false,
+      "workingMatchesTestedBytes": false,
+      "normalizedWorkingAndTestedMatchCommitted": true,
+      "explanation": "Git core.autocrlf checkout may convert LF to CRLF; committed and test/canonical source contents match after only CRLF normalization."
+    },
+    {
+      "path": "src/integration-intake.mjs",
+      "committedSha256": "5ad15b9c5ed465796b7c5c44660356dec25ae30c703bd80d769ec71c9f63a82c",
+      "workingSha256": "bc8b8b753dcd4c90b6b4f016a62e11d02d25e416e354fc6a906f88bd07c53bb2",
+      "testedWorkingSha256": "5ad15b9c5ed465796b7c5c44660356dec25ae30c703bd80d769ec71c9f63a82c",
+      "workingMatchesCommittedBytes": false,
+      "workingMatchesTestedBytes": false,
+      "normalizedWorkingAndTestedMatchCommitted": true,
+      "explanation": "Git core.autocrlf checkout may convert LF to CRLF; committed and test/canonical source contents match after only CRLF normalization."
+    },
+    {
+      "path": "test/automation-page-budget.test.mjs",
+      "committedSha256": "0529b4792916807e68dd3e623d0f6857f79149e510e0c39e746a72f35b528471",
+      "workingSha256": "617176a73510b7079ccddcda14455051a52021f5fe51a0b8ae8bea8eaf93a7bd",
+      "testedWorkingSha256": "0529b4792916807e68dd3e623d0f6857f79149e510e0c39e746a72f35b528471",
+      "workingMatchesCommittedBytes": false,
+      "workingMatchesTestedBytes": false,
+      "normalizedWorkingAndTestedMatchCommitted": true,
+      "explanation": "Git core.autocrlf checkout may convert LF to CRLF; committed and test/canonical source contents match after only CRLF normalization."
+    },
+    {
+      "path": "test/integration-intake.test.mjs",
+      "committedSha256": "705ee3a9004ae09d1508b212ab5f29d894dd257a2877f7d1f205540e23183e92",
+      "workingSha256": "b6890b2defff6821355190ff90531402f3b2d1afb44e163c66568fb26fa01813",
+      "testedWorkingSha256": "705ee3a9004ae09d1508b212ab5f29d894dd257a2877f7d1f205540e23183e92",
+      "workingMatchesCommittedBytes": false,
+      "workingMatchesTestedBytes": false,
+      "normalizedWorkingAndTestedMatchCommitted": true,
+      "explanation": "Git core.autocrlf checkout may convert LF to CRLF; committed and test/canonical source contents match after only CRLF normalization."
+    }
+  ],
+  "review": "Original native workflow/provider intake and byte-aware automation paging; existing tool/owner limits retained. Reviewed complete helper and pagination regression source; full307pass0fail6skip plus actual receiving recorded separately.",
+  "hostApproval": "Existing nine-file approval was executed19/19 before this native wave. This new five-file review does not modify private sourceDigest, roots, command/args, expiry or grants; post-adoption profile is correctly stale.",
+  "scope": "Concrete source review, not host approval or provider/production acceptance."
+}
