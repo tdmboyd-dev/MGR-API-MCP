@@ -63,7 +63,10 @@ export class OmniEngineeringClient {
   const value=this.checkReceipt(await this.request('/v1/engineering/verifications',body),requestId,input);
   return value.status==='succeeded'||value.status==='failed'&&value.reportId?this.status(requestId,input):this.publicReceipt(value);
  }
- private publicReceipt(v:any){return {requestId:v.requestId,actorId:v.actorId,tenantId:v.tenantId,workspaceId:v.workspaceId,jobId:v.jobId,sourceDigest:v.sourceDigest,candidateDigest:v.candidateDigest,testManifestDigest:v.testManifestDigest,inputDigest:v.inputDigest,status:v.status,cancelRequested:v.cancelRequested,receiptId:v.receiptId,policyIdentity:{...this.config.expectedPolicy},readbackVerified:false,currentBindingVerified:false};}
+ private publicReceipt(v:any){
+  let sourceFailure:{dispatched:false;reason:'reviewed-source-unavailable'}|undefined;
+  if(v.sourceFailure!==undefined){if(v.status!=='failed'||v.reportId||v.receiptId!==null)throw Error('Omni source refusal contradicts execution state');sourceFailure=z.object({dispatched:z.literal(false),reason:z.literal('reviewed-source-unavailable')}).strict().parse(v.sourceFailure);}
+  return {requestId:v.requestId,actorId:v.actorId,tenantId:v.tenantId,workspaceId:v.workspaceId,jobId:v.jobId,sourceDigest:v.sourceDigest,candidateDigest:v.candidateDigest,testManifestDigest:v.testManifestDigest,inputDigest:v.inputDigest,status:v.status,cancelRequested:v.cancelRequested,receiptId:v.receiptId,policyIdentity:{...this.config.expectedPolicy},readbackVerified:false,currentBindingVerified:false,...(sourceFailure?{sourceFailure,error:'Reviewed source could not be verified; native code was not started.'}:{})};}
  async status(requestId:string,input:OmniInput){return this.readStatus(requestId,input);}
  async artifact(requestId:string,input:OmniInput){const result=await this.readStatus(requestId,input,true);if(!result.readbackVerified||!("contentBase64" in result))throw Error("Omni verified report unavailable");return {...result,sha256:(result as {reportSha256:string}).reportSha256};}
  private receiptRead(requestId:string,kind:'status'|'report'){return requestId==='.'||requestId==='..'?this.request('/v1/engineering/verification-'+kind,{requestId}):this.request('/v1/engineering/verifications/'+encodeURIComponent(requestId)+(kind==='report'?'/report':''));}

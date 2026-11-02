@@ -93,6 +93,17 @@ test('pre-execution failure, unknown and cancelled states cannot fabricate repor
  for(const status of ['failed','unknown','cancelled']){const f=fixture();f.common.status=status;delete (f.common as any).reportId;const c=client(transport(f));assert.equal((await c.status(requestId,input)).readbackVerified,false);await assert.rejects(c.artifact(requestId,input),/unavailable/);}
 });
 
+test('source refusal reports that native code was not started without inventing an accepted report',async()=>{
+ const f=fixture();f.common.status='failed';f.common.receiptId=null as any;delete (f.common as any).reportId;(f.common as any).sourceFailure={dispatched:false,reason:'reviewed-source-unavailable'};
+ const c=client(transport(f)),result=await c.status(requestId,input);assert.deepEqual((result as any).sourceFailure,{dispatched:false,reason:'reviewed-source-unavailable'});assert.match((result as any).error,/not started/);assert.equal(result.readbackVerified,false);await assert.rejects(c.artifact(requestId,input),/unavailable/);
+});
+
+test('source refusal cannot carry arbitrary diagnostics, extra authority or a report contradiction',async()=>{
+ for(const change of [(f:any)=>f.common.sourceFailure.dispatched=true,(f:any)=>f.common.sourceFailure.reason='PRIVATE diagnostic',(f:any)=>f.common.sourceFailure.approve=true,(f:any)=>f.common.status='running',(f:any)=>f.common.reportId='native-report:'+assignment.id]){
+  const f=fixture();f.common.status='failed';f.common.receiptId=null as any;delete (f.common as any).reportId;(f.common as any).sourceFailure={dispatched:false,reason:'reviewed-source-unavailable'};change(f);await assert.rejects(client(transport(f)).status(requestId,input));
+ }
+});
+
 
 test('succeeded receipt missing native report ID fails status, dispatch and cancel',async()=>{
  const f=fixture();delete (f.common as any).reportId;const c=client(transport(f));
