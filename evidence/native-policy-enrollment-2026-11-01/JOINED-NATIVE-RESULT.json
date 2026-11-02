@@ -1,0 +1,88 @@
+{
+  "scope": "Actual disposable owner HTTP -> original SDK/MCP -> protected OmniDev SQLite/service -> exact-qualified Windows AppContainer -> original report/ONE save -> fresh-process restart/replay. Injected model only; no provider, permanent owner database, production signer or signed Trilogy worker.",
+  "checks": [
+    {
+      "name": "protected original OmniDev service is enrolled in the actual owner department composition",
+      "passed": true
+    },
+    {
+      "name": "original source import and native account candidate create one exact approved job without model calls",
+      "passed": true
+    },
+    {
+      "name": "injected conversation proposes only workspace/job and trusted binding supplies all exact hashes",
+      "passed": true
+    },
+    {
+      "name": "owner approval is required and denied execution does not admit a native verification",
+      "passed": true
+    },
+    {
+      "name": "actual native boundary result is accepted and exact report bytes reach ONE",
+      "passed": true
+    },
+    {
+      "name": "graceful stop observes original service child exit and clear native journal custody",
+      "passed": true
+    },
+    {
+      "name": "fresh service process and SQLite reopen preserve the saved conversation and verified report",
+      "passed": true
+    },
+    {
+      "name": "completed replay creates no additional native job assignment or verification",
+      "passed": true
+    },
+    {
+      "name": "a live original service prevents scope replacement without touching its policy",
+      "passed": true
+    },
+    {
+      "name": "released owner service automatically derives and records an exact replacement without unioning old candidate scope",
+      "passed": true
+    },
+    {
+      "name": "new candidate still needs its own original ONE approval before native admission",
+      "passed": true
+    },
+    {
+      "name": "second exact candidate runs through native worker and saves a separately bound accepted report",
+      "passed": true
+    },
+    {
+      "name": "new policy, both saved conversations and original assignments survive fresh-process restart with no replay",
+      "passed": true
+    },
+    {
+      "name": "old accepted report remains downloadable with original bytes and explicitly stale current applicability",
+      "passed": true
+    }
+  ],
+  "newInferenceCalls": 0,
+  "actualPrivateWindowsPermissions": true,
+  "permanentOwnerDatabaseTouched": false,
+  "rawInputObjectKeysReversed": true,
+  "workflowRequestId": "chat-0954c5349400db9a2ae7c8e12208ad23db0f078974fd45e52a9a1ca07f2e1788",
+  "workflowState": "succeeded",
+  "artifact": {
+    "sha256": "6ff5ac76f480c2cd6b9eb0976230949f741e67b778479465d3dfb19418e9591a",
+    "bytes": 5420,
+    "assignmentId": "474172ed-ffdf-4b86-88b4-f0005ec428f3"
+  },
+  "policyMigration": {
+    "recordId": "native-policy-change:69676a78-323d-46e2-8a1f-4253ac302819",
+    "secondWorkflow": "chat-77638198ed4d51365a2f6d324a5cc5403202c0be2eed44441b082d610feabbdc",
+    "secondArtifact": {
+      "sha256": "1a97cf8ee579a34b4a22a89dd34f5452c765b2b0680be3cdc515ce5f498f4fdb",
+      "bytes": 5421,
+      "assignmentId": "82a3092d-e04a-4d9a-94c7-f2f9ab8b5bc3"
+    },
+    "originalAssignmentPreserved": true,
+    "hashesDerivedByOriginalContracts": true
+  },
+  "passed": true,
+  "actualNativeExecutions": 2,
+  "providerCalls": 0,
+  "policyScope": "Exact fixture source/candidate/command only; scope replacement retains original records",
+  "finishedAt": "2026-11-02T00:02:34.553Z"
+}

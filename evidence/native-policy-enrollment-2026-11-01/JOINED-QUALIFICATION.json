@@ -1,0 +1,44 @@
+{
+  "recordedAt": "2026-11-02T00:12:16.968353+00:00",
+  "oneSource": "017d36db6a50e26947db803ea5a00d2867e3dc2d",
+  "oneDocumentMerge": "ec05be78b6d064730ff58bb9e1bf2200387be047",
+  "retainedPeerOne": "d35380e57d2d22d9210ee32f5d2cb6053cf1196b",
+  "omniCombinedSource": "82ca5c8d1ddbb1260c89e48990359128440c0931",
+  "retainedPeerOmni": "fef89eae80a1e9865f94da0e185fc4e5fc90ff1b",
+  "joinedOneTests": {
+    "passed": 133,
+    "failed": 0,
+    "source": "ec05be78b6d064730ff58bb9e1bf2200387be047"
+  },
+  "savedQualificationAndOptionalServiceTests": {
+    "passed": 6,
+    "failed": 0
+  },
+  "actualNativeJourney": {
+    "passed": 14,
+    "total": 14,
+    "nativeWindowsExecutions": 2,
+    "inferenceCalls": 0,
+    "permanentOwnerDatabaseTouched": false
+  },
+  "existingHostQualification": {
+    "checks": 29,
+    "originalReceiptSha256": "17510d1e31f11b342ae7785f37bda1f6b827ba7320d13f4f609cd9634e497b97",
+    "qualificationDigest": "03d4afb60c4624cea566aa6e68372498d4d7684e431a4ff1016dda9b462352b1",
+    "currentWorkerAndNodeHashesMatched": true,
+    "newOsQualificationRun": false
+  },
+  "producerFullCombinedRun": {
+    "completed": true,
+    "sourceCommit": "82ca5c8d1ddbb1260c89e48990359128440c0931",
+    "passedProfiles": 92,
+    "failedProfiles": 0,
+    "blockedProfiles": 0,
+    "allOutputHashesAndSourceStabilityChecked": true,
+    "report": "UNFINISHED-WORK/evidence/native-policy-enrollment-20261101/combined-full/report.json"
+  },
+  "nativeVoiceEngineering": "resumed in peer lane through existing MGR-VOICE; no physical voice/device action in this delivery",
+  "normalEngineeringEnabled": false,
+  "goalStatus": "active",
+  "companionSourceManifestsWithheld": true
+}

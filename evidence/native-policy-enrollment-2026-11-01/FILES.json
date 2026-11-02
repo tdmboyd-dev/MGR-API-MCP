@@ -1,4 +1,16 @@
 {
+  "CURRENT-QUALIFICATION.json": {
+    "bytes": 1287,
+    "sha256": "31b6dc4ac7b1bffe8f01883b68a19ae1a78dd76b229cb7c7fffa50e1c7a6cb4a"
+  },
+  "JOINED-NATIVE-RESULT.json": {
+    "bytes": 3484,
+    "sha256": "eb5141a4216616c65c9b215bc5708fb6fe3056816585a17d52782dd02e5801e4"
+  },
+  "JOINED-QUALIFICATION.json": {
+    "bytes": 1676,
+    "sha256": "cf70eb4a88a71ce0ab89ed78220ccd6345f8bc9e01836762bb28c930869d3da9"
+  },
   "NATIVE-RESULT.json": {
     "bytes": 3484,
     "sha256": "a6c0b1fcb224d906ed50613e4b1ed56cf0ee8b218602e2949723d5b75798b181"

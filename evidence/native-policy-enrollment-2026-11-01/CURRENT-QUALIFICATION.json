@@ -1,0 +1,34 @@
+{
+  "recordedAt": "2026-11-02T00:28:29.228065+00:00",
+  "sourceAtRegressionStart": "981b0f2",
+  "sourceAtNativeExecution": "bdcffda",
+  "retainedPeerOne": "3eb7436b781d058204746287006739c6bd998b46",
+  "producerSourceAtExecution": "78e4780bffb11e9bdc89621073a6d72ed5055434",
+  "producerFullRegressionSource": "82ca5c8d1ddbb1260c89e48990359128440c0931",
+  "regression": {
+    "tests": 194,
+    "pass": 194,
+    "fail": 0,
+    "skipped": 0,
+    "files": 18,
+    "modelResponses": "injected; no live inference"
+  },
+  "nativeJourney": {
+    "pass": 14,
+    "total": 14,
+    "actualWindowsExecutions": 2,
+    "inferenceCalls": 0,
+    "permanentOwnerDatabaseTouched": false
+  },
+  "producerFullRegression": {
+    "passedProfiles": 92,
+    "failedProfiles": 0,
+    "blockedProfiles": 0
+  },
+  "runnerRepair": "Output parent admitted before fixture allocation; output failure no longer skips original-owner stop or hides original error. Earlier missing dependency and output diagnostics preserved; successful trial uses existing canonical API dependencies.",
+  "normalEngineeringEnabled": false,
+  "browserUnlockVerified": false,
+  "fullProductCompletion": "Unassessed",
+  "companionPerFileSourceManifestsWithheld": true,
+  "currentKnowledgeSource": "6e69de5ba60c391445fa3bd665e83cb1abd3bb6b"
+}
