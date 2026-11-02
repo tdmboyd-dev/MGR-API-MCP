@@ -1,0 +1,32 @@
+{
+  "originalUnitTestsPassed": 31,
+  "selectedChecks": [
+    {
+      "name": "Actual original requests path reaches owned loopback HTTP server",
+      "passed": true
+    },
+    {
+      "name": "Owned HTTP503 Cloudflare challenge is treated as no link error",
+      "observed": true,
+      "limit": "Deliberate link-checker exception, not proof of usable API/service/authentication"
+    },
+    {
+      "name": "Owned ordinary HTTP403 remains an error",
+      "passed": true
+    },
+    {
+      "name": "Empty description raises IndexError instead of a formatted error",
+      "observed": true
+    },
+    {
+      "name": "Format-only entry check accepts HTTPS=Yes with an http documentation link",
+      "observed": true,
+      "limit": "Formatting is not TLS/provider verification"
+    },
+    {
+      "name": "Case/fragment-equivalent documentation URLs are not deduplicated",
+      "observed": true
+    }
+  ],
+  "scope": "Unchanged selected public-apis validator functions. Three actual loopback requests only; no directory endpoints/providers scanned, credentials or API accounts used."
+}

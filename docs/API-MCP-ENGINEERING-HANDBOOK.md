@@ -1,3 +1,15 @@
+## n8n/public-apis native intake: completed local delivery
+
+Code Monster now inspects committed n8n workflow declarations and public-API directory claims through the existing automation map and Tevin source operation. Original native code flags duplicate/unknown graph references, cycles and declared effect/credential-reference counts without exporting parameters, credentials, code or URLs. Provider/authentication/quota/terms acceptance and executionReady remain false. A real 13,706-byte owner refusal exposed an integration gap; byte-aware continuation now returns the original corpus in 6,515/10,100-byte pages within the unchanged 12,000-byte receiving limit.
+
+Completed evidence: full native suite 307 passed/0 failed/6 skipped on unchanged tracked source; focused31/31; canonical owner conversation27 checks; actual original-corpus owner6 checks; normal source/compiled HTTP22 checks each. Original public-apis31 tests and controlled loopback probes executed. Original n8n constructor/traversal behavior and actual REA ran with explicit coverage limits. All369 pinned JSON files received static intake:361 parsed,8 unavailable; no whole-workflow/node/security acceptance is inferred. See owning integration-intake evidence REPORT.md, VERIFICATION.json and SOURCE-REA-MANIFEST.json; exact recovery/package receipts follow in this handoff when sealed.
+
+The already-refreshed existing host profile passed the requested fixed check19/19 before these new source changes. No private host configuration, authority, roots, expiry or command changed in this chat. That earlier source-bound result does not qualify a newer fingerprint. Backpack is supporting context/procedure/evidence tooling. Code Monster retains engineering intelligence and execution/candidate custody; OmniDev owns operator jobs/workers, OmniSight presentation, ONE decisions/permissions. No duplicate orchestrator, provider registry or credential store was added.
+
+The canonical owner test first timed out at its unchanged120-second deadline during concurrent checks; the serial acceptance rerun is recorded separately. A TypeScript-only required-path assertion in the corpus fixture was corrected. Real SDK/MCP/Git/SQLite/HTTP paths were exercised with injected models and synthetic identities. No permanent Tevin activation, live provider, workflow/node execution, hosted TLS/OAuth or production claim. Remaining all-candidate research is open.
+
+---
+
 # MGR API/MCP — Actual Shared-Bridge Engineering Handbook
 
 **Verified baseline**: main b0b225cc9f225a02b9465db3817fc128532a23b4 (2026-10-31). The repo is the user's REAL shared MGR API/MCP, not a local helper or duplicate API. It contains hosted HTTP/OAuth implementation plus optional integrations with Legacy, Creation OS, Forge, voice and other MGR tools. Its existing HANDOFF.md remains the ONE living operating authority; do not replace it with the Forge master plan.

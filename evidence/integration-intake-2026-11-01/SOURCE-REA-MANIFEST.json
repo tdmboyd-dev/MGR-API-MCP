@@ -1,0 +1,284 @@
+{
+  "sources": [
+    {
+      "repo": "enescingoz/awesome-n8n-templates",
+      "commit": "827110332c21cbe000ab13f6d292d5adb1f1f8db",
+      "license": "CC BY 4.0 template collection; original bytes retained in internal research corpus with attribution and notice",
+      "sourceHashes": {
+        "README.md": "59250123f1175b16c334756de537f719a5d528def364b5665c9a11e8ed18a53a",
+        "LICENSE": "5f8a28f7cfa08d2c3e73878af09fbd90c2baa92368d644ce5e13e8f2224dde5a",
+        "Other_Integrations_and_Use_Cases/API Schema Extractor.json": "34d4e46f0b6e55861b2077de6f2f06b64d085001ff744eb80a2288d672067bfe",
+        "OpenAI_and_LLMs/AI Agent with Ollama for current weather and wiki.json": "ee4d32cdbc5e9f48570dae87706eb39f6d4ad4760e6c17ce60a1f1b20d7037d2"
+      },
+      "readScope": "Selected README/license sections, full structural template traversal or selected complete validator functions/tests. Not a whole repository/engine/provider audit."
+    },
+    {
+      "repo": "public-apis/public-apis",
+      "commit": "2098dd7418240d1796fdd74cb7adca62fa387f2f",
+      "license": "MIT original directory/validators; individual API providers have separate terms",
+      "sourceHashes": {
+        "LICENSE": "71236c06f05cc570aa6b12c42d14bdcd4896517e1af7afa34b3ba42c08c8ab63",
+        "README.md": "4481a18d2f740469502a9d494317a93c01f2545f8eda7a4c37b9b601f7d8bfa8",
+        "scripts/README.md": "1790093dd47fcfd27e55915b30ad0ce16451ac05febef1cbff79cf638bc092cb",
+        "scripts/requirements.txt": "c61138d3b44d5e9c9bad4488efbae8690e496c4cf902adc9d0dee7b3f16d64a7",
+        "scripts/validate/format.py": "2b390bdef43533f7e227d9347f020430b4b74637db8ec201267b23a991dca715",
+        "scripts/validate/links.py": "4c7b23f274b135c1fead34e22a1f80156d67c1ec107a75ee24ba128268d7f3fe",
+        "scripts/tests/test_validate_format.py": "2f8dee4be27959d171333d977f12889e5faddbd0333c1385cfb40dec83ee9b9a",
+        "scripts/tests/test_validate_links.py": "838cd5d53e46e933f5dd388d7b5c5e15d32fc2ca4a45f7e06ea36de705b89f0d"
+      },
+      "readScope": "Selected README/license sections, full structural template traversal or selected complete validator functions/tests. Not a whole repository/engine/provider audit."
+    }
+  ],
+  "n8nResearchRuntime": {
+    "package": "n8n-workflow@2.16.0",
+    "registryIntegrity": "sha512-JoDvHLvV4QZQBCDVQl5xkrGOmPmsacLO4TkJkErCzMmiEqIej+h14J6eCUY7gbxBj8V+GIBlpqyO63akJbXRQg==",
+    "integrityMatched": true,
+    "archiveSha256": "d9b7ff4250c8f07eae1f8e5e6100069a83cf72e1e266d88f1bfc3d5937110e8a",
+    "license": "Sustainable Use License and separate enterprise restrictions inspected. Internal isolated graph research only; no .ee source selected, no runtime/code vendored into MGR.",
+    "selectedCodeHashes": {
+      "workflow.js": "f75d621e65536270a9b4787b139501ea6a5bfb578da0450ba355b907f726cedf",
+      "common/index.js": "caae4907ac377e2eadae7090f22bc1a5f152254ba8f44d25337d74533058dd76",
+      "common/get-parent-nodes.js": "968b1af577e77cd2a01815f66b27753cfce5c724daf211d93b49bee5560bbe2e",
+      "common/get-connected-nodes.js": "c3498eb6c83e295d09ae6076e0e97fd28837c59e465ae8da4c4178d05a2390b3"
+    },
+    "originalBehavior": "Workflow constructor/traversal, explicitly empty node implementation registry. No activation/expression/provider/node execution."
+  },
+  "rea": {
+    "artifact": {
+      "status": "INSPECTED_NOT_RIGHTS_CLEARED",
+      "reaVersion": "6.8.0",
+      "targetRelativePath": "n8n-publicapis-selected-20261101.zip",
+      "targetBytes": 21049,
+      "artifactSha256": "a1f59883ab39f74cffb95ac0d0af53cefde899e900d6c5e30cdd1c7795b7a87d",
+      "summaryEvidenceId": "ev_0229b1b1535a8cb6e12b728e115a67ea239bf37a31fe53313af57f7c784e2739",
+      "sourceInventoryEvidenceId": "ev_e9215880e0b4f43f7589ccae784241701f3988730f7c0f6ad42afb3b9efcc4f4",
+      "evidenceSha256": "f6de1d66667d1bfd4c6aa8e0c8d42bc7da4c2ef0a7a7ef13ee67d00dba527944",
+      "localEvidencePath": "C:\\Users\\cool\\.mgr-tools\\rea\\workspace\\.rea-evidence\\rea-full-929d631b-bbfb-48b3-9b97-d9ccf1c09800.json",
+      "coverage": {
+        "scope": "container-entries",
+        "status": "complete"
+      },
+      "inventory": {
+        "manifest_id": "agm_470d7f226bdb8b3a38d16451cbc11ff2c34821a05df5731d3a7866d7c2282c14",
+        "root_artifact_id": "art_9318447bfded494b3e7d75c65b5e23ede2913f2b6fa849775349ae4c56bea133",
+        "root_sha256": "a1f59883ab39f74cffb95ac0d0af53cefde899e900d6c5e30cdd1c7795b7a87d",
+        "root_format": "zip",
+        "graph_sha256": "882d1693a2c82b18fce4e59eab8f4b8ab8fdea812b42e97d26e1543a006488fb",
+        "node_count": 7,
+        "occurrence_count": 7,
+        "edge_count": 6
+      },
+      "entryKindCounts": {
+        "file": 7,
+        "directory": 0,
+        "symlink": 0,
+        "slice": 0
+      },
+      "limitations": [
+        "Inspection derives bounded static hypotheses and next probes; it does not execute the artifact or claim format-specific semantics.",
+        "ZIP inventory lists central-directory entries only. Non-entry bytes, including leading bytes before the first entry such as a self-extractor stub, an APK Signing Block before the central directory or a ZIP comment after it, are not occurrences."
+      ],
+      "unknowns": [
+        "Inventory does not establish application runtime behavior or complete format-specific analysis."
+      ],
+      "noAssetLicenseApproval": true,
+      "noSourceCodeReconstructionClaim": true
+    },
+    "n8nApplication": {
+      "evidenceId": "ev_e0127d83f16a773eed198a9a92635044223e4d14a75f8f2f37b94e58d1c9fc57",
+      "bundleSha256": "30deec8acb9459416f3ebb7f88856e15de7469b7968deaec86c872e9fe55f20b",
+      "parsedSources": 4,
+      "syntax": "4 complete, 0 recovered/failed",
+      "applicationCoverage": "partial",
+      "semanticCoverage": "unknown",
+      "semanticUnknowns": 969,
+      "scope": "Exact four original compiled JS files in preserved relative source layout; dependencies not silently included."
+    },
+    "n8nForwardTrace": {
+      "evidenceId": "ev_306029e9ac1863b40f53dd505f1335ba708ac4f940f688889982beb966a39d8f",
+      "status": "ambiguous",
+      "coverage": {
+        "status": "partial"
+      },
+      "summary": {
+        "total_seed_matches": 7,
+        "traversed_nodes": 11,
+        "traversed_relations": 4,
+        "traversed_functions": 7,
+        "traversed_modules": 1,
+        "relevant_unknowns": 8
+      },
+      "limits": "Static inferred, ambiguous/partial; no runtime alias/semantic completeness claim."
+    },
+    "pythonMetadata": [
+      {
+        "file": "format",
+        "evidenceId": "ev_9e082c27c07a574ff14133e5b456ec57bbb5060360f215898b5464235f52d264",
+        "operation": "inspect_python_pyc",
+        "limits": "CPython 3.12 header/marshal metadata only; no Python semantic recovery/decompilation or target execution."
+      },
+      {
+        "file": "links",
+        "evidenceId": "ev_1645c4acefecd643f5674bca17b76663e6bf65a514103d3383a2a6097eb6ebe5",
+        "operation": "inspect_python_pyc",
+        "limits": "CPython 3.12 header/marshal metadata only; no Python semantic recovery/decompilation or target execution."
+      }
+    ],
+    "initialFailedInput": "First JS source snapshot named common.js instead of common/index.js. Invalid-request diagnostic retained, no success claimed; corrected new v2 snapshot selected the actual four paths."
+  },
+  "executed": {
+    "publicApiOriginalTests": 31,
+    "python": "CPython3.12",
+    "requests": "2.32.5 isolated contemporary dependency; old upstream requirement pins not installed globally",
+    "publicApiProbe": {
+      "originalUnitTestsPassed": 31,
+      "selectedChecks": [
+        {
+          "name": "Actual original requests path reaches owned loopback HTTP server",
+          "passed": true
+        },
+        {
+          "name": "Owned HTTP503 Cloudflare challenge is treated as no link error",
+          "observed": true,
+          "limit": "Deliberate link-checker exception, not proof of usable API/service/authentication"
+        },
+        {
+          "name": "Owned ordinary HTTP403 remains an error",
+          "passed": true
+        },
+        {
+          "name": "Empty description raises IndexError instead of a formatted error",
+          "observed": true
+        },
+        {
+          "name": "Format-only entry check accepts HTTPS=Yes with an http documentation link",
+          "observed": true,
+          "limit": "Formatting is not TLS/provider verification"
+        },
+        {
+          "name": "Case/fragment-equivalent documentation URLs are not deduplicated",
+          "observed": true
+        }
+      ],
+      "scope": "Unchanged selected public-apis validator functions. Three actual loopback requests only; no directory endpoints/providers scanned, credentials or API accounts used."
+    },
+    "n8nGraphProbe": {
+      "package": "n8n-workflow@2.16.0",
+      "records": [
+        {
+          "path": "Other_Integrations_and_Use_Cases/API Schema Extractor.json",
+          "declaredNodes": 88,
+          "graphNodesRetained": 88,
+          "selectedMainParentCount": 9,
+          "scope": "Actual original Workflow graph constructor/traversal with an explicitly empty node-type registry. No node implementation, expression, activation or provider execution."
+        },
+        {
+          "path": "OpenAI_and_LLMs/AI Agent with Ollama for current weather and wiki.json",
+          "declaredNodes": 10,
+          "graphNodesRetained": 10,
+          "selectedMainParentCount": 1,
+          "scope": "Actual original Workflow graph constructor/traversal with an explicitly empty node-type registry. No node implementation, expression, activation or provider execution."
+        }
+      ],
+      "controlledFindings": [
+        {
+          "name": "Selected graph constructor silently replaces earlier same-name node with the later one",
+          "observed": true
+        },
+        {
+          "name": "Selected graph construction retains connection to an absent target without rejecting it",
+          "observed": true
+        }
+      ],
+      "license": "Sustainable Use/enterprise scopes inspected; internal isolated research only, not vendored into MGR.",
+      "limits": [
+        "Graph-only constructor/traversal with no registered node implementations.",
+        "These findings do not establish an n8n API/import-validation or execution-security bypass.",
+        "No provider calls, workflow activation or expression execution performed."
+      ]
+    },
+    "actualOriginalCorpusMcp": {
+      "scope": "Actual official SDK/stdio Code Monster worker on committed original CC BY/MIT corpus, exact source bytes with documented relocated paths. No workflow/node/provider execution.",
+      "commit": "771be12145c2193af6efda167c6ebfc9f710b1b0",
+      "pages": 3,
+      "allSourceCitationsPinned": true,
+      "sourceUnchanged": true,
+      "workflows": [
+        {
+          "path": "n8n/workflows/schema.json",
+          "status": "parsed-declarations",
+          "nodes": 88,
+          "connections": 91,
+          "structuralCycleObserved": true,
+          "graphComplete": true,
+          "executionReady": false
+        },
+        {
+          "path": "n8n/workflows/weather.json",
+          "status": "parsed-declarations",
+          "nodes": 10,
+          "connections": 5,
+          "structuralCycleObserved": false,
+          "graphComplete": true,
+          "executionReady": false
+        }
+      ],
+      "catalog": {
+        "candidateRows": 2233,
+        "validDeclarationRows": 2123,
+        "invalidRows": 110,
+        "schemeDisagreements": 58,
+        "duplicateLinks": 5,
+        "providerVerified": false,
+        "externalCalls": 0
+      }
+    },
+    "actualOriginalOwnerCorpus": {
+      "sourceCommit": "771be12145c2193af6efda167c6ebfc9f710b1b0",
+      "checksPassed": 6,
+      "pages": 2,
+      "responseBytes": [
+        6515,
+        10100
+      ],
+      "ownerBoundaryBytes": 12000,
+      "items": 3,
+      "nodes": [
+        10,
+        88
+      ],
+      "candidateDirectoryRows": 2233,
+      "savedReadReceipts": 2,
+      "sourceUnchanged": true,
+      "scope": "Actual owner SDK/authenticated MCP/Git worker on original licensed research corpus; no live model, node/workflow activation or provider request."
+    }
+  },
+  "native": {
+    "state": "canonical locally verified; exact source recovery tracked separately",
+    "implementation": "Independently authored integration-intake.mjs and existing automationMap extension; existing broader native Code Monster product, not a duplicate orchestrator.",
+    "beforeOwnerResponseBytes": 13706,
+    "unchangedOwnerLimitBytes": 12000,
+    "afterOwnerResponseBytes": [
+      6515,
+      10100
+    ],
+    "newPageItemBytes": 6144,
+    "newPageArrayBytes": 8192,
+    "parameterCredentialCodeUrlValues": "withheld",
+    "workflowAndProviderExecutionReady": false
+  },
+  "limits": [
+    "No live provider account, auth, quota, CORS, TLS or terms acceptance.",
+    "No workflow imported/activated, no message/payment/publishing performed.",
+    "No new brain/grant engine/job store; ONE/Code Monster/OmniDev/OmniSight roles retained, Backpack is supporting toolkit.",
+    "Raw third-party templates, source, compiled research runtime, semantic graphs and credentials/configs are excluded from owning product packets."
+  ],
+  "wholeCollectionStaticIntake": {
+    "receipt": "WHOLE-COLLECTION-STATIC-INTAKE.json",
+    "jsonPaths": 369,
+    "parsed": 361,
+    "unavailable": 8,
+    "graphAnomaliesWithinParsed": 0,
+    "limits": "Git object traversal handles Windows long paths. Includes zero-byte/unparseable data; not eight proven broken workflows. Static intake is not complete runtime/security validation."
+  }
+}
