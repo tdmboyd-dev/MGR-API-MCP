@@ -1,6 +1,6 @@
 ## Forge UV integration
 
-The local Tevin journey passed through conversation proposal, exact owner approval, the shared department adapter, real Forge execution, and verified GLB download after restart. MGR-ONE evidence is pinned at `88ba3091723ad698cb4c812121ffd74d9653e4ae`. The model and owner credential were fixtures. Everyday live-model/browser use, hosted acceptance, and independent import of the specific generated artifact remain open.
+The local Tevin journey passed through conversation proposal, exact owner approval, the shared department adapter, real Forge execution, and verified GLB download after restart. MGR-ONE evidence is pinned at `88ba3091723ad698cb4c812121ffd74d9653e4ae`. The model and owner credential were fixtures. Blender 5.2.2 LTS imported the exact reopened GLB and found 1,280 faces with active UV layers and finite coordinates, verified in MGR-ONE fe6a01aab35d15d05129465147725de24e797883. Everyday browser use with a live model and hosted acceptance remain open.
 
 The shared command binds the workspace, saved reconstruction request, source SHA-256 and UV settings. The client resolves source bytes privately and checks the dispatch fence before native create. The real MCP/Forge grid-32 chain verified matching source bytes, layout, replay, reopen, wrong-input refusal and independent result hashes. The earlier grid-32 failure was superseded by a UV-only 825,000-byte binary cap within the existing base64 envelope. The legacy omitted-layout identity is preserved. Fifty-nine focused transport, department and GLB validation tests passed.
 
