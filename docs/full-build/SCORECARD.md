@@ -586,3 +586,7 @@ The shared Agents reader now rejects contradictory run status and outcome marker
 ## Voice Studio build evidence in the shared catalog
 
 The shared Voice catalog points to owning handoff 9097011b2dc5b8c2dc610f7a36f321b0a0988086 for the clean Windows Studio build. The existing Tevin profile workflow pin remains distinct. The authenticated local catalog check verified the new build evidence and the open owner audition boundary.
+
+## Manual page text integrity
+
+Manual responses now include a SHA-256 digest of the exact normalized page text, separate from the digest of the original committed file. Tevin verifies the supplied page digest and saves it in the receipt. Earlier readers without the field remain compatible. The Unicode and CRLF test, mismatched page test and both authenticated SignMe conversation runtime journeys passed. This checks page integrity and does not establish whole-manual coverage.

@@ -126,6 +126,7 @@ export function createRepositoryManuals(roots,{allowUnavailable=false}={}){
    while(true){
     result.endLine=startLine+selected.length-1;
     result.text=selected.join('\n');
+    result.pageSha256=sha(result.text);
     result.nextStartLine=result.endLine<lines.length?result.endLine+1:null;
     if(responseBytes(result)<=MANUAL_RESPONSE_BYTES)break;
     if(selected.length<=1)throw Error('manual-line-exceeds-page-bound');

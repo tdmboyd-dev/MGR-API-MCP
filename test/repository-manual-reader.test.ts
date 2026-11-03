@@ -20,6 +20,7 @@ test('malformed UTF8 cannot be silently replaced and published with a misleading
 test('valid Unicode/BOM/CRLF documents preserve the committed byte hash and readable text',t=>{
  const raw=Buffer.from('\uFEFF# MGR 制作\r\nCafé instructions\r\n'),f=fixture(t,raw,'制作.md'),page=f.reader.read('tool',{document:f.index.documents[0].id}) as any;
  assert.equal(page.source.path,'制作.md');assert.equal(page.source.sha256,createHash('sha256').update(raw).digest('hex'));assert.equal(page.text,'\uFEFF# MGR 制作\nCafé instructions');
+ assert.equal(page.pageSha256,createHash('sha256').update(page.text).digest('hex'));
 });
 test('a replacement directory at the same enrolled path cannot inherit old repository knowledge enrollment',t=>{
  const f=fixture(t,'# Original tool\n'),resolved=realpathSync(f.root),inside=relative(realpathSync(f.outer),resolved);assert.ok(inside&&!inside.startsWith('..')&&!isAbsolute(inside));assert.equal(lstatSync(resolved).isSymbolicLink(),false);
