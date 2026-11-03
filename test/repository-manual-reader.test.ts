@@ -52,9 +52,12 @@ test('long committed paths paginate within the actual MCP response bound',t=>{
  }
  f.git('commit','-m','Index nested manuals without checking them out');
  const paths:string[]=[];
- let page=f.reader.read('tool') as any;
+ let page=f.reader.read('tool',{previous:f.index.source}) as any;
  const commit=page.source.commit;
- assert.ok(page.documents.length<20);
+ assert.ok(page.documents.length>0&&page.documents.length<20);
+ assert.equal(page.comparison.status,'compared');
+ assert.deepEqual(page.comparison.counts,{added:21,modified:0,removed:0});
+ assert.ok(page.comparison.paths.added.length<10,'path samples must shrink to preserve the index page');
  while(true){
   assert.ok(Buffer.byteLength(JSON.stringify(page))<=MANUAL_RESPONSE_BYTES);
   paths.push(...page.documents.map((doc:{path:string})=>doc.path));
