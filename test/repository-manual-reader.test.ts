@@ -29,3 +29,16 @@ test('a replacement directory at the same enrolled path cannot inherit old repos
 test('an oversized source document and a line beyond the page budget are refused explicitly',t=>{
  for(const [bytes,error] of [[Buffer.alloc(1048577,65),/manual-document-limit/],['X'.repeat(6501),/manual-line-exceeds-page-bound/]] as const){const f=fixture(t,bytes);assert.throws(()=>f.reader.read('tool',{document:f.index.documents[0].id}),error);}
 });
+
+test('manual continuations require the original revision and refuse a changed checkout',t=>{
+ const f=fixture(t,Array.from({length:80},(_,i)=>'Line '+(i+1)).join('\n'));
+ const document=f.index.documents[0].id,first=f.reader.read('tool',{document}) as any;
+ assert.equal(first.nextStartLine,61);
+ assert.throws(()=>f.reader.read('tool',{document,startLine:61}),/continuation-commit-required/);
+ const pinned=f.reader.read('tool',{document,startLine:61,expectedCommit:first.source.commit}) as any;
+ assert.match(pinned.text,/^Line 61\n/);
+ writeFileSync(join(f.root,'README.md'),'# New revision\n');
+ f.git('add','.');f.git('commit','-m','Change owning source');
+ assert.throws(()=>f.reader.read('tool',{document,startLine:61,expectedCommit:first.source.commit}),/manual-source-changed/);
+ assert.notEqual((f.reader.read('tool',{document}) as typeof first).source.commit,first.source.commit);
+});

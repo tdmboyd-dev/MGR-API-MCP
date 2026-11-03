@@ -11,6 +11,7 @@ export function createRepositoryManuals(roots){
  const current=id=>{if(!Object.hasOwn(enrolled,id)||realpathSync(enrolled[id])!==enrolled[id])throw Error('manual-project-unavailable');const expected=identities.get(id),actual=lstatSync(enrolled[id],{bigint:true});if(actual.isSymbolicLink()||actual.dev!==expected.dev||actual.ino!==expected.ino)throw Error('manual-project-unavailable');return enrolled[id];};
  return Object.freeze({projects:Object.freeze(Object.keys(enrolled)),project(id){return {id,root:current(id)};},read(id,{document='index',startLine=1,expectedCommit}={}){
   const root=current(id);if(!Number.isSafeInteger(startLine)||startLine<1||startLine>999999)throw Error('manual-page-invalid');
+  if(startLine>1&&!expectedCommit)throw Error('manual-continuation-commit-required');
   const commit=git(root,'rev-parse','--verify','HEAD^{commit}').trim();if(!/^[a-f0-9]{40}$/.test(commit)||expectedCommit&&expectedCommit!==commit)throw Error('manual-source-changed');
   // Owner-authorized committed Markdown only. No working/private-runtime files, arbitrary path,
   // submodule traversal, symlink targets, shell, source execution or network.
