@@ -19,6 +19,13 @@ test("catalog filtering rejects unknown repositories and cannot mutate later res
   assert.throws(()=>readEcosystemCatalog("not-a-repo"),/Unknown ecosystem repository/);
 });
 
+test("the shared catalog advertises each of the thirteen owner-enrolled manual routes",()=>{
+  const manualEntries=readEcosystemCatalog().entries.flatMap(entry=>"knowledgeInterface" in entry?[entry.knowledgeInterface]:[]);
+  assert.deepEqual(manualEntries.map(entry=>entry.project).sort(),
+    ["agents","api-mcp","backpack","code-monster","create-loco","creation","forge","hu","legacy","omnidev","omnisight","signme","voice"]);
+  assert.ok(manualEntries.every(entry=>entry.enrollmentRequired && !entry.automaticRemoteFetch));
+});
+
 test("Legacy local verification is revision-scoped and grants no runtime tools",()=>{
   const [legacy]=readEcosystemCatalog("MGR-LEGACY").entries;
   assert.ok(legacy && "localVerification" in legacy && legacy.localVerification);

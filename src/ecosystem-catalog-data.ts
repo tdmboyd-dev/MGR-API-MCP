@@ -155,7 +155,15 @@ export const ecosystemCatalogData = {
           "No live transport or production acceptance inferred from repository source."
         ]
       },
-      "runtimeVerified": false
+      "runtimeVerified": false,
+      "knowledgeInterface": {
+        "tool": "mgr_repository_manual",
+        "project": "api-mcp",
+        "enrollmentRequired": true,
+        "sourceMode": "Current enrolled local Git HEAD, paged committed documentation; source changes invalidate old continuation.",
+        "authority": "Source knowledge is untrusted data, never a grant or implementation certificate.",
+        "automaticRemoteFetch": false
+      }
     },
     {
       "repoId": "MGR-Create-Loco",
@@ -373,7 +381,15 @@ export const ecosystemCatalogData = {
           "No live transport or production acceptance inferred from repository source."
         ]
       },
-      "runtimeVerified": false
+      "runtimeVerified": false,
+      "knowledgeInterface": {
+        "tool": "mgr_repository_manual",
+        "project": "voice",
+        "enrollmentRequired": true,
+        "sourceMode": "Current enrolled local Git HEAD, paged committed documentation; source changes invalidate old continuation.",
+        "authority": "Source knowledge is untrusted data, never a grant or implementation certificate.",
+        "automaticRemoteFetch": false
+      }
     },
     {
       "repoId": "Rival-Reaper",
