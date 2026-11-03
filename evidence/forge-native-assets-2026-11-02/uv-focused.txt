@@ -1,0 +1,36 @@
+✔ saved-jobs typed client forwards only original read routes and translates reopen identity (54.5056ms)
+✔ saved journal listing reports observation without promoting files or reading GLBs (7.6773ms)
+✔ both saved creation reads require the current exact actor tenant audience scope and expiry before native dispatch (1.1136ms)
+✔ saved journal schema refuses leaked private fields false integrity promotions and foreign kind rows (4.2667ms)
+✔ reopen independently checks exact existing native GLB bytes while returning no binary or new create (3.0098ms)
+✔ reopen preserves unfinished missing and failed state without fetching artifacts or retrying (0.604ms)
+✔ reopen rejects native identity substitution metadata size mismatch tampering and unavailable reader (1.184ms)
+✔ authority withdrawn while list reopen or binary fetch waits withholds all returned saved identities (32.5946ms)
+✔ optional saved creation methods register read-only tools and preserve older client catalog (4.7081ms)
+✔ registered saved reads enforce final publication authority after serialized content exists (2.3347ms)
+✔ native asset schemas preserve five-operation owner authority and refuse malformed parameters (56.7959ms)
+✔ typed native transport maps exact body names statuses verification and allowlisted artifacts (115.626ms)
+✔ reconstruction accepts only exact native input plus independently checked actual GLB bytes (1.8684ms)
+✔ reconstruction refuses wrong request fingerprints substituted receipts and changed binary bytes (1.459ms)
+✔ reconstruction enforces current actor tenant audience scopes and all asynchronous publication fences (1.5735ms)
+✔ reconstruction unfinished and unknown outcomes stay unresolved without automatic redispatch (1.583ms)
+✔ morph accepts only exact native input plus independently checked actual GLB bytes (1.355ms)
+✔ morph refuses wrong request fingerprints substituted receipts and changed binary bytes (1.0394ms)
+✔ morph enforces current actor tenant audience scopes and all asynchronous publication fences (0.5282ms)
+✔ morph unfinished and unknown outcomes stay unresolved without automatic redispatch (0.5302ms)
+✔ optional native registrations reuse execute/read guards and final serialized-publication fence (2.6729ms)
+✔ seven-kind saved navigation and verified reopen retain unchanged transfer caps (5.1065ms)
+✔ UV schema uses native exact choices and explicit normalized defaults without changing owner operation union (7.0671ms)
+✔ UV typed adapter routes defaulted exact input status verification and private artifact allowlist (68.4338ms)
+✔ UV create/status accepts only original native input and independently checked GLB (13.1513ms)
+✔ UV authority denial withdrawal and unknown create keep identity and bytes unpublished (1.9649ms)
+✔ UV saved kind permits eight journals but keeps exact artifact transfer bound (4.6888ms)
+✔ UV optional create/status registrations keep execution and final publication fence (2.9297ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2150.237

@@ -1,3 +1,62 @@
+## Native UV atlas and final three-lane Forge receiving — November 2, 2026
+
+The same optional Forge adapter now has 21 direct tools, including native
+`mgr_forge_uv_create` / `mgr_forge_uv_status`. Eight saved kinds / 8,000 total
+journal rows are admitted; pages stay at 20. UV input uses the original source
+GLB/hash, atlas size choices 256/512/1024/2048/4096 (default 2048) and integer
+padding 1–16 (default 2), sent explicitly to native exact-request verification.
+The same full input is required for status. Native static/untextured/no-existing-
+UV and triangle/cell/aspect limits apply. Existing upload/response/GLB caps,
+actor/tenant/audience/scopes/publication fences and ONE's five-operation
+department ownership remain unchanged. No texture art or new authority is added.
+
+Final canonical npm verify passed 363 results: 342 pass / 0 fail / 21 explicit
+optional-source skips, with typecheck, hosted-artifact syntax and plugin gates.
+Focused native-assets/history/UV passed 28/28, overlapping the full suite.
+Actual official SDK/shared HTTP/secured native proof passed reconstruction,
+static morph and UV create/replay/fresh-SDK exact-input status/changed-input
+denial/saved pagination/reopen/embedded-byte SHA checks and denied/read scopes.
+Original journals/files matched, exactly three total native jobs remained and
+all 143 API/native runtime source hashes stayed unchanged during that trial.
+The source window includes native initial-admission recovery and UV integration;
+earlier 19-tool/two-kind evidence retains its own dated source and is not summed.
+
+Evidence: [UV extension and three-lane proof](evidence/forge-native-assets-2026-11-02/UV-EXTENSION.md), including exact
+artifact hashes, full scope and limitations. Owner handbook/how-to now describe
+21-tool operation, fields and recovery. This closes 6/6 defined connection
+checks only; whole product, hosted/mobile, deployed OAuth, owner-art, provider
+and production acceptance remain open. No permanent owner state was touched.
+Parent coordinates source commit/push; no publication is claimed by this lane.
+
+## Forge native reconstruction and static imported morph — November 2, 2026
+
+The original optional shared Forge adapter now exposes 19 direct tools, including
+`mgr_forge_reconstruction_create/status` and `mgr_forge_morph_create/status`.
+The actual names use the full `mgr_forge_` prefix for each action. Both status
+tools require the complete original input. Existing scopes/enrolled actor,
+tenant/audience/current-authority fences remain; ONE's five-operation department
+union is unchanged. Native original-request verification and independent
+structural/hash verification of actual GLB bytes precede materialized acceptance.
+Seven saved kinds / 7,000 total journal rows are admitted; pages remain 20 rows,
+decoded uploads 900 KB each, combined native JSON 1.2 MB and output GLB 800 KB.
+
+Canonical npm verify passed 357 results: 336 pass / 0 fail / 21 explicit optional-source
+skips plus typecheck/hosted-artifact/plugin gates. New 12 tests overlap that count.
+Actual official SDK/shared HTTP/secured native Forge proof passed both new kinds:
+original create/replay/fresh-SDK full-input status/changed-input denial/saved
+pagination/reopen/embedded bytes and read-only/crossactor/tenant guards. Original
+native journals/files independently matched; exactly 2 jobs remained, no extra
+jobs from denials/replay/reads. All 142 API/native runtime source hashes stayed
+unchanged in that source-qualified trial. Later owning native changes require
+their own qualification; the hashes in this receipt are not extended silently.
+
+Evidence and full limits: [native asset receiving report](evidence/forge-native-assets-2026-11-02/REPORT.md).
+The existing owner handbook/how-to describe operation and recovery. Fixture
+identities, masks and box source were original/disposable; permanent owner state,
+deployed OAuth, live models/providers, hosted/mobile and production acceptance
+remain unchanged/open. Source commit/push is parent-coordinated and pending for
+this work. Preserve original queue IDs and full scope; no blanket completion.
+
 ## Forge saved creation navigation and verified reopen — November 2, 2026
 
 Published source is **d18d89e5d6decfc5260be67286be0f72efaac169** on the existing repair branch; fetched remote commit/tree match exactly. Native Forge source **9516bed47777af8814cdd01bcbe7e6fde71d5a5f** is on its main branch. The final source readback supersedes the lane's earlier pending-publication note below. Later closure/receipt commits are metadata only. The final document-integrity check passed1,094/0, with its initial self-read harness failure retained in the receiving packet. Running permanent owner processes were not restarted or reauthorized.

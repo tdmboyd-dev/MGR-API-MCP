@@ -62,7 +62,7 @@ test('both saved creation reads require the current exact actor tenant audience 
 
 test('saved journal schema refuses leaked private fields false integrity promotions and foreign kind rows',async()=>{
   for(const change of [(x:any)=>x.items[0].prompt='private prompt',(x:any)=>x.items[0].artifact_verified=true,
-    (x:any)=>x.creates_jobs=true,(x:any)=>x.total=5001,(x:any)=>x.items[0].job_id='../private',
+    (x:any)=>x.creates_jobs=true,(x:any)=>x.total=8001,(x:any)=>x.items[0].job_id='../private',
     (x:any)=>x.items[0].kind='world']){
     const f=fixture(),wrong=structuredClone(native);change(wrong);f.options.forge.listSavedJobs=async()=>wrong;
     const result=await listForgeSavedJobsMcp(f.options,{kind:'creature'});

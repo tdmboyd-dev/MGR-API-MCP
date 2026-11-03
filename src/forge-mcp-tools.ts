@@ -7,6 +7,8 @@ import {createHash} from "node:crypto";
 import {types} from "node:util";
 import {forgeWorldInput,forgeCreatureInput,forgeBiomeInput,forgeHumanInput,forgeCompositionInput,forgeVerifyInput,type ForgeRequestVerification} from './forge-inputs.js';
 import {inspectForgeGlb} from './forge-glb.js';
+import {forgeReconstructionInput,forgeMorphInput,forgeUvInput,forgeAssetVerifyInput,forgeNativeVerifyInput,
+ type ForgeNativeRequestVerification,type ForgeAssetInput} from './forge-asset-inputs.js';
 
 export interface ForgeMcpToolOptions {
   auth:AuthContext;
@@ -42,16 +44,16 @@ function publicationGuard(options:ForgeMcpToolOptions,scope:"tools:read"|"tools:
   };
 }
 
-const savedKind=z.enum(['world','creature','biome','human','composed']);
+const savedKind=z.enum(['world','creature','biome','human','composed','reconstruction','morph','uv']);
 const savedRequestId=z.string().regex(/^[A-Za-z0-9_-]{12,100}$/);
 const savedCursor=z.string().regex(/^([a-f0-9]{64}:[0-9]{1,4})?$/);
-const savedJobsInput=z.object({kind:z.enum(['all','world','creature','biome','human','composed']).default('all'),
+const savedJobsInput=z.object({kind:z.enum(['all','world','creature','biome','human','composed','reconstruction','morph','uv']).default('all'),
   limit:z.number().int().min(1).max(20).default(20),cursor:savedCursor.optional()}).strict();
 const savedJobInput=z.object({kind:savedKind,requestId:savedRequestId}).strict();
 const savedJobsResult=z.object({schema:z.literal('mgr.forge.saved-jobs.v1'),status:z.literal('JOURNAL_OBSERVATION'),
   items:z.array(z.object({kind:savedKind,request_id:savedRequestId,job_id:z.string().regex(/^[a-f0-9]{24}$/),
     status:z.enum(['RUNNING','MATERIALIZED','FAILED','NEEDS_RECONCILIATION']),artifact_verified:z.literal(false)}).strict()).max(20),
-  total:z.number().int().min(0).max(5000),unavailable_kinds:z.array(savedKind).max(5),
+  total:z.number().int().min(0).max(8000),unavailable_kinds:z.array(savedKind).max(8),
   next_cursor:z.string().regex(/^[a-f0-9]{64}:[0-9]{1,4}$/).nullable(),order:z.literal('kind_then_request_id'),creates_jobs:z.literal(false)}).strict();
 
 export async function listForgeSavedJobsMcp(options:ForgeMcpToolOptions,input:ForgeSavedJobsInput):Promise<Record<string,unknown>>{
@@ -83,7 +85,8 @@ export async function reopenForgeSavedJobMcp(options:ForgeMcpToolOptions,input:F
         artifactReady:false,creationPerformed:false,reconciliationRequired:native.status==='NEEDS_RECONCILIATION'};
     }
     const keys={world:['world_sha256','world_bytes'],creature:['creature_sha256','creature_bytes'],
-      biome:['biome_sha256','biome_bytes'],human:['human_sha256','human_bytes'],composed:['combined_world_sha256','combined_bytes']} as const;
+      biome:['biome_sha256','biome_bytes'],human:['human_sha256','human_bytes'],composed:['combined_world_sha256','combined_bytes'],
+      reconstruction:['asset_sha256','asset_bytes'],morph:['asset_sha256','asset_bytes'],uv:['asset_sha256','asset_bytes']} as const;
     const [shaKey,bytesKey]=keys[value.kind],sha=native[shaKey],bytes=native[bytesKey],jobId=native.job_id;
     if(native.status!=='MATERIALIZED'||typeof jobId!=='string'||!/^[a-f0-9]{24}$/.test(jobId)||
        typeof sha!=='string'||!/^[a-f0-9]{64}$/.test(sha)||typeof bytes!=='number'||
@@ -99,9 +102,9 @@ export async function reopenForgeSavedJobMcp(options:ForgeMcpToolOptions,input:F
     artifactReady:false,creationPerformed:false,reconciliationRequired:true};}
 }
 
-export async function verifyForgeRequestMcp(options:ForgeMcpToolOptions,input:ForgeRequestVerification):Promise<Record<string,unknown>>{
+export async function verifyForgeRequestMcp(options:ForgeMcpToolOptions,input:ForgeNativeRequestVerification):Promise<Record<string,unknown>>{
   const reason=denied(options,'tools:read');if(reason)return {accepted:false,state:'DENY',reason};
-  const parsed=forgeVerifyInput.safeParse(input);if(!parsed.success)return {accepted:false,state:'INVALID_REQUEST_IDENTITY'};
+  const parsed=forgeNativeVerifyInput.safeParse(input);if(!parsed.success)return {accepted:false,state:'INVALID_REQUEST_IDENTITY'};
   if(!options.forge.verifyRequest)return {accepted:false,state:'EXECUTOR_UNAVAILABLE'};
   const current=publicationGuard(options,'tools:read'),value=parsed.data;
   try{
@@ -300,7 +303,7 @@ export async function readForgeArtifactMcp(options:ForgeMcpToolOptions,input:For
   if(!options.forge.readArtifact)return {accepted:false,state:"EXECUTOR_UNAVAILABLE"};
   if(!/^[a-f0-9]{24}$/.test(input.jobId) ||
      !/^[a-f0-9]{64}$/.test(input.expectedSha256) ||
-     !["creature","biome","world","human","composed"].includes(input.kind))
+     !["creature","biome","world","human","composed","reconstruction","morph","uv"].includes(input.kind))
     return {accepted:false,state:"INVALID_ARTIFACT_IDENTITY"};
   const assertPublicationCurrent=publicationGuard(options,"tools:read");
   try{
@@ -471,7 +474,58 @@ export async function statusForgeCompositionMcp(options:ForgeMcpToolOptions,requ
   }
 }
 
-const executionTools=new Set(['mgr_forge_world_create','mgr_forge_creature_create','mgr_forge_biome_create','mgr_forge_human_lipsync_start','mgr_forge_world_compose_create']);
+const executionTools=new Set(['mgr_forge_world_create','mgr_forge_creature_create','mgr_forge_biome_create','mgr_forge_human_lipsync_start','mgr_forge_world_compose_create','mgr_forge_reconstruction_create','mgr_forge_morph_create','mgr_forge_uv_create']);
+function freezeAsset<T>(value:T):T{if(value&&typeof value==='object'){for(const item of Object.values(value))freezeAsset(item);Object.freeze(value);}return value;}
+
+/** Same enrolled principal and execution fence; native Forge owns journals/geometry. */
+export async function nativeAssetMcp(options:ForgeMcpToolOptions,kind:'reconstruction'|'morph'|'uv',input:ForgeAssetInput,create:boolean):Promise<Record<string,unknown>>{
+  const scope=create?'tools:execute':'tools:read',reason=denied(options,scope);
+  if(reason)return {accepted:false,state:'DENY',reason};
+  const parsed=forgeAssetVerifyInput.safeParse({kind,input});
+  if(!parsed.success)return {accepted:false,state:'INVALID_NATIVE_ASSET_REQUEST'};
+  const original=freezeAsset(parsed.data),requestId=original.input.requestId;
+  const forge=options.forge,current=publicationGuard(options,scope);
+  if(!forge.verifyRequest||!forge.readArtifact||
+     !({reconstruction:create?forge.createReconstruction:forge.reconstructionStatus,
+        morph:create?forge.createMorph:forge.morphStatus,uv:create?forge.createUv:forge.uvStatus}[kind]))
+    return {accepted:false,state:'EXECUTOR_UNAVAILABLE'};
+  try{
+    let dispatched:Record<string,unknown>;
+    if(original.kind==='reconstruction')dispatched=create?await forge.createReconstruction!(original.input):await forge.reconstructionStatus!(requestId);
+    else if(original.kind==='morph')dispatched=create?await forge.createMorph!(original.input):await forge.morphStatus!(requestId);
+    else dispatched=create?await forge.createUv!(original.input):await forge.uvStatus!(requestId);
+    current();
+    const native=await forge.verifyRequest(original);current();
+    if(native.request_id!==requestId||native.request_kind!==kind)throw Error('Exact native asset identity mismatch');
+    if(native.status==='NOT_FOUND'&&native.input_verified===false&&dispatched.status==='NOT_FOUND')
+      return {accepted:false,state:'NOT_FOUND',kind,requestId,artifactReady:false};
+    if(native.input_verified!==true||typeof native.input_fingerprint!=='string'||!/^[a-f0-9]{64}$/.test(native.input_fingerprint)||
+       typeof native.job_id!=='string'||!/^[a-f0-9]{24}$/.test(native.job_id)||dispatched.request_id!==requestId||
+       dispatched.job_id!==native.job_id||dispatched.status!==native.status)throw Error('Original native asset input unverified');
+    if(native.status!=='MATERIALIZED'){
+      if(!['RUNNING','FAILED','NEEDS_RECONCILIATION'].includes(String(native.status)))throw Error('Unknown native asset state');
+      return {accepted:false,state:native.status,kind,requestId,artifactReady:false,
+        reconciliationRequired:native.status==='NEEDS_RECONCILIATION'};
+    }
+    const sha=native.asset_sha256,bytes=native.asset_bytes;
+    if(typeof sha!=='string'||!/^[a-f0-9]{64}$/.test(sha)||typeof bytes!=='number'||!Number.isSafeInteger(bytes)||bytes<28||bytes>800000||
+       dispatched.asset_sha256!==sha||dispatched.asset_bytes!==bytes||native.kind!==kind||
+       native.model_inference_used!==false||native.owner_art_accepted!==false)throw Error('Native asset receipt mismatch');
+    const artifact=await forge.readArtifact({jobId:native.job_id,kind,expectedSha256:sha});current();
+    if(artifact.mimeType!=='model/gltf-binary'||artifact.sha256!==sha||artifact.bytes!==bytes||
+       typeof artifact.blobBase64!=='string'||artifact.blobBase64.length>1100000)throw Error('Native asset transfer mismatch');
+    const binary=Buffer.from(artifact.blobBase64,'base64');
+    if(binary.toString('base64')!==artifact.blobBase64||binary.length!==bytes||createHash('sha256').update(binary).digest('hex')!==sha)
+      throw Error('Native asset bytes changed');
+    inspectForgeGlb(binary);current();
+    return {accepted:true,status:'NATIVE_'+kind.toUpperCase()+'_GLTF_VERIFIED',kind,requestId,jobId:native.job_id,
+      inputFingerprint:native.input_fingerprint,nativeInputVerified:true,artifactSha256:sha,artifactBytes:bytes,
+      artifactReady:true,artifactBytesVerified:true,replayed:dispatched.replayed===true,
+      creationPerformed:create&&dispatched.replayed!==true,ownerArtAccepted:false,neuralInference:false,hostedConsumerVerified:false,
+      disclaimer:'Exact native request and bounded GLB bytes verified. No hidden-surface, likeness, rig-preservation or owner-art acceptance.'};
+  }catch{return {accepted:false,state:'NATIVE_ASSET_OUTCOME_UNVERIFIED',requestId,kind,artifactReady:false,reconciliationRequired:true};}
+}
+
 function scopedRegistrar(server:McpServer,options:ForgeMcpToolOptions):McpServer['registerTool']{
   // Keep the SDK's generic schema/callback signature at every registration.
   // The erased forwarding boundary adds a final fence after the callback has
@@ -489,6 +543,19 @@ function scopedRegistrar(server:McpServer,options:ForgeMcpToolOptions):McpServer
 
 export function registerForgeMcpTools(server:McpServer,options:ForgeMcpToolOptions):void{
   const register=scopedRegistrar(server,options);
+  for(const kind of ['reconstruction','morph','uv'] as const){
+    const schema={reconstruction:forgeReconstructionInput,morph:forgeMorphInput,uv:forgeUvInput}[kind];
+    const creator={reconstruction:options.forge.createReconstruction,morph:options.forge.createMorph,uv:options.forge.createUv}[kind];
+    const status={reconstruction:options.forge.reconstructionStatus,morph:options.forge.morphStatus,uv:options.forge.uvStatus}[kind];
+    if(options.forge.verifyRequest&&options.forge.readArtifact){
+      if(creator)register('mgr_forge_'+kind+'_create',{
+        description:'Create a bounded original native '+kind+' job under tools:execute. Exact original inputs and independent GLB bytes must verify before materialized acceptance. No learned hidden geometry, public download or owner-art approval.',inputSchema:schema
+      },async (input:ForgeAssetInput)=>{const result=await nativeAssetMcp(options,kind,input,true);return {content:[{type:'text' as const,text:JSON.stringify(result)}],isError:result.accepted!==true};});
+      if(status)register('mgr_forge_'+kind+'_status',{
+        description:'Read the existing native '+kind+' job with its exact original request under tools:read. Verifies original input and independently hashed GLB; creates no job or retry.',inputSchema:schema
+      },async (input:ForgeAssetInput)=>{const result=await nativeAssetMcp(options,kind,input,false);return {content:[{type:'text' as const,text:JSON.stringify(result)}],isError:result.accepted!==true};});
+    }
+  }
   if(options.forge.listSavedJobs)register('mgr_forge_saved_jobs',{
     description:'Read-only bounded navigation over original Forge creation journals. Journal state is not verified artifact success. Does not create, retry, cancel, approve or grant authority.',
     inputSchema:savedJobsInput
@@ -505,7 +572,7 @@ export function registerForgeMcpTools(server:McpServer,options:ForgeMcpToolOptio
   });
   if(options.forge.verifyRequest)register('mgr_forge_request_verify',{
     description:'Read-only verification that an existing native Forge job matches these exact original creation instructions and sources. Does not create, retry, approve, cancel or grant authority. RUNNING/FAILED/NEEDS_RECONCILIATION remain their actual states.',
-    inputSchema:forgeVerifyInput
+    inputSchema:forgeNativeVerifyInput
   },async input=>{
     const result=await verifyForgeRequestMcp(options,input);
     return {content:[{type:'text',text:JSON.stringify(result)}],isError:result.accepted!==true};
@@ -571,7 +638,7 @@ export function registerForgeMcpTools(server:McpServer,options:ForgeMcpToolOptio
       description:"Read exact tenant-authorized Forge GLB bytes by immutable job ID and SHA-256 via the existing MCP edge; optional embedded binary resource, not a public URL.",
       inputSchema:z.object({
         jobId:z.string().regex(/^[a-f0-9]{24}$/),
-        kind:z.enum(["creature","biome","world","human","composed"]),
+        kind:z.enum(["creature","biome","world","human","composed","reconstruction","morph","uv"]),
         expectedSha256:z.string().regex(/^[a-f0-9]{64}$/),
         includeData:z.boolean().default(false)
       }).strict()

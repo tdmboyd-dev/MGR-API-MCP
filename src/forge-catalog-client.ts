@@ -1,7 +1,7 @@
 /** Bounded authenticated adapter to Forge Studio catalog, durable creation and files. */
 import {createHash} from "node:crypto";
 import {inspectForgeGlb} from './forge-glb.js';
-import {forgeVerifyInput,type ForgeRequestVerification} from './forge-inputs.js';
+import {forgeNativeVerifyInput,forgeReconstructionInput,forgeMorphInput,forgeUvInput,nativeAssetRequest,type ForgeNativeRequestVerification,type ForgeReconstructionInput,type ForgeMorphInput,type ForgeUvInput} from './forge-asset-inputs.js';
 export interface ForgeCatalogSearch {
   mode:"sources"|"models";
   query:string;
@@ -35,7 +35,7 @@ export interface ForgeWorldCompositionInput{
 }
 export interface ForgeArtifactRequest {
   jobId:string;
-  kind:"creature"|"biome"|"world"|"human"|"composed";
+  kind:"creature"|"biome"|"world"|"human"|"composed"|"reconstruction"|"morph"|"uv";
   expectedSha256:string;
 }
 export interface ForgeArtifactProof {
@@ -44,7 +44,7 @@ export interface ForgeArtifactProof {
   bytes:number;
   mimeType:"model/gltf-binary";
 }
-export type ForgeSavedKind="world"|"creature"|"biome"|"human"|"composed";
+export type ForgeSavedKind="world"|"creature"|"biome"|"human"|"composed"|"reconstruction"|"morph"|"uv";
 export interface ForgeSavedJobsInput {
   kind?:ForgeSavedKind|"all"|undefined;
   limit?:number|undefined;
@@ -66,7 +66,13 @@ export interface ForgeCatalogClient {
   listSavedJobs?(input:ForgeSavedJobsInput):Promise<Record<string,unknown>>;
   reopenSavedJob?(input:ForgeSavedJobInput):Promise<Record<string,unknown>>;
   readWorldContext?():Promise<Record<string,unknown>>;
-  verifyRequest?(input:ForgeRequestVerification):Promise<Record<string,unknown>>;
+  verifyRequest?(input:ForgeNativeRequestVerification):Promise<Record<string,unknown>>;
+  createReconstruction?(input:ForgeReconstructionInput):Promise<Record<string,unknown>>;
+  reconstructionStatus?(requestId:string):Promise<Record<string,unknown>>;
+  createMorph?(input:ForgeMorphInput):Promise<Record<string,unknown>>;
+  morphStatus?(requestId:string):Promise<Record<string,unknown>>;
+  createUv?(input:ForgeUvInput):Promise<Record<string,unknown>>;
+  uvStatus?(requestId:string):Promise<Record<string,unknown>>;
   search(input:ForgeCatalogSearch):Promise<Record<string,unknown>>;
   createWorld?(input:{requestId:string;edits:ForgeWorldEdits}):Promise<Record<string,unknown>>;
   worldStatus?(requestId:string):Promise<Record<string,unknown>>;
@@ -113,7 +119,7 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
   async listSavedJobs(input:ForgeSavedJobsInput):Promise<Record<string,unknown>>{
     if(!input||typeof input!=='object'||Array.isArray(input)||
        Object.keys(input).some(key=>!['kind','limit','cursor'].includes(key))||
-       (input.kind!==undefined&&!['all','world','creature','biome','human','composed'].includes(input.kind))||
+       (input.kind!==undefined&&!['all','world','creature','biome','human','composed','reconstruction','morph','uv'].includes(input.kind))||
        (input.limit!==undefined&&(!Number.isInteger(input.limit)||input.limit<1||input.limit>20))||
        (input.cursor!==undefined&&(typeof input.cursor!=='string'||!/^([a-f0-9]{64}:[0-9]{1,4})?$/.test(input.cursor)))){
       throw Error('Invalid bounded saved Forge jobs request');
@@ -123,14 +129,14 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
   async reopenSavedJob(input:ForgeSavedJobInput):Promise<Record<string,unknown>>{
     if(!input||typeof input!=='object'||Array.isArray(input)||
        Object.keys(input).some(key=>!['kind','requestId'].includes(key))||
-       !['world','creature','biome','human','composed'].includes(input.kind)||
+       !['world','creature','biome','human','composed','reconstruction','morph','uv'].includes(input.kind)||
        typeof input.requestId!=='string'||!/^[A-Za-z0-9_-]{12,100}$/.test(input.requestId)){
       throw Error('Invalid saved Forge creation identity');
     }
     return this.post('/api/saved-job-reopen',{kind:input.kind,request_id:input.requestId});
   }
-  async verifyRequest(raw:ForgeRequestVerification):Promise<Record<string,unknown>>{
-    const value=forgeVerifyInput.parse(raw);
+  async verifyRequest(raw:ForgeNativeRequestVerification):Promise<Record<string,unknown>>{
+    const value=forgeNativeVerifyInput.parse(raw);
     let request:Record<string,unknown>;
     switch(value.kind){
       case 'world':request={request_id:value.input.requestId,edits:value.input.edits};break;
@@ -138,8 +144,31 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
       case 'biome':request={request_id:value.input.requestId,biome:value.input.biome,seed:value.input.seed,resolution:value.input.resolution};break;
       case 'human':request={request_id:value.input.requestId,timings:value.input.timings,fps:value.input.fps};break;
       case 'composed':request={request_id:value.input.requestId,biome_request_id:value.input.biomeRequestId};break;
+      case 'reconstruction':case 'morph':case 'uv':request=nativeAssetRequest(value);break;
     }
     return this.post('/api/request-verify',{kind:value.kind,request});
+  }
+
+  async createReconstruction(raw:ForgeReconstructionInput):Promise<Record<string,unknown>>{
+    return this.post('/api/reconstruction-create',nativeAssetRequest({kind:'reconstruction',input:forgeReconstructionInput.parse(raw)}));
+  }
+  async createMorph(raw:ForgeMorphInput):Promise<Record<string,unknown>>{
+    return this.post('/api/morph-create',nativeAssetRequest({kind:'morph',input:forgeMorphInput.parse(raw)}));
+  }
+  async createUv(raw:ForgeUvInput):Promise<Record<string,unknown>>{
+    return this.post('/api/uv-create',nativeAssetRequest({kind:'uv',input:forgeUvInput.parse(raw)}));
+  }
+  async uvStatus(requestId:string):Promise<Record<string,unknown>>{
+    if(typeof requestId!=='string'||!/^[A-Za-z0-9_-]{12,100}$/.test(requestId))throw Error('Invalid native UV ID');
+    return this.post('/api/uv-status',{request_id:requestId});
+  }
+  async reconstructionStatus(requestId:string):Promise<Record<string,unknown>>{
+    if(typeof requestId!=='string'||!/^[A-Za-z0-9_-]{12,100}$/.test(requestId))throw Error('Invalid native reconstruction ID');
+    return this.post('/api/reconstruction-status',{request_id:requestId});
+  }
+  async morphStatus(requestId:string):Promise<Record<string,unknown>>{
+    if(typeof requestId!=='string'||!/^[A-Za-z0-9_-]{12,100}$/.test(requestId))throw Error('Invalid native morph ID');
+    return this.post('/api/morph-status',{request_id:requestId});
   }
 
   async search(input:ForgeCatalogSearch):Promise<Record<string,unknown>>{
@@ -249,7 +278,7 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
   async readArtifact(input:ForgeArtifactRequest):Promise<ForgeArtifactProof>{
     if(!/^[a-f0-9]{24}$/.test(input.jobId) ||
        !/^[a-f0-9]{64}$/.test(input.expectedSha256) ||
-       !["creature","biome","world","human","composed"].includes(input.kind)){
+       !["creature","biome","world","human","composed","reconstruction","morph","uv"].includes(input.kind)){
       throw new Error("Invalid Forge artifact identity or expected digest");
     }
     const route={
@@ -257,7 +286,10 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
       biome:"biome/biome.glb",
       world:"edited/world.glb",
       human:"human/facial-animation/human-lipsync.glb",
-      composed:"composed/world.glb"
+      composed:"composed/world.glb",
+      reconstruction:"reconstructed/hull.glb",
+      morph:"morphed/morphed.glb",
+      uv:"uv/uv-mapped.glb"
     }[input.kind];
     const path=new URL("/files/"+input.jobId+"/"+route,this.baseUrl);
     const response=await this.transport(path,{

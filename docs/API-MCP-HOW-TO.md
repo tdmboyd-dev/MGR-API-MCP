@@ -82,7 +82,7 @@ authorized transport. No tunnel or remote deployment is created by setting a URL
 
 ## Available Forge operations
 
-This fully configured adapter registers 15 optional tools. Actual discovery is
+This fully configured adapter registers 21 optional tools. Actual discovery is
 authoritative for the running host; older injected clients may omit optional
 methods. Request exact schemas from tool discovery before creating anything.
 
@@ -95,6 +95,9 @@ methods. Request exact schemas from tool discovery before creating anything.
 | `mgr_forge_biome_create` / `mgr_forge_biome_status` | `tools:execute` / `tools:read` | Native optional terrain layer and status |
 | `mgr_forge_human_lipsync_start` / `mgr_forge_human_lipsync_status` | `tools:execute` / `tools:read` | Existing generic-human animation from supplied timed phonemes |
 | `mgr_forge_world_compose_create` / `mgr_forge_world_compose_status` | `tools:execute` / `tools:read` | Original world/biome Blender composition and status |
+| `mgr_forge_reconstruction_create` / `mgr_forge_reconstruction_status` | `tools:execute` / `tools:read` | Native orthographic-mask visual hull, exact-input and independent GLB verification |
+| `mgr_forge_morph_create` / `mgr_forge_morph_status` | `tools:execute` / `tools:read` | Bounded non-destructive revision of an uploaded static GLB |
+| `mgr_forge_uv_create` / `mgr_forge_uv_status` | `tools:execute` / `tools:read` | Native padded per-triangle UV atlas on a supported untextured static GLB |
 | `mgr_forge_artifact_read` | `tools:read` | Private allowlisted GLB bytes bound to job ID and expected SHA |
 | `mgr_forge_saved_jobs` | `tools:read` | Browse existing native journals, at most 20 rows per page |
 | `mgr_forge_saved_job_reopen` | `tools:read` | Reopen an original job and independently verify its bounded GLB |
@@ -113,7 +116,9 @@ Call `mgr_forge_saved_jobs` with JSON arguments such as:
 {"kind":"creature","limit":20}
 ```
 
-Allowed kinds are `all`, `world`, `creature`, `biome`, `human` and `composed`.
+Allowed kinds are `all`, `world`, `creature`, `biome`, `human`, `composed`,
+`reconstruction`, `morph` and `uv`. The bounded journal envelope allows up to
+8,000 rows across eight native kinds; each page still returns at most 20.
 Omitting kind selects all. Rows are ordered by kind then request ID, not by
 creation time. If `journal.next_cursor` is non-null, pass that exact returned
 cursor with the same filter to read the next page. It is tied to the current
@@ -149,6 +154,104 @@ The last block shows field mapping, not literal JSON to submit. With
 and retain the receipt/hash. It is not a fabricated public download URL.
 Delivery remains capped at 800,000 GLB bytes. Reopen and structural/hash
 verification do not approve artistic quality, rights, a final rig or an engine.
+
+## Create a measured visual hull or revise an uploaded static model
+
+Discover the exact registered schemas first. `mgr_forge_reconstruction_create`
+takes these required fields: `requestId`, `frontPngBase64`, `sidePngBase64`,
+`bounds:{width,height,depth}`, `grid`, and `surface`. Upload the canonical base64
+bytes of two calibrated orthographic foreground masks, without a data-URL
+prefix. Front maps image width to X, side maps it to Z; Y is up and the top
+image row is the top of the physical capture volume. White foreground on black
+or transparent background is expected: the native mask decoder multiplies
+luminance by alpha, then uses threshold 128. An ordinary white-background
+photograph needs segmentation and calibrated framing first.
+
+Bounds are metres, each from 0.01 to 100. The interactive grid is 8–64.
+`surface:"voxel"` keeps voxel boundary faces; `surface:"smooth"` constructs
+rounded surface-nets geometry. The native decoder accepts bounded 8-bit,
+non-interlaced grayscale/RGB/RGBA PNGs up to 256 pixels per axis. This creates an
+editable visual hull. It cannot measure hidden concavities or invent a faithful
+unseen back from one photograph.
+
+`mgr_forge_morph_create` takes `requestId`, `glbBase64`, `expectedSha256`, and
+`morph`. Hash the exact uploaded GLB bytes locally with SHA-256. The morph
+object can specify length/height/width 0.5–2.2, twist_degrees −45–45,
+bend_degrees −30–30 and taper 0.65–1.45. Omitted controls use native defaults.
+This lane revises supported static, self-contained triangle GLBs. Native
+validation refuses skins, animation, existing morph targets and unsupported
+geometry; it is not arbitrary animated-character or likeness morphing.
+
+Each uploaded binary is at most 900,000 decoded bytes. The existing combined
+JSON transport request cap remains 1,200,000 bytes, including base64 and fields;
+two individually valid uploads can exceed it. Output GLB delivery remains
+800,000 bytes. A larger native output is retained by Forge but cannot be
+accepted/delivered through this bounded shared profile.
+
+Save the exact original input. The corresponding reconstruction/morph
+`_status` tools require that **same complete input**, including uploaded bytes;
+an ID alone cannot prove that the saved model came from those instructions.
+Successful create/status returns `NATIVE_RECONSTRUCTION_GLTF_VERIFIED` or
+`NATIVE_MORPH_GLTF_VERIFIED`, with original input fingerprint, job ID, output
+SHA-256/bytes, `nativeInputVerified:true` and `artifactBytesVerified:true`.
+Native request verification and independent structural/hash verification of
+actual GLB bytes must both pass. No input bytes, private source paths or public
+artifact URL are returned in this receipt. After saving identity, use the
+existing saved-job reopen/artifact reader for ID/hash-bound recovery.
+
+These new tools use the existing scopes and enrolled actor/tenant. They do not
+add commands to ONE's five-operation department owner workflow, consume a new
+grant, approve art or claim hosted delivery. Unknown/changed results retain
+`artifactReady:false` and reconciliation state; do not issue another creation
+to hide an uncertain first outcome.
+
+To run the disposable real SDK/shared HTTP/native proof without paid services,
+choose a fresh receipt path:
+
+```powershell
+python scripts/verify-forge-native-assets.py --receipt evidence/my-native-asset-proof.json
+```
+
+It creates owned PNG masks and a static box GLB in a temporary workspace,
+starts the secured original Forge server, exercises both jobs through the
+official MCP SDK and shared HTTP handler, checks replay/exact status/changed
+input/reopen/private bytes and denied principals, then checks the original
+native journals contain exactly three jobs (reconstruction, morph and UV).
+Fixture identities are explicit;
+this does not use permanent owner state, deployed OAuth, a neural model or GPU.
+
+## Add a native UV atlas to an untextured static model
+
+`mgr_forge_uv_create` takes `requestId`, `glbBase64`, `expectedSha256`,
+`atlasSize` and `padding`. The schema defaults to atlasSize 2048 and padding 2;
+the adapter sends both fields explicitly to the original native job. Other
+atlas sizes are 256, 512, 1024 or 4096. Padding must be a whole number from 1 to
+16 pixels. Upload canonical base64 GLB bytes and their exact SHA-256, using the
+same upload/request/output caps described above.
+
+This authors one padded UV island for every original triangle and duplicates
+vertices at seams. Native limits include 16,384 triangles, enough cell space
+for padding, and non-collapsed float32 islands. Original triangle order,
+materials, parts, hierarchy and source bytes are preserved. The diagnostic
+checker is original QA pixels; this tool does not paint, bake or generate a
+texture or claim efficient semantic chart unwrapping.
+
+Existing UV attributes or textures are deliberately refused to preserve them.
+Skins, animation, existing morph targets and unsupported/compressed geometry
+also require their separate native pipelines. Choose the original supported
+untextured source; do not remove a texture just to make a valuable source pass.
+
+`mgr_forge_uv_status` takes the same complete original input as create. A
+successful `NATIVE_UV_GLTF_VERIFIED` receipt requires native exact-request
+verification and independent output GLB structure/hash checks. Saved kind is
+`uv`; the existing artifact reader fetches only the allowlisted native
+`uv/uv-mapped.glb` path for that original job and expected hash. This introduces
+no owner grant or additional ONE department operation.
+
+The native-assets proof launcher now exercises reconstruction, static morph
+and UV together and checks exactly three native jobs. Earlier two-kind receipts
+retain their own source hashes and 19-tool scope; use the current living handoff
+for the later 21-tool result.
 
 ## Recover without creating duplicates
 

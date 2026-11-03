@@ -60,11 +60,23 @@ test counts or a registered tool list into a whole-product percentage.
 
 ## Current usable Forge connection
 
-The existing optional Forge adapter now supports **15 tools**: the original 13
-plus saved-journal navigation and verified reopen. Availability depends on the
+The existing optional Forge adapter now supports **21 tools**: the original 13,
+saved-journal navigation and verified reopen, plus reconstruction, static
+imported-model morph and UV-atlas create/status pairs. Availability depends on the
 host injecting/enrolling that adapter. Read tools use `tools:read`; native
 creation uses `tools:execute`. The current exact actor and tenant must also
 match the workstation enrollment. A scope does not enroll another user.
+
+The new asset lanes accept bounded owner-uploaded source bytes. A reconstruction
+is a measured orthographic silhouette visual hull; a morph is a revision of a
+supported static GLB; UV atlas authoring adds padded per-triangle UV islands to
+a supported untextured source while preserving original geometry/identity.
+Materialization acceptance requires exact native original
+input verification and independent hash/structure checks of the output GLB.
+The same full original input is required for these three status tools. Their
+availability does not expand ONE's existing five-operation owner-command union
+or establish hidden-surface recovery, arbitrary animated morphing or owner art
+acceptance. The [how-to](API-MCP-HOW-TO.md) gives fields, limits and recovery.
 
 Saved Creations has two deliberately different results:
 

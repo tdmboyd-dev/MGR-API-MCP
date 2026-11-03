@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\cool\Documents\Codex\Projects\MGR-API-MCP\scripts\verify-forge-native-assets.py", line 50, in <module>
+    model=export_glb([mesh],name='Original owned native proof box')
+  File "C:\Users\cool\Documents\Codex\Projects\MGR-3D-FORGE\forge\glb.py", line 19, in export_glb
+    raise ValueError("mesh/material count mismatch")
+ValueError: mesh/material count mismatch
