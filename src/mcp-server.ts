@@ -1,3 +1,4 @@
+import { registerAgentsWorkflowRead, type AgentsWorkflowReadOptions } from "./agents-workflow-read.js";
 import type {RepositoryReadGateway} from './repository-read-tools.js';
 import type {AuthContext} from './authz.js';
 import { McpServer } from "@modelcontextprotocol/server";
@@ -13,7 +14,7 @@ import { registerForgeMcpTools, type ForgeMcpToolOptions } from "./forge-mcp-too
 import { registerEcosystemCatalogTool } from "./ecosystem-catalog.js";
 import { registerDepartmentTools, type DepartmentToolOptions } from "./department-gateway.js";
 
-export function createMgrMcpServer(options:{catalogAuthorization?:{auth:AuthContext;resourceAudience:string};legacy?:LegacyMcpToolOptions;creation?:CreationMcpToolOptions;departments?:DepartmentToolOptions;forge?:ForgeMcpToolOptions;repositories?:{gateway:RepositoryReadGateway;auth:AuthContext;resourceAudience:string}}={}): McpServer {
+export function createMgrMcpServer(options:{agentsWorkflowRead?:AgentsWorkflowReadOptions;catalogAuthorization?:{auth:AuthContext;resourceAudience:string};legacy?:LegacyMcpToolOptions;creation?:CreationMcpToolOptions;departments?:DepartmentToolOptions;forge?:ForgeMcpToolOptions;repositories?:{gateway:RepositoryReadGateway;auth:AuthContext;resourceAudience:string}}={}): McpServer {
   const server = new McpServer(
     { name: "mgr-api-mcp", version: "0.1.0" },
     {
@@ -23,6 +24,7 @@ export function createMgrMcpServer(options:{catalogAuthorization?:{auth:AuthCont
   );
   const catalogAuthorization=options.catalogAuthorization??options.legacy;
   registerEcosystemCatalogTool(server,catalogAuthorization?.auth,catalogAuthorization?.resourceAudience);
+  if(options.agentsWorkflowRead) registerAgentsWorkflowRead(server,options.agentsWorkflowRead);
   if(options.repositories)options.repositories.gateway.register(server,options.repositories.auth,options.repositories.resourceAudience);
 
   server.registerTool(

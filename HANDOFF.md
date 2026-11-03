@@ -1,3 +1,7 @@
+## MGR Agents workflow read transport
+
+The shared MCP factory accepts an explicit agentsWorkflowRead binding. It registers mgr_agents_workflow_read for exact run IDs, checks the bound tenant and actor and requires tools:read and workflows:read. The adapter uses a configured HTTPS origin and service bearer, rejects redirects and mismatched run IDs, and caps the response at 12,000 bytes. The focused test used controlled fetch. No default registration, hosted service configuration or Tevin binding is active. Workflow dispatch remains separate.
+
 ## MGR Agents workflow evidence
 
 The MGR Agents catalog keeps its default-branch pin separate from audit evidence. It now identifies the embedded PostgreSQL approval-claim proof at 5b640f6d5a5bffb4b73645a2d6910a634cec7669 and the current recovery guide at 0de1bc81d05db078481228ceeeac587a9ce937f2. The approval check used a test database adapter and controlled executor. Tevin's authenticated local reader retained the guide revision across SQLite reopen at MGR-ONE 32d4310f7c671bac096eda58f86c25dd896f8d5f. Shared execution transport, hosted database and provider delivery remain open.
