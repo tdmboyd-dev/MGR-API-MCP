@@ -11,10 +11,10 @@ export interface RepositoryReadBackend {
  context(project:string):any;
 }
 export interface RepositoryReadOptions {
- backpack:RepositoryReadBackend;
+ backpack?:RepositoryReadBackend;
  bindings:readonly RepositoryBinding[];
  assertCurrent:()=>void;
- registerSourceTools:(server:McpServer,options:{resolveAuthorizedProject:(project:string)=>Promise<{root:string;principal:string}>})=>void;
+ registerSourceTools?:(server:McpServer,options:{resolveAuthorizedProject:(project:string)=>Promise<{root:string;principal:string}>})=>void;
  manuals?:{bindings:readonly RepositoryBinding[];project:(project:string)=>{id:string;root:string};read:(project:string,args:{document:string;startLine:number;expectedCommit?:string|undefined})=>unknown};
 }
 const project=z.string().regex(/^[a-z0-9][a-z0-9-]{0,63}$/),input=z.object({project}).strict();
@@ -23,19 +23,22 @@ export class RepositoryReadGateway {
  private readonly bindings:readonly RepositoryBinding[];
  private sourceBusy=false;
  constructor(private readonly options:RepositoryReadOptions){
-  if(!options.backpack||typeof options.backpack.project!=='function'||typeof options.assertCurrent!=='function'||typeof options.registerSourceTools!=='function'||!Array.isArray(options.bindings)||!options.bindings.length||options.bindings.length>16)throw Error('Explicit repository read backend required');
+  if(typeof options.assertCurrent!=='function'||!Array.isArray(options.bindings)||options.bindings.length>16||
+   (options.bindings.length>0?(typeof options.backpack?.project!=='function'||typeof options.registerSourceTools!=='function'):
+   !options.manuals?.bindings.length||options.backpack!==undefined||options.registerSourceTools!==undefined))throw Error('Explicit repository read backend required');
   this.bindings=Object.freeze(options.bindings.map(b=>{project.parse(b.project);if(!b.root||!b.tenantId||!b.actorId)throw Error('Repository principal/root required');return Object.freeze({...b});}));
   if(new Set(this.bindings.map(b=>JSON.stringify([b.tenantId,b.actorId,b.project]))).size!==this.bindings.length)throw Error('Duplicate repository binding');
  }
  private guard(auth:AuthContext,audience:string,id:string,expected?:string){
   this.options.assertCurrent();authorizeTool(auth,audience,['tools:read','repositories:read']);
   const b=this.bindings.find(b=>b.project===id&&b.tenantId===auth.tenantId&&b.actorId===auth.actorId);
-  if(!b||this.options.backpack.project(id).root!==b.root)throw Error('Repository binding unavailable or changed');
+  if(!b||this.options.backpack?.project(id).root!==b.root)throw Error('Repository binding unavailable or changed');
   const principal=JSON.stringify([auth.tenantId,auth.actorId,b.project,b.root]);if(expected&&principal!==expected)throw Error('Repository principal changed');
   this.options.assertCurrent();return {root:b.root,principal};
  }
  private async read(auth:AuthContext,audience:string,id:string,kind:'card'|'context'){
-  const before=this.guard(auth,audience,id);let value=await(kind==='card'?this.options.backpack.capabilityCard(id):this.options.backpack.context(id));
+  const backend=this.options.backpack;if(!backend)throw Error('Repository backend unavailable');
+  const before=this.guard(auth,audience,id);let value=await(kind==='card'?backend.capabilityCard(id):backend.context(id));
   this.guard(auth,audience,id,before.principal);
   if((kind==='card'?value.project:value.project?.id)!==id)throw Error('Repository result identity mismatch');
   // A bounded projection preserves source identity and states its omissions.
@@ -53,6 +56,7 @@ export class RepositoryReadGateway {
     try{const principal=guard();if(args.startLine>1&&!args.expectedCommit)throw Error('Manual continuation requires its original commit');const result=await manuals.read(args.project,args);if(guard()!==principal||!result||typeof result!=='object'||!('project' in result)||result.project!==args.project||Buffer.byteLength(JSON.stringify(result))>MANUAL_RESPONSE_BYTES)throw Error('Manual result unavailable');return {content:[{type:'text' as const,text:JSON.stringify(result)}]};}catch{return {isError:true,content:[{type:'text' as const,text:'Manual unavailable, source changed, unauthorized or beyond its bound. No action executed.'}]};}
    });
   }
+  if(!this.bindings.length)return;
   const tool=(name:string,kind:'card'|'context')=>server.registerTool(name,{description:'Read one currently owner-bound repository '+kind+'. No jobs, writes, execution or grants.',inputSchema:input,annotations:{readOnlyHint:true,destructiveHint:false,openWorldHint:false}},async({project})=>{
    try{return {content:[{type:'text' as const,text:JSON.stringify(await this.read(auth,audience,project,kind))}]};}catch{return {isError:true,content:[{type:'text' as const,text:'Repository read unavailable, unauthorized, stale or beyond its bound. No work was executed.'}]};}
   });
@@ -67,6 +71,6 @@ export class RepositoryReadGateway {
    if(this.sourceBusy)return {isError:true,content:[{type:'text' as const,text:'Source analysis is busy; no second analysis started.'}]};
    this.sourceBusy=true;try{return await handler(...args);}finally{this.sourceBusy=false;}
   })} as unknown as McpServer;
-  this.options.registerSourceTools(sourceServer,{resolveAuthorizedProject:async id=>this.guard(auth,audience,id)});
+  this.options.registerSourceTools?.(sourceServer,{resolveAuthorizedProject:async id=>this.guard(auth,audience,id)});
  }
 }

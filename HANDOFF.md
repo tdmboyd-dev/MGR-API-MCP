@@ -1,3 +1,7 @@
+## Manual-only repository gateway
+
+The shared gateway accepts explicit owner-bound manual registrations without a Backpack or source-analysis backend. In this mode it registers only mgr_repository_manual and still requires the original principal, scope, root and revision checks. Typecheck and the three focused gateway checks passed.
+
 ## Manual pagination uses the shared MCP byte limit
 
 Long committed paths and JSON-escaped lines could produce pages the MCP gateway rejected. The reader now returns shorter pages with exact commit-bound continuation. The same byte limit is enforced at both layers.

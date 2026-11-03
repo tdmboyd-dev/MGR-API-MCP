@@ -1,5 +1,10 @@
 ## Explicit Legacy tenant mapping on November 3
 
+## Manual-only repository gateway
+
+The shared gateway accepts explicit owner-bound manual registrations without a Backpack or source-analysis backend. In this mode it registers only mgr_repository_manual and still requires the original principal, scope, root and revision checks. Typecheck and the three focused gateway checks passed.
+
+
 ## Manual response sizing
 
 The shared manual reader now sizes the serialized response before returning it. Local Git regression coverage reconstructs all entries and lines across short pages. Remote fetching and background learning remain open.
