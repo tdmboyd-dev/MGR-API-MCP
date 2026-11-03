@@ -1,7 +1,7 @@
 
 ## Manual inventory fingerprint
 
-The shared reader returns an index SHA-256 over eligible committed document paths and Git blobs. An unrelated code commit can change the commit pin while leaving the manual fingerprint unchanged. Tevin stores the fingerprint in its index receipt when the shared reader supplies it. Continuations still require the exact commit. The shared Git regression and authenticated local Forge receipt check passed. Remote change watching remains open.
+The shared reader returns an index SHA-256 over eligible committed document paths and Git blobs. An unrelated code commit can change the commit pin while leaving the manual fingerprint unchanged. Tevin stores the fingerprint in its index receipt when the shared reader supplies it. Continuations still require the exact commit. The shared Git regression and authenticated local Forge receipt check passed. The reader includes committed Markdown paths containing line breaks in the inventory and can reopen them by document ID. A Git tree fixture verified the path, changed fingerprint, and readable bytes. Remote change watching and per-document revision comparison remain open.
 
 
 ## Native Creation cancellation through the shared gateway

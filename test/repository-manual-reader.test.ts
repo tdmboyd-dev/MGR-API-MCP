@@ -112,3 +112,20 @@ test('manual inventory hash distinguishes documentation changes from unrelated c
  assert.notEqual(revised.indexSha256,code.indexSha256);
  assert.throws(()=>f.reader.read('tool',{expectedCommit:code.commit}),/manual-source-changed/);
 });
+
+test('NUL-delimited Git records retain Markdown paths containing a line break',t=>{
+ const f=fixture(t,'# Manual with a Git-only path');
+ const path='line\nbreak.md';
+ const blob=f.git('rev-parse','HEAD:README.md');
+ const tree=execFileSync('git',['-C',f.root,'mktree','-z'],{
+  input:`100644 blob ${blob}\tREADME.md\0${'100644 blob '+blob+'\t'+path}\0`,windowsHide:true
+ }).toString().trim();
+ const commit=f.git('commit-tree',tree,'-p','HEAD','-m','Add manual through a Git tree');
+ f.git('update-ref','HEAD',commit);
+ const index=f.reader.read('tool') as any;
+ assert.equal(index.totalDocuments,2);
+ assert.notEqual(index.source.indexSha256,f.index.source.indexSha256);
+ const entry=index.documents.find((document:{path:string})=>document.path===path);
+ assert.ok(entry);
+ assert.equal((f.reader.read('tool',{document:entry.id,expectedCommit:index.source.commit}) as any).text,'# Manual with a Git-only path');
+});
