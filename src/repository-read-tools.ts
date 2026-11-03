@@ -61,6 +61,8 @@ export class RepositoryReadGateway {
      try{result=await manuals.read(args.project,args);}catch(error){
       if(error instanceof Error&&['manual-source-changed','manual-document-unavailable'].includes(error.message)&&guard()===principal)
        return {isError:true,content:[{type:'text' as const,text:JSON.stringify({error:error.message,recovery:'restart-manual-index'})}]};
+      if(error instanceof Error&&error.message==='manual-line-exceeds-page-bound'&&guard()===principal)
+       return {isError:true,content:[{type:'text' as const,text:'{"error":"manual-line-exceeds-page-bound"}'}]};
       throw error;
      }
      if(guard()!==principal||!result||typeof result!=='object'||!('project' in result)||result.project!==args.project)throw Error('Manual result unavailable');

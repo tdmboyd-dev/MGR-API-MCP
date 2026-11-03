@@ -735,3 +735,7 @@ The shared Voice catalog points to owning handoff 9097011b2dc5b8c2dc610f7a36f321
 ## Manual page text integrity
 
 Manual responses now include a SHA-256 digest of the exact normalized page text, separate from the digest of the original committed file. Tevin verifies the supplied page digest and saves it in the receipt. Earlier readers without the field remain compatible. The Unicode and CRLF test, mismatched page test and both authenticated SignMe conversation runtime journeys passed. This checks page integrity and does not establish whole-manual coverage.
+
+## Oversized manual line diagnostics
+
+The authenticated shared manual reader now distinguishes an oversized line from an unavailable guide. Tevin returns a blocked read result with the requested document and line and saves an unconfirmed receipt. The real local Git and HTTP/MCP test committed a line beyond the page bound and verified the structured result. The line is still subject to the original response limit.
