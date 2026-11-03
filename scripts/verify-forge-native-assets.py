@@ -49,11 +49,10 @@ with TemporaryDirectory(prefix='mgr-native-asset-mcp-') as temporary:
     mesh=Mesh();mesh.box(0,0,0,1,2,1)
     model=export_glb([mesh],name='Original owned native proof box',materials=(('proof-box',[.6,.7,.8,1]),))
     inputs={'reconstruction':{'requestId':'mcp-native-reconstruct-0001','frontPngBase64':base64.b64encode(front).decode(),
-               'sidePngBase64':base64.b64encode(side).decode(),'bounds':{'width':2,'height':3,'depth':2},'grid':32,'surface':'smooth'},
+               'sidePngBase64':base64.b64encode(side).decode(),'bounds':{'width':2,'height':3,'depth':2},'grid':16,'surface':'smooth'},
             'morph':{'requestId':'mcp-native-morph-0001','glbBase64':base64.b64encode(model).decode(),
                'expectedSha256':hashlib.sha256(model).hexdigest(),'morph':{'twist_degrees':12,'taper':1.1}},
-            'uv':{'requestId':'mcp-native-uv-0001','glbBase64':base64.b64encode(model).decode(),
-                  'expectedSha256':hashlib.sha256(model).hexdigest(),'atlasSize':2048,'padding':2,'layout':'planar-pairs'}}
+            'uv':{'requestId':'mcp-native-uv-0001','atlasSize':2048,'padding':2,'layout':'planar-pairs'}}
     service,studio=start_server(scratch/'world',scratch/'workspace')
     thread=threading.Thread(target=service.serve_forever,daemon=True);thread.start()
     try:
@@ -79,6 +78,10 @@ with TemporaryDirectory(prefix='mgr-native-asset-mcp-') as temporary:
                 uv=json.loads((job/'uv/uv-receipt.json').read_text(encoding='utf8'))
                 if uv['layout']!=inputs['uv']['layout'] or case['layout']!=uv['layout']:
                     raise RuntimeError('saved native UV layout disagrees with MCP readback')
+                reconstruction=next(item for item in proof['cases'] if item['kind']=='reconstruction')
+                if (case['sourceBytesSha256']!=reconstruction['sha256'] or
+                        hashlib.sha256((job/'original-upload.glb').read_bytes()).hexdigest()!=reconstruction['sha256']):
+                    raise RuntimeError('UV source is not the verified reconstruction artifact')
             if hashlib.sha256(path.read_bytes()).hexdigest()!=case['sha256'] or path.stat().st_size!=case['bytes']:
                 raise RuntimeError('original stored native artifact disagrees with independent MCP bytes')
         jobs=list((scratch/'workspace/jobs').iterdir())

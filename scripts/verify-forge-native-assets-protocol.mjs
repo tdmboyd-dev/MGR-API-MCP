@@ -38,11 +38,12 @@ async function call(client,name,args){const result=await client.callTool({name,a
  const text=result.content.find(item=>item.type==='text')?.text;if(typeof text!=='string')throw Error('Missing MCP JSON receipt');
  return {result,body:JSON.parse(text)};}
 const cases=[];
+let reconstructionSource;
 try{
  let owner=await connect('owner');const tools=(await owner.listTools()).tools.map(item=>item.name);
  for(const kind of kinds)for(const action of ['create','status'])assert.ok(tools.includes('mgr_forge_'+kind+'_'+action));
  for(const kind of kinds){
-  const input=inputs[kind],name='mgr_forge_'+kind;
+  const input=kind==='uv'?Object.assign(inputs.uv,reconstructionSource):inputs[kind],name='mgr_forge_'+kind;
   const created=(await call(owner,name+'_create',input)).body;
   assert.equal(created.accepted,true,JSON.stringify(created));assert.equal(created.artifactBytesVerified,true);assert.equal(created.nativeInputVerified,true);
   const replay=(await call(owner,name+'_create',input)).body;
@@ -68,6 +69,7 @@ try{
   assert.equal(delivery.body.accepted,true);const resource=delivery.result.content.find(item=>item.type==='resource');
   assert.ok(resource&&'blob' in resource.resource);const binary=Buffer.from(resource.resource.blob,'base64');
   assert.equal(createHash('sha256').update(binary).digest('hex'),created.artifactSha256);assert.equal(binary.length,created.artifactBytes);
+  if(kind==='reconstruction')reconstructionSource={glbBase64:binary.toString('base64'),expectedSha256:created.artifactSha256};
   assert.equal((await call(owner,'mgr_forge_artifact_read',{kind,jobId:created.jobId,expectedSha256:'f'.repeat(64),includeData:true})).body.accepted,false);
   cases.push({kind,requestId:input.requestId,jobId:created.jobId,sha256:created.artifactSha256,bytes:binary.length,...(kind==='uv'?{layout:status.layout}:{}),
    inputFingerprint:created.inputFingerprint,sourceBytesSha256:kind!=='reconstruction'?input.expectedSha256:
