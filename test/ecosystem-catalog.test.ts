@@ -23,6 +23,7 @@ test("Legacy local verification is revision-scoped and grants no runtime tools",
   const [legacy]=readEcosystemCatalog("MGR-LEGACY").entries;
   assert.ok(legacy && "localVerification" in legacy && legacy.localVerification);
   const proof=legacy.localVerification;
+  assert.ok("startupSourceCommit" in proof);
   assert.equal(legacy.source.defaultBranch,"main");
   assert.notEqual(legacy.source.commit,proof.workflowSourceCommit);
   assert.notEqual(proof.workflowSourceCommit,proof.startupSourceCommit);
@@ -30,4 +31,14 @@ test("Legacy local verification is revision-scoped and grants no runtime tools",
   assert.match(proof.startupSourceCommit,/^[0-9a-f]{40}$/);
   assert.equal(legacy.runtimeVerified,false);
   assert.deepEqual(legacy.integration.tools,[]);
+});
+
+test("Agents workflow evidence keeps its audit revision separate from the default source pin",()=>{
+  const [agents]=readEcosystemCatalog("MGR-Agents").entries;
+  assert.ok(agents && "localVerification" in agents && "branch" in agents.localVerification);
+  assert.equal(agents.localVerification.branch,"audit/workflow-ownership-20261101");
+  assert.match(agents.localVerification.workflowSourceCommit,/^[0-9a-f]{40}$/);
+  assert.notEqual(agents.localVerification.workflowSourceCommit,agents.source.commit);
+  assert.equal(agents.runtimeVerified,false);
+  assert.deepEqual(agents.integration.tools,[]);
 });

@@ -113,6 +113,12 @@ export const ecosystemCatalogData = {
         ]
       },
       "runtimeVerified": false,
+      "localVerification": {
+        "workflowSourceCommit": "f8239657b682e49b27ccd7d5d52c0821f2debd0e",
+        "branch": "audit/workflow-ownership-20261101",
+        "evidencePath": "tests/workflow-run-route.test.mjs",
+        "scope": "Embedded PostgreSQL manual run claim and history cursor with controlled authentication and agent dispatch."
+      },
       "knowledgeInterface": {
         "tool": "mgr_repository_manual",
         "project": "agents",
