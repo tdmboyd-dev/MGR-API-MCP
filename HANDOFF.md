@@ -1,6 +1,6 @@
 ## MGR Agents workflow evidence
 
-The ecosystem catalog keeps the default-branch source pin and separately records the published audit revision for the embedded PostgreSQL manual run claim and cursor checks. Shared execution transport, hosted database and Tevin dispatch acceptance remain open.
+The ecosystem catalog keeps the default-branch source pin and records audit revision 946adf48d61322e39e13bde486e79734d21183f0 for embedded PostgreSQL claims, history pagination and owner-scoped linked agent lookup. The test uses seeded agent records. The current workflow recovery manual at 68227dbf286aea174f5890c2813c876b91fcf966 is readable through the enrolled Git manual reader. Actual agent-run insertion, shared execution transport, hosted database and Tevin dispatch acceptance remain open.
 
 
 
