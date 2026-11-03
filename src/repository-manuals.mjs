@@ -90,7 +90,11 @@ export function createRepositoryManuals(roots,{allowUnavailable=false}={}){
    }
   }else{
    const row=rows.find(row=>docId(row.path)===document);if(!row)throw Error('manual-document-unavailable');
-   const text=git(root,'cat-file','blob',row.blob);if(Buffer.byteLength(text)>1048576||text.includes('\0'))throw Error('manual-document-limit');const lines=text.split(/\r?\n/);if(lines.at(-1)==='')lines.pop();if(startLine>lines.length+1)throw Error('manual-page-invalid');
+   const size=Number(git(root,'cat-file','-s',row.blob).trim());
+   if(!Number.isSafeInteger(size)||size<0||size>1048576)throw Error('manual-document-limit');
+   const text=git(root,'cat-file','blob',row.blob);
+   if(Buffer.byteLength(text)!==size||text.includes('\0'))throw Error('manual-document-limit');
+   const lines=text.split(/\r?\n/);if(lines.at(-1)==='')lines.pop();if(startLine>lines.length+1)throw Error('manual-page-invalid');
    const selected=[];let bytes=0;for(const line of lines.slice(startLine-1,startLine+59)){const n=Buffer.byteLength(line)+1;if(bytes+n>6500)break;selected.push(line);bytes+=n;}if(!selected.length&&startLine<=lines.length)throw Error('manual-line-exceeds-page-bound');
    result={project:id,kind:'manual-page',document,source:{commit,path:row.path,gitBlob:row.blob,sha256:sha(text)},startLine,endLine:0,totalLines:lines.length,text:'',nextStartLine:null};
    while(true){

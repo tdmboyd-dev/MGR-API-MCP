@@ -27,7 +27,7 @@ test('a replacement directory at the same enrolled path cannot inherit old repos
  assert.throws(()=>f.reader.read('tool'),/manual-project-unavailable/);
 });
 test('an oversized source document and a line beyond the page budget are refused explicitly',t=>{
- for(const [bytes,error] of [[Buffer.alloc(1048577,65),/manual-document-limit/],['X'.repeat(6501),/manual-line-exceeds-page-bound/]] as const){const f=fixture(t,bytes);assert.throws(()=>f.reader.read('tool',{document:f.index.documents[0].id}),error);}
+ for(const [bytes,error] of [[Buffer.alloc(1048577,65),/manual-document-limit/],[Buffer.alloc(3*1024*1024,65),/manual-document-limit/],['X'.repeat(6501),/manual-line-exceeds-page-bound/]] as const){const f=fixture(t,bytes);assert.throws(()=>f.reader.read('tool',{document:f.index.documents[0].id}),error);}
 });
 
 test('manual continuations require the original revision and refuse a changed checkout',t=>{
