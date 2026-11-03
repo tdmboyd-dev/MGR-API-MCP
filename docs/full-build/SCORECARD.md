@@ -1,4 +1,9 @@
 
+## Creation artifact reference agreement
+
+The Markdown gateway requires one artifact for a completed job and checks that any supplied artifact reference agrees with it. Artifact downloads require successful readback. Type checking, 22 gateway tests and the isolated Tevin Creation TCP restart test passed. Hosted acceptance remains open.
+
+
 ## Historical snapshots outside manual discovery
 
 The shared operating-manual reader excludes `docs/history/` and `docs/recovery/collaborator-checkpoints-*/` from both index discovery and document-ID reads. Historical records remain in Git. Current recovery runbooks elsewhere under `docs/recovery/` are still eligible. The actual API checkout index retained its active handoff and knowledge contract.

@@ -32,6 +32,21 @@ test("creation acceptance independently downloads and hashes actual artifact byt
  assert.equal((await gateway.execute(command)).readbackVerified,true);assert.equal(calls,2);
  wrong=true;await assert.rejects(gateway.execute(command),/readback mismatch/);
 });
+test("Creation refuses contradictory references or uncompleted artifacts before download",async()=>{
+ const artifact={id:"owned-artifact",sha256:"a".repeat(64),bytes:4};
+ let result={status:"SUCCEEDED",artifactRefs:["other-artifact"],artifacts:[artifact]};
+ let downloads=0;
+ const gateway=new DepartmentGateway({...config,fetcher:async input=>{
+  if(String(input).includes("/artifacts/")){downloads++;return new Response("test");}
+  return Response.json({requestId:command.requestId,inputDigest:expectedCreationDigest,...result});
+ }});
+ await assert.rejects(gateway.status(command),/reference mismatch/);
+ result={status:"SUCCEEDED",artifactRefs:[artifact.id],artifacts:[artifact,artifact]};
+ await assert.rejects(gateway.status(command),/count mismatch/);
+ result={status:"RUNNING",artifactRefs:[artifact.id],artifacts:[artifact]};
+ await assert.rejects(gateway.artifact(command),/Artifact unavailable/);
+ assert.equal(downloads,0);
+});
 test("artifact rejects oversized stream before trusting provider metadata",async()=>{
  const gateway=new DepartmentGateway({...config,fetcher:async()=>new Response(new Uint8Array(1024*1024+1))});
  await assert.rejects(gateway.status(command),/exceeds limit/);
