@@ -17,13 +17,13 @@ function rootCommit(root){
  if(!match)throw Error('manual-root-not-committed-checkout');
  return match[1];
 }
-function isOperatingDocument(path){
+function isOperatingPath(path){
  const normalized=path.toLowerCase();
- return /\.md$/.test(normalized)&&
-  !normalized.startsWith('docs/history/')&&
+ return !normalized.startsWith('docs/history/')&&
   !normalized.startsWith('docs/recovery/collaborator-checkpoints-')&&
   !normalized.split('/').some(part=>part.startsWith('.')||['node_modules','vendor','research','evidence'].includes(part));
 }
+const isOperatingDocument=path=>/\.md$/i.test(path)&&isOperatingPath(path);
 const inventory=(root,commit)=>git(root,'ls-tree','-r','-z',commit).split('\0').filter(Boolean).map(line=>{const match=/^100(?:644|755) blob ([a-f0-9]{40})\t([\s\S]+)$/.exec(line);return match?{blob:match[1],path:match[2]}:null;}).filter(row=>row&&isOperatingDocument(row.path));
 const fingerprint=rows=>sha(JSON.stringify(rows.map(({path,blob})=>[path,blob])));
 function verifiedPreviousInventory(root,commit,previous){
@@ -51,8 +51,7 @@ function compareInventory(root,commit,previous,rows){
  if(previous.commit!==commit){
   try{
    const paths=git(root,'diff','--no-ext-diff','--no-textconv','--no-renames','--name-only','-z',previous.commit,commit,'--')
-    .split('\0').filter(path=>/\.(?:[cm]?[jt]sx?|py|rs|go|java|cs|swift|kt)$/i.test(path)&&
-      !path.split('/').some(part=>part.startsWith('.')||['node_modules','vendor','research','evidence'].includes(part.toLowerCase())));
+    .split('\0').filter(path=>/\.(?:[cm]?[jt]sx?|py|rs|go|java|cs|swift|kt)$/i.test(path)&&isOperatingPath(path));
    if(paths.length)sourceChanges={status:'compared',count:paths.length,paths:paths.filter(path=>Buffer.byteLength(path)<=256).slice(0,10)};
   }catch{sourceChanges={status:'unavailable'};}
  }

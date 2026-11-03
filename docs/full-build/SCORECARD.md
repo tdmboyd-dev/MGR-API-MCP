@@ -542,3 +542,7 @@ Before: accepted IDs could be unreachable through native routes. After: exact-ow
 Permanent compatibility acceptance:3consistent backups,3new artifacts/effects,2immutable SignMe versions,11prior artifacts/38prior effects preserved,2normal restarts,0replay redispatches,0new inference. Account model choices/default and private configuration preserved. Public result/process/source receipts in the same evidence folder.
 
 Permanent accepted-text checkpoint:14old artifacts/41effects preserved,3new native approvals/artifacts and1SignMe version,2normal restarts,0replayredispatch/inference,source+SignMehashmatch,all3stagesretained. See evidence/artifact-text-transfer-2026-11-01/. Fullproduct/source/cost/production Unassessed.
+
+## Active source revision hints
+
+The shared manual reader now applies the same active-path exclusions to revision comparison and manual discovery. Source files under docs/history and archived collaborator checkpoints no longer appear in changed implementation path hints. The committed Git regression includes both archives and a current TypeScript change. The focused check covers two historical exclusions and retention of the current change. Whole-product source coverage remains unassessed.

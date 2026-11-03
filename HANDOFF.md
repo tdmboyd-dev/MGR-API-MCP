@@ -687,3 +687,7 @@ Historical predecessor finding (resolved by the native identifier compatibility 
 The repository manual index comparison now returns a bounded sample and count of changed source paths for verified ancestor revisions, including code-only commits. Paths are discovery evidence. Capability changes and runtime acceptance require separate inspection.
 The shared catalog now advertises revision-pinned manual access for Voice and API-MCP, completing discovery for the thirteen owner-enrolled manuals. All six catalog tests and TypeScript passed. Enrollment and runtime acceptance remain separate.
 Voice catalog evidence now identifies the Tevin profile-boundary commit and the Voice handoff commit. The local checks used controlled speech and do not establish live synthesis, device or hosted acceptance. Six catalog tests and TypeScript passed.
+
+## Active source revision hints
+
+The shared manual reader now applies the same active-path exclusions to revision comparison and manual discovery. Source files under docs/history and archived collaborator checkpoints no longer appear in changed implementation path hints. The committed Git regression includes both archives and a current TypeScript change.

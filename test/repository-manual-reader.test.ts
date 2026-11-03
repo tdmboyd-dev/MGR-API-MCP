@@ -47,11 +47,15 @@ test('code-only revisions return bounded path evidence without source content',t
  const f=fixture(t,'# Manual');
  writeFileSync(join(f.root,'tool.ts'),'export const privateFixture = 1;');
  writeFileSync(join(f.root,'.private.ts'),'private fixture');
+ for(const directory of ['docs/history','docs/recovery/collaborator-checkpoints-2026-10-28/crown']){
+  mkdirSync(join(f.root,directory),{recursive:true});
+  writeFileSync(join(f.root,directory,'superseded.ts'),'export const superseded = true;');
+ }
  f.git('add','.');f.git('commit','-m','Change tool source');
  const page=f.reader.read('tool',{previous:f.index.source}) as any;
  assert.equal(page.source.indexSha256,f.index.source.indexSha256);
  assert.deepEqual(page.comparison.sourceChanges,{status:'compared',count:1,paths:['tool.ts']});
- assert.doesNotMatch(JSON.stringify(page),/privateFixture|\.private\.ts/);
+ assert.doesNotMatch(JSON.stringify(page),/privateFixture|\.private\.ts|superseded\.ts/);
 });
 
 test('long committed paths paginate within the actual MCP response bound',t=>{
