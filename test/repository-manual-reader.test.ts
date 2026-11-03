@@ -79,3 +79,20 @@ test('JSON-escaped manual lines fit the wire limit and replay without gaps',t=>{
  }
  assert.deepEqual(recovered,lines);
 });
+
+test('archived handoffs and collaborator snapshots cannot be read as operating manuals',t=>{
+ const f=fixture(t,'# Current root manual');
+ const archived=['docs/history/HANDOFF.md','docs/recovery/collaborator-checkpoints-2026-10-28/crown/HANDOFF.md'];
+ const current='docs/recovery/CURRENT-RUNBOOK.md';
+ for(const path of [...archived,current]){
+  mkdirSync(join(f.root,path.slice(0,path.lastIndexOf('/'))),{recursive:true});
+  writeFileSync(join(f.root,path),'# Repository handoff');
+ }
+ f.git('add','.');f.git('commit','-m','Preserve historical and operating handoffs');
+ const index=f.reader.read('tool') as any;
+ assert.deepEqual(index.documents.map((doc:{path:string})=>doc.path).sort(),['README.md',current]);
+ for(const path of archived){
+  const document='doc-'+createHash('sha256').update(path).digest('hex').slice(0,16);
+  assert.throws(()=>f.reader.read('tool',{document,expectedCommit:index.source.commit}),/manual-document-unavailable/);
+ }
+});
