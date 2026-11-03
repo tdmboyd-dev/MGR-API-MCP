@@ -11,14 +11,32 @@ const sourceMetadata={
 const responseBytes=result=>Buffer.byteLength(JSON.stringify({...result,...sourceMetadata}));
 // Never inherit Git overrides, credentials, hooks, pagers or project execution.
 function git(root,...args){const env={};for(const key of ['PATH','SystemRoot','WINDIR','TEMP','TMP'])if(process.env[key])env[key]=process.env[key];Object.assign(env,{GIT_CONFIG_NOSYSTEM:'1',GIT_CONFIG_GLOBAL:'/dev/null',GIT_CONFIG_SYSTEM:'/dev/null',GIT_NO_REPLACE_OBJECTS:'1',GIT_NO_LAZY_FETCH:'1',GIT_OPTIONAL_LOCKS:'0',GIT_TERMINAL_PROMPT:'0'});const bytes=execFileSync('git',['-C',root,'-c','core.fsmonitor=false','-c','protocol.allow=never',...args],{env,windowsHide:true,timeout:10000,maxBuffer:2*1024*1024,stdio:['ignore','pipe','pipe']});try{return new TextDecoder('utf-8',{fatal:true,ignoreBOM:true}).decode(bytes);}catch{throw Error('manual-source-invalid-utf8');}}
-export function createRepositoryManuals(roots){
- const enrolled=Object.freeze(Object.fromEntries(Object.entries(roots).map(([id,root])=>[id,realpathSync(root)])));
- const identities=new Map(Object.entries(enrolled).map(([id,root])=>[id,lstatSync(root,{bigint:true})]));
+function rootCommit(root){
+ const output=git(root,'rev-parse','--show-prefix','--verify','HEAD^{commit}');
+ const match=/^\r?\n([a-f0-9]{40})\r?\n$/.exec(output);
+ if(!match)throw Error('manual-root-not-committed-checkout');
+ return match[1];
+}
+export function createRepositoryManuals(roots,{allowUnavailable=false}={}){
+ const entries=[],identities=new Map(),unavailable=[];
+ for(const [id,path] of Object.entries(roots)){
+  try{
+   const root=realpathSync(path),identity=lstatSync(root,{bigint:true});
+   if(!identity.isDirectory()||identity.isSymbolicLink())throw Error('manual-root-not-committed-checkout');
+   rootCommit(root);
+   entries.push([id,root]);
+   identities.set(id,identity);
+  }catch(error){
+   if(!allowUnavailable)throw error;
+   unavailable.push(id);
+  }
+ }
+ const enrolled=Object.freeze(Object.fromEntries(entries));
  const current=id=>{if(!Object.hasOwn(enrolled,id)||realpathSync(enrolled[id])!==enrolled[id])throw Error('manual-project-unavailable');const expected=identities.get(id),actual=lstatSync(enrolled[id],{bigint:true});if(actual.isSymbolicLink()||actual.dev!==expected.dev||actual.ino!==expected.ino)throw Error('manual-project-unavailable');return enrolled[id];};
- return Object.freeze({projects:Object.freeze(Object.keys(enrolled)),project(id){return {id,root:current(id)};},read(id,{document='index',startLine=1,expectedCommit}={}){
+ return Object.freeze({projects:Object.freeze(Object.keys(enrolled)),unavailable:Object.freeze(unavailable),project(id){return {id,root:current(id)};},read(id,{document='index',startLine=1,expectedCommit}={}){
   const root=current(id);if(!Number.isSafeInteger(startLine)||startLine<1||startLine>999999)throw Error('manual-page-invalid');
   if(startLine>1&&!expectedCommit)throw Error('manual-continuation-commit-required');
-  const commit=git(root,'rev-parse','--verify','HEAD^{commit}').trim();if(!/^[a-f0-9]{40}$/.test(commit)||expectedCommit&&expectedCommit!==commit)throw Error('manual-source-changed');
+  const commit=rootCommit(root);if(expectedCommit&&expectedCommit!==commit)throw Error('manual-source-changed');
   // Owner-authorized committed Markdown only. No working/private-runtime files, arbitrary path,
   // submodule traversal, symlink targets, shell, source execution or network.
   const rows=git(root,'ls-tree','-r','-z',commit).split('\0').filter(Boolean).map(line=>{const match=/^100(?:644|755) blob ([a-f0-9]{40})\t(.+)$/.exec(line);return match?{blob:match[1],path:match[2]}:null;}).filter(row=>row&&/\.md$/i.test(row.path)&&!row.path.split('/').some(part=>part.startsWith('.')||['node_modules','vendor','research','evidence'].includes(part.toLowerCase()))).sort((a,b)=>a.path.localeCompare(b.path,'en'));
@@ -47,7 +65,7 @@ export function createRepositoryManuals(roots){
     selected.pop();
    }
   }
-  if(git(root,'rev-parse','--verify','HEAD^{commit}').trim()!==commit||current(id)!==root)throw Error('manual-source-changed');
+  if(rootCommit(root)!==commit||current(id)!==root)throw Error('manual-source-changed');
   return {...result,...sourceMetadata};
  }});
 }

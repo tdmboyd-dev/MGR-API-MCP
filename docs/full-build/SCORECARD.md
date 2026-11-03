@@ -1,3 +1,8 @@
+
+## Manual checkout isolation
+
+Manual enrollment verifies that each registered root is a committed Git checkout. A nested folder cannot inherit a parent repository. Hosts can opt to retain healthy roots and report unavailable project IDs, while strict callers still fail enrollment. Reads repeat the checkout check.
+
 ## Explicit Legacy tenant mapping on November 3
 
 ## Manual-only repository gateway

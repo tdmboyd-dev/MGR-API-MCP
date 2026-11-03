@@ -1,3 +1,8 @@
+
+## Manual checkout isolation
+
+Manual enrollment verifies that each registered root is a committed Git checkout. A nested folder cannot inherit a parent repository. Hosts can opt to retain healthy roots and report unavailable project IDs, while strict callers still fail enrollment. Reads repeat the checkout check.
+
 ## Manual-only repository gateway
 
 The shared gateway accepts explicit owner-bound manual registrations without a Backpack or source-analysis backend. In this mode it registers only mgr_repository_manual and still requires the original principal, scope, root and revision checks. Typecheck and the three focused gateway checks passed.
