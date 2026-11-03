@@ -1,4 +1,9 @@
 
+## Manual inventory fingerprint
+
+The shared reader returns an index SHA-256 over eligible committed document paths and Git blobs. An unrelated code commit can change the commit pin while leaving the manual fingerprint unchanged. Tevin stores the fingerprint in its index receipt when the shared reader supplies it. Continuations still require the exact commit. The shared Git regression and authenticated local Forge receipt check passed. Remote change watching remains open.
+
+
 ## Native Creation cancellation through the shared gateway
 
 The gateway verifies the original request and current authority before issuing one cancellation call for a queued or running Markdown job. A previously cancelled job is read without another mutation. The local native service confirmed queued cancellation and replay for regular and dot identifiers. Type checking and 18 focused gateway tests passed. The isolated [Tevin owner route regression](https://github.com/tdmboyd-dev/MGR-ONE/commit/33dfd2b93098fbb4cecf1a6c0042ad3dbd353e2d) verified running cancellation using Creation OS d248e3f5781ba973d675a28dabe190b30dbd2919 and shared API ae796eca904397670270efe76a811fffc32851a7. The test paused the real renderer, sent one authenticated cancellation, let the renderer finish, and recovered the cancelled job after restart with zero artifacts. Everyday desktop and hosted acceptance remain open.

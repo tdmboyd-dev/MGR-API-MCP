@@ -1,5 +1,10 @@
 # Shared repository operating knowledge
 
+## Manual inventory fingerprint
+
+The shared reader returns an index SHA-256 over eligible committed document paths and Git blobs. An unrelated code commit can change the commit pin while leaving the manual fingerprint unchanged. Tevin stores the fingerprint in its index receipt when the shared reader supplies it. Continuations still require the exact commit. The shared Git regression and authenticated local Forge receipt check passed. Remote change watching remains open.
+
+
 ## Historical snapshots outside manual discovery
 
 The shared operating-manual reader excludes `docs/history/` and `docs/recovery/collaborator-checkpoints-*/` from both index discovery and document-ID reads. Historical records remain in Git. Current recovery runbooks elsewhere under `docs/recovery/` are still eligible. The actual API checkout index retained its active handoff and knowledge contract.

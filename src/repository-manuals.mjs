@@ -46,12 +46,15 @@ export function createRepositoryManuals(roots,{allowUnavailable=false}={}){
   const commit=rootCommit(root);if(expectedCommit&&expectedCommit!==commit)throw Error('manual-source-changed');
   // Owner-authorized committed Markdown only. No working/private-runtime files, arbitrary path,
   // submodule traversal, symlink targets, shell, source execution or network.
-  const rows=git(root,'ls-tree','-r','-z',commit).split('\0').filter(Boolean).map(line=>{const match=/^100(?:644|755) blob ([a-f0-9]{40})\t(.+)$/.exec(line);return match?{blob:match[1],path:match[2]}:null;}).filter(row=>row&&isOperatingDocument(row.path)).sort((a,b)=>a.path.localeCompare(b.path,'en'));
+  const rows=git(root,'ls-tree','-r','-z',commit).split('\0').filter(Boolean).map(line=>{const match=/^100(?:644|755) blob ([a-f0-9]{40})\t(.+)$/.exec(line);return match?{blob:match[1],path:match[2]}:null;}).filter(row=>row&&isOperatingDocument(row.path));
   let result;
   if(document==='index'){
    if(startLine>rows.length+1)throw Error('manual-page-invalid');
+   // Hash the full eligible path/blob inventory in Git tree order, before paging.
+   const indexSha256=sha(JSON.stringify(rows.map(({path,blob})=>[path,blob])));
+   rows.sort((a,b)=>a.path.localeCompare(b.path,'en'));
    const documents=rows.slice(startLine-1,startLine+19).map(row=>({id:docId(row.path),path:row.path,gitBlob:row.blob}));
-   result={project:id,kind:'manual-index',source:{commit},documents,totalDocuments:rows.length,startLine,nextStartLine:null};
+   result={project:id,kind:'manual-index',source:{commit,indexSha256},documents,totalDocuments:rows.length,startLine,nextStartLine:null};
    while(true){
     result.nextStartLine=startLine+documents.length<=rows.length?startLine+documents.length:null;
     if(responseBytes(result)<=MANUAL_RESPONSE_BYTES)break;

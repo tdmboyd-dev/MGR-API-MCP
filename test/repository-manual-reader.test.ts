@@ -96,3 +96,19 @@ test('archived handoffs and collaborator snapshots cannot be read as operating m
   assert.throws(()=>f.reader.read('tool',{document,expectedCommit:index.source.commit}),/manual-document-unavailable/);
  }
 });
+
+test('manual inventory hash distinguishes documentation changes from unrelated commits',t=>{
+ const f=fixture(t,'# Original manual');
+ const before=f.index.source;
+ writeFileSync(join(f.root,'code.js'),'export const sample = true;');
+ f.git('add','.');f.git('commit','-m','Change only code');
+ const code=(f.reader.read('tool') as any).source;
+ assert.notEqual(code.commit,before.commit);
+ assert.match(code.indexSha256,/^[a-f0-9]{64}$/);
+ assert.equal(code.indexSha256,before.indexSha256);
+ writeFileSync(join(f.root,'README.md'),'# Revised manual');
+ f.git('add','.');f.git('commit','-m','Change operating manual');
+ const revised=(f.reader.read('tool') as any).source;
+ assert.notEqual(revised.indexSha256,code.indexSha256);
+ assert.throws(()=>f.reader.read('tool',{expectedCommit:code.commit}),/manual-source-changed/);
+});
