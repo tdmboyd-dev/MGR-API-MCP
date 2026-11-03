@@ -62,3 +62,35 @@ test("authorized remote MCP handler fails closed before protocol dispatch",async
   assert.match(response.headers.get("www-authenticate") ?? "",/resource_metadata=/);
   await handler.close();
 });
+
+test("catalog requires read scope even when Legacy is disconnected",async()=>{
+  const audience="https://api.mgr.example/mcp";
+  const handler=createAuthorizedMgrMcpHttpHandler({
+    verifier:{async verify(token){
+      const verified=await verifier.verify("good");
+      if(!verified || !["good","execute-only"].includes(token)) return null;
+      return {...verified,scopes:token==="good"?verified.scopes:["tools:execute"]};
+    }},
+    resourceAudience:audience,
+    requiredScopes:["tools:execute"],
+    resourceMetadataUrl:"https://api.mgr.example/.well-known/oauth-protected-resource"
+  });
+  async function catalog(token:string){
+    const response=await handler.fetch(new Request(audience,{
+      method:"POST",
+      headers:{authorization:"Bearer "+token,"content-type":"application/json",accept:"application/json, text/event-stream"},
+      body:JSON.stringify({jsonrpc:"2.0",id:1,method:"tools/call",params:{name:"mgr_ecosystem_catalog",arguments:{repoId:"MGR-LEGACY"}}})
+    }));
+    assert.equal(response.status,200);
+    return response.text();
+  }
+  try{
+    const denied=await catalog("execute-only");
+    assert.match(denied,/"isError":true/);
+    assert.match(denied,/missing required scopes: tools:read/);
+    assert.doesNotMatch(denied,/localVerification/);
+    const allowed=await catalog("good");
+    assert.match(allowed,/localVerification/);
+    assert.doesNotMatch(allowed,/"isError":true/);
+  }finally{await handler.close();}
+});

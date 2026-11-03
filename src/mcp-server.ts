@@ -13,7 +13,7 @@ import { registerForgeMcpTools, type ForgeMcpToolOptions } from "./forge-mcp-too
 import { registerEcosystemCatalogTool } from "./ecosystem-catalog.js";
 import { registerDepartmentTools, type DepartmentToolOptions } from "./department-gateway.js";
 
-export function createMgrMcpServer(options:{legacy?:LegacyMcpToolOptions;creation?:CreationMcpToolOptions;departments?:DepartmentToolOptions;forge?:ForgeMcpToolOptions;repositories?:{gateway:RepositoryReadGateway;auth:AuthContext;resourceAudience:string}}={}): McpServer {
+export function createMgrMcpServer(options:{catalogAuthorization?:{auth:AuthContext;resourceAudience:string};legacy?:LegacyMcpToolOptions;creation?:CreationMcpToolOptions;departments?:DepartmentToolOptions;forge?:ForgeMcpToolOptions;repositories?:{gateway:RepositoryReadGateway;auth:AuthContext;resourceAudience:string}}={}): McpServer {
   const server = new McpServer(
     { name: "mgr-api-mcp", version: "0.1.0" },
     {
@@ -21,7 +21,8 @@ export function createMgrMcpServer(options:{legacy?:LegacyMcpToolOptions;creatio
         "MGR MCP is a governed task edge. Read-only/deterministic tools may answer immediately. Side-effecting capabilities require authenticated scopes, policy and approval before dispatch.",
     },
   );
-  registerEcosystemCatalogTool(server,options.legacy?.auth,options.legacy?.resourceAudience);
+  const catalogAuthorization=options.catalogAuthorization??options.legacy;
+  registerEcosystemCatalogTool(server,catalogAuthorization?.auth,catalogAuthorization?.resourceAudience);
   if(options.repositories)options.repositories.gateway.register(server,options.repositories.auth,options.repositories.resourceAudience);
 
   server.registerTool(

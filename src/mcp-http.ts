@@ -91,6 +91,7 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
       }
 
       const serverOptions:{
+        catalogAuthorization:{auth:typeof authResult.auth;resourceAudience:string};
         forge?:{auth:typeof authResult.auth;resourceAudience:string;forge:ForgeCatalogClient;allowedTenantId:string;allowedActorId:string;assertCurrent:()=>void};
         departments?:DepartmentToolOptions;
         repositories?:{gateway:RepositoryReadGateway;auth:typeof authResult.auth;resourceAudience:string};
@@ -104,7 +105,7 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
           resourceAudience:string;
           creation:CreationOSClient;
         };
-      }={};
+      }={catalogAuthorization:{auth:authResult.auth,resourceAudience:options.resourceAudience}};
       if(options.legacy)serverOptions.legacy={auth:authResult.auth,resourceAudience:options.resourceAudience,legacy:options.legacy};
       if(options.creation){
         serverOptions.creation={

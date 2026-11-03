@@ -1,5 +1,10 @@
 ## Explicit Legacy tenant mapping on November 3
 
+## Catalog authorization independent of Legacy
+
+Authenticated HTTP now passes the verified request identity directly to the catalog. A caller admitted to a host configured for execution scope still needs tools:read for catalog discovery, even when Legacy is disconnected. The MCP regression verifies denied and allowed responses with the same host configuration. Local owner-edge verification is separate from hosted identity-provider acceptance.
+
+
 ## Legacy catalog revision evidence
 
 The read-only catalog now identifies the exact Legacy workflow and bootstrap evidence revisions separately from main. Local contact verification is visible and deployment remains open.

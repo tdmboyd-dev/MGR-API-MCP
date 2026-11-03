@@ -1,3 +1,7 @@
+## Catalog authorization independent of Legacy
+
+Authenticated HTTP now passes the verified request identity directly to the catalog. A caller admitted to a host configured for execution scope still needs tools:read for catalog discovery, even when Legacy is disconnected. The MCP regression verifies denied and allowed responses with the same host configuration. Local owner-edge verification is separate from hosted identity-provider acceptance.
+
 ## Legacy catalog evidence by source revision
 
 The shared catalog retains the Legacy main source pin and separately identifies the published local contact journey and standalone startup evidence. Tevin and other MCP clients can distinguish those checks from the still-open main adoption, permanent configuration and production acceptance. This entry exposes evidence only and grants no action.
