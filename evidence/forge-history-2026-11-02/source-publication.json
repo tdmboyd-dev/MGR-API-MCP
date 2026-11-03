@@ -1,0 +1,1821 @@
+{
+  "date": "2026-11-02",
+  "limits": [
+    "Exact source commit/tree/readback, not deployment or permanent-owner activation.",
+    "This receipt and final documentation closure are later metadata-only commits; they do not change the tested implementation.",
+    "Working Windows line endings and committed Git bytes are recorded separately and verified equivalent after CRLF/LF normalization."
+  ],
+  "repositories": [
+    {
+      "branch": "main",
+      "clean_before_receipt": true,
+      "fetched_remote_commit": "9516bed47777af8814cdd01bcbe7e6fde71d5a5f",
+      "fetched_remote_tree": "2fe77af18f34d51b069f18a529ec575a7d503388",
+      "repository": "MGR-3D-FORGE",
+      "source_commit": "9516bed47777af8814cdd01bcbe7e6fde71d5a5f",
+      "source_custody": {
+        "bridge/blender_biome_proof.py": {
+          "committed_content_sha256": "1e2912ca48e9e049fa75d005e3b5d00d6076e9b3504e6a76ff06adb5e75af46e",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "f49a97b7483062dcdd81f53b85135f567002c999e33885fd1a4b4e1e9efc4d08"
+        },
+        "bridge/blender_biome_reopen.py": {
+          "committed_content_sha256": "fc67230d9305c50929100ca7cd5fc22cb15bcecc714a3802df1292cf7cc83131",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "7b0bdaac4a3add3da1af87ee282a27c51afefdcbed057a015606434afb34b642"
+        },
+        "bridge/blender_character_intake.py": {
+          "committed_content_sha256": "a992a94acdbce3f470217419ccfeac07eea93c722830a6711758249c52c18342",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "fdc06f53aefc5213441f4a91be70f14e4fea05ccf4885a62de2cd231e386dabb"
+        },
+        "bridge/blender_character_reopen.py": {
+          "committed_content_sha256": "249d31408ecd7d6bd0264fd31a34c6ad4e4de9c99ca85ab04c3d0904df44f481",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "99184e97bb1919403fb1d9cfca5888ab6343609ae842b6aa78272975bc6c41a4"
+        },
+        "bridge/blender_character_separate.py": {
+          "committed_content_sha256": "2bba09139439d6adec6759b0cbb723f97fb75ddec849ed8b07eceec0146ad9dd",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "9a505f889ae1666fd089a2158b5b6db46c804a67ed80450d019e8ab7e42e8d31"
+        },
+        "bridge/blender_cinematic.py": {
+          "committed_content_sha256": "aa7bf66e2da8feeccf8f00544176e03de7962858375f4ea776febc48a234f488",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "3c7d7082bb478751bcece45fc1e6a5c5bb04e962ec185eaa9130cb74c0b3a9fc"
+        },
+        "bridge/blender_creature_reimport.py": {
+          "committed_content_sha256": "47882d01df8d970af84a080b7a696519e362723aa202df2419a8eec0416db786",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "f9475873054815c4a2d22f8eb45b70727b6cc8913c63ff04c6313f678f53dba0"
+        },
+        "bridge/blender_creature_skin.py": {
+          "committed_content_sha256": "3c13791442c593feb3a0ff920c8c6292713f5247d2fa92ae653c93433f8df5f7",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "4694145f5b69b664581cf7112c17a0375e6a10a2d6bda76d2052a3c267980823"
+        },
+        "bridge/blender_director_frames.py": {
+          "committed_content_sha256": "3f81fc368fda135d222ebe99295978e88bfe2784cc4476a6ad589e289fbc609d",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "5c2adf1518b429902f5db02f428e06990692cb5c72066267c3c696bd4487beaf"
+        },
+        "bridge/blender_director_inspect.py": {
+          "committed_content_sha256": "8a2329d0084a8f4af5066d8fffdb4b5fa38311432aa1e606b6aadcdf981589fb",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "c9b31fb72e9d925a79d0a490fc65bb87d06c5eeb228460ccde660a15788e372d"
+        },
+        "bridge/blender_face_lipsync.py": {
+          "committed_content_sha256": "403325cb8943ebf51227afc6290e24ece10e6469535ec8e6655704093a6bab97",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "fb1cd20a84337364efac2bbb9f43c855ec23c2a3fae8e8ffc6678a2e8aa6d187"
+        },
+        "bridge/blender_face_reimport.py": {
+          "committed_content_sha256": "38b9e9b03cddad99afaf07ab07805bb162cff243b9ce7beb98ae4b6d6dc02e51",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "9dc3add751ea71f13469d2cdd70955fb4c6de113d05e9bf8ae2cb7756bd3ccdf"
+        },
+        "bridge/blender_fx_render.py": {
+          "committed_content_sha256": "a6ff76458ef5cabae1adb098e05124f9cc9cc5ac17afd57cb48c00a4e5c74c1a",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "a398f5f060c4510ffe0d1153148bea53f238f1c91294cc30447a610fe6dd9693"
+        },
+        "bridge/blender_live_scene.py": {
+          "committed_content_sha256": "ab0a3ed5ea4bd9c9641f5b946a4800143c95a5589dba2e80343f5deb89baafb4",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "8284e5ae6e9d9a60cc0957a57007068ca9d4df9c17da2648f9748cfae220c11f"
+        },
+        "bridge/blender_material_inspect.py": {
+          "committed_content_sha256": "cf1e70b9e5d212d61af5ee5bd22510409ba0581fafc55ba6b16bf92d7f404548",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "19597d3c7ea294cf0f78e651dea8abaaca834950e8298371a63fdd8c7790a4fd"
+        },
+        "bridge/blender_motion_export.py": {
+          "committed_content_sha256": "cc00ea4328dc314a0189bf6beb91715663f27671916c2fdcc7201a61254d3659",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "e06a45121fc01762f177280d2fbbfde1f9541dcfbc214c8cb17e1654110231b6"
+        },
+        "bridge/blender_motion_reimport.py": {
+          "committed_content_sha256": "5a8262bb869075fed6b991f80beec4212ab96a3066f107970a750a1928669301",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "5b481d01208e1d110269e6270e09a0b91a8eb2e6d651ccdfa615bcd22f9c7302"
+        },
+        "bridge/blender_pose_inspect.py": {
+          "committed_content_sha256": "aaaf23bc8b9a7ce1754f499d31d6cce5166df9a0f5e78c089d25184adc245574",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "923c8b52765742ecd3d5cc7978c225d906eeadc0a04cc80f59cd65fc1f07300a"
+        },
+        "bridge/blender_pose_render.py": {
+          "committed_content_sha256": "bc371bffafe49dfa9c89bf16cff2cecaa931cb11d6500896c5d7ced3e725f6e3",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "8aa23a3778328992527ce57a88ef0d0644d7044667c6fe8ca50355b9f9318283"
+        },
+        "bridge/blender_probe.py": {
+          "committed_content_sha256": "9ecf069c1aac123050cb59626bfc321114a2089ea3be59a58e403e30cf21891a",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "8c242cb1e727400c8e702fcc227724d09e352a86b1c0136d2d37c72b0a117ceb"
+        },
+        "bridge/blender_render.py": {
+          "committed_content_sha256": "c4a9c01e6553597d5517bb53e42775b151ce1556c79c854cba71d83ccdb3b0e8",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ab4f9f751cb2d6bf18815de1f360894de2d43d0944ff5e4e7c65089095bf0ae3"
+        },
+        "bridge/blender_rig.py": {
+          "committed_content_sha256": "c7c684b306e6e73c7db0b4ada647b59f6b899dd8638fc5590229717609a55393",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "cd433c8dda547327277413bd915db3dd47196de98a9372577ff5c1078e82b417"
+        },
+        "bridge/blender_roundtrip_export.py": {
+          "committed_content_sha256": "969efbbe903f8b593bd2af280130c6decffbff54eec550c48fba9ede23eb2276",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "3f6ed3cbab97c0b549fdd5b0585bbb0d332847afc0b86247aedb1ed98fe77936"
+        },
+        "bridge/blender_roundtrip_smoke_edit.py": {
+          "committed_content_sha256": "3319dee1841eb0cfa46f823d353f8495a1c3d213ac627460851589b41a585088",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "4385d02e9e63d6d735e8026b0bbba8f82e57e9e048ebb7b07b4204f992ae3773"
+        },
+        "bridge/blender_scene_facts.py": {
+          "committed_content_sha256": "1f250831e19ffec2fdc5c43dd461c54cd7332978630cfd88a2a98b34b023e4c6",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "7ede1613f99e0b0d3fd59f88af74c9bb9cd3b3de58427e67221224e3538aefa7"
+        },
+        "bridge/blender_studio_witness.py": {
+          "committed_content_sha256": "4324a07a9de156e28b6d6030943dc7e1ed72cfeea68b956ea3c1a83242d63879",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "55d136998c9b192f8bdbe830d6938eabadc22f0ab8b8c4c6047f5defd24bf5c4"
+        },
+        "bridge/blender_world_compose.py": {
+          "committed_content_sha256": "d74f86609688075be0d0712ba49977c27204862f94540073684ebe5cc4047d66",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "980925fdb30aa8bd70725c533409339d6d5826c439e5c3df3fe53406c88e4bb0"
+        },
+        "bridge/blender_world_compose_reimport.py": {
+          "committed_content_sha256": "b700c4729cb1b500817898f821e63cc15f9a26c6ec577f7edd61ad6070f857e9",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b5707d9ef7e440a6afd5fb02d90f9614aaed42c80b1bf9ca7f325db77b9c78f6"
+        },
+        "demos/mgr-world-editor.html": {
+          "committed_content_sha256": "2dec0dfcdf07da1c8c8885705a3c7fff694805e42a730237076739e7deba17ae",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "dc71dff7bf421949816c624a61118a46738c467824fc47e7f465831205c4c9f6"
+        },
+        "demos/mgr-world-flight.html": {
+          "committed_content_sha256": "26fd225b1f092eb53160edfdf55a774a8d4107517f57b906d1cb278cf73aa9b5",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "52e30b6a6a34377b8aaa7a787f99118a9a9ccfa0df5ff089e46fb64cab9ba87c"
+        },
+        "examples/layered-scene.json": {
+          "committed_content_sha256": "7ef2cd0c8af66be3ce822e13a5c6c072e71c3d7bd0529a5d7b4466f2dfe7abb6",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ae58a06569e8c5714dd69423945bab39ec22e7c215df137a93bc64d1996c66df"
+        },
+        "examples/multiview-phantom/spec.json": {
+          "committed_content_sha256": "b4e1dc8d34cbfc88d0789c118eb5eb9325b01f1aebe7781e906ee77d7d624ec4",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "7e41b1ff489a6f1e820cb54c4770cde1fd28430cbde6d896b15f80487e768d64"
+        },
+        "examples/multiview-phantom/truth.json": {
+          "committed_content_sha256": "c6097e831125fe59c712eee815038467f703ad6be24e055e171494715cbc4318",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "d88bde1505f0d0713f048d91dc476cbac79eab945166541f1a9be32c5a375677"
+        },
+        "examples/neighborhood.json": {
+          "committed_content_sha256": "056602b70db33d93cfc22e946750c3a68a222d07d5494c2b578fed0db4c7890d",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "a398046fa3c362c2d5522a120cadd9fd1c5efd01236bc57b9b9c6d09b56a62a5"
+        },
+        "forge/__init__.py": {
+          "committed_content_sha256": "9a92302fdcd16cb7afc78cea543e733d0d8e1ecad1f26a3a7f7275b6567f6067",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "2bf292c2133bae9d8634771e9e895f3de4f96320bb6bd9caf0c5300e1569d7db"
+        },
+        "forge/adapters.py": {
+          "committed_content_sha256": "c640db7cadbef910ea8d4ac39c0faebd194a0ad8697bcf07a1c1ad81acfa6c73",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "c5bf655649c72a0ac92d95a9ec81d43441494e82f2ad1f8c2eab19bcb08bc714"
+        },
+        "forge/ambientcg_source.py": {
+          "committed_content_sha256": "92e2fab936db4eae0da7fa2e5a5a99535d2abe078f7d34e3ac406d916195a068",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "a855e7f93287b046f8c1c57090659adb9a6e7c425eb541c82723f58490c75590"
+        },
+        "forge/anatomy_constraints.py": {
+          "committed_content_sha256": "0d55e52fbe3353a8cd33f2fef989df83b8305a2a52fcede0414750fdb4a750df",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "0d55e52fbe3353a8cd33f2fef989df83b8305a2a52fcede0414750fdb4a750df"
+        },
+        "forge/animation.py": {
+          "committed_content_sha256": "80275778c0ab74981672f2a496707a2e57d8210cbefbed202c8908558d549226",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "efbc6c4ddbf974398a53181337a863c97ef2c4d8641e2a4eafcddb45eb9d39e4"
+        },
+        "forge/asset_atlas.py": {
+          "committed_content_sha256": "3b869e0a4877d642171db22ba44bbb4e0074dede7e76a03f6d778397f05f5925",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "0dd9584b6bc37700bd4fea95b7fc22df0fcd70f8a82e832194efa4bcb938e2c7"
+        },
+        "forge/asset_parity.py": {
+          "committed_content_sha256": "23023c2351895b66382186b6787cbd21a4f73179d16eccfe1f3f1a47f5c7d434",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "f4dbe57338f879601b625251b92efaf4a7efbdba524e24f97c7cd8f969b53a02"
+        },
+        "forge/assets.py": {
+          "committed_content_sha256": "01bece2748b2bc78c8df6775650d2f87fc45b4a254217421c1f5c710a4f97ed3",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "d7b5a985724df6f90699ca3827bb61f7d9b050bee33c26d4e6a1f44810db24c9"
+        },
+        "forge/audio_motion.py": {
+          "committed_content_sha256": "6d5c05ea909761a96d4ab53243387b7d360204ced99ad6091f83609f36238fb5",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "2623d92faaf3fcc7d1de1df0f4437b1673e99b35c8211b0b3a38872baf5c77a9"
+        },
+        "forge/benchmark.py": {
+          "committed_content_sha256": "1f2af781108538a5b3ef5bd92fb45fd9c0c21b88d62d69dee54a7cfa74b47579",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "3301b63281bc9c67b0b20d1d672e501cd0064457b1710db7b9116748bfefda4b"
+        },
+        "forge/biome_jobs.py": {
+          "committed_content_sha256": "bc827847a3fdb0492f15bc50275e395545db1b78d32288f35e85e865b802a6c9",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "e3bc9a91e824c28ba47a9ba6eb9dfdcd4d196cc8b584816a9a05776a39bf963d"
+        },
+        "forge/blender_bridge.py": {
+          "committed_content_sha256": "7be9f2a48c72c358b35597f556ffdb3b7402007f48e9747b898b7c81fd7c617b",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "4635fabe8fc59f91331ae107e1a4b1590dff462f79939c7228adf4b455a5aea0"
+        },
+        "forge/blender_roundtrip.py": {
+          "committed_content_sha256": "b158efba040a8b922af7e7e5811285fea857dca650b60b93cde8fb1a39582bf3",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "25a4b84277f627f9831f58ba3db37a7c7d889cd881921bd1e442a1014250d5e5"
+        },
+        "forge/cell_transport.py": {
+          "committed_content_sha256": "ac6be5e792bbf26765a159a63ff2d30361027c1432b850467040ea05339538e7",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "8303eabf06009ae049eaeac1c64c86b589729dad451640f20ac4528d6be800ea"
+        },
+        "forge/character.py": {
+          "committed_content_sha256": "44fe8d59b0bad5786106e8fceaac620a2e76d773e9401de49c36142c92e37847",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "cccac205bf0bcbeb051c893c87df01da214b996660ed0468ae3c3d74b9aa3252"
+        },
+        "forge/character_glb.py": {
+          "committed_content_sha256": "4ab777aa265bc0b1d56f81a323ec2d936842cde128e3ddf98d42591858069f41",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "6b87b8b5fffa789ec9da14d91a45465cfc39d152a7b06f8d0460f120dcfc454c"
+        },
+        "forge/character_intake.py": {
+          "committed_content_sha256": "47a5abf8315fa063b1f1966fe5b43e8bb1b4fa3e5aac081ff55dd5c8bcaaba72",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "0cb79aab839d70a2f11071ba4512c9e5f9fd0cc020a6329c59a92df89cd3932d"
+        },
+        "forge/character_motion.py": {
+          "committed_content_sha256": "30b5ba75397290ff258ac3325fbec79318492e7c36ef35b4ef63b6a90d3a2c12",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "8a4a29a78631cb49f9abbf53907e33e0b740b77f67dc6f5efac5c4933e4eeb9a"
+        },
+        "forge/character_readiness.py": {
+          "committed_content_sha256": "efcb531897b1f51803ff18c016bac1c408bd742cceb2c16dee69b3a5d2c2703b",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ca8077ce413a37ebcd79586549d0291e475e5c6950aa514f77cfa16c4e5ab93f"
+        },
+        "forge/cinematic.py": {
+          "committed_content_sha256": "541e835fd233f5434a2d3cd5929b7e88a48ff2a0883dde9f424195cb6d2eef85",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "7c28142f5fed54c667e55e550c2bd3d3e67c9f01c9630783dede99e6427d645b"
+        },
+        "forge/cli.py": {
+          "committed_content_sha256": "812984534b1507194e7973b3c88c75be1c0a59a01edcfcd57aa93fac04d644b7",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "d983827e5a4d6b1b12e6fcbb8929eda457f254bf7787d5704c2147ac6e2958dd"
+        },
+        "forge/code_architect.py": {
+          "committed_content_sha256": "a654a33472c81be92c9c9258b24b06c92e03c7b1ba71fd5d1bc23cc28f28b348",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "bf47e4f36d730202017b01b5be82f358f54648d2296f218de79940ed3ecc36f9"
+        },
+        "forge/consciousness.py": {
+          "committed_content_sha256": "37aa50bfce48f36a4dcb050bc97a871c0f2410b91237f9c71520c8aca5018770",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "663a39b5949e7edb891d7bd0c5d8ddcf42457322c2e770cd5863ac5f0746c841"
+        },
+        "forge/creation_memory.py": {
+          "committed_content_sha256": "8ba8c90dc1278cd2ff8408dbfd8dd2106f6ce891064d7f2b75c807ad390dc6e3",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "f85a872723c7826ae051a662087103949489b29f41f5a6df9699589a9e8b938b"
+        },
+        "forge/creature_jobs.py": {
+          "committed_content_sha256": "68d1b77153a7dca02c569876a1030e27f1e3541164e37c585ffab6a275d45519",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "1d9dc236a7cb1f8628aae6f69f4fd94b95408020f5ec7bc9eef9df28321fde93"
+        },
+        "forge/creature_rig.py": {
+          "committed_content_sha256": "d11face09d9fa86fba0865b8e48b0c347f10ba18134b3e85a947eb4442776509",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "8ddd56ba93db7bd075b45b94fc03e6ce4d854081de1ebb72ad6d7985aff1f184"
+        },
+        "forge/creature_rig_recipe.py": {
+          "committed_content_sha256": "97c456b5aafc45ea5aaba9d51b03cb209e52350f0d980428ff380bd32eb17578",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "cf1d4164d1df577ffa55060efa370fb177e4fbf42ebeb4e8f90378f0eb957ef2"
+        },
+        "forge/data/asset_sources.json": {
+          "committed_content_sha256": "7296446f5274dfedd1e76f00e7f741c284d7686f5ef102427ba5699587561b17",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "e7b6466d48f669462a9fe55eae85e1867193b02b5dd99b9de8b21b81e29184b3"
+        },
+        "forge/data/generative_engines.json": {
+          "committed_content_sha256": "0cebeec76f4d4d468c5d1873e844bb207a1082a5976697f8a59f6b9c55390e71",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "8c8ca4d2e1ea635e58e894fb7a0cab36fa32aed1b8fa1c56021627b8a7a1f553"
+        },
+        "forge/director.py": {
+          "committed_content_sha256": "6a2db1daab4ee0009f0be0eb5ddc033b501eac492c04bf5c6bece39c2a5d9be6",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "c8fda045a493e1ce007c2b0a4e88fbed365f9165405539bcf90784fd695ba848"
+        },
+        "forge/durable_queue.py": {
+          "committed_content_sha256": "13a4691f22326bdc880513bb7df592bc939670f399e5e5e51d11650ea503886e",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "0db04b81f64177dfe1ba4a0e1fda671228ffb3d94f1be4a24f2eacd039175451"
+        },
+        "forge/dynamics.py": {
+          "committed_content_sha256": "7156dc068080c82d001157bd18d5c7e0a79c18eaecf9760b3f3ac6dd201504e0",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "adb8dea0182d0923998f66b5456047160270bcfb18e3e8d2272383d9dd858980"
+        },
+        "forge/engine_handoff.py": {
+          "committed_content_sha256": "a91fd3f0bc33ff12bfd81f89c87876e98376dacfe7307db737c4085589da20e4",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "c9528fa5717d278cf8a10ac26f4bf3b629b6d9949aef7aba281781cf96f8d02f"
+        },
+        "forge/environment.py": {
+          "committed_content_sha256": "f952bb4e971c08bcdd46c7591f64f1ec3940958dd8358a9f5df90e9fa6d91db1",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "d07cb0a8576dc52332459737c1bbf407dd424d077ea4bdbc3f16406c667fbe99"
+        },
+        "forge/fx.py": {
+          "committed_content_sha256": "a49977adeed625da17f56267b7bfd2e75ebd58882d412296b052a757de41fe97",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "a149571a41ac1a6267ce423096e269c0686337a2d9c5bee55c45756f718eedc3"
+        },
+        "forge/fx_judge.py": {
+          "committed_content_sha256": "9cf1a1ec2a6d0def1086fd41ad65e44f6674cdd6c03fed78a72619a9f1abdb50",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "4fd2eee5a22215a34216a386afc8a1fa7fa2bf779f01efe0b77df8e4f5401efe"
+        },
+        "forge/garment_fit.py": {
+          "committed_content_sha256": "b493babe6ce16e173c426590c7b79b22ce7d2888978a9fb7eccf054f23db03ff",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "c3ae988212a6e2cd41eda082929ce5ffe3b1a824d2f246d6b763177e1eaf0d0e"
+        },
+        "forge/generative_backends.py": {
+          "committed_content_sha256": "b83fd6a58642847f92f6b9e24188f97dbc85bfec7a85f17b4163a4675ad4ac7a",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "6325b4fdbd6c2025d13b3a2b00d58652ea3d17583970212a8aa391fe749f3345"
+        },
+        "forge/geometry.py": {
+          "committed_content_sha256": "c1d0352307ff4ebf340f013044cee3e7753e84edf8127a10f6c16f934eb639ae",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "4ea3675f54f18a58d738c574ce0b3b32783568c99ab7c8d3f47c07366b1cae94"
+        },
+        "forge/glb.py": {
+          "committed_content_sha256": "47d78122e7d7405a1efaf9cd24f87a690b7a870db7d05a4ed0c2b27c5e97f38c",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "14c7aa53e0d2ac6b9c21404ae9927a89a96e79e796b1ac001f533c97ba7f8069"
+        },
+        "forge/gpu_accounts.py": {
+          "committed_content_sha256": "7f06b2ed86988b97811945dbaa791a27f921a4c353a685c0b2e705251a255535",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "4a6b97339d6c9c4522023238d34970c7aca41689184324d80aac9a3c51192011"
+        },
+        "forge/gpu_lifecycle.py": {
+          "committed_content_sha256": "cf67385d1a9df82dcda6f55bee5b8599938dff32b4a6d7a430d2662aad49d931",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "9bf005b1f1cc9fcd53547a9d65489a633e9c6e155276e07f08a2e3b4d4836d44"
+        },
+        "forge/gpu_packer.py": {
+          "committed_content_sha256": "69a9fb59657cf1b49eb2200798aa4a979191d325de939bf95df38ee3ff57c4f3",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "20b3326a597e94f807658bca99850705e2844e9e809d7147147d6b9ee4bfdd9c"
+        },
+        "forge/gpu_rental.py": {
+          "committed_content_sha256": "aa9a38ba95d6170dc858d0034465981be41d356fc89a98ee838f341e8fe7a42d",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "00bec969eb6cb90313b6a239e1d4f3d9f84a4c4ca481dccbdfb90464ed67c33b"
+        },
+        "forge/hardware.py": {
+          "committed_content_sha256": "f0c17195dd8fe5f66e18600bfbe166ab39855a5f3a595fc75196418a51169c6c",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "5f46368491a37d78928eba61c733a50bdaf93d74a1909a62e080d3a77a60645f"
+        },
+        "forge/human_jobs.py": {
+          "committed_content_sha256": "84023b414542caa31352f2026f864055fedd529a785dc44e8e8df0f14b2f5629",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "52a2618d31e47d8b003cec32acf2cc5a5ebe4edfc2b4a618fcdc7a3379c012ce"
+        },
+        "forge/human_lipsync.py": {
+          "committed_content_sha256": "8bd79b00b3b57cd62f1896ff1e338795b232b47d978031695469355042fad30f",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "2ca79bbd353c78ec94247c42d509123d95cbaac637452ef4af9c40ea189d781f"
+        },
+        "forge/image_relief.py": {
+          "committed_content_sha256": "506aa41e3ea9867c908affe173454590015a8212ae30c0020634fa940b6a8671",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "0125c52a94eed19b212081b25fc8dcaf83bf670848901d9c7a91ce5181aa4a56"
+        },
+        "forge/imagination.py": {
+          "committed_content_sha256": "5c1e982ae74e7eaa96b6ea1a718e912640bbd59265aecbfeaa3631a142cf83b6",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "78aaae21d270bf82fb4fa23adf7262608840735116bab44dd9c3836f4dd7efac"
+        },
+        "forge/interiors.py": {
+          "committed_content_sha256": "e09b44bfaef87d5c93e98890ff3b7fd17202540026dd080357bd154494b63549",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "74da8bd006d0dc2bb2e8649ccb0bd64344f54e245d9c9af0f4c17b0eb9c9a5fd"
+        },
+        "forge/job_history.py": {
+          "committed_content_sha256": "00de6e2be2c276e654972c49eae622070c96da0ab4415638fd2c65af43c00d1b",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "00de6e2be2c276e654972c49eae622070c96da0ab4415638fd2c65af43c00d1b"
+        },
+        "forge/lipsync.py": {
+          "committed_content_sha256": "20033f37d58946269e9ae10d85047e1fbfda5dd7eb7ddd88f98164f07a6c77cd",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "50ff9eae6b355746998748ed6efbf2e735ff54e396f80f143a70ea7f03f08d8a"
+        },
+        "forge/live_blender.py": {
+          "committed_content_sha256": "062d29628a49fa9a84327e463b3bd6ab0591ed28d6ea61f7d7744e5db09527cd",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "37eafba9101e004373f309cf38cd2adb70d73fcc9229f85d119dda316c7a305a"
+        },
+        "forge/marching.py": {
+          "committed_content_sha256": "b45352f198e5ef520c9193e8e22c4b71495e04c771f8b3c066da03a8eb81f2d1",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ed3ee110fd70e81d35c918f48b5d4f3a8cc7014d4c29a0d49530e134153bc599"
+        },
+        "forge/material_guardian.py": {
+          "committed_content_sha256": "7898175fbc5650fa51e30336010311125c51c4c6300c28476dfb350815469ece",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "f90ebd1e0f967411dafac96ec563e6770ff8fa7f68fb976d6c0451a6ccda8051"
+        },
+        "forge/materials.py": {
+          "committed_content_sha256": "995b843f20337703b89e8ae215f830d919056b51b78d62952ef40f4c95ef0cdd",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "db6953149526da1391519d8c1959d874cf1e604e155a669cd0feb0a58c546fe6"
+        },
+        "forge/meshqa.py": {
+          "committed_content_sha256": "1812c1bae59c9c33483d3ae0834c9642cc2ac80a93a7c27496158a21bf2686f2",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "5f2fa8b549e5789877de1215a8a5187a0d95278aa34df8669f765ca749a98e28"
+        },
+        "forge/morph_engine.py": {
+          "committed_content_sha256": "66b49de91fd107609f6793e6b4b75c2be6859b82bbe2621a88d780fc5441ede4",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "71dcdcbf747297acbecc89f25047429fa3cbed337a62cd4faa43858c63aacfce"
+        },
+        "forge/motion_truth.py": {
+          "committed_content_sha256": "3250643d3f5dbbf9b1657b1e2dcd7eff34e7084bf4cacc859039ec489195abff",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ac72a844193450b5372ecb3b8eadb2b694bc548820ffcb2d7d991bde68ace103"
+        },
+        "forge/multiview.py": {
+          "committed_content_sha256": "e72a390e7f7aca32332060cb188b3f4809e907da49ff0c171fe7e19b08eee19e",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "8b87365ef038adfe4a13a68ca42cb757a7524a85eb1df394cc0a977d9beddda7"
+        },
+        "forge/obj.py": {
+          "committed_content_sha256": "a8752b8736ec00263acd2ab1c41a07d005697b99f9957ba8814b8642ddd9094d",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "5f323c879f92e2c41cf61529107930b54c3a771cfc5b6b128181351f8a76a94c"
+        },
+        "forge/owner_worker.py": {
+          "committed_content_sha256": "4d03740aa1e1e946e5b428ebd889513514cc1390627bd9f57444ad41d5d96aaf",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "4d03740aa1e1e946e5b428ebd889513514cc1390627bd9f57444ad41d5d96aaf"
+        },
+        "forge/pack_mirror.py": {
+          "committed_content_sha256": "2ece3c177a835d61d4c99627b7fe60d834247a6a438a0c8f8a97c41f3cc500a7",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "cf0d7e9445e72360dfbaa432e6d2fc4ce058dca40192ee34fe4093cb517c8610"
+        },
+        "forge/perception.py": {
+          "committed_content_sha256": "d2a6e11e598a2de67e4891d393142a3870b4bf71f4cf4665e01cc9a661e81ed3",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "bcbb8ad69f4c80777bc1cd0aa8f533ce42718a8a78945a8f65231eb56e3ce24d"
+        },
+        "forge/pipeline.py": {
+          "committed_content_sha256": "811729408e792ddb0b2feb7571250e6426882be3dc80acf67654c35e2bcf9f5a",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "c468eb41c1616edaefba86f1158370c8d0148c570927fbb31264738b1cb5a6a3"
+        },
+        "forge/planner.py": {
+          "committed_content_sha256": "50f61bb78330555677f8c5b82a63973a0ceef0ea1e8aab76e57979e8799f575f",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "5c7a5fa127036a733d0f5a83298abd49549c50d878e7154dc9863d9a589a91ae"
+        },
+        "forge/pose_guardian.py": {
+          "committed_content_sha256": "0976401e9abe3a3adb98813d064985ed5f7ff97c165c9dcd8f1d7f5a39bd8c8f",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "444418e450cc0b487e066e3d7dcce8c28b1adb6b029f14052ca2f6671313d750"
+        },
+        "forge/preview.py": {
+          "committed_content_sha256": "b2ab12e9bf2f45bd60b3261d00f05ac636e5bac0f7dfaac83d118bda4e39d6da",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "3613d8398468d75d324c931d2a75477c5ef713ebcab1118c757f652577de43ed"
+        },
+        "forge/quality.py": {
+          "committed_content_sha256": "039ee0a7e469bc89b3abb9ef2e56592660dd09e599fd620df9b91dc4e951721c",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "65c4a4f2cf81e22ecd2f16dd95d30c29465ade43410719ff6e603115f815c1c6"
+        },
+        "forge/receipt.py": {
+          "committed_content_sha256": "0afc4f232ecc8a16c0929ae4ca4a1be381ccc7749e6e8e3987edb624e504492d",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "13c3cabd1b12b8f8c247b795f13fa179435fb48fdeff5a413491262244437545"
+        },
+        "forge/recipes.py": {
+          "committed_content_sha256": "fa525381d19dd8ee4927a05327efb9e19230b9ebcb98d46a0ffe98058dd7192d",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "7b0e89da7ce2643230e07aa722b0ce46769a7a3b94bf815e2ba3ff838a0e8751"
+        },
+        "forge/rectify.py": {
+          "committed_content_sha256": "9c2b07dbeedca95063865f78cbf7daf4d0ec3535f3065ddcbe62aa6b83937bee",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "828550408dad0ec9580a4cda64582da8d78cfe57e4af7e181af1b40a53323e4b"
+        },
+        "forge/reference_pack.py": {
+          "committed_content_sha256": "22107657d4e6b1ac0b698f203581428813690778cb94fd79cce71ce2fba49684",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "a0dfab5a1c15045d5b5b9276100db90d4bad62834ca68f1b64fadf5a994f7488"
+        },
+        "forge/repair.py": {
+          "committed_content_sha256": "99ea5387ca4b41a6d4cc86f95eddf909676f7b4e81086ccbcb5d6679e6fa0b7e",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "e02a8c05c5299fa3de29aaf39d8777576071a9fd070f83745b144afafcc63531"
+        },
+        "forge/request_binding.py": {
+          "committed_content_sha256": "bf09c9e5fa61a9dcbe0169a630e7a265f42b326e8fe37a4914b110088606849c",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "bf09c9e5fa61a9dcbe0169a630e7a265f42b326e8fe37a4914b110088606849c"
+        },
+        "forge/sam_adapter.py": {
+          "committed_content_sha256": "84e8ad8baf82a67b6c7d3833eb6fbcafbd8133fd2f429b989177f306df860274",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "0b15f3f2cbb141c7b637831336f5243633242a2a3ff216906eeaa2641fd526d8"
+        },
+        "forge/scene_layers.py": {
+          "committed_content_sha256": "86ef72771ce5cb748782cc515c1af323456205b0243c82335a277c7db28655a3",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "818321f29caeaeb938e06bf45cabb3ecfa1eaad79c27b42d7d953b70bf5692ab"
+        },
+        "forge/security/__init__.py": {
+          "committed_content_sha256": "056aeb9e33e70885ce7c8797fabdc54f68e5d267a6ea66824926db385344df18",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "5804de8f62d0853743f6c26b335ad299ca33339e3dd4b219c8d79e1d9fe1fc1b"
+        },
+        "forge/security/rambler.py": {
+          "committed_content_sha256": "c45dd2a51fe995634843cfc645cebbb079551f31ed56c29c9965b1318f5c5214",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ddf6da50f68da9bc1e9b5025f95a1e593d4fb9fb4c089cd6e55a29f7ca256ab6"
+        },
+        "forge/segmentation.py": {
+          "committed_content_sha256": "74939dc1968cb3ee3cf9739d57b4716a671c409e6727935f7ef9f206975ee54c",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "aa49722a13872f56f3c497e165fd324a7644c8cd7f3f94bb8e35379ae1878fc5"
+        },
+        "forge/shot_design.py": {
+          "committed_content_sha256": "5c6da2ffd50c76f9f4fff35ddcafba1d97691b95066430f4f222b7198e06ccd4",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "175fdefcaf432e91c12a488f15abd24d84f38d74b52b629005d44b66e082c636"
+        },
+        "forge/smooth.py": {
+          "committed_content_sha256": "7d7b8fadebed1c2c5c24420daf75a5e8e98aacf5e4fd97374892dcabee1096e1",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "e731847c3d91fee0d87debaf480b12c5ac87f2e71da1085c1c7935873f38ef9e"
+        },
+        "forge/spatial_truth.py": {
+          "committed_content_sha256": "b4cff23f44b18a3878bb3bfdc2673069ab34a23952b08ebf46131b364caf3841",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ccae91adc07c316c8fad8fad43ec3eda13749ffdec341fec1546a6b003389342"
+        },
+        "forge/spec.py": {
+          "committed_content_sha256": "6c65c357cc97ba97d8a5e174ff1ceb5eafb07d57ca3481ece9cf433f80ce4117",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b7dced38f7284c0397699a73f68d1849305e5d6ae90aa3fec2e3ec653bbdd5a1"
+        },
+        "forge/streaming.py": {
+          "committed_content_sha256": "710ac47291376b2007150fb4f97433ff53ad9b9e2b516a6dc59465666d4f5504",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "6b58caa4266c0b9f10b26d68de2f4a39b9c0662c8baed3331344a08f0f3d8568"
+        },
+        "forge/studio_quality.py": {
+          "committed_content_sha256": "0d5e0087b4a89b3756819b8a8b6f5e3ed9accacbd1560889bad5bc7d1dac4368",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "2f89b469dd3c815dd432292c9b67ad6af7aa606a869cb83093140939675830ca"
+        },
+        "forge/studio_server.py": {
+          "committed_content_sha256": "8591c7585bd12e628de9a0e7e558f08553a68110398d562c4ea490b11246bcb6",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "8591c7585bd12e628de9a0e7e558f08553a68110398d562c4ea490b11246bcb6"
+        },
+        "forge/surface_truth.py": {
+          "committed_content_sha256": "7eb9f8b4d32a174d84446a8aa1a270158ad932509798695ffe0f6fad97773034",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "c3a3017677eb59fe682f013eff39a1eda7daac5d0330a5f46d4ea16999880b58"
+        },
+        "forge/traversal.py": {
+          "committed_content_sha256": "b6ea0c7cb6c0d7e0d062e9662c47eb6c09890be96c7d8b56e10774d1720e4521",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "10efd7de2450173879b4c488862abc346e9dbb02344385befe98b241f13b19cb"
+        },
+        "forge/unclothe_3d.py": {
+          "committed_content_sha256": "28dc4294210b7b98751aa98f717b2733404e218c7c2001fc1c57ea89a1ef5213",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "98e55af7a78dc0c12b2c9eb9511eadbb8135e525885e394f62632eb9b26af2fb"
+        },
+        "forge/view_identity.py": {
+          "committed_content_sha256": "bf15063a826bce193ddaa5badba93141993bf2e7927f31ea551ba6cde40d6706",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "c47922d20b3513ac3b01c549312967abdfaac76db9d5b8f7023562b4aa19b451"
+        },
+        "forge/visualqa.py": {
+          "committed_content_sha256": "6fe567b0056f66070a4d7189b1fe9c3508cc07fb8ce3b3c1014f0829087548e6",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "5d7ab90d2117d1b2c1190bce7eb77d12d297aff6938d12f0415207bd8082677e"
+        },
+        "forge/voice.py": {
+          "committed_content_sha256": "8d91c3b23f2c995038cb31af397dd16defe666f0dbef24b4dc3eb24f31c72df1",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "aca4c366b4e5a5fa6cbc0c5a625fb60f6005796b0e798e73aec66d498c6738e6"
+        },
+        "forge/wardrobe.py": {
+          "committed_content_sha256": "262a1a7c6805517a881ea314434d06c75fc7ec0b976cabf42926d604ce982e84",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "c687751b607640cd6615dd582ac6e1bf26b3f48bc064d5040b3c15624bf06560"
+        },
+        "forge/web_runtime.py": {
+          "committed_content_sha256": "d5d7ae442fcd4c65507d8f7d2aad2f041d7488f07e3569294ad2830fc0978cf5",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "759b57357ede47109f84c290f484908c2911777383f03580dce7f320c97e9a25"
+        },
+        "forge/workflow.py": {
+          "committed_content_sha256": "8284726a08541d5a709d9396e71c686f91e22c7baf9249d7a8b8463357169b56",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "9308b477d597392247dddf87dc24d0dd89eff31bc4e4d7b9f45c5892207aa38e"
+        },
+        "forge/world.py": {
+          "committed_content_sha256": "70eca9b55e7dbee6d360c40f9bb600b8ba77f428c6dc92f26ef7c531fe37436d",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "efc6ec7fceda1301052a60f0e6cef7d896dc3c7ec3352725b67a2a96a8de3269"
+        },
+        "forge/world_composition.py": {
+          "committed_content_sha256": "a038b4759c3144871ee427956c6ee319b411ff8cedeb8973c6c73fc427ac97a8",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "6ca0876422eae7debb8ca6e53937a7f0bdb5e3b35045670f89f8e64033bf13f2"
+        },
+        "forge/world_composition_jobs.py": {
+          "committed_content_sha256": "c411af74ce571e16fb738ffa49a3181ef0b95b64e61825f09b8a017da1f4384e",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "534940cc5382d6da9496cc3a5c62cc93ed15531fb7a908d11c10483781956a02"
+        },
+        "forge/world_editor.py": {
+          "committed_content_sha256": "9c970983dc8827a3e47186278e78927a52468ae9a138238c480a1145daf995e5",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "35d578da6012eb31f10edeb4edc6eda39fd6d4eb1e477d8417b4d54bcad64c3c"
+        },
+        "forge/world_jobs.py": {
+          "committed_content_sha256": "4b9bbd18a71904cbd1c6f14cc5dd07877071f0b3d8f6455b9744ef028ba8069a",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "94a3af3242692c90ec025a26d6065f0671a6f3b4baacc7d6be4633061ae94977"
+        },
+        "forge/xray_kit.py": {
+          "committed_content_sha256": "bc8a1f12e65c6c7a8060040270b3702abbc13ced080310422396b33629b892f8",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "2c891a09c1369651f8895f1dfc9c59b471ed39a48840fad776a5d88e3b003f47"
+        },
+        "scripts/browser-qa/creature.mjs": {
+          "committed_content_sha256": "c5de29fc9552a41ff56d0f41a655c9277e57c4c26d6318a950126232221fda7c",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "e23149b0c88a9b194a19ebcce4a3f26286cc6012731570f62eaeaa016e403f7f"
+        },
+        "scripts/browser-qa/history.mjs": {
+          "committed_content_sha256": "b9cd81368caa9b53bcd735120ee512c99a2de5423eabfd24713d0e540c9c2866",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b9cd81368caa9b53bcd735120ee512c99a2de5423eabfd24713d0e540c9c2866"
+        },
+        "scripts/browser-qa/human.mjs": {
+          "committed_content_sha256": "c5bac4b4edd214fc9483aeb00c707de30dfdfc0cb78fa3bcbb7586a05a65d062",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "eb414de8766efd70fc5b01ddb93aed9cb1503163165b43467440fa1988b53755"
+        },
+        "scripts/browser-qa/package-lock.json": {
+          "committed_content_sha256": "d5c2a56a239f61a79094f8d41c389b4d40b00178c8eebd60e6fb2a447931d963",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b8e8ad84a0267f9631c45660c49d2dc3fc95c2a34b710e5f7f32579fce32c572"
+        },
+        "scripts/browser-qa/package.json": {
+          "committed_content_sha256": "26cb4e8fd1884f174d549a2d6b37af081122e1fdbbeb1d9c4dfb246fe2df2038",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "3819bae507b4ffcbb0cff08cc93dc5083b602f8f375f845baa347ad8d1a6a557"
+        },
+        "scripts/hull_resolution_sweep.py": {
+          "committed_content_sha256": "0db8fa40bdd4e81f4ac1b6bab94c65e3ab595ba898bfa9bc0a43a50c8a81d7d0",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "418b9e1c9d8d3e65d0b20193e2c9f0d1c42fc127e4fa3309de57d48e58b054fb"
+        },
+        "scripts/make_phantom_silhouettes.py": {
+          "committed_content_sha256": "eff23cf6b8af9492dc0854f9034e314548fcf0a9544b1e995815b5897ba697a8",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "c1129593db6a9daf7be284cac0d0b2a1b190904e6a41c9ec0c30578666aff87a"
+        },
+        "scripts/owner-worker.py": {
+          "committed_content_sha256": "658cedfa5b1c0d4422826f46ff3e0e29afcf0972059ace68e37343b6463fc233",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "658cedfa5b1c0d4422826f46ff3e0e29afcf0972059ace68e37343b6463fc233"
+        },
+        "scripts/refresh_offline_demo.mjs": {
+          "committed_content_sha256": "338293f2d9d0c7da485399f367eb9016340f4a3b5e0786ab8ee88a6f4f795a22",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "7bc36e883ff1395d0cd54d5e5cc9ee445d2e40f1f30f626b8bc04993c6a18331"
+        },
+        "scripts/sam_segment.py": {
+          "committed_content_sha256": "b2ce727cd1a41db40018c11cf2583863d4f6dd80a82ccc4eeab15366626d4d61",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "a7cf6e818c3cdd7f4d10328f1cec5c8593092e2312c11c125f284ebe5b97c990"
+        },
+        "scripts/verify_browser_ui.py": {
+          "committed_content_sha256": "18e27f762256409428153a3f3a80f8d7fd754c8a01b4b8acb2180db6492f7f4c",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b9a0e791cc1d12e02e7f1b546d7cff00458ac267b6d9eeef6d67c989f8aa6077"
+        },
+        "scripts/verify_creature_surface_blender.py": {
+          "committed_content_sha256": "795da53529b80f1c49be078382084d65630b68f87320ece1702de4cb7261c1ed",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "795da53529b80f1c49be078382084d65630b68f87320ece1702de4cb7261c1ed"
+        },
+        "scripts/verify_history_browser.py": {
+          "committed_content_sha256": "6ff72a1ff7562d8b53d845419c93752fd2316b88730ecdb81d2dc8ef95574c54",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "6ff72a1ff7562d8b53d845419c93752fd2316b88730ecdb81d2dc8ef95574c54"
+        },
+        "scripts/verify_human_audio.py": {
+          "committed_content_sha256": "71c963eb6f8b68155aad890944a8b4ac20d6b45bf3d92d2bdc93db4024d82014",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "381f396458ce8f8c341b0b2f065ffdf742a91c6c5af07f586b7c4ff9eb010c0e"
+        },
+        "scripts/verify_human_audio_studio.py": {
+          "committed_content_sha256": "7f34cd72cbbfd1428f2acf68006d05404fed8084c0851a789f8333f80330e9d8",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "aea24939d164a67656fafe524a3bdad4e84c3d72a6e79a1abbac6094170ad5ed"
+        },
+        "scripts/verify_human_studio.py": {
+          "committed_content_sha256": "21c952bcde1aae588fcafdb3ecc90fe8cba2d4107bfa9c2f2d1576c5628c7165",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ce3b1b62c87c25549b8dfb142a7b25f6c93ab4a8b89d038348ea05d362695cf9"
+        },
+        "scripts/verify_world_composition.py": {
+          "committed_content_sha256": "29f0547d8ca3c63022e17f362c9428a6e799cf907af78fc9a14034ab609ebc2e",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "0c42ec4289f91f78a3ac5ce3ccbf1f3a38032c577a2a343404e33666c672cddc"
+        },
+        "scripts/verify_world_composition_studio.py": {
+          "committed_content_sha256": "346f6b3f8f55d431dc23a8389bb0b191c0cfd50c5a073375545802a258b8ee6d",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "87ae416e62e4cc3ab2a95f6122f8e6e4b542c0849efa1049fa7ea5a65b9793b8"
+        },
+        "scripts/windows_speech.py": {
+          "committed_content_sha256": "a142a16fdfd022c972b7eb3f2a3fb27163c84b59d32125e2cd31bda8371717f9",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "8fa28c7f4d7a0850173c70e4093a1f459999feaaea8dc9866e563aba9961210b"
+        },
+        "tests/__init__.py": {
+          "committed_content_sha256": "63b4f87c98509e74fcedc15faa0e8b0576b50928ae528be971d3200fee439e93",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b7e1db91f91fa3c74c772d8b53fd14a30e516fa413cc56bea4a1743b8a082890"
+        },
+        "tests/blender_live_scene_smoke.py": {
+          "committed_content_sha256": "24ab2c5c86bd8d4b82a02fa247b7f1e1ae753af9243a360f77e7fdac9f8a396d",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "bb66e5d3274b30c6e94838248ca6acd330c5f080b472dbe25acb240a93ca9b76"
+        },
+        "tests/browser_editor_smoke.mjs": {
+          "committed_content_sha256": "135666519838b42cc9b3100058a0dac03ec126bd6e1d5c2fd1d75459cf0911c3",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "1aac6d1299af2ae0da3111b76611d046201255961c4b0a20b51e4262da410c56"
+        },
+        "tests/browser_studio_smoke.mjs": {
+          "committed_content_sha256": "588622b588c87aea3a4207d5a264f59a0c22fe195985ed7a74ed6299c06a59db",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "4d18ef361cb02b62decd2611c40b36f83ad7006963d15f14fe5df984ba8f6778"
+        },
+        "tests/image_relief_smoke.py": {
+          "committed_content_sha256": "217dddb70752201b35e413d99cca6bd080e1ef144ec7346742b8e89af9c70e00",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "5035eb890a08b615e8a4c5a29e932445dac72a12c1b97ff7e6b30fe1570a9d00"
+        },
+        "tests/test_ambientcg_source.py": {
+          "committed_content_sha256": "62e9e375545067e995c81fdfc7b885e9592c83db996cf5fdc0d2a39b7f48cc0b",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "35db386fb9f1bbca230ac29da1f40b5b2ac5ff6b46eecfb3757aa78b6ce9ba75"
+        },
+        "tests/test_anatomy_constraints.py": {
+          "committed_content_sha256": "6e45af541970f78865eeac3f8223f6e7583ae6b44c58e02be1489ebd677415d7",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "6e45af541970f78865eeac3f8223f6e7583ae6b44c58e02be1489ebd677415d7"
+        },
+        "tests/test_asset_atlas.py": {
+          "committed_content_sha256": "c2c01388ef5e57e36645fd77755d0e3860aa391c487d8cc4c14f19777a745262",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "6745259a8aff169500dda70c4c6c5396bb04784be655c0e5b679589ec930397f"
+        },
+        "tests/test_asset_parity.py": {
+          "committed_content_sha256": "c94a66a41f4f671754b4996426449bac8b07ac4aace0ec10e7f6e3926be36c41",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "29407d2f106c1e0e7201eb2644f938fb7555677f36dee504a97484d130837a34"
+        },
+        "tests/test_audio_motion.py": {
+          "committed_content_sha256": "5d59bbb0df4730a3a3a058b2306e7514c5846ca73adb7ba00e519e24275a3d6c",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b13def27da2a3456eecd831d9ddb8898c0d52cc9dc6042674ab17d51358c9965"
+        },
+        "tests/test_biome_jobs.py": {
+          "committed_content_sha256": "6d1c05075d588c6c1788688ff6ea9458c63f1fd73ef99406ed9bdf5b207c0092",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "a655745c93602e6c3e32bc09f8b80c5d7115c0a7d04d26d9c934bc2c77ce148b"
+        },
+        "tests/test_blender_roundtrip.py": {
+          "committed_content_sha256": "b40be88fc9b771eeebdae7c1a5a7d02d834f530af362a7271c437ed41ea8d651",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "6212e64fa8a3191c993c884e9db5c92f17ebe9d79b8a8601e1b3c07836145b1e"
+        },
+        "tests/test_canon.py": {
+          "committed_content_sha256": "d20e0e6cc370fdd6f0bee618ce81be106281bc74141da977d950267c70535c96",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "8c8e294b489b73a54e391e177f3c54b2396239500b8228fa0a517358adcb0251"
+        },
+        "tests/test_cell_transport.py": {
+          "committed_content_sha256": "e5552fefbf6ff96bb065bac4966f446fd5b878c43a1dc799e0db1dabda0d721d",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "2220a2a3271b526aa3c05c898d397e5de37b9bd2fd45b34a99a8f0852dc87a7a"
+        },
+        "tests/test_character_glb.py": {
+          "committed_content_sha256": "5b5ed3264102552f8cb649e2e5b8fca5f87f11c3150e213a65885f3e9bc02986",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ae7c0ec2879a3dbcc2a80d0a5306136ff60a1b15559fce1192c6124a263f3977"
+        },
+        "tests/test_character_intake.py": {
+          "committed_content_sha256": "495e517fdd1c692a464c10ba2c0f2d2389ab0bcdfb5115199d24ae84d68771b6",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "c4f812667c55c5c9c9e3638213f6a7108d1b9dda44c02ad980730f6fca9adda5"
+        },
+        "tests/test_character_motion.py": {
+          "committed_content_sha256": "0c33ad8bbdc4be7f6207d8775d50b932859886d39eca9e611ed06aa0e939c647",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "d62c735bc849236f8481300fe4851460bd807b70f36d9e373e08aade13bae8de"
+        },
+        "tests/test_character_readiness.py": {
+          "committed_content_sha256": "425c1e7c91d23886180786fc1836b9178d2cb1557020ef3a7d7749c015161010",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "2a7c78209d41df6d4fd71bfd07d6f5acd133ca29fbd382ae21883e02a340dd69"
+        },
+        "tests/test_character_separation.py": {
+          "committed_content_sha256": "6eceab59ca80989ef034689d8b0bd4f87cb17b4f941a51353e8a4a8625462522",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "beba3531f55704f52498d39eaeed443b26c4af5f9d21c9af09a761297fabeebc"
+        },
+        "tests/test_code_architect.py": {
+          "committed_content_sha256": "c1824bfc75195079e322b4e1e06d3cfe255d0e4bfa8cdfdae74153974c01d7a2",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "7ffe82722b57e3173dbf00c72f3ba4692d265f79518de0e12dbf0a226b729850"
+        },
+        "tests/test_consciousness.py": {
+          "committed_content_sha256": "6885a19e7a50d14b5275ec5c50d0ef3f4d3cd6c537b795a79b5e28f3d1d5a599",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "4b30fa393b88c868986a78ab8db1888b16ab6ee0d71922ae17ac89bc968cb30e"
+        },
+        "tests/test_creation_memory.py": {
+          "committed_content_sha256": "afcc8518f42f27e83d1895b373f5f16fb6f8fb6be6ec9aaa25e14702be06321b",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "7d16d180b3d4f14646421a36d600bd37dd60ba7a119c5dbee6e5c1af8f23e025"
+        },
+        "tests/test_creature_appendages.py": {
+          "committed_content_sha256": "2712e7601bcd7b4b1a1ba61f29bc39d6ad777fa9b9f17b207cc92bba95627371",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "2712e7601bcd7b4b1a1ba61f29bc39d6ad777fa9b9f17b207cc92bba95627371"
+        },
+        "tests/test_creature_jobs.py": {
+          "committed_content_sha256": "8403861ca3793a70bd936d6373429cef6f2494385a95c86cb5bc441508c49370",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "894f46eb56f46ef4889ee33f6f383b501c4de7d444db5452610751937c2739c5"
+        },
+        "tests/test_creature_rig.py": {
+          "committed_content_sha256": "681654c3b692c31890788159e41e7f08f4ddd8a72a0d338b7963b47517d7ebcc",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b30d0dfce4a02e438e3472920b909beae3b8dde2070514a741f1290478ada0f5"
+        },
+        "tests/test_creature_rig_recipe.py": {
+          "committed_content_sha256": "bb7bd407b31ea1dff6548c568b8875061f0606753b9460fd21ad11853b17343c",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "c370727c8a649821370f0a45d347e561652a2b0ea3af80067b9620c0aca1accd"
+        },
+        "tests/test_director.py": {
+          "committed_content_sha256": "c41810d9bfd729982f664604707496f171e0afbcf4f3769a4d4ca64103c855fd",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "cea5127785c790eff6afc2466ce337e77db9a56bebcd1d386bfe308c9850bb32"
+        },
+        "tests/test_durable_queue.py": {
+          "committed_content_sha256": "3be75a2dbf2cfc25205c4b72f88918983619c8ad99f14c6d9c05034c20b6c129",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "9c83ea67417574be89906be2c5bd33453d9ff3c3b43188df506daaad4b11928f"
+        },
+        "tests/test_dynamics.py": {
+          "committed_content_sha256": "e0f8d1d6ae7d24bcf2c8b9470466ce136b2b538cf75c0555e206e5e43888b1bb",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "2ae292228573d0d29922a297cecad8fae11d7fdaee07abdbecacaadedc1ffdc1"
+        },
+        "tests/test_engine_handoff.py": {
+          "committed_content_sha256": "e5c063d44331714cf890e433b842f0b9704df26df004a0f0cfaf6efa6c9a84d9",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "96e3668e7cdd503e548fd952f0183274f72ad4599259f34afb34f4fc00dd8b75"
+        },
+        "tests/test_forge.py": {
+          "committed_content_sha256": "4770c8d68523b4d1a2f5767fed3b94b197d25268eb65ca3bd2505b7251180ab8",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ba1a7a61914e71ac272edc1c25112b4985757b579f42431c266b5ad32ea42848"
+        },
+        "tests/test_fx.py": {
+          "committed_content_sha256": "f3a3fa1125c093930fd2e0145128e1239dcfb24d1d6a593d16d9e004badb5848",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "017f23ed1895fa102257e998aa15803708143aec1f23e42a884561927ce9b804"
+        },
+        "tests/test_fx_judge.py": {
+          "committed_content_sha256": "861ce22e3458aace934fd3507fa82bf526430b4f53cff3e06785a4afcc17e2c8",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "d425154e31275a01e76fd08ab17c00e358dfd1528fa2e732f8d8aa5f1794157b"
+        },
+        "tests/test_garment_fit.py": {
+          "committed_content_sha256": "c37ad5601852f00745d7499a77da8160b5834c105e7dd8f197c3864083086105",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "6e2813ad0620ab114abe16ad9c8371fe19212a188143ed3acbc63f4da4b294c2"
+        },
+        "tests/test_generative_backends.py": {
+          "committed_content_sha256": "067662be01a327544977ec036be5cf84361f89e0a43cf058d65f5866cb3554ad",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ae49fe2c3721ecc9b0d96d3f8d2b133a118fa00dd8c706a210d3bcc3dbdfcc8f"
+        },
+        "tests/test_glb_blender_compat.py": {
+          "committed_content_sha256": "413befe379fa086fca4b948057c1e60a621b93d505b5fdc03702996c54218ab9",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "d5901f20037766c631947f0066ab672acce27e18bd0fcf9903670190fd12ed75"
+        },
+        "tests/test_gpu_accounts.py": {
+          "committed_content_sha256": "4178fa57dc3ae4707d94c4b3e7ec3839923561d1e868b6217f9e096d7a8ce7f9",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "4178284fe3c8eb17a8bb8095ffe1a1f7c48f52cf4e011434c919af3e221ef67b"
+        },
+        "tests/test_gpu_lifecycle.py": {
+          "committed_content_sha256": "ec12b07a1956be82579bf955c53950e5238ce7643450e6536a4b32b9a50f5153",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b679492aed05f77e01f14236e919c2fb319754c2ebe564458909fe4fc3fc7a75"
+        },
+        "tests/test_gpu_packer.py": {
+          "committed_content_sha256": "f3503394ec70abc08e4098d06d608316b68ba6cb641a97869ffab0c0ea2b8ebb",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "602a36fbdf40a833de730d86b871cd9643c2d88aef6373bd81bbe6a5b671b6b5"
+        },
+        "tests/test_gpu_rental.py": {
+          "committed_content_sha256": "2d3fddc109566aa660bd49b46cc876265607aa3b6ba4bc4f118b103e1ed557e2",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "f16916f787109bd0c739cad6668db96bfdd242a36c98c17ab0a500e827548668"
+        },
+        "tests/test_hardware.py": {
+          "committed_content_sha256": "b6fd449111261dcc5b610435b74de5f39354203c091eb555c9c35830b272a0ea",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "75fac14be2b3360d54828110ceafb6f373206f73a7ed7e8ae533c7d2df22022b"
+        },
+        "tests/test_human_jobs.py": {
+          "committed_content_sha256": "207152665a5cbd0fb23ee3b046156865a213ad2d68adda10d4596cbf01c441e6",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ea8caf95a2e0df3dc3a5a86f7117415ba39a95e43372ead1794418b11a45dd76"
+        },
+        "tests/test_human_lipsync.py": {
+          "committed_content_sha256": "92c402f8eb0003e49a5356d817d339b4fdbfc3fb5bffce31751e2dea3b055e21",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "4e5dca46f207b5144759dcd31e2dfe4a39ba6f05bc973802cb9bb6230aacd482"
+        },
+        "tests/test_image_relief.py": {
+          "committed_content_sha256": "c5f22598bc0b1d66679d77ece06e71e774787aa0d35307a4825d585c6f078656",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "5da2bf312ac863e2120e4af1106b45fe44134e9db4c64dcea8e64b8b2ce83394"
+        },
+        "tests/test_imagination.py": {
+          "committed_content_sha256": "8cccd59bdc83f0366b2b364fd1942461ddca6a6e842d5a72d142d32e6533b07a",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b19bd8e706fa92f914b3170d22bc30606c1d25baa28763d9092edad439a0f9ce"
+        },
+        "tests/test_job_history.py": {
+          "committed_content_sha256": "d8f328f19191b8c3ac4d9613daeca68c5e2d27088d32450767083fe2ff5860db",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "d8f328f19191b8c3ac4d9613daeca68c5e2d27088d32450767083fe2ff5860db"
+        },
+        "tests/test_live_blender.py": {
+          "committed_content_sha256": "dec7fb47cc4ee1f587c6457695620e23268ac392018e551e245c4eb16887df29",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b4a0dff03b87e2e40b6e85c9b2704d414d1de338299e9ecbf86b30be43cb955a"
+        },
+        "tests/test_master_continuity.py": {
+          "committed_content_sha256": "0cc8db2b8398ff3d50bfbd9b9374627119b5ce96606d7c2498a49dbeb474c237",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ff4b69a67d5a2d64bf8ea4f1b05f3810ad318c1c38e3749e3d52678655ce3edb"
+        },
+        "tests/test_materials_cinematic_wardrobe.py": {
+          "committed_content_sha256": "2f676f7842e77eb2edfa139ea5af1eaad34a7f0538302941c6a1531155eb66e3",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "9085b508b8b2852db3a973b462099bf0a10f0402ed4c0a60dd6f017ed9749b9b"
+        },
+        "tests/test_morph_engine.py": {
+          "committed_content_sha256": "50c1eb49a4a725a8e47e6be62e72861f99482b8160480e7b6691fca2afbda246",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "4f6a68bfda36237218f5cbf4f37ae9b2a16ed469cbe0454922721240c450e648"
+        },
+        "tests/test_motion_truth.py": {
+          "committed_content_sha256": "8b9a2cb3d3ae0e18e9e9e82f1bed48eec0f8fba0f91f38ed4f09ede12a7c3dce",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "502323c80fee02a39da26607d90a804d4fa7e570a71ae5c29aaf18175eb4af3f"
+        },
+        "tests/test_multiview.py": {
+          "committed_content_sha256": "db8846c83f94c681c2ff05dedaa3555fad2a6d2d421afca8ce3fc8bfa3d0fd52",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "bb97c9526cb44ddf4c149d922b65467583fad86a93c56a62aff28d9e085b4360"
+        },
+        "tests/test_owner_worker.py": {
+          "committed_content_sha256": "a9bc468bb40157ddfe7303ad5c0ba78b79500a0b8ddf0d3d59a1fac993852740",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "a9bc468bb40157ddfe7303ad5c0ba78b79500a0b8ddf0d3d59a1fac993852740"
+        },
+        "tests/test_pack_mirror.py": {
+          "committed_content_sha256": "570b5b5f687fc7b6bc5d2354821bd9a24a97ebcd6447001104b2a9b9a7dd07cd",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "2d4fe8ac03406b5cdaa8ba468591b979d553ecbc75caad8e1715ffaceadbcca4"
+        },
+        "tests/test_pipeline.py": {
+          "committed_content_sha256": "c9ee25d7db34d6d65f30b6ce62e02b8b160751cb7f71477de28dffbcf5b6a3ce",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "91bce2df13e9240c633a8bd2e45343723c8d4721a6bf3e31d7a67358202c8d04"
+        },
+        "tests/test_pose_guardian.py": {
+          "committed_content_sha256": "65737024f00d1856be32b30123b63919debdced35fc2dc80c3be2abe188125ef",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ec94af725a4f9bcc7f7758a744dcd8c281356f06116df4e4f9615bf691f3f79f"
+        },
+        "tests/test_rambler.py": {
+          "committed_content_sha256": "005ed4e892a5d0a854baceba0a00edadaf63b8b38aada1015a7a0c73da163db5",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "e9d678174751227941db0957d9b8a59e10436728f15423271bf288b302de8f3d"
+        },
+        "tests/test_rectify.py": {
+          "committed_content_sha256": "57fb800bd3b56bbe72d1624d6320cea1d8ea8e42ee64541d8cf0b322d3faa200",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "dec9728c685c746e5e7de4fcbbb61ffd19efc985f5d05914db6bd73cd44adf9c"
+        },
+        "tests/test_reference_pack.py": {
+          "committed_content_sha256": "aafd2df7faed93e2cc83a3293aaa23a139f699e2957f37a75a8648e36f1dd5e4",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "0116cd6e72afdf71eae4f04eeca9e556fc6adef9dc621aa54831d92c78f79039"
+        },
+        "tests/test_repair.py": {
+          "committed_content_sha256": "db2398fdc821ee6435507a8dea7df1e5c321397ca061068c99b089d4935c58af",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "add73c2b3d5185caf2839ccb04a39c84a80f916d63bf91acd1bb4dffd7191483"
+        },
+        "tests/test_request_binding.py": {
+          "committed_content_sha256": "ae81dc1c94962e320ffdd429cf413745a9ddfa304e6876aa41b856d13d8448f3",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ae81dc1c94962e320ffdd429cf413745a9ddfa304e6876aa41b856d13d8448f3"
+        },
+        "tests/test_residency.py": {
+          "committed_content_sha256": "9e6d91cbda0c57f9f198bf0d5174b5c2c0ee947de9c7a7f3030167d9d1a88005",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "fb55dcfbde65f4f5f6875d7220fbd62042a46f478d4fcc2ad179e7eb4cd32a79"
+        },
+        "tests/test_sam_adapter.py": {
+          "committed_content_sha256": "97716dea8624b6f8e591276dbf88386c9d52883005a7b0fb5f2f3545d8ec83c7",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "529a2b89b06c3c6726293b581aefcee6fe06346203023d81e1004b49e00be7f1"
+        },
+        "tests/test_scene_layers.py": {
+          "committed_content_sha256": "831e725723a8f50995b261dfe548209f911f53263d40367d765040494a18a304",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "6b8caccaaf8e6ec0ff7604614a45ecca717aea7e2978177f309cfa787cbe35b6"
+        },
+        "tests/test_segmentation.py": {
+          "committed_content_sha256": "94f403d1fe79c336a53bf2adbc992361cdf927168a14b4148534aac677633326",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "2b6f894fbe5843daafc616e86e60dec4547fafe70832d96ce3873d2c062b4d08"
+        },
+        "tests/test_source_handbook.py": {
+          "committed_content_sha256": "cc067c307132a38072a1ecbac706f054d45c54c5f1063148bdd1dadb5a10ee97",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "1da4d3f3bd10d6d88ea11c3ce6ce5abe5cc54ae6c24236dee27cf755d91489d4"
+        },
+        "tests/test_spatial_truth.py": {
+          "committed_content_sha256": "706960324b9f0d561eaef9f478cea202c22ba1b07162d93d128724b756a7460a",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "6d454ef8356c28d3e984682582c5ef5db3c9b84100ea7108ea5741c6a3053404"
+        },
+        "tests/test_studio_quality.py": {
+          "committed_content_sha256": "ec43105bece565d15ab10a6625b1fd728d9588867d1562895c32cabb33e3e31c",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "55471298f2a93856d55f301df8c215448f74e72ec6c6cf5fb9c7718d6c39e2a0"
+        },
+        "tests/test_studio_server.py": {
+          "committed_content_sha256": "c48a141fe96d2758c32aef3554ec96dd3fd067c9fb4332df28d40361575e935a",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "2c7767fe0b28e22aa2cc201565afb7253f0aac1c460de7aa90f1e919cea52082"
+        },
+        "tests/test_surface_truth.py": {
+          "committed_content_sha256": "34782b0199b11cc39062e0ac17b6de979da36e76901a684c29e5c44a7149a9c7",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "555092a268282afeeb3b82b20dd53481ea998e2983c7d6316c0fbaa693512777"
+        },
+        "tests/test_traversal.py": {
+          "committed_content_sha256": "0496f97a4453bb9fda348a0f09fcfe543e77f2d80cb6f07b3372b2992193798c",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "d44aab9f65caeefbe0b43dfa29bbf93d40e44d0e2635e5c26b37cc786da2108d"
+        },
+        "tests/test_unclothe_3d.py": {
+          "committed_content_sha256": "85c9862adff7af6c455d54312343dd9293a373af764c40ad60352a021b09ca0e",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "bde13809d5fa48648295a200b9b0f8a146cbf1da37b70773d412d7f78982e0e2"
+        },
+        "tests/test_view_identity.py": {
+          "committed_content_sha256": "acdfd251d75cb1fc3e9162a7a89bc7b9e7cd2a6635c6e0d78d33042701933a48",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "1e778846f52be3df2e9318fd8b975524188be6b3c1eac3c887ac2dd48199d60c"
+        },
+        "tests/test_visualqa.py": {
+          "committed_content_sha256": "69da13e2531c6c7d1b69024e1a4062489f15bbed80fefa25cb27d9ed1cc5edff",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "efed9da38d26e74a607797d2411522d5c1d16d3a8c138ac3367e788ac1e662f8"
+        },
+        "tests/test_web_runtime.py": {
+          "committed_content_sha256": "9c6a1c19dc5387cab7fdae7e062236337d4cc1f6f3f419caa9d99040522f108f",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "6e9a3d43a61916e2a05954de94e6a7ebcece2fb7db6d76f7996c724dbcf6ced2"
+        },
+        "tests/test_world_biome.py": {
+          "committed_content_sha256": "f70d2b487751f8e64a397a0a148917eb73f16e85ff2ebb57c1e460e1052cd12f",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "168a684478d1dd02365ea693678c45a842a9fda41d91319e99eba0a602667ef5"
+        },
+        "tests/test_world_composition.py": {
+          "committed_content_sha256": "742e9e4d16a5787d85e37bd294d4d85a8c01ec7470699a64caea6cbd12dcb557",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ab93bc2879772e10fa0f8f29fabd2ad67015267e642919cae98522211c2ac6b9"
+        },
+        "tests/test_world_composition_jobs.py": {
+          "committed_content_sha256": "c5b26d2c6f1a24f126d3696eaf217027efddc698fa5e2aa01c1313418ae418bc",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "8ad8ff45c8d0e692bcbe326253da8f8471a7172d596cbbbc4c1bb68b4c792f8a"
+        },
+        "tests/test_world_editor.py": {
+          "committed_content_sha256": "9b41939d65dc8f2f6931f54b534b11fbb64c254652164b96de685ee944d68337",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "8d1a77b3ee7bbb7e9bedb00ebf6d919d65378b9246ca2b20a8a0b622375c0a15"
+        },
+        "tests/test_world_jobs.py": {
+          "committed_content_sha256": "b3e6f24948a8645c61427ffa714b97b960c2977c931272bc95c262b26f36613f",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "57e44d5728a605fa9e8df5299bd65aae1b233bb994aae3fb853fb3b5f0be08f2"
+        },
+        "tests/test_xray_kit.py": {
+          "committed_content_sha256": "04ab9d70c5cc4cfa303300b845f67cfe7c47b32198d7439051ccc4c3227e3883",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "392f078e3a5da63655a83edd0014eb39669c8037800eef4d78d016d3de9c8a05"
+        },
+        "viewer/runtime.js": {
+          "committed_content_sha256": "dbb48deb19d0e83aa02bd4abfbdf36c518636766a19c169a65d3a7e5ea5b854b",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b476db7d548165197dbb83574ee4d4dbbc1ddcc74b4da1ed2a4988178600e4b6"
+        },
+        "viewer/template.html": {
+          "committed_content_sha256": "626b6459f559ed953f117385995b9aa606e8f554c86647345369e7ad73d92121",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "827addd1fab4ed7bbca2894ab70b80db74bab76d8749d4684b5eda9c45444830"
+        }
+      },
+      "source_tree": "2fe77af18f34d51b069f18a529ec575a7d503388",
+      "tested_source_inputs": 238
+    },
+    {
+      "branch": "repair/completion-2026-10-28",
+      "clean_before_receipt": true,
+      "fetched_remote_commit": "d18d89e5d6decfc5260be67286be0f72efaac169",
+      "fetched_remote_tree": "1e43b91a304ae8d053c5908275de5e950397ab0e",
+      "repository": "MGR-API-MCP",
+      "source_commit": "d18d89e5d6decfc5260be67286be0f72efaac169",
+      "source_custody": {
+        "package-lock.json": {
+          "committed_content_sha256": "998b7dc1ef44c99cd877176f9497635245244052a10845066ca9a5464b95fbbb",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "998b7dc1ef44c99cd877176f9497635245244052a10845066ca9a5464b95fbbb"
+        },
+        "package.json": {
+          "committed_content_sha256": "c5dbf4478974dbf49b1c22f5a3e406affe40f7cb96779d7311cf3ade021b5e89",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "c5dbf4478974dbf49b1c22f5a3e406affe40f7cb96779d7311cf3ade021b5e89"
+        },
+        "scripts/mock-boundary-deps.mjs": {
+          "committed_content_sha256": "de32cd7f76528f3152b3dbda92bcb8d3949e88be0bc3dfc4db0566f3355a3684",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "de32cd7f76528f3152b3dbda92bcb8d3949e88be0bc3dfc4db0566f3355a3684"
+        },
+        "scripts/owner-department-client.ts": {
+          "committed_content_sha256": "3b394e79d279c23666b9d766c0f6f0fb59b6dc00800689bbe677b04366319416",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "3b394e79d279c23666b9d766c0f6f0fb59b6dc00800689bbe677b04366319416"
+        },
+        "scripts/probe-sdk.mjs": {
+          "committed_content_sha256": "b3303f66061ebafbfbd46da1ef6bdf444f6bc1fb4b9a8043c6b981c76a747a55",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b3303f66061ebafbfbd46da1ef6bdf444f6bc1fb4b9a8043c6b981c76a747a55"
+        },
+        "scripts/prove-departments-local.ts": {
+          "committed_content_sha256": "2c3fc500cfef427535236edbec72f4bd2772da3e4c448861429d10a0802fd24a",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "4df7513781fed95e93075f1d172da92f4a3d1481e77e285be64c8edc8e2c2cb0"
+        },
+        "scripts/prove-tevin-departments-local.ts": {
+          "committed_content_sha256": "8a85676439e1c5b7465f7488d6c6d5448519f2ef499fc036fb476fcad9bf4931",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "87c4a86ae741b09aa3fe84dfe57148dd5fe0699a8ddceffac37a69c88295c986"
+        },
+        "scripts/prove-tevin-omnidev-local.ts": {
+          "committed_content_sha256": "61e0b8aa329cd06e7831923aa473bc9c05966294dcc036f423700ef70da13b07",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "85ab949d853630eb3094aedc31e8c31a72ed8394afaee6ae40e5013ad54734b0"
+        },
+        "scripts/render-chatgpt-plugin.mjs": {
+          "committed_content_sha256": "b470263e690345990d658932530761e0c7c2153013be305bbffd8200fb003155",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b470263e690345990d658932530761e0c7c2153013be305bbffd8200fb003155"
+        },
+        "scripts/restore_sources.py": {
+          "committed_content_sha256": "7faba44a3888045e802411aa105e6ca93e27f12011542462eaa98b752ac1c49c",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "7faba44a3888045e802411aa105e6ca93e27f12011542462eaa98b752ac1c49c"
+        },
+        "scripts/start-tevin-departments-local.ts": {
+          "committed_content_sha256": "d95b5065104da89dd17912230f77d15f806e214c2b29e3107c8fcc594fe84d23",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "9071d25f84880bcaa5a3ba505d12e6ee12f4839a955cf36d5d99cf04810a750e"
+        },
+        "scripts/test_verifier.py": {
+          "committed_content_sha256": "616be7147eebe9cd0b6ed04dd7c251ead4c055a74aef48b73d693c8cd0aec871",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "616be7147eebe9cd0b6ed04dd7c251ead4c055a74aef48b73d693c8cd0aec871"
+        },
+        "scripts/tevin-owner-startup.ts": {
+          "committed_content_sha256": "ac1d4540197bfa1c9ccc2d8c6fe130fd6db5c2c13c95d1b66cc031e4a053ad9b",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "c608a8b0c7c5690ba2b6de41cb673ed6d2433d8d6561a96270d1ea8a6a20fa72"
+        },
+        "scripts/verify-chatgpt-plugin.mjs": {
+          "committed_content_sha256": "ac3d490381597cb53465aee0fbc79c6094069b82197360118a422021b34fdc48",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ac3d490381597cb53465aee0fbc79c6094069b82197360118a422021b34fdc48"
+        },
+        "scripts/verify-forge-creator-mcp.py": {
+          "committed_content_sha256": "eba484aa5d2c24ca48c715b6fe7c5ac8dcf94c0813a673b93a243716026701a4",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "eba484aa5d2c24ca48c715b6fe7c5ac8dcf94c0813a673b93a243716026701a4"
+        },
+        "scripts/verify-forge-native-mcp-protocol.mjs": {
+          "committed_content_sha256": "126571c9c8fa7267c74c272f573598157b2f65f1ca36e1d408450b12c1268632",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "126571c9c8fa7267c74c272f573598157b2f65f1ca36e1d408450b12c1268632"
+        },
+        "scripts/verify-forge-studio-client.mjs": {
+          "committed_content_sha256": "e462267e65f44f403a49cad9bff34970ef664c39e355f3cd6b59ca7d134cc77e",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "e462267e65f44f403a49cad9bff34970ef664c39e355f3cd6b59ca7d134cc77e"
+        },
+        "scripts/verify-forge-studio.py": {
+          "committed_content_sha256": "cba80526677ba68896f0157f485586f188a7c2a8bef94b16d356aaabe0878929",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "cba80526677ba68896f0157f485586f188a7c2a8bef94b16d356aaabe0878929"
+        },
+        "scripts/verify-mcp-client.mjs": {
+          "committed_content_sha256": "4bd11537c557095251bc966c4651d29be5408caec1c9f3a7fb31b238e3674350",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "4bd11537c557095251bc966c4651d29be5408caec1c9f3a7fb31b238e3674350"
+        },
+        "scripts/verify-oauth-provider.mjs": {
+          "committed_content_sha256": "d3c0bfcbd29b6e89e9ba7ff456d73dc0743ca04fec79ece6feb19a562732d635",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "d3c0bfcbd29b6e89e9ba7ff456d73dc0743ca04fec79ece6feb19a562732d635"
+        },
+        "scripts/verify-openai-remote-mcp.mjs": {
+          "committed_content_sha256": "26ef286fd024123eb2ef7abdf9e70abe1569e4e998bbed4d63b0681959ae4e5f",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "26ef286fd024123eb2ef7abdf9e70abe1569e4e998bbed4d63b0681959ae4e5f"
+        },
+        "scripts/verify-remote-boundary.mjs": {
+          "committed_content_sha256": "306c571374758f9d0bd8de38923358de308ca4e4a16fab6bbe882467807cede4",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "306c571374758f9d0bd8de38923358de308ca4e4a16fab6bbe882467807cede4"
+        },
+        "scripts/verify_repository.py": {
+          "committed_content_sha256": "47de8278bd410141af1a886f2b10510abb7e0b92431f60d52e57016ba4402b52",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "47de8278bd410141af1a886f2b10510abb7e0b92431f60d52e57016ba4402b52"
+        },
+        "src/action-policy.ts": {
+          "committed_content_sha256": "052071f57237b716255921ea5838a8de96b3033d9ae8ee0d6f36893d9ba5bce6",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "c235bc6ea13d74a738437a9441e69af1c0dfa49ca99e07b2887211ed73bb6bcf"
+        },
+        "src/action-sentinel.ts": {
+          "committed_content_sha256": "9dc7f0cadbed4c36d7f657ff92ca226543d55d741c120de520da0b15b308801d",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "a7859a8d1fd55f488e0eb142532878aace4fc3f84c27366c7fe8e80a91ef0b05"
+        },
+        "src/authz.ts": {
+          "committed_content_sha256": "562bad13981f5198d576ef7b9bba7b5596c05896798dfcd523b49c3497242c1e",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "a87809a7b1984a9db3026b2c0f7f6a37effb11d6a92cb68c33d7b0608724880c"
+        },
+        "src/brain-controller.ts": {
+          "committed_content_sha256": "5cae9c71993f1b278f5b91b4ed457f63bbb3983828bad4ee536f2f423fd3836c",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "15113cdd22eb708213d370ba0eb25aab195a1ab400fb2b2a063ef3adb35b7c5f"
+        },
+        "src/contracts.ts": {
+          "committed_content_sha256": "7a9e2931d7302f2cf3bebca7bc3c0b20bc49e63d56630750c4b89716392efa3a",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "7a3f4832e9959fb2c22a60ae01cda6efd873d700514759949044c75cff7165de"
+        },
+        "src/creation-client.ts": {
+          "committed_content_sha256": "273328fe9673ad622b57aa8a4f355b692406b826b512cc718fdd6850e0f9a4f0",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "f8e72d84b3bce50b4efc8c0d866e3c06385273dc162b9cf123716d7e53f9f869"
+        },
+        "src/creation-mcp-tools.ts": {
+          "committed_content_sha256": "91171e9f5f24b8cc0951507672ca480e8cc88bd43275ab338ce4cbf7543f39d2",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "5d2650b1323b5e969da5c92d97e12c90088bda8010754957eb0a27a29c8ce2a8"
+        },
+        "src/decision.ts": {
+          "committed_content_sha256": "0a951022e306e3010d52a254603e292e2cad5471dbe7918f63cfb6c5a19bbaf3",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "9c18a1b00a93c668c6febcfb647f1d663a4e86ec76b277899d9a4727b1d4b347"
+        },
+        "src/department-gateway.ts": {
+          "committed_content_sha256": "37b50ab6ecedc029ebbbbc20894a5fa4846628750f9d683c01d42666dc79c744",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "1c9e0df193f47915507618e862d9739021d19874ef95297cde63e18ca896e709"
+        },
+        "src/ecosystem-catalog-data.ts": {
+          "committed_content_sha256": "c0b03066c1295fb35edc79d95ee2276c8e8100735035f865b345c7e359a8049f",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "c0b03066c1295fb35edc79d95ee2276c8e8100735035f865b345c7e359a8049f"
+        },
+        "src/ecosystem-catalog.ts": {
+          "committed_content_sha256": "08e789c4f353142fc14d8b804dea9df8114b45e8722273d031e0cde1f0ae7f97",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "f03ceb343e177e125f7f240ac3e896f5f4ca581acc53edada7ebfdce5d087bc5"
+        },
+        "src/engine.ts": {
+          "committed_content_sha256": "31e800a1872ac61ab07a7f72f447d97c8e1021770a878531ff7c38f5a121eb9c",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b041419084d4f3e673345444a2af4c6d0473b42b4b62a4b88c8ba4c207bb3653"
+        },
+        "src/forge-catalog-client.ts": {
+          "committed_content_sha256": "ec50621777ae65d0217147bda54c137d17097a60809b6f5c0d72a1b3cb34827b",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ca68f8816b638de8d22618c17b6ba53de8cd9f987b4ed9ca92c01d76f91870c8"
+        },
+        "src/forge-department.ts": {
+          "committed_content_sha256": "7f7a8b2731156022617978ca79282bb61cee6ee3d6763c1ec78a269a042a8509",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "7f7a8b2731156022617978ca79282bb61cee6ee3d6763c1ec78a269a042a8509"
+        },
+        "src/forge-glb.ts": {
+          "committed_content_sha256": "11f79c67e3a3cfb2bc43f579d0930d68c25e9376a164b7ced0e812c84c423edb",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "11f79c67e3a3cfb2bc43f579d0930d68c25e9376a164b7ced0e812c84c423edb"
+        },
+        "src/forge-inputs.ts": {
+          "committed_content_sha256": "e4dafa7556a2ea49f833875522055cc9bc4b114ffd48b1a5c7dcae2c3efa84df",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "e4dafa7556a2ea49f833875522055cc9bc4b114ffd48b1a5c7dcae2c3efa84df"
+        },
+        "src/forge-mcp-tools.ts": {
+          "committed_content_sha256": "e179c5a44a2d52d2e4ae2b6552ab582a661d63b7f9bfc04721f9ab8b8618f6b7",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "e179c5a44a2d52d2e4ae2b6552ab582a661d63b7f9bfc04721f9ab8b8618f6b7"
+        },
+        "src/http-auth.ts": {
+          "committed_content_sha256": "d6e96e2beee3f77f86c3909176c9e435cb336f4ebf99e55f074f503d9b42ecb0",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "2542c037615a32aba99a903e347c77b4cbe6afd7b466a7d433bb02b8f844f39e"
+        },
+        "src/http-server.ts": {
+          "committed_content_sha256": "6962468b79bd0204158fed8aeb43a9db5b9e88adf945be29286367ca61cf3acd",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "76d9ae9e7a49ecdc345397a99a709d3d7fab4e8615a67da7163bfc5f046205fb"
+        },
+        "src/http-shutdown.ts": {
+          "committed_content_sha256": "44dfbe4670391f189b9932883a5c50f8025c06d553aad4eebc79ea0aff88f55a",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "74dc62e18ec7b0d16febdd4d3cd8f1aadffcb92f65dae60b71530114f7dbba89"
+        },
+        "src/jwt-verifier.ts": {
+          "committed_content_sha256": "8062510c1a0a81a9ef37dc8744695fdfe51319d30e4412ac55f93b686f3bab1b",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "87d2f60fee5a4afc7642efd28117e8961a4252f833510c785bb9fa01296e96d6"
+        },
+        "src/legacy-client.ts": {
+          "committed_content_sha256": "f314801fd693f9d7e4ae26394cf88a2ba120aac9486b68b8e20fabf146025185",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "e00cb6e109c095187b153643279063a8974e511c97b91603980a7ff0c20063a9"
+        },
+        "src/legacy-dispatch.ts": {
+          "committed_content_sha256": "6d9e5013b24099f28fc8e2dc0f17926325e4de4a3f1f18db2fb680c9b71d4fea",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "87d4e4da0d60400c9602cf3091cef93bed10a88db0ea0d299834b1c3aa9bec4b"
+        },
+        "src/legacy-event-read.ts": {
+          "committed_content_sha256": "40f8b8b8aadbbd881b9e12b070b9642ab5bf77bbd4ab097d59fd2c62cb19a7e1",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "df845a4d56e77db642043970e0adea1fb5a6b982a0d37ab5cdc6c3a4fa401b57"
+        },
+        "src/legacy-mcp-tools.ts": {
+          "committed_content_sha256": "b8d27bd4df655e49f5d77d48bfde46b8a18d1bcef81aab47f4bdde21409b6957",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "3ee6af495b299bce138b46cf0e684b10a51208c8bf8300a2ee4b4a868f8135d4"
+        },
+        "src/local-department-edge.ts": {
+          "committed_content_sha256": "fe78d4648fa53eae5361bcf8b5d720139aa33aa1dee2c6941c46a5449b76315d",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "fe78d4648fa53eae5361bcf8b5d720139aa33aa1dee2c6941c46a5449b76315d"
+        },
+        "src/mcp-http.ts": {
+          "committed_content_sha256": "1c7d1e91729d6cef6972df5f86aee9e45c3f13a950d71450942996719bd25aa8",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "1c7d1e91729d6cef6972df5f86aee9e45c3f13a950d71450942996719bd25aa8"
+        },
+        "src/mcp-server.ts": {
+          "committed_content_sha256": "4fe91c140f54858b5092174f30cab6264c5e85df85921ffc75b096bcf7053485",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "4fe91c140f54858b5092174f30cab6264c5e85df85921ffc75b096bcf7053485"
+        },
+        "src/model-router.ts": {
+          "committed_content_sha256": "0e9fd6aeb12ff90a240e6e7d293798f50af9d9e9fa20a7dfd0438857d1294877",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "d4c382d5a1741c7f9ebe05ee8552b42eab13c86c2d8c59ed3f67fb53cc206d59"
+        },
+        "src/oauth-metadata.ts": {
+          "committed_content_sha256": "d0fc9418e54f2ee6c70f9d7e679767c061eed527fac8929a1215bd400629b207",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "d44e8c346930650ee192ae40a66f70509079ce4d853b93e774b82910e6314d79"
+        },
+        "src/omnidev-client.ts": {
+          "committed_content_sha256": "62265ac3b28de66c6672e642b0e3658b5962fa45a3478cde35949565dbd7bf0b",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "cc91a868eae1991022283f4cbc5fe0def2aaff1b6ff51968a0c470d222658438"
+        },
+        "src/privacy-firewall.ts": {
+          "committed_content_sha256": "d60a2c9124d588d6e04bc13cad9e8b1be5acad168da4227d78f4afe9a661e1c6",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "e3ca281372951b549049952ea03c73d8d3cc6fc69ca1f715f3f8988cfab750d9"
+        },
+        "src/repository-manuals.d.mts": {
+          "committed_content_sha256": "033626595c225a6c1339663e8f3a44fe34db52c6b12f6fdef033abdc5671b608",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "033626595c225a6c1339663e8f3a44fe34db52c6b12f6fdef033abdc5671b608"
+        },
+        "src/repository-manuals.mjs": {
+          "committed_content_sha256": "9ba196827a3d67fdd5acdea3f6fa5995752488394865829decd5b412ddf75909",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "9ba196827a3d67fdd5acdea3f6fa5995752488394865829decd5b412ddf75909"
+        },
+        "src/repository-read-tools.ts": {
+          "committed_content_sha256": "60398582f67f97db1285c4e0e5ab3dde5820813f3f9a2a8cd90d8598328706a2",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "60398582f67f97db1285c4e0e5ab3dde5820813f3f9a2a8cd90d8598328706a2"
+        },
+        "src/security-research.ts": {
+          "committed_content_sha256": "6ef61252274a101486b3ff45e04d52b733c82d60670bbb8407d2a720f62b9beb",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "a5e62c53ed3a94ff14c0d12f3c37c7fb3941156f9c674f6793e7fd0c28e615f3"
+        },
+        "src/security.ts": {
+          "committed_content_sha256": "e3905cd1553f9de7d2b5ca7eebcdd8b6cae353a36ce620a82f87896c21381f88",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b08e0e6901fa188fc85492b6da8e6072a104937e89124fcd556d464984203245"
+        },
+        "src/state.ts": {
+          "committed_content_sha256": "aa69496076303849e2a4d9e20bc852e6c74f373c074c8503b8fa12141f44405f",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "03889a5e3b783d57a111ecc4c8c4683d1c45f65eacb54e1e401943c710c605aa"
+        },
+        "src/voice-fabric.ts": {
+          "committed_content_sha256": "d5bf7600cbf35f98ed50e6db5d2635b0ebb51040e6e365e318ecd64f35aee2b1",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "de86d1a8e344782c29f4e827f57a45c5aec31eb44c8b1bf7613b8e4165ea75ec"
+        },
+        "test/action-sentinel.test.ts": {
+          "committed_content_sha256": "d30a19aa1d15fe3fceedfc827821248b850dc939fc4d2ac6c2c8938999710398",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "bc330b00390749875f0034cfbe4a0e8503cb66858088b6a9116b562360280ebb"
+        },
+        "test/contracts.test.ts": {
+          "committed_content_sha256": "cdd6c46566c6d95ca76934bd06308f1875269e5d7ade67ab9640c08fd20c25ab",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "700f6a516ead9b10c62d241772e1003917c6d33ca74902cbed61ecba6142912c"
+        },
+        "test/creation-mcp-tools.test.ts": {
+          "committed_content_sha256": "7e506044a3468dd5eaf847cc4137c37ec4341645b83e9396302d41e4d706929b",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ae25f1b93ad44a3e1a84db8679af82e7108ac92ffcee137f59f468373fa3b4fb"
+        },
+        "test/department-context.test.ts": {
+          "committed_content_sha256": "90f1f2675bcdf9520c0050f9c97383c68ae206c914ed5976de295d2d154b22cd",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "90f1f2675bcdf9520c0050f9c97383c68ae206c914ed5976de295d2d154b22cd"
+        },
+        "test/department-gateway.test.ts": {
+          "committed_content_sha256": "e86e9fbc8c5254ea56ea48f34de7b065358378cfdc1e52eb576e8d69882349ac",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "21ed10580d8ea61cb9c7582a0c20fee2e81e859f2cc2e5748eec9577dadff7a1"
+        },
+        "test/department-receipt-binding.test.ts": {
+          "committed_content_sha256": "10602276cfd6130572fe0eb68329e040c8d33bc0ed42a573d78778d9610cf616",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "9e088dd661182a30a762239d946e2c9cbdf24c817de32bc27d6615207b7a184b"
+        },
+        "test/department-resume.test.ts": {
+          "committed_content_sha256": "15de03a4bd1a9fdfad991927983f4e062ff6b7ea785fd42b2fd5970321d60862",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "15de03a4bd1a9fdfad991927983f4e062ff6b7ea785fd42b2fd5970321d60862"
+        },
+        "test/ecosystem-catalog.test.ts": {
+          "committed_content_sha256": "5fc6a45c72ce9c452cc3cde1b068f6365a30d592a6bf28649c1ed2660ae8155b",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b44df5d6a77285e2d6f0cba7b53abf44a4cbfd1038f6835569b8975523f438fa"
+        },
+        "test/ecosystem-mcp-integration.test.ts": {
+          "committed_content_sha256": "65f222ec6eb6d01c0f0b0eb0004d61a4fefedab02e461549985fb2f5864c5b8b",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "40bda6621bc36fe2c7dae533ed51a09079abf8eb878a598542511c825996ae1b"
+        },
+        "test/edge-shutdown.test.ts": {
+          "committed_content_sha256": "847b3e06326deca4ae364d0e7a889f5464bfbea36188d8ee6a7bbfdfac0a4155",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "3eae39ff25877b4af4e8a8b4af1d282e4a45e00bf3a2bd062fa5d85b8e577338"
+        },
+        "test/edge-tcp-loopback.test.ts": {
+          "committed_content_sha256": "b3fce3c595b1e43d2c23a56988a1a31ad5d40268d83cc124de2232b43946b900",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "0746b8ddafe815940c90c87cfe0a28ea84233c1deac8d2704ae2fc91e563388e"
+        },
+        "test/engine.test.ts": {
+          "committed_content_sha256": "c397e1ce1478f75cb051795cce3b5bb04a48090e3261313ae3763670dfa13314",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "56f12b0e4314501d8870f9e67ea7e2a0f7ad79986775864d4d514451c183944e"
+        },
+        "test/fixtures/forge-glb.ts": {
+          "committed_content_sha256": "a491e64f81f4c00d7f26bab0938f92dc48ad2ba39452cfa96664130f60c9038f",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "a491e64f81f4c00d7f26bab0938f92dc48ad2ba39452cfa96664130f60c9038f"
+        },
+        "test/forge-artifact-transfer.test.ts": {
+          "committed_content_sha256": "d5716539ca59d35e830916007903733ceab9b10c0ddcb9ae28cd027191f26813",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "3ee2b490ad188c2c877259c68d4ef8654cbdce67057a755cbbfa0bba1bf29f92"
+        },
+        "test/forge-authority-lifecycle.test.ts": {
+          "committed_content_sha256": "fc1e42666fa9271b3aee543512b5930c20bccd46d3cfe6609cf69fc8942f25f5",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b185a13b9363af126730887c0028a0112b881e4f34ff7bc5ae6c1fa33a4f44f3"
+        },
+        "test/forge-biome.test.ts": {
+          "committed_content_sha256": "2407159dfd0f82e4e399317a7096f2eb98c99b148562ecbccf86101e633fc366",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "07cbac26a5ca0c2e2c88ea150a8bad6c5e4c9f00e2e45192246c7e1ec27c5b86"
+        },
+        "test/forge-catalog.test.ts": {
+          "committed_content_sha256": "2dd6a0ae86c7c6787f9eb73983f6136c9bed5e0fbe8ae6d32ac54c8a9211358d",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "0c3d8143c56e8a10f649a7a4a96914eadbb0f4ed8e7ca2a1315af13a1212fc6a"
+        },
+        "test/forge-creator-plugin.test.ts": {
+          "committed_content_sha256": "e65c3bd1e6a6a49820798a0767ed44d87cedfd1a307d521f8cb28a5128ed95af",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "6ac8256ac1942371adae8c172460a33a2e4ec930bafd7a49e5d7b75748a83572"
+        },
+        "test/forge-creature.test.ts": {
+          "committed_content_sha256": "a7fa0803de425a88485e2fc18757a8d0f6728d0a767338e57f4c3a928e819c08",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "107d966a97ad212fb8b61242aa5ca46497117823879204beab176ef09b67d59a"
+        },
+        "test/forge-department.test.ts": {
+          "committed_content_sha256": "cae2450f678d07abc8c8cb7adf736384932d15d7351dc8dc566a01fd760590d1",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "cae2450f678d07abc8c8cb7adf736384932d15d7351dc8dc566a01fd760590d1"
+        },
+        "test/forge-glb-boundary.test.ts": {
+          "committed_content_sha256": "7102c98cebf3716db9eb91b22a11a88fe11ac8bd5459c7ca96269b9ad3aaf600",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "7102c98cebf3716db9eb91b22a11a88fe11ac8bd5459c7ca96269b9ad3aaf600"
+        },
+        "test/forge-history.test.ts": {
+          "committed_content_sha256": "2e85e54342691baca9384207f1519111e39cfa9fd73637e963699e4e9ab8fcee",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "2e85e54342691baca9384207f1519111e39cfa9fd73637e963699e4e9ab8fcee"
+        },
+        "test/forge-human-lipsync.test.ts": {
+          "committed_content_sha256": "b8be15dae435633cebb3893998d2799f871b1ffead473153d7a4ad308046aa13",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "942e75d61b42e3f7c5c80bea048f77796c1eb6fed90844f7df1173968a9edc3e"
+        },
+        "test/forge-request-binding.test.ts": {
+          "committed_content_sha256": "5f454df75160f3ed3c3a53e15ab1bac59428f9cc32158e966e99ac358858e321",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "5f454df75160f3ed3c3a53e15ab1bac59428f9cc32158e966e99ac358858e321"
+        },
+        "test/forge-world-composition.test.ts": {
+          "committed_content_sha256": "16833e0f8d62306120e1f5a0ea292fad2d3af7dbb2c1c7fc77d93bff6cb7ee3c",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "d2eb78d0d966cbd84bec5e58513e2b9067ba27be1e0d1a7e475076632474c6e5"
+        },
+        "test/forge-world.test.ts": {
+          "committed_content_sha256": "e72e3af2bb9e5076315a167a5852e1992a2c7becb24e0c1c65c6e649475a19ab",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "6941d68d51f5c2665a5a628fb8133044b9c9129d6c95ecb0db30b0da9dbdf624"
+        },
+        "test/http-auth.test.ts": {
+          "committed_content_sha256": "20f074acb495613379232866ccc9ce1aff155149dcdd99540b55476d8dedbe9e",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "2529fd11f7a066deaef2af475d0b819ae4438750ba90a9667d7bf7406cf75c13"
+        },
+        "test/http-shutdown.test.ts": {
+          "committed_content_sha256": "4db0f5ad9b13faa5a82654ba4f6c2cf38897d9b4f0735412d355df75767a5ee7",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "4f02623f927657bc095f6955bdca88db852d667ef7242342b8e849252d90a2f4"
+        },
+        "test/integration-original-corpus.test.ts": {
+          "committed_content_sha256": "309659c10f0e5139f48c0ab1f1f59710d8bdca9e3b3cb769b5e7cba39deb5610",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ad38fb3198a0449c378688c64fa72a6b384c042294893501ea7a8fb5057dbd5f"
+        },
+        "test/jwt-verifier.test.ts": {
+          "committed_content_sha256": "923bad6a3953437e0ebc5459e2574271d5ebd83f467333e2eb26d4b3111889e5",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "61568d3b7901f121fd299d5e42a1d079f77c21210a1f68ece4639ffb28c64b5b"
+        },
+        "test/legacy-client.test.ts": {
+          "committed_content_sha256": "9468966ab149539b8c7d2f794d9754dc9225e548dabc2ab0b7d3212a09e4485b",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "e2c9f194460f66a238c3f46ea0ac3f02a56607ef4aa06eb6043a31c75996cd97"
+        },
+        "test/legacy-dispatch.test.ts": {
+          "committed_content_sha256": "635840f37ad259018be3f971c85a4d57d6b71f2d375722c8f346d2357339c28e",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "4f91db5fdd7e2c4fc578b4b087586086fd5c4c412422cd6c9983a525a66b397b"
+        },
+        "test/legacy-event-read.test.ts": {
+          "committed_content_sha256": "e5d8f04a0a32dca08e08e09903b2a80c746107e5400e884cca6487ff96b82ef8",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "dedfa546fcbcb88f6cb377bed8bc928c2e09679468f50040a3bedb90a88f3a24"
+        },
+        "test/legacy-mcp-tools.test.ts": {
+          "committed_content_sha256": "2c5beb185b37d6903635a29cebd9fb45582dbec86a170f032e29156235b14535",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "706a6128d24816610c97be426078a6a0fd35d678c65a63a2d4e9fb79e0bed070"
+        },
+        "test/legacy-transport.test.ts": {
+          "committed_content_sha256": "bbdbe1e2e6c66ae99cd1c5afeb6b54072a0f15ed6499acdd3878ff791e9062a8",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "f0bb429044f7a86f23c303c5bed0da98bc72fad7c7dec1f60cf013a737527702"
+        },
+        "test/mcp-http.test.ts": {
+          "committed_content_sha256": "57183d8d5849466912558605dbe04b80035b54e31c0fa8cbd4e8a8a8bdfffbea",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "18392ac8359c56f43a73cd23156c9956dd0a6bf6824f5bd0f82607d9ddcd13ad"
+        },
+        "test/model-router.test.ts": {
+          "committed_content_sha256": "e7ae6d7b8b051c1792380d09664d3958cf086b08d06a534e8236f1b9d9820101",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "ef34cfeb0c6705950458c748e8aac3af4ba2b153c411ab255007a3f494fe5463"
+        },
+        "test/native-identifier-recovery.test.ts": {
+          "committed_content_sha256": "25593a345faf782c240b465521090a4eb3859f3ca3efc5620e769197225acfde",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "34b28b08d823309f44ba8f47f976a445171c0d870f72afdb6593a7fb0fd2b380"
+        },
+        "test/oauth-metadata.test.ts": {
+          "committed_content_sha256": "7aba6344459095ac0a5eaaab1daee497f00330a7922277bd5b97c7d556056460",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "c00268e3f670be1e0abded0e0574a01e512811ed541c52792ca88d0bbd5bcf0a"
+        },
+        "test/omnidev-client.test.ts": {
+          "committed_content_sha256": "9974e12b9be56be3a9f764cd6b7ebd9095afe3bc4d587ab598dc80620c1361a7",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "07265dd55ea6bbe30dd99634a5bd2723d2d165ba555cf3075d6a73d9f21b1739"
+        },
+        "test/owner-department-client.test.ts": {
+          "committed_content_sha256": "469cf5038d106d2e3b267dd312075346f3a654796d6571664d2480000983e1f4",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "469cf5038d106d2e3b267dd312075346f3a654796d6571664d2480000983e1f4"
+        },
+        "test/privacy-firewall.test.ts": {
+          "committed_content_sha256": "d4e95a0fdbcb43cdf311c979096cbbb19eb4b180d7971e830d1c6b298683ad45",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "291ae960bbae4092559c87b7e09e6ee3b6b96d3abcbca23db79f431b8b7e2ee5"
+        },
+        "test/rea-xray-plugin.test.ts": {
+          "committed_content_sha256": "2349d57858764ea9e182843fca3280d8f940c1046e13b090d395c98ead26aa1d",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "a290a5511625f242860eee94c90837d167853cfefba83a8f24d738c3e8c231df"
+        },
+        "test/repository-handbook.test.ts": {
+          "committed_content_sha256": "26db2b335decddd9ecdf9bb1d2842dfccf55033d706296e4263a3d3ac3b98f4c",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "433a85e9237d253e5668be614bb1e40620ad0753feb87b40b2d17ff1ac689104"
+        },
+        "test/repository-manual-reader.test.ts": {
+          "committed_content_sha256": "bf5ff49bb03c5630cc41693fd7aac55850437537c373a269292c905f5cdb814e",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "471df38e71f5d46902e5c1532055fc5b98f4275ca3cf9f2f88dc368e788d100b"
+        },
+        "test/repository-manual-tools.test.ts": {
+          "committed_content_sha256": "5a9b947ee015eba70d537258807846deaf67f18d426ca2c01c344a3df4d1c579",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "5a9b947ee015eba70d537258807846deaf67f18d426ca2c01c344a3df4d1c579"
+        },
+        "test/repository-read-cancellation.test.ts": {
+          "committed_content_sha256": "b679d113fe1b1914393ce542a0184e93eeb38625391dc559d3077fc6f1caeadb",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b679d113fe1b1914393ce542a0184e93eeb38625391dc559d3077fc6f1caeadb"
+        },
+        "test/repository-read-tools.test.ts": {
+          "committed_content_sha256": "eb5e9bedbfd0ba803d8e4358d7b582842f482c0f56411e533d33a796aac0f273",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "eb5e9bedbfd0ba803d8e4358d7b582842f482c0f56411e533d33a796aac0f273"
+        },
+        "test/security-boundaries.test.ts": {
+          "committed_content_sha256": "0b2fbc8edc772c17ace6918e01296218ff2a1c30ed90a50f4dcb4e51856d4091",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "98eb5f758e220f70debad24ad6559fa10eda0261cb482345574b14697d958f75"
+        },
+        "test/security-controller.test.ts": {
+          "committed_content_sha256": "74508508562ab39f78707cec1946e1ae115e8aac8b2499f0893214afd822dd0b",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "2c29a4a95ec82799ed091de20eaa8c14aef066959d04ce71d8ec58fcf24acda2"
+        },
+        "test/security-research.test.ts": {
+          "committed_content_sha256": "404c58d2b7f233fbbe4bcb8aacd8f1c68f88d4d7387ec5bba37ee000821108eb",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "91209007c4af3db6602292f1ae8b3f8f22e1bb7d9119d9014927344cf4ed45aa"
+        },
+        "test/signme-artifact.test.ts": {
+          "committed_content_sha256": "7551939a99a3cb08f296975e7cd91bad275534bcdf3a1369f15c885c7adf4583",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "01c7fc646f6cfcd087c468f84c625cdeab521e752ed3afd087304ccca3e06034"
+        },
+        "test/source-navigation-integration.test.ts": {
+          "committed_content_sha256": "5c2a61855cf0b40bbf1f06300a905686759b925e0f87fa2d37dc6c9c485f3dc7",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "5fe9bd49b037b7ea9cec0b5e342709b9ad092395c43adb9d8476de117cc3c09e"
+        },
+        "test/tevin-owner-startup.test.ts": {
+          "committed_content_sha256": "5658cef47b3b93acc556506bb07db082e18d62b6dbc52991ff7193f454e6031c",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b5dda6bbefc962618627907e8804863db3a4e297a709c7e2e40b49778833222a"
+        },
+        "test/voice-fabric.test.ts": {
+          "committed_content_sha256": "fc6e3505bccce99934bb5081ed5b4f79b96bad533fcec0f4aa5ff4f2e5bf4a05",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "a4f673ab4ecc5e8acbeb4752d4e09ab164c74bcf4ba17b8c5211fa0eb956a4a4"
+        },
+        "test/voice-profile-transport.test.ts": {
+          "committed_content_sha256": "adc40ae59763d31acd606941d413fd10b8343fc00dfbac5592371b7268b7d32f",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "adc40ae59763d31acd606941d413fd10b8343fc00dfbac5592371b7268b7d32f"
+        },
+        "tsconfig.json": {
+          "committed_content_sha256": "b4a03d898d43753392d8e40fb0b8ba0d8c47673b369d37a8cb8bee28e96b3179",
+          "same_utf8_lf_content": true,
+          "tested_working_sha256": "b4a03d898d43753392d8e40fb0b8ba0d8c47673b369d37a8cb8bee28e96b3179"
+        }
+      },
+      "source_tree": "1e43b91a304ae8d053c5908275de5e950397ab0e",
+      "tested_source_inputs": 119
+    }
+  ],
+  "schema": "mgr.forge.joined-publication-readback.v1",
+  "status": "PASS"
+}
