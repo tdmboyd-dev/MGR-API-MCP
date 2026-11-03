@@ -3,7 +3,7 @@ import * as z from "zod/v4";
 import { authorizeTool, type AuthContext } from "./authz.js";
 
 export const agentsWorkflowReadInput = z.union([
-  z.object({ runId: z.uuid() }).strict(),
+  z.object({ runId: z.uuid(), expectedWorkflowId: z.uuid().optional() }).strict(),
   z.object({ workflowId: z.uuid(), before: z.uuid().optional() }).strict(),
 ]);
 const historyPage = z.object({
@@ -111,7 +111,8 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
           return error("Workflow history unconfirmed");
         }
         text = JSON.stringify(page.data);
-      } else if ((summary && result?.view !== "summary") || result?.id !== runId || typeof result.workflowId !== "string") return error("Workflow read unconfirmed");
+      } else if ((summary && result?.view !== "summary") || result?.id !== runId || typeof result.workflowId !== "string" ||
+          (input.expectedWorkflowId !== undefined && result.workflowId !== input.expectedWorkflowId)) return error("Workflow read unconfirmed");
       return { content: [{ type: "text" as const, text }] };
     } catch {
       return error("Workflow read unconfirmed");

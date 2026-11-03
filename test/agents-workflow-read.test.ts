@@ -19,7 +19,7 @@ test("Agents workflow read binds the owner, credential, response identity and si
     assert.equal(init.redirect, "error");
     return new Response(url.searchParams.has("view") ? JSON.stringify({id:runId,workflowId:"workflow",view:"summary"}) : reply, {status});
   });
-  let call!: (input: {runId:string}|{workflowId:string}) => Promise<{isError?:boolean;content: {text:string}[]}>;
+  let call!: (input: {runId:string;expectedWorkflowId?:string}|{workflowId:string}) => Promise<{isError?:boolean;content: {text:string}[]}>;
   const server = { registerTool(name:string, _definition:unknown, handler:typeof call) {
     assert.equal(name,"mgr_agents_workflow_read");
     call = handler;
@@ -30,6 +30,9 @@ test("Agents workflow read binds the owner, credential, response identity and si
   assert.equal(send.mock.callCount(),0);
   auth.actorId="owner";
   assert.equal((await call({runId})).content[0]?.text,reply);
+  assert.equal((await call({runId,expectedWorkflowId:workflowId})).isError,true);
+  reply=JSON.stringify({id:runId,workflowId});
+  assert.equal((await call({runId,expectedWorkflowId:workflowId})).content[0]?.text,reply);
   reply=JSON.stringify({id:"different",workflowId:"workflow"});
   assert.equal((await call({runId})).isError,true);
   reply="x".repeat(12_001);

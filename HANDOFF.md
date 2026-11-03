@@ -719,3 +719,7 @@ The shared Agents catalog entry now cites the owning handoff at ebae3d7a265742c5
 ## Agents workflow page integrity
 
 Agents workflow history now rejects a short page that claims a continuation, and rejects a cursor on the final page. The actual Agents route emits twenty rows when more remain. The shared regression refused an incomplete continuing page, accepted a short final page and preserved the complete continuation. The authenticated local Tevin journey verified normal paging and saved-run readback with a controlled Agents responder.
+
+## Workflow identity in exact run reads
+
+Agents run lookups now carry the workflow ID from history through the shared MCP read. The shared service checks that ID against the saved result before returning detail or summary. Tevin keeps its receiving check. The authenticated local qualification verified the original run and refused a different workflow binding with a controlled upstream. Hosted acceptance remains open.
