@@ -570,3 +570,7 @@ An owner-authorized guide that moved now returns a bounded unavailable outcome a
 ## Agents workflow recovery catalog evidence
 
 The shared Agents catalog entry now cites the owning handoff at ebae3d7a265742c580a80e8d360174e49e90fd73 for embedded PostgreSQL restore and shared readback of the original workflow run and receipts. Earlier source and approval pins remain separate. Tevin verified the new evidence and hosted acceptance boundary through the authenticated local catalog.
+
+## Agents workflow page integrity
+
+Agents workflow history now rejects a short page that claims a continuation, and rejects a cursor on the final page. The actual Agents route emits twenty rows when more remain. The shared regression refused an incomplete continuing page, accepted a short final page and preserved the complete continuation. The authenticated local Tevin journey verified normal paging and saved-run readback with a controlled Agents responder.

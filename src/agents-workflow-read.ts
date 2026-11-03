@@ -106,7 +106,7 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
         const page = historyPage.safeParse(result);
         if (!page.success || page.data.runs.some(run => run.workflowId !== input.workflowId || run.id === input.before) ||
             new Set(page.data.runs.map(run => run.id)).size !== page.data.runs.length ||
-            (page.data.hasMore ? !page.data.nextCursor || page.data.nextCursor === input.before ||
+            (page.data.hasMore ? page.data.runs.length !== 20 || !page.data.nextCursor || page.data.nextCursor === input.before ||
               page.data.nextCursor !== page.data.runs.at(-1)?.id : page.data.nextCursor !== undefined)) {
           return error("Workflow history unconfirmed");
         }

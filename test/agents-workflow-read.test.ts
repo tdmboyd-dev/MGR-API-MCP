@@ -36,6 +36,8 @@ test("Agents workflow read binds the owner, credential, response identity and si
   assert.equal(JSON.parse((await call({runId})).content[0]?.text??"{}").view,"summary");
   history=true;
   reply=JSON.stringify({runs:[{id:runId,workflowId}],hasMore:true,nextCursor:runId});
+  assert.equal((await call({workflowId})).isError,true);
+  reply=JSON.stringify({runs:[{id:runId,workflowId}],hasMore:false});
   assert.equal((await call({workflowId})).content[0]?.text,reply);
   const fullPage = Array.from({length:20}, (_,index)=>({
     id:`22222222-2222-4222-8222-${String(index).padStart(12,"0")}`,workflowId,
