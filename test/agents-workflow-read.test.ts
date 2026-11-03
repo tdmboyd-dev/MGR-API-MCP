@@ -37,6 +37,16 @@ test("Agents workflow read binds the owner, credential, response identity and si
   history=true;
   reply=JSON.stringify({runs:[{id:runId,workflowId}],hasMore:true,nextCursor:runId});
   assert.equal((await call({workflowId})).content[0]?.text,reply);
+  const fullPage = Array.from({length:20}, (_,index)=>({
+    id:`22222222-2222-4222-8222-${String(index).padStart(12,"0")}`,workflowId,
+    status:"completed",outcomeState:"recorded",startedAt:"2026-11-03T00:00:00.000Z",
+    completedAt:"2026-11-03T00:00:01.000Z",stepResults:"fixture-private-output",
+  }));
+  reply=JSON.stringify({runs:fullPage,hasMore:true,nextCursor:fullPage.at(-1)?.id});
+  const page=JSON.parse((await call({workflowId})).content[0]?.text??"{}");
+  assert.equal(page.runs.length,20);
+  assert.equal(page.runs.some((row:object)=>"stepResults" in row),false);
+  assert.equal(page.nextCursor,fullPage.at(-1)?.id);
   reply=JSON.stringify({runs:[{id:runId,workflowId:runId}],hasMore:false});
   assert.equal((await call({workflowId})).isError,true);
 });

@@ -1,5 +1,7 @@
 ## MGR Agents workflow read transport
 
+Workflow history now returns only validated summary fields and the continuation, even if the upstream includes extra fields. The focused test covers a full 20-row page.
+
 The owner workflow reader accepts either an exact run ID or a workflow ID with an optional history cursor. It checks that returned rows belong to the requested workflow and that the continuation advances. The authenticated Tevin edge test covered both history pages with a controlled upstream.
 
 If full detail exceeds 12,000 bytes, the owner-bound reader requests the same run with view=summary. It rechecks scope and identity and requires the summary marker. A controlled upstream test passed. Hosted readback remains open.

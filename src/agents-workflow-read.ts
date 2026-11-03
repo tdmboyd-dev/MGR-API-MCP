@@ -7,7 +7,13 @@ export const agentsWorkflowReadInput = z.union([
   z.object({ workflowId: z.uuid(), before: z.uuid().optional() }).strict(),
 ]);
 const historyPage = z.object({
-  runs: z.array(z.object({ id: z.uuid(), workflowId: z.uuid() })).max(20),
+  runs: z.array(z.object({
+    id: z.uuid(), workflowId: z.uuid(), scheduleId: z.uuid().nullable().optional(),
+    status: z.enum(["pending", "running", "completed", "failed", "cancelled"]).optional(),
+    outcomeState: z.enum(["unconfirmed", "recorded"]).optional(),
+    startedAt: z.iso.datetime({ offset: true }).nullable().optional(),
+    completedAt: z.iso.datetime({ offset: true }).nullable().optional(),
+  })).max(20),
   hasMore: z.boolean(),
   nextCursor: z.uuid().optional(),
 });
@@ -95,6 +101,7 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
               page.data.nextCursor !== page.data.runs.at(-1)?.id : page.data.nextCursor !== undefined)) {
           return error("Workflow history unconfirmed");
         }
+        text = JSON.stringify(page.data);
       } else if ((summary && result?.view !== "summary") || result?.id !== runId || typeof result.workflowId !== "string") return error("Workflow read unconfirmed");
       return { content: [{ type: "text" as const, text }] };
     } catch {
