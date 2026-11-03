@@ -129,3 +129,18 @@ test('NUL-delimited Git records retain Markdown paths containing a line break',t
  assert.ok(entry);
  assert.equal((f.reader.read('tool',{document:entry.id,expectedCommit:index.source.commit}) as any).text,'# Manual with a Git-only path');
 });
+
+test('manual index compares added, modified and removed paths against a verified prior inventory',t=>{
+ const f=fixture(t,'# Original');
+ writeFileSync(join(f.root,'Old.md'),'Old manual');
+ f.git('add','.');f.git('commit','-m','Record old inventory');
+ const previous=(f.reader.read('tool') as any).source;
+ writeFileSync(join(f.root,'README.md'),'# Revised');
+ writeFileSync(join(f.root,'New.md'),'New manual');
+ f.git('rm','Old.md');
+ f.git('add','.');f.git('commit','-m','Change manuals');
+ const result=f.reader.read('tool',{previous}) as any;
+ assert.deepEqual(result.comparison,{status:'compared',previousCommit:previous.commit,counts:{added:1,modified:1,removed:1},paths:{added:['New.md'],modified:['README.md'],removed:['Old.md']}});
+ assert.equal((f.reader.read('tool',{previous:{...previous,indexSha256:'0'.repeat(64)}}) as any).comparison.status,'unavailable');
+ assert.throws(()=>f.reader.read('tool',{startLine:2,expectedCommit:result.source.commit,previous}),/manual-comparison-invalid/);
+});

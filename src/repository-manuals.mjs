@@ -24,6 +24,28 @@ function isOperatingDocument(path){
   !normalized.startsWith('docs/recovery/collaborator-checkpoints-')&&
   !normalized.split('/').some(part=>part.startsWith('.')||['node_modules','vendor','research','evidence'].includes(part));
 }
+const inventory=(root,commit)=>git(root,'ls-tree','-r','-z',commit).split('\0').filter(Boolean).map(line=>{const match=/^100(?:644|755) blob ([a-f0-9]{40})\t([\s\S]+)$/.exec(line);return match?{blob:match[1],path:match[2]}:null;}).filter(row=>row&&isOperatingDocument(row.path));
+const fingerprint=rows=>sha(JSON.stringify(rows.map(({path,blob})=>[path,blob])));
+function compareInventory(root,commit,previous,rows){
+ let before;
+ try{
+  const resolved=git(root,'rev-parse','--verify',previous.commit+'^{commit}').trim();
+  if(resolved!==previous.commit)return {status:'unavailable',previousCommit:previous.commit};
+  git(root,'merge-base','--is-ancestor',previous.commit,commit);
+  before=inventory(root,previous.commit);
+ }catch{return {status:'unavailable',previousCommit:previous.commit};}
+ if(fingerprint(before)!==previous.indexSha256)return {status:'unavailable',previousCommit:previous.commit};
+ const old=new Map(before.map(({path,blob})=>[path,blob]));
+ const added=[],modified=[];
+ for(const {path,blob} of rows){
+  if(!old.has(path))added.push(path);
+  else if(old.get(path)!==blob)modified.push(path);
+  old.delete(path);
+ }
+ const removed=[...old.keys()];
+ return {status:'compared',previousCommit:previous.commit,counts:{added:added.length,modified:modified.length,removed:removed.length},
+  paths:{added:added.slice(0,10),modified:modified.slice(0,10),removed:removed.slice(0,10)}};
+}
 export function createRepositoryManuals(roots,{allowUnavailable=false}={}){
  const entries=[],identities=new Map(),unavailable=[];
  for(const [id,path] of Object.entries(roots)){
@@ -40,24 +62,29 @@ export function createRepositoryManuals(roots,{allowUnavailable=false}={}){
  }
  const enrolled=Object.freeze(Object.fromEntries(entries));
  const current=id=>{if(!Object.hasOwn(enrolled,id)||realpathSync(enrolled[id])!==enrolled[id])throw Error('manual-project-unavailable');const expected=identities.get(id),actual=lstatSync(enrolled[id],{bigint:true});if(actual.isSymbolicLink()||actual.dev!==expected.dev||actual.ino!==expected.ino)throw Error('manual-project-unavailable');return enrolled[id];};
- return Object.freeze({projects:Object.freeze(Object.keys(enrolled)),unavailable:Object.freeze(unavailable),project(id){return {id,root:current(id)};},read(id,{document='index',startLine=1,expectedCommit}={}){
+ return Object.freeze({projects:Object.freeze(Object.keys(enrolled)),unavailable:Object.freeze(unavailable),project(id){return {id,root:current(id)};},read(id,{document='index',startLine=1,expectedCommit,previous}={}){
   const root=current(id);if(!Number.isSafeInteger(startLine)||startLine<1||startLine>999999)throw Error('manual-page-invalid');
+  if(previous!==undefined&&(document!=='index'||startLine!==1||!previous||typeof previous.commit!=='string'||!/^[a-f0-9]{40}$/.test(previous.commit)||typeof previous.indexSha256!=='string'||!/^[a-f0-9]{64}$/.test(previous.indexSha256)))throw Error('manual-comparison-invalid');
   if(startLine>1&&!expectedCommit)throw Error('manual-continuation-commit-required');
   const commit=rootCommit(root);if(expectedCommit&&expectedCommit!==commit)throw Error('manual-source-changed');
   // Owner-authorized committed Markdown only. No working/private-runtime files, arbitrary path,
   // submodule traversal, symlink targets, shell, source execution or network.
-  const rows=git(root,'ls-tree','-r','-z',commit).split('\0').filter(Boolean).map(line=>{const match=/^100(?:644|755) blob ([a-f0-9]{40})\t([\s\S]+)$/.exec(line);return match?{blob:match[1],path:match[2]}:null;}).filter(row=>row&&isOperatingDocument(row.path));
+  const rows=inventory(root,commit);
   let result;
   if(document==='index'){
    if(startLine>rows.length+1)throw Error('manual-page-invalid');
    // Hash the full eligible path/blob inventory in Git tree order, before paging.
-   const indexSha256=sha(JSON.stringify(rows.map(({path,blob})=>[path,blob])));
+   const indexSha256=fingerprint(rows);
+   const comparison=previous?compareInventory(root,commit,previous,rows):undefined;
    rows.sort((a,b)=>a.path.localeCompare(b.path,'en')||(a.path<b.path?-1:a.path>b.path?1:0));
    const documents=rows.slice(startLine-1,startLine+19).map(row=>({id:docId(row.path),path:row.path,gitBlob:row.blob}));
-   result={project:id,kind:'manual-index',source:{commit,indexSha256},documents,totalDocuments:rows.length,startLine,nextStartLine:null};
+   result={project:id,kind:'manual-index',source:{commit,indexSha256},documents,totalDocuments:rows.length,startLine,nextStartLine:null,...(comparison?{comparison}:{})};
    while(true){
     result.nextStartLine=startLine+documents.length<=rows.length?startLine+documents.length:null;
     if(responseBytes(result)<=MANUAL_RESPONSE_BYTES)break;
+    const samples=comparison?.paths;
+    const longest=samples&&[samples.added,samples.modified,samples.removed].sort((a,b)=>b.length-a.length)[0];
+    if(longest?.length){longest.pop();continue;}
     if(documents.length<=1)throw Error('manual-index-entry-exceeds-page-bound');
     documents.pop();
    }

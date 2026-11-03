@@ -1,4 +1,9 @@
 
+## Manual path comparison
+
+An authorized first index request can supply a prior commit and inventory SHA-256 in previous. The reader compares only a locally available ancestor with a matching inventory hash. It returns exact counts of added, modified and removed eligible paths, with up to ten path samples per category and fewer as needed to fit the existing response limit. An unavailable baseline leaves the current index readable. Tevin still needs to pass its saved baseline into this request.
+
+
 ## Manual inventory fingerprint
 
 The shared reader returns an index SHA-256 over eligible committed document paths and Git blobs. An unrelated code commit can change the commit pin while leaving the manual fingerprint unchanged. Tevin stores the fingerprint in its index receipt when the shared reader supplies it. Continuations still require the exact commit. The shared Git regression and authenticated local Forge receipt check passed. The reader includes committed Markdown paths containing line breaks in the inventory and can reopen them by document ID. A Git tree fixture verified the path, changed fingerprint, and readable bytes. Remote change watching and per-document revision comparison remain open.
