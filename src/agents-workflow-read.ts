@@ -52,12 +52,17 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
       } else {
         url.searchParams.set("runId", input.runId);
       }
+      const notFound = Symbol("workflow-not-found");
       const read = async () => {
         const response = await fetch(url, {
           headers: { authorization: `Bearer ${options.token}` },
           redirect: "error",
           signal: AbortSignal.timeout(10_000),
         });
+        if (response.status === 404) {
+          await response.body?.cancel();
+          return notFound;
+        }
         if (!response.ok || !response.body) {
           await response.body?.cancel();
           throw new Error("Workflow run unavailable");
@@ -89,11 +94,14 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
         text = await read();
       }
       if (text === null) return error("Workflow result exceeds read limit");
-      const result = JSON.parse(text);
       authorizeTool(options.auth, options.resourceAudience, ["tools:read", "workflows:read"]);
       if (options.auth.actorId !== options.owner.actorId || options.auth.tenantId !== options.owner.tenantId) {
         return error("Workflow read denied");
       }
+      if (text === notFound) return {
+        content: [{type:"text" as const,text:JSON.stringify({readOutcome:"unavailable",...input})}],
+      };
+      const result = JSON.parse(text);
       if ("workflowId" in input) {
         const page = historyPage.safeParse(result);
         if (!page.success || page.data.runs.some(run => run.workflowId !== input.workflowId) ||

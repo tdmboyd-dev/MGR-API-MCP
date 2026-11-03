@@ -1,5 +1,7 @@
 ## MGR Agents workflow read transport
 
+A workflow read returning HTTP 404 now produces a bounded unavailable result tied to the original request. The response omits the upstream error body and distinguishes unavailable from an empty authorized history.
+
 Workflow history now returns only validated summary fields and the continuation, even if the upstream includes extra fields. The focused test covers a full 20-row page.
 
 The owner workflow reader accepts either an exact run ID or a workflow ID with an optional history cursor. It checks that returned rows belong to the requested workflow and that the continuation advances. The authenticated Tevin edge test covered both history pages with a controlled upstream.

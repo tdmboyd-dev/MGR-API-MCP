@@ -10,14 +10,14 @@ test("Agents workflow read binds the owner, credential, response identity and si
   const auth = { actorId: "foreign", tenantId: "tenant", audience: "edge",
     scopes: ["tools:read", "workflows:read"], expiresAt: Date.now() + 60_000 };
   const workflowId = "33333333-3333-4333-8333-333333333333";
-  let history = false;
+  let history = false, status = 200;
   let reply = JSON.stringify({ id: runId, workflowId: "workflow" });
   const send = t.mock.method(globalThis, "fetch", async (url: URL, init: RequestInit) => {
     if(history) assert.equal(url.href, origin + "/api/workflows/run?workflowId=" + workflowId);
     else assert.equal(url.href, origin + "/api/workflows/run?runId=" + runId + (url.searchParams.has("view") ? "&view=summary" : ""));
     assert.equal(new Headers(init.headers).get("authorization"), "Bearer " + token);
     assert.equal(init.redirect, "error");
-    return new Response(url.searchParams.has("view") ? JSON.stringify({id:runId,workflowId:"workflow",view:"summary"}) : reply);
+    return new Response(url.searchParams.has("view") ? JSON.stringify({id:runId,workflowId:"workflow",view:"summary"}) : reply, {status});
   });
   let call!: (input: {runId:string}|{workflowId:string}) => Promise<{isError?:boolean;content: {text:string}[]}>;
   const server = { registerTool(name:string, _definition:unknown, handler:typeof call) {
@@ -49,4 +49,7 @@ test("Agents workflow read binds the owner, credential, response identity and si
   assert.equal(page.nextCursor,fullPage.at(-1)?.id);
   reply=JSON.stringify({runs:[{id:runId,workflowId:runId}],hasMore:false});
   assert.equal((await call({workflowId})).isError,true);
+  status=404;
+  reply="private upstream error";
+  assert.deepEqual(JSON.parse((await call({workflowId})).content[0]?.text??"{}"),{readOutcome:"unavailable",workflowId});
 });
