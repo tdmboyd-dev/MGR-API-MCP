@@ -562,3 +562,7 @@ The shared catalog now carries Create Loco, Creation OS, Tevin workflow and owni
 ## Revision-pinned catalog reads
 
 Catalog reads can carry the expected catalog revision from discovery into a filtered read. The authenticated local owner HTTP and MCP check verified the matching Legacy read and a stale revision returning HTTP 409. Unpinned callers retain the original behavior. This binds catalog evidence across requests and grants no operation authority.
+
+## Moved operating guide recovery
+
+An owner-authorized guide that moved now returns a bounded unavailable outcome and a request for the current manual index. Tevin records an unconfirmed receipt and leaves the index read to the caller. The actual local Git and authenticated edge regression renamed a guide and found it through that recovery request. Pinned continuations still require the original revision.
