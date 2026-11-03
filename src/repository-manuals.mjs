@@ -26,15 +26,19 @@ function isOperatingDocument(path){
 }
 const inventory=(root,commit)=>git(root,'ls-tree','-r','-z',commit).split('\0').filter(Boolean).map(line=>{const match=/^100(?:644|755) blob ([a-f0-9]{40})\t([\s\S]+)$/.exec(line);return match?{blob:match[1],path:match[2]}:null;}).filter(row=>row&&isOperatingDocument(row.path));
 const fingerprint=rows=>sha(JSON.stringify(rows.map(({path,blob})=>[path,blob])));
-function compareInventory(root,commit,previous,rows){
+function verifiedPreviousInventory(root,commit,previous){
  let before;
  try{
   const resolved=git(root,'rev-parse','--verify',previous.commit+'^{commit}').trim();
-  if(resolved!==previous.commit)return {status:'unavailable',previousCommit:previous.commit};
+  if(resolved!==previous.commit)return;
   git(root,'merge-base','--is-ancestor',previous.commit,commit);
   before=inventory(root,previous.commit);
- }catch{return {status:'unavailable',previousCommit:previous.commit};}
- if(fingerprint(before)!==previous.indexSha256)return {status:'unavailable',previousCommit:previous.commit};
+ }catch{return;}
+ if(fingerprint(before)===previous.indexSha256)return before;
+}
+function compareInventory(root,commit,previous,rows){
+ const before=verifiedPreviousInventory(root,commit,previous);
+ if(!before)return {status:'unavailable',previousCommit:previous.commit};
  const old=new Map(before.map(({path,blob})=>[path,blob]));
  const added=[],modified=[];
  for(const {path,blob} of rows){
@@ -64,7 +68,7 @@ export function createRepositoryManuals(roots,{allowUnavailable=false}={}){
  const current=id=>{if(!Object.hasOwn(enrolled,id)||realpathSync(enrolled[id])!==enrolled[id])throw Error('manual-project-unavailable');const expected=identities.get(id),actual=lstatSync(enrolled[id],{bigint:true});if(actual.isSymbolicLink()||actual.dev!==expected.dev||actual.ino!==expected.ino)throw Error('manual-project-unavailable');return enrolled[id];};
  return Object.freeze({projects:Object.freeze(Object.keys(enrolled)),unavailable:Object.freeze(unavailable),project(id){return {id,root:current(id)};},read(id,{document='index',startLine=1,expectedCommit,previous}={}){
   const root=current(id);if(!Number.isSafeInteger(startLine)||startLine<1||startLine>999999)throw Error('manual-page-invalid');
-  if(previous!==undefined&&(document!=='index'||startLine!==1||!previous||typeof previous.commit!=='string'||!/^[a-f0-9]{40}$/.test(previous.commit)||typeof previous.indexSha256!=='string'||!/^[a-f0-9]{64}$/.test(previous.indexSha256)))throw Error('manual-comparison-invalid');
+  if(previous!==undefined&&(startLine!==1||!previous||typeof previous.commit!=='string'||!/^[a-f0-9]{40}$/.test(previous.commit)||typeof previous.indexSha256!=='string'||!/^[a-f0-9]{64}$/.test(previous.indexSha256)))throw Error('manual-comparison-invalid');
   if(startLine>1&&!expectedCommit)throw Error('manual-continuation-commit-required');
   const commit=rootCommit(root);if(expectedCommit&&expectedCommit!==commit)throw Error('manual-source-changed');
   // Owner-authorized committed Markdown only. No working/private-runtime files, arbitrary path,
@@ -97,6 +101,12 @@ export function createRepositoryManuals(roots,{allowUnavailable=false}={}){
    const lines=text.split(/\r?\n/);if(lines.at(-1)==='')lines.pop();if(startLine>lines.length+1)throw Error('manual-page-invalid');
    const selected=[];let bytes=0;for(const line of lines.slice(startLine-1,startLine+59)){const n=Buffer.byteLength(line)+1;if(bytes+n>6500)break;selected.push(line);bytes+=n;}if(!selected.length&&startLine<=lines.length)throw Error('manual-line-exceeds-page-bound');
    result={project:id,kind:'manual-page',document,source:{commit,path:row.path,gitBlob:row.blob,sha256:sha(text)},startLine,endLine:0,totalLines:lines.length,text:'',nextStartLine:null};
+   if(previous){
+    const before=verifiedPreviousInventory(root,commit,previous);
+    const previousBlob=before?.find(entry=>entry.path===row.path)?.blob;
+    result.comparison={status:!before?'unavailable':!previousBlob?'added':previousBlob===row.blob?'unchanged':'modified',
+     previousCommit:previous.commit,...(previousBlob?{previousGitBlob:previousBlob}:{})};
+   }
    while(true){
     result.endLine=startLine+selected.length-1;
     result.text=selected.join('\n');

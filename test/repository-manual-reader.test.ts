@@ -147,3 +147,17 @@ test('manual index compares added, modified and removed paths against a verified
  assert.equal((f.reader.read('tool',{previous:{...previous,indexSha256:'0'.repeat(64)}}) as any).comparison.status,'unavailable');
  assert.throws(()=>f.reader.read('tool',{startLine:2,expectedCommit:result.source.commit,previous}),/manual-comparison-invalid/);
 });
+test('first document page compares its pinned blob against a verified prior inventory',t=>{
+ const f=fixture(t,'# Original manual\n'),document=f.index.documents[0].id,previous=f.index.source;
+ writeFileSync(join(f.root,'app.txt'),'unrelated change');
+ f.git('add','.');f.git('commit','-m','Unrelated source change');
+ const unchanged=f.reader.read('tool',{document,previous}) as any;
+ assert.notEqual(unchanged.source.commit,previous.commit);
+ assert.equal(unchanged.comparison.status,'unchanged');
+ writeFileSync(join(f.root,'README.md'),'# Revised manual\n');
+ f.git('add','.');f.git('commit','-m','Change manual');
+ const modified=f.reader.read('tool',{document,previous}) as any;
+ assert.equal(modified.comparison.status,'modified');
+ assert.equal(modified.comparison.previousGitBlob,unchanged.source.gitBlob);
+ assert.equal((f.reader.read('tool',{document,previous:{...previous,indexSha256:'0'.repeat(64)}}) as any).comparison.status,'unavailable');
+});

@@ -55,7 +55,7 @@ export class RepositoryReadGateway {
     const guard=()=>{this.options.assertCurrent();authorizeTool(auth,audience,['tools:read','repositories:read']);const b=manuals.bindings.find(b=>b.project===args.project&&b.actorId===auth.actorId&&b.tenantId===auth.tenantId);if(!b||manuals.project(args.project).root!==b.root)throw Error('Manual binding unavailable');return JSON.stringify([auth.actorId,auth.tenantId,b.root]);};
     try{
      const principal=guard();
-     if(args.previous&&(args.document!=='index'||args.startLine!==1))throw Error('Manual comparison requires the first index page');
+     if(args.previous&&args.startLine!==1)throw Error('Manual comparison requires the first page');
      if(args.startLine>1&&!args.expectedCommit)throw Error('Manual continuation requires its original commit');
      let result:unknown;
      try{result=await manuals.read(args.project,args);}catch(error){
