@@ -49,6 +49,8 @@ test("Agents workflow read binds the owner, credential, response identity and si
   assert.equal(page.nextCursor,fullPage.at(-1)?.id);
   reply=JSON.stringify({runs:[{id:runId,workflowId:runId}],hasMore:false});
   assert.equal((await call({workflowId})).isError,true);
+  reply=JSON.stringify({runs:[{id:runId,workflowId},{id:runId,workflowId}],hasMore:false});
+  assert.equal((await call({workflowId})).isError,true);
   status=404;
   reply="private upstream error";
   assert.deepEqual(JSON.parse((await call({workflowId})).content[0]?.text??"{}"),{readOutcome:"unavailable",workflowId});

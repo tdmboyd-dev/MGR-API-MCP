@@ -1,5 +1,7 @@
 ## MGR Agents workflow read transport
 
+The Agents workflow history adapter now refuses repeated run IDs within one page and refuses a page containing the input cursor as a result. This prevents malformed upstream pages from being presented as verified history. The focused duplicate-page regression and TypeScript check passed. Hosted and everyday Tevin acceptance remain open.
+
 A workflow read returning HTTP 404 now produces a bounded unavailable result tied to the original request. The response omits the upstream error body and distinguishes unavailable from an empty authorized history.
 
 Workflow history now returns only validated summary fields and the continuation, even if the upstream includes extra fields. The focused test covers a full 20-row page.

@@ -1,4 +1,6 @@
 
+
+The Agents workflow history adapter now refuses repeated run IDs within one page and refuses a page containing the input cursor as a result. This prevents malformed upstream pages from being presented as verified history. The focused duplicate-page regression and TypeScript check passed. Hosted and everyday Tevin acceptance remain open.
 ## Manual path comparison
 
 An authorized first index request can supply a prior commit and inventory SHA-256 in previous. The reader compares only a locally available ancestor with a matching inventory hash. It returns exact counts of added, modified and removed eligible paths, with up to ten path samples per category and fewer as needed to fit the existing response limit. An unavailable baseline leaves the current index readable. The wire-budget regression added 21 long committed paths. It verified the exact count, fewer path samples to fit the response, and complete index pagination with no duplicates. Tevin passes its saved baseline as of 163e797b7d3da77c3db2f1ab3bc5b6dfde8bda79. The authenticated integration confirmed current manual reads remain available after switching to divergent history.
