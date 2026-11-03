@@ -1,4 +1,9 @@
 
+## Native Creation cancellation through the shared gateway
+
+The gateway verifies the original request and current authority before issuing one cancellation call for a queued or running Markdown job. A previously cancelled job is read without another mutation. The local native service confirmed queued cancellation and replay for regular and dot identifiers. Type checking and 18 focused gateway tests passed. Tevin owner-route and desktop cancellation acceptance remain open.
+
+
 ## Creation download uses the verified response
 
 The Markdown download path reads job metadata and fetches the artifact once. The bytes returned to Tevin come from that verified response. The gateway regression counted one job lookup and one download. Type checking, 22 focused gateway tests, and Tevin’s isolated TCP restart and corruption test passed.

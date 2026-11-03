@@ -174,7 +174,26 @@ export class DepartmentGateway {
     const sha256=digest(fetched.bytes);if(expected.sha256!==sha256||expected.bytes!==fetched.bytes.length)throw Error("Artifact integrity mismatch");
     return {requestId:c.requestId,sha256,bytes:fetched.bytes.length,mediaType:fetched.mediaType,contentBase64:fetched.bytes.toString("base64")};
   }
-  async cancel(command:DepartmentCommand){const c=departmentCommand.parse(command);if(c.operation==="omnidev.job.verify"){if(!this.omni)throw Error("Omni engineering service not configured");return {...await this.omni.cancel(c.requestId,c.input),operation:c.operation};}if(c.operation!=="voice.speech")throw Error("Only pending speech supports cancellation at this edge");return this.verifyVoice(c,await this.request("voice",`/v1/reign/speech/${encodeURIComponent(c.requestId)}/cancel`,{sessionId:c.input.sessionId,turnId:c.input.turnId}));}
+  async cancel(command:DepartmentCommand,preDispatch?:()=>void){
+    const c=departmentCommand.parse(command);
+    if(c.operation==="creation.document.render"){
+      preDispatch?.();
+      const current=await this.status(c);
+      preDispatch?.();
+      if(current.status!=="QUEUED"&&current.status!=="RUNNING")return current;
+      const result=dotSegment(c.requestId)
+        ?await this.request("creation","/v1/creation/jobs/control",{requestId:c.requestId,action:"cancel"})
+        :await this.request("creation",`/v1/creation/jobs/${encodeURIComponent(c.requestId)}/cancel`,{});
+      if(result.status!=="CANCELLED")throw Error("Creation cancellation unconfirmed");
+      return this.verifyCreation(c,result);
+    }
+    if(c.operation==="omnidev.job.verify"){
+      if(!this.omni)throw Error("Omni engineering service not configured");
+      return {...await this.omni.cancel(c.requestId,c.input),operation:c.operation};
+    }
+    if(c.operation!=="voice.speech")throw Error("Department operation does not support native cancellation");
+    return this.verifyVoice(c,await this.request("voice",`/v1/reign/speech/${encodeURIComponent(c.requestId)}/cancel`,{sessionId:c.input.sessionId,turnId:c.input.turnId}));
+  }
 }
 export interface DepartmentToolOptions {auth:AuthContext;resourceAudience:string;gateway:DepartmentGateway}
 class DepartmentAuthorityExpired extends Error {}
@@ -203,7 +222,7 @@ export function registerDepartmentTools(server:McpServer,options:DepartmentToolO
   });
   for(const method of ["prepare","execute","status","artifact","cancel","resume"] as const){
     server.registerTool(`mgr_department_${method}`,{description:`${method} a bounded department operation. Identity is credential-bound. No signing, sending, arbitrary code or paid providers.`,inputSchema:departmentCommand},async input=>{
-      try{const write=method==="execute"||method==="cancel"||method==="resume",current=departmentPublicationFence(options,write);current();const result=method==="execute"||method==="resume"?await options.gateway[method](input,current):await options.gateway[method](input);current();const text=JSON.stringify(result);current();return {content:[{type:"text",text}]};}
+      try{const write=method==="execute"||method==="cancel"||method==="resume",current=departmentPublicationFence(options,write);current();const result=method==="execute"||method==="resume"||method==="cancel"?await options.gateway[method](input,current):await options.gateway[method](input);current();const text=JSON.stringify(result);current();return {content:[{type:"text",text}]};}
       catch(error){return {isError:true,content:[{type:"text",text:JSON.stringify({error:error instanceof DepartmentAuthorityExpired?'Department authorization expired; reconcile the original request':'Department outcome unconfirmed; reconcile the original request',state:"unconfirmed"})}]};}
     });
   }
