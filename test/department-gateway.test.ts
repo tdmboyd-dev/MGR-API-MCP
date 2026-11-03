@@ -30,6 +30,10 @@ test("creation acceptance independently downloads and hashes actual artifact byt
   return Response.json({requestId:"request-1",inputDigest:expectedCreationDigest,status:"SUCCEEDED",artifacts:[{id:"artifact-1",sha256:wrong?"0".repeat(64):createHash("sha256").update(bytes).digest("hex"),bytes:bytes.length}]});
  }});
  assert.equal((await gateway.execute(command)).readbackVerified,true);assert.equal(calls,2);
+ const before=calls;
+ const artifact=await gateway.artifact(command);
+ assert.equal(artifact.contentBase64,bytes.toString("base64"));
+ assert.equal(calls-before,2,"one job lookup and one artifact download");
  wrong=true;await assert.rejects(gateway.execute(command),/readback mismatch/);
 });
 test("Creation refuses contradictory references or uncompleted artifacts before download",async()=>{

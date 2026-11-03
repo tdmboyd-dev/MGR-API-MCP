@@ -1,4 +1,9 @@
 
+## Creation download uses the verified response
+
+The Markdown download path reads job metadata and fetches the artifact once. The bytes returned to Tevin come from that verified response. The gateway regression counted one job lookup and one download. Type checking, 22 focused gateway tests, and Tevin’s isolated TCP restart and corruption test passed.
+
+
 ## Creation artifact reference agreement
 
 The Markdown gateway requires one artifact for a completed job and checks that any supplied artifact reference agrees with it. Artifact downloads require successful readback. Type checking, 22 gateway tests and the isolated Tevin Creation TCP restart test passed. Hosted acceptance remains open.

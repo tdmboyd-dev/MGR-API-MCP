@@ -112,18 +112,21 @@ export class DepartmentGateway {
     if(result.requestId!==c.requestId||result.sessionId!==c.input.sessionId||result.turnId!==c.input.turnId||result.profileId!==c.input.profileId||result.exactText!==true||result.textSha256!==digest(Buffer.from(c.input.text))||result.inputSha256!==digest(Buffer.from(JSON.stringify(body)))||!["queued","running","succeeded","failed","cancelled","unknown"].includes(result.status))throw Error("Voice receipt input mismatch");
     return result;
   }
-  private async verifyCreation(c:Extract<DepartmentCommand,{operation:"creation.document.render"}>,result:any){
+  private async readCreationArtifact(c:Extract<DepartmentCommand,{operation:"creation.document.render"}>,result:any){
     if(result.requestId!==c.requestId||result.inputDigest!==inputDigest(this.creationRequest(c)))throw Error("Creation request input mismatch");
-    if(result.status==="SUCCEEDED"){
-      if(!Array.isArray(result.artifacts)||result.artifacts.length!==1)throw Error("Creation artifact count mismatch");
-      const artifact=result.artifacts[0];
-      id.parse(artifact.id);
-      if(result.artifactRefs!==undefined&&(!Array.isArray(result.artifactRefs)||result.artifactRefs.length!==1||result.artifactRefs[0]!==artifact.id))
-        throw Error("Creation artifact reference mismatch");
-      const fetched=await this.request("creation",`/v1/creation/artifacts/${encodeURIComponent(artifact.id)}`,undefined,true);
-      if(digest(fetched.bytes)!==artifact.sha256||fetched.bytes.length!==artifact.bytes)throw Error("Creation artifact readback mismatch");
-    }
-    return {...result,operation:"creation.document.render",readbackVerified:result.status==="SUCCEEDED"};
+    if(result.status!=="SUCCEEDED")return null;
+    if(!Array.isArray(result.artifacts)||result.artifacts.length!==1)throw Error("Creation artifact count mismatch");
+    const artifact=result.artifacts[0];
+    id.parse(artifact.id);
+    if(result.artifactRefs!==undefined&&(!Array.isArray(result.artifactRefs)||result.artifactRefs.length!==1||result.artifactRefs[0]!==artifact.id))
+      throw Error("Creation artifact reference mismatch");
+    const fetched=await this.request("creation",`/v1/creation/artifacts/${encodeURIComponent(artifact.id)}`,undefined,true);
+    if(digest(fetched.bytes)!==artifact.sha256||fetched.bytes.length!==artifact.bytes)throw Error("Creation artifact readback mismatch");
+    return fetched;
+  }
+  private async verifyCreation(c:Extract<DepartmentCommand,{operation:"creation.document.render"}>,result:any){
+    const fetched=await this.readCreationArtifact(c,result);
+    return {...result,operation:"creation.document.render",readbackVerified:fetched!==null};
   }
   async status(command:DepartmentCommand){
     const c=departmentCommand.parse(command);
@@ -161,7 +164,9 @@ export class DepartmentGateway {
     }
     if(c.operation==="omnidev.job.verify"){if(!this.omni)throw Error("Omni engineering service not configured");return this.omni.artifact(c.requestId,c.input);}let fetched:any,expected:any;
     if(c.operation==="creation.document.render"){
-      const r=await this.verifyCreation(c,await this.creationJob(c.requestId));expected=r.readbackVerified?r.artifacts[0]:undefined;if(!expected)throw Error("Artifact unavailable");id.parse(expected.id);fetched=await this.request("creation",`/v1/creation/artifacts/${encodeURIComponent(expected.id)}`,undefined,true);
+      const artifact=await this.readCreationArtifact(c,await this.creationJob(c.requestId));
+      if(!artifact)throw Error("Artifact unavailable");
+      return {requestId:c.requestId,sha256:digest(artifact.bytes),bytes:artifact.bytes.length,mediaType:artifact.mediaType,contentBase64:artifact.bytes.toString("base64")};
     }else if(c.operation==="voice.speech"){
       const q=new URLSearchParams({sessionId:c.input.sessionId,turnId:c.input.turnId});const r=this.verifyVoice(c,await this.request("voice",`/v1/reign/speech/${encodeURIComponent(c.requestId)}?${q}`));if(r.status!=="succeeded"||!r.audio)throw Error("Audio unavailable");expected=r.audio;fetched=await this.request("voice",`/v1/reign/speech/${encodeURIComponent(c.requestId)}/audio?${q}`,undefined,true);
       if(fetched.bytes.toString("ascii",0,4)!=="RIFF"||fetched.bytes.toString("ascii",8,12)!=="WAVE")throw Error("Invalid WAV artifact");
