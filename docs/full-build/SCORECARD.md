@@ -1,3 +1,7 @@
+## Exact Legacy contact acknowledgment and readback
+
+The shared contact action now requires its POST receipt ID to match the receipt found during scoped Legacy truth and entity readback. A missing or different receipt leaves the command outcome unconfirmed. The gateway does not retry the POST. Typecheck and twelve focused transport tests passed, including missing, mismatched and exact receipts. The Legacy scenarios used injected transport responses. Live PostgreSQL owner acceptance and everyday Tevin registration remain open.
+
 ## Revision required on manual continuation
 
 The shared repository manual tool and underlying Git reader now refuse a continuation that omits the original commit. The first page remains available for discovery. If the owning checkout advances, callers must start again at the new revision. Focused tests verify the gate before the owning reader runs and advance a real local Git repository between pages. Tevin's existing continuation already carries the exact commit. These reads describe committed documentation and do not certify execution.

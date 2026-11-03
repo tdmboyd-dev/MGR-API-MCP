@@ -83,7 +83,9 @@ export class DepartmentGateway {
       if(!p.legacy)throw Error("Department legacy not configured");
       const result=await p.legacy.execute({tenantId:p.tenantId,actorId:p.actorId,correlationId:c.requestId,idempotencyKey:c.requestId},{action:"crm.create_contact",payload:{firstName:c.input.displayName,...(c.input.email?{email:c.input.email}:{})}});
       if(!result.accepted||!result.receiptId)throw Error("Legacy did not confirm persisted contact");
-      return {...await this.status(c),operation:c.operation,accepted:true,replayed:result.replayed??false,receiptId:result.receiptId};
+      const confirmed=await this.status(c);
+      if(!('receipt' in confirmed)||confirmed.receipt?.receiptId!==result.receiptId)throw Error("Legacy command receipt is not confirmed by exact readback");
+      return {...confirmed,operation:c.operation,accepted:true,replayed:result.replayed??false,receiptId:result.receiptId};
     }
     if(c.operation==="creation.document.render"){
       if(dotSegment(c.requestId)){await this.identifierLookupCapability("creation");preDispatch?.();}
