@@ -13,12 +13,13 @@ const inputs=JSON.parse(process.env.MGR_FORGE_QA_ASSET_INPUTS??'null');
 if(!inputs||!process.env.MGR_FORGE_STUDIO_URL||!process.env.MGR_FORGE_STUDIO_TOKEN)throw Error('Explicit disposable native fixture required');
 const audience='https://native-assets.local-proof.invalid/mcp';
 const kinds=inputs.uv?['reconstruction','morph','uv']:['reconstruction','morph'];
+const forge=new ForgeStudioCatalogClient({baseUrl:process.env.MGR_FORGE_STUDIO_URL,token:process.env.MGR_FORGE_STUDIO_TOKEN,timeoutMs:30000});
 const handler=createAuthorizedMgrMcpHttpHandler({resourceAudience:audience,requiredScopes:['tools:read'],
  resourceMetadataUrl:'https://native-assets.local-proof.invalid/.well-known/oauth-protected-resource',
  verifier:{async verify(value){if(!['owner','read','foreign','other-actor'].includes(value))return null;
   return {subject:value==='other-actor'?'foreign-actor':'fixture-owner',tenantId:value==='foreign'?'foreign-tenant':'fixture-tenant',
    audience,scopes:value==='read'?['tools:read']:['tools:read','tools:execute'],expiresAt:Date.now()+120000};}},
- forge:new ForgeStudioCatalogClient({baseUrl:process.env.MGR_FORGE_STUDIO_URL,token:process.env.MGR_FORGE_STUDIO_TOKEN,timeoutMs:30000}),
+ forge,
  forgeAllowedActorId:'fixture-owner',forgeAllowedTenantId:'fixture-tenant'});
 const server=createServer(async(req,res)=>{try{
  const chunks=[];let size=0;
@@ -69,7 +70,12 @@ try{
   assert.equal(delivery.body.accepted,true);const resource=delivery.result.content.find(item=>item.type==='resource');
   assert.ok(resource&&'blob' in resource.resource);const binary=Buffer.from(resource.resource.blob,'base64');
   assert.equal(createHash('sha256').update(binary).digest('hex'),created.artifactSha256);assert.equal(binary.length,created.artifactBytes);
-  if(kind==='reconstruction')reconstructionSource={glbBase64:binary.toString('base64'),expectedSha256:created.artifactSha256};
+  if(kind==='reconstruction'){
+   await assert.rejects(forge.resolveUvSource({requestId:input.requestId,expectedSha256:'f'.repeat(64)}));
+   const source=await forge.resolveUvSource({requestId:input.requestId,expectedSha256:created.artifactSha256});
+   assert.equal(source.blobBase64,binary.toString('base64'));
+   reconstructionSource={glbBase64:source.blobBase64,expectedSha256:source.sha256};
+  }
   assert.equal((await call(owner,'mgr_forge_artifact_read',{kind,jobId:created.jobId,expectedSha256:'f'.repeat(64),includeData:true})).body.accepted,false);
   cases.push({kind,requestId:input.requestId,jobId:created.jobId,sha256:created.artifactSha256,bytes:binary.length,...(kind==='uv'?{layout:status.layout}:{}),
    inputFingerprint:created.inputFingerprint,sourceBytesSha256:kind!=='reconstruction'?input.expectedSha256:

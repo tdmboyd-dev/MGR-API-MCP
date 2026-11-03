@@ -74,6 +74,7 @@ export interface ForgeCatalogClient {
   createMorph?(input:ForgeMorphInput):Promise<Record<string,unknown>>;
   morphStatus?(requestId:string):Promise<Record<string,unknown>>;
   createUv?(input:ForgeUvInput):Promise<Record<string,unknown>>;
+  resolveUvSource?(source:{requestId:string;expectedSha256:string}):Promise<ForgeArtifactProof>;
   uvStatus?(requestId:string):Promise<Record<string,unknown>>;
   search(input:ForgeCatalogSearch):Promise<Record<string,unknown>>;
   createWorld?(input:{requestId:string;edits:ForgeWorldEdits}):Promise<Record<string,unknown>>;
@@ -159,6 +160,16 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
   }
   async createUv(raw:ForgeUvInput):Promise<Record<string,unknown>>{
     return this.post('/api/uv-create',nativeAssetRequest({kind:'uv',input:forgeUvInput.parse(raw)}));
+  }
+  async resolveUvSource(source:{requestId:string;expectedSha256:string}):Promise<ForgeArtifactProof>{
+    if(!/^[a-f0-9]{64}$/.test(source.expectedSha256))throw Error('Invalid UV source digest');
+    const saved=await this.reopenSavedJob({kind:'reconstruction',requestId:source.requestId});
+    if(saved.status!=='MATERIALIZED'||saved.request_id!==source.requestId||
+       saved.asset_sha256!==source.expectedSha256||typeof saved.job_id!=='string')
+      throw Error('Saved UV source does not match approved reconstruction identity');
+    const proof=await this.readArtifact({kind:'reconstruction',jobId:saved.job_id,expectedSha256:source.expectedSha256});
+    if(proof.bytes!==saved.asset_bytes)throw Error('Saved UV source byte count changed');
+    return proof;
   }
   async uvStatus(requestId:string):Promise<Record<string,unknown>>{
     if(typeof requestId!=='string'||!/^[A-Za-z0-9_-]{12,100}$/.test(requestId))throw Error('Invalid native UV ID');
