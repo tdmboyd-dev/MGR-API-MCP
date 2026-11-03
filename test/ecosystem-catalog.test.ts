@@ -18,3 +18,16 @@ test("catalog filtering rejects unknown repositories and cannot mutate later res
   assert.equal(readEcosystemCatalog("MGR-ONE").entries.length,1);
   assert.throws(()=>readEcosystemCatalog("not-a-repo"),/Unknown ecosystem repository/);
 });
+
+test("Legacy local verification is revision-scoped and grants no runtime tools",()=>{
+  const [legacy]=readEcosystemCatalog("MGR-LEGACY").entries;
+  assert.ok(legacy && "localVerification" in legacy && legacy.localVerification);
+  const proof=legacy.localVerification;
+  assert.equal(legacy.source.defaultBranch,"main");
+  assert.notEqual(legacy.source.commit,proof.workflowSourceCommit);
+  assert.notEqual(proof.workflowSourceCommit,proof.startupSourceCommit);
+  assert.match(proof.workflowSourceCommit,/^[0-9a-f]{40}$/);
+  assert.match(proof.startupSourceCommit,/^[0-9a-f]{40}$/);
+  assert.equal(legacy.runtimeVerified,false);
+  assert.deepEqual(legacy.integration.tools,[]);
+});

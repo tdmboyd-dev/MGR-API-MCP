@@ -1,7 +1,6 @@
 // Source snapshots and current knowledge interfaces; not global execution enrollment or whole-product acceptance.
 export const ecosystemCatalogData = {
   "schemaVersion": "mgr.ecosystem.catalog.v1",
-  "catalogRevision": "e9e4eb690a1a0fe6bee275b24ddb5d0467a35d9d1c920f65d6023b67b313a3ee",
   "generatedFrom": "source-snapshot-with-2026-11-01-verified-receiving-overlay",
   "entries": [
     {
@@ -207,13 +206,21 @@ export const ecosystemCatalogData = {
         "defaultBranch": "main"
       },
       "integration": {
-        "state": "catalogued",
+        "state": "source-available/local-contact-verified",
         "tools": [],
         "blockedReasons": [
-          "No live transport or production acceptance inferred from repository source."
+          "Main adoption, permanent endpoint configuration, and production acceptance remain open."
         ]
       },
       "runtimeVerified": false,
+      "localVerification": {
+        "workflow": "Owner-approved contact creation with saved receipt and duplicate-free restart/replay",
+        "environment": "Isolated Windows PostgreSQL 16.15",
+        "workflowSourceCommit": "d30202f344e3d3de0f1e27147902af73f99268eb",
+        "startupSourceCommit": "370014701e51b792fcea1b49b22527d1440e4ccb",
+        "branch": "audit/tevin-contact-readback-20261103",
+        "startupChecks": ["Occupied port exits", "Assigned loopback port is usable", "Unauthenticated contact read returns 401"]
+      },
       "knowledgeInterface": {
         "tool": "mgr_repository_manual",
         "project": "legacy",

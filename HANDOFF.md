@@ -1,3 +1,7 @@
+## Legacy catalog evidence by source revision
+
+The shared catalog retains the Legacy main source pin and separately identifies the published local contact journey and standalone startup evidence. Tevin and other MCP clients can distinguish those checks from the still-open main adoption, permanent configuration and production acceptance. This entry exposes evidence only and grants no action.
+
 ## Explicit Legacy tenant mapping on November 3
 
 The local department edge keeps Tevin's personal owner identity for MCP authorization and can bind the contact operation to a separate Legacy tenant UUID. The binding is trusted startup configuration, not tool input. Generic Legacy tools are omitted in this mapped mode. The actual isolated PostgreSQL owner journey passed through the original scoped Legacy audit service with exactly one contact after Tevin restart and replay. The Legacy main branch lacked the entity readback endpoint during an earlier isolated attempt, which remained unconfirmed. The published Legacy audit service provides the scoped route. Deployment adoption and permanent endpoint configuration remain open.

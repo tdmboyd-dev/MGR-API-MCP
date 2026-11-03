@@ -1,13 +1,16 @@
+import { createHash } from "node:crypto";
 import type { McpServer } from "@modelcontextprotocol/server";
 import * as z from "zod/v4";
 import { ecosystemCatalogData } from "./ecosystem-catalog-data.js";
 import { authorizeTool, type AuthContext } from "./authz.js";
 
+const catalogRevision=createHash("sha256").update(JSON.stringify(ecosystemCatalogData)).digest("hex");
+
 export function readEcosystemCatalog(repoId?:string){
   const entries=ecosystemCatalogData.entries.filter(entry=>repoId===undefined || entry.repoId===repoId);
   if(repoId!==undefined && entries.length===0) throw new Error("Unknown ecosystem repository");
   // Detached response objects prevent a client from altering later discovery.
-  return structuredClone({...ecosystemCatalogData,entries});
+  return structuredClone({...ecosystemCatalogData,catalogRevision,entries});
 }
 
 export function registerEcosystemCatalogTool(server:McpServer,auth?:AuthContext,audience?:string):void{
