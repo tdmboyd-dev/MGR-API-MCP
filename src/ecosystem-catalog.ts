@@ -6,7 +6,8 @@ import { authorizeTool, type AuthContext } from "./authz.js";
 
 const catalogRevision=createHash("sha256").update(JSON.stringify(ecosystemCatalogData)).digest("hex");
 
-export function readEcosystemCatalog(repoId?:string){
+export function readEcosystemCatalog(repoId?:string,expectedRevision?:string){
+  if(expectedRevision!==undefined&&expectedRevision!==catalogRevision) throw new Error("ecosystem-catalog-revision-changed");
   const entries=ecosystemCatalogData.entries.filter(entry=>repoId===undefined || entry.repoId===repoId);
   if(repoId!==undefined && entries.length===0) throw new Error("Unknown ecosystem repository");
   // Detached response objects prevent a client from altering later discovery.
@@ -16,14 +17,14 @@ export function readEcosystemCatalog(repoId?:string){
 export function registerEcosystemCatalogTool(server:McpServer,auth?:AuthContext,audience?:string):void{
   server.registerTool("mgr_ecosystem_catalog",{
     description:"Read source-pinned full MGR product roles, enrolled knowledge interfaces and integration limits. Catalogued does not mean connected or executable. Use mgr_repository_manual only with current owner enrollment to inspect operating documents. No repository code or external provider is executed.",
-    inputSchema:z.object({repoId:z.string().min(1).optional()}).strict()
-  },async({repoId})=>{
+    inputSchema:z.object({repoId:z.string().min(1).optional(),expectedRevision:z.string().regex(/^[a-f0-9]{64}$/).optional()}).strict()
+  },async({repoId,expectedRevision})=>{
     try{
       if(auth){
         if(!audience) throw new Error("Catalog resource audience is required");
         authorizeTool(auth,audience,["tools:read"]);
       }
-      return {content:[{type:"text",text:JSON.stringify(readEcosystemCatalog(repoId))}]};
+      return {content:[{type:"text",text:JSON.stringify(readEcosystemCatalog(repoId,expectedRevision))}]};
     }catch(error){
       return {content:[{type:"text",text:JSON.stringify({error:error instanceof Error?error.message:"Catalog unavailable"})}],isError:true};
     }

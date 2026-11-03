@@ -558,3 +558,7 @@ The shared catalog now points to the current Legacy PostgreSQL contact recheck a
 ## Create Loco reconstruction evidence in the shared catalog
 
 The shared catalog now carries Create Loco, Creation OS, Tevin workflow and owning handoff revision pins for the verified one-route static reconstruction journey. Tevin loaded all 22 catalog entries over the authenticated local edge with no execution claims. Everyday registration, live model, screenshot interpretation, responsive and media reconstruction, and production acceptance remain open.
+
+## Revision-pinned catalog reads
+
+Catalog reads can carry the expected catalog revision from discovery into a filtered read. The authenticated local owner HTTP and MCP check verified the matching Legacy read and a stale revision returning HTTP 409. Unpinned callers retain the original behavior. This binds catalog evidence across requests and grants no operation authority.

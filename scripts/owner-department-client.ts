@@ -41,7 +41,7 @@ const schemas=new Map<string,z.ZodType>([
  ['code_monster_outline',z.object({project:z.string().regex(/^[a-z0-9][a-z0-9-]{0,63}$/),prefixes:z.array(z.string().min(1).max(250)).max(32),revision:z.literal('HEAD'),continuation:z.string().min(1).max(32768).optional(),symbol:z.string().max(256),limit:z.number().int().min(1).max(5),offset:z.number().int().min(0).max(999999).optional()}).strict()],
  ['code_monster_automation',z.object({project:z.string().regex(/^[a-z0-9][a-z0-9-]{0,63}$/),prefixes:z.array(z.string().min(1).max(250)).max(32),revision:z.literal('HEAD'),limit:z.number().int().min(1).max(5),offset:z.number().int().min(0).max(999999).optional()}).strict()],
  ['mgr_department_context',z.object({}).strict()],['mgr_omnidev_candidate_binding',omniBindingInput],
- ['mgr_ecosystem_catalog',z.object({repoId:z.string().min(1).max(120).optional()}).strict()]
+ ['mgr_ecosystem_catalog',z.object({repoId:z.string().min(1).max(120).optional(),expectedRevision:z.string().regex(/^[a-f0-9]{64}$/).optional()}).strict()]
 ]);
 const definitions=new Map([...schemas].map(([name,schema])=>[name,freeze({name,description:'Fixed trusted local department tool',inputSchema:{...JSON.parse(JSON.stringify(z.toJSONSchema(schema))),type:'object' as const}})]));
 
