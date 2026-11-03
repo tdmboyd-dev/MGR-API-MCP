@@ -51,9 +51,10 @@ try{
   await owner.close();clients.splice(clients.indexOf(owner),1);owner=await connect('owner');
   const status=(await call(owner,name+'_status',input)).body;
   assert.equal(status.accepted,true,JSON.stringify(status));assert.equal(status.jobId,created.jobId);assert.equal(status.artifactSha256,created.artifactSha256);assert.equal(status.creationPerformed,false);
+  if(kind==='uv')for(const receipt of [created,replay,status])assert.equal(receipt.layout,input.layout);
   const verified=(await call(owner,'mgr_forge_request_verify',{kind,input})).body;
   assert.equal(verified.accepted,true);assert.equal(verified.nativeStatus,'MATERIALIZED');assert.equal(verified.inputFingerprint,created.inputFingerprint);
-  const changed=kind==='reconstruction'?{...input,grid:input.grid+8}:kind==='uv'?{...input,padding:input.padding+1}:
+  const changed=kind==='reconstruction'?{...input,grid:input.grid+8}:kind==='uv'?{...input,layout:'triangles'}:
    {...input,morph:{...input.morph,twist_degrees:input.morph.twist_degrees+1}};
   assert.equal((await call(owner,name+'_create',changed)).body.accepted,false);
   assert.equal((await call(owner,name+'_status',changed)).body.accepted,false);
@@ -68,7 +69,7 @@ try{
   assert.ok(resource&&'blob' in resource.resource);const binary=Buffer.from(resource.resource.blob,'base64');
   assert.equal(createHash('sha256').update(binary).digest('hex'),created.artifactSha256);assert.equal(binary.length,created.artifactBytes);
   assert.equal((await call(owner,'mgr_forge_artifact_read',{kind,jobId:created.jobId,expectedSha256:'f'.repeat(64),includeData:true})).body.accepted,false);
-  cases.push({kind,requestId:input.requestId,jobId:created.jobId,sha256:created.artifactSha256,bytes:binary.length,
+  cases.push({kind,requestId:input.requestId,jobId:created.jobId,sha256:created.artifactSha256,bytes:binary.length,...(kind==='uv'?{layout:status.layout}:{}),
    inputFingerprint:created.inputFingerprint,sourceBytesSha256:kind!=='reconstruction'?input.expectedSha256:
     ['frontPngBase64','sidePngBase64'].map(key=>createHash('sha256').update(Buffer.from(input[key],'base64')).digest('hex')),
    stableReplay:true,freshSdkStatusExactInputVerified:true,changedInputCreateStatusVerifyDenied:true,

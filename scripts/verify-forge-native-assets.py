@@ -53,7 +53,7 @@ with TemporaryDirectory(prefix='mgr-native-asset-mcp-') as temporary:
             'morph':{'requestId':'mcp-native-morph-0001','glbBase64':base64.b64encode(model).decode(),
                'expectedSha256':hashlib.sha256(model).hexdigest(),'morph':{'twist_degrees':12,'taper':1.1}},
             'uv':{'requestId':'mcp-native-uv-0001','glbBase64':base64.b64encode(model).decode(),
-                  'expectedSha256':hashlib.sha256(model).hexdigest(),'atlasSize':2048,'padding':2}}
+                  'expectedSha256':hashlib.sha256(model).hexdigest(),'atlasSize':2048,'padding':2,'layout':'planar-pairs'}}
     service,studio=start_server(scratch/'world',scratch/'workspace')
     thread=threading.Thread(target=service.serve_forever,daemon=True);thread.start()
     try:
@@ -75,6 +75,10 @@ with TemporaryDirectory(prefix='mgr-native-asset-mcp-') as temporary:
             counts[case['kind']]=len(rows)
             job=studio.valid_job(case['jobId'])
             path=job/{'reconstruction':'reconstructed/hull.glb','morph':'morphed/morphed.glb','uv':'uv/uv-mapped.glb'}[case['kind']]
+            if case['kind']=='uv':
+                uv=json.loads((job/'uv/uv-receipt.json').read_text(encoding='utf8'))
+                if uv['layout']!=inputs['uv']['layout'] or case['layout']!=uv['layout']:
+                    raise RuntimeError('saved native UV layout disagrees with MCP readback')
             if hashlib.sha256(path.read_bytes()).hexdigest()!=case['sha256'] or path.stat().st_size!=case['bytes']:
                 raise RuntimeError('original stored native artifact disagrees with independent MCP bytes')
         jobs=list((scratch/'workspace/jobs').iterdir())
