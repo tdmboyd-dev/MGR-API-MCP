@@ -723,3 +723,7 @@ Agents workflow history now rejects a short page that claims a continuation, and
 ## Workflow identity in exact run reads
 
 Agents run lookups now carry the workflow ID from history through the shared MCP read. The shared service checks that ID against the saved result before returning detail or summary. Tevin keeps its receiving check. The authenticated local qualification verified the original run and refused a different workflow binding with a controlled upstream. Hosted acceptance remains open.
+
+## Agents workflow outcome integrity
+
+The shared Agents reader now rejects contradictory run status and outcome markers in history, detail and summary. Pending or running is unconfirmed. Completed, failed or cancelled may carry a recorded outcome. Older records that omit the outcome marker remain readable without inferring one. The focused adapter test and five Agents route and snapshot readback checks passed using embedded PostgreSQL and controlled dispatch.

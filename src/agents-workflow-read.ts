@@ -6,11 +6,18 @@ export const agentsWorkflowReadInput = z.union([
   z.object({ runId: z.uuid(), expectedWorkflowId: z.uuid().optional() }).strict(),
   z.object({ workflowId: z.uuid(), before: z.uuid().optional() }).strict(),
 ]);
+const runState = {
+  status: z.enum(["pending", "running", "completed", "failed", "cancelled"]).optional(),
+  outcomeState: z.enum(["unconfirmed", "recorded"]).optional(),
+};
+const consistentRunState = z.object(runState).refine(({ status, outcomeState }) =>
+  outcomeState === undefined ||
+  (status !== undefined && outcomeState === (status === "pending" || status === "running" ? "unconfirmed" : "recorded")),
+);
 const historyPage = z.object({
   runs: z.array(z.object({
     id: z.uuid(), workflowId: z.uuid(), scheduleId: z.uuid().nullable().optional(),
-    status: z.enum(["pending", "running", "completed", "failed", "cancelled"]).optional(),
-    outcomeState: z.enum(["unconfirmed", "recorded"]).optional(),
+    ...runState,
     startedAt: z.iso.datetime({ offset: true }).nullable().optional(),
     completedAt: z.iso.datetime({ offset: true }).nullable().optional(),
   })).max(20),
@@ -104,7 +111,8 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
       const result = JSON.parse(text);
       if ("workflowId" in input) {
         const page = historyPage.safeParse(result);
-        if (!page.success || page.data.runs.some(run => run.workflowId !== input.workflowId || run.id === input.before) ||
+        if (!page.success || page.data.runs.some(run => run.workflowId !== input.workflowId || run.id === input.before ||
+            !consistentRunState.safeParse(run).success) ||
             new Set(page.data.runs.map(run => run.id)).size !== page.data.runs.length ||
             (page.data.hasMore ? page.data.runs.length !== 20 || !page.data.nextCursor || page.data.nextCursor === input.before ||
               page.data.nextCursor !== page.data.runs.at(-1)?.id : page.data.nextCursor !== undefined)) {
@@ -112,6 +120,7 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
         }
         text = JSON.stringify(page.data);
       } else if ((summary && result?.view !== "summary") || result?.id !== runId || typeof result.workflowId !== "string" ||
+          !consistentRunState.safeParse(result).success ||
           (input.expectedWorkflowId !== undefined && result.workflowId !== input.expectedWorkflowId)) return error("Workflow read unconfirmed");
       return { content: [{ type: "text" as const, text }] };
     } catch {

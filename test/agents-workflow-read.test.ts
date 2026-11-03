@@ -33,6 +33,8 @@ test("Agents workflow read binds the owner, credential, response identity and si
   assert.equal((await call({runId,expectedWorkflowId:workflowId})).isError,true);
   reply=JSON.stringify({id:runId,workflowId});
   assert.equal((await call({runId,expectedWorkflowId:workflowId})).content[0]?.text,reply);
+  reply=JSON.stringify({id:runId,workflowId,status:"running",outcomeState:"recorded"});
+  assert.equal((await call({runId})).isError,true);
   reply=JSON.stringify({id:"different",workflowId:"workflow"});
   assert.equal((await call({runId})).isError,true);
   reply="x".repeat(12_001);
@@ -41,6 +43,10 @@ test("Agents workflow read binds the owner, credential, response identity and si
   reply=JSON.stringify({runs:[{id:runId,workflowId}],hasMore:true,nextCursor:runId});
   assert.equal((await call({workflowId})).isError,true);
   reply=JSON.stringify({runs:[{id:runId,workflowId}],hasMore:false});
+  assert.equal((await call({workflowId})).content[0]?.text,reply);
+  reply=JSON.stringify({runs:[{id:runId,workflowId,status:"failed",outcomeState:"unconfirmed"}],hasMore:false});
+  assert.equal((await call({workflowId})).isError,true);
+  reply=JSON.stringify({runs:[{id:runId,workflowId,status:"running",outcomeState:"unconfirmed"}],hasMore:false});
   assert.equal((await call({workflowId})).content[0]?.text,reply);
   const fullPage = Array.from({length:20}, (_,index)=>({
     id:`22222222-2222-4222-8222-${String(index).padStart(12,"0")}`,workflowId,
