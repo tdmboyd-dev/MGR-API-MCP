@@ -58,6 +58,18 @@ test('code-only revisions return bounded path evidence without source content',t
  assert.doesNotMatch(JSON.stringify(page),/privateFixture|\.private\.ts|superseded\.ts/);
 });
 
+test('build and runtime configuration changes appear without exposing configuration contents',t=>{
+ const f=fixture(t,'# Manual');
+ writeFileSync(join(f.root,'package.json'),'{"name":"private-fixture-name"}');
+ writeFileSync(join(f.root,'Dockerfile'),'FROM scratch');
+ writeFileSync(join(f.root,'.env'),'PRIVATE_FIXTURE_VALUE=fixture');
+ f.git('add','.');f.git('commit','-m','Change configuration only');
+ const page=f.reader.read('tool',{previous:f.index.source}) as any;
+ assert.equal(page.source.indexSha256,f.index.source.indexSha256);
+ assert.deepEqual(page.comparison.sourceChanges,{status:'compared',count:2,paths:['Dockerfile','package.json']});
+ assert.doesNotMatch(JSON.stringify(page),/private-fixture-name|PRIVATE_FIXTURE_VALUE|\.env/);
+});
+
 test('long committed paths paginate within the actual MCP response bound',t=>{
  const f=fixture(t,'# Manual');
  const blob=f.git('rev-parse','HEAD:README.md');

@@ -24,6 +24,13 @@ function isOperatingPath(path){
   !normalized.split('/').some(part=>part.startsWith('.')||['node_modules','vendor','research','evidence'].includes(part));
 }
 const isOperatingDocument=path=>/\.md$/i.test(path)&&isOperatingPath(path);
+function isImplementationPath(path){
+ const name=path.split('/').at(-1).toLowerCase();
+ return isOperatingPath(path)&&(
+  /\.(?:[cm]?[jt]sx?|py|rs|go|java|cs|swift|kt)$/i.test(name)||
+  /^(?:package(?:-lock)?\.json|(?:pnpm-lock|pnpm-workspace)\.yaml|yarn\.lock|bun\.lockb?|tsconfig(?:\.[\w-]+)?\.json|pyproject\.toml|uv\.lock|requirements(?:-[\w-]+)?\.txt|cargo\.(?:toml|lock)|go\.(?:mod|sum)|dockerfile(?:\.[\w-]+)?|(?:docker-)?compose(?:\.[\w-]+)?\.ya?ml)$/.test(name)
+ );
+}
 const inventory=(root,commit)=>git(root,'ls-tree','-r','-z',commit).split('\0').filter(Boolean).map(line=>{const match=/^100(?:644|755) blob ([a-f0-9]{40})\t([\s\S]+)$/.exec(line);return match?{blob:match[1],path:match[2]}:null;}).filter(row=>row&&isOperatingDocument(row.path));
 const fingerprint=rows=>sha(JSON.stringify(rows.map(({path,blob})=>[path,blob])));
 function verifiedPreviousInventory(root,commit,previous){
@@ -51,7 +58,7 @@ function compareInventory(root,commit,previous,rows){
  if(previous.commit!==commit){
   try{
    const paths=git(root,'diff','--no-ext-diff','--no-textconv','--no-renames','--name-only','-z',previous.commit,commit,'--')
-    .split('\0').filter(path=>/\.(?:[cm]?[jt]sx?|py|rs|go|java|cs|swift|kt)$/i.test(path)&&isOperatingPath(path));
+    .split('\0').filter(isImplementationPath);
    if(paths.length)sourceChanges={status:'compared',count:paths.length,paths:paths.filter(path=>Buffer.byteLength(path)<=256).slice(0,10)};
   }catch{sourceChanges={status:'unavailable'};}
  }

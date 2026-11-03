@@ -691,3 +691,7 @@ Voice catalog evidence now identifies the Tevin profile-boundary commit and the 
 ## Active source revision hints
 
 The shared manual reader now applies the same active-path exclusions to revision comparison and manual discovery. Source files under docs/history and archived collaborator checkpoints no longer appear in changed implementation path hints. The committed Git regression includes both archives and a current TypeScript change.
+
+## Build and runtime revision hints
+
+Revision comparison now includes bounded path hints for supported build and runtime configuration names such as package.json, lockfiles, tsconfig files, pyproject.toml, go.mod, Dockerfiles and Compose files. A configuration-only commit can therefore identify implementation review targets even when the manual inventory is unchanged. This returns names only and preserves historical and hidden-path exclusions. It does not interpret configuration or certify execution.
