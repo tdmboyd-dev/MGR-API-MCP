@@ -566,3 +566,7 @@ Catalog reads can carry the expected catalog revision from discovery into a filt
 ## Moved operating guide recovery
 
 An owner-authorized guide that moved now returns a bounded unavailable outcome and a request for the current manual index. Tevin records an unconfirmed receipt and leaves the index read to the caller. The actual local Git and authenticated edge regression renamed a guide and found it through that recovery request. Pinned continuations still require the original revision.
+
+## Agents workflow recovery catalog evidence
+
+The shared Agents catalog entry now cites the owning handoff at ebae3d7a265742c580a80e8d360174e49e90fd73 for embedded PostgreSQL restore and shared readback of the original workflow run and receipts. Earlier source and approval pins remain separate. Tevin verified the new evidence and hosted acceptance boundary through the authenticated local catalog.

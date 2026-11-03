@@ -46,6 +46,9 @@ test("Agents workflow evidence keeps its audit revision separate from the defaul
   assert.equal(agents.localVerification.branch,"audit/workflow-ownership-20261101");
   assert.match(agents.localVerification.workflowSourceCommit,/^[0-9a-f]{40}$/);
   assert.notEqual(agents.localVerification.workflowSourceCommit,agents.source.commit);
+  assert.ok("handoffCommit" in agents.localVerification && "remaining" in agents.localVerification);
+  assert.match(agents.localVerification.handoffCommit,/^[a-f0-9]{40}$/);
+  assert.match(agents.localVerification.remaining,/Hosted Neon/);
   assert.equal(agents.runtimeVerified,false);
   assert.deepEqual(agents.integration.tools,[]);
 });

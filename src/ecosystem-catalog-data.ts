@@ -127,7 +127,9 @@ export const ecosystemCatalogData = {
         "approvalEvidencePath": "tests/approval-claim.test.mjs",
         "recoveryGuideCommit": "0de1bc81d05db078481228ceeeac587a9ce937f2",
         "recoveryGuidePath": "docs/WORKFLOW-RUN-RECOVERY.md",
-        "scope": "Embedded PostgreSQL verifies manual run claims, history pagination and owner-scoped agent-attempt lookup with controlled authentication, simulated dispatch and seeded agent records."
+        "handoffCommit": "ebae3d7a265742c580a80e8d360174e49e90fd73",
+        "scope": "Embedded PostgreSQL verifies manual run claims, history pagination, owner-scoped agent-attempt lookup and shared API readback of the original run and linked receipts after snapshot restore. Controlled authentication and agent dispatch.",
+        "remaining": "Hosted Neon, everyday Tevin workflow access, real provider execution and production acceptance."
       },
       "knowledgeInterface": {
         "tool": "mgr_repository_manual",
