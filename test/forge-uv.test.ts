@@ -19,8 +19,8 @@ function fixture(){
    readArtifact:async()=>{calls.read++;return {blobBase64:blob.toString('base64'),sha256:sha,bytes:blob.length,mimeType:'model/gltf-binary'};}}};
  return {options,calls,native};
 }
-test('UV schema uses native exact choices and explicit normalized defaults without changing owner operation union',()=>{
- assert.equal(input.atlasSize,2048);assert.equal(input.padding,2);assert.equal(forgeDepartmentCommands.length,5);
+test('UV schema uses native exact choices and explicit normalized defaults with a typed owner operation',()=>{
+ assert.equal(input.atlasSize,2048);assert.equal(input.padding,2);assert.equal(forgeDepartmentCommands.length,6);
  assert.equal(forgeNativeVerifyInput.safeParse({kind:'uv',input}).success,true);
  for(const size of [256,512,1024,2048,4096])assert.equal(forgeUvInput.safeParse({...input,atlasSize:size}).success,true);
  for(const bad of [{atlasSize:300},{atlasSize:true},{padding:0},{padding:17},{padding:1.5},{path:'private.glb'}])assert.equal(forgeUvInput.safeParse({...input,...bad}).success,false);

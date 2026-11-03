@@ -2,8 +2,9 @@
 import * as z from 'zod/v4';
 import {createHash} from 'node:crypto';
 import {types} from 'node:util';
-import {forgeWorldInput,forgeCreatureInput,forgeBiomeInput,forgeHumanInput,forgeCompositionInput,type ForgeRequestVerification} from './forge-inputs.js';
-import type {ForgeCatalogClient} from './forge-catalog-client.js';
+import {forgeWorldInput,forgeCreatureInput,forgeBiomeInput,forgeHumanInput,forgeCompositionInput} from './forge-inputs.js';
+import {forgeUvInput,type ForgeNativeRequestVerification} from './forge-asset-inputs.js';
+import {forgeArtifactByteLimit,type ForgeCatalogClient} from './forge-catalog-client.js';
 import {inspectForgeGlb} from './forge-glb.js';
 const workspace=z.string().regex(/^[a-zA-Z0-9_.:-]{1,128}$/),requestId=z.string().regex(/^[A-Za-z0-9_-]{12,100}$/);
 export const forgeDepartmentCommands=[
@@ -12,6 +13,9 @@ export const forgeDepartmentCommands=[
  z.object({operation:z.literal('forge.biome.create'),requestId,input:forgeBiomeInput.omit({requestId:true}).extend({workspaceId:workspace}).strict()}).strict(),
  z.object({operation:z.literal('forge.human.lipsync'),requestId,input:forgeHumanInput.omit({requestId:true}).extend({workspaceId:workspace}).strict()}).strict(),
  z.object({operation:z.literal('forge.world.compose'),requestId,input:forgeCompositionInput.omit({requestId:true}).extend({workspaceId:workspace}).strict()}).strict(),
+ z.object({operation:z.literal('forge.uv.create'),requestId,input:forgeUvInput.pick({atlasSize:true,padding:true})
+  .extend({workspaceId:workspace,sourceRequestId:requestId,expectedSha256:forgeUvInput.shape.expectedSha256,
+   layout:forgeUvInput.shape.layout.unwrap()}).strict()}).strict(),
 ] as const;
 export const forgeDepartmentCommand=z.discriminatedUnion('operation',forgeDepartmentCommands);
 export type ForgeDepartmentCommand=z.infer<typeof forgeDepartmentCommand>;
@@ -26,16 +30,24 @@ export class ForgeDepartmentAdapter{
   this.#workspace=workspace.parse(config.workspaceId);this.#client=config.client;this.#tenant=tenantId;this.#actor=actorId;
   if(!config.client||['verifyRequest','readArtifact','createWorld','createCreature','createBiome','startHumanLipSync','createComposition'].some(k=>typeof (config.client as any)[k]!=='function'))throw Error('Complete native Forge adapter required');
  }
- private original(raw:ForgeDepartmentCommand):{command:ForgeDepartmentCommand;request:ForgeRequestVerification}{
+ private async original(raw:ForgeDepartmentCommand):Promise<{command:ForgeDepartmentCommand;request:ForgeNativeRequestVerification}>{
   const c=forgeDepartmentCommand.parse(raw);if(c.input.workspaceId!==this.#workspace)throw Error('Forge workspace not enrolled');
+  if(c.operation==='forge.uv.create'){
+   if(!this.#client.resolveUvSource||!this.#client.createUv)throw Error('Forge UV adapter unavailable');
+   const {sourceRequestId,expectedSha256,atlasSize,padding,layout}=c.input;
+   const source=await this.#client.resolveUvSource({requestId:sourceRequestId,expectedSha256});
+   if(source.sha256!==expectedSha256)throw Error('Forge UV source digest mismatch');
+   return {command:frozen(c),request:frozen({kind:'uv',input:forgeUvInput.parse({
+    requestId:c.requestId,glbBase64:source.blobBase64,expectedSha256,atlasSize,padding,layout})})};
+  }
   const {workspaceId,...input}=c.input;
   const kind={'forge.world.create':'world','forge.creature.create':'creature','forge.biome.create':'biome','forge.human.lipsync':'human','forge.world.compose':'composed'}[c.operation];
-  return {command:frozen(c),request:frozen({kind,input:{requestId:c.requestId,...input}} as ForgeRequestVerification)};
+  return {command:frozen(c),request:frozen({kind,input:{requestId:c.requestId,...input}} as ForgeNativeRequestVerification)};
  }
  async execute(raw:ForgeDepartmentCommand,preDispatch?:()=>void){
-  const {command:c,request:r}=this.original(raw);
+  const {command:c,request:r}=await this.original(raw);
   if(preDispatch!==undefined){if(typeof preDispatch!=='function'||types.isAsyncFunction(preDispatch)||types.isGeneratorFunction(preDispatch))throw Error('Forge synchronous dispatch fence required');const value=preDispatch();if(types.isPromise(value))Reflect.apply(Promise.prototype.then,value,[()=>{},()=>{}]);if(value!==undefined)throw Error('Forge synchronous dispatch fence required');}
-  switch(r.kind){case 'world':await this.#client.createWorld!(r.input);break;case 'creature':{const {morph,...input}=r.input;await this.#client.createCreature!(frozen({...input,...(morph===undefined?{}:{morph})}));break;}case 'biome':await this.#client.createBiome!(r.input);break;case 'human':await this.#client.startHumanLipSync!(r.input);break;case 'composed':await this.#client.createComposition!(r.input);break;}
+  switch(r.kind){case 'world':await this.#client.createWorld!(r.input);break;case 'creature':{const {morph,...input}=r.input;await this.#client.createCreature!(frozen({...input,...(morph===undefined?{}:{morph})}));break;}case 'biome':await this.#client.createBiome!(r.input);break;case 'human':await this.#client.startHumanLipSync!(r.input);break;case 'composed':await this.#client.createComposition!(r.input);break;case 'uv':await this.#client.createUv!(r.input);break;default:throw Error('Unsupported Forge department dispatch');}
   return this.inspect(c,false);
  }
  async status(raw:ForgeDepartmentCommand){return this.inspect(raw,false);}
@@ -45,7 +57,7 @@ export class ForgeDepartmentAdapter{
   return {...value,schema:'mgr.forge.department-world-context.v1',workspaceId:this.#workspace,tenantId:this.#tenant,actorId:this.#actor};
  }
  async prepare(raw:ForgeDepartmentCommand){
-  const {command:c,request:r}=this.original(raw),native=await this.#client.verifyRequest!(r);
+  const {command:c,request:r}=await this.original(raw),native=await this.#client.verifyRequest!(r);
   const base={requestId:c.requestId,operation:c.operation,workspaceId:this.#workspace,tenantId:this.#tenant,actorId:this.#actor,commandSha256:forgeDepartmentDigest(c,this.#tenant,this.#actor),nativeKind:r.kind};
   if(native.request_id!==c.requestId||native.request_kind!==r.kind)throw Error('Forge preparation identity mismatch');
   if(native.status==='NOT_FOUND'&&native.input_verified===false&&native.job_id===undefined&&native.input_fingerprint===undefined)return {...base,prepared:true,sideEffects:false,requestExists:false,nativeState:'NOT_FOUND',nativeInputVerified:false};
@@ -54,7 +66,7 @@ export class ForgeDepartmentAdapter{
  }
  async artifact(raw:ForgeDepartmentCommand){return this.inspect(raw,true);}
  private async inspect(raw:ForgeDepartmentCommand,includeData:boolean):Promise<any>{
-  const {command:c,request:r}=this.original(raw);
+  const {command:c,request:r}=await this.original(raw);
   const base={requestId:c.requestId,operation:c.operation,workspaceId:this.#workspace,tenantId:this.#tenant,actorId:this.#actor,commandSha256:forgeDepartmentDigest(c,this.#tenant,this.#actor),nativeKind:r.kind};
   const native=await this.#client.verifyRequest!(r);
   if(native.request_id!==c.requestId||native.request_kind!==r.kind)throw Error('Forge original request identity mismatch');
@@ -65,12 +77,13 @@ export class ForgeDepartmentAdapter{
    if(includeData)throw Error('Forge artifact not ready');
    const status=native.status==='RUNNING'?'RUNNING':native.status==='FAILED'?'FAILED':'UNKNOWN';return {...result,status,readbackVerified:false};
   }
-  const fields={world:['world_sha256','world_bytes'],creature:['creature_sha256','creature_bytes'],biome:['biome_sha256','biome_bytes'],human:['human_sha256','human_bytes'],composed:['combined_world_sha256','combined_bytes']}[r.kind];
+  if(r.kind==='uv'&&native.layout!==r.input.layout)throw Error('Forge UV layout mismatch');
+  const fields={world:['world_sha256','world_bytes'],creature:['creature_sha256','creature_bytes'],biome:['biome_sha256','biome_bytes'],human:['human_sha256','human_bytes'],composed:['combined_world_sha256','combined_bytes'],uv:['asset_sha256','asset_bytes'],reconstruction:['asset_sha256','asset_bytes'],morph:['asset_sha256','asset_bytes']}[r.kind];
   const expectedSha256=native[fields[0]!],expectedBytes=native[fields[1]!];
-  if(typeof expectedSha256!=='string'||!/^[a-f0-9]{64}$/.test(expectedSha256)||!Number.isSafeInteger(expectedBytes)||(expectedBytes as number)<28||(expectedBytes as number)>800000)throw Error('Forge native artifact identity unavailable');
+  if(typeof expectedSha256!=='string'||!/^[a-f0-9]{64}$/.test(expectedSha256)||!Number.isSafeInteger(expectedBytes)||(expectedBytes as number)<28||(expectedBytes as number)>forgeArtifactByteLimit(r.kind))throw Error('Forge native artifact identity unavailable');
   const artifact=await this.#client.readArtifact!({jobId:native.job_id,kind:r.kind,expectedSha256});
   if(artifact.mimeType!=='model/gltf-binary'||artifact.sha256!==expectedSha256||artifact.bytes!==expectedBytes||typeof artifact.blobBase64!=='string'||artifact.blobBase64.length>1100000)throw Error('Forge artifact does not match exact input result');
-  const bytes=Buffer.from(artifact.blobBase64,'base64');if(bytes.toString('base64')!==artifact.blobBase64||bytes.length!==expectedBytes||createHash('sha256').update(bytes).digest('hex')!==expectedSha256)throw Error('Forge artifact bytes changed');inspectForgeGlb(bytes);
+  const bytes=Buffer.from(artifact.blobBase64,'base64');if(bytes.toString('base64')!==artifact.blobBase64||bytes.length!==expectedBytes||createHash('sha256').update(bytes).digest('hex')!==expectedSha256)throw Error('Forge artifact bytes changed');inspectForgeGlb(bytes,forgeArtifactByteLimit(r.kind));
   const metadata={id:'forge-'+native.job_id,sha256:expectedSha256,bytes:expectedBytes,mediaType:'model/gltf-binary'};
   return {...result,status:'SUCCEEDED',readbackVerified:true,artifacts:[metadata],...(includeData?{sha256:expectedSha256,bytes:expectedBytes,mediaType:metadata.mediaType,contentBase64:artifact.blobBase64}:{})};
  }

@@ -1,5 +1,7 @@
 ## MGR Agents workflow read transport
 
+The shared Forge department adapter accepts forge.uv.create with an exact workspace, saved reconstruction request, SHA-256 and layout. It resolves bytes privately and runs the synchronous dispatch fence before native create. The grid-32 verifier passed prepare, fenced replay, wrong-digest refusal and artifact readback against real Forge. Fresh owner-approved dispatch through MGR-ONE and its artifact UI remain open.
+
 The Forge Studio client now resolves a UV source from a saved reconstruction request ID and approved SHA-256, checking the native job identity and independently reading the exact bytes. The real grid-32 protocol chain used the resolver, rejected a wrong digest, and matched the independent MCP download. TypeScript passed. This is an internal client method. The Tevin command and approval integration remain open.
 
 The grid-32 Forge UV chain is now verified and supersedes the earlier unverified attempt. Forge produced an 812,776-byte GLB, which exceeded the prior 800,000-byte transfer cap. The UV-only cap is now 825,000 bytes across validation, transfer, and reopen, within the existing 1,100,000-character base64 envelope. The actual MCP/Studio chain passed with source and result hashes verified. Tevin department dispatch remains open.

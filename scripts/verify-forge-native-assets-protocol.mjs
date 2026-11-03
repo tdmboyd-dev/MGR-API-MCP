@@ -6,6 +6,7 @@ import {Readable} from 'node:stream';
 import {Client,StreamableHTTPClientTransport} from '@modelcontextprotocol/client';
 import {createAuthorizedMgrMcpHttpHandler} from '../src/mcp-http.ts';
 import {ForgeStudioCatalogClient} from '../src/forge-catalog-client.ts';
+import {ForgeDepartmentAdapter} from '../src/forge-department.ts';
 import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 
@@ -54,6 +55,19 @@ try{
   const status=(await call(owner,name+'_status',input)).body;
   assert.equal(status.accepted,true,JSON.stringify(status));assert.equal(status.jobId,created.jobId);assert.equal(status.artifactSha256,created.artifactSha256);assert.equal(status.creationPerformed,false);
   if(kind==='uv')for(const receipt of [created,replay,status])assert.equal(receipt.layout,input.layout);
+  if(kind==='uv'){
+   const adapter=new ForgeDepartmentAdapter({workspaceId:'fixture-workspace',client:forge},'fixture-tenant','fixture-owner');
+   const command={operation:'forge.uv.create',requestId:input.requestId,input:{
+    workspaceId:'fixture-workspace',sourceRequestId:inputs.reconstruction.requestId,expectedSha256:input.expectedSha256,
+    atlasSize:input.atlasSize,padding:input.padding,layout:input.layout}};
+   assert.equal((await adapter.prepare(command)).nativeInputVerified,true);
+   let fenced=false;
+   const executed=await adapter.execute(command,()=>{fenced=true;});
+   assert.ok(fenced);
+   assert.equal(executed.status,'SUCCEEDED');
+   assert.equal((await adapter.artifact(command)).sha256,created.artifactSha256);
+   await assert.rejects(adapter.prepare({...command,input:{...command.input,expectedSha256:'f'.repeat(64)}}));
+  }
   const verified=(await call(owner,'mgr_forge_request_verify',{kind,input})).body;
   assert.equal(verified.accepted,true);assert.equal(verified.nativeStatus,'MATERIALIZED');assert.equal(verified.inputFingerprint,created.inputFingerprint);
   const changed=kind==='reconstruction'?{...input,grid:input.grid+8}:kind==='uv'?{...input,layout:'triangles'}:
