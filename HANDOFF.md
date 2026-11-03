@@ -727,3 +727,7 @@ Agents run lookups now carry the workflow ID from history through the shared MCP
 ## Agents workflow outcome integrity
 
 The shared Agents reader now rejects contradictory run status and outcome markers in history, detail and summary. Pending or running is unconfirmed. Completed, failed or cancelled may carry a recorded outcome. Older records that omit the outcome marker remain readable without inferring one. The focused adapter test and five Agents route and snapshot readback checks passed using embedded PostgreSQL and controlled dispatch.
+
+## Voice Studio build evidence in the shared catalog
+
+The shared Voice catalog points to owning handoff 9097011b2dc5b8c2dc610f7a36f321b0a0988086 for the clean Windows Studio build. The existing Tevin profile workflow pin remains distinct. The authenticated local catalog check verified the new build evidence and the open owner audition boundary.

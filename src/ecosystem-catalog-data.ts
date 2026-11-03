@@ -395,9 +395,9 @@ export const ecosystemCatalogData = {
       "runtimeVerified": false,
       "localVerification": {
         "workflowSourceCommit": "d02279f913c33c4df9caf7184e3c28ba666502af",
-        "handoffCommit": "0127011882ff4743a14af1df2c08943685ef1515",
-        "scope": "Authenticated personal profile discovery and old-profile refusal after restart for direct and delegated speech. Controlled speech endpoint.",
-        "remaining": "Live synthesis, owner audition, physical device and hosted acceptance."
+        "handoffCommit": "9097011b2dc5b8c2dc610f7a36f321b0a0988086",
+        "scope": "Tevin personal profile discovery and old-profile refusal after restart used a controlled speech endpoint. Separately, the Voice handoff records an isolated Windows lockfile install, three Studio TypeScript checks and a Vite web build.",
+        "remaining": "Current selected-profile live synthesis, owner audition, physical device, native installer and hosted acceptance."
       },
       "knowledgeInterface": {
         "tool": "mgr_repository_manual",
