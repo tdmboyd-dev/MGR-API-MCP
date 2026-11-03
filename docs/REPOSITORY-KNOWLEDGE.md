@@ -4,6 +4,8 @@ The existing source gateway also enrolls `code_monster_references` and `code_mon
 
 The existing shared gateway exposes `mgr_repository_manual` for trusted host-enrolled repositories. This is reusable by Tevin and other authorized clients; it is not another brain, job database or permission owner. Static ecosystem catalog entries describe potential enrollment, not global access.
 
+The reader sizes each serialized result to the same 12,000-byte limit enforced by the MCP gateway. Long paths and JSON-escaped text can shorten a page. Follow the returned continuation even when a page is shorter than its maximum document or line count. A single entry or line that cannot fit returns an explicit error.
+
 ## Host integration
 
 Import `createRepositoryManuals` from `src/repository-manuals.mjs`. Construct it with an explicit dictionary mapping project IDs to trusted local repository roots. Supply its `project` and `read` methods and the existing actor/tenant/root bindings to the repository gateway's optional `manuals` backend. ONE's `web/repository-manuals.mjs` is a thin consumer of this implementation. Clients cannot provide roots, shell commands or arbitrary filenames.

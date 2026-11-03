@@ -5,7 +5,7 @@ import {join,relative,isAbsolute} from 'node:path';
 import {tmpdir} from 'node:os';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {createRepositoryManuals} from '../src/repository-manuals.mjs';
+import {createRepositoryManuals,MANUAL_RESPONSE_BYTES} from '../src/repository-manuals.mjs';
 function fixture(t:any,bytes:Buffer|string,path='README.md'){
  const outer=mkdtempSync(join(tmpdir(),'owned-api-manual-')),root=join(outer,'tool');mkdirSync(root);
  const git=(...args:string[])=>execFileSync('git',['-C',root,...args],{stdio:'pipe',windowsHide:true}).toString().trim();
@@ -41,4 +41,41 @@ test('manual continuations require the original revision and refuse a changed ch
  f.git('add','.');f.git('commit','-m','Change owning source');
  assert.throws(()=>f.reader.read('tool',{document,startLine:61,expectedCommit:first.source.commit}),/manual-source-changed/);
  assert.notEqual((f.reader.read('tool',{document}) as typeof first).source.commit,first.source.commit);
+});
+
+test('long committed paths paginate within the actual MCP response bound',t=>{
+ const f=fixture(t,'# Manual');
+ const blob=f.git('rev-parse','HEAD:README.md');
+ for(let i=0;i<21;i++){
+  const path=Array.from({length:6},()=> 'a'.repeat(100)).join('/')+'/manual-'+i+'.md';
+  f.git('update-index','--add','--cacheinfo','100644,'+blob+','+path);
+ }
+ f.git('commit','-m','Index nested manuals without checking them out');
+ const paths:string[]=[];
+ let page=f.reader.read('tool') as any;
+ const commit=page.source.commit;
+ assert.ok(page.documents.length<20);
+ while(true){
+  assert.ok(Buffer.byteLength(JSON.stringify(page))<=MANUAL_RESPONSE_BYTES);
+  paths.push(...page.documents.map((doc:{path:string})=>doc.path));
+  if(page.nextStartLine===null)break;
+  page=f.reader.read('tool',{startLine:page.nextStartLine,expectedCommit:commit}) as any;
+ }
+ assert.equal(paths.length,22);
+ assert.equal(new Set(paths).size,22);
+});
+
+test('JSON-escaped manual lines fit the wire limit and replay without gaps',t=>{
+ const lines=Array.from({length:9},(_,i)=>String(i)+String.fromCharCode(9).repeat(1000));
+ const f=fixture(t,lines.join('\n')),document=f.index.documents[0].id;
+ let page=f.reader.read('tool',{document}) as any;
+ assert.ok(page.endLine<6);
+ const commit=page.source.commit,recovered:string[]=[];
+ while(true){
+  assert.ok(Buffer.byteLength(JSON.stringify(page))<=MANUAL_RESPONSE_BYTES);
+  recovered.push(...page.text.split('\n'));
+  if(page.nextStartLine===null)break;
+  page=f.reader.read('tool',{document,startLine:page.nextStartLine,expectedCommit:commit}) as any;
+ }
+ assert.deepEqual(recovered,lines);
 });

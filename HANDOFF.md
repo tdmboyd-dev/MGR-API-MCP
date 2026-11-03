@@ -1,3 +1,7 @@
+## Manual pagination uses the shared MCP byte limit
+
+Long committed paths and JSON-escaped lines could produce pages the MCP gateway rejected. The reader now returns shorter pages with exact commit-bound continuation. The same byte limit is enforced at both layers.
+
 ## Catalog authorization independent of Legacy
 
 Authenticated HTTP now passes the verified request identity directly to the catalog. A caller admitted to a host configured for execution scope still needs tools:read for catalog discovery, even when Legacy is disconnected. The MCP regression verifies denied and allowed responses with the same host configuration. Local owner-edge verification is separate from hosted identity-provider acceptance.

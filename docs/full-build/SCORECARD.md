@@ -1,5 +1,10 @@
 ## Explicit Legacy tenant mapping on November 3
 
+## Manual response sizing
+
+The shared manual reader now sizes the serialized response before returning it. Local Git regression coverage reconstructs all entries and lines across short pages. Remote fetching and background learning remain open.
+
+
 ## Catalog authorization independent of Legacy
 
 Authenticated HTTP now passes the verified request identity directly to the catalog. A caller admitted to a host configured for execution scope still needs tools:read for catalog discovery, even when Legacy is disconnected. The MCP regression verifies denied and allowed responses with the same host configuration. Local owner-edge verification is separate from hosted identity-provider acceptance.
