@@ -12,7 +12,8 @@ export const forgeMorphInput=z.object({requestId,glbBase64:binary,expectedSha256
  morph:forgeCreatureInput.shape.morph.unwrap()}).strict();
 export const forgeUvInput=z.object({requestId,glbBase64:binary,expectedSha256:z.string().regex(/^[a-f0-9]{64}$/),
  atlasSize:z.union([z.literal(256),z.literal(512),z.literal(1024),z.literal(2048),z.literal(4096)]).default(2048),
- padding:z.number().int().min(1).max(16).default(2)}).strict();
+ padding:z.number().int().min(1).max(16).default(2),
+ layout:z.enum(['triangles','planar-pairs']).optional()}).strict();
 export const forgeAssetVerifyInput=z.discriminatedUnion('kind',[
  z.object({kind:z.literal('reconstruction'),input:forgeReconstructionInput}).strict(),
  z.object({kind:z.literal('morph'),input:forgeMorphInput}).strict(),
@@ -29,5 +30,5 @@ export function nativeAssetRequest(value:z.infer<typeof forgeAssetVerifyInput>):
   side_png_base64:value.input.sidePngBase64,bounds:value.input.bounds,grid:value.input.grid,surface:value.input.surface};
  if(value.kind==='morph')return {request_id:value.input.requestId,glb_base64:value.input.glbBase64,expected_sha256:value.input.expectedSha256,morph:value.input.morph};
  return {request_id:value.input.requestId,glb_base64:value.input.glbBase64,expected_sha256:value.input.expectedSha256,
-  atlas_size:value.input.atlasSize,padding:value.input.padding};
+  atlas_size:value.input.atlasSize,padding:value.input.padding,...(value.input.layout===undefined?{}:{layout:value.input.layout})};
 }

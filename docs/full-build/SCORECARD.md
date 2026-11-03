@@ -1,5 +1,7 @@
 
 
+The typed Forge UV MCP adapter now carries optional planar-pairs or triangles layout through create and exact request verification. Omitted layout preserves legacy request identity. Explicit layout must match native dispatch and readback before verified artifact metadata is returned. Six targeted tests passed. The everyday Tevin department operation and live journey remain open.
+
 The Agents workflow history adapter now refuses repeated run IDs within one page and refuses a page containing the input cursor as a result. This prevents malformed upstream pages from being presented as verified history. The focused duplicate-page regression and TypeScript check passed. Hosted and everyday Tevin acceptance remain open.
 ## Manual path comparison
 

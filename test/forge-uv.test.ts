@@ -33,6 +33,18 @@ test('UV typed adapter routes defaulted exact input status verification and priv
  assert.deepEqual(sent.map(x=>x.route),['/api/uv-create','/api/uv-status','/api/request-verify','/files/'+jobId+'/uv/uv-mapped.glb']);
  assert.deepEqual(sent[0]!.body,{request_id:requestId,glb_base64:input.glbBase64,expected_sha256:sha,atlas_size:2048,padding:2});
  assert.deepEqual(sent[2]!.body,{kind:'uv',request:sent[0]!.body});
+ const planar={...input,layout:'planar-pairs' as const};
+ await client.createUv(planar);await client.verifyRequest({kind:'uv',input:planar});
+ assert.deepEqual(sent[4]!.body,{...sent[0]!.body,layout:'planar-pairs'});
+ assert.deepEqual(sent[5]!.body,{kind:'uv',request:sent[4]!.body});
+ assert.equal((await nativeAssetMcp(fixture().options,'uv',planar,true)).accepted,false);
+ const bound=fixture();
+ const create=bound.options.forge.createUv!,verify=bound.options.forge.verifyRequest!;
+ bound.options.forge.createUv=async value=>({...await create(value),layout:planar.layout});
+ bound.options.forge.verifyRequest=async value=>({...await verify(value),layout:planar.layout});
+ const result=await nativeAssetMcp(bound.options,'uv',planar,true);
+ assert.equal(result.accepted,true);
+ assert.equal(result.layout,planar.layout);
 });
 test('UV create/status accepts only original native input and independently checked GLB',async()=>{
  const f=fixture();for(const create of [true,false]){const out=await nativeAssetMcp(f.options,'uv',input,create);assert.equal(out.accepted,true);assert.equal(out.status,'NATIVE_UV_GLTF_VERIFIED');assert.equal(out.artifactSha256,sha);assert.equal(out.artifactBytesVerified,true);assert.equal(out.neuralInference,false);}

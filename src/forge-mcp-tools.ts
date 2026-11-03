@@ -508,6 +508,8 @@ export async function nativeAssetMcp(options:ForgeMcpToolOptions,kind:'reconstru
         reconciliationRequired:native.status==='NEEDS_RECONCILIATION'};
     }
     const sha=native.asset_sha256,bytes=native.asset_bytes;
+    const layout=original.kind==='uv'?original.input.layout:undefined;
+    if(layout!==undefined&&(native.layout!==layout||dispatched.layout!==layout))throw Error('Native UV layout mismatch');
     if(typeof sha!=='string'||!/^[a-f0-9]{64}$/.test(sha)||typeof bytes!=='number'||!Number.isSafeInteger(bytes)||bytes<28||bytes>800000||
        dispatched.asset_sha256!==sha||dispatched.asset_bytes!==bytes||native.kind!==kind||
        native.model_inference_used!==false||native.owner_art_accepted!==false)throw Error('Native asset receipt mismatch');
@@ -520,6 +522,7 @@ export async function nativeAssetMcp(options:ForgeMcpToolOptions,kind:'reconstru
     inspectForgeGlb(binary);current();
     return {accepted:true,status:'NATIVE_'+kind.toUpperCase()+'_GLTF_VERIFIED',kind,requestId,jobId:native.job_id,
       inputFingerprint:native.input_fingerprint,nativeInputVerified:true,artifactSha256:sha,artifactBytes:bytes,
+      ...(layout===undefined?{}:{layout}),
       artifactReady:true,artifactBytesVerified:true,replayed:dispatched.replayed===true,
       creationPerformed:create&&dispatched.replayed!==true,ownerArtAccepted:false,neuralInference:false,hostedConsumerVerified:false,
       disclaimer:'Exact native request and bounded GLB bytes verified. No hidden-surface, likeness, rig-preservation or owner-art acceptance.'};
