@@ -83,7 +83,7 @@ try{
  const list=await owner.listTools();
  const names=new Set(list.tools.map(t=>t.name));
  for(const name of ["mgr_forge_world_create","mgr_forge_creature_create","mgr_forge_biome_create",
-                    "mgr_forge_creature_status","mgr_forge_biome_status"])
+                    "mgr_forge_creature_status","mgr_forge_biome_status","mgr_forge_saved_jobs","mgr_forge_saved_job_reopen"])
   assert.ok(names.has(name),"missing actual MCP registered tool "+name);
  const creatureInput={requestId:"mcp-protocol-creature-001",prompt:"Invent a mysterious winged armored dragon",
                       seed:17,variants:3,morph:{bend_degrees:11,taper:1.17}};
@@ -118,6 +118,24 @@ try{
   const blob=Buffer.from(resource.resource.blob,'base64');assert.equal(createHash('sha256').update(blob).digest('hex'),created.artifactSha256);
   worldProof={sha256:created.artifactSha256,bytes:blob.length,inputVerified:true};
  }
+ // Discover saved original jobs without promoting journal state to artifact success.
+ const observed=await call(owner,'mgr_forge_saved_jobs',{limit:2});
+ assert.equal(observed.accepted,true);assert.equal(observed.status,'JOURNAL_OBSERVATION');
+ assert.equal(observed.artifactReady,false);assert.equal(observed.artifactVerified,false);
+ assert.equal(observed.creationPerformed,false);assert.equal(observed.artifactSha256,undefined);
+ const first=observed.journal;assert.equal(first.total,worldProof?3:2);
+ assert.ok(first.items.every(row=>row.artifact_verified===false));
+ let saved=[...first.items];
+ if(first.next_cursor){const next=await call(owner,'mgr_forge_saved_jobs',{limit:2,cursor:first.next_cursor});
+   assert.equal(next.accepted,true);saved.push(...next.journal.items);assert.equal(next.journal.next_cursor,null);}
+ const expectedHashes={creature:created.artifactSha256,biome:biome.artifactSha256,...(worldProof?{world:worldProof.sha256}:{})};
+ for(const item of saved){
+   const reopened=await call(owner,'mgr_forge_saved_job_reopen',{kind:item.kind,requestId:item.request_id});
+   assert.equal(reopened.accepted,true,JSON.stringify(reopened));assert.equal(reopened.status,'SAVED_CREATION_GLTF_VERIFIED');
+   assert.equal(reopened.jobId,item.job_id);assert.equal(reopened.artifactSha256,expectedHashes[item.kind]);
+   assert.equal(reopened.artifactBytesVerified,true);assert.equal(reopened.creationPerformed,false);
+   assert.equal(reopened.blobBase64,undefined);
+ }
  // The SAME authenticated MCP service returns actual 3D bytes without a made-up public URL.
  const artifactResponse=await owner.callTool({name:"mgr_forge_artifact_read",arguments:{
    jobId:created.jobId,kind:"creature",expectedSha256:created.artifactSha256,includeData:true
@@ -141,6 +159,10 @@ try{
 
  const readOnly=await connect("read");
  try{
+  const savedRead=await call(readOnly,'mgr_forge_saved_jobs',{kind:'creature'});
+  assert.equal(savedRead.accepted,true);assert.equal(savedRead.journal.items.length,1);
+  const reopenedRead=await call(readOnly,'mgr_forge_saved_job_reopen',{kind:'creature',requestId:creatureInput.requestId});
+  assert.equal(reopenedRead.accepted,true);assert.equal(reopenedRead.artifactSha256,created.artifactSha256);
   const readable=await call(readOnly,"mgr_forge_artifact_read",{
     jobId:created.jobId,kind:"creature",expectedSha256:created.artifactSha256,includeData:false
   });
@@ -151,6 +173,8 @@ try{
  }finally{await readOnly.close();}
  const foreign=await connect("foreign");
  try{
+  assert.equal((await call(foreign,'mgr_forge_saved_jobs',{})).state,'DENY');
+  assert.equal((await call(foreign,'mgr_forge_saved_job_reopen',{kind:'creature',requestId:creatureInput.requestId})).state,'DENY');
   const foreignRead=await call(foreign,"mgr_forge_artifact_read",{
     jobId:created.jobId,kind:"creature",expectedSha256:created.artifactSha256,includeData:false
   });
@@ -161,6 +185,8 @@ try{
  }finally{await foreign.close();}
  const otherActor=await connect("other-actor");
  try{
+  assert.equal((await call(otherActor,'mgr_forge_saved_jobs',{})).state,'DENY');
+  assert.equal((await call(otherActor,'mgr_forge_saved_job_reopen',{kind:'creature',requestId:creatureInput.requestId})).state,'DENY');
   const deniedRead=await call(otherActor,"mgr_forge_artifact_read",{
    jobId:created.jobId,kind:"creature",expectedSha256:created.artifactSha256,includeData:true
   });
@@ -255,6 +281,10 @@ try{
   token_verifier:"fixture; not deployed OIDC/JWKS",
   tools_available:[...names].filter(x=>x.startsWith("mgr_forge_")),
   input_verified_kinds:verifiedInputs,
+  saved_jobs_observation_only:true,saved_jobs_pagination_verified:true,
+  saved_creation_reopen_verified_kinds:saved.map(item=>item.kind),
+  saved_creation_reopen_reads_original_glb:true,saved_creation_reads_create_no_jobs:true,
+  saved_creation_read_scope_allowed:true,saved_creation_foreign_actor_tenant_denied:true,
   same_id_changed_input_does_not_accept_old_artifact:true,
   world_edit_proof:worldProof,
   creature_sha256:created.artifactSha256,

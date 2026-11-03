@@ -53,6 +53,12 @@ with TemporaryDirectory(prefix="mgr-mcp-protocol-") as temp:
         expected_kinds={'world','creature','biome'}|({'human'} if human_mode else set())|({'composed'} if compose_mode else set())
         if set(proof.get('input_verified_kinds',[]))!=expected_kinds or not proof.get('same_id_changed_input_does_not_accept_old_artifact'):
             raise RuntimeError('Native exact-input verification incomplete')
+        history_kinds={'world','creature','biome'}
+        if set(proof.get('saved_creation_reopen_verified_kinds',[]))!=history_kinds or not all(
+                proof.get(key) is True for key in ('saved_jobs_observation_only','saved_jobs_pagination_verified',
+                    'saved_creation_reopen_reads_original_glb','saved_creation_reads_create_no_jobs',
+                    'saved_creation_read_scope_allowed','saved_creation_foreign_actor_tenant_denied')):
+            raise RuntimeError('Saved creation navigation/reopen proof incomplete')
         if proof["status"]!="MGR_FULL_LOCAL_MCP_PROTOCOL_VERIFIED" or not (
            proof["stable_replay"] and proof["cross_tenant_execution_denied"] and
            proof["read_only_execution_denied"] and not proof["hosted_chatgpt_verified"] and
@@ -70,6 +76,8 @@ with TemporaryDirectory(prefix="mgr-mcp-protocol-") as temp:
           for row in json.loads(p.read_text(encoding="utf8")).values()
         }
         assert {proof["creature_sha256"],proof["biome_sha256"]}==valid
+        if len(list((scratch/'workspace'/'jobs').iterdir()))!=3+int(human_mode)+int(compose_mode):
+            raise RuntimeError('Read-only saved creation navigation must not allocate a new native job')
         if human_mode:
             human=proof.get("human_facial_blender_proof")
             if not human or human.get("actual_mcp_blob_verified") is not True:

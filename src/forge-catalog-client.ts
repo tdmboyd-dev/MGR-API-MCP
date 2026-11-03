@@ -44,6 +44,13 @@ export interface ForgeArtifactProof {
   bytes:number;
   mimeType:"model/gltf-binary";
 }
+export type ForgeSavedKind="world"|"creature"|"biome"|"human"|"composed";
+export interface ForgeSavedJobsInput {
+  kind?:ForgeSavedKind|"all"|undefined;
+  limit?:number|undefined;
+  cursor?:string|undefined;
+}
+export interface ForgeSavedJobInput {kind:ForgeSavedKind;requestId:string;}
 export interface ForgeHumanLipSyncInput{
  requestId:string;
  fps:number;
@@ -56,6 +63,8 @@ export interface ForgeHumanLipSyncInput{
  };
 }
 export interface ForgeCatalogClient {
+  listSavedJobs?(input:ForgeSavedJobsInput):Promise<Record<string,unknown>>;
+  reopenSavedJob?(input:ForgeSavedJobInput):Promise<Record<string,unknown>>;
   readWorldContext?():Promise<Record<string,unknown>>;
   verifyRequest?(input:ForgeRequestVerification):Promise<Record<string,unknown>>;
   search(input:ForgeCatalogSearch):Promise<Record<string,unknown>>;
@@ -101,6 +110,25 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
   }
 
   async readWorldContext():Promise<Record<string,unknown>>{return this.post('/api/world-context',{});}
+  async listSavedJobs(input:ForgeSavedJobsInput):Promise<Record<string,unknown>>{
+    if(!input||typeof input!=='object'||Array.isArray(input)||
+       Object.keys(input).some(key=>!['kind','limit','cursor'].includes(key))||
+       (input.kind!==undefined&&!['all','world','creature','biome','human','composed'].includes(input.kind))||
+       (input.limit!==undefined&&(!Number.isInteger(input.limit)||input.limit<1||input.limit>20))||
+       (input.cursor!==undefined&&(typeof input.cursor!=='string'||!/^([a-f0-9]{64}:[0-9]{1,4})?$/.test(input.cursor)))){
+      throw Error('Invalid bounded saved Forge jobs request');
+    }
+    return this.post('/api/saved-jobs',{...input});
+  }
+  async reopenSavedJob(input:ForgeSavedJobInput):Promise<Record<string,unknown>>{
+    if(!input||typeof input!=='object'||Array.isArray(input)||
+       Object.keys(input).some(key=>!['kind','requestId'].includes(key))||
+       !['world','creature','biome','human','composed'].includes(input.kind)||
+       typeof input.requestId!=='string'||!/^[A-Za-z0-9_-]{12,100}$/.test(input.requestId)){
+      throw Error('Invalid saved Forge creation identity');
+    }
+    return this.post('/api/saved-job-reopen',{kind:input.kind,request_id:input.requestId});
+  }
   async verifyRequest(raw:ForgeRequestVerification):Promise<Record<string,unknown>>{
     const value=forgeVerifyInput.parse(raw);
     let request:Record<string,unknown>;

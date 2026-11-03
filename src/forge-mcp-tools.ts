@@ -2,7 +2,7 @@
 import type {McpServer} from "@modelcontextprotocol/server";
 import * as z from "zod/v4";
 import {authorizeTool, type AuthContext} from "./authz.js";
-import type {ForgeCatalogClient,ForgeCatalogSearch,ForgeWorldEdits,ForgeCreatureInput,ForgeBiomeInput,ForgeArtifactRequest,ForgeHumanLipSyncInput,ForgeWorldCompositionInput} from "./forge-catalog-client.js";
+import type {ForgeCatalogClient,ForgeCatalogSearch,ForgeWorldEdits,ForgeCreatureInput,ForgeBiomeInput,ForgeArtifactRequest,ForgeHumanLipSyncInput,ForgeWorldCompositionInput,ForgeSavedJobsInput,ForgeSavedJobInput} from "./forge-catalog-client.js";
 import {createHash} from "node:crypto";
 import {types} from "node:util";
 import {forgeWorldInput,forgeCreatureInput,forgeBiomeInput,forgeHumanInput,forgeCompositionInput,forgeVerifyInput,type ForgeRequestVerification} from './forge-inputs.js';
@@ -40,6 +40,63 @@ function publicationGuard(options:ForgeMcpToolOptions,scope:"tools:read"|"tools:
       throw Error("Forge authority changed before result publication; inspect the original request before retrying");
     if(denied(options,scope)!==null)throw Error("Forge authority unavailable before result publication; inspect the original request before retrying");
   };
+}
+
+const savedKind=z.enum(['world','creature','biome','human','composed']);
+const savedRequestId=z.string().regex(/^[A-Za-z0-9_-]{12,100}$/);
+const savedCursor=z.string().regex(/^([a-f0-9]{64}:[0-9]{1,4})?$/);
+const savedJobsInput=z.object({kind:z.enum(['all','world','creature','biome','human','composed']).default('all'),
+  limit:z.number().int().min(1).max(20).default(20),cursor:savedCursor.optional()}).strict();
+const savedJobInput=z.object({kind:savedKind,requestId:savedRequestId}).strict();
+const savedJobsResult=z.object({schema:z.literal('mgr.forge.saved-jobs.v1'),status:z.literal('JOURNAL_OBSERVATION'),
+  items:z.array(z.object({kind:savedKind,request_id:savedRequestId,job_id:z.string().regex(/^[a-f0-9]{24}$/),
+    status:z.enum(['RUNNING','MATERIALIZED','FAILED','NEEDS_RECONCILIATION']),artifact_verified:z.literal(false)}).strict()).max(20),
+  total:z.number().int().min(0).max(5000),unavailable_kinds:z.array(savedKind).max(5),
+  next_cursor:z.string().regex(/^[a-f0-9]{64}:[0-9]{1,4}$/).nullable(),order:z.literal('kind_then_request_id'),creates_jobs:z.literal(false)}).strict();
+
+export async function listForgeSavedJobsMcp(options:ForgeMcpToolOptions,input:ForgeSavedJobsInput):Promise<Record<string,unknown>>{
+  const reason=denied(options,'tools:read');if(reason)return {accepted:false,state:'DENY',reason};
+  const parsed=savedJobsInput.safeParse(input);if(!parsed.success)return {accepted:false,state:'INVALID_SAVED_JOBS_REQUEST'};
+  if(!options.forge.listSavedJobs)return {accepted:false,state:'EXECUTOR_UNAVAILABLE'};
+  const current=publicationGuard(options,'tools:read');
+  try{
+    const native=await options.forge.listSavedJobs(parsed.data);current();
+    const observed=savedJobsResult.parse(native);
+    if(observed.items.length>parsed.data.limit||observed.items.length>observed.total||
+       observed.items.some(item=>parsed.data.kind!=='all'&&item.kind!==parsed.data.kind))throw Error('Saved journal scope mismatch');
+    return {accepted:true,status:'JOURNAL_OBSERVATION',artifactReady:false,artifactVerified:false,
+      creationPerformed:false,journal:observed,
+      disclaimer:'Saved journal state only; reopen verifies an original GLB. No creation, retry, approval or artifact acceptance.'};
+  }catch{return {accepted:false,state:'SAVED_JOBS_UNAVAILABLE',reason:'Saved Forge journal unavailable or changed; refresh before continuing'};}
+}
+
+export async function reopenForgeSavedJobMcp(options:ForgeMcpToolOptions,input:ForgeSavedJobInput):Promise<Record<string,unknown>>{
+  const reason=denied(options,'tools:read');if(reason)return {accepted:false,state:'DENY',reason};
+  const parsed=savedJobInput.safeParse(input);if(!parsed.success)return {accepted:false,state:'INVALID_SAVED_JOB_IDENTITY'};
+  if(!options.forge.reopenSavedJob)return {accepted:false,state:'EXECUTOR_UNAVAILABLE'};
+  const current=publicationGuard(options,'tools:read'),value=parsed.data;
+  try{
+    const native=await options.forge.reopenSavedJob(value);current();
+    if(native.request_id!==value.requestId)throw Error('Saved request identity mismatch');
+    if(['NOT_FOUND','RUNNING','FAILED','NEEDS_RECONCILIATION'].includes(String(native.status))){
+      return {accepted:false,state:native.status,requestId:value.requestId,kind:value.kind,
+        artifactReady:false,creationPerformed:false,reconciliationRequired:native.status==='NEEDS_RECONCILIATION'};
+    }
+    const keys={world:['world_sha256','world_bytes'],creature:['creature_sha256','creature_bytes'],
+      biome:['biome_sha256','biome_bytes'],human:['human_sha256','human_bytes'],composed:['combined_world_sha256','combined_bytes']} as const;
+    const [shaKey,bytesKey]=keys[value.kind],sha=native[shaKey],bytes=native[bytesKey],jobId=native.job_id;
+    if(native.status!=='MATERIALIZED'||typeof jobId!=='string'||!/^[a-f0-9]{24}$/.test(jobId)||
+       typeof sha!=='string'||!/^[a-f0-9]{64}$/.test(sha)||typeof bytes!=='number'||
+       !Number.isSafeInteger(bytes)||bytes<28||bytes>800000)throw Error('Saved artifact metadata unverified');
+    // Reuse the same independently hashed structural GLB reader as ordinary downloads.
+    const proof=await readForgeArtifactMcp(options,{jobId,kind:value.kind,expectedSha256:sha});current();
+    if(proof.accepted!==true||proof.bytes!==bytes)throw Error('Saved artifact bytes unavailable or changed');
+    return {accepted:true,status:'SAVED_CREATION_GLTF_VERIFIED',kind:value.kind,requestId:value.requestId,jobId,
+      artifactSha256:sha,artifactBytes:bytes,artifactReady:true,artifactBytesVerified:true,creationPerformed:false,
+      ownerArtAccepted:false,hostedConsumerVerified:false,
+      disclaimer:'Original native job reopened and exact GLB bytes checked; no new job, approval or owner-art acceptance.'};
+  }catch{return {accepted:false,state:'SAVED_CREATION_UNVERIFIED',requestId:value.requestId,kind:value.kind,
+    artifactReady:false,creationPerformed:false,reconciliationRequired:true};}
 }
 
 export async function verifyForgeRequestMcp(options:ForgeMcpToolOptions,input:ForgeRequestVerification):Promise<Record<string,unknown>>{
@@ -432,6 +489,20 @@ function scopedRegistrar(server:McpServer,options:ForgeMcpToolOptions):McpServer
 
 export function registerForgeMcpTools(server:McpServer,options:ForgeMcpToolOptions):void{
   const register=scopedRegistrar(server,options);
+  if(options.forge.listSavedJobs)register('mgr_forge_saved_jobs',{
+    description:'Read-only bounded navigation over original Forge creation journals. Journal state is not verified artifact success. Does not create, retry, cancel, approve or grant authority.',
+    inputSchema:savedJobsInput
+  },async input=>{
+    const result=await listForgeSavedJobsMcp(options,input);
+    return {content:[{type:'text',text:JSON.stringify(result)}],isError:result.accepted!==true};
+  });
+  if(options.forge.reopenSavedJob)register('mgr_forge_saved_job_reopen',{
+    description:'Read-only reopen of an original saved Forge creation. Uses original status verification and independently hashes its bounded GLB through the existing private reader; no new job or execution authority.',
+    inputSchema:savedJobInput
+  },async input=>{
+    const result=await reopenForgeSavedJobMcp(options,input);
+    return {content:[{type:'text',text:JSON.stringify(result)}],isError:result.accepted!==true};
+  });
   if(options.forge.verifyRequest)register('mgr_forge_request_verify',{
     description:'Read-only verification that an existing native Forge job matches these exact original creation instructions and sources. Does not create, retry, approve, cancel or grant authority. RUNNING/FAILED/NEEDS_RECONCILIATION remain their actual states.',
     inputSchema:forgeVerifyInput

@@ -11,7 +11,9 @@ The research and build home for an owned, portable assistant informed by JARVIS 
 
 **Current state: executable authenticated shared edge; hosted source exists and production acceptance remains open.** The repo now includes typed task/decision/security contracts, governed stdio + HTTP MCP, JWT/JWKS auth, tenant/scope binding, Legacy-backed side-effect dispatch with authoritative receipts and reconciliation, Creation OS routing, container deployment, Render blueprint, Auth0/OIDC preflight, direct remote MCP verification, OpenAI Responses remote-MCP verification, and green containerized restart/timeout/duplicate-delivery proof. A real public host, real Auth0/OAuth credentials, deployed Legacy endpoint, and final hosted OpenAI/ChatGPT MCP session remain external proof rather than missing repository code.
 
-**Current Forge integration:** twelve optional shared operations cover catalog, native world/creature/biome, timed-phoneme Human animation, composition, status and bounded private artifact return. Configure all four actor/tenant/URL/token settings in `.env.example`; incomplete enrollment is refused. Forge also has newer audio behavior awaiting its typed shared adapter. [Setup and recovery](docs/FORGE-CONNECTION-AND-RECOVERY.md).
+**Current Forge integration:** 15 optional shared tools cover source discovery, native world/creature/biome, timed-phoneme Human animation, composition, original request verification, status, bounded private artifact return and saved-creation listing/reopen. Enroll the four actor/tenant/URL/token settings through the trusted host's configuration flow; `.env.example` documents names and is not automatically loaded. Partial enrollment is refused. Raw-audio behavior still needs its typed shared adapter. [Setup and recovery](docs/FORGE-CONNECTION-AND-RECOVERY.md).
+
+Read the [Owner Handbook](docs/API-MCP-OWNER-HANDBOOK.md) for the completed shared-edge destination and [How to Use API/MCP](docs/API-MCP-HOW-TO.md) for current commands, Forge tool arguments and safe recovery. The existing handoff and scorecard retain exact source-specific qualification and unfinished work.
 
 ## Start here
 
