@@ -11,3 +11,17 @@ test('shared tool rejects an unpinned continuation before calling the owning rea
  assert.notEqual((await call({project:'forge',document:'index',startLine:21,expectedCommit:'a'.repeat(40)})).isError,true);
  assert.equal(f.reads,1);
 });
+
+test('manual revision recovery is disclosed only while the original binding remains current',async()=>{
+ for(const revoked of [false,true]){
+  const f=fixture();
+  let rejectRead!:(error:Error)=>void;
+  f.hold(new Promise<void>((_resolve,reject)=>{rejectRead=reject;}));
+  const pending=f.call();
+  if(revoked)f.revoke();
+  rejectRead(Error('manual-source-changed'));
+  const result=await pending;
+  assert.equal(result.isError,true);
+  assert.equal(result.content[0].text.includes('restart-manual-index'),!revoked);
+ }
+});

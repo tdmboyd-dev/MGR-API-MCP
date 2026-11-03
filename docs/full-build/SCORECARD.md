@@ -1,4 +1,9 @@
 
+## Stale manual revision recovery
+
+An authorized stale manual read returns a fixed restart-manual-index diagnostic. The gateway rechecks the original owner binding before giving that diagnostic. Revoked and unrelated failures receive a generic error.
+
+
 ## Manual checkout isolation
 
 Manual enrollment verifies that each registered root is a committed Git checkout. A nested folder cannot inherit a parent repository. Hosts can opt to retain healthy roots and report unavailable project IDs, while strict callers still fail enrollment. Reads repeat the checkout check.
