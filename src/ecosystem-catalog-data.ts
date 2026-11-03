@@ -75,7 +75,7 @@ export const ecosystemCatalogData = {
       "placement": "specialist",
       "source": {
         "repository": "https://github.com/tdmboyd-dev/MGR-3D-FORGE",
-        "commit": "e4828166eb9bef02c5f1fbd680ee1edfe3891ee1",
+        "commit": "5382067baa269e9b010e40163bb6374eb8fb46a5",
         "defaultBranch": "main"
       },
       "integration": {
@@ -86,6 +86,12 @@ export const ecosystemCatalogData = {
         ]
       },
       "runtimeVerified": false,
+      "localVerification": {
+        "forgeSourceCommit": "7ad905f1371b6d2414b8f223f32bdde920811c9a",
+        "workflowSourceCommit": "fe6a01aab35d15d05129465147725de24e797883",
+        "scope": "Exact owner-reviewed planar-pairs UV job, real local Forge execution, restart readback and independent Blender import. Injected model and disposable owner credential.",
+        "remaining": "Everyday browser and live-model use, hosted acceptance, and full studio qualification."
+      },
       "knowledgeInterface": {
         "tool": "mgr_repository_manual",
         "project": "forge",
