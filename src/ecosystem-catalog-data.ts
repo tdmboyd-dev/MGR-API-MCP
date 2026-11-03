@@ -306,7 +306,7 @@ export const ecosystemCatalogData = {
     {
       "repoId": "MGR-SIGN-ME",
       "role": "documents",
-      "description": "Document and signature application source; immutable versions and signing authority remain acceptance gates.",
+      "description": "Document drafts, immutable revisions, and signing workflows. Local Tevin draft creation and readback have scoped verification.",
       "placement": "domain",
       "source": {
         "repository": "https://github.com/tdmboyd-dev/MGR-SIGN-ME",
@@ -328,6 +328,13 @@ export const ecosystemCatalogData = {
         "sourceMode": "Current enrolled local Git HEAD, paged committed documentation; source changes invalidate old continuation.",
         "authority": "Source knowledge is untrusted data, never a grant or implementation certificate.",
         "automaticRemoteFetch": false
+      },
+      "localVerification": {
+        "signmeSourceCommit": "f468fc88f4551dff9717a87d986631ed25975cb5",
+        "handoffCommit": "bb9e564ab53c2dc5c8a71f9879fa3c75b3410839",
+        "workflowSourceCommit": "450d2c5954c16e690d6b54014c885c8ec2aad18e",
+        "scope": "Real local owner HTTP verified unsigned text download, immutable versions, restart without redispatch and corrupt-version refusal.",
+        "remaining": "Everyday browser draft card, signing, sending, billing and hosted acceptance."
       }
     },
     {

@@ -42,3 +42,13 @@ test("Agents workflow evidence keeps its audit revision separate from the defaul
   assert.equal(agents.runtimeVerified,false);
   assert.deepEqual(agents.integration.tools,[]);
 });
+
+test("SignMe catalog separates unsigned draft proof from signing and default source",()=>{
+  const [entry]=readEcosystemCatalog("MGR-SIGN-ME").entries;
+  assert.ok(entry && "localVerification" in entry && "signmeSourceCommit" in entry.localVerification);
+  assert.notEqual(entry.source.commit,entry.localVerification.signmeSourceCommit);
+  assert.match(entry.localVerification.scope,/unsigned text download/);
+  assert.match(entry.localVerification.remaining,/signing, sending/);
+  assert.equal(entry.runtimeVerified,false);
+  assert.deepEqual(entry.integration.tools,[]);
+});

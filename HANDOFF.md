@@ -1,5 +1,7 @@
 ## Forge UV integration
 
+The SignMe ecosystem catalog entry now carries the tested repair source, SignMe handoff and Tevin workflow revisions for unsigned draft readback. Its published default source pin remains separate. Signing, sending, billing and hosted acceptance are listed as open. All five catalog tests and TypeScript passed.
+
 The shared ecosystem catalog now pins Forge's published main and separately exposes the exact Forge and MGR-ONE revisions used for the verified UV journey. The catalog continues to grant no execution and does not claim production readiness. Catalog tests and TypeScript passed.
 
 The local Tevin journey passed through conversation proposal, exact owner approval, the shared department adapter, real Forge execution, and verified GLB download after restart. MGR-ONE evidence is pinned at `88ba3091723ad698cb4c812121ffd74d9653e4ae`. The model and owner credential were fixtures. Blender 5.2.2 LTS imported the exact reopened GLB and found 1,280 faces with active UV layers and finite coordinates, verified in MGR-ONE fe6a01aab35d15d05129465147725de24e797883. Everyday browser use with a live model and hosted acceptance remain open.
