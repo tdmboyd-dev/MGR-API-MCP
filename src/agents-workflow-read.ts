@@ -30,33 +30,47 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
       }
       const url = new URL("/api/workflows/run", origin);
       url.searchParams.set("runId", runId);
-      const response = await fetch(url, {
-        headers: { authorization: `Bearer ${options.token}` },
-        redirect: "error",
-        signal: AbortSignal.timeout(10_000),
-      });
-      if (!response.ok || !response.body) {
-        await response.body?.cancel();
-        return error("Workflow run unavailable");
-      }
-      const reader = response.body.getReader();
-      const chunks: Uint8Array[] = [];
-      let bytes = 0;
-      for (;;) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        bytes += value.byteLength;
-        if (bytes > 12_000) {
-          await reader.cancel();
-          return error("Workflow result exceeds read limit");
+      const read = async () => {
+        const response = await fetch(url, {
+          headers: { authorization: `Bearer ${options.token}` },
+          redirect: "error",
+          signal: AbortSignal.timeout(10_000),
+        });
+        if (!response.ok || !response.body) {
+          await response.body?.cancel();
+          throw new Error("Workflow run unavailable");
         }
-        chunks.push(value);
+        const reader = response.body.getReader();
+        const chunks: Uint8Array[] = [];
+        let bytes = 0;
+        for (;;) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          bytes += value.byteLength;
+          if (bytes > 12_000) {
+            await reader.cancel();
+            return null;
+          }
+          chunks.push(value);
+        }
+        return Buffer.concat(chunks).toString("utf8");
+      };
+      let text = await read();
+      let summary = false;
+      if (text === null) {
+        authorizeTool(options.auth, options.resourceAudience, ["tools:read", "workflows:read"]);
+        if (options.auth.actorId !== options.owner.actorId || options.auth.tenantId !== options.owner.tenantId) {
+          return error("Workflow read denied");
+        }
+        url.searchParams.set("view", "summary");
+        summary = true;
+        text = await read();
       }
-      const text = Buffer.concat(chunks).toString("utf8");
+      if (text === null) return error("Workflow result exceeds read limit");
       const result = JSON.parse(text);
       authorizeTool(options.auth, options.resourceAudience, ["tools:read", "workflows:read"]);
       if (options.auth.actorId !== options.owner.actorId || options.auth.tenantId !== options.owner.tenantId ||
-          result?.id !== runId || typeof result.workflowId !== "string") return error("Workflow read unconfirmed");
+          (summary && result?.view !== "summary") || result?.id !== runId || typeof result.workflowId !== "string") return error("Workflow read unconfirmed");
       return { content: [{ type: "text" as const, text }] };
     } catch {
       return error("Workflow read unconfirmed");

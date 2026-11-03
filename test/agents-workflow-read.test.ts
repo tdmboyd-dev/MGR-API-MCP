@@ -11,10 +11,10 @@ test("Agents workflow read binds the owner, credential, response identity and si
     scopes: ["tools:read", "workflows:read"], expiresAt: Date.now() + 60_000 };
   let reply = JSON.stringify({ id: runId, workflowId: "workflow" });
   const send = t.mock.method(globalThis, "fetch", async (url: URL, init: RequestInit) => {
-    assert.equal(url.href, origin + "/api/workflows/run?runId=" + runId);
+    assert.equal(url.href, origin + "/api/workflows/run?runId=" + runId + (url.searchParams.has("view") ? "&view=summary" : ""));
     assert.equal(new Headers(init.headers).get("authorization"), "Bearer " + token);
     assert.equal(init.redirect, "error");
-    return new Response(reply);
+    return new Response(url.searchParams.has("view") ? JSON.stringify({id:runId,workflowId:"workflow",view:"summary"}) : reply);
   });
   let call!: (input: {runId:string}) => Promise<{isError?:boolean;content: {text:string}[]}>;
   const server = { registerTool(name:string, _definition:unknown, handler:typeof call) {
@@ -30,5 +30,5 @@ test("Agents workflow read binds the owner, credential, response identity and si
   reply=JSON.stringify({id:"different",workflowId:"workflow"});
   assert.equal((await call({runId})).isError,true);
   reply="x".repeat(12_001);
-  assert.match((await call({runId})).content[0]?.text??"",/exceeds read limit/);
+  assert.equal(JSON.parse((await call({runId})).content[0]?.text??"{}").view,"summary");
 });
