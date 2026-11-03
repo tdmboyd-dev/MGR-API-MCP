@@ -49,7 +49,7 @@ with TemporaryDirectory(prefix='mgr-native-asset-mcp-') as temporary:
     mesh=Mesh();mesh.box(0,0,0,1,2,1)
     model=export_glb([mesh],name='Original owned native proof box',materials=(('proof-box',[.6,.7,.8,1]),))
     inputs={'reconstruction':{'requestId':'mcp-native-reconstruct-0001','frontPngBase64':base64.b64encode(front).decode(),
-               'sidePngBase64':base64.b64encode(side).decode(),'bounds':{'width':2,'height':3,'depth':2},'grid':16,'surface':'smooth'},
+               'sidePngBase64':base64.b64encode(side).decode(),'bounds':{'width':2,'height':3,'depth':2},'grid':32,'surface':'smooth'},
             'morph':{'requestId':'mcp-native-morph-0001','glbBase64':base64.b64encode(model).decode(),
                'expectedSha256':hashlib.sha256(model).hexdigest(),'morph':{'twist_degrees':12,'taper':1.1}},
             'uv':{'requestId':'mcp-native-uv-0001','atlasSize':2048,'padding':2,'layout':'planar-pairs'}}

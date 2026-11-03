@@ -2,9 +2,9 @@
  * This is the shared-edge transfer profile, not a replacement geometry engine,
  * general glTF renderer, rights check or independent Blender acceptance.
  */
-export function inspectForgeGlb(bytes:Uint8Array){
+export function inspectForgeGlb(bytes:Uint8Array,byteLimit=800_000){
  const fail=():never=>{throw Error('Forge artifact is not real GLB: unsupported or corrupt self-contained triangle model');};
- if(!(bytes instanceof Uint8Array)||bytes.byteLength<28||bytes.byteLength>800000)fail();
+ if(!(bytes instanceof Uint8Array)||bytes.byteLength<28||bytes.byteLength>byteLimit)fail();
  const blob=Buffer.from(bytes.buffer,bytes.byteOffset,bytes.byteLength);
  if(blob.toString('ascii',0,4)!=='glTF'||blob.readUInt32LE(4)!==2||blob.readUInt32LE(8)!==blob.length)fail();
  const chunks:Array<{kind:number;data:Buffer}>=[];
@@ -18,7 +18,7 @@ export function inspectForgeGlb(bytes:Uint8Array){
  let doc:any;
  try{doc=JSON.parse(new TextDecoder('utf-8',{fatal:true,ignoreBOM:true}).decode(chunks[0]!.data));}catch{fail();}
  const object=(x:any)=>x!==null&&typeof x==='object'&&!Array.isArray(x);
- const uint=(x:any,max=800000)=>Number.isSafeInteger(x)&&x>=0&&x<=max;
+ const uint=(x:any,max=byteLimit)=>Number.isSafeInteger(x)&&x>=0&&x<=max;
  const index=(x:any,items:any[])=>uint(x,items.length-1);
  if(!object(doc)||!object(doc.asset)||doc.asset.version!=='2.0')fail();
  // Reject unqualified decoder/compression extensions and external references.

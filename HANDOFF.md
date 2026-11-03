@@ -1,5 +1,7 @@
 ## MGR Agents workflow read transport
 
+The grid-32 Forge UV chain is now verified and supersedes the earlier unverified attempt. Forge produced an 812,776-byte GLB, which exceeded the prior 800,000-byte transfer cap. The UV-only cap is now 825,000 bytes across validation, transfer, and reopen, within the existing 1,100,000-character base64 envelope. The actual MCP/Studio chain passed with source and result hashes verified. Tevin department dispatch remains open.
+
 The actual MCP/Forge protocol check now chains a verified reconstruction GLB into a planar-pairs UV job. The original upload on disk matches the reconstruction output digest. The bounded grid-16 fixture passed all three native operations. A grid-32 chain returned an unverified UV outcome and remains unqualified. Tevin approval and artifact-reference handoff are still open.
 
 The native Forge protocol verifier now proves planar-pairs through the real MCP SDK and secured loopback Studio. Create, replay and fresh-client status agree on layout, a changed layout is refused, and the saved native receipt and downloaded GLB match independently. Reconstruction and morph also passed in the same run, with three total native jobs. Everyday Tevin department dispatch remains open.

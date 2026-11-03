@@ -2,6 +2,7 @@
 import type {McpServer} from "@modelcontextprotocol/server";
 import * as z from "zod/v4";
 import {authorizeTool, type AuthContext} from "./authz.js";
+import {forgeArtifactByteLimit} from "./forge-catalog-client.js";
 import type {ForgeCatalogClient,ForgeCatalogSearch,ForgeWorldEdits,ForgeCreatureInput,ForgeBiomeInput,ForgeArtifactRequest,ForgeHumanLipSyncInput,ForgeWorldCompositionInput,ForgeSavedJobsInput,ForgeSavedJobInput} from "./forge-catalog-client.js";
 import {createHash} from "node:crypto";
 import {types} from "node:util";
@@ -90,7 +91,7 @@ export async function reopenForgeSavedJobMcp(options:ForgeMcpToolOptions,input:F
     const [shaKey,bytesKey]=keys[value.kind],sha=native[shaKey],bytes=native[bytesKey],jobId=native.job_id;
     if(native.status!=='MATERIALIZED'||typeof jobId!=='string'||!/^[a-f0-9]{24}$/.test(jobId)||
        typeof sha!=='string'||!/^[a-f0-9]{64}$/.test(sha)||typeof bytes!=='number'||
-       !Number.isSafeInteger(bytes)||bytes<28||bytes>800000)throw Error('Saved artifact metadata unverified');
+       !Number.isSafeInteger(bytes)||bytes<28||bytes>forgeArtifactByteLimit(value.kind))throw Error('Saved artifact metadata unverified');
     // Reuse the same independently hashed structural GLB reader as ordinary downloads.
     const proof=await readForgeArtifactMcp(options,{jobId,kind:value.kind,expectedSha256:sha});current();
     if(proof.accepted!==true||proof.bytes!==bytes)throw Error('Saved artifact bytes unavailable or changed');
@@ -312,13 +313,13 @@ export async function readForgeArtifactMcp(options:ForgeMcpToolOptions,input:For
     if(result.sha256!==input.expectedSha256 ||
        result.mimeType!=="model/gltf-binary" || typeof result.blobBase64!=="string" ||
        result.blobBase64.length>1_100_000 || typeof result.bytes!=="number" ||
-       result.bytes<28 || result.bytes>800_000)throw new Error("invalid Forge delivery proof");
+       result.bytes<28 || result.bytes>forgeArtifactByteLimit(input.kind))throw new Error("invalid Forge delivery proof");
     const data=Buffer.from(result.blobBase64,"base64");
     if(data.length!==result.bytes || data.toString('base64')!==result.blobBase64 ||
        createHash("sha256").update(data).digest("hex")!==input.expectedSha256){
       throw new Error("artifact content not independently authentic to receipt");
     }
-    inspectForgeGlb(data);
+    inspectForgeGlb(data,forgeArtifactByteLimit(input.kind));
     return {accepted:true,status:"VERIFIED_PRIVATE_GLTF_BLOB",
             jobId:input.jobId,kind:input.kind,
             sha256:result.sha256,bytes:result.bytes,
@@ -510,7 +511,7 @@ export async function nativeAssetMcp(options:ForgeMcpToolOptions,kind:'reconstru
     const sha=native.asset_sha256,bytes=native.asset_bytes;
     const layout=original.kind==='uv'?original.input.layout:undefined;
     if(layout!==undefined&&(native.layout!==layout||dispatched.layout!==layout))throw Error('Native UV layout mismatch');
-    if(typeof sha!=='string'||!/^[a-f0-9]{64}$/.test(sha)||typeof bytes!=='number'||!Number.isSafeInteger(bytes)||bytes<28||bytes>800000||
+    if(typeof sha!=='string'||!/^[a-f0-9]{64}$/.test(sha)||typeof bytes!=='number'||!Number.isSafeInteger(bytes)||bytes<28||bytes>forgeArtifactByteLimit(kind)||
        dispatched.asset_sha256!==sha||dispatched.asset_bytes!==bytes||native.kind!==kind||
        native.model_inference_used!==false||native.owner_art_accepted!==false)throw Error('Native asset receipt mismatch');
     const artifact=await forge.readArtifact({jobId:native.job_id,kind,expectedSha256:sha});current();
@@ -519,7 +520,7 @@ export async function nativeAssetMcp(options:ForgeMcpToolOptions,kind:'reconstru
     const binary=Buffer.from(artifact.blobBase64,'base64');
     if(binary.toString('base64')!==artifact.blobBase64||binary.length!==bytes||createHash('sha256').update(binary).digest('hex')!==sha)
       throw Error('Native asset bytes changed');
-    inspectForgeGlb(binary);current();
+    inspectForgeGlb(binary,forgeArtifactByteLimit(kind));current();
     return {accepted:true,status:'NATIVE_'+kind.toUpperCase()+'_GLTF_VERIFIED',kind,requestId,jobId:native.job_id,
       inputFingerprint:native.input_fingerprint,nativeInputVerified:true,artifactSha256:sha,artifactBytes:bytes,
       ...(layout===undefined?{}:{layout}),

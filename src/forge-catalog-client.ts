@@ -38,6 +38,8 @@ export interface ForgeArtifactRequest {
   kind:"creature"|"biome"|"world"|"human"|"composed"|"reconstruction"|"morph"|"uv";
   expectedSha256:string;
 }
+// UV seam expansion can exceed the default binary cap while fitting the same base64 envelope.
+export const forgeArtifactByteLimit=(kind:ForgeArtifactRequest['kind'])=>kind==='uv'?825_000:800_000;
 export interface ForgeArtifactProof {
   blobBase64:string;
   sha256:string;
@@ -297,8 +299,8 @@ export class ForgeStudioCatalogClient implements ForgeCatalogClient {
       signal:AbortSignal.timeout(this.timeoutMs),redirect:"error"
     });
     if(!response.ok){try{await response.body?.cancel();}catch{}throw new Error("Forge artifact read returned HTTP "+response.status);}
-    const binary=await this.responseBytes(response,800_000,'Forge artifact exceeds bounded MCP transfer size');
-    inspectForgeGlb(binary);
+    const binary=await this.responseBytes(response,forgeArtifactByteLimit(input.kind),'Forge artifact exceeds bounded MCP transfer size');
+    inspectForgeGlb(binary,forgeArtifactByteLimit(input.kind));
     const sha=createHash("sha256").update(binary).digest("hex");
     if(sha!==input.expectedSha256)
       throw new Error("Forge artifact SHA-256 changed from job receipt; reconciliation required");
