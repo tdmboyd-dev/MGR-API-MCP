@@ -1,16 +1,10 @@
+## Forge UV integration
+
+The local Tevin journey passed through conversation proposal, exact owner approval, the shared department adapter, real Forge execution, and verified GLB download after restart. MGR-ONE evidence is pinned at `88ba3091723ad698cb4c812121ffd74d9653e4ae`. The model and owner credential were fixtures. Everyday live-model/browser use, hosted acceptance, and independent import of the specific generated artifact remain open.
+
+The shared command binds the workspace, saved reconstruction request, source SHA-256 and UV settings. The client resolves source bytes privately and checks the dispatch fence before native create. The real MCP/Forge grid-32 chain verified matching source bytes, layout, replay, reopen, wrong-input refusal and independent result hashes. The earlier grid-32 failure was superseded by a UV-only 825,000-byte binary cap within the existing base64 envelope. The legacy omitted-layout identity is preserved. Fifty-nine focused transport, department and GLB validation tests passed.
+
 ## MGR Agents workflow read transport
-
-The shared Forge department adapter accepts forge.uv.create with an exact workspace, saved reconstruction request, SHA-256 and layout. It resolves bytes privately and runs the synchronous dispatch fence before native create. The grid-32 verifier passed prepare, fenced replay, wrong-digest refusal and artifact readback against real Forge. Fresh owner-approved dispatch through MGR-ONE and its artifact UI remain open.
-
-The Forge Studio client now resolves a UV source from a saved reconstruction request ID and approved SHA-256, checking the native job identity and independently reading the exact bytes. The real grid-32 protocol chain used the resolver, rejected a wrong digest, and matched the independent MCP download. TypeScript passed. This is an internal client method. The Tevin command and approval integration remain open.
-
-The grid-32 Forge UV chain is now verified and supersedes the earlier unverified attempt. Forge produced an 812,776-byte GLB, which exceeded the prior 800,000-byte transfer cap. The UV-only cap is now 825,000 bytes across validation, transfer, and reopen, within the existing 1,100,000-character base64 envelope. The actual MCP/Studio chain passed with source and result hashes verified. Tevin department dispatch remains open.
-
-The actual MCP/Forge protocol check now chains a verified reconstruction GLB into a planar-pairs UV job. The original upload on disk matches the reconstruction output digest. The bounded grid-16 fixture passed all three native operations. A grid-32 chain returned an unverified UV outcome and remains unqualified. Tevin approval and artifact-reference handoff are still open.
-
-The native Forge protocol verifier now proves planar-pairs through the real MCP SDK and secured loopback Studio. Create, replay and fresh-client status agree on layout, a changed layout is refused, and the saved native receipt and downloaded GLB match independently. Reconstruction and morph also passed in the same run, with three total native jobs. Everyday Tevin department dispatch remains open.
-
-The typed Forge UV MCP adapter now carries optional planar-pairs or triangles layout through create and exact request verification. Omitted layout preserves legacy request identity. Explicit layout must match native dispatch and readback before verified artifact metadata is returned. Six targeted tests passed. The everyday Tevin department operation and live journey remain open.
 
 The Agents workflow history adapter now refuses repeated run IDs within one page and refuses a page containing the input cursor as a result. This prevents malformed upstream pages from being presented as verified history. The focused duplicate-page regression and TypeScript check passed. Hosted and everyday Tevin acceptance remain open.
 
