@@ -1,5 +1,7 @@
 ## MGR Agents workflow read transport
 
+The private loopback edge now registers the reader when supplied an explicit origin and token. Its owner client allows the exact run ID request. An authenticated TCP regression from MGR-ONE passed with a controlled upstream response.
+
 The shared MCP factory accepts an explicit agentsWorkflowRead binding. It registers mgr_agents_workflow_read for exact run IDs, checks the bound tenant and actor and requires tools:read and workflows:read. The adapter uses a configured HTTPS origin and service bearer, rejects redirects and mismatched run IDs, and caps the response at 12,000 bytes. The focused test used controlled fetch. No default registration, hosted service configuration or Tevin binding is active. Workflow dispatch remains separate.
 
 ## MGR Agents workflow evidence

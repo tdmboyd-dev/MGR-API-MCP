@@ -1,3 +1,4 @@
+import type { AgentsWorkflowReadOptions } from "./agents-workflow-read.js";
 import type {RepositoryReadGateway} from './repository-read-tools.js';
 import { createMcpHandler } from "@modelcontextprotocol/server";
 import { createMgrMcpServer } from "./mcp-server.js";
@@ -18,6 +19,7 @@ export interface AuthorizedMgrMcpHttpOptions {
   forgeAllowedTenantId?:string;
   forgeAllowedActorId?:string;
   departments?:DepartmentGateway;
+  agentsWorkflowRead?:Omit<AgentsWorkflowReadOptions,"auth"|"resourceAudience">;
   repositories?:RepositoryReadGateway;
   /** Host may lower the fixed64 outer auth/handler admission budget. */
   maximumPendingRequests?:number;
@@ -94,6 +96,7 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
         catalogAuthorization:{auth:typeof authResult.auth;resourceAudience:string};
         forge?:{auth:typeof authResult.auth;resourceAudience:string;forge:ForgeCatalogClient;allowedTenantId:string;allowedActorId:string;assertCurrent:()=>void};
         departments?:DepartmentToolOptions;
+        agentsWorkflowRead?:AgentsWorkflowReadOptions;
         repositories?:{gateway:RepositoryReadGateway;auth:typeof authResult.auth;resourceAudience:string};
         legacy?:{
           auth:typeof authResult.auth;
@@ -114,6 +117,7 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
           creation:options.creation
         };
       }
+      if(options.agentsWorkflowRead)serverOptions.agentsWorkflowRead={...options.agentsWorkflowRead,auth:authResult.auth,resourceAudience:options.resourceAudience};
       if(options.repositories)serverOptions.repositories={gateway:options.repositories,auth:authResult.auth,resourceAudience:options.resourceAudience};
       if(options.departments)serverOptions.departments={auth:authResult.auth,resourceAudience:options.resourceAudience,gateway:options.departments};
       if(options.forge && options.forgeAllowedTenantId && options.forgeAllowedActorId)serverOptions.forge={auth:authResult.auth,resourceAudience:options.resourceAudience,forge:options.forge,allowedTenantId:options.forgeAllowedTenantId,allowedActorId:options.forgeAllowedActorId,assertCurrent:()=>{if(closed || request.signal.aborted)throw Error("Forge request or host no longer current");}};

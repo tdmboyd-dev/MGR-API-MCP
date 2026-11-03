@@ -6,14 +6,14 @@ import {DepartmentGateway,type DepartmentGatewayConfig} from "./department-gatew
 export const OWNER_DEPARTMENT_REQUEST_BYTES=1_200_000;
 
 /** Explicit loopback service-token deployment. It is not a hosted OAuth issuer. */
-export function createLocalDepartmentEdge(options:DepartmentGatewayConfig&{port:number;accessToken:string;expiresAt:number;repositories?:RepositoryReadGateway}){
+export function createLocalDepartmentEdge(options:DepartmentGatewayConfig&{port:number;accessToken:string;expiresAt:number;repositories?:RepositoryReadGateway;agentsWorkflowRead?:{origin:string;token:string}}){
  if(!Number.isInteger(options.port)||(options.port!==0&&options.port<1024)||options.port>65535||options.accessToken.length<32||!Number.isFinite(options.expiresAt)||options.expiresAt<=Date.now())throw Error("Valid local port, strong private token and expiry required");
  const gateway=new DepartmentGateway(options);
  function createHandler(base:string){
  const audience=base+"/mcp";
- return createAuthorizedMgrMcpHttpHandler({...(options.legacy&&!options.legacyTenantId?{legacy:options.legacy}:{}),departments:gateway,...(options.repositories?{repositories:options.repositories}:{}),resourceAudience:audience,resourceMetadataUrl:base+"/.well-known/oauth-protected-resource",requiredScopes:["tools:read"],verifier:{async verify(token){
+ return createAuthorizedMgrMcpHttpHandler({...(options.legacy&&!options.legacyTenantId?{legacy:options.legacy}:{}),departments:gateway,...(options.agentsWorkflowRead?{agentsWorkflowRead:{...options.agentsWorkflowRead,owner:{actorId:options.actorId,tenantId:options.tenantId}}}:{}),...(options.repositories?{repositories:options.repositories}:{}),resourceAudience:audience,resourceMetadataUrl:base+"/.well-known/oauth-protected-resource",requiredScopes:["tools:read"],verifier:{async verify(token){
   if(Buffer.byteLength(token)!==Buffer.byteLength(options.accessToken)||!timingSafeEqual(Buffer.from(token),Buffer.from(options.accessToken)))return null;
-  return {subject:options.actorId,tenantId:options.tenantId,audience,scopes:["tools:read","departments:execute","departments:read",...(options.repositories?["repositories:read"]:[])],expiresAt:options.expiresAt};
+  return {subject:options.actorId,tenantId:options.tenantId,audience,scopes:["tools:read","departments:execute","departments:read",...(options.repositories?["repositories:read"]:[]),...(options.agentsWorkflowRead?["workflows:read"]:[])],expiresAt:options.expiresAt};
  }}});
  }
  const fixedBase=options.port===0?null:`http://127.0.0.1:${options.port}`;
