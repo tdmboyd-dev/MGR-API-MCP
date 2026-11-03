@@ -1,6 +1,6 @@
 ## MGR Agents workflow evidence
 
-The ecosystem catalog keeps the default-branch source pin and records audit revision 946adf48d61322e39e13bde486e79734d21183f0 for embedded PostgreSQL claims, history pagination and owner-scoped linked agent lookup. The test uses seeded agent records. The current workflow recovery manual at 68227dbf286aea174f5890c2813c876b91fcf966 is readable through the enrolled Git manual reader. Actual agent-run insertion, shared execution transport, hosted database and Tevin dispatch acceptance remain open.
+The MGR Agents catalog keeps its default-branch pin separate from audit evidence. It now identifies the embedded PostgreSQL approval-claim proof at 5b640f6d5a5bffb4b73645a2d6910a634cec7669 and the current recovery guide at 0de1bc81d05db078481228ceeeac587a9ce937f2. The approval check used a test database adapter and controlled executor. Tevin's authenticated local reader retained the guide revision across SQLite reopen at MGR-ONE 32d4310f7c671bac096eda58f86c25dd896f8d5f. Shared execution transport, hosted database and provider delivery remain open.
 
 
 
