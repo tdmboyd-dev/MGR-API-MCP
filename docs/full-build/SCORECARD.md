@@ -1,3 +1,7 @@
+## Explicit Legacy tenant mapping on November 3
+
+The local department edge keeps Tevin's personal owner identity for MCP authorization and can bind the contact operation to a separate Legacy tenant UUID. The binding is trusted startup configuration, not tool input. Generic Legacy tools are omitted in this mapped mode. The actual isolated PostgreSQL owner journey passed through the original scoped Legacy audit service with exactly one contact after Tevin restart and replay. The Legacy main branch lacked the entity readback endpoint during an earlier isolated attempt, which remained unconfirmed. The published Legacy audit service provides the scoped route. Deployment adoption and permanent endpoint configuration remain open.
+
 ## Exact Legacy contact acknowledgment and readback
 
 The shared contact action now requires its POST receipt ID to match the receipt found during scoped Legacy truth and entity readback. A missing or different receipt leaves the command outcome unconfirmed. The gateway does not retry the POST. Typecheck and twelve focused transport tests passed, including missing, mismatched and exact receipts. The Legacy scenarios used injected transport responses. Live PostgreSQL owner acceptance and everyday Tevin registration remain open.

@@ -21,7 +21,7 @@ export const departmentCommand=z.discriminatedUnion("operation",[
 ]);
 export type DepartmentCommand=z.infer<typeof departmentCommand>;
 export interface DepartmentEndpoint {baseUrl:string;token:string}
-export interface DepartmentGatewayConfig {tenantId:string;actorId:string;creation?:DepartmentEndpoint;voice?:DepartmentEndpoint;signme?:DepartmentEndpoint;legacy?:LegacyEdgeClient;omnidev?:OmniClientConfig;forge?:ForgeDepartmentConfig;timeoutMs?:number;fetcher?:typeof fetch}
+export interface DepartmentGatewayConfig {tenantId:string;actorId:string;creation?:DepartmentEndpoint;voice?:DepartmentEndpoint;signme?:DepartmentEndpoint;legacy?:LegacyEdgeClient;legacyTenantId?:string;omnidev?:OmniClientConfig;forge?:ForgeDepartmentConfig;timeoutMs?:number;fetcher?:typeof fetch}
 const digest=(bytes:Uint8Array)=>createHash("sha256").update(bytes).digest("hex");
 export const canonicalDepartmentJson=(x:any):string=>x!==null&&typeof x==="object"?(Array.isArray(x)?`[${x.map(canonicalDepartmentJson).join(",")}]`:`{${Object.entries(x).filter(([,v])=>v!==undefined).sort(([a],[b])=>a.localeCompare(b)).map(([k,v])=>JSON.stringify(k)+":"+canonicalDepartmentJson(v)).join(",")}}`):JSON.stringify(x);
 const inputDigest=(x:unknown)=>digest(Buffer.from(canonicalDepartmentJson(x)));
@@ -33,6 +33,7 @@ export class DepartmentGateway {
     this.forge=config.forge?new ForgeDepartmentAdapter(config.forge,config.tenantId,config.actorId):undefined;
     if(config.omnidev&&(config.omnidev.actorId!==config.actorId||config.omnidev.tenantId!==config.tenantId))throw Error("Omni service principal must match gateway principal");
     this.omni=config.omnidev?new OmniEngineeringClient(config.omnidev):undefined;
+    if(config.legacyTenantId!==undefined&&(!config.legacy||!/^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/.test(config.legacyTenantId)))throw Error("Legacy tenant binding invalid");
     if(!config.actorId.trim()||!config.tenantId.trim())throw Error("Department principal required");
     for(const endpoint of [config.creation,config.voice,config.signme]){
       if(!endpoint)continue;
@@ -81,7 +82,7 @@ export class DepartmentGateway {
     if(c.operation==="omnidev.job.verify"){if(!this.omni)throw Error("Omni engineering service not configured");return {...await this.omni.execute(c.requestId,c.input,preDispatch),operation:c.operation};}
     if(c.operation==="legacy.contact.create"){
       if(!p.legacy)throw Error("Department legacy not configured");
-      const result=await p.legacy.execute({tenantId:p.tenantId,actorId:p.actorId,correlationId:c.requestId,idempotencyKey:c.requestId},{action:"crm.create_contact",payload:{firstName:c.input.displayName,...(c.input.email?{email:c.input.email}:{})}});
+      const result=await p.legacy.execute({tenantId:p.legacyTenantId??p.tenantId,actorId:p.actorId,correlationId:c.requestId,idempotencyKey:c.requestId},{action:"crm.create_contact",payload:{firstName:c.input.displayName,...(c.input.email?{email:c.input.email}:{})}});
       if(!result.accepted||!result.receiptId)throw Error("Legacy did not confirm persisted contact");
       const confirmed=await this.status(c);
       if(!('receipt' in confirmed)||confirmed.receipt?.receiptId!==result.receiptId)throw Error("Legacy command receipt is not confirmed by exact readback");
@@ -124,7 +125,7 @@ export class DepartmentGateway {
     if(isForgeDepartmentCommand(c)){if(!this.forge)throw Error('Forge department not configured');return this.forge.status(c);}
     if(c.operation==="omnidev.job.verify"){if(!this.omni)throw Error("Omni engineering service not configured");return {...await this.omni.status(c.requestId,c.input),operation:c.operation};}
     if(c.operation==="legacy.contact.create"){
-      const context={tenantId:this.config.tenantId,actorId:this.config.actorId,correlationId:c.requestId,idempotencyKey:c.requestId};
+      const context={tenantId:this.config.legacyTenantId??this.config.tenantId,actorId:this.config.actorId,correlationId:c.requestId,idempotencyKey:c.requestId};
       const request={action:"crm.create_contact",payload:{firstName:c.input.displayName,...(c.input.email?{email:c.input.email}:{})}};
       if(!this.config.legacy)throw Error("Department legacy not configured");
       const receipts=await this.config.legacy.truthReceipts<any>(context.tenantId,{correlationId:c.requestId,actorId:context.actorId,action:request.action,limit:100},context);

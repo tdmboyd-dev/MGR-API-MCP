@@ -11,7 +11,7 @@ export function createLocalDepartmentEdge(options:DepartmentGatewayConfig&{port:
  const gateway=new DepartmentGateway(options);
  function createHandler(base:string){
  const audience=base+"/mcp";
- return createAuthorizedMgrMcpHttpHandler({...(options.legacy?{legacy:options.legacy}:{}),departments:gateway,...(options.repositories?{repositories:options.repositories}:{}),resourceAudience:audience,resourceMetadataUrl:base+"/.well-known/oauth-protected-resource",requiredScopes:["tools:read"],verifier:{async verify(token){
+ return createAuthorizedMgrMcpHttpHandler({...(options.legacy&&!options.legacyTenantId?{legacy:options.legacy}:{}),departments:gateway,...(options.repositories?{repositories:options.repositories}:{}),resourceAudience:audience,resourceMetadataUrl:base+"/.well-known/oauth-protected-resource",requiredScopes:["tools:read"],verifier:{async verify(token){
   if(Buffer.byteLength(token)!==Buffer.byteLength(options.accessToken)||!timingSafeEqual(Buffer.from(token),Buffer.from(options.accessToken)))return null;
   return {subject:options.actorId,tenantId:options.tenantId,audience,scopes:["tools:read","departments:execute","departments:read",...(options.repositories?["repositories:read"]:[])],expiresAt:options.expiresAt};
  }}});
