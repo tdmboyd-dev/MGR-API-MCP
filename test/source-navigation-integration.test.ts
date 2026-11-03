@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
-import {createServer as netServer} from 'node:net';
+import {get as httpGet} from 'node:http';
 import {execFileSync} from 'node:child_process';
 import {pathToFileURL} from 'node:url';
 import {randomBytes} from 'node:crypto';
@@ -29,12 +29,13 @@ test('actual Tevin owner HTTP conversation -> shared SDK/TCP -> Code Monster com
  let automationItems:any[]=[];
  const checks:string[]=[],mark=(name:string)=>{checks.push(name);step(name);},token=randomBytes(32).toString('hex'),ownerToken=randomBytes(32).toString('hex');
  const current=()=>{if(!allowed)throw Error('owned-repository-revoked');};
- const socket=netServer();await new Promise<void>(r=>socket.listen(0,'127.0.0.1',r));const port=(socket.address() as {port:number}).port;await new Promise<void>(r=>socket.close(()=>r()));
  const backpack={project:(id:string)=>({id,root:source}),capabilityCard:(id:string)=>({project:id,status:'fixture-source',card:{id,name:'Owned source',purpose:'Navigation fixture',interfaces:[],evidence:[]}}),context:(id:string)=>({version:1,project:{id,name:'Owned source',purpose:'Navigation fixture'},tasks:[],memories:[]})};
  const repositories=new RepositoryReadGateway({backpack,bindings:[{project:'source',root:source,actorId:'owned-actor',tenantId:'owned-tenant'}],assertCurrent:current,registerSourceTools});
  async function stopOne(){if(ownerServer){ownerServer.closeAllConnections();await new Promise<void>(r=>ownerServer.close(()=>r()));ownerServer=null;}connection?.close();if(store?.db.isOpen)store.close();}
  t.after(async()=>{await stopOne();await client?.close();await edge?.close();assert.equal(path.dirname(fs.realpathSync(base)),fs.realpathSync(os.tmpdir()));assert(path.basename(base).startsWith('mgr-native-navigation-'));fs.rmSync(base,{recursive:true,force:true});});
- edge=createLocalDepartmentEdge({port,accessToken:token,expiresAt:Date.now()+180000,tenantId:'owned-tenant',actorId:'owned-actor',repositories});await new Promise<void>(r=>edge.server.listen(port,'127.0.0.1',r));
+ edge=createLocalDepartmentEdge({port:0,accessToken:token,expiresAt:Date.now()+180000,tenantId:'owned-tenant',actorId:'owned-actor',repositories});assert.throws(()=>edge.baseUrl,/active IPv4 loopback listener/);await new Promise<void>((r,reject)=>{edge.server.once('error',reject);edge.server.listen(0,'127.0.0.1',r);});
+ assert.equal(edge.baseUrl,'http://127.0.0.1:'+edge.server.address().port);
+ const denied=await new Promise<number|undefined>((resolve,reject)=>{httpGet(edge.baseUrl+'/mcp',{headers:{host:'127.0.0.1:0'}},response=>{response.resume();response.once('end',()=>resolve(response.statusCode));}).once('error',reject);});assert.equal(denied,421);
  client=createOwnerDepartmentClient({endpoint:edge.baseUrl+'/mcp',accessToken:token,tenantId:'owned-tenant',actorId:'owned-actor',assertCurrent:current});
  const counted={async callToolWithContext(request:any,context:any){if(request.name.startsWith('code_monster_'))toolCalls++;return client.callToolWithContext(request,context);}};
  async function startOne(enroll:boolean){

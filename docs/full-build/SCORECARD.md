@@ -1,3 +1,7 @@
+## Bound private loopback ports on November 3
+
+The department edge supports an OS-assigned port when requested. It derives its URL and MCP audience from the bound IPv4 loopback listener and rejects a mismatched Host header. Explicit fixed ports remain supported. The actual Tevin source navigation test covers authenticated SDK/TCP reads, revision-bound pagination, saved SQL replay, and wrong-port rejection with an OS-assigned listener. The fixed-port Forge transport checks remain part of verification. The first wrong-Host test used Fetch, which replaced the test header. The corrected test uses Node HTTP to send the exact header on the wire. Hosted/provider acceptance is separate.
+
 ## Native UV atlas and final three-lane Forge receiving — November 2, 2026
 
 The same optional Forge adapter now has 21 direct tools, including native
