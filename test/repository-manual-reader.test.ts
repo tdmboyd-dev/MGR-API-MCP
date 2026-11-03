@@ -43,6 +43,17 @@ test('manual continuations require the original revision and refuse a changed ch
  assert.notEqual((f.reader.read('tool',{document}) as typeof first).source.commit,first.source.commit);
 });
 
+test('code-only revisions return bounded path evidence without source content',t=>{
+ const f=fixture(t,'# Manual');
+ writeFileSync(join(f.root,'tool.ts'),'export const privateFixture = 1;');
+ writeFileSync(join(f.root,'.private.ts'),'private fixture');
+ f.git('add','.');f.git('commit','-m','Change tool source');
+ const page=f.reader.read('tool',{previous:f.index.source}) as any;
+ assert.equal(page.source.indexSha256,f.index.source.indexSha256);
+ assert.deepEqual(page.comparison.sourceChanges,{status:'compared',count:1,paths:['tool.ts']});
+ assert.doesNotMatch(JSON.stringify(page),/privateFixture|\.private\.ts/);
+});
+
 test('long committed paths paginate within the actual MCP response bound',t=>{
  const f=fixture(t,'# Manual');
  const blob=f.git('rev-parse','HEAD:README.md');

@@ -47,7 +47,16 @@ function compareInventory(root,commit,previous,rows){
   old.delete(path);
  }
  const removed=[...old.keys()];
- return {status:'compared',previousCommit:previous.commit,counts:{added:added.length,modified:modified.length,removed:removed.length},
+ let sourceChanges;
+ if(previous.commit!==commit){
+  try{
+   const paths=git(root,'diff','--no-ext-diff','--no-textconv','--no-renames','--name-only','-z',previous.commit,commit,'--')
+    .split('\0').filter(path=>/\.(?:[cm]?[jt]sx?|py|rs|go|java|cs|swift|kt)$/i.test(path)&&
+      !path.split('/').some(part=>part.startsWith('.')||['node_modules','vendor','research','evidence'].includes(part.toLowerCase())));
+   if(paths.length)sourceChanges={status:'compared',count:paths.length,paths:paths.filter(path=>Buffer.byteLength(path)<=256).slice(0,10)};
+  }catch{sourceChanges={status:'unavailable'};}
+ }
+ return {status:'compared',previousCommit:previous.commit,counts:{added:added.length,modified:modified.length,removed:removed.length},...(sourceChanges?{sourceChanges}:{}),
   paths:{added:added.slice(0,10),modified:modified.slice(0,10),removed:removed.slice(0,10)}};
 }
 export function createRepositoryManuals(roots,{allowUnavailable=false}={}){
@@ -89,6 +98,7 @@ export function createRepositoryManuals(roots,{allowUnavailable=false}={}){
     const samples=comparison?.paths;
     const longest=samples&&[samples.added,samples.modified,samples.removed].sort((a,b)=>b.length-a.length)[0];
     if(longest?.length){longest.pop();continue;}
+    if(comparison?.sourceChanges?.paths?.length){comparison.sourceChanges.paths.pop();continue;}
     if(documents.length<=1)throw Error('manual-index-entry-exceeds-page-bound');
     documents.pop();
    }
