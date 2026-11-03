@@ -242,6 +242,7 @@ export const ecosystemCatalogData = {
         "environment": "Isolated Windows PostgreSQL 16.15",
         "workflowSourceCommit": "d30202f344e3d3de0f1e27147902af73f99268eb",
         "startupSourceCommit": "370014701e51b792fcea1b49b22527d1440e4ccb",
+        "handoffCommit": "9a8f54e257304a33083946f5792f813dffe237e9",
         "branch": "audit/tevin-contact-readback-20261103",
         "startupChecks": ["Occupied port exits", "Assigned loopback port is usable", "Unauthenticated contact read returns 401"]
       },
@@ -339,9 +340,9 @@ export const ecosystemCatalogData = {
       },
       "localVerification": {
         "signmeSourceCommit": "f468fc88f4551dff9717a87d986631ed25975cb5",
-        "handoffCommit": "bb9e564ab53c2dc5c8a71f9879fa3c75b3410839",
+        "handoffCommit": "4c1b8261f68b923c1b0986951d4a27e030d8479f",
         "workflowSourceCommit": "450d2c5954c16e690d6b54014c885c8ec2aad18e",
-        "scope": "Real local owner HTTP verified unsigned text download, immutable versions, restart without redispatch and corrupt-version refusal.",
+        "scope": "Real local owner HTTP verified unsigned text download, immutable versions, restart without redispatch, corrupt-version and damaged-receipt refusal, and exact Creation-to-SignMe-to-Creation recovery.",
         "remaining": "Everyday browser draft card, signing, sending, billing and hosted acceptance."
       }
     },
