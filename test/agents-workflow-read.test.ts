@@ -9,14 +9,17 @@ test("Agents workflow read binds the owner, credential, response identity and si
   const token = "fixture-token-".repeat(3);
   const auth = { actorId: "foreign", tenantId: "tenant", audience: "edge",
     scopes: ["tools:read", "workflows:read"], expiresAt: Date.now() + 60_000 };
+  const workflowId = "33333333-3333-4333-8333-333333333333";
+  let history = false;
   let reply = JSON.stringify({ id: runId, workflowId: "workflow" });
   const send = t.mock.method(globalThis, "fetch", async (url: URL, init: RequestInit) => {
-    assert.equal(url.href, origin + "/api/workflows/run?runId=" + runId + (url.searchParams.has("view") ? "&view=summary" : ""));
+    if(history) assert.equal(url.href, origin + "/api/workflows/run?workflowId=" + workflowId);
+    else assert.equal(url.href, origin + "/api/workflows/run?runId=" + runId + (url.searchParams.has("view") ? "&view=summary" : ""));
     assert.equal(new Headers(init.headers).get("authorization"), "Bearer " + token);
     assert.equal(init.redirect, "error");
     return new Response(url.searchParams.has("view") ? JSON.stringify({id:runId,workflowId:"workflow",view:"summary"}) : reply);
   });
-  let call!: (input: {runId:string}) => Promise<{isError?:boolean;content: {text:string}[]}>;
+  let call!: (input: {runId:string}|{workflowId:string}) => Promise<{isError?:boolean;content: {text:string}[]}>;
   const server = { registerTool(name:string, _definition:unknown, handler:typeof call) {
     assert.equal(name,"mgr_agents_workflow_read");
     call = handler;
@@ -31,4 +34,9 @@ test("Agents workflow read binds the owner, credential, response identity and si
   assert.equal((await call({runId})).isError,true);
   reply="x".repeat(12_001);
   assert.equal(JSON.parse((await call({runId})).content[0]?.text??"{}").view,"summary");
+  history=true;
+  reply=JSON.stringify({runs:[{id:runId,workflowId}],hasMore:true,nextCursor:runId});
+  assert.equal((await call({workflowId})).content[0]?.text,reply);
+  reply=JSON.stringify({runs:[{id:runId,workflowId:runId}],hasMore:false});
+  assert.equal((await call({workflowId})).isError,true);
 });
