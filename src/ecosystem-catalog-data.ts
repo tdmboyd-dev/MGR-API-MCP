@@ -382,6 +382,12 @@ export const ecosystemCatalogData = {
         ]
       },
       "runtimeVerified": false,
+      "localVerification": {
+        "workflowSourceCommit": "d02279f913c33c4df9caf7184e3c28ba666502af",
+        "handoffCommit": "0127011882ff4743a14af1df2c08943685ef1515",
+        "scope": "Authenticated personal profile discovery and old-profile refusal after restart for direct and delegated speech. Controlled speech endpoint.",
+        "remaining": "Live synthesis, owner audition, physical device and hosted acceptance."
+      },
       "knowledgeInterface": {
         "tool": "mgr_repository_manual",
         "project": "voice",
