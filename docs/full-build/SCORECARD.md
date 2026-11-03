@@ -554,3 +554,7 @@ Revision comparison now includes bounded path hints for supported build and runt
 ## Legacy and SignMe handoff pins
 
 The shared catalog now points to the current Legacy PostgreSQL contact recheck and SignMe cold recovery handoffs. These handoff pins are separate from the default product source and earlier workflow and startup proof. SignMe scope now includes exact cross-product recovery and damaged-receipt refusal. The six catalog tests and the Tevin authenticated receiving check passed.
+
+## Create Loco reconstruction evidence in the shared catalog
+
+The shared catalog now carries Create Loco, Creation OS, Tevin workflow and owning handoff revision pins for the verified one-route static reconstruction journey. Tevin loaded all 22 catalog entries over the authenticated local edge with no execution claims. Everyday registration, live model, screenshot interpretation, responsive and media reconstruction, and production acceptance remain open.

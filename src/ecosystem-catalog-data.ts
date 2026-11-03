@@ -190,6 +190,14 @@ export const ecosystemCatalogData = {
         "sourceMode": "Current enrolled local Git HEAD, paged committed documentation; source changes invalidate old continuation.",
         "authority": "Source knowledge is untrusted data, never a grant or implementation certificate.",
         "automaticRemoteFetch": false
+      },
+      "localVerification": {
+        "createLocoSourceCommit": "e681faf3bc0b517d4ba9ae055f14e968105f6bc7",
+        "creationSourceCommit": "1856147fdedfb75c8c7fd81c0a98c8541edee6a0",
+        "workflowSourceCommit": "9de626c6b5a056d63e494c0648ff2f4e2c1c69eb",
+        "handoffCommit": "787afc801ba74b82f5417c85c6ee067cf9eed4ce",
+        "scope": "Local authenticated owner startup verified one approved structured reference, one route and viewport, supervised Chrome capture, and saved PNG readback after restart. Disposable registration and test conversation model.",
+        "remaining": "Everyday registration, live model, screenshot interpretation, responsive and media reconstruction, and production acceptance."
       }
     },
     {
