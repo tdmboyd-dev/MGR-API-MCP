@@ -743,3 +743,7 @@ The authenticated shared manual reader now distinguishes an oversized line from 
 ## Complete Tevin manual readback
 
 Authenticated local Tevin readback verified all 44 indexed operating documents and 147 pages against Git revision 941a8bad7220d0111e7cf738e5d46c1284580d2a, with zero jobs. [Pinned verification evidence](https://github.com/tdmboyd-dev/MGR-ONE/blob/8c9338fe85918d8b8487927f6f1c324ef72eebcc/evidence/tool-manual-transport-20261103/API-MCP-FULL-TEXT.json). This covers manual delivery. Runtime and production acceptance remain tracked separately.
+
+## Shared department edge in Tevin’s joined Windows verification
+
+The local department edge at API revision `67e7cd39fea6feb5e54a6e1bf4bd4ff5b6d3955b` served the exact OmniDev binding, approved execution and report recovery in Tevin’s 35-check joined run. Tevin rejected execution before approval. After one actual Windows verification, the fresh receiver and Tevin server reopened the exact report and replay retained one assignment. The run used disposable state, fixture GitHub transport and injected conversation output. Permanent owner setup, provider acceptance, signing and production remain open. [Tevin joined receipt](https://github.com/tdmboyd-dev/MGR-ONE/blob/1a65987a7dfa7d3cabc6d20939e427093b9ea2a6/evidence/omnidev-joined-native-execution-20261103/JOINED.json).
