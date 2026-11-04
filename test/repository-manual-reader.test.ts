@@ -63,12 +63,17 @@ test('build and runtime configuration changes appear without exposing configurat
  const f=fixture(t,'# Manual');
  writeFileSync(join(f.root,'package.json'),'{"name":"private-fixture-name"}');
  writeFileSync(join(f.root,'Dockerfile'),'FROM scratch');
+ writeFileSync(join(f.root,'Start-Tool.vbs'),'private launch fixture');
+ writeFileSync(join(f.root,'migration.sql'),'private schema fixture');
+ mkdirSync(join(f.root,'.github','workflows'),{recursive:true});
+ writeFileSync(join(f.root,'.github','workflows','verify.yml'),'private workflow fixture');
+ writeFileSync(join(f.root,'.github','private.yml'),'private unrelated fixture');
  writeFileSync(join(f.root,'.env'),'PRIVATE_FIXTURE_VALUE=fixture');
  f.git('add','.');f.git('commit','-m','Change configuration only');
  const page=f.reader.read('tool',{previous:f.index.source}) as any;
  assert.equal(page.source.indexSha256,f.index.source.indexSha256);
- assert.deepEqual(page.comparison.sourceChanges,{status:'compared',count:2,paths:['Dockerfile','package.json']});
- assert.doesNotMatch(JSON.stringify(page),/private-fixture-name|PRIVATE_FIXTURE_VALUE|\.env/);
+ assert.deepEqual(page.comparison.sourceChanges,{status:'compared',count:5,paths:['.github/workflows/verify.yml','Dockerfile','Start-Tool.vbs','migration.sql','package.json']});
+ assert.doesNotMatch(JSON.stringify(page),/private-fixture-name|PRIVATE_FIXTURE_VALUE|\.env|private (launch|schema|workflow|unrelated) fixture|private\.yml/);
 });
 
 test('long committed paths paginate within the actual MCP response bound',t=>{

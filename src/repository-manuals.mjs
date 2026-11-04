@@ -25,9 +25,11 @@ function isOperatingPath(path){
 }
 const isOperatingDocument=path=>/\.md$/i.test(path)&&isOperatingPath(path);
 function isImplementationPath(path){
- const name=path.split('/').at(-1).toLowerCase();
+ const normalized=path.toLowerCase();
+ if(/^\.github\/workflows\/[^/.][^/]*\.ya?ml$/.test(normalized))return true;
+ const name=normalized.split('/').at(-1);
  return isOperatingPath(path)&&(
-  /\.(?:[cm]?[jt]sx?|py|rs|go|java|cs|swift|kt)$/i.test(name)||
+  /\.(?:[cm]?[jt]sx?|py|rs|go|java|cs|swift|kt|ps1|psm1|psd1|cmd|bat|vbs|sh|bash|zsh|sql|prisma|proto|graphql|gql)$/.test(name)||
   /^(?:package(?:-lock)?\.json|(?:pnpm-lock|pnpm-workspace)\.yaml|yarn\.lock|bun\.lockb?|tsconfig(?:\.[\w-]+)?\.json|pyproject\.toml|uv\.lock|requirements(?:-[\w-]+)?\.txt|cargo\.(?:toml|lock)|go\.(?:mod|sum)|dockerfile(?:\.[\w-]+)?|(?:docker-)?compose(?:\.[\w-]+)?\.ya?ml)$/.test(name)
  );
 }
