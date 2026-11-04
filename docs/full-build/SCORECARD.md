@@ -618,3 +618,7 @@ The shared catalog now pins the verified owning Agents revision and describes it
 ## Unresolved receipts in compact Agents run readback
 
 The Agents shared reader preserves an optional, nonnegative unresolved tool receipt count or null on the compact fallback. Legacy summaries can omit it. The reader suite and TypeScript passed, and the actual owning route exercised the fallback after embedded PostgreSQL restore.
+
+## Compact Agents receipt references
+
+The Agents reader validates the optional compact receipt sample and its count before forwarding it. Older summary shapes remain valid. TypeScript and reader checks passed. The owning PostgreSQL test verified oversized-detail fallback through the actual reader.

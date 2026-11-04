@@ -22,6 +22,11 @@ const consistentRunState = z.object(runState).refine(({ status, outcomeState }) 
   outcomeState === undefined ||
   (status !== undefined && outcomeState === (status === "pending" || status === "running" ? "unconfirmed" : "recorded")),
 );
+const unresolvedReceiptSample = z.array(z.object({
+  stepId: z.string().min(1).max(200),
+  state: z.enum(["tool-outcome-unconfirmed", "awaiting-tool-approval"]),
+  receiptId: z.string().min(1).max(200),
+}).strict()).max(5);
 const historyPage = z.object({
   runs: z.array(z.object({
     id: z.uuid(), workflowId: z.uuid(), scheduleId: z.uuid().nullable().optional(),
@@ -142,6 +147,9 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
           !consistentRunState.safeParse(result).success ||
           (result.unresolvedToolReceiptCount !== undefined &&
             (result.view !== "summary" || !z.number().int().nonnegative().nullable().safeParse(result.unresolvedToolReceiptCount).success)) ||
+          (result.unresolvedToolReceiptSample !== undefined &&
+            (result.view !== "summary" || !unresolvedReceiptSample.safeParse(result.unresolvedToolReceiptSample).success ||
+              result.unresolvedToolReceiptSample.length > (result.unresolvedToolReceiptCount ?? 0))) ||
           (input.expectedWorkflowId !== undefined && result.workflowId !== input.expectedWorkflowId)) return error("Workflow read unconfirmed");
       return { content: [{ type: "text" as const, text }] };
     } catch {
