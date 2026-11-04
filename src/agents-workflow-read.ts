@@ -14,7 +14,10 @@ const exactReceipt = z.object({
   approval: z.object({ id: z.uuid(), status: z.string().min(1).max(80),
     executionOutcome: z.enum(["executed", "not_completed", "unconfirmed"]).nullable(),
   }).strict().nullable(),
-}).strict();
+  approvalEvidence: z.enum(["linked", "unavailable", "not-applicable"]).optional(),
+}).strict().refine(receipt => receipt.approvalEvidence === undefined || receipt.approvalEvidence === (
+  receipt.approval ? "linked" : receipt.status === "pending_approval" ? "unavailable" : "not-applicable"
+));
 const catalogPage = z.object({
   workflows: z.array(z.object({
     id: z.uuid(), name: z.string().min(1).max(100), triggerType: z.enum(["manual", "schedule", "event"]),

@@ -779,3 +779,7 @@ The existing reader accepts an exact run ID and receipt ID under the same read-o
 ## Agents receipt lookup in the catalog
 
 The Agents catalog entry now includes exact tool receipt lookup by run and receipt ID, pinned to owning revision c1f44f18bd7e17fd8e73dcde4374129c6b737db2 and its recovery guide. The authenticated MCP SDK test read the interface at the current catalog revision and refused a stale revision, with zero domain calls. Seven catalog checks and TypeScript passed.
+
+## Approval evidence availability on exact receipt reads
+
+The shared reader verifies that the optional approvalEvidence field agrees with the saved tool and approval state. Older receipts may omit it. TypeScript and the reader suite passed. The owning database test verified the unavailable case through the actual reader.
