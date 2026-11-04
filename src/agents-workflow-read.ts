@@ -74,6 +74,7 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
       const read = async () => {
         const response = await fetch(url, {
           headers: { authorization: `Bearer ${options.token}` },
+          cache: "no-store",
           redirect: "error",
           signal: AbortSignal.timeout(10_000),
         });

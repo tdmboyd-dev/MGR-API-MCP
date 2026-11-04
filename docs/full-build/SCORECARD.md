@@ -606,3 +606,7 @@ The committed manual index comparison now reports changes to recognized Windows 
 ## Owner workflow catalog discovery
 
 The existing owner-scoped Agents reader accepts catalog:true and an optional cursor. It projects IDs, names and trigger types, checks order and pagination, and uses the existing read-only credential. TypeScript and the reader suite passed. A separate installed Drizzle and embedded PostgreSQL run exercised the actual owning route through this reader after restore. Hosted enrollment remains open.
+
+## Owner workflow catalog cache and proxy boundaries
+
+The shared Agents reader requests every owner-scoped read with no-store and rejects redirects. The actual owning route and shared reader exercised the request setting and private catalog response in the embedded PostgreSQL test. TypeScript and the focused reader suite passed. Hosted and everyday acceptance remain open.
