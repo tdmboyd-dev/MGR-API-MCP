@@ -602,3 +602,7 @@ The local department edge at API revision `67e7cd39fea6feb5e54a6e1bf4bd4ff5b6d39
 ## Revision signals for launch scripts, schemas, and workflows
 
 The committed manual index comparison now reports changes to recognized Windows and shell launch scripts, database and interface schemas, and top-level GitHub Actions workflows. The response includes only bounded path samples and counts. Manual inventory identity stays stable when the documentation is unchanged. Historical and private path exclusions still apply, with a narrow exception for committed workflow filenames. Eighteen manual reader and MCP tests plus TypeScript checks passed. The authenticated Tevin test carried Windows script, migration and workflow paths through the owner edge into its saved receipt after reopening the services.
+
+## Owner workflow catalog discovery
+
+The existing owner-scoped Agents reader accepts catalog:true and an optional cursor. It projects IDs, names and trigger types, checks order and pagination, and uses the existing read-only credential. TypeScript and the reader suite passed. A separate installed Drizzle and embedded PostgreSQL run exercised the actual owning route through this reader after restore. Hosted enrollment remains open.

@@ -5,7 +5,15 @@ import { authorizeTool, type AuthContext } from "./authz.js";
 export const agentsWorkflowReadInput = z.union([
   z.object({ runId: z.uuid(), expectedWorkflowId: z.uuid().optional() }).strict(),
   z.object({ workflowId: z.uuid(), before: z.uuid().optional() }).strict(),
+  z.object({ catalog: z.literal(true), before: z.uuid().optional() }).strict(),
 ]);
+const catalogPage = z.object({
+  workflows: z.array(z.object({
+    id: z.uuid(), name: z.string().min(1).max(100), triggerType: z.enum(["manual", "schedule", "event"]),
+  })).max(20),
+  hasMore: z.boolean(),
+  nextCursor: z.uuid().optional(),
+});
 const runState = {
   status: z.enum(["pending", "running", "completed", "failed", "cancelled"]).optional(),
   outcomeState: z.enum(["unconfirmed", "recorded"]).optional(),
@@ -39,7 +47,7 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
     throw new Error("Invalid Agents workflow reader configuration");
   }
   server.registerTool("mgr_agents_workflow_read", {
-    description: "Read an exact saved run or page through saved runs by workflow ID for the configured owner. This tool does not dispatch or retry work.",
+    description: "Discover the configured owner's workflows, read an exact saved run, or page through saved runs. This tool does not dispatch or retry work.",
     inputSchema: agentsWorkflowReadInput,
     annotations: { readOnlyHint: true, destructiveHint: false, openWorldHint: false },
   }, async input => {
@@ -53,7 +61,10 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
       }
       const url = new URL("/api/workflows/run", origin);
       const runId = "runId" in input ? input.runId : undefined;
-      if ("workflowId" in input) {
+      if ("catalog" in input) {
+        url.searchParams.set("view", "catalog");
+        if (input.before) url.searchParams.set("before", input.before);
+      } else if ("workflowId" in input) {
         url.searchParams.set("workflowId", input.workflowId);
         if (input.before) url.searchParams.set("before", input.before);
       } else {
@@ -109,7 +120,14 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
         content: [{type:"text" as const,text:JSON.stringify({readOutcome:"unavailable",...input})}],
       };
       const result = JSON.parse(text);
-      if ("workflowId" in input) {
+      if ("catalog" in input) {
+        const page = catalogPage.safeParse(result);
+        if (!page.success || page.data.workflows.some((item, index, rows) =>
+          (input.before !== undefined && item.id <= input.before) || (index > 0 && item.id <= rows[index - 1]!.id)) ||
+          (page.data.hasMore ? page.data.workflows.length !== 20 || page.data.nextCursor !== page.data.workflows.at(-1)?.id
+            : page.data.nextCursor !== undefined)) return error("Workflow catalog unconfirmed");
+        text = JSON.stringify(page.data);
+      } else if ("workflowId" in input) {
         const page = historyPage.safeParse(result);
         if (!page.success || page.data.runs.some(run => run.workflowId !== input.workflowId || run.id === input.before ||
             !consistentRunState.safeParse(run).success) ||
