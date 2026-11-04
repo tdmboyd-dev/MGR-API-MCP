@@ -300,6 +300,12 @@ export const ecosystemCatalogData = {
         "commit": "7132facf9282e37d81748d257b08887e4dc4d5f7",
         "defaultBranch": "main"
       },
+      "localVerification": {
+        "branch": "integrate/department-tools-2026-10-28",
+        "workflowSourceCommit": "f34faf2cc18a968745b92ae1dcab2210efece839",
+        "scope": "A20 device dispatch checks the paired transport before connection and again before dispatch. BLE command write and readback targets survive caller mutation. Verified with simulated devices.",
+        "remaining": "Supported native transport, physical device action and independent readback, everyday Tevin enrollment and production acceptance."
+      },
       "integration": {
         "state": "catalogued",
         "tools": [],

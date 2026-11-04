@@ -1,3 +1,7 @@
+## Tevin device evidence in the shared catalog
+
+The MGR-ONE entry now carries the published A20 device-controller revision `f34faf2cc18a968745b92ae1dcab2210efece839` as local verification, separate from the catalog's baseline source pin. Authenticated catalog discovery returns the exact test scope and outstanding native and physical-device work. The catalog grants no device execution. TypeScript and seven focused catalog tests passed. Use a Tevin reader that recognizes this evidence shape before switching it to this API revision.
+
 ## Forge UV integration
 
 The SignMe ecosystem catalog entry now carries the tested repair source, SignMe handoff and Tevin workflow revisions for unsigned draft readback. Its published default source pin remains separate. Signing, sending, billing and hosted acceptance are listed as open. All five catalog tests and TypeScript passed.

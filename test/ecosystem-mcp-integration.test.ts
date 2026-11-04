@@ -40,6 +40,16 @@ test("authenticated MCP client discovers source catalog without calling a domain
     assert.ok(entry.workflowReadInterface.operations.includes("Exact saved tool receipt by run and receipt ID"));
     assert.equal(entry.workflowReadInterface.enrollmentRequired,true);
     assert.equal(entry.workflowReadInterface.executionSupported,false);
+    const tevin=await client.callTool({name:"mgr_ecosystem_catalog",arguments:{repoId:"MGR-ONE",expectedRevision:catalog.catalogRevision}});
+    assert.notEqual(tevin.isError,true);
+    const tevinBlock=tevin.content.find(b=>b.type==="text");
+    assert.ok(tevinBlock && tevinBlock.type==="text");
+    const [deviceEvidence]=JSON.parse(tevinBlock.text).entries;
+    assert.notEqual(deviceEvidence.source.commit,deviceEvidence.localVerification.workflowSourceCommit);
+    assert.match(deviceEvidence.localVerification.scope,/simulated devices/);
+    assert.match(deviceEvidence.localVerification.remaining,/physical device action/);
+    assert.equal(deviceEvidence.runtimeVerified,false);
+    assert.deepEqual(deviceEvidence.integration.tools,[]);
     const stale=await client.callTool({name:"mgr_ecosystem_catalog",arguments:{repoId:"MGR-Agents",expectedRevision:"0".repeat(64)}});
     assert.equal(stale.isError,true);
     assert.equal(domainCalls,0);
