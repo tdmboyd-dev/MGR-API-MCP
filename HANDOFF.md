@@ -759,3 +759,7 @@ The existing owner-scoped Agents reader accepts catalog:true and an optional cur
 ## Owner workflow catalog cache and proxy boundaries
 
 The shared Agents reader requests every owner-scoped read with no-store and rejects redirects. The actual owning route and shared reader exercised the request setting and private catalog response in the embedded PostgreSQL test. TypeScript and the focused reader suite passed. Hosted and everyday acceptance remain open.
+
+## Agents catalog evidence and callable read interface
+
+The shared catalog now pins the verified owning Agents revision and describes its optional owner-enrolled workflow catalog, saved history and exact run reader. The default branch source pin and global runtime acceptance remain separate. The catalog and reader suite passed seven checks, and TypeScript passed. The owning revision covers embedded PostgreSQL, the actual shared reader and Next.js authorization checks. Hosted rollout, everyday Tevin enrollment, workflow execution and provider acceptance remain open.

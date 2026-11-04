@@ -120,16 +120,22 @@ export const ecosystemCatalogData = {
       },
       "runtimeVerified": false,
       "localVerification": {
-        "workflowSourceCommit": "946adf48d61322e39e13bde486e79734d21183f0",
+        "workflowSourceCommit": "6cf5f6252eb88a801fe02c068db5e8ca89a46312",
         "branch": "audit/workflow-ownership-20261101",
         "evidencePath": "tests/workflow-run-route.test.mjs",
         "approvalClaimCommit": "5b640f6d5a5bffb4b73645a2d6910a634cec7669",
         "approvalEvidencePath": "tests/approval-claim.test.mjs",
         "recoveryGuideCommit": "0de1bc81d05db078481228ceeeac587a9ce937f2",
         "recoveryGuidePath": "docs/WORKFLOW-RUN-RECOVERY.md",
-        "handoffCommit": "ebae3d7a265742c580a80e8d360174e49e90fd73",
-        "scope": "Embedded PostgreSQL verifies manual run claims, history pagination, owner-scoped agent-attempt lookup and shared API readback of the original run and linked receipts after snapshot restore. Controlled authentication and agent dispatch.",
-        "remaining": "Hosted Neon, everyday Tevin workflow access, real provider execution and production acceptance."
+        "handoffCommit": "6cf5f6252eb88a801fe02c068db5e8ca89a46312",
+        "scope": "Embedded PostgreSQL and the actual shared reader verify owner catalog pagination, deleted and foreign cursor refusal, and saved run readback after restore. The actual Next.js proxy and route verify bearer GET scope and private catalog caching. Agent dispatch is controlled.",
+        "remaining": "Hosted Neon, everyday Tevin reader enrollment and live readback, workflow execution from Tevin, real provider execution and production acceptance."
+      },
+      "workflowReadInterface": {
+        "tool": "mgr_agents_workflow_read",
+        "enrollmentRequired": true,
+        "operations": ["Owned workflow catalog", "Saved history by workflow ID", "Exact saved run"],
+        "executionSupported": false
       },
       "knowledgeInterface": {
         "tool": "mgr_repository_manual",
