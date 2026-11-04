@@ -9,6 +9,16 @@ import { OmniEngineeringClient, omniBindingInput, omniVerificationInput, type Om
 import {forgeDepartmentCommands,isForgeDepartmentCommand,ForgeDepartmentAdapter,type ForgeDepartmentConfig} from './forge-department.js';
 
 const id=z.string().regex(/^[a-zA-Z0-9_.:-]{1,128}$/);
+const signMeHistoryInput=z.object({documentId:id,afterVersion:z.number().int().positive().optional()}).strict();
+const signMeHistoryPage=z.object({
+  documentId:id,
+  versions:z.array(z.object({
+    version:z.number().int().positive(),title:z.string().min(1).max(500),
+    sha256:z.string().regex(/^[a-f0-9]{64}$/),bytes:z.number().int().min(1).max(500_000),
+    createdAt:z.iso.datetime(),
+  }).strict()).max(20),
+  nextAfterVersion:z.number().int().positive().optional(),
+}).strict();
 const content=z.string().min(1).max(10000).refine(value=>Buffer.from(value,'utf8').toString('utf8')===value&&value.trim().length>0);
 const voiceId=z.string().regex(/^[a-zA-Z0-9_-]{1,80}$/);
 export const departmentCommand=z.discriminatedUnion("operation",[
@@ -59,6 +69,25 @@ export class DepartmentGateway {
   }
   private async identifierLookupCapability(service:'creation'|'signme'){const health=await this.request(service,'/health');if(health.identifierLookupVersion!==1||health.tenantId!==this.config.tenantId||health.actorId!==this.config.actorId)throw Error('Native exact-identifier lookup capability is unavailable');}
   private signMeOperation(requestId:string){return dotSegment(requestId)?this.request('signme','/v1/documents/operations/read',{requestId}):this.request('signme',`/v1/documents/operations/${encodeURIComponent(requestId)}`);}
+  async signMeHistory(input:z.infer<typeof signMeHistoryInput>){
+    const {documentId,afterVersion}=signMeHistoryInput.parse(input);
+    const result=signMeHistoryPage.parse(await this.request('signme','/v1/documents/read',{
+      documentId,view:'versions',...(afterVersion===undefined?{}:{afterVersion}),
+    }));
+    if(result.documentId!==documentId||result.versions.some((row,index)=>
+      row.version<=(index===0?(afterVersion??0):result.versions[index-1]!.version))||
+      (result.nextAfterVersion!==undefined&&(result.versions.length!==20||result.nextAfterVersion!==result.versions.at(-1)?.version)))
+      throw Error('SignMe version history identity or cursor mismatch');
+    const versions=[...result.versions];
+    let nextAfterVersion=result.nextAfterVersion;
+    for(;;){
+      const page={documentId,versions,...(nextAfterVersion===undefined?{}:{nextAfterVersion})};
+      if(Buffer.byteLength(JSON.stringify(page))<=12_000)return page;
+      if(versions.length<=1)throw Error('SignMe version history exceeds response limit');
+      versions.pop();
+      nextAfterVersion=versions.at(-1)!.version;
+    }
+  }
   private creationJob(requestId:string){return dotSegment(requestId)?this.request('creation','/v1/creation/jobs/read',{requestId}):this.request('creation',`/v1/creation/jobs/${encodeURIComponent(requestId)}`);}
   async candidateBinding(input:z.infer<typeof omniBindingInput>){if(!this.omni)throw Error("Omni engineering service not configured");return this.omni.binding(input);}
   async resume(command:DepartmentCommand,preDispatch?:()=>void){
@@ -204,6 +233,18 @@ function departmentPublicationFence(options:DepartmentToolOptions,write=false){
   return ()=>{if(!Number.isFinite(auth.expiresAt)||auth.expiresAt<=Date.now())throw new DepartmentAuthorityExpired('Department authorization expired');if(options.auth!==auth||options.gateway!==gateway||gateway.config!==config||auth.expiresAt!==expires||identity()!==original)throw Error('Department original authority changed');gateway.authorize(auth,options.resourceAudience,write);};
 }
 export function registerDepartmentTools(server:McpServer,options:DepartmentToolOptions){
+  if(options.gateway.config.signme){
+    server.registerTool('mgr_department_signme_history',{
+      description:'Read an owned SignMe draft version history page. Follow nextAfterVersion with the same documentId. Metadata only. No signing, sending or mutation.',
+      inputSchema:signMeHistoryInput,annotations:{readOnlyHint:true,destructiveHint:false},
+    },async input=>{
+      try{
+        const current=departmentPublicationFence(options);current();
+        const page=await options.gateway.signMeHistory(input);current();
+        return {content:[{type:'text',text:JSON.stringify(page)}]};
+      }catch{return {isError:true,content:[{type:'text',text:'{"error":"SignMe version history unavailable","sideEffects":false}'}]};}
+    });
+  }
   server.registerTool('mgr_department_forge_context',{description:'Read the verified base world and native edit facts for this exact enrolled Forge workspace. No approval, creation or binary artifacts.',inputSchema:z.object({workspaceId:id}).strict()},async input=>{try{const current=departmentPublicationFence(options);current();const result=await options.gateway.forgeWorldContext(input.workspaceId);current();const text=JSON.stringify(result);current();return {content:[{type:'text',text}]};}catch{return {isError:true,content:[{type:'text',text:'{"error":"Forge world context unavailable","sideEffects":false}'}]};}});
   server.registerTool("mgr_department_context",{
     description:"Read the authenticated department gateway principal. No domain request or mutation; identity comes only from the verified session.",

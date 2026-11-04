@@ -646,3 +646,7 @@ The shared manual reader now checks the enrolled checkout directory, its .git en
 ## Manual checkout recovery
 
 When the authorized tool checkout no longer resolves to its enrolled Git identity, the shared manual reader returns manual-project-unavailable with verify-enrolled-checkout. This distinguishes a missing or replaced checkout from a new commit on the same checkout. The diagnostic is scoped to the original actor, tenant and binding. Review the intended checkout before restarting or re-enrolling the reader. A restart can establish new local enrollment, so verify the source first. Hosted verification remains open.
+
+## Read-only SignMe draft version history over MCP
+
+An enrolled SignMe department now exposes mgr_department_signme_history to callers with the existing actor, tenant, audience and departments:read scope. Input is documentId and optional afterVersion. The shared reader uses the native body lookup for exact identifiers, validates document identity and ascending version metadata, and returns at most 12,000 UTF-8 bytes. Follow nextAfterVersion with the same documentId. A shortened page resumes after its last emitted version. The tool reads metadata only. The official SDK regression recovered all 22 fixture versions with escape-heavy titles, denied missing scope and identity overrides before native transport, and rejected a mismatched native response. Tevin conversation routing, real native-to-shared history qualification and hosted verification remain open.

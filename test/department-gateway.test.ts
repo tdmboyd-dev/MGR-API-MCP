@@ -67,3 +67,58 @@ test("official MCP client discovers and calls bounded department schemas; invali
  const denied=await client.callTool({name:"mgr_department_execute",arguments:{...command,actorId:"spoof"}});assert.equal(denied.isError,true);assert.equal(calls,2);
  }finally{await client.close();await handler.close();}
 });
+
+test("SignMe history SDK pages preserve owner scope and continue after the last emitted version",async()=>{
+ const documentId="..";
+ const versions=Array.from({length:22},(_,index)=>({
+  version:index+1,title:"\u0001".repeat(450),sha256:"a".repeat(64),bytes:24,createdAt:"2026-11-03T00:00:00.000Z",
+ }));
+ let calls=0,mismatch=false;
+ const gateway=new DepartmentGateway({...config,fetcher:async(input,init)=>{
+  calls++;
+  assert.equal(new URL(String(input)).pathname,"/v1/documents/read");
+  assert.equal(init?.method,"POST");
+  assert.equal(new Headers(init?.headers).get("x-actor-id"),auth.actorId);
+  assert.equal(new Headers(init?.headers).get("x-tenant-id"),auth.tenantId);
+  const body=JSON.parse(String(init?.body));
+  assert.equal(body.documentId,documentId);
+  assert.equal(body.view,"versions");
+  const remaining=versions.filter(row=>row.version>(body.afterVersion??0));
+  const page=remaining.slice(0,20);
+  return Response.json({documentId:mismatch?"different":documentId,versions:page,
+   ...(remaining.length>20?{nextAfterVersion:page.at(-1)!.version}:{})});
+ }});
+ const handler=createAuthorizedMgrMcpHttpHandler({resourceAudience:audience,resourceMetadataUrl:audience,
+  requiredScopes:["tools:read"],legacy,departments:gateway,verifier:{async verify(token){
+   return {subject:auth.actorId,tenantId:auth.tenantId,audience,scopes:token==="owner"?["tools:read","departments:read"]:["tools:read"],expiresAt:auth.expiresAt};
+  }}});
+ const owner=new Client({name:"signme-history-owner",version:"1"}),denied=new Client({name:"signme-history-denied",version:"1"});
+ const transport=(token:string)=>new StreamableHTTPClientTransport(new URL(audience),{
+  authProvider:{token:async()=>token},fetch:async(input,init)=>handler.fetch(new Request(input,init)),
+ });
+ try{
+  await owner.connect(transport("owner"));await denied.connect(transport("limited"));
+  const name="mgr_department_signme_history";
+  assert.ok((await owner.listTools()).tools.some(tool=>tool.name===name));
+  assert.equal((await denied.callTool({name,arguments:{documentId}})).isError,true);
+  assert.equal((await owner.callTool({name,arguments:{documentId,actorId:"spoof"}})).isError,true);
+  assert.equal(calls,0);
+  const observed:number[]=[];
+  let afterVersion:number|undefined;
+  for(let index=0;index<22;index++){
+   const result=await owner.callTool({name,arguments:{documentId,...(afterVersion===undefined?{}:{afterVersion})}});
+   assert.notEqual(result.isError,true);
+   const block=(result.content as {text:string}[])[0]!;
+   assert.ok(Buffer.byteLength(block.text)<=12_000);
+   const page=JSON.parse(block.text);
+   assert.ok(page.versions.length>0&&page.versions.length<20);
+   observed.push(...page.versions.map((row:{version:number})=>row.version));
+   afterVersion=page.nextAfterVersion;
+   if(afterVersion===undefined)break;
+   assert.equal(afterVersion,observed.at(-1));
+  }
+  assert.deepEqual(observed,versions.map(row=>row.version));
+  mismatch=true;
+  assert.equal((await owner.callTool({name,arguments:{documentId}})).isError,true);
+ }finally{await owner.close();await denied.close();await handler.close();}
+});
