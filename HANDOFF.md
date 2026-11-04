@@ -739,3 +739,7 @@ Manual responses now include a SHA-256 digest of the exact normalized page text,
 ## Oversized manual line diagnostics
 
 The authenticated shared manual reader now distinguishes an oversized line from an unavailable guide. Tevin returns a blocked read result with the requested document and line and saves an unconfirmed receipt. The real local Git and HTTP/MCP test committed a line beyond the page bound and verified the structured result. The line is still subject to the original response limit.
+
+## Complete Tevin manual readback
+
+Authenticated local Tevin readback verified all 44 indexed operating documents and 147 pages against Git revision 941a8bad7220d0111e7cf738e5d46c1284580d2a, with zero jobs. [Pinned verification evidence](https://github.com/tdmboyd-dev/MGR-ONE/blob/8c9338fe85918d8b8487927f6f1c324ef72eebcc/evidence/tool-manual-transport-20261103/API-MCP-FULL-TEXT.json). This covers manual delivery. Runtime and production acceptance remain tracked separately.
