@@ -31,6 +31,17 @@ test("authenticated MCP client discovers source catalog without calling a domain
     assert.equal(catalog.entries[0].repoId,"MGR-SIGN-ME");
     assert.equal(catalog.entries[0].runtimeVerified,false);
     assert.equal(catalog.entries[0].integration.tools.length,0);
+    const agents=await client.callTool({name:"mgr_ecosystem_catalog",arguments:{repoId:"MGR-Agents",expectedRevision:catalog.catalogRevision}});
+    assert.notEqual(agents.isError,true);
+    const agentsBlock=agents.content.find(b=>b.type==="text");
+    assert.ok(agentsBlock && agentsBlock.type==="text");
+    const entry=JSON.parse(agentsBlock.text).entries[0];
+    assert.equal(entry.repoId,"MGR-Agents");
+    assert.ok(entry.workflowReadInterface.operations.includes("Exact saved tool receipt by run and receipt ID"));
+    assert.equal(entry.workflowReadInterface.enrollmentRequired,true);
+    assert.equal(entry.workflowReadInterface.executionSupported,false);
+    const stale=await client.callTool({name:"mgr_ecosystem_catalog",arguments:{repoId:"MGR-Agents",expectedRevision:"0".repeat(64)}});
+    assert.equal(stale.isError,true);
     assert.equal(domainCalls,0);
     const invalid=await client.callTool({name:"mgr_ecosystem_catalog",arguments:{repoId:"unknown"}});
     assert.equal(invalid.isError,true);

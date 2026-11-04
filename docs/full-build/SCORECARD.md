@@ -626,3 +626,7 @@ The Agents reader validates the optional compact receipt sample and its count be
 ## Exact Agents workflow receipt readback
 
 The existing reader accepts an exact run ID and receipt ID under the same read-only owner binding. It validates the response identity and bounded shape, preserves unavailable results and never substitutes a workflow summary for a receipt. TypeScript and reader tests passed, and the owning embedded PostgreSQL test exercised the new call through the actual reader.
+
+## Agents receipt lookup in the catalog
+
+The Agents catalog entry now includes exact tool receipt lookup by run and receipt ID, pinned to owning revision c1f44f18bd7e17fd8e73dcde4374129c6b737db2 and its recovery guide. The authenticated MCP SDK test read the interface at the current catalog revision and refused a stale revision, with zero domain calls. Seven catalog checks and TypeScript passed.

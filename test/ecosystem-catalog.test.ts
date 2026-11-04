@@ -49,12 +49,12 @@ test("Agents workflow evidence keeps its audit revision separate from the defaul
   assert.ok("handoffCommit" in agents.localVerification && "remaining" in agents.localVerification);
   assert.match(agents.localVerification.handoffCommit,/^[a-f0-9]{40}$/);
   assert.match(agents.localVerification.remaining,/Hosted Neon/);
-  assert.equal(agents.localVerification.workflowSourceCommit,"6cf5f6252eb88a801fe02c068db5e8ca89a46312");
+  assert.equal(agents.localVerification.workflowSourceCommit,"c1f44f18bd7e17fd8e73dcde4374129c6b737db2");
   assert.match(agents.localVerification.scope,/owner catalog pagination/);
   assert.ok("workflowReadInterface" in agents);
   assert.deepEqual(agents.workflowReadInterface,{
     tool:"mgr_agents_workflow_read",enrollmentRequired:true,
-    operations:["Owned workflow catalog","Saved history by workflow ID","Exact saved run"],executionSupported:false,
+    operations:["Owned workflow catalog","Saved history by workflow ID","Exact saved run","Exact saved tool receipt by run and receipt ID"],executionSupported:false,
   });
   assert.equal(agents.runtimeVerified,false);
   assert.deepEqual(agents.integration.tools,[]);
