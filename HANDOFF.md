@@ -799,3 +799,7 @@ When the authorized tool checkout no longer resolves to its enrolled Git identit
 ## Read-only SignMe draft version history over MCP
 
 An enrolled SignMe department now exposes mgr_department_signme_history to callers with the existing actor, tenant, audience and departments:read scope. Input is documentId and optional afterVersion. The shared reader uses the native body lookup for exact identifiers, validates document identity and ascending version metadata, and returns at most 12,000 UTF-8 bytes. Follow nextAfterVersion with the same documentId. A shortened page resumes after its last emitted version. The tool reads metadata only. The official SDK regression recovered all 22 fixture versions with escape-heavy titles, denied missing scope and identity overrides before native transport, and rejected a mismatched native response. Tevin conversation routing, real native-to-shared history qualification and hosted verification remain open.
+
+## SignMe history admitted by the guarded local client
+
+The local owner SDK wrapper now accepts mgr_department_signme_history using the same strict input schema as the MCP tool. This closes the local client rejection found when wiring Tevin. It preserves the original identity and cancellation fences and does not add a mutation or approval.

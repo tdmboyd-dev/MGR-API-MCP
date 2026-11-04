@@ -9,7 +9,7 @@ import { OmniEngineeringClient, omniBindingInput, omniVerificationInput, type Om
 import {forgeDepartmentCommands,isForgeDepartmentCommand,ForgeDepartmentAdapter,type ForgeDepartmentConfig} from './forge-department.js';
 
 const id=z.string().regex(/^[a-zA-Z0-9_.:-]{1,128}$/);
-const signMeHistoryInput=z.object({documentId:id,afterVersion:z.number().int().positive().optional()}).strict();
+export const signMeHistoryInput=z.object({documentId:id,afterVersion:z.number().int().positive().optional()}).strict();
 const signMeHistoryPage=z.object({
   documentId:id,
   versions:z.array(z.object({

@@ -5,7 +5,7 @@ import {AsyncLocalStorage} from 'node:async_hooks';
 import {types} from 'node:util';
 import {Client,StreamableHTTPClientTransport} from '@modelcontextprotocol/client';
 import * as z from 'zod/v4';
-import {departmentCommand} from '../src/department-gateway.js';
+import {departmentCommand,signMeHistoryInput} from '../src/department-gateway.js';
 import {omniBindingInput} from '../src/omnidev-client.js';
 
 type Current=()=>unknown;
@@ -28,6 +28,7 @@ function data(value:unknown,depth=0,budget={bytes:0,nodes:0}):any{
 }
 function freeze<T>(value:T):T{if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const schemas=new Map<string,z.ZodType>([
+ ['mgr_department_signme_history',signMeHistoryInput],
  ['mgr_department_forge_context',z.object({workspaceId:z.string().regex(/^[a-zA-Z0-9_.:-]{1,128}$/)}).strict()],
  ...['prepare','execute','status','artifact','cancel','resume'].map(name=>['mgr_department_'+name,departmentCommand] as [string,z.ZodType]),
  ['mgr_backpack_capability_map',z.object({}).strict()],
