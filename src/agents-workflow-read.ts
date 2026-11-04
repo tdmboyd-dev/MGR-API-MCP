@@ -140,6 +140,8 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
         text = JSON.stringify(page.data);
       } else if ((summary && result?.view !== "summary") || result?.id !== runId || typeof result.workflowId !== "string" ||
           !consistentRunState.safeParse(result).success ||
+          (result.unresolvedToolReceiptCount !== undefined &&
+            (result.view !== "summary" || !z.number().int().nonnegative().nullable().safeParse(result.unresolvedToolReceiptCount).success)) ||
           (input.expectedWorkflowId !== undefined && result.workflowId !== input.expectedWorkflowId)) return error("Workflow read unconfirmed");
       return { content: [{ type: "text" as const, text }] };
     } catch {

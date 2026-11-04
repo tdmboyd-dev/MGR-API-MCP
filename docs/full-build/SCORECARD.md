@@ -614,3 +614,7 @@ The shared Agents reader requests every owner-scoped read with no-store and reje
 ## Agents catalog evidence and callable read interface
 
 The shared catalog now pins the verified owning Agents revision and describes its optional owner-enrolled workflow catalog, saved history and exact run reader. The default branch source pin and global runtime acceptance remain separate. The catalog and reader suite passed seven checks, and TypeScript passed. The owning revision covers embedded PostgreSQL, the actual shared reader and Next.js authorization checks. Hosted rollout, everyday Tevin enrollment, workflow execution and provider acceptance remain open.
+
+## Unresolved receipts in compact Agents run readback
+
+The Agents shared reader preserves an optional, nonnegative unresolved tool receipt count or null on the compact fallback. Legacy summaries can omit it. The reader suite and TypeScript passed, and the actual owning route exercised the fallback after embedded PostgreSQL restore.
