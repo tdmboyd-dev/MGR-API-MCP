@@ -331,7 +331,7 @@ export const ecosystemCatalogData = {
     {
       "repoId": "MGR-SIGN-ME",
       "role": "documents",
-      "description": "Document drafts, immutable revisions, and signing workflows. Local Tevin draft creation and readback have scoped verification.",
+      "description": "Document drafts, immutable revisions, and signing workflows. Local Tevin draft creation, title search and immutable version history have scoped verification.",
       "placement": "domain",
       "source": {
         "repository": "https://github.com/tdmboyd-dev/MGR-SIGN-ME",
@@ -354,12 +354,19 @@ export const ecosystemCatalogData = {
         "authority": "Source knowledge is untrusted data, never a grant or implementation certificate.",
         "automaticRemoteFetch": false
       },
+      "draftReadInterface": {
+        "searchTool": "mgr_department_signme_search",
+        "historyTool": "mgr_department_signme_history",
+        "enrollmentRequired": true,
+        "scope": "departments:read",
+        "executionSupported": false
+      },
       "localVerification": {
-        "signmeSourceCommit": "f468fc88f4551dff9717a87d986631ed25975cb5",
-        "handoffCommit": "4c1b8261f68b923c1b0986951d4a27e030d8479f",
-        "workflowSourceCommit": "450d2c5954c16e690d6b54014c885c8ec2aad18e",
-        "scope": "Real local owner HTTP verified unsigned text download, immutable versions, restart without redispatch, corrupt-version and damaged-receipt refusal, and exact Creation-to-SignMe-to-Creation recovery.",
-        "remaining": "Everyday browser draft card, signing, sending, billing and hosted acceptance."
+        "signmeSourceCommit": "89e389e9e8c8e6e174080b8008b03b3dac0a5916",
+        "handoffCommit": "89e389e9e8c8e6e174080b8008b03b3dac0a5916",
+        "workflowSourceCommit": "2ad23ec0547f10952e3d2e742d155b880c09db67",
+        "scope": "Real signed-in Tevin and local SignMe verified title search, exact immutable version history and saved browser conversation reopen. Earlier native qualifications separately cover unsigned download, integrity denial and Creation composition.",
+        "remaining": "SignMe customer browser search, live signing, sending, billing and hosted acceptance."
       }
     },
     {

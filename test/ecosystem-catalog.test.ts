@@ -64,8 +64,14 @@ test("SignMe catalog separates unsigned draft proof from signing and default sou
   const [entry]=readEcosystemCatalog("MGR-SIGN-ME").entries;
   assert.ok(entry && "localVerification" in entry && "signmeSourceCommit" in entry.localVerification);
   assert.notEqual(entry.source.commit,entry.localVerification.signmeSourceCommit);
-  assert.match(entry.localVerification.scope,/unsigned text download/);
+  assert.match(entry.localVerification.scope,/title search, exact immutable version history/);
+  assert.match(entry.localVerification.scope,/unsigned download/);
   assert.match(entry.localVerification.remaining,/signing, sending/);
   assert.equal(entry.runtimeVerified,false);
   assert.deepEqual(entry.integration.tools,[]);
+  assert.ok("draftReadInterface" in entry);
+  assert.deepEqual(entry.draftReadInterface,{
+    searchTool:"mgr_department_signme_search",historyTool:"mgr_department_signme_history",
+    enrollmentRequired:true,scope:"departments:read",executionSupported:false,
+  });
 });

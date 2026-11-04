@@ -662,3 +662,7 @@ The shared history operation converts a native HTTP 404 into a bounded unavailab
 ## Find owned SignMe drafts by title
 
 mgr_department_signme_search is available for the enrolled SignMe principal with departments:read. The guarded owner client admits the same strict input schema. The reader validates ordering and continuation, then shortens pages when needed to fit the 12,000-byte response budget. A shortened page resumes after its last emitted document. The receiving Tevin qualification exercised the native service through this path.
+
+## SignMe draft read interface in the shared catalog
+
+The shared SignMe catalog entry now declares the enrolled search and immutable version-history MCP tools, departments:read scope and read-only boundary. Its evidence overlay pins the SignMe implementation and Tevin browser restoration. The source field still identifies the default branch. The catalog entry does not establish customer browser, signing, sending, billing or hosted acceptance.
