@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {mkdtempSync,mkdirSync,writeFileSync,rmSync,renameSync,realpathSync,lstatSync} from 'node:fs';
+import {mkdtempSync,mkdirSync,writeFileSync,rmSync,renameSync,realpathSync,lstatSync,openSync,closeSync,ftruncateSync} from 'node:fs';
 import {join,relative,isAbsolute} from 'node:path';
 import {tmpdir} from 'node:os';
 import {execFileSync} from 'node:child_process';
@@ -26,6 +26,31 @@ test('a replacement directory at the same enrolled path cannot inherit old repos
  const f=fixture(t,'# Original tool\n'),resolved=realpathSync(f.root),inside=relative(realpathSync(f.outer),resolved);assert.ok(inside&&!inside.startsWith('..')&&!isAbsolute(inside));assert.equal(lstatSync(resolved).isSymbolicLink(),false);
  renameSync(resolved,join(f.outer,'original-retained'));mkdirSync(f.root);f.git('init');f.git('config','user.name','Owned replacement');f.git('config','user.email','owned@example.invalid');writeFileSync(join(f.root,'README.md'),'# Replacement tool\n');f.git('add','.');f.git('commit','-m','Different root identity');
  assert.throws(()=>f.reader.read('tool'),/manual-project-unavailable/);
+});
+
+test('replacing only the Git metadata cannot inherit manual enrollment',t=>{
+ const original=fixture(t,'# Original manual'),foreign=fixture(t,'# Foreign manual');
+ renameSync(join(original.root,'.git'),join(original.outer,'original-metadata'));
+ renameSync(join(foreign.root,'.git'),join(original.root,'.git'));
+ assert.throws(()=>original.reader.read('tool'),/manual-project-unavailable/);
+ assert.throws(()=>original.reader.project('tool'),/manual-project-unavailable/);
+});
+
+test('a linked worktree can advance normally but cannot redirect its enrolled Git directory',t=>{
+ const original=fixture(t,'# Original manual'),foreign=fixture(t,'# Foreign manual');
+ const linked=join(original.outer,'linked');
+ original.git('worktree','add','--detach',linked);
+ const reader=createRepositoryManuals({tool:linked});
+ const first=reader.read('tool') as {source:{commit:string}};
+ original.git('commit','--allow-empty','-m','Advance the original repository');
+ execFileSync('git',['-C',linked,'checkout','--detach',original.git('rev-parse','HEAD')],{stdio:'pipe'});
+ const advanced=reader.read('tool') as typeof first;
+ assert.notEqual(advanced.source.commit,first.source.commit);
+ assert.equal(advanced.source.commit,original.git('rev-parse','HEAD'));
+ const pointer=`gitdir: ${foreign.git('rev-parse','--absolute-git-dir')}\n`;
+ const fd=openSync(join(linked,'.git'),'r+');
+ try{writeFileSync(fd,pointer);ftruncateSync(fd,Buffer.byteLength(pointer));}finally{closeSync(fd);}
+ assert.throws(()=>reader.read('tool'),/manual-project-unavailable/);
 });
 test('an oversized source document and a line beyond the page budget are refused explicitly',t=>{
  for(const [bytes,error] of [[Buffer.alloc(1048577,65),/manual-document-limit/],[Buffer.alloc(3*1024*1024,65),/manual-document-limit/],['X'.repeat(6501),/manual-line-exceeds-page-bound/]] as const){const f=fixture(t,bytes);assert.throws(()=>f.reader.read('tool',{document:f.index.documents[0].id}),error);}

@@ -787,3 +787,7 @@ The shared reader verifies that the optional approvalEvidence field agrees with 
 ## Paged Agents workflow receipt discovery
 
 The Agents reader accepts receipts:true with an exact run ID and optional cursor. It validates scope, ordering, page size and continuation identity, and preserves unavailable cursors. A continuing page may contain one to ten receipts so the upstream route can keep its serialized body within 12,000 bytes. Embedded PostgreSQL coverage recovered all 11 receipts in order through the shared reader under that budget. TypeScript and the reader suite passed. The owning embedded PostgreSQL test exercised both pages through the actual shared reader.
+
+## Manual source enrollment binds Git metadata
+
+The shared manual reader now checks the enrolled checkout directory, its .git entry, the resolved worktree metadata directory and the common Git directory. An ordinary new commit remains readable and a continuation remains pinned to its original commit. Replacing the Git metadata or redirecting a linked worktree to another repository requires deliberate re-enrollment. The reader refuses the changed identity before returning manual content. Local Git and authenticated Tevin integration verification cover this read path. Remote watching and hosted acceptance remain open.

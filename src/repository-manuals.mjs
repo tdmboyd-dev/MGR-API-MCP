@@ -1,5 +1,6 @@
 import {execFileSync} from 'node:child_process';
 import {realpathSync,lstatSync} from 'node:fs';
+import {join} from 'node:path';
 import {createHash} from 'node:crypto';
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const docId=path=>'doc-'+sha(path).slice(0,16);
@@ -11,11 +12,17 @@ const sourceMetadata={
 const responseBytes=result=>Buffer.byteLength(JSON.stringify({...result,...sourceMetadata}));
 // Never inherit Git overrides, credentials, hooks, pagers or project execution.
 function git(root,...args){const env={};for(const key of ['PATH','SystemRoot','WINDIR','TEMP','TMP'])if(process.env[key])env[key]=process.env[key];Object.assign(env,{GIT_CONFIG_NOSYSTEM:'1',GIT_CONFIG_GLOBAL:'/dev/null',GIT_CONFIG_SYSTEM:'/dev/null',GIT_NO_REPLACE_OBJECTS:'1',GIT_NO_LAZY_FETCH:'1',GIT_OPTIONAL_LOCKS:'0',GIT_TERMINAL_PROMPT:'0'});const bytes=execFileSync('git',['-C',root,'-c','core.fsmonitor=false','-c','protocol.allow=never',...args],{env,windowsHide:true,timeout:10000,maxBuffer:2*1024*1024,stdio:['ignore','pipe','pipe']});try{return new TextDecoder('utf-8',{fatal:true,ignoreBOM:true}).decode(bytes);}catch{throw Error('manual-source-invalid-utf8');}}
-function rootCommit(root){
- const output=git(root,'rev-parse','--show-prefix','--verify','HEAD^{commit}');
- const match=/^\r?\n([a-f0-9]{40})\r?\n$/.exec(output);
- if(!match)throw Error('manual-root-not-committed-checkout');
- return match[1];
+function checkoutIdentity(root){
+ const [prefix,gitDir,commonDir,commit,end,...extra]=git(root,'rev-parse','--show-prefix',
+  '--absolute-git-dir','--path-format=absolute','--git-common-dir','HEAD^{commit}').split(/\r?\n/);
+ if(prefix!==''||!gitDir||!commonDir||!/^[a-f0-9]{40}$/.test(commit??'')||end!==''||extra.length)
+  throw Error('manual-root-not-committed-checkout');
+ const metadata=[join(root,'.git'),realpathSync(gitDir),realpathSync(commonDir)].map((path,index)=>{
+  const stat=lstatSync(path,{bigint:true});
+  if(stat.isSymbolicLink()||(!stat.isDirectory()&&(index!==0||!stat.isFile())))throw Error('manual-root-not-committed-checkout');
+  return {path,dev:stat.dev,ino:stat.ino};
+ });
+ return {commit,metadata};
 }
 function isOperatingPath(path){
  const normalized=path.toLowerCase();
@@ -73,21 +80,33 @@ export function createRepositoryManuals(roots,{allowUnavailable=false}={}){
   try{
    const root=realpathSync(path),identity=lstatSync(root,{bigint:true});
    if(!identity.isDirectory()||identity.isSymbolicLink())throw Error('manual-root-not-committed-checkout');
-   rootCommit(root);
+   const {metadata}=checkoutIdentity(root);
    entries.push([id,root]);
-   identities.set(id,identity);
+   identities.set(id,{identity,metadata});
   }catch(error){
    if(!allowUnavailable)throw error;
    unavailable.push(id);
   }
  }
  const enrolled=Object.freeze(Object.fromEntries(entries));
- const current=id=>{if(!Object.hasOwn(enrolled,id)||realpathSync(enrolled[id])!==enrolled[id])throw Error('manual-project-unavailable');const expected=identities.get(id),actual=lstatSync(enrolled[id],{bigint:true});if(actual.isSymbolicLink()||actual.dev!==expected.dev||actual.ino!==expected.ino)throw Error('manual-project-unavailable');return enrolled[id];};
- return Object.freeze({projects:Object.freeze(Object.keys(enrolled)),unavailable:Object.freeze(unavailable),project(id){return {id,root:current(id)};},read(id,{document='index',startLine=1,expectedCommit,previous}={}){
-  const root=current(id);if(!Number.isSafeInteger(startLine)||startLine<1||startLine>999999)throw Error('manual-page-invalid');
+ const current=id=>{
+  try{
+   if(!Object.hasOwn(enrolled,id)||realpathSync(enrolled[id])!==enrolled[id])throw Error();
+   const root=enrolled[id],expected=identities.get(id),actual=lstatSync(root,{bigint:true});
+   if(actual.isSymbolicLink()||actual.dev!==expected.identity.dev||actual.ino!==expected.identity.ino)throw Error();
+   const {commit,metadata}=checkoutIdentity(root);
+   if(metadata.some((entry,index)=>{
+    const original=expected.metadata[index];
+    return entry.path!==original.path||entry.dev!==original.dev||entry.ino!==original.ino;
+   }))throw Error();
+   return {root,commit};
+  }catch{throw Error('manual-project-unavailable');}
+ };
+ return Object.freeze({projects:Object.freeze(Object.keys(enrolled)),unavailable:Object.freeze(unavailable),project(id){return {id,root:current(id).root};},read(id,{document='index',startLine=1,expectedCommit,previous}={}){
+  const {root,commit}=current(id);if(!Number.isSafeInteger(startLine)||startLine<1||startLine>999999)throw Error('manual-page-invalid');
   if(previous!==undefined&&(startLine!==1||!previous||typeof previous.commit!=='string'||!/^[a-f0-9]{40}$/.test(previous.commit)||typeof previous.indexSha256!=='string'||!/^[a-f0-9]{64}$/.test(previous.indexSha256)))throw Error('manual-comparison-invalid');
   if(startLine>1&&!expectedCommit)throw Error('manual-continuation-commit-required');
-  const commit=rootCommit(root);if(expectedCommit&&expectedCommit!==commit)throw Error('manual-source-changed');
+  if(expectedCommit&&expectedCommit!==commit)throw Error('manual-source-changed');
   // Owner-authorized committed Markdown only. No working/private-runtime files, arbitrary path,
   // submodule traversal, symlink targets, shell, source execution or network.
   const rows=inventory(root,commit);
@@ -135,7 +154,7 @@ export function createRepositoryManuals(roots,{allowUnavailable=false}={}){
     selected.pop();
    }
   }
-  if(rootCommit(root)!==commit||current(id)!==root)throw Error('manual-source-changed');
+  if(current(id).commit!==commit)throw Error('manual-source-changed');
   return {...result,...sourceMetadata};
  }});
 }
