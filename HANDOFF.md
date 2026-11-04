@@ -786,4 +786,4 @@ The shared reader verifies that the optional approvalEvidence field agrees with 
 
 ## Paged Agents workflow receipt discovery
 
-The Agents reader accepts receipts:true with an exact run ID and optional cursor. It validates scope, ordering, page size and continuation identity, and preserves unavailable cursors. TypeScript and the reader suite passed. The owning embedded PostgreSQL test exercised both pages through the actual shared reader.
+The Agents reader accepts receipts:true with an exact run ID and optional cursor. It validates scope, ordering, page size and continuation identity, and preserves unavailable cursors. A continuing page may contain one to ten receipts so the upstream route can keep its serialized body within 12,000 bytes. Embedded PostgreSQL coverage recovered all 11 receipts in order through the shared reader under that budget. TypeScript and the reader suite passed. The owning embedded PostgreSQL test exercised both pages through the actual shared reader.

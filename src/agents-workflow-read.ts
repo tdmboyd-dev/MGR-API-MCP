@@ -172,7 +172,7 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
           item.runId !== input.runId || item.workflowId !== page.data.workflowId ||
           (input.before !== undefined && item.receiptId <= input.before) ||
           (index > 0 && item.receiptId <= rows[index - 1]!.receiptId)) ||
-          (page.data.hasMore ? page.data.receipts.length !== 10 || page.data.nextCursor !== page.data.receipts.at(-1)?.receiptId
+          (page.data.hasMore ? page.data.receipts.length === 0 || page.data.nextCursor !== page.data.receipts.at(-1)?.receiptId
             : page.data.nextCursor !== undefined)) return error("Workflow receipt page unconfirmed");
         text = JSON.stringify(page.data);
       } else if ("receiptId" in input) {
