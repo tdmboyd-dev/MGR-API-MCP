@@ -6,7 +6,15 @@ export const agentsWorkflowReadInput = z.union([
   z.object({ runId: z.uuid(), expectedWorkflowId: z.uuid().optional() }).strict(),
   z.object({ workflowId: z.uuid(), before: z.uuid().optional() }).strict(),
   z.object({ catalog: z.literal(true), before: z.uuid().optional() }).strict(),
+  z.object({ runId: z.uuid(), receiptId: z.uuid() }).strict(),
 ]);
+const exactReceipt = z.object({
+  runId: z.uuid(), workflowId: z.uuid(), agentRunId: z.uuid(), receiptId: z.uuid(),
+  stepId: z.string().min(1).max(200), toolName: z.string().min(1).max(200), status: z.string().min(1).max(80),
+  approval: z.object({ id: z.uuid(), status: z.string().min(1).max(80),
+    executionOutcome: z.enum(["executed", "not_completed", "unconfirmed"]).nullable(),
+  }).strict().nullable(),
+}).strict();
 const catalogPage = z.object({
   workflows: z.array(z.object({
     id: z.uuid(), name: z.string().min(1).max(100), triggerType: z.enum(["manual", "schedule", "event"]),
@@ -74,6 +82,10 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
         if (input.before) url.searchParams.set("before", input.before);
       } else {
         url.searchParams.set("runId", input.runId);
+        if ("receiptId" in input) {
+          url.searchParams.set("view", "receipt");
+          url.searchParams.set("receiptId", input.receiptId);
+        }
       }
       const notFound = Symbol("workflow-not-found");
       const read = async () => {
@@ -108,7 +120,7 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
       };
       let text = await read();
       let summary = false;
-      if (text === null && runId) {
+      if (text === null && runId && !("receiptId" in input)) {
         authorizeTool(options.auth, options.resourceAudience, ["tools:read", "workflows:read"]);
         if (options.auth.actorId !== options.owner.actorId || options.auth.tenantId !== options.owner.tenantId) {
           return error("Workflow read denied");
@@ -143,6 +155,10 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
           return error("Workflow history unconfirmed");
         }
         text = JSON.stringify(page.data);
+      } else if ("receiptId" in input) {
+        const receipt = exactReceipt.safeParse(result);
+        if (!receipt.success || receipt.data.runId !== input.runId || receipt.data.receiptId !== input.receiptId) return error("Workflow receipt read unconfirmed");
+        text = JSON.stringify(receipt.data);
       } else if ((summary && result?.view !== "summary") || result?.id !== runId || typeof result.workflowId !== "string" ||
           !consistentRunState.safeParse(result).success ||
           (result.unresolvedToolReceiptCount !== undefined &&

@@ -622,3 +622,7 @@ The Agents shared reader preserves an optional, nonnegative unresolved tool rece
 ## Compact Agents receipt references
 
 The Agents reader validates the optional compact receipt sample and its count before forwarding it. Older summary shapes remain valid. TypeScript and reader checks passed. The owning PostgreSQL test verified oversized-detail fallback through the actual reader.
+
+## Exact Agents workflow receipt readback
+
+The existing reader accepts an exact run ID and receipt ID under the same read-only owner binding. It validates the response identity and bounded shape, preserves unavailable results and never substitutes a workflow summary for a receipt. TypeScript and reader tests passed, and the owning embedded PostgreSQL test exercised the new call through the actual reader.
