@@ -803,3 +803,7 @@ An enrolled SignMe department now exposes mgr_department_signme_history to calle
 ## SignMe history admitted by the guarded local client
 
 The local owner SDK wrapper now accepts mgr_department_signme_history using the same strict input schema as the MCP tool. This closes the local client rejection found when wiring Tevin. It preserves the original identity and cancellation fences and does not add a mutation or approval.
+
+## SignMe history distinguishes an unavailable read from an empty page
+
+The shared history operation converts a native HTTP 404 into a bounded unavailable result for the requested document ID. Native error text stays private. An empty owned page still returns versions: []. Other upstream failures and malformed replies remain unconfirmed. The official MCP test verified 404 and 500 separately. The later Tevin qualification exercised the actual native HTTP service and recorded both outcomes.

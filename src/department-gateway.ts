@@ -36,6 +36,9 @@ const digest=(bytes:Uint8Array)=>createHash("sha256").update(bytes).digest("hex"
 export const canonicalDepartmentJson=(x:any):string=>x!==null&&typeof x==="object"?(Array.isArray(x)?`[${x.map(canonicalDepartmentJson).join(",")}]`:`{${Object.entries(x).filter(([,v])=>v!==undefined).sort(([a],[b])=>a.localeCompare(b)).map(([k,v])=>JSON.stringify(k)+":"+canonicalDepartmentJson(v)).join(",")}}`):JSON.stringify(x);
 const inputDigest=(x:unknown)=>digest(Buffer.from(canonicalDepartmentJson(x)));
 const dotSegment=(value:string)=>value==='.'||value==='..';
+class DepartmentHttpError extends Error {
+  constructor(service:string,readonly status:number){super(`Department ${service} returned HTTP ${status}`);}
+}
 export class DepartmentGateway {
   private readonly omni:OmniEngineeringClient|undefined;
   private readonly forge:ForgeDepartmentAdapter|undefined;
@@ -62,7 +65,7 @@ export class DepartmentGateway {
       const response=await (this.config.fetcher??fetch)(new URL(path,ep.baseUrl),{method:body===undefined?"GET":"POST",redirect:"error",signal:controller.signal,headers:{authorization:`Bearer ${ep.token}`,"content-type":"application/json","x-tenant-id":this.config.tenantId,"x-actor-id":this.config.actorId},...(body===undefined?{}:{body:JSON.stringify(body)})});
       const limit=raw?8*1024*1024:1024*1024;const chunks:Uint8Array[]=[];let length=0;
       if(response.body){const reader=response.body.getReader();try{for(;;){const {done,value}=await reader.read();if(done)break;length+=value.length;if(length>limit){await reader.cancel();throw Error("Department response exceeds limit");}chunks.push(value);}}finally{reader.releaseLock();}}
-      if(!response.ok)throw Error(`Department ${service} returned HTTP ${response.status}`);
+      if(!response.ok)throw new DepartmentHttpError(service,response.status);
       const bytes=Buffer.concat(chunks);if(raw)return {bytes,mediaType:response.headers.get("content-type")};
       try{return JSON.parse(new TextDecoder('utf-8',{fatal:true,ignoreBOM:true}).decode(bytes));}catch{throw Error(`Department ${service} returned invalid JSON`);}
     }catch(error){if(controller.signal.aborted)throw Error(`Department ${service} timed out; reconcile request before retry`);throw error;}finally{clearTimeout(timer);}
@@ -71,9 +74,17 @@ export class DepartmentGateway {
   private signMeOperation(requestId:string){return dotSegment(requestId)?this.request('signme','/v1/documents/operations/read',{requestId}):this.request('signme',`/v1/documents/operations/${encodeURIComponent(requestId)}`);}
   async signMeHistory(input:z.infer<typeof signMeHistoryInput>){
     const {documentId,afterVersion}=signMeHistoryInput.parse(input);
-    const result=signMeHistoryPage.parse(await this.request('signme','/v1/documents/read',{
-      documentId,view:'versions',...(afterVersion===undefined?{}:{afterVersion}),
-    }));
+    let response:unknown;
+    try{
+      response=await this.request('signme','/v1/documents/read',{
+        documentId,view:'versions',...(afterVersion===undefined?{}:{afterVersion}),
+      });
+    }catch(error){
+      if(error instanceof DepartmentHttpError&&error.status===404)
+        return {documentId,readOutcome:'unavailable' as const};
+      throw error;
+    }
+    const result=signMeHistoryPage.parse(response);
     if(result.documentId!==documentId||result.versions.some((row,index)=>
       row.version<=(index===0?(afterVersion??0):result.versions[index-1]!.version))||
       (result.nextAfterVersion!==undefined&&(result.versions.length!==20||result.nextAfterVersion!==result.versions.at(-1)?.version)))

@@ -73,7 +73,7 @@ test("SignMe history SDK pages preserve owner scope and continue after the last 
  const versions=Array.from({length:22},(_,index)=>({
   version:index+1,title:"\u0001".repeat(450),sha256:"a".repeat(64),bytes:24,createdAt:"2026-11-03T00:00:00.000Z",
  }));
- let calls=0,mismatch=false;
+ let calls=0,mismatch=false,upstreamStatus=200;
  const gateway=new DepartmentGateway({...config,fetcher:async(input,init)=>{
   calls++;
   assert.equal(new URL(String(input)).pathname,"/v1/documents/read");
@@ -83,6 +83,7 @@ test("SignMe history SDK pages preserve owner scope and continue after the last 
   const body=JSON.parse(String(init?.body));
   assert.equal(body.documentId,documentId);
   assert.equal(body.view,"versions");
+  if(upstreamStatus!==200)return Response.json({error:"private upstream detail"},{status:upstreamStatus});
   const remaining=versions.filter(row=>row.version>(body.afterVersion??0));
   const page=remaining.slice(0,20);
   return Response.json({documentId:mismatch?"different":documentId,versions:page,
@@ -119,6 +120,12 @@ test("SignMe history SDK pages preserve owner scope and continue after the last 
   }
   assert.deepEqual(observed,versions.map(row=>row.version));
   mismatch=true;
+  assert.equal((await owner.callTool({name,arguments:{documentId}})).isError,true);
+  upstreamStatus=404;
+  const unavailable=await owner.callTool({name,arguments:{documentId}});
+  assert.notEqual(unavailable.isError,true);
+  assert.deepEqual(JSON.parse((unavailable.content as {text:string}[])[0]!.text),{documentId,readOutcome:"unavailable"});
+  upstreamStatus=500;
   assert.equal((await owner.callTool({name,arguments:{documentId}})).isError,true);
  }finally{await owner.close();await denied.close();await handler.close();}
 });
