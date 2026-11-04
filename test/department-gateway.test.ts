@@ -129,3 +129,32 @@ test("SignMe history SDK pages preserve owner scope and continue after the last 
   assert.equal((await owner.callTool({name,arguments:{documentId}})).isError,true);
  }finally{await owner.close();await denied.close();await handler.close();}
 });
+
+test("SignMe draft search shortens escaped titles without skipping results and rejects a nonadvancing page",async()=>{
+ const documents=Array.from({length:11},(_,index)=>({
+  documentId:`draft-${String(index).padStart(2,"0")}`,title:"Draft "+ "\u0001".repeat(450),
+  version:1,createdAt:"2026-11-03T00:00:00.000Z",
+ }));
+ let stalled=false;
+ const gateway=new DepartmentGateway({...config,fetcher:async(input,init)=>{
+  assert.equal(new URL(String(input)).pathname,"/v1/documents/search");
+  const query=JSON.parse(String(init?.body));
+  assert.equal(query.titleQuery,"Draft");
+  const remaining=documents.filter(row=>row.documentId>(query.afterDocumentId??""));
+  const rows=stalled?[documents[0]!]:remaining.slice(0,10);
+  return Response.json({documents:rows,...(remaining.length>10?{nextAfterDocumentId:rows.at(-1)!.documentId}:{})});
+ }});
+ const observed:string[]=[];
+ let afterDocumentId:string|undefined;
+ for(let index=0;index<11;index++){
+  const page=await gateway.signMeSearch({titleQuery:"Draft",...(afterDocumentId?{afterDocumentId}:{})});
+  assert.ok(Buffer.byteLength(JSON.stringify(page))<=12_000);
+  observed.push(...page.documents.map(row=>row.documentId));
+  afterDocumentId=page.nextAfterDocumentId;
+  if(afterDocumentId===undefined)break;
+  assert.equal(afterDocumentId,observed.at(-1));
+ }
+ assert.deepEqual(observed,documents.map(row=>row.documentId));
+ stalled=true;
+ await assert.rejects(gateway.signMeSearch({titleQuery:"Draft",afterDocumentId:documents[0]!.documentId}),/cursor mismatch/);
+});

@@ -658,3 +658,7 @@ The local owner SDK wrapper now accepts mgr_department_signme_history using the 
 ## SignMe history distinguishes an unavailable read from an empty page
 
 The shared history operation converts a native HTTP 404 into a bounded unavailable result for the requested document ID. Native error text stays private. An empty owned page still returns versions: []. Other upstream failures and malformed replies remain unconfirmed. The official MCP test verified 404 and 500 separately. The later Tevin qualification exercised the actual native HTTP service and recorded both outcomes.
+
+## Find owned SignMe drafts by title
+
+mgr_department_signme_search is available for the enrolled SignMe principal with departments:read. The guarded owner client admits the same strict input schema. The reader validates ordering and continuation, then shortens pages when needed to fit the 12,000-byte response budget. A shortened page resumes after its last emitted document. The receiving Tevin qualification exercised the native service through this path.

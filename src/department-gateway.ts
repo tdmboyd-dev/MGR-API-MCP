@@ -10,6 +10,16 @@ import {forgeDepartmentCommands,isForgeDepartmentCommand,ForgeDepartmentAdapter,
 
 const id=z.string().regex(/^[a-zA-Z0-9_.:-]{1,128}$/);
 export const signMeHistoryInput=z.object({documentId:id,afterVersion:z.number().int().positive().optional()}).strict();
+export const signMeSearchInput=z.object({
+  titleQuery:z.string().trim().min(1).max(128).refine(value=>Buffer.from(value,'utf8').toString('utf8')===value&&!/[\u0000-\u001f\u007f]/.test(value)),
+  afterDocumentId:id.optional(),
+}).strict();
+const signMeSearchPage=z.object({
+  documents:z.array(z.object({
+    documentId:id,title:z.string().min(1).max(500),version:z.number().int().positive(),createdAt:z.iso.datetime(),
+  }).strict()).max(10),
+  nextAfterDocumentId:id.optional(),
+}).strict();
 const signMeHistoryPage=z.object({
   documentId:id,
   versions:z.array(z.object({
@@ -72,6 +82,22 @@ export class DepartmentGateway {
   }
   private async identifierLookupCapability(service:'creation'|'signme'){const health=await this.request(service,'/health');if(health.identifierLookupVersion!==1||health.tenantId!==this.config.tenantId||health.actorId!==this.config.actorId)throw Error('Native exact-identifier lookup capability is unavailable');}
   private signMeOperation(requestId:string){return dotSegment(requestId)?this.request('signme','/v1/documents/operations/read',{requestId}):this.request('signme',`/v1/documents/operations/${encodeURIComponent(requestId)}`);}
+  async signMeSearch(input:z.infer<typeof signMeSearchInput>){
+    const query=signMeSearchInput.parse(input);
+    const result=signMeSearchPage.parse(await this.request('signme','/v1/documents/search',query));
+    if(result.documents.some((row,index)=>row.documentId<=(index===0?(query.afterDocumentId??''):result.documents[index-1]!.documentId))||
+       (result.nextAfterDocumentId!==undefined&&(result.documents.length!==10||result.nextAfterDocumentId!==result.documents.at(-1)?.documentId)))
+      throw Error('SignMe draft search cursor mismatch');
+    const documents=[...result.documents];
+    let nextAfterDocumentId=result.nextAfterDocumentId;
+    for(;;){
+      const page={documents,...(nextAfterDocumentId===undefined?{}:{nextAfterDocumentId})};
+      if(Buffer.byteLength(JSON.stringify(page))<=12_000)return page;
+      if(documents.length<=1)throw Error('SignMe draft search exceeds response limit');
+      documents.pop();
+      nextAfterDocumentId=documents.at(-1)!.documentId;
+    }
+  }
   async signMeHistory(input:z.infer<typeof signMeHistoryInput>){
     const {documentId,afterVersion}=signMeHistoryInput.parse(input);
     let response:unknown;
@@ -245,6 +271,16 @@ function departmentPublicationFence(options:DepartmentToolOptions,write=false){
 }
 export function registerDepartmentTools(server:McpServer,options:DepartmentToolOptions){
   if(options.gateway.config.signme){
+    server.registerTool('mgr_department_signme_search',{
+      description:'Find owned native SignMe drafts by literal title substring. Follow nextAfterDocumentId with the same titleQuery. Metadata only.',
+      inputSchema:signMeSearchInput,annotations:{readOnlyHint:true,destructiveHint:false},
+    },async input=>{
+      try{
+        const current=departmentPublicationFence(options);current();
+        const page=await options.gateway.signMeSearch(input);current();
+        return {content:[{type:'text',text:JSON.stringify(page)}]};
+      }catch{return {isError:true,content:[{type:'text',text:'{"error":"SignMe draft search unavailable","sideEffects":false}'}]};}
+    });
     server.registerTool('mgr_department_signme_history',{
       description:'Read an owned SignMe draft version history page. Follow nextAfterVersion with the same documentId. Metadata only. No signing, sending or mutation.',
       inputSchema:signMeHistoryInput,annotations:{readOnlyHint:true,destructiveHint:false},
