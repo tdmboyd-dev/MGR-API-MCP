@@ -7,6 +7,7 @@ export const agentsWorkflowReadInput = z.union([
   z.object({ workflowId: z.uuid(), before: z.uuid().optional() }).strict(),
   z.object({ catalog: z.literal(true), before: z.uuid().optional() }).strict(),
   z.object({ runId: z.uuid(), receiptId: z.uuid() }).strict(),
+  z.object({ runId: z.uuid(), receipts: z.literal(true), before: z.uuid().optional() }).strict(),
 ]);
 const exactReceipt = z.object({
   runId: z.uuid(), workflowId: z.uuid(), agentRunId: z.uuid(), receiptId: z.uuid(),
@@ -18,6 +19,10 @@ const exactReceipt = z.object({
 }).strict().refine(receipt => receipt.approvalEvidence === undefined || receipt.approvalEvidence === (
   receipt.approval ? "linked" : receipt.status === "pending_approval" ? "unavailable" : "not-applicable"
 ));
+const receiptPage = z.object({
+  runId: z.uuid(), workflowId: z.uuid(), receipts: z.array(exactReceipt).max(10),
+  hasMore: z.boolean(), nextCursor: z.uuid().optional(),
+}).strict();
 const catalogPage = z.object({
   workflows: z.array(z.object({
     id: z.uuid(), name: z.string().min(1).max(100), triggerType: z.enum(["manual", "schedule", "event"]),
@@ -88,6 +93,9 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
         if ("receiptId" in input) {
           url.searchParams.set("view", "receipt");
           url.searchParams.set("receiptId", input.receiptId);
+        } else if ("receipts" in input) {
+          url.searchParams.set("view", "receipts");
+          if (input.before) url.searchParams.set("before", input.before);
         }
       }
       const notFound = Symbol("workflow-not-found");
@@ -123,7 +131,7 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
       };
       let text = await read();
       let summary = false;
-      if (text === null && runId && !("receiptId" in input)) {
+      if (text === null && runId && !("receiptId" in input) && !("receipts" in input)) {
         authorizeTool(options.auth, options.resourceAudience, ["tools:read", "workflows:read"]);
         if (options.auth.actorId !== options.owner.actorId || options.auth.tenantId !== options.owner.tenantId) {
           return error("Workflow read denied");
@@ -157,6 +165,15 @@ export function registerAgentsWorkflowRead(server: McpServer, options: AgentsWor
               page.data.nextCursor !== page.data.runs.at(-1)?.id : page.data.nextCursor !== undefined)) {
           return error("Workflow history unconfirmed");
         }
+        text = JSON.stringify(page.data);
+      } else if ("receipts" in input) {
+        const page = receiptPage.safeParse(result);
+        if (!page.success || page.data.runId !== input.runId || page.data.receipts.some((item,index,rows) =>
+          item.runId !== input.runId || item.workflowId !== page.data.workflowId ||
+          (input.before !== undefined && item.receiptId <= input.before) ||
+          (index > 0 && item.receiptId <= rows[index - 1]!.receiptId)) ||
+          (page.data.hasMore ? page.data.receipts.length !== 10 || page.data.nextCursor !== page.data.receipts.at(-1)?.receiptId
+            : page.data.nextCursor !== undefined)) return error("Workflow receipt page unconfirmed");
         text = JSON.stringify(page.data);
       } else if ("receiptId" in input) {
         const receipt = exactReceipt.safeParse(result);

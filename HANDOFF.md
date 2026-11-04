@@ -783,3 +783,7 @@ The Agents catalog entry now includes exact tool receipt lookup by run and recei
 ## Approval evidence availability on exact receipt reads
 
 The shared reader verifies that the optional approvalEvidence field agrees with the saved tool and approval state. Older receipts may omit it. TypeScript and the reader suite passed. The owning database test verified the unavailable case through the actual reader.
+
+## Paged Agents workflow receipt discovery
+
+The Agents reader accepts receipts:true with an exact run ID and optional cursor. It validates scope, ordering, page size and continuation identity, and preserves unavailable cursors. TypeScript and the reader suite passed. The owning embedded PostgreSQL test exercised both pages through the actual shared reader.
