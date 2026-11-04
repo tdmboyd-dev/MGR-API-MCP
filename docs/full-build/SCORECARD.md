@@ -641,4 +641,8 @@ The Agents reader accepts receipts:true with an exact run ID and optional cursor
 
 ## Manual source enrollment binds Git metadata
 
-The shared manual reader now checks the enrolled checkout directory, its .git entry, the resolved worktree metadata directory and the common Git directory. An ordinary new commit remains readable and a continuation remains pinned to its original commit. Replacing the Git metadata or redirecting a linked worktree to another repository requires deliberate re-enrollment. The reader refuses the changed identity before returning manual content. Local Git and authenticated Tevin integration verification cover this read path. Remote watching and hosted acceptance remain open.
+The shared manual reader now checks the enrolled checkout directory, its .git entry, the resolved worktree metadata directory and the common Git directory. An ordinary new commit remains readable and a continuation remains pinned to its original commit. Replacing the Git metadata or redirecting a linked worktree blocks the active binding. Restore the original metadata or verify the intended replacement before establishing a new enrollment. The reader refuses the changed identity before returning manual content. Local Git and authenticated Tevin integration verification cover this read path. Remote watching and hosted acceptance remain open.
+
+## Manual checkout recovery
+
+When the authorized tool checkout no longer resolves to its enrolled Git identity, the shared manual reader returns manual-project-unavailable with verify-enrolled-checkout. This distinguishes a missing or replaced checkout from a new commit on the same checkout. The diagnostic is scoped to the original actor, tenant and binding. Review the intended checkout before restarting or re-enrolling the reader. A restart can establish new local enrollment, so verify the source first. Hosted verification remains open.
