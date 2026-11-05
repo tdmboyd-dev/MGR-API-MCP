@@ -369,9 +369,9 @@ export const ecosystemCatalogData = {
       },
       "localVerification": {
         "signmeSourceCommit": "89e389e9e8c8e6e174080b8008b03b3dac0a5916",
-        "handoffCommit": "89e389e9e8c8e6e174080b8008b03b3dac0a5916",
+        "handoffCommit": "eaaf56a334772d987c74f8a445e87c79df047a2c",
         "workflowSourceCommit": "2ad23ec0547f10952e3d2e742d155b880c09db67",
-        "scope": "Real signed-in Tevin and local SignMe verified title search, exact immutable version history and saved browser conversation reopen. Earlier native qualifications separately cover unsigned download, integrity denial and Creation composition.",
+        "scope": "Real signed-in Tevin and local SignMe verified title search, exact immutable version history and saved browser conversation reopen. The SignMe handoff also records live catalog lookup and same-receipt replay after restart. Earlier native qualifications cover unsigned download, integrity denial and Creation composition.",
         "remaining": "SignMe customer browser search, live signing, sending, billing and hosted acceptance."
       }
     },

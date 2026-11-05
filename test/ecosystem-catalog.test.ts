@@ -64,6 +64,8 @@ test("SignMe catalog separates unsigned draft proof from signing and default sou
   const [entry]=readEcosystemCatalog("MGR-SIGN-ME").entries;
   assert.ok(entry && "localVerification" in entry && "signmeSourceCommit" in entry.localVerification);
   assert.notEqual(entry.source.commit,entry.localVerification.signmeSourceCommit);
+  assert.notEqual(entry.localVerification.handoffCommit,entry.localVerification.signmeSourceCommit);
+  assert.match(entry.localVerification.scope,/live catalog lookup and same-receipt replay/);
   assert.match(entry.localVerification.scope,/title search, exact immutable version history/);
   assert.match(entry.localVerification.scope,/unsigned download/);
   assert.match(entry.localVerification.remaining,/signing, sending/);
