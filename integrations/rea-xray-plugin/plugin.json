@@ -1,37 +1,23 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "author": {
-    "email": "tdm.boyd@gmail.com",
-    "name": "Time"
-  },
-  "description": "Safely inspect authorized software and asset packages with pinned REA evidence, then translate findings into original MGR-native build specifications and tests.",
-  "extensions": {
-    "com.openai": {
-      "interface": {
-        "capabilities": [],
-        "category": "Productivity",
-        "defaultPrompt": [
-          "Inspect this legally accessible kit, show what it contains and what we can build MGR-native.",
-          "Compare the package to our Forge components and find missing implementation and tests.",
-          "Audit source permissions before suggesting a production import."
-        ],
-        "developerName": "Time",
-        "displayName": "MGR REA X-Ray",
-        "longDescription": "Read-only inspection of user-authorized local asset and software packages with pinned REA 6.8.0. Preserves source evidence and helps author independent MGR-native implementation and verification plans. Local REA runtime required for tools.",
-        "shortDescription": "Inspect kits with proof"
-      }
-    }
-  },
-  "homepage": "https://github.com/tdmboyd-dev/MGR-API-MCP",
-  "keywords": [
-    "REA",
-    "MGR",
-    "reverse-engineering",
-    "3d-assets",
-    "audit",
-    "verification"
-  ],
-  "license": "MIT",
-  "name": "mgr-rea-xray",
-  "version": "0.1.0"
+  "author": {"email":"tdm.boyd@gmail.com","name":"Time"},
+  "description":"Full official REA engine for authorized MGR source, apps, websites, binary and tax-software research, with optional bounded static inspection and shared ChatGPT/Codex evidence workflows.",
+  "extensions":{"com.openai":{"interface":{
+    "capabilities":[],
+    "category":"Productivity",
+    "defaultPrompt":[
+      "Use the full MGR REA Engine to audit my authorized repo and produce evidence-backed repairs.",
+      "Analyze how this tax practice workflow works and design an original MGR Apex improvement.",
+      "Run REA on my connected Windows machine, compare it to ordinary source review, and update the existing handoff."
+    ],
+    "developerName":"Time",
+    "displayName":"MGR REA Engine",
+    "longDescription":"The original Reverse Engineer Anything 6.8.0 MCP engine (229 verified local tools) with a separate safe static inspector. Unified MGR workflows for ChatGPT and Codex. Requires an installed local REA runtime or a real authenticated remote worker; a saved cloud plugin does not itself connect an iPhone to Windows.",
+    "shortDescription":"Full REA engine for MGR"
+  }}},
+  "homepage":"https://github.com/tdmboyd-dev/MGR-API-MCP",
+  "keywords":["REA","MGR","reverse-engineering","source-audit","applications","websites","tax-software","verification"],
+  "license":"MIT",
+  "name":"mgr-rea-xray",
+  "version":"0.2.0"
 }
