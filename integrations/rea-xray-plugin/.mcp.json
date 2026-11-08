@@ -1,0 +1,6 @@
+{
+  "mcpServers":{
+    "mgr-rea-engine":{"command":"node","args":["${PLUGIN_ROOT}/server/rea-engine-launcher.mjs"],"cwd":"${PLUGIN_ROOT}"},
+    "mgr-rea-static":{"command":"node","args":["${PLUGIN_ROOT}/server/rea-safe-mcp.mjs"],"cwd":"${PLUGIN_ROOT}"}
+  }
+}
