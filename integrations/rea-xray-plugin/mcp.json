@@ -1,11 +1,7 @@
 {
-  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
-  "mcpServers": {
-    "mgr-rea-xray": {
-      "type": "stdio",
-      "command": "node",
-      "args": ["${PLUGIN_ROOT}/server/rea-safe-mcp.mjs"],
-      "cwd": "${PLUGIN_ROOT}"
-    }
+  "$schema":"https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers":{
+    "mgr-rea-engine":{"type":"stdio","command":"node","args":["${PLUGIN_ROOT}/server/rea-engine-launcher.mjs"],"cwd":"${PLUGIN_ROOT}"},
+    "mgr-rea-static":{"type":"stdio","command":"node","args":["${PLUGIN_ROOT}/server/rea-safe-mcp.mjs"],"cwd":"${PLUGIN_ROOT}"}
   }
 }
