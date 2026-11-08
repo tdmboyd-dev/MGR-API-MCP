@@ -1,6 +1,6 @@
 {
   "schema": "mgr.api.xray-dependency-pin.v1",
-  "name": "MGR REA X-Ray",
+  "name": "MGR REA Engine",
   "upstream_url": "https://github.com/morluto/rea",
   "upstream_observed_head": "6e9ee97a69cb16c7150d8b550e705cba055ee4f0",
   "npm_package": "rea-agents",
@@ -16,5 +16,18 @@
   "release_url": "https://chatgpt.com/plugins/plugins_6ae674d617d881919da938edf6e018d4",
   "installed_windows_path": "%USERPROFILE%\\.mgr-tools\\rea\\runtime",
   "workspace_path": "%USERPROFILE%\\.mgr-tools\\rea\\workspace",
-  "source_copy_redistributed": false
+  "source_copy_redistributed": false,
+  "full_mcp_verified_on_owner_windows": {
+    "date": "2026-11-08",
+    "version": "6.8.0",
+    "tool_count": 229,
+    "prompt_count": 6,
+    "catalog_digest_sha256": "fe938a7c6eba3763b22ae2022de76dc4a7812d35d86f1d4efd36b9962b04da0b",
+    "doctor_healthy": true,
+    "request_flow_binary_session": true,
+    "client": "authenticated Remote Desktop Commander",
+    "native_chatgpt_mcp_attached": false,
+    "hosted_remote_worker_verified": false
+  }
 }
+
