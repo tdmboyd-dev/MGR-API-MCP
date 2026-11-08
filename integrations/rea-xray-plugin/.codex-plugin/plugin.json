@@ -1,0 +1,24 @@
+{
+  "interface": {
+    "capabilities":[],
+    "category":"Productivity",
+    "defaultPrompt":[
+      "Use the full MGR REA Engine to audit my authorized repo and produce evidence-backed repairs.",
+      "Analyze how this tax practice workflow works and design an original MGR Apex improvement.",
+      "Run REA on my connected Windows machine, compare it to ordinary source review, and update the existing handoff."
+    ],
+    "developerName":"Time",
+    "displayName":"MGR REA Engine",
+    "longDescription":"The original Reverse Engineer Anything 6.8.0 MCP engine (229 verified local tools) with a separate safe static inspector. Unified MGR workflows for ChatGPT and Codex. Requires an installed local REA runtime or a real authenticated remote worker; a saved cloud plugin does not itself connect an iPhone to Windows.",
+    "shortDescription":"Full REA engine for MGR"
+  },
+  "name":"mgr-rea-xray",
+  "version":"0.2.0",
+  "description":"Full official REA engine for authorized MGR source, apps, websites, binary and tax-software research, with optional bounded static inspection and shared ChatGPT/Codex evidence workflows.",
+  "author":{"name":"Time","email":"tdm.boyd@gmail.com"},
+  "keywords":["REA","MGR","reverse-engineering","source-audit","applications","websites","tax-software","verification"],
+  "homepage":"https://github.com/tdmboyd-dev/MGR-API-MCP",
+  "license":"MIT",
+  "skills":"./skills",
+  "mcpServers":"./.mcp.json"
+}
