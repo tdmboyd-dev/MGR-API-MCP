@@ -8,8 +8,9 @@ import { applyPrivacyPolicy } from "./privacy-firewall.js";
 import { registerLegacyMcpTools, type LegacyMcpToolOptions } from "./legacy-mcp-tools.js";
 import { registerCreationMcpTools, type CreationMcpToolOptions } from "./creation-mcp-tools.js";
 import { registerForgeMcpTools, type ForgeMcpToolOptions } from "./forge-mcp-tools.js";
+import { registerCodeMonsterMcpTools, type CodeMonsterMcpOptions } from "./code-monster-mcp-tools.js";
 
-export function createMgrMcpServer(options:{legacy?:LegacyMcpToolOptions;creation?:CreationMcpToolOptions;forge?:ForgeMcpToolOptions}={}): McpServer {
+export function createMgrMcpServer(options:{legacy?:LegacyMcpToolOptions;creation?:CreationMcpToolOptions;forge?:ForgeMcpToolOptions;codeMonster?:CodeMonsterMcpOptions}={}): McpServer {
   const server = new McpServer(
     { name: "mgr-api-mcp", version: "0.1.0" },
     {
@@ -180,6 +181,7 @@ export function createMgrMcpServer(options:{legacy?:LegacyMcpToolOptions;creatio
   if(options.legacy) registerLegacyMcpTools(server,options.legacy);
   if(options.creation) registerCreationMcpTools(server,options.creation);
   if(options.forge) registerForgeMcpTools(server,options.forge);
+  if(options.codeMonster) registerCodeMonsterMcpTools(server,options.codeMonster);
 
   return server;
 }

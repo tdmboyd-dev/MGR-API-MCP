@@ -1,5 +1,26 @@
 # Resume MGR-API-MCP
 
+## Code Monster authenticated bridge — November 9, 2026 (additive)
+
+**Owner scope:** Rare must route through the ORIGINAL MGR API/MCP into MGR Code Monster, with genuine candidate Git writes, independent verification and production repo campaigns. Do not replace Legacy, Forge, Creation OS, REA or the existing JWT/OAuth server.
+
+### Current code and verification
+
+- Added `src/code-monster-client.ts`, `src/code-monster-mcp-tools.ts`, new tests, a reusable cross-repo acceptance runner, and additive wiring in `src/mcp-server.ts`, `src/mcp-http.ts`, `src/http-server.ts`. The Code Monster connector is optional and only activates when its private URL, 32+-byte service key and allowed tenant are configured together.
+- JWT-verifier-bound actor, tenant, audience, expiry and `tools:read` / `tools:execute` are preserved. The independent Code Monster HMAC protocol has a nonce, freshness and signed exact body. The MGR API HTTP client rejects nonloopback plain HTTP, redirects, oversized/ambiguous messages and blind write retry. Only trusted server configuration supplies internal service coordinates and HMAC key.
+- Side-effecting `mgr_code_monster_repair_stage` **fails closed by default**. It needs an independent persistent `CodeMonsterApprovalResolver`, not merely a caller-provided `approved` flag or a model vote. The resolver must bind exact method, args SHA, actor, tenant, grant ID and expiry. A downstream `accepted:false` inside HTTP 200 is not falsely declared success. Interrupted writes become `UNKNOWN_EXTERNAL_STATE` requiring reconciliation.
+- **Local tests:** `npm run verify` on the current checkout: **95/95** tests, TypeScript typecheck, hosted-artifact syntax and plugin checks all PASS. New direct HMAC/tenant/scope/digest/timeout/denial/protocol tests: **9 tests**. Cross-repo `scripts/verify-code-monster-actual-route.mjs` PASS with actual Code Monster `src/rare-service.mjs`: official MCP client → local OAuth fixture → shared MCP tool → signed HMAC bridge → stage candidate Git branch → independent `node --test` failure before and pass after; Git original HEAD unchanged; Code Monster ledger valid. This was a **synthetic bug fixture**, not a full MGR production repo audit. Code Monster advanced suite **222/222 PASS** after its service additions.
+- Detailed readme, tool names, env and exact acceptance in `docs/CODE-MONSTER-ROUTE-ACCEPTANCE.md`. The shared original MGR trilogy handoff and Code Monster handoff remain additive; don't erase historical evidence. Previous Code Monster PR #6 was independently merged on its advanced branch before this additional service/edge wave.
+
+### Still OPEN / do not claim
+
+1. **Real public mobile Rare/ChatGPT → hosted MGR API OAuth/JWKS → private Code Monster service** using non-fixture credentials, reachable trusted infrastructure and live account connector registration. The current source is tested locally, **not hosted**.
+2. Connect and prove a durable independently authorized approval service to `CodeMonsterApprovalResolver`, revocation and cross-worker replay/unknown-state recovery. Stage-only is **not** signed v2 independent acceptance or production promotion.
+3. Actual multi-model worker inference/provider costs/privacy, independently reproduced bugs in each MGR application, full per-repo dependency/security/UX/release campaigns. **0/14 full repository production certifications**; Code Monster owns its source/queue.
+4. Merge the feature branch after CI, verify GitHub readback, then deploy only through approved hosting, account credentials and an isolated private Code Monster runner. Preserve the one shared `/mcp` authority.
+
+---
+
 ## Unified MGR REA Engine v0.2.0 — November 8, 2026 (additive handoff)
 
 **New owner direction:** ChatGPT and Codex share one MGR execution system. Time asked for the FULL Reverse Engineer Anything engine, not an inspect-only alias, and to use it against the active MGR Elite Hub tax-platform repo. Preserve older Forge/API work and this original handoff.

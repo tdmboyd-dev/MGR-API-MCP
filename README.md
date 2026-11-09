@@ -1,5 +1,11 @@
 # MGR-API-MCP
 
+## Code Monster native connection — November 9, 2026
+
+The existing authenticated `/mcp` server now conditionally exposes Code Monster capabilities, 14-repo portfolio discovery, pinned code-graph search and a **fail-closed** candidate-repair staging tool. OAuth/JWKS authentication and verified tenant/actor/scopes remain at this one MGR API/MCP edge; only the server signs a short-lived internal HMAC request to Code Monster. A write additionally requires a trusted, separate exact-action approval resolver; none is configured by default. No new public MCP or duplicate coding engine was created.
+
+Local **official MCP client → real Code Monster internal HTTP → controlled Git candidate** acceptance reproduced a bug, saw the initial test fail, staged an approved fixture repair, and saw the candidate pass without moving main. This uses local test OAuth/approval fixtures and **does not prove deployed Rare/ChatGPT, hosted worker, live approval persistence, live model inference or a production app repair**. See `docs/CODE-MONSTER-ROUTE-ACCEPTANCE.md`, the existing `HANDOFF.md`, and Code Monster's own handoff.
+
 ## CURRENT FORGE SHARED MCP EXPANSION — 2026-10-31
 
 Real existing governed shared MCP server handles Forge original creature/world/biome/Human actions and exact SHA-verified GLB binary resources with current scopes tools:read or tools:execute. Local official MCP client and Python Forge verified; no duplicate API/MCP/Forge Vault. Read one HANDOFF.md for actual source/receipts and remaining real hosted OAuth/remote worker/Tevin. Previous 2026-10-30 read-only status below is historical.
