@@ -1,5 +1,21 @@
 # Persistent evidence scorecard
 
+## November 9, 2026 — Code Monster route scoped scorecard
+
+| Evidence gate | Result | Proof / limit |
+|---|---|---|
+| Source registration and strict auth path | PASS LOCAL | Existing MCP server + new optional Code Monster tools, JWT-bound actor and tenant |
+| Signed internal HMAC communication | PASS LOCAL | Native Code Monster real HTTP service + bounded requests / replay-deny tests |
+| Candidate Git write through official MCP | PASS LOCAL FIXTURE | Exact owner-approval fixture, fenced branch, valid Code Monster ledger; main unchanged |
+| Differential independent regression | PASS LOCAL FIXTURE | Baseline `node --test` fails, candidate worktree `node --test` passes; **synthetic** bug |
+| Complete local API regression | **95/95** | `npm run verify`, TS typecheck and plugin/artifact checks all PASS |
+| Code Monster advanced regression | **222/222** | Native service added with original v2 signed receipt/campaign rules intact |
+| Real Rare account/mobile hosted OAuth + private Code Monster runner | **OPEN** | No external account/hosting live acceptance performed |
+| Durable approval authority and signed v2 independent promotion | **OPEN** | In test a fixture resolver; hosted repair tool fails closed without genuine resolver |
+| MGR app production audits/release certifications | **0/14** | Inventory only; must test each real repo separately |
+
+These are scoped acceptance counts, **not** a fabricated overall platform readiness percentage. Details: `docs/CODE-MONSTER-ROUTE-ACCEPTANCE.md`.
+
 ## October 30, 2026 — Forge read-only discovery through the shared MCP edge
 
 | Acceptance gate | State | Evidence |

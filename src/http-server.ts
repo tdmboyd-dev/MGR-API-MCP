@@ -5,6 +5,7 @@ import { createAuthorizedMgrMcpHttpHandler } from "./mcp-http.js";
 import { LegacyEdgeClient } from "./legacy-client.js";
 import { JwksAccessTokenVerifier } from "./jwt-verifier.js";
 import { ForgeStudioCatalogClient } from "./forge-catalog-client.js";
+import { CodeMonsterBridgeClient } from "./code-monster-client.js";
 
 const port=Number(process.env.PORT ?? "8787");
 const baseUrl=requiredUrl("MCP_PUBLIC_BASE_URL");
@@ -39,13 +40,27 @@ const forge=forgeConfigured===3?new ForgeStudioCatalogClient({
   baseUrl:process.env.MGR_FORGE_STUDIO_URL!,
   token:process.env.MGR_FORGE_STUDIO_TOKEN!
 }):undefined;
+// Optional private Code Monster service. No public bridge key or account token.
+// The repair-stage tool intentionally has no approval resolver until an
+// independent durable owner-approval authority has been connected and tested.
+const codeMonsterConfigured=[process.env.MGR_CODE_MONSTER_URL,
+  process.env.MGR_CODE_MONSTER_BRIDGE_SECRET_BASE64,
+  process.env.MGR_CODE_MONSTER_TENANT_ID].filter(Boolean).length;
+if(codeMonsterConfigured!==0 && codeMonsterConfigured!==3){
+  throw new Error("Code Monster bridge requires URL, secret and allowed tenant together");
+}
+const codeMonster=codeMonsterConfigured===3?new CodeMonsterBridgeClient({
+  baseUrl:process.env.MGR_CODE_MONSTER_URL!,
+  secret:Buffer.from(process.env.MGR_CODE_MONSTER_BRIDGE_SECRET_BASE64!,"base64")
+}):undefined;
 const mcp=createAuthorizedMgrMcpHttpHandler({
   verifier,
   resourceAudience,
   requiredScopes,
   resourceMetadataUrl,
   legacy,
-  ...(forge?{forge,forgeAllowedTenantId:process.env.MGR_FORGE_TENANT_ID!}:{})
+  ...(forge?{forge,forgeAllowedTenantId:process.env.MGR_FORGE_TENANT_ID!}:{}),
+  ...(codeMonster?{codeMonster,codeMonsterAllowedTenantId:process.env.MGR_CODE_MONSTER_TENANT_ID!}:{})
 });
 const metadata=buildProtectedResourceMetadata({
   resource:resourceAudience,

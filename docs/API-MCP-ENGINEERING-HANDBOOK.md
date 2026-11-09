@@ -12,6 +12,7 @@
 | Authentication | `src/authz.ts`, `src/http-auth.ts`, `src/jwt-verifier.ts`, `src/oauth-metadata.ts` | OAuth/JWKS actor/tenant/audience, scopes, resource metadata and denial before side effects. |
 | Existing app connections | `src/legacy-client.ts`, `src/legacy-mcp-tools.ts`, `src/creation-client.ts`, `src/creation-mcp-tools.ts` | Connected app domains, each with its own action/verification contract. |
 | Current 3D Forge bridge | `src/forge-catalog-client.ts`, `src/forge-mcp-tools.ts` | Guarded direct Forge catalog, original creature and world creation and status. Forge itself owns geometry/asset files/job state. |
+| Current Code Monster native bridge (Nov 9) | `src/code-monster-client.ts`, `src/code-monster-mcp-tools.ts`, `src/mcp-http.ts` | Optional authenticated, tenant-bound read/repair-stage routing into the one Code Monster internal HMAC service; approval authority absent by default. No duplicate Code Monster and no public writable endpoint. |
 | Shared risk policy | `src/action-sentinel.ts`, `src/privacy-firewall.ts`, `src/security.ts`, `src/state.ts` | Scope/approval/privacy/idempotency and unknown-outcome reconciliation. |
 | Other supporting brains | `src/model-router.ts`, `src/voice-fabric.ts`, `src/brain-controller.ts` | Policy-aware model/tool selection and specialized requests; not a duplicate of MGR-ONE itself. |
 | Private REA inspector | `integrations/rea-xray-plugin/` | Optional restricted local inspection specialist; NOT blanket access to Windows. |

@@ -115,3 +115,11 @@ Research packet: research/BEAST-SMARTWIZ-OMNIROUTE-VOICEBOX-FREEBUF-SERVERBYT-20
 42. [x] Add FreeBuf to the secondary security research catalog and enforce primary-source verification before promotion.
 43. [external] Obtain ServerByt VPS specifications and AUP details before considering it for MGR backend workloads; shared plans remain website-only by default.
 
+## November 9, 2026 — Code Monster shared MCP route
+
+- [x] Reuse ONE MGR OAuth/JWKS Streamable HTTP MCP: `mgr_code_monster_capabilities`, `_portfolio_plan`, `_code_search`, `_repair_stage` tools implemented in existing `src/mcp-server.ts` with authenticated actor/tenant binding.
+- [x] Pin downstream HMAC protocol, tenant and audience; bound payload, nonce/freshness, fail-closed write approval, no blind write retries and no HTTP 200 false-green.
+- [x] Local official MCP protocol into **actual Code Monster service** staged a synthetic repaired Git candidate; reproduced bug failed before / tested candidate passed; 95/95 API and 222/222 Code Monster suites passed. See `docs/CODE-MONSTER-ROUTE-ACCEPTANCE.md`.
+- [ ] Real authenticated hosted ChatGPT/Rare account session, durable external approval resolver, secure private network/HTTPS service, service key provisioning and revocation tests; no existing live endpoint is claimed.
+- [ ] Real model provider execution, independent v2 signed evidence and production campaigns per 14 MGR repos; do not promote test-fixture evidence.
+

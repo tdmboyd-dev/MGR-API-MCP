@@ -4,6 +4,8 @@ import { authorizeMcpRequest, type AccessTokenVerifier, type McpAuthResult } fro
 import type { LegacyEdgeClient } from "./legacy-client.js";
 import type { CreationOSClient } from "./creation-client.js";
 import type { ForgeCatalogClient } from "./forge-catalog-client.js";
+import type { CodeMonsterBridgeClient } from "./code-monster-client.js";
+import type { CodeMonsterApprovalResolver } from "./code-monster-mcp-tools.js";
 
 export interface AuthorizedMgrMcpHttpOptions {
   verifier:AccessTokenVerifier;
@@ -14,6 +16,9 @@ export interface AuthorizedMgrMcpHttpOptions {
   creation?:CreationOSClient;
   forge?:ForgeCatalogClient;
   forgeAllowedTenantId?:string;
+  codeMonster?:CodeMonsterBridgeClient;
+  codeMonsterAllowedTenantId?:string;
+  codeMonsterApprovalResolver?:CodeMonsterApprovalResolver;
 }
 
 export async function authorizeAndBindMcpRequest(
@@ -78,6 +83,13 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
           forge:ForgeCatalogClient;
           allowedTenantId:string;
         };
+        codeMonster?:{
+          auth:typeof authResult.auth;
+          resourceAudience:string;
+          allowedTenantId:string;
+          codeMonster:CodeMonsterBridgeClient;
+          approvalResolver?:CodeMonsterApprovalResolver;
+        };
       }={
         legacy:{
           auth:authResult.auth,
@@ -98,6 +110,15 @@ export function createAuthorizedMgrMcpHttpHandler(options:AuthorizedMgrMcpHttpOp
           resourceAudience:options.resourceAudience,
           forge:options.forge,
           allowedTenantId:options.forgeAllowedTenantId
+        };
+      }
+      if(options.codeMonster && options.codeMonsterAllowedTenantId){
+        serverOptions.codeMonster={
+          auth:authResult.auth,
+          resourceAudience:options.resourceAudience,
+          codeMonster:options.codeMonster,
+          allowedTenantId:options.codeMonsterAllowedTenantId,
+          ...(options.codeMonsterApprovalResolver?{approvalResolver:options.codeMonsterApprovalResolver}:{})
         };
       }
       const handler=createMcpHandler(()=>createMgrMcpServer(serverOptions));
