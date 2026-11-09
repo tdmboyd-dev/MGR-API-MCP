@@ -1,5 +1,26 @@
 # Resume MGR-API-MCP
 
+## Unified MGR REA Engine v0.2.0 — November 8, 2026 (additive handoff)
+
+**New owner direction:** ChatGPT and Codex share one MGR execution system. Time asked for the FULL Reverse Engineer Anything engine, not an inspect-only alias, and to use it against the active MGR Elite Hub tax-platform repo. Preserve older Forge/API work and this original handoff.
+
+### Implemented and evidenced
+
+- The **existing** private ChatGPT plugin `mgr-rea-xray` was upgraded **in place** (not a competing plugin) to display name **MGR REA Engine**, release **0.2.0**: https://chatgpt.com/plugins/plugins_6ae674d617d881919da938edf6e018d4 .
+- Canonical source here: `integrations/rea-xray-plugin/`. New `server/rea-engine-launcher.mjs` performs bounded upstream discovery/version/pin validation and starts the original `rea-agents@6.8.0` MCP; `mcp.json` exposes full `mgr-rea-engine` and restricted `mgr-rea-static` fallback. Linked installation docs, dependency pin and regression tests were updated, **3/3 local plugin tests PASS** and Node syntax check PASS. Implementation source committed through `c6ac296535dff715be974824ac367ab7b96c8ae8` on `main`.
+- Owner-authorized Windows host `Time` has actual REA native runtime `6.8.0`: `rea mcp doctor --json` passed **229/229 tool schemas** and **6/6 prompt guides** plus binary-session health, digest `fe938a7c6eba3763b22ae2022de76dc4a7812d35d86f1d4efd36b9962b04da0b`. This tests local native REA and makes it callable here through the connected Remote Desktop Commander, **not** proof of a permanent iPhone/cloud-origin direct MCP endpoint.
+- The authorized Hub audit clone uses branch `tdmboyd-dev/MGR-Elite-Hub:audit/elite-hub-20261102` / PR #2. First full REA app scan inventoried **549 frontend sources**, timed out/nonzero after **380.87 s**; a bounded 4-file MeF service scan timed out after **300000 ms** with `provider_timeout` but returned **partial static evidence** ID `ev_ded3613e43bfe3e304f1fc70a2864bb47fd9449945187ff883c971d2f10b905a`. The partial graph found TypeScript extensionless imports unresolved when inventorying only a subdirectory; that is a **scope artifact**, not proven missing application modules. These results **do not** demonstrate a faster full-repo auditor than targeted `git grep`/build/CI yet.
+- MGR Elite Hub owns CRM and tax runtime on its active audit branch; MGR API/REA is the introspection/integration layer, **not** a new tax source of truth and not a live MGR Legacy CRM dependency. Canonical Hub handoff: `docs/current-audit/06-AUDIT-HANDOFF.md`, detailed matrix: `docs/current-audit/31-MGR-NATIVE-INTAKE-DELIVERY-MASTER-PLAN.md`.
+
+### Real work still open
+
+1. Validate a permanent authenticated, tenant-scoped, least-privilege mobile ChatGPT/Codex/Tevin-to-REA path in the existing MGR API bridge (or explicit Windows device connector). No public unauthenticated Windows agent, no exposing tax PII, no fabricated endpoint.
+2. Bind the full source-approved REA tool taxonomy to existing plugin registration in both clients, verify discovery from mobile and Codex separately while preserving a single canonical contract. Add semantically bounded recipes `map_repository`, `trace_client_to_ack`, `trace_bureau_payout`, `find_mock_truth_leaks`, `compare_tax_year_rules` with source-line receipts and configurable per-source timeout; streaming/partial Evidence must be labeled incomplete.
+3. Benchmark direct `rg/git grep` against **bounded source-path** REA on the same Hub revision, excluding wait/transfer, and prove any incremental REA graph findings before coding. Avoid full 549-file monolithic operations until source selection + limits works reliably.
+4. Finish parent repo `npm run verify`, integration tests and authenticated worker deployment acceptance. **Do not mark production READY** on plugin smoke tests or REA doctor alone.
+
+---
+
 ## CURRENT RECOVERED FORGE WORLD COMPOSITION — 2026-11-01
 
 **Final cross-repo regression:** MGR-API-MCP **85/85 PASS** (TypeScript, plugin validation), and exact sibling Forge recovery commit 70a9197 passed **638 total / 635 executed / 3 skipped / 0 failed**, safe evidence/evidence/audits/2026-11-01-full-regression.json in Forge. Hosted remote business/Tevin/ChatGPT, neural model and Godot runtime remain OPEN.
